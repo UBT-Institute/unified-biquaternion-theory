@@ -19,6 +19,24 @@
 % notice: Machine-verified against named sources or verifiers; individual attestation is not claimed.
 % UBT-AI-PROVENANCE-END
 
+% -----------------------------------------------------------------------
+% STATUS: HISTORICAL / COMPLEMENTARY — NOT THE CURRENT CANONICAL SU(3) DERIVATION
+%
+% This file contains the quantum-superposition/triqubit approach to deriving
+% the SU(3) colour sector in UBT.  It is preserved for provenance and
+% priority documentation.
+%
+% Key limitations (do not modify this notice):
+%   1. The global group statement  U(3) ≅ U(1) × SU(3)  in Theorem 3.1 is
+%      INCORRECT at the global level.  The correct statement is:
+%          U(3) ≅ (SU(3) × U(1)) / Z_3
+%      The Lie-algebra split  u(3) = su(3) ⊕ u(1)  is valid.
+%   2. The unitary structure on the carrier was postulated, not derived.
+%
+% The current canonical derivation is:
+%   canonical/su3_derivation/su3_stabilizer_exterior_fock.tex
+% -----------------------------------------------------------------------
+
 \ifdefined\INCLUDEMODE
 \else
   \documentclass[12pt,a4paper]{article}
@@ -184,24 +202,36 @@ is the color-charge density.
 \label{thm:color_symmetry}
 The group of $\mathbb{C}$-linear automorphisms of
 $\mathbb{C}^3 \cong \mathbb{C}\text{-span}\{I,J,K\}$ that preserve the norm
-$|\alpha|^2 + |\beta|^2 + |\gamma|^2$ is $U(3)$.  Decomposing
+$|\alpha|^2 + |\beta|^2 + |\gamma|^2$ is $U(3)$.  The Lie algebra splits as
 \[
-  U(3) \cong U(1) \times SU(3),
+  \mathfrak{u}(3) \cong \mathfrak{su}(3)\oplus\mathfrak{u}(1),
 \]
-the $U(1)$ factor acts as overall phase $(\alpha,\beta,\gamma) \mapsto
-e^{i\varphi}(\alpha,\beta,\gamma)$ and is already identified with the $U(1)_Y$
-hypercharge gauge group of UBT (proved in
-\texttt{consolidation\_project/appendix\_E2\_SM\_geometry.tex~\S6}).
-The residual symmetry is $SU(3)$.
+and the corresponding global group structure is
+\[
+  U(3) \cong \bigl(\mathrm{SU}(3)\times U(1)\bigr)/\mathbb{Z}_3,
+\]
+where the $\mathbb{Z}_3$ identification is
+$(g,e^{i\theta})\sim(e^{2\pi i/3}g,\,e^{i(\theta+2\pi/3)})$.
+This is \emph{not} a direct product; in particular
+$U(3) \not\cong U(1)\times\mathrm{SU}(3)$ globally.
+
+Once the overall $U(1)$ phase factor is identified with the independently
+established $U(1)_Y$ hypercharge gauge group of UBT, the residual colour symmetry
+is $\mathrm{SU}(3)$.
+Note: which $U(1)$ subgroup is factored matters for the precise quotient
+structure; the Lie-algebra identification is sufficient for local gauge purposes.
 \end{theorem}
 
 \begin{proof}[Proof sketch]
 By definition, unitary matrices $U \in GL(3,\mathbb{C})$ satisfying
 $U^\dagger U = \mathbf{1}_3$ form the group $U(3)$.
-The center $Z(U(3)) \cong U(1)$ consists of scalar matrices $e^{i\varphi}
-\mathbf{1}_3$.  The quotient $U(3)/U(1) \cong SU(3)$ (matrices with
-$\det U = 1$) is the \emph{residual} symmetry after the $U(1)_Y$ phase is
-factored out.
+Every $U\in U(3)$ can be written as $e^{i\theta/3} V$ with $V\in\mathrm{SU}(3)$
+and $\theta=\arg(\det U)$, but this decomposition is not unique due to the
+$\mathbb{Z}_3$ centre of $\mathrm{SU}(3)$.  Hence
+$U(3)\cong(\mathrm{SU}(3)\times U(1))/\mathbb{Z}_3$.
+The Lie-algebra split $\mathfrak{u}(3)=\mathfrak{su}(3)\oplus\mathfrak{u}(1)$
+holds because the $\mathfrak{u}(1)$ factor (scalar matrices) is central and
+commutes with all of $\mathfrak{su}(3)$.
 \end{proof}
 
 \begin{insightbox}
