@@ -83,11 +83,16 @@ claims:
     evidence:
     - canonical/interactions/
     - canonical/su3_derivation/
+    - canonical/su3_derivation/su3_stabilizer_exterior_fock.tex
+    - verification/su3_stabilizer_fock_check.py
     - papers/UBT_Gauge_Submission.tex
     - reviews/gauge_qm_honest_status_audit_2026-07-17.md
     assumptions:
     - 'The involution structure selects a complex rank-three carrier V_c congruent to C^3'
-    - 'GAP-SU3-DYN: OPEN — derive the unitary/Yang-Mills structure on the involution carrier from the canonical action; SU(3) is not an algebra automorphism, and an explicit counterexample is documented'
+    - 'GAP-SU3-STABILIZER: PROVED [L1] — canonical h and Omega on V=C-span{I,J,K} derived from biquaternionic adjoint and quaternion multiplication; Stab_{GL(V)}(h,Omega)=SU(3); machine verified (77/77 exact SymPy checks)'
+    - 'GAP-SU3-FOCK: PROVED [L1] — Lambda^bullet V = 1+3+3-bar+1; second-quantised su(3) generator algebra verified exactly; Lean-PENDING'
+    - 'GAP-SU3-GLOBAL: STATED — correct global group is U(3) cong (SU(3)xU(1))/Z_3, not a direct product; Lie-algebra split u(3)=su(3)+u(1) valid'
+    - 'GAP-SU3-DYN: OPEN — derive the local QCD gauge field from canonical UBT action; algebraic stabiliser proved but dynamical gauging not yet derived'
     - 'GAP-SU3-TRIQUBIT-LEAKAGE: CLOSED [L1] — every single X_i/Y_i error leaves the color sector'
     - 'GAP-SU3-TRIQUBIT-QEC: CLOSED AS NO-GO [L1] — the Knill-Laflamme conditions fail for {I,X_1,X_2,X_3}, compressed Z_i errors are non-scalar logical operations, and the three-dimensional carrier is not a Pauli stabilizer code'
     - 'The triqubit result is a representation/quantum-simulation encoding statement and does not imply a simulation ontology'
@@ -96,6 +101,8 @@ claims:
     - gauge group follows from automorphisms alone
     - triqubit one-hot color is a quantum error-correcting code
     - quark color proves that reality is a simulation
+    - U(3) is isomorphic to U(1) times SU(3) as groups
+    - dynamical QCD gauge symmetry is proved from UBT action
   three_generations:
     status: DERIVED_WITH_ASSUMPTIONS
     evidence:

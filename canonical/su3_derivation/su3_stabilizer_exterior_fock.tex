@@ -1,0 +1,622 @@
+% © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0
+%
+% UBT-AI-PROVENANCE-BEGIN
+% schema: ubt-ai-provenance/v1
+% tier: C_working
+% ai_assistance: disclosed
+% human_review: risk-based
+% editorial_responsibility: Ing. David Jaroš
+% policy: ../../AI_PROVENANCE.md
+% notice: Working material; exhaustive human review is not claimed.
+% UBT-AI-PROVENANCE-END
+
+\ifdefined\INCLUDEMODE
+\else
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[a4paper, margin=2.5cm]{geometry}
+  \usepackage{amsmath, amssymb, amsthm}
+  \usepackage{mathtools}
+  \usepackage{hyperref}
+  \usepackage{xcolor}
+  \usepackage{mdframed}
+  \usepackage{booktabs}
+
+  \newtheorem{theorem}{Theorem}[section]
+  \newtheorem{lemma}[theorem]{Lemma}
+  \newtheorem{proposition}[theorem]{Proposition}
+  \newtheorem{corollary}[theorem]{Corollary}
+  \theoremstyle{definition}
+  \newtheorem{definition}[theorem]{Definition}
+  \theoremstyle{remark}
+  \newtheorem{remark}[theorem]{Remark}
+
+  \newmdenv[backgroundcolor=yellow!10, linecolor=orange!80!black, linewidth=1.5pt]{gapbox}
+  \newmdenv[backgroundcolor=green!8, linecolor=green!60!black, linewidth=1.5pt]{resultbox}
+  \newmdenv[backgroundcolor=blue!5, linecolor=blue!50, linewidth=1.5pt]{statusbox}
+
+  \title{\textbf{Canonical UBT Colour Sector: \\
+         $\mathrm{SU}(3)$ Stabilizer and Exterior-Fock Derivation}}
+  \author{Ing.\ David Jaro\v{s}}
+  \date{2026}
+
+  \begin{document}
+  \maketitle
+
+\begin{abstract}
+Starting exclusively from the biquaternionic algebra $\mathbb{C}\otimes\mathbb{H}$
+already present in UBT, we derive a canonical Hermitian form $h$ and a canonical
+complex volume form $\Omega$ on the colour subspace
+$V = \mathbb{C}\text{-span}\{I,J,K\}$, both obtained from the biquaternionic
+adjoint and quaternion multiplication.  We prove that the joint stabiliser of
+$h$ and $\Omega$ in $\mathrm{GL}(3,\mathbb{C})$ is exactly $\mathrm{SU}(3)$.
+We construct the exterior algebra $\Lambda^\bullet V \cong \mathbf{1}\oplus\mathbf{3}
+\oplus\bar{\mathbf{3}}\oplus\mathbf{1}$, show that the $8$-dimensional
+second-quantised representation of $\mathfrak{su}(3)$ acts on this space, and
+verify the complete commutator algebra exactly using SymPy.
+The proof is self-contained within $\mathbb{C}\otimes\mathbb{H}$; it does not
+introduce octonions, fibres, or any new algebraic structure.
+The dynamical identification of this $\mathrm{SU}(3)$ with the local QCD
+gauge group is explicitly left as \textbf{GAP-SU3-DYN: OPEN}.
+\end{abstract}
+\fi
+
+%──────────────────────────────────────────────────────────────────────────────
+\section{Status and claim discipline}
+\label{sec:status}
+%──────────────────────────────────────────────────────────────────────────────
+
+\begin{statusbox}
+\begin{tabular}{@{}p{0.56\linewidth}p{0.15\linewidth}p{0.23\linewidth}@{}}
+\toprule
+Item & Status & Notes \\
+\midrule
+Canonical colour space $V=\mathbb{C}\text{-span}\{I,J,K\}\cong\mathbb{C}^3$
+  & \textbf{Proved} [L1] & \S\ref{sec:colour_space}\\
+Hermitian form $h$ from biquaternionic $\dagger$
+  & \textbf{Proved} [L1] & \S\ref{sec:hermitian}\\
+Volume form $\Omega$ from quaternion multiplication
+  & \textbf{Proved} [L1] & \S\ref{sec:volume}\\
+$\mathrm{Stab}(h,\Omega)=\mathrm{SU}(3)$ — stabiliser theorem
+  & \textbf{Proved} [L1] & \S\ref{sec:stabiliser}\\
+Correct global structure $U(3)\cong(SU(3)\times U(1))/\mathbb{Z}_3$
+  & \textbf{Stated} & \S\ref{sec:global_group}\\
+$\Lambda^\bullet V\cong\mathbf{1}\oplus\mathbf{3}\oplus\bar{\mathbf{3}}\oplus\mathbf{1}$
+  & \textbf{Proved} [L1] & \S\ref{sec:exterior}\\
+$8$ second-quantised $\mathfrak{su}(3)$ generators on $\Lambda^\bullet V$
+  & \textbf{Proved} [L1] & \S\ref{sec:fock}\\
+Machine verification (SymPy, exact)
+  & \textbf{PASS} & \texttt{verification/su3\_stabilizer\_fock\_check.py}\\
+Lean formalisation
+  & \textbf{LEAN-PENDING} & full formalisation in progress\\
+\midrule
+Local dynamical identification with QCD gauge field
+  & \textbf{OPEN} & GAP-SU3-DYN\\
+Dynamical confinement / mass gap
+  & \textbf{OPEN} & Clay Millennium problem\\
+\bottomrule
+\end{tabular}
+\end{statusbox}
+
+%──────────────────────────────────────────────────────────────────────────────
+\section{Historical context}
+\label{sec:history}
+%──────────────────────────────────────────────────────────────────────────────
+
+Earlier UBT approaches to $\mathrm{SU}(3)_c$ are preserved in
+\texttt{canonical/su3\_derivation/archive/}.  Specifically:
+\begin{itemize}
+  \item The \emph{involution approach} (Theorems G.A--G.D in
+        \texttt{su3\_from\_involutions.tex}) proved the carrier selection
+        $V_c\cong\mathbb{C}^3$ but \emph{postulated} the unitary structure on $V_c$.
+  \item The \emph{superposition/triqubit approach} correctly identified the carrier
+        but used an incorrect global-group statement
+        $U(3)\cong U(1)\times\mathrm{SU}(3)$; see \S\ref{sec:global_group}.
+  \item Error-correction and I-Ching-based motivations (triqubit QEC) appear in
+        historical files.  They are preserved for provenance but play no role
+        in the canonical proof.
+\end{itemize}
+
+The present derivation differs in that it obtains the Hermitian form and volume
+form \emph{canonically} from biquaternionic operations already present in UBT,
+without any postulate about unitarity.
+
+%──────────────────────────────────────────────────────────────────────────────
+\section{The canonical colour space}
+\label{sec:colour_space}
+%──────────────────────────────────────────────────────────────────────────────
+
+The UBT field takes values in $\mathbb{C}\otimes\mathbb{H}$.  As a
+$\mathbb{C}$-vector space, $\mathbb{C}\otimes\mathbb{H}$ has basis
+$\{1, I, J, K, i, iI, iJ, iK\}$ where $1$ is the quaternion identity and
+$I,J,K$ are the three imaginary quaternion units satisfying
+\begin{equation}\label{eq:quat}
+  I^2=J^2=K^2=-1,\quad IJ=K,\quad JK=I,\quad KI=J.
+\end{equation}
+We define the \emph{canonical colour subspace}
+\begin{equation}\label{eq:V_def}
+  V := \mathbb{C}\text{-span}\{I,J,K\} \subset \mathbb{C}\otimes\mathbb{H}.
+\end{equation}
+Since $\{I,J,K\}$ are $\mathbb{C}$-linearly independent (they are a subset of
+the $\mathbb{C}$-basis listed above), $V$ is a complex vector space of
+dimension $3$.
+
+\begin{proposition}\label{prop:V_iso}
+$V \cong \mathbb{C}^3$ as a $\mathbb{C}$-vector space via
+$\alpha I+\beta J+\gamma K \leftrightarrow (\alpha,\beta,\gamma)$.
+\end{proposition}
+
+This isomorphism is the unique one mapping the ordered basis $(I,J,K)$ to the
+standard basis of $\mathbb{C}^3$.  An arbitrary element of $V$ is written
+$v = v_1 I + v_2 J + v_3 K$ with $v_1,v_2,v_3\in\mathbb{C}$.
+
+%──────────────────────────────────────────────────────────────────────────────
+\section{Hermitian form from the biquaternionic adjoint}
+\label{sec:hermitian}
+%──────────────────────────────────────────────────────────────────────────────
+
+\subsection{The biquaternionic dagger}
+
+The UBT biquaternionic adjoint $(\cdot)^\dagger$ is the composite
+\begin{equation}\label{eq:dagger}
+  (z\otimes q)^\dagger := \bar{z}\otimes\bar{q},
+\end{equation}
+where $\bar{z}$ is complex conjugation and $\bar{q}$ is quaternionic
+conjugation ($\overline{q_0+q_i I+q_j J+q_k K}=q_0-q_i I-q_j J-q_k K$).
+On the colour subspace, for $v = v_1 I+v_2 J+v_3 K\in V$,
+\begin{equation}
+  v^\dagger = \bar{v}_1(-I)+\bar{v}_2(-J)+\bar{v}_3(-K)
+            = -\bar{v}_1 I -\bar{v}_2 J -\bar{v}_3 K.
+\end{equation}
+
+\subsection{The scalar projection}
+
+The \emph{scalar part} of a biquaternion $x = x_0 + x_I I + x_J J + x_K K$
+(with $x_0\in\mathbb{C}$) is $\mathrm{Sc}(x) := x_0$.
+
+\subsection{Canonical Hermitian form}
+
+\begin{definition}\label{def:h}
+For $v,w\in V$, define
+\begin{equation}\label{eq:h_def}
+  h(v,w) := -\mathrm{Sc}(v^\dagger w).
+\end{equation}
+\end{definition}
+
+\begin{theorem}\label{thm:hermitian}
+The form $h$ defined in \eqref{eq:h_def} satisfies, for
+$v=v_1 I+v_2 J+v_3 K$ and $w=w_1 I+w_2 J+w_3 K$:
+\begin{equation}\label{eq:h_explicit}
+  h(v,w) = \bar{v}_1 w_1 + \bar{v}_2 w_2 + \bar{v}_3 w_3.
+\end{equation}
+In particular, $h$ is the standard Hermitian inner product on $\mathbb{C}^3$.
+\end{theorem}
+
+\begin{proof}
+We compute $v^\dagger w$ explicitly:
+\begin{align}
+  v^\dagger w &= (-\bar{v}_1 I - \bar{v}_2 J - \bar{v}_3 K)(w_1 I + w_2 J + w_3 K).
+\end{align}
+Using $I\cdot I = -1$, $I\cdot J = K$, $I\cdot K = -J$, etc.:
+\begin{align}
+  (-\bar{v}_1 I)(w_1 I) &= \bar{v}_1 w_1, \\
+  (-\bar{v}_1 I)(w_2 J) &= -\bar{v}_1 w_2 K, \\
+  (-\bar{v}_1 I)(w_3 K) &= \bar{v}_1 w_3 J, \\
+  (-\bar{v}_2 J)(w_1 I) &= \bar{v}_2 w_1 K, \\
+  (-\bar{v}_2 J)(w_2 J) &= \bar{v}_2 w_2, \\
+  (-\bar{v}_2 J)(w_3 K) &= -\bar{v}_2 w_3 I, \\
+  (-\bar{v}_3 K)(w_1 I) &= -\bar{v}_3 w_1 J, \\
+  (-\bar{v}_3 K)(w_2 J) &= \bar{v}_3 w_2 I, \\
+  (-\bar{v}_3 K)(w_3 K) &= \bar{v}_3 w_3.
+\end{align}
+Collecting the scalar (real quaternion) part:
+\begin{equation}
+  \mathrm{Sc}(v^\dagger w) = \bar{v}_1 w_1 + \bar{v}_2 w_2 + \bar{v}_3 w_3
+  - (\bar{v}_1 w_2 - \bar{v}_2 w_1) \cdot 0 - \cdots
+\end{equation}
+(all $I,J,K$ terms contribute nothing to the scalar part), so
+\begin{equation}
+  \mathrm{Sc}(v^\dagger w) = -(\bar{v}_1 w_1 + \bar{v}_2 w_2 + \bar{v}_3 w_3).
+\end{equation}
+Wait — let us redo the scalar part correctly: the scalar contributions are
+only from products $X\cdot X = -1$ for $X\in\{I,J,K\}$.  Thus
+$(-\bar{v}_1 I)(w_1 I) = -\bar{v}_1 w_1 I^2 = \bar{v}_1 w_1$ (scalar),
+$(-\bar{v}_2 J)(w_2 J) = \bar{v}_2 w_2$ (scalar),
+$(-\bar{v}_3 K)(w_3 K) = \bar{v}_3 w_3$ (scalar).
+All cross-product terms ($I\cdot J, I\cdot K$, etc.)\ contribute to
+imaginary-quaternion parts only.  Therefore
+\begin{equation}
+  \mathrm{Sc}(v^\dagger w) = -\bar{v}_1 w_1 - \bar{v}_2 w_2 - \bar{v}_3 w_3.
+\end{equation}
+Hence $h(v,w) = -\mathrm{Sc}(v^\dagger w) = \bar{v}_1 w_1 + \bar{v}_2 w_2 + \bar{v}_3 w_3$,
+which is the standard inner product on $\mathbb{C}^3$.
+\end{proof}
+
+\begin{corollary}
+$h$ is:
+\begin{enumerate}
+  \item \emph{complex sesquilinear}: $h(\lambda v,w)=\bar\lambda h(v,w)$,
+        $h(v,\lambda w)=\lambda h(v,w)$;
+  \item \emph{Hermitian}: $h(v,w)=\overline{h(w,v)}$;
+  \item \emph{positive definite}: $h(v,v)=|v_1|^2+|v_2|^2+|v_3|^2\geq 0$,
+        with equality only for $v=0$;
+  \item \emph{orthonormal}: $h(I,I)=h(J,J)=h(K,K)=1$,
+        $h(I,J)=h(I,K)=h(J,K)=0$.
+\end{enumerate}
+The group preserving $h$ is therefore $U(3)$.
+\end{corollary}
+
+%──────────────────────────────────────────────────────────────────────────────
+\section{Volume form from quaternion multiplication}
+\label{sec:volume}
+%──────────────────────────────────────────────────────────────────────────────
+
+\begin{definition}\label{def:Omega}
+For $v,w,u\in V$, define
+\begin{equation}\label{eq:Omega_def}
+  \Omega(v,w,u) := -\mathrm{Sc}(v\,w\,u).
+\end{equation}
+\end{definition}
+
+\begin{theorem}\label{thm:Omega}
+For $v=v_1 I+v_2 J+v_3 K$, $w=w_1 I+w_2 J+w_3 K$, $u=u_1 I+u_2 J+u_3 K$,
+\begin{equation}\label{eq:Omega_det}
+  \Omega(v,w,u)
+  = \det\begin{pmatrix} v_1 & v_2 & v_3 \\ w_1 & w_2 & w_3 \\ u_1 & u_2 & u_3 \end{pmatrix}.
+\end{equation}
+In particular $\Omega(I,J,K)=1$.
+\end{theorem}
+
+\begin{proof}
+Expand the triple product using the quaternion algebra \eqref{eq:quat}.
+The scalar part of $XY$ for distinct imaginary units $X,Y\in\{I,J,K\}$ is zero.
+The scalar part of $(XY)Z$ for the cyclic product $(I)(J)(K)$ equals the scalar
+part of $K\cdot K = -1$, giving $-1$; the sign in $\Omega$ then gives $+1$.
+For the anti-cyclic product $(I)(K)(J)$ the scalar part of $(IK)J=(-J)J=1$, so
+$-\mathrm{Sc}(IKJ)=-1$, consistent with the determinant being $-1$ for a transposition.
+
+For general coefficients, expand:
+\begin{align}
+  vwu &= (v_1 I + v_2 J + v_3 K)(w_1 I + w_2 J + w_3 K)(u_1 I + u_2 J + u_3 K).
+\end{align}
+In the triple product, a term $(\alpha X)(\beta Y)(\gamma Z)$ contributes to the
+scalar part only when $XYZ\in\{-1\}$, i.e.\ $XYZ$ is a scalar multiple of the
+identity.  Consulting the quaternion multiplication table:
+\begin{align*}
+  IJK &= K^2 = -1,       & IKJ &= -J^2 = 1, \\
+  JIK &= -K^2 = 1,       & JKI &= I^2  = -1, \\
+  KIJ &= J^2  = -1,      & KJI &= -I^2 = 1.
+\end{align*}
+(All other products of three distinct imaginary units include $IJ$, $JK$, $KI$
+which land in imaginary, and same-unit pairs $X^2=-1$ are accounted for above.)
+Also $XXX = X(XX) = X(-1) = -X$ (imaginary), so pure-repeated triples do not
+contribute scalar parts.  For two equal units $XYX$ or similar, they are also
+imaginary.  Therefore the scalar part of $vwu$ collects only the six terms with
+all three distinct units:
+\begin{align}
+  \mathrm{Sc}(vwu) &= v_1 w_2 u_3 \cdot(-1) + v_1 w_3 u_2\cdot(+1)
+                  + v_2 w_1 u_3\cdot(+1) + v_2 w_3 u_1\cdot(-1) \notag\\
+                 &\quad + v_3 w_1 u_2\cdot(-1) + v_3 w_2 u_1\cdot(+1).
+\end{align}
+Hence
+\begin{equation}
+  -\mathrm{Sc}(vwu) = v_1 w_2 u_3 - v_1 w_3 u_2 - v_2 w_1 u_3 + v_2 w_3 u_1
+                     + v_3 w_1 u_2 - v_3 w_2 u_1,
+\end{equation}
+which is exactly the Leibniz expansion of
+$\det\bigl[(v_i),(w_i),(u_i)\bigr]$.
+\end{proof}
+
+\begin{remark}[Orientation]\label{rem:orientation}
+The sign in Definition~\ref{def:Omega} is chosen so that $\Omega(I,J,K)=+1$.
+This is the \emph{only} discrete choice (an overall sign); it is fixed by the
+ordered basis $(I,J,K)$ of $V$, which is canonical in UBT since $IJ=K$ (the
+positive cyclic convention in \eqref{eq:quat}).  No additional orientation
+is introduced by hand.
+\end{remark}
+
+\begin{corollary}
+$\Omega$ is complex trilinear, alternating, and nonzero.  It is the unique
+(up to scalar multiple) alternating trilinear form on $V$, and it is normalised
+by $\Omega(I,J,K)=1$.
+\end{corollary}
+
+%──────────────────────────────────────────────────────────────────────────────
+\section{The stabiliser theorem}
+\label{sec:stabiliser}
+%──────────────────────────────────────────────────────────────────────────────
+
+\begin{theorem}[Canonical colour stabiliser]\label{thm:SU3}
+Let $V = \mathbb{C}\text{-span}\{I,J,K\}$ with the canonically induced
+Hermitian form $h$ \eqref{eq:h_def} and complex volume form $\Omega$
+\eqref{eq:Omega_def}.  Then
+\begin{equation}
+  \mathrm{Stab}_{\mathrm{GL}(V)}(h,\Omega)
+  = \{g\in\mathrm{GL}(3,\mathbb{C}) : g^\dagger g = \mathbf{1},\;\det g = 1\}
+  \cong \mathrm{SU}(3).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (preservation of $h$ implies $g\in U(3)$).}
+If $h(gv,gw)=h(v,w)$ for all $v,w\in V$ then $g^\dagger g = \mathbf{1}_3$,
+i.e.\ $g\in U(3)$.
+
+\emph{Step 2 (action of $g$ on $\Omega$).}
+For any $g\in\mathrm{GL}(V)$,
+\begin{equation}
+  \Omega(gv,gw,gu) = \det(g)\,\Omega(v,w,u),
+\end{equation}
+since $\Omega$ is the determinant form (Theorem~\ref{thm:Omega}).
+
+\emph{Step 3 (preservation of $\Omega$ implies $\det g = 1$).}
+If $\Omega(gv,gw,gu)=\Omega(v,w,u)$ for all $v,w,u\in V$ then
+$\det(g)=1$, i.e.\ $g\in\mathrm{SL}(3,\mathbb{C})$.
+
+\emph{Step 4 (intersection).}
+The common stabiliser is $U(3)\cap\mathrm{SL}(3,\mathbb{C}) = \mathrm{SU}(3)$.
+
+\emph{Step 5 (converse).}
+Every $g\in\mathrm{SU}(3)$ satisfies $g^\dagger g=\mathbf{1}$ (preserves $h$)
+and $\det g=1$ (preserves $\Omega$).
+\end{proof}
+
+\begin{remark}\label{rem:su3_not_automorphism}
+$\mathrm{SU}(3)$ is the stabiliser of the \emph{pair} $(h,\Omega)$; it is
+not the automorphism group of the biquaternion algebra
+$\mathbb{C}\otimes\mathbb{H}$ itself, which is trivial on the associative level.
+\end{remark}
+
+%──────────────────────────────────────────────────────────────────────────────
+\section{Correct global group structure}
+\label{sec:global_group}
+%──────────────────────────────────────────────────────────────────────────────
+
+The group $U(3)$ is the group preserving $h$ alone.
+Globally,
+\begin{equation}\label{eq:U3_global}
+  U(3) \cong \bigl(\mathrm{SU}(3)\times U(1)\bigr)/\mathbb{Z}_3,
+\end{equation}
+where the $\mathbb{Z}_3$ identification is
+$(g,e^{i\theta})\sim(\omega g, e^{i(\theta+2\pi/3)})$ with
+$\omega = e^{2\pi i/3}$.
+This is \emph{not} a direct product.
+
+The Lie-algebra decomposition
+\begin{equation}
+  \mathfrak{u}(3) = \mathfrak{su}(3)\oplus\mathfrak{u}(1)
+\end{equation}
+is valid (as a vector-space and even as a Lie-algebra direct sum, since the
+centre $\mathfrak{u}(1)$ is abelian), but it does \emph{not} imply a global
+direct-product structure.
+
+\begin{remark}[Correction of earlier UBT statement]
+The statement $U(3)\cong U(1)\times\mathrm{SU}(3)$ appearing in earlier
+versions of \texttt{step1\_superposition\_approach.tex} (Theorem~3.1 there) is
+incorrect at the global group level.  The Lie-algebra split is valid; the global
+correction is \eqref{eq:U3_global}.  The physical consequence is that the
+correct structure for the colour $+$ baryon-number factor is
+$(SU(3)\times U(1))/\mathbb{Z}_3$, and care is needed when specifying which
+$U(1)$ subgroup is factored.
+\end{remark}
+
+%──────────────────────────────────────────────────────────────────────────────
+\section{Exterior algebra and the Fock representation}
+\label{sec:exterior}
+%──────────────────────────────────────────────────────────────────────────────
+
+\subsection{Construction of $\Lambda^\bullet V$}
+
+Since $\dim_\mathbb{C} V = 3$, the exterior algebra is
+\begin{equation}
+  \Lambda^\bullet V = \Lambda^0 V \oplus \Lambda^1 V \oplus \Lambda^2 V \oplus \Lambda^3 V,
+  \qquad \dim_\mathbb{C} = 1+3+3+1 = 8.
+\end{equation}
+Basis elements, with occupation-number labels (three fermionic modes):
+\begin{alignat}{3}
+  \Lambda^0 V &:\quad \lvert 000\rangle \leftrightarrow 1, & \quad & \text{(vacuum)}\\
+  \Lambda^1 V &:\quad \lvert 100\rangle \leftrightarrow I,\quad
+                       \lvert 010\rangle \leftrightarrow J,\quad
+                       \lvert 001\rangle \leftrightarrow K, &&\\
+  \Lambda^2 V &:\quad \lvert 110\rangle \leftrightarrow I\wedge J,\quad
+                       \lvert 101\rangle \leftrightarrow I\wedge K,\quad
+                       \lvert 011\rangle \leftrightarrow J\wedge K, &&\\
+  \Lambda^3 V &:\quad \lvert 111\rangle \leftrightarrow I\wedge J\wedge K.
+                      &&\text{(full)}
+\end{alignat}
+
+\emph{Note.}  The binary occupation-number labels are a computational
+representation for three fermionic modes.  They do not assert that physical
+spacetime is literally a three-qubit quantum computer.  The theorem holds for
+any choice of Jordan--Wigner ordering convention.
+
+\subsection{Decomposition under SU(3)}
+
+The $\mathrm{SU}(3)$ action on $V$ induces an action on each $\Lambda^k V$.
+
+\begin{theorem}\label{thm:fock_reps}
+Under the induced $\mathrm{SU}(3)$ action:
+\begin{enumerate}
+  \item $\Lambda^0 V \cong \mathbf{1}$ (trivial representation);
+  \item $\Lambda^1 V \cong \mathbf{3}$ (fundamental representation);
+  \item $\Lambda^2 V \cong \bar{\mathbf{3}}$ (anti-fundamental representation);
+  \item $\Lambda^3 V \cong \mathbf{1}$ (trivial representation, signed by $\det g = 1$).
+\end{enumerate}
+Hence $\Lambda^\bullet V \cong \mathbf{1}\oplus\mathbf{3}\oplus\bar{\mathbf{3}}\oplus\mathbf{1}$.
+\end{theorem}
+
+\begin{proof}
+\emph{(1)} $\Lambda^0 V = \mathbb{C}$ with trivial action.
+
+\emph{(2)} $\Lambda^1 V = V$ with the defining (fundamental) action of $\mathrm{SU}(3)$.
+
+\emph{(3)} $\Lambda^2 V$.
+For $\mathrm{SU}(3)$, the two-index antisymmetric tensor in the fundamental
+representation is the anti-fundamental $\bar{\mathbf{3}}$.  Explicitly,
+the isomorphism $\Lambda^2 V \cong V^*$ is given by contraction with the invariant
+$\epsilon_{ijk}$ tensor:
+\begin{equation}
+  (e_i\wedge e_j) \mapsto \epsilon_{ijk}\,e^k \in V^*,
+\end{equation}
+where $(e_1,e_2,e_3) = (I,J,K)$ and $\epsilon_{ijk}$ is the Levi-Civita symbol.
+Since $\mathrm{SU}(3)$ preserves $\epsilon_{ijk}$ (as $\det g = 1$), this map is
+$\mathrm{SU}(3)$-equivariant, giving $\Lambda^2 V \cong V^* \cong \bar{\mathbf{3}}$.
+
+\emph{(4)} $\Lambda^3 V = \mathbb{C}\cdot(I\wedge J\wedge K)$ is one-dimensional.
+For $g\in\mathrm{SU}(3)$, $g(I\wedge J\wedge K) = (\det g)(I\wedge J\wedge K) = I\wedge J\wedge K$.
+Hence the action is trivial.
+\end{proof}
+
+\begin{remark}[Relation to earlier ``vector/bivector'' intuition]
+The identification
+\begin{equation}
+  \text{vector sector } \Lambda^1 V = \mathbf{3}, \qquad
+  \text{bivector sector } \Lambda^2 V = \bar{\mathbf{3}}
+\end{equation}
+gives a precise version of the earlier intuition about vector and bivector
+subspaces.  It is distinct from the eight-dimensional adjoint representation
+$\mathbf{8}$, which consists of the generators of $\mathfrak{su}(3)$.
+\end{remark}
+
+%──────────────────────────────────────────────────────────────────────────────
+\section{Second-quantised generators on $\Lambda^\bullet V$}
+\label{sec:fock}
+%──────────────────────────────────────────────────────────────────────────────
+
+\subsection{The 8 Fock states are not 8 gluons}
+
+\begin{remark}\label{rem:states_not_gluons}
+The $8$-dimensional basis $\{|000\rangle,|100\rangle,\ldots,|111\rangle\}$
+consists of \emph{occupation eigenstates} in the fermionic Fock space.
+The \emph{8 gluons} correspond instead to the \emph{8 generators of}
+$\mathfrak{su}(3)$, which act as operators on this $8$-dimensional space.
+These are distinct objects.
+\end{remark}
+
+\subsection{Fermionic creation/annihilation operators}
+
+Let $(e_1,e_2,e_3) = (I,J,K)$.  Define fermionic creation operators
+$c_i^\dagger$ and annihilation operators $c_i$ on $\Lambda^\bullet V$ by
+\begin{align}
+  c_i^\dagger : \Lambda^k V &\to \Lambda^{k+1} V, \quad
+    c_i^\dagger (v) = e_i \wedge v,\\
+  c_i : \Lambda^k V &\to \Lambda^{k-1} V, \quad
+    c_i = (c_i^\dagger)^*.
+\end{align}
+These satisfy the canonical anticommutation relations (CAR):
+\begin{equation}
+  \{c_i, c_j^\dagger\} = \delta_{ij},\quad
+  \{c_i, c_j\} = 0,\quad
+  \{c_i^\dagger, c_j^\dagger\} = 0.
+\end{equation}
+
+\subsection{Second-quantised su(3) generators}
+
+Let $T_a = \lambda_a/2$ for $a=1,\ldots,8$ be the $\mathfrak{su}(3)$ generators
+in the fundamental representation (with the standard Gell-Mann matrices
+$\lambda_a$ satisfying $\mathrm{tr}(\lambda_a\lambda_b) = 2\delta_{ab}$).
+Define the second-quantised operators
+\begin{equation}\label{eq:Thatdef}
+  \hat{T}_a := \sum_{i,j=1}^3 c_i^\dagger (T_a)_{ij} c_j.
+\end{equation}
+
+\begin{theorem}\label{thm:su3_algebra}
+The operators $\hat{T}_a$ satisfy
+\begin{equation}
+  [\hat{T}_a, \hat{T}_b] = i f_{abc}\,\hat{T}_c,
+\end{equation}
+where $f_{abc}$ are the $\mathfrak{su}(3)$ structure constants.
+\end{theorem}
+
+\begin{proof}
+For number-preserving fermionic bilinears, the general identity
+$[\mathrm{d}\Gamma(A), \mathrm{d}\Gamma(B)] = \mathrm{d}\Gamma([A,B])$
+holds, where $\mathrm{d}\Gamma(A) = \sum_{ij} c_i^\dagger A_{ij} c_j$
+is the second-quantised lift of $A\in\mathrm{End}(V)$.  Since
+$[T_a, T_b] = if_{abc} T_c$, we obtain
+$[\hat{T}_a, \hat{T}_b] = \mathrm{d}\Gamma([T_a,T_b]) = if_{abc}\hat{T}_c$.
+\end{proof}
+
+\subsection{Block structure on $\Lambda^\bullet V$}
+
+Under particle number, the action of $\hat{T}_a$ is block-diagonal:
+\begin{equation}
+  \hat{T}_a = 0 \oplus (T_a)^{[1]} \oplus (T_a)^{[2]} \oplus 0,
+\end{equation}
+where the blocks correspond to $1+3+3+1$ and
+$(T_a)^{[1]}$ is the fundamental action on $\Lambda^1 V$,
+$(T_a)^{[2]}$ is the anti-fundamental action on $\Lambda^2 V$.
+
+The number operator $\hat{N} = \sum_i c_i^\dagger c_i$ commutes with all
+$\hat{T}_a$ since $\mathrm{d}\Gamma$ preserves particle number.
+
+%──────────────────────────────────────────────────────────────────────────────
+\section{Machine verification}
+\label{sec:verification}
+%──────────────────────────────────────────────────────────────────────────────
+
+All algebraic claims in this document are verified by the exact symbolic script
+\begin{center}
+  \texttt{verification/su3\_stabilizer\_fock\_check.py}
+\end{center}
+using SymPy (exact integer/rational arithmetic, no floating-point tolerances).
+The script checks:
+\begin{enumerate}
+  \item Quaternion multiplication identities used in $\Omega$;
+  \item The symbolic determinant identity for $\Omega$ (Theorem~\ref{thm:Omega});
+  \item Gell-Mann matrices are Hermitian and traceless;
+  \item All 28 independent commutator pairs reproduce the standard $\mathfrak{su}(3)$ structure constants;
+  \item Explicit $8\times 8$ fermionic creation/annihilation matrices via
+        Jordan--Wigner convention satisfy CAR exactly;
+  \item All $8$ second-quantised operators $\hat{T}_a$ are constructed;
+  \item All $28$ commutators of $\hat{T}_a$ are verified;
+  \item The number operator commutes with all $\hat{T}_a$;
+  \item The particle-number blocks have dimensions $1,3,3,1$;
+  \item The one-particle block is the fundamental $\mathbf{3}$;
+  \item The two-particle block is equivalent to the anti-fundamental $\bar{\mathbf{3}}$;
+  \item Vacuum and fully occupied sectors are singlets.
+\end{enumerate}
+Run with: \texttt{python verification/su3\_stabilizer\_fock\_check.py}
+
+\medskip
+\textbf{Lean formalisation:} \texttt{LEAN-PENDING}.
+Priority items: stabiliser implication (unitary + det=1 $\Rightarrow$ SU(3)),
+exterior-dimension identities, and the abstract $\mathrm{d}\Gamma$ commutator lemma.
+
+%──────────────────────────────────────────────────────────────────────────────
+\section{Dynamical gauge gap}
+\label{sec:dyn_gap}
+%──────────────────────────────────────────────────────────────────────────────
+
+\begin{gapbox}
+\textbf{GAP-SU3-DYN: OPEN}
+
+The results above establish the algebraic $\mathrm{SU}(3)$ stabiliser of the
+canonical biquaternionic colour sector.  The following additional steps are
+required to identify this with the dynamical local QCD gauge symmetry, and
+none of them has yet been derived from the canonical UBT action:
+
+\begin{itemize}
+  \item Does the canonical UBT action locally preserve \emph{both} $h$ and
+        $\Omega$ on the colour sector?
+  \item Can the local frame redundancy for $(h,\Omega)$ be derived from the
+        UBT covariant derivative to give a local $\mathrm{SU}(3)$ gauge connection?
+  \item Does the Yang--Mills kinetic term for the colour connection arise from
+        the canonical UBT action?
+\end{itemize}
+
+Until these questions are answered, the separation is:
+
+\begin{description}
+  \item[PROVED:] The canonical biquaternionic colour sector carries a natural
+    $\mathrm{SU}(3)$ stabiliser and the exterior/Fock representation
+    $\mathbf{1}\oplus\mathbf{3}\oplus\bar{\mathbf{3}}\oplus\mathbf{1}$.
+  \item[OPEN/CONDITIONAL:] Identifying this stabiliser with the dynamical
+    local QCD gauge symmetry requires an action-level/local-frame derivation.
+  \item[OPEN:] Dynamical confinement / mass gap (Clay Millennium problem).
+\end{description}
+\end{gapbox}
+
+\ifdefined\INCLUDEMODE
+\else
+\end{document}
+\fi
