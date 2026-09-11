@@ -89,7 +89,7 @@ claims:
     - reviews/gauge_qm_honest_status_audit_2026-07-17.md
     assumptions:
     - 'The involution structure selects a complex rank-three carrier V_c congruent to C^3'
-    - 'GAP-SU3-STABILIZER: PROVED [L1] — canonical h and Omega on V=C-span{I,J,K} derived from biquaternionic adjoint and quaternion multiplication; Stab_{GL(V)}(h,Omega)=SU(3); machine verified (77/77 exact SymPy checks)'
+    - 'GAP-SU3-STABILIZER: PROVED [L1] — canonical h and Omega on V=C-span{I,J,K} derived from biquaternionic adjoint and quaternion multiplication; Stab_{GL(V)}(h,Omega)=SU(3); machine verified by exact SymPy checks'
     - 'GAP-SU3-FOCK: PROVED [L1] — Lambda^bullet V = 1+3+3-bar+1; second-quantised su(3) generator algebra verified exactly; Lean-PENDING'
     - 'GAP-SU3-GLOBAL: STATED — correct global group is U(3) cong (SU(3)xU(1))/Z_3, not a direct product; Lie-algebra split u(3)=su(3)+u(1) valid'
     - 'GAP-SU3-DYN: OPEN — derive the local QCD gauge field from canonical UBT action; algebraic stabiliser proved but dynamical gauging not yet derived'

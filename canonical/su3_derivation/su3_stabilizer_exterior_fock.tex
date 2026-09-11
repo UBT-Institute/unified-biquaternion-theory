@@ -125,10 +125,12 @@ without any postulate about unitarity.
 \label{sec:colour_space}
 %──────────────────────────────────────────────────────────────────────────────
 
-The UBT field takes values in $\mathbb{C}\otimes\mathbb{H}$.  As a
-$\mathbb{C}$-vector space, $\mathbb{C}\otimes\mathbb{H}$ has basis
-$\{1, I, J, K, i, iI, iJ, iK\}$ where $1$ is the quaternion identity and
-$I,J,K$ are the three imaginary quaternion units satisfying
+The UBT field takes values in $\mathbb{C}\otimes_{\mathbb{R}}\mathbb{H}$.
+As a $\mathbb{C}$-vector space this algebra has complex basis
+$\{1,I,J,K\}$ and hence complex dimension $4$; equivalently, as a
+$\mathbb{R}$-vector space it has real basis
+$\{1,I,J,K,i,iI,iJ,iK\}$ and real dimension $8$.  Here $1$ is the quaternion
+identity and $I,J,K$ are the three imaginary quaternion units satisfying
 \begin{equation}\label{eq:quat}
   I^2=J^2=K^2=-1,\quad IJ=K,\quad JK=I,\quad KI=J.
 \end{equation}
@@ -136,9 +138,8 @@ We define the \emph{canonical colour subspace}
 \begin{equation}\label{eq:V_def}
   V := \mathbb{C}\text{-span}\{I,J,K\} \subset \mathbb{C}\otimes\mathbb{H}.
 \end{equation}
-Since $\{I,J,K\}$ are $\mathbb{C}$-linearly independent (they are a subset of
-the $\mathbb{C}$-basis listed above), $V$ is a complex vector space of
-dimension $3$.
+Since $\{I,J,K\}$ are a subset of the complex basis $\{1,I,J,K\}$,
+they are $\mathbb{C}$-linearly independent and $V$ has complex dimension $3$.
 
 \begin{proposition}\label{prop:V_iso}
 $V \cong \mathbb{C}^3$ as a $\mathbb{C}$-vector space via
@@ -178,7 +179,7 @@ The \emph{scalar part} of a biquaternion $x = x_0 + x_I I + x_J J + x_K K$
 \begin{definition}\label{def:h}
 For $v,w\in V$, define
 \begin{equation}\label{eq:h_def}
-  h(v,w) := -\mathrm{Sc}(v^\dagger w).
+  h(v,w) := \mathrm{Sc}(v^\dagger w).
 \end{equation}
 \end{definition}
 
@@ -192,43 +193,17 @@ In particular, $h$ is the standard Hermitian inner product on $\mathbb{C}^3$.
 \end{theorem}
 
 \begin{proof}
-We compute $v^\dagger w$ explicitly:
+Using $I^2=J^2=K^2=-1$ and the fact that the products of distinct imaginary
+quaternion units have zero scalar part,
 \begin{align}
-  v^\dagger w &= (-\bar{v}_1 I - \bar{v}_2 J - \bar{v}_3 K)(w_1 I + w_2 J + w_3 K).
+  \mathrm{Sc}(v^\dagger w)
+  &= \mathrm{Sc}\!\left[
+     (-\bar v_1 I-\bar v_2 J-\bar v_3 K)
+     (w_1 I+w_2 J+w_3 K)\right] \\
+  &= \bar v_1 w_1+\bar v_2 w_2+\bar v_3 w_3.
 \end{align}
-Using $I\cdot I = -1$, $I\cdot J = K$, $I\cdot K = -J$, etc.:
-\begin{align}
-  (-\bar{v}_1 I)(w_1 I) &= \bar{v}_1 w_1, \\
-  (-\bar{v}_1 I)(w_2 J) &= -\bar{v}_1 w_2 K, \\
-  (-\bar{v}_1 I)(w_3 K) &= \bar{v}_1 w_3 J, \\
-  (-\bar{v}_2 J)(w_1 I) &= \bar{v}_2 w_1 K, \\
-  (-\bar{v}_2 J)(w_2 J) &= \bar{v}_2 w_2, \\
-  (-\bar{v}_2 J)(w_3 K) &= -\bar{v}_2 w_3 I, \\
-  (-\bar{v}_3 K)(w_1 I) &= -\bar{v}_3 w_1 J, \\
-  (-\bar{v}_3 K)(w_2 J) &= \bar{v}_3 w_2 I, \\
-  (-\bar{v}_3 K)(w_3 K) &= \bar{v}_3 w_3.
-\end{align}
-Collecting the scalar (real quaternion) part:
-\begin{equation}
-  \mathrm{Sc}(v^\dagger w) = \bar{v}_1 w_1 + \bar{v}_2 w_2 + \bar{v}_3 w_3
-  - (\bar{v}_1 w_2 - \bar{v}_2 w_1) \cdot 0 - \cdots
-\end{equation}
-(all $I,J,K$ terms contribute nothing to the scalar part), so
-\begin{equation}
-  \mathrm{Sc}(v^\dagger w) = -(\bar{v}_1 w_1 + \bar{v}_2 w_2 + \bar{v}_3 w_3).
-\end{equation}
-Wait — let us redo the scalar part correctly: the scalar contributions are
-only from products $X\cdot X = -1$ for $X\in\{I,J,K\}$.  Thus
-$(-\bar{v}_1 I)(w_1 I) = -\bar{v}_1 w_1 I^2 = \bar{v}_1 w_1$ (scalar),
-$(-\bar{v}_2 J)(w_2 J) = \bar{v}_2 w_2$ (scalar),
-$(-\bar{v}_3 K)(w_3 K) = \bar{v}_3 w_3$ (scalar).
-All cross-product terms ($I\cdot J, I\cdot K$, etc.)\ contribute to
-imaginary-quaternion parts only.  Therefore
-\begin{equation}
-  \mathrm{Sc}(v^\dagger w) = -\bar{v}_1 w_1 - \bar{v}_2 w_2 - \bar{v}_3 w_3.
-\end{equation}
-Hence $h(v,w) = -\mathrm{Sc}(v^\dagger w) = \bar{v}_1 w_1 + \bar{v}_2 w_2 + \bar{v}_3 w_3$,
-which is the standard inner product on $\mathbb{C}^3$.
+Therefore $h(v,w)=\mathrm{Sc}(v^\dagger w)$ is exactly the standard
+positive-definite Hermitian product on $\mathbb{C}^3$ in the basis $(I,J,K)$.
 \end{proof}
 
 \begin{corollary}
@@ -307,11 +282,11 @@ $\det\bigl[(v_i),(w_i),(u_i)\bigr]$.
 \end{proof}
 
 \begin{remark}[Orientation]\label{rem:orientation}
-The sign in Definition~\ref{def:Omega} is chosen so that $\Omega(I,J,K)=+1$.
-This is the \emph{only} discrete choice (an overall sign); it is fixed by the
-ordered basis $(I,J,K)$ of $V$, which is canonical in UBT since $IJ=K$ (the
-positive cyclic convention in \eqref{eq:quat}).  No additional orientation
-is introduced by hand.
+The formula $\Omega(v,w,u)=-\mathrm{Sc}(vwu)$ is basis-free once the
+biquaternion multiplication and scalar projection are fixed.  In any positively
+oriented orthonormal imaginary-quaternion frame $(I,J,K)$ satisfying $IJ=K$ it
+has the normalisation $\Omega(I,J,K)=+1$.  Reversing the convention changes only
+the overall sign of $\Omega$ and not its stabiliser.
 \end{remark}
 
 \begin{corollary}
@@ -363,7 +338,10 @@ and $\det g=1$ (preserves $\Omega$).
 \begin{remark}\label{rem:su3_not_automorphism}
 $\mathrm{SU}(3)$ is the stabiliser of the \emph{pair} $(h,\Omega)$; it is
 not the automorphism group of the biquaternion algebra
-$\mathbb{C}\otimes\mathbb{H}$ itself, which is trivial on the associative level.
+$\mathbb{C}\otimes\mathbb{H}$ itself.  Indeed,
+$\mathbb{C}\otimes_{\mathbb{R}}\mathbb{H}\cong M_2(\mathbb{C})$, whose
+$\mathbb{C}$-algebra automorphisms are inner (isomorphic to
+$\mathrm{PGL}_2(\mathbb{C})$ by Skolem--Noether).
 \end{remark}
 
 %──────────────────────────────────────────────────────────────────────────────
@@ -377,8 +355,9 @@ Globally,
   U(3) \cong \bigl(\mathrm{SU}(3)\times U(1)\bigr)/\mathbb{Z}_3,
 \end{equation}
 where the $\mathbb{Z}_3$ identification is
-$(g,e^{i\theta})\sim(\omega g, e^{i(\theta+2\pi/3)})$ with
-$\omega = e^{2\pi i/3}$.
+$(g,z)\sim(\omega g,\omega^{-1}z)$ with
+$\omega=e^{2\pi i/3}$, i.e. the kernel of
+$(g,z)\mapsto zg$ is $\{(\omega^k\mathbf 1,\omega^{-k}):k=0,1,2\}$.
 This is \emph{not} a direct product.
 
 The Lie-algebra decomposition
@@ -485,11 +464,15 @@ $\mathbf{8}$, which consists of the generators of $\mathfrak{su}(3)$.
 \subsection{The 8 Fock states are not 8 gluons}
 
 \begin{remark}\label{rem:states_not_gluons}
-The $8$-dimensional basis $\{|000\rangle,|100\rangle,\ldots,|111\rangle\}$
-consists of \emph{occupation eigenstates} in the fermionic Fock space.
-The \emph{8 gluons} correspond instead to the \emph{8 generators of}
-$\mathfrak{su}(3)$, which act as operators on this $8$-dimensional space.
-These are distinct objects.
+The $8$-dimensional exterior space may be represented as a three-mode
+fermionic Fock space with occupation basis
+$\{|000\rangle,|100\rangle,\ldots,|111\rangle\}$.  This is a
+representation-theoretic construction; UBT has not thereby derived three
+fundamental physical fermionic modes.  The eight QCD gauge-boson species are
+labelled by the eight Lie-algebra directions $T_a$ (the adjoint index $a$), not
+by these eight Fock basis states.  The operators $\hat T_a$ below are the
+induced representation of those generators on $\Lambda^\bullet V$; the
+$8$-dimensional Fock representation is not the adjoint $\mathbf 8$.
 \end{remark}
 
 \subsection{Fermionic creation/annihilation operators}
@@ -554,14 +537,15 @@ $\hat{T}_a$ since $\mathrm{d}\Gamma$ preserves particle number.
 \label{sec:verification}
 %──────────────────────────────────────────────────────────────────────────────
 
-All algebraic claims in this document are verified by the exact symbolic script
+The theorem-critical algebraic identities listed below are verified by the exact symbolic script
 \begin{center}
   \texttt{verification/su3\_stabilizer\_fock\_check.py}
 \end{center}
 using SymPy (exact integer/rational arithmetic, no floating-point tolerances).
 The script checks:
 \begin{enumerate}
-  \item Quaternion multiplication identities used in $\Omega$;
+  \item Quaternion multiplication identities and the canonical Hermitian form
+        $h(v,w)=\mathrm{Sc}(v^\dagger w)$;
   \item The symbolic determinant identity for $\Omega$ (Theorem~\ref{thm:Omega});
   \item Gell-Mann matrices are Hermitian and traceless;
   \item All 28 independent commutator pairs reproduce the standard $\mathfrak{su}(3)$ structure constants;
