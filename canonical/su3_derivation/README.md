@@ -20,14 +20,14 @@ UBT-AI-PROVENANCE-END
 ### `su3_stabilizer_exterior_fock.tex`
 
 **Status**: PROVED [L1] — algebraic stabiliser and Fock representation.
-**Machine verified**: `verification/su3_stabilizer_fock_check.py` — 77/77 PASS (exact SymPy).
+**Machine verified**: `verification/su3_stabilizer_fock_check.py` — exact SymPy PASS (see script output).
 **Lean**: LEAN-PENDING.
 
 This is the preferred derivation.  It starts from the canonical UBT colour subspace
 `V = C-span{I,J,K} ⊂ C⊗H` and:
 
 1. Derives a canonical Hermitian form `h` from the biquaternionic adjoint `†`
-   already present in UBT: `h(v,w) = -Sc(v†w)`.
+   already present in UBT: `h(v,w) = Sc(v†w)`.
 2. Derives a canonical complex volume form `Ω` from quaternion multiplication:
    `Ω(v,w,u) = -Sc(vwu) = det([v;w;u])`.
 3. Proves `Stab_{GL(V)}(h,Ω) = SU(3)` without any postulate.

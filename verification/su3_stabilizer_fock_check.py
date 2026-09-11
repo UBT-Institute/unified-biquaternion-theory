@@ -92,7 +92,7 @@ check("IK = -J",  quat_mul(QI, QK) == (0, 0, -1, 0))
 # ============================================================
 # 2. Symbolic determinant identity for Omega
 # ============================================================
-print("\n[2] Volume form Omega = -Sc(vwu) = det([v;w;u])")
+print("\n[2] Hermitian form h(v,w) = Sc(v^dagger w) and volume form Omega")
 
 v1, v2, v3 = symbols("v1 v2 v3")
 w1, w2, w3 = symbols("w1 w2 w3")
@@ -104,6 +104,19 @@ def make_v(a, b, c):
 v_q = make_v(v1, v2, v3)
 w_q = make_v(w1, w2, w3)
 u_q = make_v(u1, u2, u3)
+
+# Canonical Hermitian form from the biquaternionic adjoint.
+def quat_dagger(q):
+    s0, s1, s2, s3 = q
+    return (conjugate(s0), -conjugate(s1), -conjugate(s2), -conjugate(s3))
+
+h_biquat = sp.expand(scalar_part(quat_mul(quat_dagger(v_q), w_q)))
+h_expected = conjugate(v1)*w1 + conjugate(v2)*w2 + conjugate(v3)*w3
+check("Sc(v^dagger w) = sum conjugate(v_i) w_i", sp.expand(h_biquat-h_expected) == 0)
+basis = [QI, QJ, QK]
+gram = Matrix([[scalar_part(quat_mul(quat_dagger(a), b)) for b in basis] for a in basis])
+check("Hermitian Gram matrix on (I,J,K) is identity", gram == eye(3))
+check("h(I,I)=h(J,J)=h(K,K)=1", all(gram[i,i] == 1 for i in range(3)))
 
 vw_q = quat_mul(v_q, w_q)
 vwu_q = quat_mul(vw_q, u_q)
