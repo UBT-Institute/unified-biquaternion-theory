@@ -11,6 +11,8 @@ a kinetic operator, physical masses, a quantum measure or an Einstein term.
 
 namespace UBT.Action.PotentialVacuum
 
+noncomputable section
+
 open scoped Matrix
 
 abbrev Mat := Matrix (Fin 2) (Fin 2) ℂ
@@ -41,7 +43,7 @@ theorem negative_mass_parameterization (mu l₁ l₂ : ℝ)
     nlinarith
 
 theorem H_eq_real_invariant (X : Mat) : H X = (hInvariant X).re := by
-  simp [H, hInvariant, Matrix.adjugate_fin_two, Matrix.trace, Matrix.mul_apply,
+  simp [H, hInvariant, Matrix.adjugate_fin_two, Matrix.trace, Matrix.vecMul, dotProduct,
     Fin.sum_univ_succ, Complex.sq_norm, Complex.normSq_apply, Complex.mul_re]
   ring
 
@@ -78,7 +80,7 @@ theorem potential_at_vacuum (r l₁ l₂ V₀ : ℝ) :
     potential (massCoefficient r l₁ l₂) l₁ l₂ V₀ (vacuum r) =
       V₀ - (4 * l₁ + l₂) * r ^ 4 := by
   simp [potential, massCoefficient, H, vacuum, Matrix.det_fin_two,
-    Complex.sq_norm, Complex.normSq_apply, Complex.mul_re, Complex.mul_im]
+    Complex.mul_re, Complex.mul_im]
   ring
 
 /-- A global minimum is actually attained on the Lorentz-real slice. -/
@@ -177,13 +179,14 @@ theorem secondDeriv_quartic (a b c d : ℝ) :
       (((hasDerivAt_id t).pow 2).const_mul b)).add
       (((hasDerivAt_id t).pow 3).const_mul c)).add
       (((hasDerivAt_id t).pow 4).const_mul d)
+    simp only [Pi.add_def, Pi.pow_apply, id_eq] at hd
     convert hd.deriv using 1
-    ring
+    <;> norm_num <;> ring
   rw [first]
   have hd := (((hasDerivAt_id (0 : ℝ)).const_mul (2 * b)).add
     (((hasDerivAt_id (0 : ℝ)).pow 2).const_mul (3 * c))).add
     (((hasDerivAt_id (0 : ℝ)).pow 3).const_mul (4 * d))
-  simpa using hd.deriv
+  simpa [Pi.add_def] using hd.deriv
 
 /-- The actual second derivative in every real field direction. -/
 theorem secondVariation_at_vacuum (r l₁ l₂ V₀ : ℝ) (v : Direction) :
