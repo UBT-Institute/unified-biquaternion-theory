@@ -209,4 +209,35 @@ theorem every_minimum_in_one_orbit (X : Mat) (r l₁ l₂ V₀ : ℝ)
   obtain ⟨S, hS, hfactor⟩ := normalize_factor T r hr hT
   exact ⟨u, S, hu, hS, hX.trans (congrArg (fun Z : Mat => u • Z) hfactor)⟩
 
+/-- Conversely every member of the stated orbit has the minimum energy. -/
+theorem orbit_attains_minimum (u : ℂ) (S : Mat) (r l₁ l₂ V₀ : ℝ)
+    (hu : ‖u‖ = 1) (hS : S.det = 1) :
+    potential (massCoefficient r l₁ l₂) l₁ l₂ V₀
+      (u • ((r : ℂ) • (S * Sᴴ))) = V₀ - (4 * l₁ + l₂) * r ^ 4 := by
+  have hi : (r : ℂ) • (S * Sᴴ) = S * ((r : ℂ) • (1 : Mat)) * Sᴴ := by
+    simp
+  have hh : H ((r : ℂ) • (S * Sᴴ)) = H ((r : ℂ) • (1 : Mat)) := by
+    rw [hi, H_eq_real_invariant, hInvariantSpinLiftInvariant S _ hS]
+    exact (H_eq_real_invariant _).symm
+  have hn : ‖(u • ((r : ℂ) • (S * Sᴴ))).det‖ =
+      ‖((r : ℂ) • (1 : Mat)).det‖ := by
+    rw [hi]
+    simp [hu, determinantSpinLiftInvariant S _ hS]
+  unfold potential
+  rw [phase_preserves_H u _ hu, hh, hn]
+  simp [H, massCoefficient, Matrix.det_fin_two]
+  ring
+
+/-- Exact classification: the global minimizing set is precisely this orbit. -/
+theorem minimum_iff_orbit (X : Mat) (r l₁ l₂ V₀ : ℝ)
+    (hr : 0 < r) (hl₁ : 0 ≤ l₁) (hl₂ : 0 < l₂) :
+    potential (massCoefficient r l₁ l₂) l₁ l₂ V₀ X =
+      V₀ - (4 * l₁ + l₂) * r ^ 4 ↔
+      ∃ u : ℂ, ∃ S : Mat, ‖u‖ = 1 ∧ S.det = 1 ∧
+        X = u • ((r : ℂ) • (S * Sᴴ)) := by
+  constructor
+  · exact every_minimum_in_one_orbit X r l₁ l₂ V₀ hr hl₁ hl₂
+  · rintro ⟨u, S, hu, hS, rfl⟩
+    exact orbit_attains_minimum u S r l₁ l₂ V₀ hu hS
+
 end UBT.Action.PotentialMinimumOrbit
