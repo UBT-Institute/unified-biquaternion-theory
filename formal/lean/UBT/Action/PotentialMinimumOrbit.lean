@@ -222,10 +222,10 @@ theorem orbit_attains_minimum (u : ℂ) (S : Mat) (r l₁ l₂ V₀ : ℝ)
   have hn : ‖(u • ((r : ℂ) • (S * Sᴴ))).det‖ =
       ‖((r : ℂ) • (1 : Mat)).det‖ := by
     rw [hi]
-    simp [hu, determinantSpinLiftInvariant S _ hS]
+    simp [hu, hS]
   unfold potential
   rw [phase_preserves_H u _ hu, hh, hn]
-  simp [H, massCoefficient, Matrix.det_fin_two]
+  simp [H, massCoefficient]
   ring
 
 /-- Exact classification: the global minimizing set is precisely this orbit. -/
