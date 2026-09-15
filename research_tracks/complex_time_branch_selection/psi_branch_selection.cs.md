@@ -770,7 +770,7 @@ a plný nekonečněrozměrný argument se spektrální mírou.
 |---|---|---|
 | G1 | Lemma o výběru větve pomocí omezenosti: úplná doména a ověření pokračování | ANALYTIC PROOF [L1]; LEAN-PENDING |
 | G2 | Identifikace \(s\stackrel{?}{=}\psi\) | OPEN / CONJECTURAL |
-| G3-DYN | Dynamické použití \(\Gamma_*D_\psi\), jeho normalizace, levé/pravé působení a původ na úrovni akce | OPEN |
+| G3-DYN | Dynamické použití \(\Gamma_*D_\psi\), jeho normalizace, levé/pravé působení a původ na úrovni akce | OPEN (NARROWED: trasa přes volný Hamiltonián je NO-GO; viz `psi_fock_quantization_chirality_link.cs.md`) |
 | G4 | Kompatibilita nekompaktního selektoru s kompaktním \(S^1_\psi\) | OPEN |
 | G5 | Původ, normalizace, reprezentace a transformační zákon \(D_\psi\), \(A_\psi\), \(B_\psi\) za plochým ansatzem | OPEN / ANSATZ |
 | G6 | Odvození na úrovni akce celého operátoru prvního řádu a jeho spektrálního / energetického selektoru | OPEN |
