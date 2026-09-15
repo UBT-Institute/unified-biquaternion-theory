@@ -27,8 +27,11 @@ obstrukcí:
   Einsteinova–Hilbertova koeficientu včetně nuly, takže tento koeficient není
   důsledkem kinematiky;
 - úplný kvartický potenciál invariantní vůči spojené symetrii má na
-  koeficientech nezávislý nekompaktní plochý směr `H=D=0` a sám nemůže vybrat
-  izolované vakuum;
+  koeficientech nezávislý nekompaktní plochý směr `H=D=0`, který dokazuje
+  nekoercivitu. To nevylučuje nenulové minimum: v oblasti znamének
+  z `biquaternionic_potential_vacuum.cs.md` tvoří všechna minima jedinou
+  orbitu deklarované symetrie. Výběr časoprostorového vakua úplné akce
+  zůstává otevřený;
 - každý čistě gravitační skalár nezávislý na hodnotě pole a algebraicky
   závislý pouze na témže prvním jetu se redukuje na kosmologickou objemovou
   hustotu;

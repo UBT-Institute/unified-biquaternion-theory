@@ -416,9 +416,9 @@ skutečné datum ověření, verze, hashe a omezení. Regresní kontrola prově�
 tyto vědecké identity.
 
 Formalizace tohoto auditu má stav `PARTIAL`. Lean a mathlib `v4.33.1` prošly
-`lake build --wfail`, kontrolou `leanchecker` pro `UBT` a auditem axiomů `93`
+`lake build --wfail`, kontrolou `leanchecker` pro `UBT` a auditem axiomů `113`
 deklarací v
-[zaznamenaném běhu CI](https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/34934154604).
+[zaznamenaném běhu CI](https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35007929440).
 Povolené byly pouze axiomy `propext`, `Classical.choice` a `Quot.sound`.
 Hashe zdrojů a přesný rozsah jsou zaznamenány v
 `reports/lean_volume_hessian_2026_09_09.json`.

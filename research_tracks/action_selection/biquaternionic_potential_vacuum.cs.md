@@ -68,7 +68,7 @@ vymizí právě tehdy, když
 H=2r^2,\qquad \rho=r^2.
 \]
 Dosazení \(X_0\) dokazuje dosažení minima. Jde o přesné invariantní podmínky
-rovnosti; samotná tato věta neklasifikuje globální orbity symetrií.
+rovnosti. Klasifikace globální orbity je dokázána níže.
 
 Známý neomezený paprsek \(X_t=t\operatorname{diag}(1,0)\) splňuje
 \[
@@ -77,6 +77,59 @@ V(X_t)-V_{\min}=(4\lambda_1+\lambda_2)r^4>0.
 \]
 Dokazuje nekoercivitu, ale nevylučuje toto nenulové globální minimum.
 Ze samotného paprsku neplyne nestabilita tohoto minima.
+
+<!-- BILINGUAL-UNIT: biquat-potential.orbit -->
+## Jediná minimalizující orbita symetrií
+
+Každé globální minimum má tvar
+\[
+\boxed{X=v\,rSS^\dagger,\qquad |v|=1,\qquad\det S=1.}
+\]
+Všechna minima tedy leží v téže deklarované orbitě fázových a spinových
+kongruenčních transformací matice \(rI_2\), a tedy i matice \(irI_2\).
+Hermitovskost vstupního biquaternionu se nepředpokládá.
+
+**Důkaz.** Přesná identita
+\[
+H(X)=|\operatorname{tr}X|^2-
+(|a|^2+|b|^2+|c|^2+|d|^2)
+\]
+a \(H(X)>0\) dávají \(\operatorname{tr}X\ne0\). Položme
+\[
+u=\frac{|\operatorname{tr}X|}{\operatorname{tr}X},\qquad Y=uX.
+\]
+Potom \(|u|=1\), invariantní podmínky rovnosti se zachovávají a
+\(\operatorname{tr}Y>0\) je reálné. Pro libovolnou matici \(Y=(y_{ij})\) platí
+\[
+\begin{aligned}
+2\operatorname{Re}\det Y-H(Y)
+={}&(\operatorname{Im}y_{00}-\operatorname{Im}y_{11})^2
++(\operatorname{Re}y_{01}-\operatorname{Re}y_{10})^2\\
+&+(\operatorname{Im}y_{01}+\operatorname{Im}y_{10})^2
+-(\operatorname{Im}\operatorname{tr}Y)^2.
+\end{aligned}
+\]
+Pro normalizované minimum je levá strana nekladná a pravá je součtem
+nezáporných čtverců. Vymizí, takže \(Y\) je hermitovská.
+Zápis
+\[
+Y=\begin{pmatrix}a&b\\\bar b&d\end{pmatrix},\qquad
+a,d\in\mathbb R,\qquad a+d>0,\qquad ad-|b|^2=r^2>0,
+\]
+dává \(a>0\). Explicitní faktor
+\[
+T=\begin{pmatrix}\sqrt a&0\\\bar b/\sqrt a&r/\sqrt a\end{pmatrix},
+\qquad TT^\dagger=Y,\qquad\det T=r
+\]
+dává \(S=T/\sqrt r\), \(\det S=1\) a
+\(X=u^{-1}rSS^\dagger\), čímž dokazuje uvedenou reprezentaci.
+Naopak deklarované fázové a kongruenční transformace s determinantem jedna
+zachovávají potenciál, takže tito reprezentanti dosahují stejného minima.
+
+Tím je pro uvedený potenciál a oblast znamének vyřešena nejednoznačnost
+globální orbity. Nedokazuje to, že celá orbita symetrií je fyzikální gauge
+redundancí nebo že její reprezentanti dávají nedegenerovanou časoprostorovou
+tetrádu.
 
 <!-- BILINGUAL-UNIT: biquat-potential.hessian -->
 ## Skutečná druhá variace ve všech směrech pole
@@ -162,6 +215,11 @@ bez kontroly úplné definující konexe a rovnic pole.
 pro normu, globální minimum, invariantní podmínky rovnosti, parametrizaci
 záporného koeficientu, přísný odstup nulového paprsku od minima, identitu
 kvartické variace, skutečnou druhou derivaci, kladnost a čtyři rovnice jádra.
+`formal/lean/UBT/Action/PotentialMinimumOrbit.lean` dokazuje fázovou normalizaci,
+trojúhelníkový faktor, normalizaci na determinant jedna a větu
+`every_minimum_in_one_orbit` pro libovolné globální minimum.
+`orbit_attains_minimum` dokazuje opačný směr a `minimum_iff_orbit`
+spojuje oba směry do přesné klasifikace.
 Skutečný výsledek kompilátoru, kontroly jádra a auditu axiomů je zaznamenán v
 `reports/lean_volume_hessian_2026_09_09.json`. Název souboru zachovává datum
 původního záznamu; jeho obsah určuje kontrolovaný commit a datum ověření.
@@ -170,6 +228,8 @@ původního záznamu; jeho obsah určuje kontrolovaný commit a datum ověření
 invarianty, identitu rozdílu potenciálů, všechny prvky gradientu a Hessiánu,
 vlastní čísla, hodnost a jádro. Test je
 `tests/test_biquaternionic_potential_vacuum.py`.
+Kontroluje také identitu rozdílu se stopou, všechny prvky trojúhelníkového
+a normalizovaného faktoru a identity invariantů orbity.
 Výpočet CAS ověřuje přesné polynomiální identity; univerzální nerovnost
 pro normu je samostatný analytický důkaz v Leanu.
 

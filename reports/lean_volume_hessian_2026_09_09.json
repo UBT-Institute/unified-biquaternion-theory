@@ -7,13 +7,13 @@
   "pull_request": 648,
   "ci": {
     "workflow": "Lean theorem verification",
-    "run_id": 34934154604,
-    "job_id": 104268380765,
-    "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/34934154604",
+    "run_id": 35007929440,
+    "job_id": 104512279910,
+    "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35007929440",
     "conclusion": "success",
-    "head_commit": "43e3c5130d80f3bed5fd4e7f7ff52f740c7f71b6",
-    "checked_merge_commit": "e7175da695daccbc0ce497c8cfc12c85ac4f2f63",
-    "source_identity": "All 14 local Lean source/configuration files were byte-for-byte matched against the checked merge commit."
+    "head_commit": "839313867bbb56d4dc61709907a6d4c201744a47",
+    "checked_merge_commit": "c52329e44c58cb703852cc565ccb382f825b6451",
+    "source_identity": "All 15 local Lean source/configuration files were byte-for-byte matched against the checked merge commit."
   },
   "tools": {
     "lean": "4.33.1",
@@ -40,7 +40,7 @@
       "id": "LEAN-AXIOMS",
       "result": "PASS",
       "root": "UBT",
-      "declarations_audited": 93,
+      "declarations_audited": 113,
       "allowed_axioms": [
         "propext",
         "Classical.choice",
@@ -51,8 +51,8 @@
     {
       "id": "SOURCE-IDENTITY",
       "result": "PASS",
-      "files_matched": 14,
-      "checked_commit": "e7175da695daccbc0ce497c8cfc12c85ac4f2f63"
+      "files_matched": 15,
+      "checked_commit": "c52329e44c58cb703852cc565ccb382f825b6451"
     }
   ],
   "proofs": [
@@ -108,6 +108,15 @@
       "assumptions": "An arbitrary eight-real-component affine variation; r>0, lambda1>=0, lambda2>0 for strict positivity and the kernel characterization.",
       "conclusion": "The actual twice-differentiated quartic is 2*r^2*((4*lambda1+lambda2)*(v1+v3)^2+lambda2*((v0-v2)^2+(v4+v6)^2+(v5-v7)^2)). It is nonnegative, positive off the four kernel equations, and zero exactly on them.",
       "scope": "The polynomial expansion and actual derivatives are proved, rather than assumed. No kinetic operator or physical particle mass is inferred."
+    },
+    {
+      "claim": "Exact global classification of the minimizing symmetry orbit",
+      "declaration": "UBT.Action.PotentialMinimumOrbit.minimum_iff_orbit",
+      "file": "formal/lean/UBT/Action/PotentialMinimumOrbit.lean",
+      "status": "PROVED",
+      "assumptions": "All complex 2x2 matrices; r>0, lambda1>=0, lambda2>0 and mu=-(4*lambda1+lambda2)*r^2.",
+      "conclusion": "V(X)=Vmin if and only if X=u*r*S*S^dagger with norm(u)=1 and det(S)=1. Both directions are proved.",
+      "scope": "The proof constructs a unit phase from the nonzero trace, proves Hermitian entry relations from saturation, constructs a triangular factor and normalizes its determinant. No Hermitian ansatz, physical gauge quotient, new field or spacetime vacuum is assumed."
     }
   ],
   "independent_verification": {
@@ -151,12 +160,16 @@
       "sha256": "5c86433b1f30c8c5e0e528eb3b3e972b2c679513362995fd0fb623e6eee23dd0"
     },
     "formal/lean/UBT.lean": {
-      "git_blob_sha": "292b295e80156bd2c7d551eeb5c97513560092d4",
-      "sha256": "9ace46ac43569bf5f5e2e42b0f60d48b11994e291b5e4f83d6818a2a466cb5c0"
+      "git_blob_sha": "157bca97211a856e2e7e5d441a3852179728ab48",
+      "sha256": "3d41a369bd54053dda6d2da4b42999ef38fbf7889f773bf7ea4aa0eb829d4518"
     },
     "formal/lean/UBT/Action/PotentialInvariants.lean": {
       "git_blob_sha": "5e3d9f14f871469446090385394b6c0c343686f2",
       "sha256": "88fb2257d7fd7e61a7c85099dd104c4d8258528dec08c33025fb81d8c17515da"
+    },
+    "formal/lean/UBT/Action/PotentialMinimumOrbit.lean": {
+      "git_blob_sha": "0654cd2cc555c00469f2495aef839815259baede",
+      "sha256": "c01db053ab7332668f1d62915dbbfa71e130be0e1447ff970e13520daee422b7"
     },
     "formal/lean/UBT/Action/PotentialVacuum.lean": {
       "git_blob_sha": "8b42fe0a3a34454fce7e9cc75c968294e81d685a",
@@ -214,7 +227,10 @@
       "all gradient and Hessian entries",
       "eigenvalues and multiplicities",
       "kernel rank and map",
-      "null-ray gap"
+      "null-ray gap",
+      "trace and phase-normalization defect identities",
+      "triangular factor and determinant-one normalization",
+      "orbit invariant identities"
     ]
   }
 }

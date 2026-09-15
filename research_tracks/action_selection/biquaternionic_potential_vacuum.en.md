@@ -69,7 +69,7 @@ exactly when
 H=2r^2,\qquad \rho=r^2.
 \]
 Substitution of \(X_0\) proves attainment. These are exact invariant equality
-conditions; this theorem alone does not classify global symmetry orbits.
+conditions. The global orbit classification is proved below.
 
 The known unbounded ray \(X_t=t\operatorname{diag}(1,0)\) has
 \[
@@ -78,6 +78,59 @@ V(X_t)-V_{\min}=(4\lambda_1+\lambda_2)r^4>0.
 \]
 It proves noncoercivity but does not exclude this nonzero global minimum.
 No instability of that minimum follows from the ray alone.
+
+<!-- BILINGUAL-UNIT: biquat-potential.orbit -->
+## A single minimizing symmetry orbit
+
+Every global minimizer has the form
+\[
+\boxed{X=v\,rSS^\dagger,\qquad |v|=1,\qquad\det S=1.}
+\]
+Thus all minimizers lie in the same declared phase and spin-congruence orbit
+of \(rI_2\), and hence of \(irI_2\). No Hermitian restriction on the input
+biquaternion is assumed.
+
+**Proof.** The exact identity
+\[
+H(X)=|\operatorname{tr}X|^2-
+(|a|^2+|b|^2+|c|^2+|d|^2)
+\]
+and \(H(X)>0\) imply \(\operatorname{tr}X\ne0\). Set
+\[
+u=\frac{|\operatorname{tr}X|}{\operatorname{tr}X},\qquad Y=uX.
+\]
+Then \(|u|=1\), the invariant equality conditions are preserved, and
+\(\operatorname{tr}Y>0\) is real. For any matrix \(Y=(y_{ij})\),
+\[
+\begin{aligned}
+2\operatorname{Re}\det Y-H(Y)
+={}&(\operatorname{Im}y_{00}-\operatorname{Im}y_{11})^2
++(\operatorname{Re}y_{01}-\operatorname{Re}y_{10})^2\\
+&+(\operatorname{Im}y_{01}+\operatorname{Im}y_{10})^2
+-(\operatorname{Im}\operatorname{tr}Y)^2.
+\end{aligned}
+\]
+For the normalized minimizer the left side is nonpositive and the right side
+is a sum of nonnegative squares. They vanish, so \(Y\) is Hermitian.
+Writing
+\[
+Y=\begin{pmatrix}a&b\\\bar b&d\end{pmatrix},\qquad
+a,d\in\mathbb R,\qquad a+d>0,\qquad ad-|b|^2=r^2>0,
+\]
+gives \(a>0\). The explicit factor
+\[
+T=\begin{pmatrix}\sqrt a&0\\\bar b/\sqrt a&r/\sqrt a\end{pmatrix},
+\qquad TT^\dagger=Y,\qquad\det T=r
+\]
+yields \(S=T/\sqrt r\), \(\det S=1\) and
+\(X=u^{-1}rSS^\dagger\), proving the displayed representation.
+Conversely the declared phase and determinant-one congruence transformations
+preserve the potential, so these representatives attain the same minimum.
+
+This settles the global orbit ambiguity for the stated potential and sign
+region. It does not establish that the entire symmetry orbit is physical
+gauge redundancy or that its representatives give a nondegenerate spacetime
+tetrad.
 
 <!-- BILINGUAL-UNIT: biquat-potential.hessian -->
 ## Actual second variation in all field directions
@@ -163,6 +216,11 @@ without checking the full defining connection and field equations.
 inequality, global minimum, invariant equality conditions, negative-coefficient
 parameterization, strict gap above the null ray, quartic variation identity,
 actual second derivative, positivity and the four kernel equations.
+`formal/lean/UBT/Action/PotentialMinimumOrbit.lean` proves phase normalization,
+the triangular factor, determinant-one normalization and
+`every_minimum_in_one_orbit` for an arbitrary global minimizer.
+`orbit_attains_minimum` proves the converse, and `minimum_iff_orbit`
+combines both directions into the exact classification.
 The actual compiler, kernel-checker and axiom-audit result is recorded in
 `reports/lean_volume_hessian_2026_09_09.json`. Its filename retains the initial
 record date; its contents identify the checked commit and verification date.
@@ -170,6 +228,8 @@ record date; its contents identify the checked commit and verification date.
 `tools/verify_biquaternionic_potential_vacuum.py` independently checks the matrix
 invariants, the gap identity, all gradient and Hessian entries, eigenvalues,
 rank and kernel. The test is `tests/test_biquaternionic_potential_vacuum.py`.
+It also checks the trace-defect identity, all entries of the triangular and
+normalized factors, and the orbit invariant identities.
 The CAS calculation verifies exact polynomial identities; the universal norm
 inequality is a separate analytic Lean proof.
 

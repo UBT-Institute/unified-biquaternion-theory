@@ -416,9 +416,9 @@ the actual verification date, versions, hashes and limits. The regression
 gate exercises these scientific identities.
 
 Formalization of this audit is `PARTIAL`. Lean and mathlib `v4.33.1` passed
-`lake build --wfail`, `leanchecker` for `UBT`, and an axiom audit of `93`
+`lake build --wfail`, `leanchecker` for `UBT`, and an axiom audit of `113`
 declarations in the
-[recorded CI run](https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/34934154604).
+[recorded CI run](https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35007929440).
 The only allowed axioms were `propext`, `Classical.choice` and `Quot.sound`.
 The source hashes and exact scope are recorded in
 `reports/lean_volume_hessian_2026_09_09.json`.

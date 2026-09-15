@@ -27,8 +27,11 @@ several exact obstructions:
   arbitrary Einstein--Hilbert coefficient, including zero, so that coefficient
   is not a consequence of the kinematics;
 - the complete connected-symmetry-invariant quartic potential has a
-  coefficient-independent noncompact `H=D=0` flat direction and cannot by
-  itself select an isolated vacuum;
+  coefficient-independent noncompact `H=D=0` flat direction, proving
+  noncoercivity. This does not exclude a nonzero minimum: in the sign region
+  of `biquaternionic_potential_vacuum.en.md`, all minima form a single
+  declared symmetry orbit. Selection of a full-action spacetime vacuum
+  remains open;
 - every value-independent pure-gravity scalar depending only algebraically on
   the same first jet reduces to a cosmological-volume density;
 - on the pure-gradient metric-lock branch the displayed quadratic kinetic term

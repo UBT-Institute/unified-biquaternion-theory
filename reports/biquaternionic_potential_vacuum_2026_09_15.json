@@ -20,6 +20,9 @@
       "v5-v7=0"
     ],
     "null_ray_energy_above_minimum": "(4*l1+l2)*r^4",
+    "phase_normalization_defect_identity": "PASS",
+    "triangular_factor_and_determinant_one_normalization": "PASS",
+    "orbit_invariant_identities": "PASS",
     "assumptions": [
       "r>0",
       "l1>=0",
@@ -36,10 +39,11 @@
     "evidence_record": "reports/lean_volume_hessian_2026_09_09.json"
   },
   "source_sha256": {
-    "tools/verify_biquaternionic_potential_vacuum.py": "17c7f384c6e98cd7aecccaf51e029db62d35fa5b266b83cf049e1642aa3b3007",
+    "tools/verify_biquaternionic_potential_vacuum.py": "0b0cf65a6516764b99b4c09e91bf951203ab06b242ea44e665f2091279013df7",
     "formal/lean/UBT/Action/PotentialVacuum.lean": "ac4da25fb407fd67c3fcaa5316d8a57e9fe0b858e9db39430c08712e8b94bb33",
-    "research_tracks/action_selection/biquaternionic_potential_vacuum.en.md": "5191300883ff1ebc7cb012b92a9338206bd54875c431394d1a3d36addc0cf653",
-    "research_tracks/action_selection/biquaternionic_potential_vacuum.cs.md": "b60957873c996dbadb6fdec0ec91b289f05ffd2c91a2e6ac7cf9401a8303ebf1",
+    "formal/lean/UBT/Action/PotentialMinimumOrbit.lean": "c01db053ab7332668f1d62915dbbfa71e130be0e1447ff970e13520daee422b7",
+    "research_tracks/action_selection/biquaternionic_potential_vacuum.en.md": "bf6ba8f6b7c99dd26e21bf4007941afe46b2a129f74a1e69fa8d2c594579ad4c",
+    "research_tracks/action_selection/biquaternionic_potential_vacuum.cs.md": "3d61e2dd778202243f49e78268be3a7b72695a5d0b888651fdd0ea2fa7448eb2",
     "tests/test_biquaternionic_potential_vacuum.py": "159981787fe15b2141fcf27d107cdd4db03e8b74220522e055a8d4995f045d81"
   },
   "limitations": [
