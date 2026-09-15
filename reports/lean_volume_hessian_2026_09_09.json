@@ -1,0 +1,220 @@
+{
+  "schema": "ubt-verification/v1",
+  "date": "2026-09-15",
+  "result": "PASS",
+  "formalization_scope": "PARTIAL",
+  "repository": "UBT-Institute/unified-biquaternion-theory",
+  "pull_request": 648,
+  "ci": {
+    "workflow": "Lean theorem verification",
+    "run_id": 34934154604,
+    "job_id": 104268380765,
+    "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/34934154604",
+    "conclusion": "success",
+    "head_commit": "43e3c5130d80f3bed5fd4e7f7ff52f740c7f71b6",
+    "checked_merge_commit": "e7175da695daccbc0ce497c8cfc12c85ac4f2f63",
+    "source_identity": "All 14 local Lean source/configuration files were byte-for-byte matched against the checked merge commit."
+  },
+  "tools": {
+    "lean": "4.33.1",
+    "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+    "mathlib": "v4.33.1",
+    "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "axiom_audit": "v0.1.2",
+    "axiom_audit_commit": "46024e005996495c65ef609368e11ab39c4222e3"
+  },
+  "checks": [
+    {
+      "id": "LEAN-BUILD",
+      "result": "PASS",
+      "command": "lake build --wfail",
+      "target": "UBT"
+    },
+    {
+      "id": "LEAN-KERNEL",
+      "result": "PASS",
+      "tool": "Bundled leanchecker",
+      "arguments": "UBT"
+    },
+    {
+      "id": "LEAN-AXIOMS",
+      "result": "PASS",
+      "root": "UBT",
+      "declarations_audited": 93,
+      "allowed_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "unexpected_axioms": []
+    },
+    {
+      "id": "SOURCE-IDENTITY",
+      "result": "PASS",
+      "files_matched": 14,
+      "checked_commit": "e7175da695daccbc0ce497c8cfc12c85ac4f2f63"
+    }
+  ],
+  "proofs": [
+    {
+      "claim": "Complete bilinear composite Hessian chain rule",
+      "declaration": "UBT.GR.secondFDeriv_composite",
+      "file": "formal/lean/UBT/GR/CompositeSecondVariation.lean",
+      "status": "PROVED",
+      "assumptions": "Real normed vector spaces; f and g globally differentiable; their first Frechet derivatives differentiable at the evaluation points.",
+      "conclusion": "D²(f∘g)[u,v] = D²f[Dg u,Dg v] + Df[D²g[u,v]], using actual Frechet derivatives.",
+      "scope": "No stationarity, prescribed Hessian value, or Einstein-operator hypothesis is assumed. The theorem does not construct the microscopic UBT action or connection map."
+    },
+    {
+      "claim": "Complete second derivative along a curve",
+      "declaration": "UBT.GR.hasSecondVariation_composite",
+      "file": "formal/lean/UBT/GR/CompositeSecondVariation.lean",
+      "status": "PROVED",
+      "assumptions": "f is differentiable; its first derivative has derivative H at g(t); g has derivative g₁ at every point; g₁ has derivative g₂ at t.",
+      "conclusion": "The second derivative is H(g₁(t),g₁(t)) + Df(g(t))[g₂]."
+    },
+    {
+      "claim": "Determinant rank-one and mixed directional identities",
+      "declaration": "UBT.GR.VolumeVariation.mixedSecondDeriv_density_common_covector",
+      "file": "formal/lean/UBT/GR/VolumeVariation.lean",
+      "status": "PROVED",
+      "assumptions": "Arbitrary real 4×4 first jet, real inverse scale, field value, field-dependent additive shift and weight, covector and pair of field vectors.",
+      "conclusion": "The determinant density is affine on common-covector first-jet variations and its mixed real derivative vanishes.",
+      "scope": "The polynomial is proved equal to Matrix.det; no numerical sample or zero-derivative hypothesis replaces the proof."
+    },
+    {
+      "claim": "Actual first-jet Frechet Hessian symbol",
+      "declaration": "UBT.GR.VolumeVariation.firstJetSymbol_eq_zero",
+      "file": "formal/lean/UBT/GR/VolumePrincipalSymbol.lean",
+      "status": "PROVED",
+      "assumptions": "The same unrestricted pointwise real variables as the determinant density; the matrix norm is the elementwise norm.",
+      "conclusion": "The actual second Frechet derivative contracted with a common spacetime covector is zero in every pair of field directions.",
+      "scope": "Twice differentiability is proved from the determinant polynomial, rather than assumed. Field-value partial derivatives and the complete Euler PDE are separate statements."
+    },
+    {
+      "claim": "Nonzero global minimum of the existing quartic potential",
+      "declaration": "UBT.Action.PotentialVacuum.vacuum_is_global_minimum",
+      "file": "formal/lean/UBT/Action/PotentialVacuum.lean",
+      "status": "PROVED",
+      "assumptions": "All complex 2x2 matrices; lambda1>=0, lambda2>0 and mu<0; equivalently r>0 and mu=-(4*lambda1+lambda2)*r^2. The lower-bound theorem also covers nonnegative lambda2 and arbitrary real r.",
+      "conclusion": "X0=i*r*I attains Vmin=V0-(4*lambda1+lambda2)*r^4. The universal H<=2*norm(det X) inequality, norm/trace invariant identity, negative-mu parameterization, invariant equality conditions and strict null-ray gap are proved in the same module.",
+      "scope": "An exact pointwise theorem in the original eight-real-component biquaternionic algebra. It does not select the coefficients or prove a full-action spacetime vacuum."
+    },
+    {
+      "claim": "Actual second variation and positivity in all eight real field directions",
+      "declaration": "UBT.Action.PotentialVacuum.secondVariation_at_vacuum",
+      "file": "formal/lean/UBT/Action/PotentialVacuum.lean",
+      "status": "PROVED",
+      "assumptions": "An arbitrary eight-real-component affine variation; r>0, lambda1>=0, lambda2>0 for strict positivity and the kernel characterization.",
+      "conclusion": "The actual twice-differentiated quartic is 2*r^2*((4*lambda1+lambda2)*(v1+v3)^2+lambda2*((v0-v2)^2+(v4+v6)^2+(v5-v7)^2)). It is nonnegative, positive off the four kernel equations, and zero exactly on them.",
+      "scope": "The polynomial expansion and actual derivatives are proved, rather than assumed. No kinetic operator or physical particle mass is inferred."
+    }
+  ],
+  "independent_verification": {
+    "script": "tools/verify_biquaternionic_induced_gravity_boundary.py",
+    "record": "reports/biquaternionic_induced_gravity_boundary_2026_09_08.json",
+    "checks": [
+      "B2",
+      "B6",
+      "B7"
+    ],
+    "test_file": "tests/test_biquaternionic_induced_gravity_boundary.py",
+    "tests_passed": 3
+  },
+  "remaining_formalization": [
+    {
+      "claim": "B-VAR integrated covariant Euler and Jacobi formulas",
+      "status": "LEAN-PENDING",
+      "missing": "Exterior differential calculus, compact-support integration by parts and equality of integrated mixed variations."
+    },
+    {
+      "claim": "B-VAL full Euler/Jacobi differential-order theorem",
+      "status": "PARTIAL",
+      "missing": "The principal first-jet Hessian is checked; the complete Euler operator and its differential-order deduction are not formalized."
+    },
+    {
+      "claim": "Potential-vacuum geometric interpretation",
+      "status": "LEAN-PENDING",
+      "missing": "Eigenvalue multiplicities, identification of phase/boost tangent generators, and the conditional constant-H tetrad-rank argument are not formalized in this module."
+    }
+  ],
+  "limitations": [
+    "The volume lemmas restrict the same biquaternionic Theta to its four Lorentz-real coordinates; the potential theorem varies all eight real coordinates. Neither introduces a new physical field or independent tetrad.",
+    "A general derivative-dependent or implicit composite connection still needs a specified differentiable solution map and a full action variation.",
+    "The physical quantum operator, gauge/ghost quotient, contour, nonzero positive Einstein coefficient, UV scale and renormalization are not derived here.",
+    "This record is not a proof of full UBT, induced Newton's constant, RH, or every scientific statement elsewhere in the PR."
+  ],
+  "canonical_claim_status_changes": [],
+  "source_files": {
+    ".github/workflows/lean.yml": {
+      "git_blob_sha": "1ae241d6f37c7292e00e85fbadc1060e60949250",
+      "sha256": "5c86433b1f30c8c5e0e528eb3b3e972b2c679513362995fd0fb623e6eee23dd0"
+    },
+    "formal/lean/UBT.lean": {
+      "git_blob_sha": "292b295e80156bd2c7d551eeb5c97513560092d4",
+      "sha256": "9ace46ac43569bf5f5e2e42b0f60d48b11994e291b5e4f83d6818a2a466cb5c0"
+    },
+    "formal/lean/UBT/Action/PotentialInvariants.lean": {
+      "git_blob_sha": "5e3d9f14f871469446090385394b6c0c343686f2",
+      "sha256": "88fb2257d7fd7e61a7c85099dd104c4d8258528dec08c33025fb81d8c17515da"
+    },
+    "formal/lean/UBT/Action/PotentialVacuum.lean": {
+      "git_blob_sha": "8b42fe0a3a34454fce7e9cc75c968294e81d685a",
+      "sha256": "ac4da25fb407fd67c3fcaa5316d8a57e9fe0b858e9db39430c08712e8b94bb33"
+    },
+    "formal/lean/UBT/GR/CompositeActionStationarity.lean": {
+      "git_blob_sha": "ac727a0b286396a7e5a882aec04c1c43ab397345",
+      "sha256": "ec7b7138c9d0c0760f990c392ddcf3442c9d89c91b4ea49bd65554884c31023f"
+    },
+    "formal/lean/UBT/GR/CompositeKinetic.lean": {
+      "git_blob_sha": "a8ca31e2f13e307371bbf4a45f4179dc50becb66",
+      "sha256": "58bff7173c5b68eb81de0a79d53367900f4eddbfdf5fe75fa7cb945ec2bdc859"
+    },
+    "formal/lean/UBT/GR/CompositeSecondVariation.lean": {
+      "git_blob_sha": "3ff83505046ee347567500f3e3d74b5d4c530abe",
+      "sha256": "af7cd8750d286890fb57447f6993411d824a05725dff1b60deb84b9b6bf0fef4"
+    },
+    "formal/lean/UBT/GR/CurvatureUnderdetermination.lean": {
+      "git_blob_sha": "eb54f55b334850823f17afa4a0d296d866eb3d0d",
+      "sha256": "f73e0a2a93de047c2ca9ce5e5912b75c361e6f13924ecf78690e64eeb2ab80c3"
+    },
+    "formal/lean/UBT/GR/LegacyActionObstructions.lean": {
+      "git_blob_sha": "ef8ca581ff6e51977b0f098292c994df2036354d",
+      "sha256": "80c47b2c80ccf10e17ab9a168f3c3b9e670fe83fac91341ecdb70c204584e42b"
+    },
+    "formal/lean/UBT/GR/VolumePrincipalSymbol.lean": {
+      "git_blob_sha": "e9dcdbb9c8af09772838136eb697a8296d0b3fcb",
+      "sha256": "a85aac9ecd71dc04f9107f7389a54b8eeb5170d8a008d58912c595fbcea840ab"
+    },
+    "formal/lean/UBT/GR/VolumeVariation.lean": {
+      "git_blob_sha": "91be5269d7df7300c760ebc44e6ee04f38cae6dc",
+      "sha256": "371e5583bcac9acf0fe87790f863b1f6cdf3409237b7e2828f3850411d656214"
+    },
+    "formal/lean/lake-manifest.json": {
+      "git_blob_sha": "de12326c08ca2fe36aef5c94db1c379b740e4848",
+      "sha256": "b39b3cb24ff476b4054c0033ff89b296b117697d12ff55eef2bcdc127527475e"
+    },
+    "formal/lean/lakefile.toml": {
+      "git_blob_sha": "7b2135efc0066fb5407011a489f7bfb648a5dfd4",
+      "sha256": "5099e6f10557172813e7e372e3d0b6debbaf20bd4b45bc594553ccccc032fab5"
+    },
+    "formal/lean/lean-toolchain": {
+      "git_blob_sha": "a8afa7d1b02d96f0671eba854a8dc4b416beb473",
+      "sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  "potential_independent_verification": {
+    "script": "tools/verify_biquaternionic_potential_vacuum.py",
+    "record": "reports/biquaternionic_potential_vacuum_2026_09_15.json",
+    "test_file": "tests/test_biquaternionic_potential_vacuum.py",
+    "tests_passed": 1,
+    "checks": [
+      "matrix invariants",
+      "gap polynomial identity",
+      "all gradient and Hessian entries",
+      "eigenvalues and multiplicities",
+      "kernel rank and map",
+      "null-ray gap"
+    ]
+  }
+}

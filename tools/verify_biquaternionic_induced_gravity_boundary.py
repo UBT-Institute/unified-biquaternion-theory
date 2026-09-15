@@ -13,7 +13,7 @@ import argparse
 import hashlib
 import json
 import platform
-import shutil
+from datetime import datetime, timezone
 from itertools import permutations
 from pathlib import Path
 
@@ -315,11 +315,14 @@ def main() -> None:
         "research_tracks/action_selection/biquaternionic_induced_gravity_boundary.en.md",
         "research_tracks/action_selection/biquaternionic_induced_gravity_boundary.cs.md",
         "tests/test_biquaternionic_induced_gravity_boundary.py",
+        "formal/lean/UBT/GR/VolumeVariation.lean",
+        "formal/lean/UBT/GR/VolumePrincipalSymbol.lean",
+        "formal/lean/UBT/GR/CompositeSecondVariation.lean",
     ]
     report = {
         "schema": "ubt-verification/v1",
-        "date": "2026-09-09",
-        "base_commit": "98fbc114f8dfcd88d8dbc24614b555f80f04ffeb",
+        "date": datetime.now(timezone.utc).date().isoformat(),
+        "base_commit": "6ee61b98bb7578d67c2babe16134128d1f0f910c",
         "result": "PASS",
         "check_groups": len(CHECKS),
         "checks": CHECKS,
@@ -329,10 +332,9 @@ def main() -> None:
             "mpmath": mp.__version__,
         },
         "lean": {
-            "status": "LEAN-PENDING",
-            "lean_available": bool(shutil.which("lean")),
-            "lake_available": bool(shutil.which("lake")),
-            "reason": "No compiled Lean proof; Lean and Lake are absent in the inspected runtime.",
+            "status": "NOT_RUN_BY_THIS_SCRIPT",
+            "evidence_record": "reports/lean_volume_hessian_2026_09_09.json",
+            "reason": "This script runs independent CAS/numerical checks. The separate Lean record identifies the checked source hashes, CI run and exact formal scope.",
         },
         "source_sha256": {
             path: hashlib.sha256((ROOT / path).read_bytes()).hexdigest()
@@ -352,7 +354,7 @@ def main() -> None:
         args.output.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     for check in CHECKS:
         print(f"PASS {check['id']}: {check['scope']}")
-    print(f"{len(CHECKS)} groups passed; LEAN-PENDING.")
+    print(f"{len(CHECKS)} CAS/numerical groups passed; Lean is recorded separately.")
 
 
 if __name__ == "__main__":

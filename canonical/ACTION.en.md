@@ -111,12 +111,16 @@ importantly, every coefficient choice has the noncompact ray
 \]
 
 on which `V(X_t)=V0`. Therefore potential tuning alone cannot make the generic
-field-space potential coercive or select an isolated vacuum. The exact proof,
+field-space potential coercive. This ray alone does not exclude a nonzero
+minimum or determine isolation modulo symmetries. The exact proof,
 witness rays, and CI checker are recorded in
-`research_tracks/action_selection/theta_potential_stability.en.md`. The next
-selector must therefore come from the derivative, gauge-quotient, or constraint
-structure of the same single action rather than from another choice of these
-potential coefficients.
+`research_tracks/action_selection/theta_potential_stability.en.md`.
+`research_tracks/action_selection/biquaternionic_potential_vacuum.en.md`
+constructs a nonzero global minimum for `lambda1>=0`, `lambda2>0`,
+`m^2<0` and gives its nonnegative Hessian in all eight real field directions.
+Coefficient selection and a compatible nondegenerate spacetime background
+remain open. The full action, including its derivative, gauge and constraint
+structure, must determine the physical fluctuations.
 
 <!-- BILINGUAL-UNIT: single-action.falsification -->
 ## Precommitted falsification criterion

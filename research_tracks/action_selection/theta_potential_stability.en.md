@@ -33,7 +33,8 @@ X=\begin{pmatrix}a&b\\c&d\end{pmatrix}.
 \]
 
 This note determines exactly when this polynomial is bounded below on
-`Mat(2,C)` and whether it can by itself select an isolated vacuum.
+`Mat(2,C)` and proves its noncoercivity. Noncoercivity alone does not exclude
+a nonzero minimum or establish the structure of the minimizing symmetry orbits.
 
 <!-- BILINGUAL-UNIT: theta-potential-stability.inequality -->
 ## Universal inequality
@@ -56,8 +57,8 @@ H
 \end{aligned}
 \]
 
-The first line uses `Re(z) <= |z|`, the second uses
-`|b|^2+|c|^2 >= 2|b||c|`, and the last is the reverse triangle inequality.
+The first inequality uses both `Re(z) <= |z|` and
+`|b|^2+|c|^2 >= 2|b||c|`; the last is the reverse triangle inequality.
 
 <!-- BILINGUAL-UNIT: theta-potential-stability.boundedness -->
 ## Exact boundedness theorem [L1]
@@ -129,15 +130,19 @@ V(X_t)=V_0.
 \]
 
 Therefore **no member of the complete connected-symmetry invariant quartic
-potential family is coercive on the generic field space, and none can select
-an isolated vacuum by the derivative-free potential alone**. This statement
-is coefficient-independent.
+potential family is coercive on the generic field space**. This statement
+is coefficient-independent. The ray alone does not exclude isolated minima
+elsewhere, nor determine isolation after quotienting by symmetries.
 
-This is not a proof of an instability of the complete UBT action: derivative
-terms, gauge quotienting, constraints, or a smaller physical configuration
-space can remove a flat direction. It is a no-go for solving action selection
-by tuning only `m^2`, `lambda1`, and `lambda2` inside the already classified
-potential.
+In fact, `biquaternionic_potential_vacuum.en.md` proves a nonzero global
+minimum for `lambda1>=0`, `lambda2>0` and `m^2<0`. In that region the ray
+lies strictly above the minimum, whose Hessian is positive transverse to its
+displayed kernel. The previous inference from this ray to the impossibility
+of any vacuum selection was too strong and is withdrawn.
+
+This does not prove stability of the complete UBT action or identify physical
+gauge directions. Those questions require its derivative, constraint and
+configuration-space structure.
 
 <!-- BILINGUAL-UNIT: theta-potential-stability.verification -->
 ## Verification
@@ -147,23 +152,27 @@ with Gaussian-rational arithmetic and checks the coefficient-case logic used
 above. `tests/test_theta_potential_stability.py` keeps the witnesses and the
 flat direction under CI.
 
-The universal inequality and the sufficiency proof are elementary analytic
-inequalities written explicitly above. A complete Lean formalization of the
-complex absolute-value inequality chain is `LEAN-PENDING`; no formal proof is
-claimed for that part.
+The universal inequality is formalized as `H_le_twice_norm_det` in
+`formal/lean/UBT/Action/PotentialVacuum.lean`; compiler and axiom-audit evidence
+is recorded in `reports/lean_volume_hessian_2026_09_09.json`. The complete
+necessary-and-sufficient boundedness classification in this note remains
+`LEAN-PENDING`. Its proof is the explicit argument above, with independent
+exact witness checks.
 
 <!-- BILINGUAL-UNIT: theta-potential-stability.consequence -->
 ## Consequence for the single-action programme
 
-Potential classification has now reached its natural boundary:
+The potential calculation now distinguishes:
 
 - the invariant basis is exact;
 - boundedness gives exact sign regions;
 - the entire family retains a noncompact coefficient-independent flat
-  direction.
+  direction;
+- a nonzero global minimum exists in the stated negative-quadratic region.
 
-Thus the next theorem-critical selector is not another potential coefficient.
-It must come from the derivative/gauge/constraint structure of the same single
-action. In particular, a proposed microscopic action must show how its
-configuration-space quotient and Hessian remove or render gauge the flat
-`H=D=0` orbit while retaining the covariant-tetrad GR sector.
+Coefficient selection, the physical quotient and the full action Hessian
+remain open. A valid microscopic background must satisfy the full equations
+and have a nondegenerate covariant tetrad. The companion minimum theorem
+explicitly checks why a constant-invariant potential ansatz is insufficient
+in the Lorentz-pairing-preserving branch. There is no requirement to remove
+every constant-potential ray merely because it exists above the minimum.

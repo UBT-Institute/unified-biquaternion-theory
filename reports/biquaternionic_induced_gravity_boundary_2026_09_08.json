@@ -1,7 +1,7 @@
 {
   "schema": "ubt-verification/v1",
-  "date": "2026-09-09",
-  "base_commit": "98fbc114f8dfcd88d8dbc24614b555f80f04ffeb",
+  "date": "2026-09-15",
+  "base_commit": "6ee61b98bb7578d67c2babe16134128d1f0f910c",
   "result": "PASS",
   "check_groups": 7,
   "checks": [
@@ -82,18 +82,20 @@
     "mpmath": "1.3.0"
   },
   "lean": {
-    "status": "LEAN-PENDING",
-    "lean_available": false,
-    "lake_available": false,
-    "reason": "No compiled Lean proof; Lean and Lake are absent in the inspected runtime."
+    "status": "NOT_RUN_BY_THIS_SCRIPT",
+    "evidence_record": "reports/lean_volume_hessian_2026_09_09.json",
+    "reason": "This script runs independent CAS/numerical checks. The separate Lean record identifies the checked source hashes, CI run and exact formal scope."
   },
   "source_sha256": {
-    "tools/verify_biquaternionic_induced_gravity_boundary.py": "7daf238ec057c2bf746c7a6cddacafc26b1c27d3fc5be3f03f88189aafa09fe2",
+    "tools/verify_biquaternionic_induced_gravity_boundary.py": "c25c6fdd854297b2ca320847d2f2acfb981c67c5bbce80888374ff4f61ba209c",
     "canonical/gr_closure/gap_10d_induced_gravity_endgame.tex": "4bcffdad257a9049307ee52b3f8516df9cc3dd1002dbacc5aed54bcb1d02d168",
     "canonical/gr_closure/gap_10d_theta_hessian_principal_symbol.tex": "bee57d42d7db1802ce61d461b09e3283355907dfe910464dcdf9201cdf6af7fd",
-    "research_tracks/action_selection/biquaternionic_induced_gravity_boundary.en.md": "62af5cf08a17b36ff5614991a9409526e8406e36b3168c862ccb1cacdf937145",
-    "research_tracks/action_selection/biquaternionic_induced_gravity_boundary.cs.md": "c1eb9ec510f8ab2a9627fb2bd4f70949456303801fe0f6b1ffdbdf2ed21a65c8",
-    "tests/test_biquaternionic_induced_gravity_boundary.py": "a9d2bd510becc42f1803a12b6f32677f89c766a7a39bf6618009ac53e73c375b"
+    "research_tracks/action_selection/biquaternionic_induced_gravity_boundary.en.md": "c84bf203144c929f2178e565f086db94f3873698a62b62e5c1813ad887d34343",
+    "research_tracks/action_selection/biquaternionic_induced_gravity_boundary.cs.md": "1c93017cf9462ed82bc735f7f82a28b956163f2fff9138f8f9cd2069ab00afbd",
+    "tests/test_biquaternionic_induced_gravity_boundary.py": "a9d2bd510becc42f1803a12b6f32677f89c766a7a39bf6618009ac53e73c375b",
+    "formal/lean/UBT/GR/VolumeVariation.lean": "371e5583bcac9acf0fe87790f863b1f6cdf3409237b7e2828f3850411d656214",
+    "formal/lean/UBT/GR/VolumePrincipalSymbol.lean": "a85aac9ecd71dc04f9107f7389a54b8eeb5170d8a008d58912c595fbcea840ab",
+    "formal/lean/UBT/GR/CompositeSecondVariation.lean": "af7cd8750d286890fb57447f6993411d824a05725dff1b60deb84b9b6bf0fef4"
   },
   "limitations": [
     "The finite checks do not construct the full composite gauge-fixed Theta Hessian or its functional measure.",

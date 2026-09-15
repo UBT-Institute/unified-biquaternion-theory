@@ -319,8 +319,23 @@ J_{\alpha I}H_{\alpha\beta}J_{\beta J}
 +Q_\alpha\frac{\partial^2E_\alpha}{\partial p_I\partial p_J}
 \right).}
 \]
-Jde o dvojí použití řetězového pravidla včetně druhé derivace kompozitní
-tetrády. Může změnit výše uvedené zrušení; nezaručuje nenulový ani eliptický
+Pro důkaz držme \(x,X\) pevné, takže \(f\) je při variaci prvních derivací
+konstantní. Pro libovolné směry prvních derivací \(u,v\) je první derivace
+\[
+D_p(f\det E)[v]=f\,D(\det)_{E(p)}[DE_p[v]].
+\]
+Derivujme tuto rovnost ve směru \(u\). Derivování kovektoru determinantu
+dává člen s Hessiánem; derivování \(DE_p[v]\) dává druhou derivaci
+kompozitní tetrády:
+\[
+D_p^2(f\det E)[u,v]
+=f\left(D^2(\det)_{E(p)}[DE_p[u],DE_p[v]]
++D(\det)_{E(p)}[D^2E_p[u,v]]\right).
+\]
+Tím je dokázán uvedený komponentový vzorec s oběma členy bez předpokladu
+stacionarity. Veškerá závislost určeného zobrazení tetrády na konexi se
+derivuje jako součást tohoto zobrazení. To může změnit výše uvedené
+zrušení; nezaručuje nenulový ani eliptický
 hlavní symbol. Závisí-li konexe implicitně na \(E,\partial E\), je nejprve
 nutné prokázat diferencovatelné zobrazení řešení; samotný vzorec pro první
 derivace tento diferenciální problém nepokrývá. Výpočet operátoru pro
@@ -400,9 +415,35 @@ nenahrazují. Doprovodný záznam je
 skutečné datum ověření, verze, hashe a omezení. Regresní kontrola prověřuje
 tyto vědecké identity.
 
-Formalizace zůstává `LEAN-PENDING`: v kontrolovaném prostředí nejsou Lean ani
-Lake a není dodán žádný zkompilovaný důkaz v Leanu. Úplný kvantový Hessián,
-fyzická míra a sémantická ekvivalence překladu stále vyžadují příslušná ověření.
+Formalizace tohoto auditu má stav `PARTIAL`. Lean a mathlib `v4.33.1` prošly
+`lake build --wfail`, kontrolou `leanchecker` pro `UBT` a auditem axiomů `93`
+deklarací v
+[zaznamenaném běhu CI](https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/34934154604).
+Povolené byly pouze axiomy `propext`, `Classical.choice` a `Quot.sound`.
+Hashe zdrojů a přesný rozsah jsou zaznamenány v
+`reports/lean_volume_hessian_2026_09_09.json`.
+
+Zkontrolované zdroje jsou:
+
+- `formal/lean/UBT/GR/CompositeSecondVariation.lean`: úplná druhá derivace
+  podél křivky a bilineární řetězové pravidlo pro Fréchetův Hessián
+  `secondFDeriv_composite` s oběma členy. Druhé pravidlo předpokládá globálně
+  diferencovatelné funkce, jejichž první derivace jsou diferencovatelné v bodech
+  vyhodnocení; nepředpokládá stacionaritu ani Einsteinův operátor.
+- `formal/lean/UBT/GR/VolumeVariation.lean`: skutečný determinant, jeho afinní
+  restrikce ve směrech hodnosti jedna a smíšené reálné derivace v libovolných
+  hodnotách prvních derivací.
+- `formal/lean/UBT/GR/VolumePrincipalSymbol.lean`: polynomiální hladkost a
+  nulová kontrakce skutečné druhé Fréchetovy derivace pro každý kovektor a
+  dvojici směrů pole. Posun a váha závislé na poli jsou libovolné; nulový
+  hlavní symbol není dodán jako předpoklad.
+
+Integrální důkaz Eulerova/Jacobiho vzorce v B-VAR a úplný závěr o řádu PDE
+v B-VAL zůstávají `LEAN-PENDING`; krok s Hessiánem podle prvních derivací
+u druhého lemmatu je zkontrolován. Úplný kvantový Hessián, fyzická míra,
+kladný Einsteinův koeficient a sémantická ekvivalence překladu stále vyžadují
+příslušná ověření. Tyto formální výsledky nevybírají mikroskopickou akci
+ani neodvozují její kompozitní konexi.
 
 <!-- BILINGUAL-UNIT: biquat-induced.status -->
 ## Stav

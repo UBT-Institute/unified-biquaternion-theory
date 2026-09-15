@@ -319,8 +319,23 @@ J_{\alpha I}H_{\alpha\beta}J_{\beta J}
 +Q_\alpha\frac{\partial^2E_\alpha}{\partial p_I\partial p_J}
 \right).}
 \]
-This is the twice-applied chain rule, including the second derivative of
-the composite tetrad. It can change the cancellation above; it does not
+For the proof, hold \(x,X\) fixed, so that \(f\) is constant in the first-jet
+variation. For arbitrary first-jet directions \(u,v\), the first derivative is
+\[
+D_p(f\det E)[v]=f\,D(\det)_{E(p)}[DE_p[v]].
+\]
+Differentiate this equality in direction \(u\). Differentiating the determinant
+covector gives the Hessian term; differentiating \(DE_p[v]\) gives the second
+derivative of the composite tetrad:
+\[
+D_p^2(f\det E)[u,v]
+=f\left(D^2(\det)_{E(p)}[DE_p[u],DE_p[v]]
++D(\det)_{E(p)}[D^2E_p[u,v]]\right).
+\]
+This proves the displayed component formula and retains both terms without
+assuming stationarity. All dependence of the specified tetrad map on the
+connection is differentiated as part of that map. This can change the
+cancellation above; it does not
 guarantee a nonzero or elliptic principal symbol. If the connection depends
 implicitly on \(E,\partial E\), first establish a differentiable solution map;
 the first-jet formula alone does not cover that differential problem.
@@ -400,10 +415,34 @@ implementation; they do not replace those proofs. The companion record is
 the actual verification date, versions, hashes and limits. The regression
 gate exercises these scientific identities.
 
-Formalization is `LEAN-PENDING`: Lean and Lake are absent in the inspected
-runtime, and no compiled Lean proof is supplied. The full quantum Hessian,
-physical measure, and semantic equivalence of the translation still require
-their respective verification.
+Formalization of this audit is `PARTIAL`. Lean and mathlib `v4.33.1` passed
+`lake build --wfail`, `leanchecker` for `UBT`, and an axiom audit of `93`
+declarations in the
+[recorded CI run](https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/34934154604).
+The only allowed axioms were `propext`, `Classical.choice` and `Quot.sound`.
+The source hashes and exact scope are recorded in
+`reports/lean_volume_hessian_2026_09_09.json`.
+
+The checked sources are:
+
+- `formal/lean/UBT/GR/CompositeSecondVariation.lean`: the complete second
+  derivative along a curve and the bilinear Frechet Hessian chain rule
+  `secondFDeriv_composite`, retaining both terms. The latter assumes globally
+  differentiable functions whose first derivatives are differentiable at the
+  evaluation points; it does not assume stationarity or an Einstein operator.
+- `formal/lean/UBT/GR/VolumeVariation.lean`: the actual determinant, its affine
+  rank-one restrictions and its mixed real derivatives at arbitrary first jets.
+- `formal/lean/UBT/GR/VolumePrincipalSymbol.lean`: polynomial smoothness and
+  the vanishing contraction of the actual second Frechet derivative for every
+  covector and pair of field directions. The field-dependent shift and weight
+  are arbitrary; no zero-symbol hypothesis is supplied.
+
+The integrated Euler/Jacobi proof in B-VAR and the full PDE-order conclusion
+in B-VAL remain `LEAN-PENDING`; the latter's first-jet Hessian step is checked.
+The full quantum Hessian, physical measure, positive Einstein coefficient,
+and semantic equivalence of the translation still require their respective
+verification. These formal results do not select a microscopic action or
+derive its composite connection.
 
 <!-- BILINGUAL-UNIT: biquat-induced.status -->
 ## Status
