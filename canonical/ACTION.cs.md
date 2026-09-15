@@ -109,11 +109,16 @@ koeficientů má nekompaktní paprsek
 \]
 
 na němž `V(X_t)=V0`. Pouhé ladění potenciálu tedy nemůže učinit potenciál na
-obecném prostoru polí koercivním ani vybrat izolované vakuum. Přesný důkaz,
+obecném prostoru polí koercivním. Samotný paprsek nevylučuje nenulové minimum
+ani neurčuje izolovanost modulo symetrie. Přesný důkaz,
 svědecké paprsky a CI kontrola jsou zaznamenány v
-`research_tracks/action_selection/theta_potential_stability.cs.md`. Další
-selektor proto musí pocházet z derivační struktury, gauge kvocientu nebo
-omezení téže jediné akce, nikoli z další volby těchto koeficientů potenciálu.
+`research_tracks/action_selection/theta_potential_stability.cs.md`.
+`research_tracks/action_selection/biquaternionic_potential_vacuum.cs.md`
+konstruuje nenulové globální minimum pro `lambda1>=0`, `lambda2>0`,
+`m^2<0` a uvádí jeho nezáporný Hessián ve všech osmi reálných směrech pole.
+Výběr koeficientů a slučitelné nedegenerované časoprostorové pozadí zůstávají
+otevřené. Fyzikální fluktuace musí určit úplná akce včetně její derivační,
+gauge a vazbové struktury.
 
 <!-- BILINGUAL-UNIT: single-action.falsification -->
 ## Předem stanovené falzifikační kritérium

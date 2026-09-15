@@ -1,4 +1,14 @@
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
+
+
+> [!WARNING]
+> **DEPRECATED AS A STATUS SOURCE (2026-09-11).** This April 2026 snapshot
+> predates the canonical SU(3) stabilizer audit and still contains legacy
+> `SU(3): PROVED` / triqubit wording that can conflict with `CLAIMS.yaml`.
+> For current claim status use `CLAIMS.yaml`, `CLAIMS_MATRIX.md`, and
+> `canonical/su3_derivation/README.md`. This file is retained only for
+> historical traceability.
+
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -10,16 +20,6 @@ policy: ../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
-
-
-
-> [!WARNING]
-> **DEPRECATED AS A STATUS SOURCE (2026-09-11).** This April 2026 snapshot
-> predates the canonical SU(3) stabilizer audit and still contains legacy
-> `SU(3): PROVED` / triqubit wording that can conflict with `CLAIMS.yaml`.
-> For current claim status use `CLAIMS.yaml`, `CLAIMS_MATRIX.md`, and
-> `canonical/su3_derivation/README.md`. This file is retained only for
-> historical traceability.
 
 # gauge_truth_matrix.md — Brutally Honest Gauge Sector Truth Matrix
 
