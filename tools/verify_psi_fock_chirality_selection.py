@@ -271,8 +271,6 @@ if not NUMPY_AVAILABLE:
     not_run("B2_numerical_chirality_coupling", "NumPy not installed")
     not_run("B3_normal_ordered_positivity", "NumPy not installed")
 else:
-    import numpy as np
-
     def chiral_gamma0() -> np.ndarray:
         I2 = np.eye(2, dtype=complex)
         Z2 = np.zeros((2, 2), dtype=complex)
@@ -336,7 +334,7 @@ else:
     for n_test in [1, 2, 3, -1, -2, -3]:
         eigs = np.linalg.eigvals((n_test / R_test) * g0g5)
         # After normal ordering, negative-energy modes contribute |E| via b†b
-        NO_spectrum = np.sort(np.abs(eigs.imag))  # imaginary eigenvalues → real energies
+        NO_spectrum = np.sort(np.abs(eigs))  # modulus = |E| for purely imaginary eigenvalues
         expected = np.sort([abs(n_test) / R_test] * 2 + [abs(n_test) / R_test] * 2)
         if np.max(np.abs(NO_spectrum - expected)) > 1e-10:
             all_ok_B3 = False

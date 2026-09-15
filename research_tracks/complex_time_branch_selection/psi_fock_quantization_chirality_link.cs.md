@@ -427,4 +427,4 @@ Tento dokument je zkříženě odkazován z `psi_branch_selection.cs.md`.
 **Matematický verdikt: PARTIAL/CONDITIONAL.**
 Volný ψ-Fockův Hamiltonián dynamicky nevybírá (n>0, levotočivý) + (n<0, pravotočivý).
 Selekce je podmíněna NEW AXIOM CANDIDATES A a B spolu s T2\_GAUGE.
-Je ustanoveno strukturální změna znaménka mísicího úhlu L–R pod $n \to -n$.
+Je ustanovena strukturální změna znaménka mísicího úhlu L–R pod $n \to -n$.
