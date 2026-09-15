@@ -124,15 +124,17 @@ theorem triangular_factor (a d r : ℝ) (b : ℂ) (ha : 0 < a)
     exact_mod_cast he
   let T : Mat := (1 / (t : ℂ)) • !![(a : ℂ), 0; star b, (r : ℂ)]
   refine ⟨T, ?_, ?_⟩
-  · simp [T, Matrix.det_smul, Matrix.det_fin_two]
+  · simp [T, Matrix.det_fin_two]
     field_simp
     rw [ht₂]
-    ring
   · ext i j : 2
     fin_cases i <;> fin_cases j <;>
       simp [T, Matrix.vecMul, dotProduct, Fin.sum_univ_succ] <;>
       field_simp [ht'] <;> rw [ht₂]
-    all_goals first | ring | linear_combination -he'
+    all_goals try ring
+    change (starRingEnd ℂ) b * b + (r : ℂ) ^ 2 = (a : ℂ) * (d : ℂ)
+    change (a : ℂ) * (d : ℂ) - b * (starRingEnd ℂ) b = (r : ℂ) ^ 2 at he'
+    linear_combination -he'
 
 /-- Every minimizer has a phase times an explicit positive Hermitian factor.
 The input is the proved invariant equality condition, not a Hermitian ansatz. -/
@@ -156,6 +158,7 @@ theorem minimum_factorization (X : Mat) (r : ℝ) (hr : 0 < r)
     simp [H, Complex.mul_re] at hY
     linarith
   have ht : 0 < (Y 0 0).re + (Y 1 1).re := by
+    change 0 < (Matrix.trace Y).re at htr
     simpa [Matrix.trace, Fin.sum_univ_succ] using htr
   have hapos : 0 < (Y 0 0).re := by
     by_contra h
@@ -182,14 +185,14 @@ theorem normalize_factor (T : Mat) (r : ℝ) (hr : 0 < r)
     exact hs₂.symm
   let S : Mat := (1 / (s : ℂ)) • T
   refine ⟨S, ?_, ?_⟩
-  · simp [S, Matrix.det_smul, hT]
+  · simp [S, hT]
     field_simp
     exact hs₂.symm
   · symm
     calc
       (r : ℂ) • (S * Sᴴ) =
           ((r : ℂ) * (1 / (s : ℂ)) * (1 / (s : ℂ))) • (T * Tᴴ) := by
-        simp [S, Matrix.conjTranspose_smul, Matrix.smul_mul, Matrix.mul_smul,
+        simp [S, Matrix.conjTranspose_smul,
           smul_smul, mul_assoc]
       _ = T * Tᴴ := by rw [hc, one_smul]
 
