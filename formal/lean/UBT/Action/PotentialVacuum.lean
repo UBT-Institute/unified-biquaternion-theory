@@ -181,7 +181,8 @@ theorem secondDeriv_quartic (a b c d : ℝ) :
       (((hasDerivAt_id t).pow 4).const_mul d)
     simp only [Pi.add_def, Pi.pow_apply, id_eq] at hd
     convert hd.deriv using 1
-    <;> norm_num <;> ring
+    norm_num
+    ring
   rw [first]
   have hd := (((hasDerivAt_id (0 : ℝ)).const_mul (2 * b)).add
     (((hasDerivAt_id (0 : ℝ)).pow 2).const_mul (3 * c))).add
@@ -238,5 +239,7 @@ theorem quadratic_eq_zero_iff (r l₁ l₂ : ℝ)
       sq_eq_zero_iff.mp hc₀, sq_eq_zero_iff.mp hd₀⟩
   · rintro ⟨ha, hb, hc, hd⟩
     simp [quadratic, ha, hb, hc, hd]
+
+end
 
 end UBT.Action.PotentialVacuum
