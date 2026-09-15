@@ -27,7 +27,8 @@ theorem trace_ne_zero (X : Mat) (hh : 0 < H X) : Matrix.trace X ≠ 0 := by
   rw [H_trace_identity, hz] at hh
   have hn : 0 ≤ ‖X 0 0‖ ^ 2 + ‖X 0 1‖ ^ 2 + ‖X 1 0‖ ^ 2 + ‖X 1 1‖ ^ 2 := by
     positivity
-  simpa using (not_lt_of_ge hn) (by simpa using hh)
+  norm_num at hh
+  linarith
 
 theorem real_trace_saturation (X : Mat)
     (ht : (Matrix.trace X).im = 0) (hs : H X = 2 * ‖X.det‖) :
@@ -60,10 +61,26 @@ theorem real_trace_saturation (X : Mat)
 theorem phase_preserves_H (u : ℂ) (X : Mat) (hu : ‖u‖ = 1) :
     H (u • X) = H X := by
   have hunit : u * star u = 1 := by
+    change u * (starRingEnd ℂ) u = 1
     rw [Complex.mul_conj]
     simp [Complex.normSq_eq_norm_sq, hu]
   rw [H_eq_real_invariant, hInvariantPhaseInvariant u X hunit]
   exact (H_eq_real_invariant X).symm
+
+theorem hermitian_of_entries (Y : Mat)
+    (ha : (Y 0 0).im = 0) (hd : (Y 1 1).im = 0)
+    (hb : (Y 0 1).re = (Y 1 0).re) (hc : (Y 0 1).im = -(Y 1 0).im) :
+    Yᴴ = Y := by
+  ext i j : 2
+  fin_cases i <;> fin_cases j <;> apply Complex.ext <;>
+    simp [Matrix.conjTranspose_apply, ha, hd, hb, hc]
+
+theorem matrix_of_entries (Y : Mat)
+    (ha : (Y 0 0).im = 0) (hd : (Y 1 1).im = 0)
+    (hb : (Y 0 1).re = (Y 1 0).re) (hc : (Y 0 1).im = -(Y 1 0).im) :
+    Y = !![((Y 0 0).re : ℂ), Y 0 1; star (Y 0 1), ((Y 1 1).re : ℂ)] := by
+  ext i j : 2
+  fin_cases i <;> fin_cases j <;> apply Complex.ext <;> simp [ha, hd, hb, hc]
 
 /-- Every positive saturated matrix admits a unit phase with positive real
 trace and Hermitian entries. No Hermitian restriction is assumed on X. -/
@@ -76,12 +93,12 @@ theorem phase_normalization (X : Mat)
   have ht := trace_ne_zero X hh
   let u : ℂ := (‖Matrix.trace X‖ : ℂ) / Matrix.trace X
   have hu : ‖u‖ = 1 := by
-    simp [u, norm_div, norm_ne_zero_iff.mpr ht]
+    simp [u, norm_ne_zero_iff.mpr ht]
   have htr : Matrix.trace (u • X) = (‖Matrix.trace X‖ : ℂ) := by
     rw [Matrix.trace_smul]
     exact div_mul_cancel₀ _ ht
   have hnorm : ‖(u • X).det‖ = ‖X.det‖ := by
-    simp [Matrix.det_smul, norm_mul, hu]
+    simp [hu]
   have hsat : H (u • X) = 2 * ‖(u • X).det‖ := by
     rw [phase_preserves_H u X hu, hnorm, hs]
   have hti : (Matrix.trace (u • X)).im = 0 := by rw [htr]; rfl
@@ -89,8 +106,104 @@ theorem phase_normalization (X : Mat)
   refine ⟨u, hu, hti, ?_, ?_⟩
   · rw [htr]
     exact norm_pos_iff.mpr ht
+  · exact hermitian_of_entries (u • X) ha hd hb hc
+
+/-- An exact triangular factor with prescribed positive determinant. -/
+theorem triangular_factor (a d r : ℝ) (b : ℂ) (ha : 0 < a)
+    (he : a * d - ‖b‖ ^ 2 = r ^ 2) :
+    ∃ T : Mat, T.det = (r : ℂ) ∧
+      T * Tᴴ = !![(a : ℂ), b; star b, (d : ℂ)] := by
+  let t : ℝ := Real.sqrt a
+  have ht : t ≠ 0 := ne_of_gt (Real.sqrt_pos.mpr ha)
+  have ht' : (t : ℂ) ≠ 0 := by exact_mod_cast ht
+  have ht₂ : (t : ℂ) ^ 2 = (a : ℂ) := by
+    exact_mod_cast (Real.sq_sqrt ha.le)
+  have he' : (a : ℂ) * (d : ℂ) - b * star b = (r : ℂ) ^ 2 := by
+    change (a : ℂ) * (d : ℂ) - b * (starRingEnd ℂ) b = (r : ℂ) ^ 2
+    rw [Complex.mul_conj, Complex.normSq_eq_norm_sq]
+    exact_mod_cast he
+  let T : Mat := (1 / (t : ℂ)) • !![(a : ℂ), 0; star b, (r : ℂ)]
+  refine ⟨T, ?_, ?_⟩
+  · simp [T, Matrix.det_smul, Matrix.det_fin_two]
+    field_simp
+    rw [ht₂]
+    ring
   · ext i j : 2
-    fin_cases i <;> fin_cases j <;> apply Complex.ext <;>
-      simp [Matrix.conjTranspose_apply, ha, hd, hb, hc]
+    fin_cases i <;> fin_cases j <;>
+      simp [T, Matrix.vecMul, dotProduct, Fin.sum_univ_succ] <;>
+      field_simp [ht'] <;> rw [ht₂]
+    all_goals first | ring | linear_combination -he'
+
+/-- Every minimizer has a phase times an explicit positive Hermitian factor.
+The input is the proved invariant equality condition, not a Hermitian ansatz. -/
+theorem minimum_factorization (X : Mat) (r : ℝ) (hr : 0 < r)
+    (hh : H X = 2 * r ^ 2) (hn : ‖X.det‖ = r ^ 2) :
+    ∃ u : ℂ, ∃ T : Mat, ‖u‖ = 1 ∧ T.det = (r : ℂ) ∧ X = u • (T * Tᴴ) := by
+  have hp : 0 < H X := by rw [hh]; positivity
+  have hs : H X = 2 * ‖X.det‖ := by rw [hh, hn]
+  obtain ⟨u, hu, hti, htr, _⟩ := phase_normalization X hp hs
+  let Y : Mat := u • X
+  have hY : H Y = 2 * r ^ 2 := by
+    change H (u • X) = _
+    rw [phase_preserves_H u X hu, hh]
+  have hnY : ‖Y.det‖ = r ^ 2 := by
+    simp [Y, hu, hn]
+  have hsY : H Y = 2 * ‖Y.det‖ := by rw [hY, hnY]
+  obtain ⟨ha, hd, hb, hc⟩ := real_trace_saturation Y hti hsY
+  have hrepr := matrix_of_entries Y ha hd hb hc
+  have he : (Y 0 0).re * (Y 1 1).re - ‖Y 0 1‖ ^ 2 = r ^ 2 := by
+    conv_lhs at hY => rw [hrepr]
+    simp [H, Complex.mul_re] at hY
+    linarith
+  have ht : 0 < (Y 0 0).re + (Y 1 1).re := by
+    simpa [Matrix.trace, Fin.sum_univ_succ] using htr
+  have hapos : 0 < (Y 0 0).re := by
+    by_contra h
+    have h₁ := le_of_not_gt h
+    have h₂ : 0 < (Y 1 1).re := by linarith
+    have h₃ := mul_nonpos_of_nonpos_of_nonneg h₁ h₂.le
+    nlinarith [sq_pos_of_pos hr, sq_nonneg ‖Y 0 1‖]
+  obtain ⟨T, hT, hTT⟩ := triangular_factor (Y 0 0).re (Y 1 1).re r (Y 0 1) hapos he
+  have hu₀ : u ≠ 0 := by intro hz; simp [hz] at hu
+  refine ⟨u⁻¹, T, by simp [norm_inv, hu], hT, ?_⟩
+  rw [hTT, ← hrepr]
+  change X = u⁻¹ • (u • X)
+  simp [smul_smul, hu₀]
+
+theorem normalize_factor (T : Mat) (r : ℝ) (hr : 0 < r)
+    (hT : T.det = (r : ℂ)) :
+    ∃ S : Mat, S.det = 1 ∧ T * Tᴴ = (r : ℂ) • (S * Sᴴ) := by
+  let s : ℝ := Real.sqrt r
+  have hs : s ≠ 0 := ne_of_gt (Real.sqrt_pos.mpr hr)
+  have hs' : (s : ℂ) ≠ 0 := by exact_mod_cast hs
+  have hs₂ : (s : ℂ) ^ 2 = (r : ℂ) := by exact_mod_cast Real.sq_sqrt hr.le
+  have hc : (r : ℂ) * (1 / (s : ℂ)) * (1 / (s : ℂ)) = 1 := by
+    field_simp
+    exact hs₂.symm
+  let S : Mat := (1 / (s : ℂ)) • T
+  refine ⟨S, ?_, ?_⟩
+  · simp [S, Matrix.det_smul, hT]
+    field_simp
+    exact hs₂.symm
+  · symm
+    calc
+      (r : ℂ) • (S * Sᴴ) =
+          ((r : ℂ) * (1 / (s : ℂ)) * (1 / (s : ℂ))) • (T * Tᴴ) := by
+        simp [S, Matrix.conjTranspose_smul, Matrix.smul_mul, Matrix.mul_smul,
+          smul_smul, mul_assoc]
+      _ = T * Tᴴ := by rw [hc, one_smul]
+
+/-- Every global minimizer belongs to the same declared unit-phase/SL(2,C)
+congruence orbit of r*I. This is an orbit statement, not physical gauge fixing. -/
+theorem every_minimum_in_one_orbit (X : Mat) (r l₁ l₂ V₀ : ℝ)
+    (hr : 0 < r) (hl₁ : 0 ≤ l₁) (hl₂ : 0 < l₂)
+    (hmin : potential (massCoefficient r l₁ l₂) l₁ l₂ V₀ X =
+      V₀ - (4 * l₁ + l₂) * r ^ 4) :
+    ∃ u : ℂ, ∃ S : Mat, ‖u‖ = 1 ∧ S.det = 1 ∧
+      X = u • ((r : ℂ) • (S * Sᴴ)) := by
+  obtain ⟨hh, hn⟩ := (equality_iff r l₁ l₂ V₀ hr hl₁ hl₂ X).mp hmin
+  obtain ⟨u, T, hu, hT, hX⟩ := minimum_factorization X r hr hh hn
+  obtain ⟨S, hS, hfactor⟩ := normalize_factor T r hr hT
+  exact ⟨u, S, hu, hS, hX.trans (congrArg (fun Z : Mat => u • Z) hfactor)⟩
 
 end UBT.Action.PotentialMinimumOrbit
