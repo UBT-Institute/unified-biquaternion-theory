@@ -33,19 +33,21 @@ theorem square (m : ℝ) : hamiltonian m * hamiltonian m =
     ((m : ℂ) ^ 2) • (1 : Mat) := by
   ext i j : 2
   fin_cases i <;> fin_cases j <;>
-    simp [hamiltonian, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,
-      mul_assoc, ← pow_two]
+    apply Complex.ext <;>
+    simp [hamiltonian, Matrix.mul_apply, Fin.sum_univ_succ,
+      Complex.mul_re, Complex.mul_im, pow_two]
 
 theorem characteristic (m E : ℝ) :
     (((E : ℂ) • (1 : Mat)) - hamiltonian m).det =
       (E : ℂ) ^ 2 - (m : ℂ) ^ 2 := by
-  simp [hamiltonian, Matrix.det_fin_two, mul_assoc, ← pow_two]
+  apply Complex.ext <;>
+    simp [hamiltonian, Matrix.det_fin_two, Complex.mul_re, Complex.mul_im, pow_two]
 
 theorem winding_conjugation (m : ℝ) :
     gamma5 * hamiltonian m * gamma5 = hamiltonian (-m) := by
   ext i j : 2
   fin_cases i <;> fin_cases j <;>
-    simp [hamiltonian, gamma5, Matrix.vecMul, dotProduct, Fin.sum_univ_succ]
+    simp [hamiltonian, gamma5]
 
 /-- Every nonzero-energy eigenstate has equal chiral weights, componentwise. -/
 theorem equal_chiral_weights (m E : ℝ) (L R : ℂ) (hE : E ≠ 0)
@@ -74,7 +76,7 @@ def annihilation : Mat := !![0, 1; 0, 0]
 theorem car : annihilation * annihilationᴴ + annihilationᴴ * annihilation = 1 := by
   ext i j : 2
   fin_cases i <;> fin_cases j <;>
-    simp [annihilation, Matrix.vecMul, dotProduct, Fin.sum_univ_succ]
+    simp [annihilation, Matrix.mul_apply, Matrix.conjTranspose_apply, Fin.sum_univ_succ]
 
 theorem negative_mode_reordering (E : ℝ) :
     (- (E : ℂ)) • (annihilation * annihilationᴴ) + (E : ℂ) • (1 : Mat) =
