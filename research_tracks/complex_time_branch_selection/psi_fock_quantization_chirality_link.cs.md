@@ -1,5 +1,6 @@
-<!-- BILINGUAL-UNIT: psi-fock.header -->
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
+
+<!-- BILINGUAL-UNIT: psi-fock.header -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -12,419 +13,132 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-# ψ-Focková kvantizace a korelace chiralita–vinutí: pokus o odvození
+# ψ-Fockova chiralita: opravený Hamiltonián a přesné váhy klidových stavů
 
-**Typ trasy:** VÝZKUMNÁ TRASA (OPEN) — OTEVŘENÝ POKUS O ODVOZENÍ  
-**Datum:** 2026-09-15  
-**Verdikt:** PARTIAL/CONDITIONAL — přesný rozsah viz §6.  
-**Anglická edice:** `psi_fock_quantization_chirality_link.en.md`  
-**Bilingvní politika:** `../../BILINGUAL_CONTENT_POLICY.cs.md`  
-**Ověřovací skript:** `../../tools/verify_psi_fock_chirality_selection.py`  
-**Křížové odkazy:**
-- `canonical/chirality/step1_psi_parity.tex` — definice Diracova operátoru a chiralitních sektorů
-- `canonical/chirality/gap_c1_closure.tex` — stav Gapu C1 a podmínka T2\_GAUGE
-- `psi_branch_selection.cs.md` — gap G3, nadřazená trasa
+**Status: PARTIAL/CONDITIONAL.** Konečná algebra je oddělena od nedokázaných tvrzení o úplné akci a nekonečněrozměrném Fockově prostoru. Text opravuje pokus sloučený v PR #651.
 
 <!-- BILINGUAL-UNIT: psi-fock.scope -->
-> **Rozsah.** Tento dokument testuje, zda požadavek, aby druhokvantozvaný
-> Hamiltonián ψ-módů pole Θ byl omezený zdola, dynamicky vynucuje korelaci
-> (n>0, levotočivý) + (n<0, pravotočivý), analogicky k argumentu Diracova moře
-> pro standardní Diracovu rovnici. Výsledek je **PARTIAL/CONDITIONAL**:
-> hamiltonián volné teorie ve Fockově prostoru tuto selekci neprovádí a
-> pro jakékoli přídavné zdůvodnění je nutný — jako **NEW AXIOM CANDIDATE** označený —
-> dodatečný vstup.
-> Žádný kanonický soubor, status gapu ani záznam v CLAIMS.yaml se nemění.
+## 1. Rozsah a konvence
 
----
+Zkoumáme deklarovaného kandidáta volného, plochého Diracova sektoru bez kalibračních polí z `canonical/chirality/step1_psi_parity.tex`. Jeho odvození z jediné biquaternionové akce zůstává otevřené. Níže uvedené matice představují reprezentaci tohoto kandidáta, nikoli náhradu původního Θ nebo jeho kovariantní tetrády.
 
-<!-- BILINGUAL-UNIT: psi-fock.sec1 -->
-## 1. Nastavení a výchozí bod
+Zobrazené matice odpovídají konvenci s převahou minusových znamének. Jejich spojení s časovou Weylovou maticí pro převahu plusových znamének v předchozí verzi bylo nekonzistentní. Volba konvence platí místně pro tento výpočet.
 
-<!-- BILINGUAL-UNIT: psi-fock.dirac-operator -->
-### 1.1 Diracův operátor a chiralitní sektory
-
-Podle `canonical/chirality/step1_psi_parity.tex`, Lemma 2 a Věta 3,
-příslušný Diracův operátor na poli UBT Θ v plochém ψ-sektoru je
-
-$$
-\mathcal{D} = i\gamma^\mu \nabla_\mu + \gamma^5 \partial_\psi.
-$$
-
-Operátor ψ-parity $P_\psi : \psi \mapsto -\psi$ působí jako $\gamma^5$ na
-spinorové složce Θ. Dva chiralitní sektory (vlastní prostory $P_\psi$) jsou
-
-$$
-\mathcal{H}_- \;(P_\psi = -1),
-\qquad
-\mathcal{H}_+ \;(P_\psi = +1).
-$$
-
-Používá se chirální reprezentace:
-$$
-\gamma^0 = \begin{pmatrix}0 & I_2 \\ I_2 & 0\end{pmatrix}, \quad
-\gamma^5 = \begin{pmatrix}-I_2 & 0 \\ 0 & I_2\end{pmatrix}, \quad
-\{\gamma^0,\gamma^5\} = 0.
-$$
-
-**Omezení rozsahu.** Tento oddíl se zabývá pouze volnou, plochou, bez-kalibrační
-a bez-gravitační kinetickou akcí pro Θ v ψ-sektoru. Nezavádí se žádná kalibrační
-vazba, žádné pozadí ani zakřivené konexe.
-
-<!-- BILINGUAL-UNIT: psi-fock.sec2 -->
-## 2. Rozvinutí do módů a sdružené Weylovy rovnice
+\[
+\gamma^0=\begin{pmatrix}0&I_2\\I_2&0\end{pmatrix},\quad
+\gamma^5=\begin{pmatrix}-I_2&0\\0&I_2\end{pmatrix},\quad
+\sigma^\mu=(I_2,\vec\sigma),\quad\bar\sigma^\mu=(I_2,-\vec\sigma),\quad
+\eta=\operatorname{diag}(1,-1,-1,-1).
+\]
+\[
+\mathcal D=i\gamma^\mu\partial_\mu+\gamma^5\partial_\psi,\qquad
+R_\psi>0,\quad n\in\mathbb Z,\quad m=n/R_\psi.
+\]
 
 <!-- BILINGUAL-UNIT: psi-fock.mode-expansion -->
-### 2.1 Rozvinutí do módů
+## 2. Módy a spřažené rovnice
 
-Fourierovo rozvinutí v ψ na kružnici poloměru $R_\psi$ je
+Při uvedené konvenci implikují obě Weylovy rovnice Kleinovu–Gordonovu rovnici s nezáporným čtvercem hmotnosti. Odvození nedělí číslem vinutí a zahrnuje nulový mód.
 
-$$
-\Theta(Q,t,\psi) = \sum_{n \in \mathbb{Z}} \Theta_n(Q,t)\,e^{in\psi/R_\psi},
-\qquad \Theta_n = \begin{pmatrix}\Theta_{L,n} \\ \Theta_{R,n}\end{pmatrix},
-$$
-
-kde $\Theta_{L,n}$ a $\Theta_{R,n}$ jsou levotočivý a pravotočivý dvousložkový
-Weylův spinor při vinutém čísle $n$.
-
-Dosazením do $\mathcal{D}\Theta = 0$ a separací módů
-(s $\partial_\psi \to in/R_\psi$) dostaneme z blokové struktury $\mathcal{D}$
-v chirální reprezentaci **sdružené Weylovy rovnice**:
-
-$$
-i\sigma^\mu \partial_\mu \Theta_{R,n} = \frac{in}{R_\psi}\,\Theta_{L,n}, \tag{A$_n$}
-$$
-
-$$
-i\bar\sigma^\mu \partial_\mu \Theta_{L,n} = -\frac{in}{R_\psi}\,\Theta_{R,n}, \tag{B$_n$}
-$$
-
-kde $\sigma^\mu = (I_2, \vec\sigma)$ a $\bar\sigma^\mu = (-I_2, \vec\sigma)$
-v mostly-plus Lorentzově konvenci.
-
-**Poznámka ke znaménkům.** Vazebné konstanty v (A$_n$) a (B$_n$) mají opačná
-znaménka: $+in/R_\psi$ versus $-in/R_\psi$. To je přímý důsledek
-$\gamma^5\partial_\psi$ (nikoli $i\gamma^5\partial_\psi$) v Diracově operátoru.
-Při $n \to -n$ si rovnice (A$_n$) a (B$_n$) vymění úlohy se změnou znaménka
-a soustava se zobrazí na svůj komplexní sdružený tvar.
-
-### 2.2 Efektivní hmotnost v druhé mocnině
-
-Dosazením (A$_n$) do (B$_n$):
-
-$$
-i\bar\sigma^\mu\partial_\mu\cdot \frac{R_\psi}{in}\cdot i\sigma^\nu\partial_\nu \Theta_{R,n}
-= -\frac{in}{R_\psi}\Theta_{R,n}.
-$$
-
-Pomocí Weylovy identity $i\bar\sigma^\mu\partial_\mu \cdot i\sigma^\nu\partial_\nu = -\Box$:
-
-$$
--\Box\,\Theta_{R,n} = -\frac{(in)(-in)}{R_\psi^2}\,\Theta_{R,n} = \frac{n^2}{R_\psi^2}\,\Theta_{R,n},
-$$
-
-$$
-\Bigl(\Box + \frac{n^2}{R_\psi^2}\Bigr)\Theta_{R,n} = 0.
-$$
-
-**Výsledek:** efektivní hmotnost v druhé mocnině $m_n^2 = n^2/R_\psi^2 \geq 0$, **symetrická** v $n$.
-To je konzistentní s kontrolou V8 v `verify_psi_branch_selection.py` a s
-`experiments/research_tracks/three_generations/st3_complex_time_generations.tex`.
-
-<!-- BILINGUAL-UNIT: psi-fock.sec3 -->
-## 3. Sestava Hamiltoniánu a struktura chiralitních sektorů
+\[
+\Theta=\sum_{n\in\mathbb Z}\begin{pmatrix}L_n\\R_n\end{pmatrix}e^{in\psi/R_\psi},\quad
+i\sigma^\mu\partial_\mu R_n=imL_n,\quad
+i\bar\sigma^\mu\partial_\mu L_n=-imR_n.
+\]
+\[
+(i\bar\sigma^\mu\partial_\mu)(i\sigma^\nu\partial_\nu)=-\Box,\quad
+(im)(-im)=m^2,\quad(\Box+m^2)L_n=(\Box+m^2)R_n=0.
+\]
 
 <!-- BILINGUAL-UNIT: psi-fock.hamiltonian-matrix -->
-### 3.1 Matice Hamiltoniánu ψ-sektoru v chiralitní bázi
+## 3. Odvození hermitovského Hamiltoniánu
 
-Z Lagrangiánu $\mathcal{L} = \bar\Theta(\mathcal{D})\Theta$ přispěje
-člen $\gamma^5\partial_\psi$ k hustotě Hamiltoniánu pro mód $n$ jako
+Při nulové prostorové hybnosti dosadíme časovou závislost do deklarované rovnice a vynásobíme ji časovou maticí. Tím odvodíme faktor chybějící v předchozí verzi. Hamiltonián je hermitovský již v klidu; žádný prostorový člen jej nemusí opravovat. Absolutní hodnoty imaginárních vlastních čísel neopravené matice nejsou výpočtem fyzikální energie.
 
-$$
-H_\psi^{(n)} = \frac{n}{R_\psi}\,\gamma^0\gamma^5.
-$$
-
-V chirální reprezentaci:
-
-$$
-\gamma^0\gamma^5 = \begin{pmatrix}0 & I_2 \\ I_2 & 0\end{pmatrix}
-\begin{pmatrix}-I_2 & 0 \\ 0 & I_2\end{pmatrix}
-= \begin{pmatrix}0 & I_2 \\ -I_2 & 0\end{pmatrix}.
-$$
-
-**Pozorování (ověřeno: A8).** V chiralitní bázi $(\Theta_L, \Theta_R)$
-je matice $\gamma^0\gamma^5$ **čistě mimosouhlasná**: diagonální
-(chiralitu zachovávající) bloky $L$–$L$ a $R$–$R$ jsou oba nulové.
-$H_\psi^{(n)}$ tedy váže $\Theta_L \leftrightarrow \Theta_R$ stejnou
-silou; dvěma chiralitním sektorům nedává různé energie.
-
-**Pozorování (ověřeno: A1).** Vlastní hodnoty $\gamma^0\gamma^5$ jsou $\pm i$
-(čistě imaginární), každá s násobností 2. $H_\psi^{(n)}$ tedy
-není sám o sobě hermitovský; hermitovský Hamiltonián si vyžaduje 4D prostorový kinetický člen.
-Kombinovaný Hamiltonián má reálné vlastní hodnoty $\pm|n|/R_\psi$ (viz §3.2).
-
-**Pozorování (ověřeno: A4, B2).** Při $n \to -n$ splňuje mimosouhlasný vazební blok
-
-$$
-\text{block}(+n) + \text{block}(-n) = 0.
-$$
-
-Jde o **strukturální změnu znaménka**, nikoli o selekci: mísicí úhel v rovině
-$L$–$R$ se při změně znaménka vinutého čísla otočí o $\pi$.
+\[
+\Theta_n(t)=u e^{-iEt},\quad(E\gamma^0+im\gamma^5)u=0
+\quad\Longleftrightarrow\quad Eu=H_m u,
+\]
+\[
+\boxed{H_m=-im\gamma^0\gamma^5=
+\begin{pmatrix}0&-imI_2\\imI_2&0\end{pmatrix}},\quad
+H_m^\dagger=H_m,\quad H_m^2=m^2 I_4.
+\]
+\[
+(\gamma^0\gamma^5)^\dagger=-\gamma^0\gamma^5,\qquad
+\operatorname{spec}(\gamma^0\gamma^5)=\{+i,-i\}.
+\]
 
 <!-- BILINGUAL-UNIT: psi-fock.eigenvalues -->
-### 3.2 Energetické vlastní hodnoty
+## 4. Přesné spektrum a symetrie vinutí
 
-Při nulovém 4D prostorovém hybnosti (klid), matice podmínky pro mód $n$ je
+Pro nenulové vinutí mají reálné energie každá násobnost dvě. Při nulovém vinutí klidový Hamiltonián mizí a jeho jádro má dimenzi čtyři. Konjugace maticí chirality zachovává normy obou složek a obrací vinutí.
 
-$$
-M_n(E) = E\,\gamma^0 + i\,\frac{n}{R_\psi}\,\gamma^5.
-$$
-
-**Věta (ověřeno: A2, A3).** $\det M_n(E) = \bigl(E^2 - n^2/R_\psi^2\bigr)^2$.
-Energetické vlastní hodnoty jsou tedy $E = \pm|n|/R_\psi$, každá s násobností 2,
-pro **všechna** $n$. Spektrum je totožné pro $n$ i $-n$.
-
-*Stručný důkaz.* Přímý symbolický výpočet; viz `verify_psi_fock_chirality_selection.py`
-kontroly A2 a A3. $\square$
-
-**Rozsah tvrzení.** Jde o výsledek v klidovém rámci, bez kalibrační pole,
-v plochém prostoročase. Na zakřivený či kalibrací vázaný případ se automaticky nevztahuje.
-
-<!-- BILINGUAL-UNIT: psi-fock.sec4 -->
-## 4. Druhá kvantizace a normální uspořádání
-
-<!-- BILINGUAL-UNIT: psi-fock.normal-ordering -->
-### 4.1 Fockův prostor a fermionské normální uspořádání
-
-Rozviňme $\Theta_n$ do pozitivně- a negativně-frekvenčních řešení
-$({\Box + n^2/R_\psi^2})\Theta = 0$. Pro Diracův typ pole kanonická kvantizace
-zavede **antikomutační relace**:
-
-$$
-\{a_{n,s},\, a^\dagger_{n',s'}\} = \delta_{nn'}\delta_{ss'}, \quad
-\{a_{n,s},\, a_{n',s'}\} = 0,
-$$
-
-kde $s$ označuje pozitivně-energetická řešení (jež mísí $\Theta_L$ a $\Theta_R$;
-viz §3.2).
-
-Formální Hamiltonián před normálním uspořádáním obsahuje módy se zápornou energií.
-**Normální uspořádání** (Wickovo řazení, Diracův předpis mořského dna pro fermiony) nahradí:
-
-$$
-H_{\rm naive} = \sum_{n,s} E_{n,s}\, a^\dagger_{n,s} a_{n,s}
-\quad\longrightarrow\quad
-H_{\rm NO} = \sum_{n,s} |E_{n,s}|\, a^\dagger_{n,s} a_{n,s}
-\;+\;\text{(antiparticle terms)},
-$$
-
-kde operátory tvorby záporné energie se reinterpretují jako operátory zániku
-antičástic s kladnou energií ($a_{n,s} \leftrightarrow b^\dagger_{n,s}$).
-
-**Výsledek (ověřeno: A7, B3).**
-
-$$
-H_{\rm NO} = \sum_{n \in \mathbb{Z},\, s} \frac{|n|}{R_\psi}\,
-\bigl(a^\dagger_{n,s} a_{n,s} + b^\dagger_{n,s} b_{n,s}\bigr) + \text{const},
-$$
-
-kde $a^\dagger_{n,s}$ tvoří částici typu $(n,s)$ a $b^\dagger_{n,s}$
-tvoří antičástici. Koeficient $|n|/R_\psi \geq 0$ je stejný pro
-všechna $n$ (kladná i záporná) i pro všechna řešení $s$ (bez ohledu
-na jejich složení $L$–$R$). Normálně uspořádaný Hamiltonián je **omezený zdola nulou**.
-
-### 4.2 Žádná selekce chirality ve volné teorii
-
-**Hlavní negativní výsledek.** Normálně uspořádaný Hamiltonián volné teorie ψ-Fockova prostoru je
-
-1. **Symetrický pod $n \to -n$:** koeficient $|n|/R_\psi$ se nemění.
-2. **Neselektuje chiralitu:** energetické vlastní stavy při módu $n$ jsou
-   superpozice $\Theta_L$ a $\Theta_R$ (mísicí úhel mění znaménko pod $n \to -n$,
-   spektrum nikoli). Selekce (n>0, levotočivý) + (n<0, pravotočivý) nevzniká.
-3. **Omezený zdola pro všechny kombinace $(n, \text{chiralita})$:** normální
-   uspořádání dává nezáporné spektrum pro každé vinuté číslo a každou volbu
-   báze tvorby/zániku.
-
-**Varování (analogie s varováním v zadání ohledně
-`step4_fpe_equivalence.tex`).** Každé tvrzení o komutátorech, normálním
-uspořádání a cyklické struktuře Hilbertova prostoru musí být formulováno
-explicitně. Výsledek výše se opírá o:
-- Antikomutaci $a_{n,s}$ s $a^\dagger_{n,s}$: explicitně uvedeno.
-- Reinterpretaci módů se zápornou energií: standardní Diracův postup, explicitně použit.
-- Mimosouhlasný tvar $\gamma^0\gamma^5$: ověřeno symbolicky v kontrole A8.
-
-Žádný krok není odůvodněn frází „plyne z normálního uspořádání" bez explicitního
-algebraického kroku.
-
-<!-- BILINGUAL-UNIT: psi-fock.sec5 -->
-## 5. Co se změní pod $n \to -n$: změna znaménka mísicího úhlu
+\[
+\det(E\gamma^0+im\gamma^5)=\det(EI_4-H_m)=(E^2-m^2)^2,
+\quad E=\pm|m|,\quad\gamma^5 H_m\gamma^5=H_{-m}.
+\]
 
 <!-- BILINGUAL-UNIT: psi-fock.sign-flip-detail -->
-### 5.1 Mísicí úhel L–R
+## 5. Stejné chirální váhy místo levé dominance
 
-Přestože spektrum je symetrické, **struktura energetických vlastních stavů**
-se pod $n \to -n$ mění. Pozitivně-energetický vlastní stav $M_n(E)$ při $E = +|n|/R_\psi$
-zahrnuje kombinaci $\Theta_L - i\,\mathrm{sign}(n)\,\Theta_R$ (schematicky).
-Explicitně (v klidu, $n > 0$):
+**Věta.** Každý klidový vlastní stav s nenulovou energií má stejné normy levé a pravé složky. Pro nenulové vinutí má každý nenulový klidový vlastní stav nenulovou energii.
 
-$$
-u_+ \;\propto\; \Theta_L - i\Theta_R \quad (n > 0),
-\qquad
-u_+ \;\propto\; \Theta_L + i\Theta_R \quad (n < 0).
-$$
+**Důkaz.** Spřažené rovnice pro vlastní stav dávají následující identity. Protože je energie reálná a nenulová, rovnost reálných částí implikuje rovnost norem. Při nulové energii a nenulovém vinutí tytéž rovnice nutí obě složky vymizet.
 
-Tyto stavy **nejsou** vlastními stavy chirality (ani jeden není vlastním stavem $\gamma^5$).
-Liší se fázovou rotací v rovině $L$–$R$ (o $e^{\pm i\pi/2}$).
+Znaménko vinutí mění relativní fázi, nikoli nerovnováhu pravděpodobností. Dříve navržená „projekce na levě dominantní stavy“ tedy tyto klidové vlastní stavy s nenulovým vinutím nemůže vybrat: jsou přesně vyvážené. Jádro s nulovým vinutím a nulovou energií může obsahovat čistě chirální stavy a je z tohoto závěru vyňato.
 
-### 5.2 Strukturální pozorování
+\[
+-imR=EL,\quad imL=ER,\quad
+E\|L\|^2=\operatorname{Re}(-imL^\dagger R)
+=\operatorname{Re}(imR^\dagger L)=E\|R\|^2.
+\]
+\[
+E\ne0\ \Longrightarrow\ \boxed{\|L\|^2=\|R\|^2},\qquad
+E=|m|,\ m\ne0\ \Longrightarrow\ R=i\operatorname{sign}(m)L.
+\]
 
-Změna znaménka vazby L–R (ověřeno: A4, B2) znamená, že definuje-li se
-projekce na „levostranně dominantní" energetický vlastní stav, tato projekce
-vybere módy $n>0$. Ovšem:
-- Tato projekce **není důsledkem toho, že volný Hamiltonián je omezený zdola**;
-  jde o dodatečnou definici.
-- V přítomnosti kalibrační vazby ($SU(2)_L$ působící pouze na $\Theta_L$) by
-  kalibrační-invariantní fyzikální sektor mohl vykazovat korelovanou strukturu.
-  To ale vyžaduje kalibrační vazbu, nikoli Hamiltonián volné teorie.
-- Identifikace „levostranně dominantních" módů s „hmotou" je dodatečný fyzikální
-  vstup; viz §7.
+<!-- BILINGUAL-UNIT: psi-fock.normal-ordering -->
+## 6. Co dokazuje konečné fermionové normální uspořádání
 
-<!-- BILINGUAL-UNIT: psi-fock.sec6 -->
-## 6. Verdikt
+Předpokládejme kanonické fermionové antikomutační relace. Následující jednomódová identita udává skutečné přeuspořádání částice a díry včetně vakuové konstanty. Pro konečný soubor diagonalizovaných módů ponechá odečtení vakuové konstanty nezápornou energii pro každé přiřazení obsazení. Tím se nekonstruuje nekonečněrozměrný Fockův prostor, definiční obor jeho operátoru ani renormalizace vakua. Pozitivita se týká Hamiltoniánu po odečtení konstanty, nikoli libovolné aditivní konstanty.
+
+\[
+b=\begin{pmatrix}0&1\\0&0\end{pmatrix},\quad
+bb^\dagger+b^\dagger b=I_2,\quad
+-\varepsilon bb^\dagger+\varepsilon I_2=\varepsilon b^\dagger b.
+\]
+\[
+\varepsilon_k=|n_k|/R_\psi\ge0,\quad
+H_{\mathrm{NO}}=\sum_{k\in F}\varepsilon_k(N_{a,k}+N_{b,k})\ge0,
+\quad |F|<\infty,\quad N_{a,k},N_{b,k}\in\{0,1\}.
+\]
 
 <!-- BILINGUAL-UNIT: psi-fock.main-result -->
-### 6.1 Matematický verdikt: PARTIAL/CONDITIONAL
+## 7. Závěr o výběru
 
-Pokus odvodit korelaci chiralita–vinutí z ohraničenosti Hamiltoniánu zdola
-dává trojdílný výsledek:
-
-**NO-GO (volná teorie):** Normální uspořádání volného ψ-Fockova Hamiltoniánu
-DYNAMICKY NEVYBÍRÁ páry (n>0, levotočivý) + (n<0, pravotočivý). Normálně
-uspořádaný Hamiltonián je omezený zdola pro VŠECHNY kombinace (n, chiralita),
-s koeficientem $|n|/R_\psi$ nezávislým na $\mathrm{sign}(n)$ ani na chiralitě.
-Druhá kvantizace sama o sobě nemůže nahradit strukturální předpoklad v
-`canonical/chirality/gap_c1_closure.tex`.
-
-**STRUKTURÁLNÍ POZOROVÁNÍ (částečné):** Diracův operátor UBT $\mathcal{D} = i\gamma^\mu\nabla_\mu + \gamma^5\partial_\psi$ generuje energetické vlastní stavy, jejichž mísicí úhel L–R mění znaménko při $n \to -n$. To je skutečný strukturální rozdíl mezi kladnými a zápornými vinutými čísly, ale jde o kinematickou vlastnost módových funkcí, nikoli o dynamickou selekci ze spektra Hamiltoniánu.
-
-**PODMÍNĚNÝ výsledek:** Přidá-li se **NEW AXIOM CANDIDATE** (viz §7) identifikující
-preferovaný vakuový sektor a je-li kalibrační vazba SU(2)$_L$ P$_\psi$-lichá
-(jak je argumentováno v `canonical/chirality/gap_c1_closure.tex`, podmíněně na T2\_GAUGE),
-pak kombinace vakuového axiomu, kalibrační vazby a struktury módových funkcí
-dává konzistentní obraz (n>0, levotočivý) jako hmota a (n<0, pravotočivý) jako antihmota.
-Tato kombinace je ale podmíněná, nikoli odvozená.
-
-**Stav Gapu C1 se nemění.** Tento dokument Gap C1 nezavírá. Poskytuje
-přesnější charakterizaci toho, co druhá kvantizace k problému přináší a nepřináší.
-Gap C1 zůstává CLOSED CONDITIONALLY na T2\_GAUGE, jak je uvedeno v
-`canonical/chirality/gap_c1_closure.tex`.
-
-<!-- BILINGUAL-UNIT: psi-fock.sec7 -->
-## 7. Noví kandidáti na axiómy
+Uvedený volný model klidových módů je symetrický při obrácení vinutí a všechny jeho energetické vlastní stavy s nenulovým vinutím mají stejné chirální váhy. Konečné fermionové normální uspořádání ponechává nezáporné excitační energie pro obě znaménka vinutí; korelaci vinutí a chirality nevybírá. Samotné mimodiagonální bloky by tento závěr nedokazovaly; dokazuje jej věta o stejných vahách a explicitní symetrie. Netvrdíme zákaz pro úplnou akci.
 
 <!-- BILINGUAL-UNIT: psi-fock.axiom-candidates -->
-Následující předpoklady byly potřeba, aby argument selekce fungoval. Každý
-je explicitně označen jako NEW AXIOM CANDIDATE a není důsledkem volné kinetické akce:
+## 8. Dřívější kandidáti axiomů
 
-**NEW AXIOM CANDIDATE A (volba vakua):**
-> Fyzikální Fockovo vakuum je vakuum, ve kterém energetické vlastní stavy
-> pozitivně-energetického sektoru pro $n>0$ tvoří „sektor hmoty" a pro $n<0$
-> „sektor antihmoty." To není odvoditelné z ohraničenosti $H_\psi^{(n)}$ zdola;
-> jde o dodatečnou kosmologickou nebo okrajovou podmínku.
-
-**NEW AXIOM CANDIDATE B (L-dominantní projekce):**
-> Fyzikální stavové vektory částic jsou ty, jejichž energetický vlastní stav má
-> dominantní složku $\Theta_L$ (tj. stavy $u_+ \propto \Theta_L - i\Theta_R$ pro
-> $n>0$). Tím se provede projekce na módy korelované s levou chiralitou, ale
-> vyžaduje to definovat „dominanci" jako dodatečné kritérium.
-
-Tito kandidáti jsou odlišní od T2\_GAUGE (podmínka, že $SU(2)_L$ = levá akce na Θ)
-a nezávislí na něm. Bylo by třeba je odvodit z plné UBT akce $S[\Theta]$
-nebo ustanovit jako další základní postuláty.
-
-<!-- BILINGUAL-UNIT: psi-fock.sec8 -->
-## 8. Ověření
+Kandidát A přiřazoval označení hmoty a antihmoty podle znaménka vinutí. To zůstává dodatečnou interpretací a nedává chirální dominanci. Kandidát B požadoval levě dominantní energetické vlastní stavy; je neslučitelný s právě odvozenými klidovými vlastními stavy s nenulovým vinutím. Dřívější tvrzení, že A+B spolu s T2_GAUGE již dává konzistentní výběr, proto odvoláváme. Interakční odvození by muselo nově specifikovat akci, stavy a pozorovatelné veličiny. Žádný nový axiom nepřijímáme.
 
 <!-- BILINGUAL-UNIT: psi-fock.verification -->
-### 8.1 Skript a výsledky
+## 9. Nezávislé ověření
 
-Spusť
+`tools/verify_psi_fock_chirality_selection.py` kontroluje pomocí SymPy Weylovu identitu pro uvedenou signaturu, skutečnou hermitovskou matici, její druhou mocninu, charakteristický polynom, konjugaci obracející vinutí, přesné podprostory kladné energie, identitu stejných vah a konečné přeuspořádání CAR. NumPy kontroluje reálná vlastní čísla a normalizované vlastní vektory pro obě znaménka vinutí a více kladných poloměrů. Starou matici s chybějícím faktorem odmítá explicitní kontrolou hermiticity. Pouhé zopakování přiřazeného koeficientu se nepočítá jako ověření.
 
-```bash
-python tools/verify_psi_fock_chirality_selection.py
-```
-
-| Kontrola | Popis | Kanál | Stav |
-|---|---|---|---|
-| A1 | $\mathrm{eigenvals}(\gamma^0\gamma^5) = \{\pm i\}$ | SymPy | PASS |
-| A2 | $\det(E\gamma^0 + i(n/R_\psi)\gamma^5) = (E^2 - n^2/R_\psi^2)^2$ | SymPy | PASS |
-| A3 | Spektrum totožné pro $n$ i $-n$ | SymPy | PASS |
-| A4 | Mimosouhlasná L–R vazba mění znaménko pod $n \to -n$ | SymPy | PASS |
-| A5 | Weylovy rovnice dávají $m^2 = n^2/R_\psi^2$ | SymPy | PASS |
-| A6 | $\{\gamma^0, \gamma^5\} = 0$ | SymPy | PASS |
-| A7 | Koeficient normálního uspořádání $= |n|/R_\psi \geq 0$ | SymPy | PASS |
-| A8 | Diagonální bloky $(n/R_\psi)\gamma^0\gamma^5$ jsou nulové | SymPy | PASS |
-| B1 | Spektrum symetrické pod $n \to -n$ (numericky) | NumPy | PASS |
-| B2 | Změna znaménka L–R vazby pod $n \to -n$ (numericky) | NumPy | PASS |
-| B3 | Pozitivita normálního uspořádání pro všechny testované módy | NumPy | PASS |
-
-Všechny kontroly se týkají $4 \times 4$ maticové algebry v chirální reprezentaci,
-v klidovém rámci, v plochém prostoročase bez kalibrační pole. Neověřují:
-- operátory v zakřiveném prostoročase ani závislé na Θ;
-- korektnost Fockova prostoru v nekonečných rozměrech;
-- odvození kalibrační vazby ze S[Θ] ani slovník UBT–SM.
-
-<!-- BILINGUAL-UNIT: psi-fock.sec9 -->
-## 9. Stav formalizace v Leanu
+Spusťte skript a `tests/test_psi_fock_chirality_selection.py`. Strojově čitelný záznam je `reports/psi_rest_hamiltonian_2026_09_16.json`.
 
 <!-- BILINGUAL-UNIT: psi-fock.lean-status -->
-**LEAN-PENDING.** Pro žádné tvrzení v tomto dokumentu neexistuje zkompilovaný
-Leanův důkaz. Algebraické identity $4 \times 4$ jsou v principu Lean-ověřitelné
-(chirální reprezentace je konkrétní a všechny operace jsou lineární algebra nad ℂ).
-Tvrzení v nekonečněrozměrném Fockově prostoru (Věta v §4) vyžaduje předpoklady
-z funkcionální analýzy, které jsou mimo aktuální frontu Leanovy formalizace.
-Důvod absence: nedostatečná formalizační infrastruktura.
+## 10. Rozsah Leanu
 
-<!-- BILINGUAL-UNIT: psi-fock.sec10 -->
-## 10. Vztah k gapu G3 a Gapu C1
+`formal/lean/UBT/Action/PsiRestHamiltonian.lean` formalizuje jednotlivý chirální blok opakovaný pro každou vedlejší spinovou složku: odvozený faktor, hermiticitu, druhou mocninu, charakteristický polynom, konjugaci obracející vinutí, stejné chirální váhy, trivialitu stavů s nulovou energií při nenulovém vinutí a jednomódové přeuspořádání CAR. Doklady kompilace, kontroly jádra a auditu axiomů jsou zaznamenány samostatně v `reports/lean_psi_rest_hamiltonian_2026_09_16.json`.
+
+**LEAN-PENDING:** časoprostorové diferenciální rovnice, nekonečněrozměrná Fockova konstrukce a odvození Diracova sektoru z akce UBT. Konečné důkazy tyto předpoklady nedokazují.
 
 <!-- BILINGUAL-UNIT: psi-fock.gap-update -->
-Tabulka gapů v `psi_branch_selection.cs.md` uvádí:
+## 11. Zbývající fyzikální mezery
 
-> G3-DYN: Dynamické využití $\Gamma_*D_\psi$, jeho normalizace, levá/pravá akce a původ akce — OPEN
-
-Tento dokument je částečný průzkum G3-DYN. Konkrétně:
-
-- Trasa přes volný Hamiltonián (druhá kvantizace + normální uspořádání samotné) je
-  **CLOSED AS NO-GO** pro specifické tvrzení, že vybírá (n>0,L)+(n<0,R).
-- Reziduální strukturální pozorování (změna znaménka mísicího úhlu L–R) je zaznamenáno,
-  ale G3-DYN nezavírá.
-- G3-DYN zůstává OPEN; čeká na odvození z úrovně akce.
-
-Gap C1 v kanonickém sektoru chirality (`canonical/chirality/gap_c1_closure.tex`)
-zůstává CLOSED CONDITIONALLY na T2\_GAUGE. Tento dokument jen doplňuje poznámku, že
-Fockova trasa neposkytuje nezávislé uzavření Gapu C1; podmíněnost na T2\_GAUGE
-se neodstraňuje ani nezeslabuje.
-
-Tento dokument je zkříženě odkazován z `psi_branch_selection.cs.md`.
-
-<!-- BILINGUAL-UNIT: psi-fock.sec11 -->
-## 11. Přehled
-
-<!-- BILINGUAL-UNIT: psi-fock.summary -->
-| Položka | Stav |
-|---|---|
-| Volný ψ-Fockův Hamiltonián omezený zdola | ANO, pro VŠECHNY (n, chiralita); žádná selekce |
-| Symetrie spektra pod $n \to -n$ | PŘESNÁ (ověřeno A2, A3, B1) |
-| Změna znaménka L–R vazby pod $n \to -n$ | STRUKTURÁLNÍ POZOROVÁNÍ (ověřeno A4, B2) |
-| Dynamická selekce (n>0, L)+(n<0, R) z volného $H$ | NO-GO (volná teorie) |
-| Podmíněná selekce s NEW AXIOM CANDIDATE A+B a T2\_GAUGE | CONDITIONAL |
-| Gap C1 změněn | NE — zůstává CLOSED CONDITIONALLY na T2\_GAUGE |
-| G3-DYN změněn | NARROWED (ZÚŽEN): trasa přes volný Hamiltonián je NO-GO; celkový G3-DYN OPEN |
-| Kanonické soubory změněny | ŽÁDNÉ |
-| Stav Leanu | LEAN-PENDING všude |
-
-**Matematický verdikt: PARTIAL/CONDITIONAL.**
-Volný ψ-Fockův Hamiltonián dynamicky nevybírá (n>0, levotočivý) + (n<0, pravotočivý).
-Selekce je podmíněna NEW AXIOM CANDIDATES A a B spolu s T2\_GAUGE.
-Je ustanovena strukturální změna znaménka mísicího úhlu L–R pod $n \to -n$.
+Nadřazený výzkumný směr je `psi_branch_selection.cs.md`. G3-DYN zůstává OPEN. Gap C1 zůstává podmíněný T2_GAUGE podle `canonical/chirality/gap_c1_closure.tex`; tento výpočet daný most nezávisle neověřuje. Úplná složená akce, fyzikální míra fluktuací, kinetická normalizace a gravitační koeficient zůstávají nedořešené. Původní biquaternionové pole a kovariantní tetráda se nemění; nezvyšuje se status žádné kanonické mezery ani autorského potvrzení.

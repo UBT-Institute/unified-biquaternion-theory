@@ -1,0 +1,45 @@
+{
+  "schema": "ubt-verification/v1",
+  "date": "2026-09-16",
+  "result": "PASS",
+  "checks": {
+    "weyl_signature_identity": "PASS",
+    "hermitian_hamiltonian": "PASS",
+    "square_and_characteristic": "PASS",
+    "winding_conjugation": "PASS",
+    "missing_factor_regression": "PASS",
+    "exact_positive_energy_states_both_signs": "PASS",
+    "equal_weight_identity": "PASS",
+    "finite_car_reordering": "PASS",
+    "two_mode_occupation_positivity": "PASS",
+    "numerical_mode_radius_cases": 21
+  },
+  "tools": {
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "numpy": "2.3.5"
+  },
+  "assumptions": [
+    "Declared free flat Dirac-sector candidate",
+    "Zero spatial momentum",
+    "R_psi>0",
+    "Fermionic CAR for the finite normal-ordering calculation"
+  ],
+  "lean": {
+    "status": "NOT_RUN_BY_THIS_SCRIPT",
+    "evidence_record": "reports/lean_psi_rest_hamiltonian_2026_09_16.json"
+  },
+  "source_sha256": {
+    "tools/verify_psi_fock_chirality_selection.py": "6a0cbdfebc6edfdd357b2ed9aa43f0589e741e56ed9652106877efb7f067bdf5",
+    "formal/lean/UBT/Action/PsiRestHamiltonian.lean": "9886ff10257504ca1ea1591f565d6afe0aa8973b5e9383f7a57766dd13267b63",
+    "tests/test_psi_fock_chirality_selection.py": "ecdb7da2affa9f13d04f50e25cdd86995e96524d60e2cda6b1a93ab349ccd8a7",
+    "research_tracks/complex_time_branch_selection/psi_fock_quantization_chirality_link.en.md": "ee2d1a4cfbff0177b84b338b04ac0693316982d21f590d860771584ae8dc4b67",
+    "research_tracks/complex_time_branch_selection/psi_fock_quantization_chirality_link.cs.md": "3668d90f3b48523543a3813610eba37b5c3c76e12e801a86c6e481b2584423b9"
+  },
+  "limitations": [
+    "Numerical eigenvectors are examples, not a universal proof.",
+    "No infinite Fock-space operator or vacuum renormalization is constructed.",
+    "No full UBT action, physical chirality selection, Newton constant or RH proof."
+  ],
+  "canonical_claim_status_changes": []
+}

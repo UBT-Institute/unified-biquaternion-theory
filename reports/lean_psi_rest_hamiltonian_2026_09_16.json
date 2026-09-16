@@ -1,0 +1,183 @@
+{
+  "schema": "ubt-verification/v1",
+  "date": "2026-09-16",
+  "result": "PASS",
+  "formalization_scope": "FINITE_ALGEBRA_ONLY",
+  "repository": "UBT-Institute/unified-biquaternion-theory",
+  "pull_request": 652,
+  "ci": {
+    "workflow": "Lean theorem verification",
+    "run_id": 35074532816,
+    "job_id": 104723657470,
+    "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35074532816",
+    "conclusion": "success",
+    "head_commit": "825c21f7e9d10e0e9043c70c9455316509332918",
+    "checked_merge_commit": "763bb327f5c3b46e397f7e2aacddbd13daf77d08",
+    "source_identity": "All 16 local Lean source/configuration files were byte-for-byte matched against the checked merge commit."
+  },
+  "tools": {
+    "lean": "4.33.1",
+    "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+    "mathlib": "v4.33.1",
+    "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "axiom_audit": "v0.1.2",
+    "axiom_audit_commit": "46024e005996495c65ef609368e11ab39c4222e3"
+  },
+  "checks": [
+    {
+      "id": "LEAN-BUILD",
+      "command": "lake build --wfail",
+      "result": "PASS"
+    },
+    {
+      "id": "LEAN-KERNEL",
+      "tool": "Bundled leanchecker",
+      "arguments": "UBT",
+      "result": "PASS"
+    },
+    {
+      "id": "LEAN-AXIOMS",
+      "result": "PASS",
+      "declarations_audited": 131,
+      "allowed_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "unexpected_axioms": []
+    },
+    {
+      "id": "SOURCE-IDENTITY",
+      "result": "PASS",
+      "files_matched": 16
+    }
+  ],
+  "proofs": [
+    {
+      "declaration": "UBT.Action.PsiRestHamiltonian.derived_hamiltonian",
+      "status": "PROVED",
+      "conclusion": "The block equals -i*m*gamma0*gamma5 for any real m."
+    },
+    {
+      "declaration": "UBT.Action.PsiRestHamiltonian.hermitian",
+      "status": "PROVED",
+      "conclusion": "The derived Hamiltonian is Hermitian for any real m."
+    },
+    {
+      "declaration": "UBT.Action.PsiRestHamiltonian.square",
+      "status": "PROVED",
+      "conclusion": "H_m*H_m=m^2*I for any real m."
+    },
+    {
+      "declaration": "UBT.Action.PsiRestHamiltonian.characteristic",
+      "status": "PROVED",
+      "conclusion": "det(E*I-H_m)=E^2-m^2 for the individual chirality block, any real E,m."
+    },
+    {
+      "declaration": "UBT.Action.PsiRestHamiltonian.winding_conjugation",
+      "status": "PROVED",
+      "conclusion": "gamma5*H_m*gamma5=H_(-m)."
+    },
+    {
+      "declaration": "UBT.Action.PsiRestHamiltonian.equal_chiral_weights",
+      "status": "PROVED",
+      "conclusion": "For real E!=0,m and arbitrary complex L,R satisfying the actual two component eigenvalue equations, norm(L)^2=norm(R)^2."
+    },
+    {
+      "declaration": "UBT.Action.PsiRestHamiltonian.zero_energy_trivial",
+      "status": "PROVED",
+      "conclusion": "At real m!=0, the zero-energy component equations imply L=R=0."
+    },
+    {
+      "declaration": "UBT.Action.PsiRestHamiltonian.car",
+      "status": "PROVED",
+      "conclusion": "The explicit one-mode annihilation matrix obeys b*b^dagger+b^dagger*b=I."
+    },
+    {
+      "declaration": "UBT.Action.PsiRestHamiltonian.negative_mode_reordering",
+      "status": "PROVED",
+      "conclusion": "For real E, -E*b*b^dagger+E*I=E*b^dagger*b; includes the vacuum subtraction."
+    }
+  ],
+  "file": "formal/lean/UBT/Action/PsiRestHamiltonian.lean",
+  "source_files": {
+    ".github/workflows/lean.yml": {
+      "git_blob_sha": "1ae241d6f37c7292e00e85fbadc1060e60949250",
+      "sha256": "5c86433b1f30c8c5e0e528eb3b3e972b2c679513362995fd0fb623e6eee23dd0"
+    },
+    "formal/lean/UBT.lean": {
+      "git_blob_sha": "f98f5076e9e695f9330c31d2e69e749b0b62a233",
+      "sha256": "89c35f09cbfee781821e4e22f96bbd191da6b37c063d3d21dc68241a56bd4d7a"
+    },
+    "formal/lean/UBT/Action/PotentialInvariants.lean": {
+      "git_blob_sha": "5e3d9f14f871469446090385394b6c0c343686f2",
+      "sha256": "88fb2257d7fd7e61a7c85099dd104c4d8258528dec08c33025fb81d8c17515da"
+    },
+    "formal/lean/UBT/Action/PotentialMinimumOrbit.lean": {
+      "git_blob_sha": "0654cd2cc555c00469f2495aef839815259baede",
+      "sha256": "c01db053ab7332668f1d62915dbbfa71e130be0e1447ff970e13520daee422b7"
+    },
+    "formal/lean/UBT/Action/PotentialVacuum.lean": {
+      "git_blob_sha": "8b42fe0a3a34454fce7e9cc75c968294e81d685a",
+      "sha256": "ac4da25fb407fd67c3fcaa5316d8a57e9fe0b858e9db39430c08712e8b94bb33"
+    },
+    "formal/lean/UBT/Action/PsiRestHamiltonian.lean": {
+      "git_blob_sha": "e19057fbc8dbbbbffe4ef0ac10f699ff6c745a05",
+      "sha256": "9886ff10257504ca1ea1591f565d6afe0aa8973b5e9383f7a57766dd13267b63"
+    },
+    "formal/lean/UBT/GR/CompositeActionStationarity.lean": {
+      "git_blob_sha": "ac727a0b286396a7e5a882aec04c1c43ab397345",
+      "sha256": "ec7b7138c9d0c0760f990c392ddcf3442c9d89c91b4ea49bd65554884c31023f"
+    },
+    "formal/lean/UBT/GR/CompositeKinetic.lean": {
+      "git_blob_sha": "a8ca31e2f13e307371bbf4a45f4179dc50becb66",
+      "sha256": "58bff7173c5b68eb81de0a79d53367900f4eddbfdf5fe75fa7cb945ec2bdc859"
+    },
+    "formal/lean/UBT/GR/CompositeSecondVariation.lean": {
+      "git_blob_sha": "3ff83505046ee347567500f3e3d74b5d4c530abe",
+      "sha256": "af7cd8750d286890fb57447f6993411d824a05725dff1b60deb84b9b6bf0fef4"
+    },
+    "formal/lean/UBT/GR/CurvatureUnderdetermination.lean": {
+      "git_blob_sha": "eb54f55b334850823f17afa4a0d296d866eb3d0d",
+      "sha256": "f73e0a2a93de047c2ca9ce5e5912b75c361e6f13924ecf78690e64eeb2ab80c3"
+    },
+    "formal/lean/UBT/GR/LegacyActionObstructions.lean": {
+      "git_blob_sha": "ef8ca581ff6e51977b0f098292c994df2036354d",
+      "sha256": "80c47b2c80ccf10e17ab9a168f3c3b9e670fe83fac91341ecdb70c204584e42b"
+    },
+    "formal/lean/UBT/GR/VolumePrincipalSymbol.lean": {
+      "git_blob_sha": "e9dcdbb9c8af09772838136eb697a8296d0b3fcb",
+      "sha256": "a85aac9ecd71dc04f9107f7389a54b8eeb5170d8a008d58912c595fbcea840ab"
+    },
+    "formal/lean/UBT/GR/VolumeVariation.lean": {
+      "git_blob_sha": "91be5269d7df7300c760ebc44e6ee04f38cae6dc",
+      "sha256": "371e5583bcac9acf0fe87790f863b1f6cdf3409237b7e2828f3850411d656214"
+    },
+    "formal/lean/lake-manifest.json": {
+      "git_blob_sha": "de12326c08ca2fe36aef5c94db1c379b740e4848",
+      "sha256": "b39b3cb24ff476b4054c0033ff89b296b117697d12ff55eef2bcdc127527475e"
+    },
+    "formal/lean/lakefile.toml": {
+      "git_blob_sha": "7b2135efc0066fb5407011a489f7bfb648a5dfd4",
+      "sha256": "5099e6f10557172813e7e372e3d0b6debbaf20bd4b45bc594553ccccc032fab5"
+    },
+    "formal/lean/lean-toolchain": {
+      "git_blob_sha": "a8afa7d1b02d96f0671eba854a8dc4b416beb473",
+      "sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  "independent_verification": {
+    "script": "tools/verify_psi_fock_chirality_selection.py",
+    "record": "reports/psi_rest_hamiltonian_2026_09_16.json",
+    "tests": "tests/test_psi_fock_chirality_selection.py",
+    "tests_passed": 7
+  },
+  "limitations": [
+    "Each chirality block is formalized; the two spectator spin components repeat the same block.",
+    "The eigenstate theorem assumes the actual component eigenvalue equations and excludes zero energy; it does not assert chiral balance of arbitrary states.",
+    "Spacetime differential equations, the infinite-dimensional Fock operator/domain and vacuum renormalization remain LEAN-PENDING.",
+    "The Dirac-sector action bridge, physical chirality selection, complete composite UBT action, Newton constant and RH are not proved.",
+    "The original biquaternionic Theta and covariant tetrad are unchanged."
+  ],
+  "canonical_claim_status_changes": []
+}
