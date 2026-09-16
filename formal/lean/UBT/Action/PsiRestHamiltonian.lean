@@ -23,7 +23,7 @@ theorem derived_hamiltonian (m : ℝ) :
     hamiltonian m = (-Complex.I * (m : ℂ)) • (gamma0 * gamma5) := by
   ext i j : 2
   fin_cases i <;> fin_cases j <;>
-    simp [hamiltonian, gamma0, gamma5, Matrix.vecMul, dotProduct, Fin.sum_univ_succ]
+    simp [hamiltonian, gamma0, gamma5]
 
 theorem hermitian (m : ℝ) : (hamiltonian m)ᴴ = hamiltonian m := by
   ext i j : 2
