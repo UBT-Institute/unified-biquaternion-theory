@@ -76,25 +76,44 @@ end RingIdentities
 noncomputable section
 open scoped Matrix
 variable {n : Type*} [Fintype n] [DecidableEq n]
-abbrev Mat := Matrix n n ℂ
+abbrev Mat (n : Type*) := Matrix n n ℂ
 
-def leftProjector (C : Mat) : Mat := (1 / 2 : ℂ) • (1 - C)
+def leftProjector (C : Mat n) : Mat n := (1 / 2 : ℂ) • (1 - C)
 
-theorem normalized_sandwich_zero (C G : Mat) (hc : C * C = 1)
+theorem normalized_sandwich_zero (C G : Mat n) (hc : C * C = 1)
     (ha : C * G + G * C = 0) : leftProjector C * G * leftProjector C = 0 := by
   simp only [leftProjector, Matrix.smul_mul, Matrix.mul_smul, smul_smul]
   rw [chiral_sandwich_zero C G hc ha, smul_zero]
 
-theorem normalized_left_current_even (C G₀ G : Mat) (hc : C * C = 1)
+theorem normalized_left_current_even (C G₀ G : Mat n) (hc : C * C = 1)
     (h₀ : C * G₀ + G₀ * C = 0) (hG : C * G + G * C = 0) :
     C * (G₀ * G * leftProjector C) * C = G₀ * G * leftProjector C := by
   simp only [leftProjector, Matrix.smul_mul, Matrix.mul_smul]
   rw [left_current_even C G₀ G hc h₀ hG]
 
 /-- Explicit left-only potential; it need not have an equal right coupling. -/
-theorem left_only_commutes (C : Mat) : C * leftProjector C = leftProjector C * C := by
+theorem left_only_commutes (C : Mat n) : C * leftProjector C = leftProjector C * C := by
   simp only [leftProjector, Matrix.smul_mul, Matrix.mul_smul]
   congr 1
   noncomm_ring
 
+/-- Reflection on Fourier coefficients is index reversal, not index parity. -/
+def reflectModes (f : ℤ → ℂ) (k : ℤ) : ℂ := f (-k)
+def positiveMode (k : ℤ) : ℂ := if k = 1 then 1 else 0
+
+theorem positive_mode_reflects :
+    reflectModes positiveMode 1 = 0 ∧ reflectModes positiveMode (-1) = 1 := by
+  norm_num [reflectModes, positiveMode]
+
+theorem positive_mode_not_reflection_odd : reflectModes positiveMode ≠ -positiveMode := by
+  intro h
+  have h₁ := congrFun h 1
+  norm_num [reflectModes, positiveMode] at h₁
+
+theorem positive_mode_not_reflection_even : reflectModes positiveMode ≠ positiveMode := by
+  intro h
+  have h₁ := congrFun h 1
+  norm_num [reflectModes, positiveMode] at h₁
+
+end
 end UBT.Action.ChiralInteraction
