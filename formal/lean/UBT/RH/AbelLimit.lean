@@ -53,7 +53,7 @@ theorem remainder_bound (a w : ℕ → ℂ) (g : ℕ → ℝ) (N : ℕ)
   rw [remainder_identity a w N (hg.of_norm_bounded hbound)]
   have htail : Summable (fun k => g (k + N)) :=
     (summable_nat_add_iff N).2 hg
-  exact (norm_sub_le _ _).trans (add_le_add_left
-    (tsum_of_norm_bounded htail.hasSum (fun k => hbound (k + N))) _)
+  exact (norm_sub_le _ _).trans (add_le_add le_rfl
+    (tsum_of_norm_bounded htail.hasSum (fun k => hbound (k + N))))
 
 end UBT.RH.AbelLimit
