@@ -771,7 +771,7 @@ infinite-dimensional spectral-measure argument.
 |---|---|---|
 | G1 | Bounded branch-selection lemma: full domain and continuation verification | ANALYTIC PROOF [L1]; LEAN-PENDING |
 | G2 | Identification \(s\stackrel{?}{=}\psi\) | OPEN / CONJECTURAL |
-| G3-DYN | Dynamic use of \(\Gamma_*D_\psi\), its normalization, left/right action and action origin | OPEN (NARROWED: flat rest-mode Hamiltonian and finite normal-ordering sub-route gives no selection; see `psi_fock_quantization_chirality_link.en.md`) |
+| G3-DYN | Dynamic use of \(\Gamma_*D_\psi\), its normalization, left/right action and action origin | OPEN (NARROWED: the stated chiral-diagonal interactions preserve winding conjugacy; see `chiral_current_interaction_audit.en.md` and `psi_fock_quantization_chirality_link.en.md`) |
 | G4 | Compatibility of the non-compact selector with compact \(S^1_\psi\) | OPEN |
 | G5 | Origin, normalization, representation, and transformation law of \(D_\psi\), \(A_\psi\), \(B_\psi\) beyond the flat ansatz | OPEN / ANSATZ |
 | G6 | Action-level derivation of the full first-order operator and its spectral / energy selector | OPEN |

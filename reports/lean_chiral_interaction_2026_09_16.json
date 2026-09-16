@@ -1,0 +1,164 @@
+{
+  "schema": "ubt-verification/v1",
+  "date": "2026-09-16",
+  "result": "PASS",
+  "formalization_scope": "FINITE_ALGEBRA_AND_COEFFICIENT_REFLECTION",
+  "repository": "UBT-Institute/unified-biquaternion-theory",
+  "pull_request": 652,
+  "ci": {
+    "workflow": "Lean theorem verification",
+    "run_id": 35112591187,
+    "job_id": 104849849850,
+    "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35112591187",
+    "conclusion": "success",
+    "head_commit": "735ae313a906d175155f74fc433124d6279728b2",
+    "checked_merge_commit": "6b177db9a1443e6b92c36ec53517a4f455d8d632",
+    "source_identity": "All 17 local Lean source/configuration files matched the checked merge commit byte-for-byte."
+  },
+  "tools": {
+    "lean": "4.33.1",
+    "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+    "mathlib": "v4.33.1",
+    "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "axiom_audit": "v0.1.2",
+    "axiom_audit_commit": "46024e005996495c65ef609368e11ab39c4222e3"
+  },
+  "checks": [
+    {
+      "id": "LEAN-BUILD",
+      "command": "lake build --wfail",
+      "result": "PASS"
+    },
+    {
+      "id": "LEAN-KERNEL",
+      "tool": "Bundled leanchecker",
+      "arguments": "UBT",
+      "result": "PASS"
+    },
+    {
+      "id": "LEAN-AXIOMS",
+      "declarations_audited": 155,
+      "allowed_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "unexpected_axioms": [],
+      "result": "PASS"
+    },
+    {
+      "id": "SOURCE-IDENTITY",
+      "files_matched": 17,
+      "result": "PASS"
+    }
+  ],
+  "proofs": [
+    "UBT.Action.ChiralInteraction.conjugate_product",
+    "UBT.Action.ChiralInteraction.conjugate_odd",
+    "UBT.Action.ChiralInteraction.conjugate_complement",
+    "UBT.Action.ChiralInteraction.chiral_sandwich_zero",
+    "UBT.Action.ChiralInteraction.left_current_even",
+    "UBT.Action.ChiralInteraction.conjugate_even",
+    "UBT.Action.ChiralInteraction.interacting_conjugation",
+    "UBT.Action.ChiralInteraction.eigenmatrix_transport",
+    "UBT.Action.ChiralInteraction.normalized_sandwich_zero",
+    "UBT.Action.ChiralInteraction.normalized_left_current_even",
+    "UBT.Action.ChiralInteraction.left_only_commutes",
+    "UBT.Action.ChiralInteraction.positive_mode_reflects",
+    "UBT.Action.ChiralInteraction.positive_mode_not_reflection_odd",
+    "UBT.Action.ChiralInteraction.positive_mode_not_reflection_even"
+  ],
+  "file": "formal/lean/UBT/Action/ChiralInteraction.lean",
+  "assumptions": [
+    "General ring identities: C*C=1, and stated commutation/anticommutation relations.",
+    "Normalized matrix projectors: arbitrary finite square complex matrices.",
+    "Interaction theorem: the same V for both winding signs and C*V=V*C; the base Hamiltonians obey the stated conjugacy.",
+    "Eigenmatrix theorem: A*X=X*D; it transports solutions rather than postulating the target eigen-equation.",
+    "Fourier reflection theorem: integer-indexed complex coefficients; reflection acts by index reversal."
+  ],
+  "source_files": {
+    ".github/workflows/lean.yml": {
+      "git_blob_sha": "1ae241d6f37c7292e00e85fbadc1060e60949250",
+      "sha256": "5c86433b1f30c8c5e0e528eb3b3e972b2c679513362995fd0fb623e6eee23dd0"
+    },
+    "formal/lean/UBT.lean": {
+      "git_blob_sha": "e9cd5fe845e8fe42fce3c02211d7227de27ca94c",
+      "sha256": "52c0dece18d720f5702723b30bf3563b8ef2e31f0fc702113c840a281c7d071d"
+    },
+    "formal/lean/UBT/Action/ChiralInteraction.lean": {
+      "git_blob_sha": "df9956a14d4ceb3c0c088666aaa4c3fc1ea330ce",
+      "sha256": "f6a32f00c39839038353f5d5a44c0933620322b4c73e209c9d17e1e62ae67064"
+    },
+    "formal/lean/UBT/Action/PotentialInvariants.lean": {
+      "git_blob_sha": "5e3d9f14f871469446090385394b6c0c343686f2",
+      "sha256": "88fb2257d7fd7e61a7c85099dd104c4d8258528dec08c33025fb81d8c17515da"
+    },
+    "formal/lean/UBT/Action/PotentialMinimumOrbit.lean": {
+      "git_blob_sha": "0654cd2cc555c00469f2495aef839815259baede",
+      "sha256": "c01db053ab7332668f1d62915dbbfa71e130be0e1447ff970e13520daee422b7"
+    },
+    "formal/lean/UBT/Action/PotentialVacuum.lean": {
+      "git_blob_sha": "8b42fe0a3a34454fce7e9cc75c968294e81d685a",
+      "sha256": "ac4da25fb407fd67c3fcaa5316d8a57e9fe0b858e9db39430c08712e8b94bb33"
+    },
+    "formal/lean/UBT/Action/PsiRestHamiltonian.lean": {
+      "git_blob_sha": "e19057fbc8dbbbbffe4ef0ac10f699ff6c745a05",
+      "sha256": "9886ff10257504ca1ea1591f565d6afe0aa8973b5e9383f7a57766dd13267b63"
+    },
+    "formal/lean/UBT/GR/CompositeActionStationarity.lean": {
+      "git_blob_sha": "ac727a0b286396a7e5a882aec04c1c43ab397345",
+      "sha256": "ec7b7138c9d0c0760f990c392ddcf3442c9d89c91b4ea49bd65554884c31023f"
+    },
+    "formal/lean/UBT/GR/CompositeKinetic.lean": {
+      "git_blob_sha": "a8ca31e2f13e307371bbf4a45f4179dc50becb66",
+      "sha256": "58bff7173c5b68eb81de0a79d53367900f4eddbfdf5fe75fa7cb945ec2bdc859"
+    },
+    "formal/lean/UBT/GR/CompositeSecondVariation.lean": {
+      "git_blob_sha": "3ff83505046ee347567500f3e3d74b5d4c530abe",
+      "sha256": "af7cd8750d286890fb57447f6993411d824a05725dff1b60deb84b9b6bf0fef4"
+    },
+    "formal/lean/UBT/GR/CurvatureUnderdetermination.lean": {
+      "git_blob_sha": "eb54f55b334850823f17afa4a0d296d866eb3d0d",
+      "sha256": "f73e0a2a93de047c2ca9ce5e5912b75c361e6f13924ecf78690e64eeb2ab80c3"
+    },
+    "formal/lean/UBT/GR/LegacyActionObstructions.lean": {
+      "git_blob_sha": "ef8ca581ff6e51977b0f098292c994df2036354d",
+      "sha256": "80c47b2c80ccf10e17ab9a168f3c3b9e670fe83fac91341ecdb70c204584e42b"
+    },
+    "formal/lean/UBT/GR/VolumePrincipalSymbol.lean": {
+      "git_blob_sha": "e9dcdbb9c8af09772838136eb697a8296d0b3fcb",
+      "sha256": "a85aac9ecd71dc04f9107f7389a54b8eeb5170d8a008d58912c595fbcea840ab"
+    },
+    "formal/lean/UBT/GR/VolumeVariation.lean": {
+      "git_blob_sha": "91be5269d7df7300c760ebc44e6ee04f38cae6dc",
+      "sha256": "371e5583bcac9acf0fe87790f863b1f6cdf3409237b7e2828f3850411d656214"
+    },
+    "formal/lean/lake-manifest.json": {
+      "git_blob_sha": "de12326c08ca2fe36aef5c94db1c379b740e4848",
+      "sha256": "b39b3cb24ff476b4054c0033ff89b296b117697d12ff55eef2bcdc127527475e"
+    },
+    "formal/lean/lakefile.toml": {
+      "git_blob_sha": "7b2135efc0066fb5407011a489f7bfb648a5dfd4",
+      "sha256": "5099e6f10557172813e7e372e3d0b6debbaf20bd4b45bc594553ccccc032fab5"
+    },
+    "formal/lean/lean-toolchain": {
+      "git_blob_sha": "a8afa7d1b02d96f0671eba854a8dc4b416beb473",
+      "sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  "independent_verification": {
+    "script": "tools/verify_chiral_current_interaction.py",
+    "record": "reports/chiral_current_interaction_2026_09_16.json",
+    "tests": "tests/test_chiral_current_interaction.py",
+    "tests_passed": 1,
+    "numerical_eigenbasis_cases": 12
+  },
+  "limitations": [
+    "The Dirac representation and its relation to fundamental biquaternionic Theta are not derived from the complete action.",
+    "Matrix parity identities concern internal C conjugation. Coordinate reflection is not identified with C.",
+    "The numerical Hermitian examples, explicit nonzero current and four-vector representation checks are independent CAS/numerical checks.",
+    "No infinite operator domain, Fourier function-space realization, physical chirality selector, Newton constant or RH theorem is proved.",
+    "Winding-dependent backgrounds, C-odd terms, differing domains and physical state selection are outside the conjugacy theorem.",
+    "The legacy conditional C1 source is flagged by the paired audit; its current/parity argument is not a proved premise. Canonical registry migration is not performed here."
+  ]
+}

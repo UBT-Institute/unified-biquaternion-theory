@@ -33,8 +33,8 @@
     "tools/verify_psi_fock_chirality_selection.py": "6a0cbdfebc6edfdd357b2ed9aa43f0589e741e56ed9652106877efb7f067bdf5",
     "formal/lean/UBT/Action/PsiRestHamiltonian.lean": "9886ff10257504ca1ea1591f565d6afe0aa8973b5e9383f7a57766dd13267b63",
     "tests/test_psi_fock_chirality_selection.py": "ecdb7da2affa9f13d04f50e25cdd86995e96524d60e2cda6b1a93ab349ccd8a7",
-    "research_tracks/complex_time_branch_selection/psi_fock_quantization_chirality_link.en.md": "ee2d1a4cfbff0177b84b338b04ac0693316982d21f590d860771584ae8dc4b67",
-    "research_tracks/complex_time_branch_selection/psi_fock_quantization_chirality_link.cs.md": "3668d90f3b48523543a3813610eba37b5c3c76e12e801a86c6e481b2584423b9"
+    "research_tracks/complex_time_branch_selection/psi_fock_quantization_chirality_link.en.md": "a7e92f3966fb36720210e831b57845578c4aa918f50375919aada4660d5e5889",
+    "research_tracks/complex_time_branch_selection/psi_fock_quantization_chirality_link.cs.md": "2dae49348ae548fee064ac10599fc71718a4e291a957989576bba2dcd13dfcaa"
   },
   "limitations": [
     "Numerical eigenvectors are examples, not a universal proof.",
