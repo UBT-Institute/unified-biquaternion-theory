@@ -1,0 +1,38 @@
+{
+  "schema": "ubt-verification/v1",
+  "date": "2026-09-16",
+  "result": "PASS",
+  "checks": {
+    "all_four_vector_current_projector_identities": "PASS",
+    "nonzero_left_current_even": "PASS",
+    "general_hermitian_diagonal_interaction": "PASS",
+    "spatial_and_left_vector_terms_commute": "PASS",
+    "two_component_characteristic": "PASS",
+    "reflection_counterexample": "PASS",
+    "numerical_eigenbasis_transport_cases": 12
+  },
+  "tools": {
+    "sympy": "1.14.0",
+    "numpy": "2.3.5"
+  },
+  "lean": {
+    "status": "NOT_RUN_BY_THIS_SCRIPT",
+    "evidence_record": "reports/lean_chiral_interaction_2026_09_16.json"
+  },
+  "assumptions": [
+    "Declared Dirac-sector matrix representation",
+    "Same winding-independent C-even interaction for both signs"
+  ],
+  "limitations": [
+    "No derived full UBT action or gauge representation dictionary.",
+    "No claim for winding-asymmetric backgrounds, boundary domains or C-odd interactions.",
+    "Formal eigenspace transport is an algebraic identity, not an infinite-operator domain theorem."
+  ],
+  "source_sha256": {
+    "formal/lean/UBT/Action/ChiralInteraction.lean": "f6a32f00c39839038353f5d5a44c0933620322b4c73e209c9d17e1e62ae67064",
+    "tools/verify_chiral_current_interaction.py": "d3b9e3bd861c194a8930ab4c61a28435cb800a915431d4cdf4b7ebdd96c22b18",
+    "tests/test_chiral_current_interaction.py": "2af8cb0030ff621aed05211c8364304e2adee92c8b767f42ce8336e994015fe5",
+    "research_tracks/complex_time_branch_selection/chiral_current_interaction_audit.en.md": "5b2907ac855da9ecb3792ccc07a551278f86a926f2c8a1e41b15679f7f6d2bb1",
+    "research_tracks/complex_time_branch_selection/chiral_current_interaction_audit.cs.md": "4f194a326848bf40f33e74b6515e5d07cc5f3fc8fed6100bb8e77ea9292d3d75"
+  }
+}
