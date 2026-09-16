@@ -33,7 +33,7 @@ The zero cutoff is included. The final summand combines with the endpoint to giv
 <!-- BILINGUAL-UNIT: mobius-abel-open -->
 ## Remaining analytic and UBT obligations
 
-The next analytic step requires a bound on the partial sums and a justified infinite limit. This work proves neither \(M(x)=O_\varepsilon(x^{1/2+\varepsilon})\) nor a zero-free half-plane. A formal convolution inverse is not automatically a bounded inverse of a Hilbert-space operator. Positivity of the von Mangoldt coefficients alone gives no Möbius cancellation estimate.
+The next analytic step requires a bound on the partial sums and a justified infinite limit. The continuation `abel_limit_and_cancellation.en.md` supplies a conditional ordered-limit criterion and exact remainder; the required Möbius estimate remains open. This work proves neither \(M(x)=O_\varepsilon(x^{1/2+\varepsilon})\) nor a zero-free half-plane. A formal convolution inverse is not automatically a bounded inverse of a Hilbert-space operator. Positivity of the von Mangoldt coefficients alone gives no Möbius cancellation estimate.
 
 `GAP-THETA-PROP`, `GAP-THETA-PRIME-1`, and `GAP-RH-MOEBIUS-UBT` remain open. The canonical biquaternionic field and covariant tetrad are retained. The arithmetic formalization supplies a checked downstream identity; it does not derive an arithmetic operator or its coefficients from the UBT action. The action/Hessian and chirality selection obligations are unchanged.
 

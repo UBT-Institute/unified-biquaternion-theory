@@ -33,7 +33,7 @@ Je zahrnuta nulová mez. Poslední sčítanec spolu s krajním členem dává ob
 <!-- BILINGUAL-UNIT: mobius-abel-open -->
 ## Zbývající analytické povinnosti a mezery UBT
 
-Další analytický krok vyžaduje odhad částečných součtů a oprávněný přechod k nekonečné limitě. Tato práce nedokazuje \(M(x)=O_\varepsilon(x^{1/2+\varepsilon})\) ani polorovinu bez nul. Formální konvoluční inverze není automaticky omezenou inverzí operátoru na Hilbertově prostoru. Samotná pozitivita von Mangoldtových koeficientů neposkytuje odhad Möbiova rušení.
+Další analytický krok vyžaduje odhad částečných součtů a oprávněný přechod k nekonečné limitě. Navazující text `abel_limit_and_cancellation.cs.md` poskytuje podmíněné kritérium limity v přirozeném pořadí a přesný zbytek; potřebný Möbiův odhad zůstává otevřený. Tato práce nedokazuje \(M(x)=O_\varepsilon(x^{1/2+\varepsilon})\) ani polorovinu bez nul. Formální konvoluční inverze není automaticky omezenou inverzí operátoru na Hilbertově prostoru. Samotná pozitivita von Mangoldtových koeficientů neposkytuje odhad Möbiova rušení.
 
 `GAP-THETA-PROP`, `GAP-THETA-PRIME-1` a `GAP-RH-MOEBIUS-UBT` zůstávají otevřené. Kanonické biquaternionové pole a kovariantní tetráda zůstávají zachovány. Aritmetická formalizace poskytuje ověřenou navazující identitu; neodvozuje aritmetický operátor ani jeho koeficienty z akce UBT. Povinnosti týkající se akce/Hessiánu a výběru chirality se nemění.
 
