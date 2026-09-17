@@ -12,7 +12,7 @@ UBT-AI-PROVENANCE-END
 
 # Ordered Abel limits and the remaining cancellation estimate
 
-**Status:** `LEAN-PASS` for the general transfer and remainder; power-weight application is `LEAN-PENDING` separately. No RH proof.
+**Status:** `LEAN-PASS` for the general transfer and remainder; power-weight convergence and integral representation are `LEAN-PASS` in `power_weight_limit.en.md`; the explicit quantitative constant remains `LEAN-PENDING`. No RH proof.
 **Date:** 2026-09-16
 
 <!-- BILINGUAL-UNIT: abel-limit-theorem -->
@@ -55,7 +55,7 @@ The triangle inequality and comparison of the tail prove the bound. These identi
 <!-- BILINGUAL-UNIT: abel-limit-application -->
 ## Application to power weights: explicit remaining premise
 
-The following calculus application is an analytic derivation, not yet a Lean theorem in this patch. Suppose
+The convergence and integral representation are now formalized in `power_weight_limit.en.md`. The explicit error constant below remains an analytic/CAS derivation with `LEAN-PENDING` status. Suppose
 
 \[
 a(n)=\mu(n),\quad w(n)=n^{-s},\quad s=\sigma+it,\quad
@@ -80,7 +80,7 @@ This transfers a proved bound on the Mertens function into convergence; it does 
 <!-- BILINGUAL-UNIT: abel-limit-examples -->
 ## Independent checks and a necessary hypothesis
 
-`tools/verify_abel_limit.py` checks a symbolic geometric-series remainder and 15 exact rational cases. It checks 6 alternating-harmonic truncations against the known logarithmic limit at 70 decimal digits. This illustrates why the original series need not be absolutely convergent. These are diagnostics, not proofs of the infinite theorem. The verifier also checks the power-weight derivative and the improper tail integral symbolically; the corresponding calculus application remains `LEAN-PENDING`.
+`tools/verify_abel_limit.py` checks a symbolic geometric-series remainder and 15 exact rational cases. It checks 6 alternating-harmonic truncations against the known logarithmic limit at 70 decimal digits. This illustrates why the original series need not be absolutely convergent. These are diagnostics, not proofs of the infinite theorem. The verifier also checks the power-weight derivative and the improper tail integral symbolically; the explicit quantitative constant remains `LEAN-PENDING`.
 
 The boundary hypothesis is essential: constant coefficients and constant unit weights give zero transformed terms, while the original partial sums grow as the cutoff. The checker includes this counterexample. It cannot be repaired by dropping the boundary term from the Abel identity.
 

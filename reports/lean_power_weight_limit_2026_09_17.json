@@ -1,0 +1,179 @@
+{
+  "schema": "ubt-verification/v1",
+  "date": "2026-09-17",
+  "result": "PASS",
+  "formalization_scope": "CONDITIONAL_SIGNED_PARTIAL_SUM_POWER_WEIGHT_LIMIT",
+  "repository": "UBT-Institute/unified-biquaternion-theory",
+  "pull_request": 653,
+  "tools": {
+    "lean": "4.33.1",
+    "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+    "mathlib": "v4.33.1",
+    "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "axiom_audit": "v0.1.2",
+    "axiom_audit_commit": "46024e005996495c65ef609368e11ab39c4222e3"
+  },
+  "source_files": {
+    ".github/workflows/lean.yml": {
+      "sha256": "5c86433b1f30c8c5e0e528eb3b3e972b2c679513362995fd0fb623e6eee23dd0",
+      "git_blob_sha": "1ae241d6f37c7292e00e85fbadc1060e60949250"
+    },
+    "formal/lean/UBT.lean": {
+      "sha256": "1146af9c803095793b1b4bde2f3955a1f1ab621047c4747ec305edcd8a0c3632",
+      "git_blob_sha": "66fb55e14f0ae284302750ecde64b00ae2fcba51"
+    },
+    "formal/lean/UBT/Action/ChiralInteraction.lean": {
+      "sha256": "f6a32f00c39839038353f5d5a44c0933620322b4c73e209c9d17e1e62ae67064",
+      "git_blob_sha": "df9956a14d4ceb3c0c088666aaa4c3fc1ea330ce"
+    },
+    "formal/lean/UBT/Action/PotentialInvariants.lean": {
+      "sha256": "88fb2257d7fd7e61a7c85099dd104c4d8258528dec08c33025fb81d8c17515da",
+      "git_blob_sha": "5e3d9f14f871469446090385394b6c0c343686f2"
+    },
+    "formal/lean/UBT/Action/PotentialMinimumOrbit.lean": {
+      "sha256": "c01db053ab7332668f1d62915dbbfa71e130be0e1447ff970e13520daee422b7",
+      "git_blob_sha": "0654cd2cc555c00469f2495aef839815259baede"
+    },
+    "formal/lean/UBT/Action/PotentialVacuum.lean": {
+      "sha256": "ac4da25fb407fd67c3fcaa5316d8a57e9fe0b858e9db39430c08712e8b94bb33",
+      "git_blob_sha": "8b42fe0a3a34454fce7e9cc75c968294e81d685a"
+    },
+    "formal/lean/UBT/Action/PsiRestHamiltonian.lean": {
+      "sha256": "9886ff10257504ca1ea1591f565d6afe0aa8973b5e9383f7a57766dd13267b63",
+      "git_blob_sha": "e19057fbc8dbbbbffe4ef0ac10f699ff6c745a05"
+    },
+    "formal/lean/UBT/GR/CompositeActionStationarity.lean": {
+      "sha256": "ec7b7138c9d0c0760f990c392ddcf3442c9d89c91b4ea49bd65554884c31023f",
+      "git_blob_sha": "ac727a0b286396a7e5a882aec04c1c43ab397345"
+    },
+    "formal/lean/UBT/GR/CompositeKinetic.lean": {
+      "sha256": "58bff7173c5b68eb81de0a79d53367900f4eddbfdf5fe75fa7cb945ec2bdc859",
+      "git_blob_sha": "a8ca31e2f13e307371bbf4a45f4179dc50becb66"
+    },
+    "formal/lean/UBT/GR/CompositeSecondVariation.lean": {
+      "sha256": "af7cd8750d286890fb57447f6993411d824a05725dff1b60deb84b9b6bf0fef4",
+      "git_blob_sha": "3ff83505046ee347567500f3e3d74b5d4c530abe"
+    },
+    "formal/lean/UBT/GR/CurvatureUnderdetermination.lean": {
+      "sha256": "f73e0a2a93de047c2ca9ce5e5912b75c361e6f13924ecf78690e64eeb2ab80c3",
+      "git_blob_sha": "eb54f55b334850823f17afa4a0d296d866eb3d0d"
+    },
+    "formal/lean/UBT/GR/LegacyActionObstructions.lean": {
+      "sha256": "80c47b2c80ccf10e17ab9a168f3c3b9e670fe83fac91341ecdb70c204584e42b",
+      "git_blob_sha": "ef8ca581ff6e51977b0f098292c994df2036354d"
+    },
+    "formal/lean/UBT/GR/VolumePrincipalSymbol.lean": {
+      "sha256": "a85aac9ecd71dc04f9107f7389a54b8eeb5170d8a008d58912c595fbcea840ab",
+      "git_blob_sha": "e9dcdbb9c8af09772838136eb697a8296d0b3fcb"
+    },
+    "formal/lean/UBT/GR/VolumeVariation.lean": {
+      "sha256": "371e5583bcac9acf0fe87790f863b1f6cdf3409237b7e2828f3850411d656214",
+      "git_blob_sha": "91be5269d7df7300c760ebc44e6ee04f38cae6dc"
+    },
+    "formal/lean/UBT/RH/AbelLimit.lean": {
+      "sha256": "558e8412802d3815a0d2aaaaed62ace4a41612a751640a8f2f39bf5f31a3c59d",
+      "git_blob_sha": "ff79eb6092beeb005c81f7da181f5097b1ff5f1a"
+    },
+    "formal/lean/UBT/RH/MobiusAbel.lean": {
+      "sha256": "213be62e2a9b742cd6069048cafdf1e2cfe4d07ff0176feb83b86977e811f829",
+      "git_blob_sha": "7d8204b67481d365bec80537e86a87d8c78d8039"
+    },
+    "formal/lean/UBT/RH/PowerWeightLimit.lean": {
+      "sha256": "7f5b6de91e02a966ec63e41d0e23e2959e1856c1a852004d5ecbb39a81f74150",
+      "git_blob_sha": "9a4850d243c097e75ee14385bece324c13f36513"
+    },
+    "formal/lean/lake-manifest.json": {
+      "sha256": "b39b3cb24ff476b4054c0033ff89b296b117697d12ff55eef2bcdc127527475e",
+      "git_blob_sha": "de12326c08ca2fe36aef5c94db1c379b740e4848"
+    },
+    "formal/lean/lakefile.toml": {
+      "sha256": "5099e6f10557172813e7e372e3d0b6debbaf20bd4b45bc594553ccccc032fab5",
+      "git_blob_sha": "7b2135efc0066fb5407011a489f7bfb648a5dfd4"
+    },
+    "formal/lean/lean-toolchain": {
+      "sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+      "git_blob_sha": "a8afa7d1b02d96f0671eba854a8dc4b416beb473"
+    }
+  },
+  "ci": {
+    "workflow": "Lean theorem verification",
+    "run_id": 35150594731,
+    "run_attempt": 2,
+    "job_id": 104978104108,
+    "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35150594731",
+    "conclusion": "success",
+    "head_commit": "d4a231595d9c53ad4362f9dc607327eb32e444e3",
+    "checked_merge_commit": "48f16acf17d7ffccf5fdd6308e01f900fe540290"
+  },
+  "checks": [
+    {
+      "id": "LEAN-BUILD",
+      "command": "lake build --wfail",
+      "result": "PASS"
+    },
+    {
+      "id": "LEAN-KERNEL",
+      "command": "leanchecker UBT",
+      "result": "PASS"
+    },
+    {
+      "id": "LEAN-AXIOMS",
+      "declarations_audited": 176,
+      "allowed_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "unexpected_axioms": [],
+      "result": "PASS"
+    },
+    {
+      "id": "SOURCE-IDENTITY",
+      "files_matched": 20,
+      "result": "PASS"
+    }
+  ],
+  "proofs": [
+    "UBT.RH.PowerWeightLimit.ordered_power_limit",
+    "UBT.RH.PowerWeightLimit.mobius_ordered_power_limit"
+  ],
+  "independent_verification": {
+    "script": "tools/verify_power_weight_limit.py",
+    "result": {
+      "result": "PASS",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "precision_digits": 80,
+      "nonreal_cases": 20,
+      "cutoff_constant": "-1/12",
+      "cutoff_scope": "CAS only; regularized finite part, not ordinary summation",
+      "scope": "conditional transfer diagnostics; no Mobius cancellation bound or RH proof"
+    }
+  },
+  "assumptions": [
+    "Complex coefficients with a(0)=0.",
+    "Signed/complex partial sums are O(N^r), r>=0.",
+    "Complex s with Re(s)>r.",
+    "M\u00f6bius specialization retains the partial-sum Big-O hypothesis explicitly."
+  ],
+  "limitations": [
+    "No derivation of a M\u00f6bius square-root cancellation bound.",
+    "No RH, zero-free domain or UBT action-level arithmetic bridge.",
+    "Explicit quantitative constant for the power-weight tail remains separately LEAN-PENDING.",
+    "Regularization expansion and inversion discussion are CAS checked context, not new Lean theorems."
+  ],
+  "source_attribution": {
+    "author": "Xavier Roblot",
+    "license": "Apache-2.0",
+    "source": "https://github.com/leanprover-community/mathlib4/blob/v4.33.1/Mathlib/NumberTheory/LSeries/SumCoeff.lean",
+    "adaptation": "Conclude naturally ordered convergence directly from the Abel theorem without LSeriesSummable hypothesis."
+  },
+  "failed_attempts": [
+    {
+      "run_id": 35150594731,
+      "run_attempt": 1,
+      "result": "INFRASTRUCTURE-FAILURE",
+      "reason": "DNS failure downloading Lean; no proof compilation took place. Same proof passed on retry."
+    }
+  ]
+}

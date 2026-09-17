@@ -12,7 +12,7 @@ UBT-AI-PROVENANCE-END
 
 # Abelovy limity v přirozeném pořadí a zbývající odhad rušení
 
-**Status:** `LEAN-PASS` pro obecný přenos a zbytek; použití na mocninné váhy je samostatně `LEAN-PENDING`. Bez důkazu RH.
+**Status:** `LEAN-PASS` pro obecný přenos a zbytek; konvergence mocninných vah a integrální reprezentace mají `LEAN-PASS` v `power_weight_limit.cs.md`; výslovná kvantitativní konstanta zůstává `LEAN-PENDING`. Bez důkazu RH.
 **Datum:** 2026-09-16
 
 <!-- BILINGUAL-UNIT: abel-limit-theorem -->
@@ -55,7 +55,7 @@ Trojúhelníková nerovnost a srovnání zbytku dokazují odhad. Tyto identity v
 <!-- BILINGUAL-UNIT: abel-limit-application -->
 ## Použití na mocninné váhy: výslovný zbývající předpoklad
 
-Následující použití diferenciálního a integrálního počtu je analytické odvození, dosud nikoli věta v Leanu v tomto patchi. Předpokládejme
+Konvergence a integrální reprezentace jsou nyní formalizovány v `power_weight_limit.cs.md`. Níže uvedená výslovná konstanta chyby zůstává analytickým/CAS odvozením se statusem `LEAN-PENDING`. Předpokládejme
 
 \[
 a(n)=\mu(n),\quad w(n)=n^{-s},\quad s=\sigma+it,\quad
@@ -80,7 +80,7 @@ Tím se dokázaný odhad Mertensovy funkce přenáší na konvergenci; samotný 
 <!-- BILINGUAL-UNIT: abel-limit-examples -->
 ## Nezávislé kontroly a nutný předpoklad
 
-`tools/verify_abel_limit.py` kontroluje symbolický zbytek geometrické řady a 15 exaktních racionálních případů. Kontroluje 6 useknutí alternující harmonické řady vůči známé logaritmické limitě při přesnosti 70 desetinných číslic. To ilustruje, proč původní řada nemusí konvergovat absolutně. Jde o diagnostiku, nikoli o důkazy nekonečné věty. Ověřovač také symbolicky kontroluje derivaci mocninné váhy a nevlastní integrál zbytku; odpovídající použití diferenciálního a integrálního počtu zůstává `LEAN-PENDING`.
+`tools/verify_abel_limit.py` kontroluje symbolický zbytek geometrické řady a 15 exaktních racionálních případů. Kontroluje 6 useknutí alternující harmonické řady vůči známé logaritmické limitě při přesnosti 70 desetinných číslic. To ilustruje, proč původní řada nemusí konvergovat absolutně. Jde o diagnostiku, nikoli o důkazy nekonečné věty. Ověřovač také symbolicky kontroluje derivaci mocninné váhy a nevlastní integrál zbytku; výslovná kvantitativní konstanta zůstává `LEAN-PENDING`.
 
 Předpoklad o krajním členu je zásadní: konstantní koeficienty a konstantní jednotkové váhy dávají nulové transformované členy, zatímco původní částečné součty rostou jako mez useknutí. Ověřovač tento protipříklad zahrnuje. Vynechání krajního členu z Abelovy identity jej neopraví.
 
