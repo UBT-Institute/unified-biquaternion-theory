@@ -23,6 +23,22 @@ theorem negative_eq (N : ℕ) :
     negative N = (range (N + 1)).filter (fun n => μ n = -1) := by
   simp only [negative, muEval_eq]
 
+theorem mertens_counts (N : ℕ) :
+    UBT.RH.PrimePairing.mertens N = (positive N).card - (negative N).card := by
+  have hs (v : ℤ) : (∑ n ∈ range (N + 1), if μ n = v then (1 : ℤ) else 0) =
+      (((range (N + 1)).filter (fun n => μ n = v)).card : ℤ) := by
+    rw [← sum_filter]
+    simp
+  unfold UBT.RH.PrimePairing.mertens
+  calc
+    _ = (∑ n ∈ range (N + 1), if μ n = 1 then (1 : ℤ) else 0) -
+        (∑ n ∈ range (N + 1), if μ n = -1 then (1 : ℤ) else 0) := by
+      rw [← sum_sub_distrib]
+      apply sum_congr rfl
+      intro n hn
+      rcases ArithmeticFunction.moebius_eq_or n with h | h | h <;> simp [h]
+    _ = _ := by rw [hs 1, hs (-1), positive_eq, negative_eq]
+
 def Allowed (x y : ℕ) : Prop :=
   let a := (x / Nat.gcd x y).primeFactorsList.length
   let b := (y / Nat.gcd x y).primeFactorsList.length
@@ -79,6 +95,9 @@ theorem matching1000_maximum (K : Finset (ℕ × ℕ))
 theorem matching1000_unmatched :
     (positive 1000).card + (negative 1000).card - 2 * matching1000.card = 2 := by
   rw [positive1000_size, negative1000_size, matching1000_size]
+
+theorem mertens1000 : UBT.RH.PrimePairing.mertens 1000 = 2 := by
+  rw [mertens_counts, positive1000_size, negative1000_size]
 
 theorem matching1000_signs : ∀ e ∈ matching1000, μ e.1 + μ e.2 = 0 := by
   intro e he

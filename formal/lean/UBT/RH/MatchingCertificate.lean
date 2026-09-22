@@ -19,7 +19,12 @@ theorem muEval_eq (n : ℕ) : muEval n = μ n := by
   · rw [muEval, if_neg hz]
     change (if n.primeFactorsList.Nodup then (-1 : ℤ) ^ n.primeFactorsList.length else 0) =
       (if Squarefree n then (-1 : ℤ) ^ n.primeFactorsList.length else 0)
-    rw [Nat.squarefree_iff_nodup_primeFactorsList hz]
+    by_cases hs : Squarefree n
+    · have hn := (Nat.squarefree_iff_nodup_primeFactorsList hz).mp hs
+      simp [hs, hn]
+    · have hn : ¬n.primeFactorsList.Nodup := fun h =>
+        hs ((Nat.squarefree_iff_nodup_primeFactorsList hz).mpr h)
+      simp [hs, hn]
 
 def IsMatching (M : Finset (ℕ × ℕ)) : Prop :=
   Set.InjOn Prod.fst (M : Set (ℕ × ℕ)) ∧ Set.InjOn Prod.snd (M : Set (ℕ × ℕ))
