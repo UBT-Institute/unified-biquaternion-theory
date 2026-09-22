@@ -9,7 +9,7 @@ open Finset
 open scoped ArithmeticFunction.Moebius
 
 section Grouping
-variable {α β γ : Type*} [DecidableEq α] [DecidableEq β] [DecidableEq γ]
+variable {α β γ : Type*} [DecidableEq β] [DecidableEq γ]
 
 def block (s : Finset α) (f : α → β) (w : α → ℤ) (b : β) : ℤ :=
   ∑ x ∈ s.filter (fun x => f x = b), w x
@@ -47,7 +47,9 @@ theorem block_comp (s : Finset α) (f : α → β) (g : β → γ)
 theorem mass_comp_le (s : Finset α) (f : α → β) (g : β → γ) (w : α → ℤ) :
     mass s (fun x => g (f x)) w ≤ mass s f w := by
   unfold mass
-  rw [← image_image]
+  have hi : s.image (fun x => g (f x)) = (s.image f).image g := by
+    simp only [image_image, Function.comp_def]
+  rw [hi]
   simp_rw [block_comp]
   calc
     _ ≤ ∑ c ∈ (s.image f).image g,
@@ -133,13 +135,15 @@ theorem same_sign_gain (a b : ℤ) (h : 0 ≤ a * b) :
       omega
   · have hz : a = 0 ∨ b = 0 := by
       by_contra hz
-      push_neg at hz
-      nlinarith
+      push Not at hz
+      have hab : a * b < 0 := mul_neg_of_pos_of_neg (by omega) (by omega)
+      omega
     rcases hz with rfl | rfl <;> simp
   · have hz : a = 0 ∨ b = 0 := by
       by_contra hz
-      push_neg at hz
-      nlinarith
+      push Not at hz
+      have hab : a * b < 0 := mul_neg_of_neg_of_pos (by omega) (by omega)
+      omega
     rcases hz with rfl | rfl <;> simp
   · rw [abs_of_nonpos ha, abs_of_nonpos hb]
     rcases le_total (-a) (-b) with hab | hab
