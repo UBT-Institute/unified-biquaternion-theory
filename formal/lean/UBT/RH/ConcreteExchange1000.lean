@@ -57,13 +57,13 @@ def matching1000 : Finset (ℕ × ℕ) := {(1, 2), (6, 231), (10, 5), (14, 7), (
 theorem matching1000_valid : IsMatching matching1000 := by
   constructor
   · apply card_image_iff.mp
-    decide
+    decide +kernel
   · apply card_image_iff.mp
-    decide
+    decide +kernel
 
 theorem matching1000_checks : ∀ e ∈ matching1000,
     e.1 ≤ 1000 ∧ muEval e.1 = 1 ∧ e.2 ≤ 1000 ∧ muEval e.2 = -1 ∧ Allowed e.1 e.2 := by
-  decide
+  decide +kernel
 
 theorem matching1000_edges : matching1000 ⊆ edges 1000 := by
   intro e he
@@ -75,11 +75,11 @@ theorem matching1000_edges : matching1000 ⊆ edges 1000 := by
   · simp only [negative, mem_filter, mem_range, Nat.lt_succ_iff]
     exact ⟨hy, hmy⟩
 
-theorem matching1000_size : matching1000.card = 303 := by decide
+theorem matching1000_size : matching1000.card = 303 := by decide +kernel
 
-theorem negative1000_size : (negative 1000).card = 303 := by decide
+theorem negative1000_size : (negative 1000).card = 303 := by decide +kernel
 
-theorem positive1000_size : (positive 1000).card = 305 := by decide
+theorem positive1000_size : (positive 1000).card = 305 := by decide +kernel
 
 theorem right_cover (N : ℕ) : Covers (edges N) ∅ (negative N) := by
   intro e he
@@ -98,6 +98,7 @@ theorem matching1000_unmatched :
 
 theorem mertens1000 : UBT.RH.PrimePairing.mertens 1000 = 2 := by
   rw [mertens_counts, positive1000_size, negative1000_size]
+  norm_num
 
 theorem matching1000_signs : ∀ e ∈ matching1000, μ e.1 + μ e.2 = 0 := by
   intro e he

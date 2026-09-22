@@ -57,13 +57,13 @@ def matching100 : Finset (ℕ × ℕ) := {(1, 2), (6, 3), (10, 5), (14, 7), (15,
 theorem matching100_valid : IsMatching matching100 := by
   constructor
   · apply card_image_iff.mp
-    decide
+    decide +kernel
   · apply card_image_iff.mp
-    decide
+    decide +kernel
 
 theorem matching100_checks : ∀ e ∈ matching100,
     e.1 ≤ 100 ∧ muEval e.1 = 1 ∧ e.2 ≤ 100 ∧ muEval e.2 = -1 ∧ Allowed e.1 e.2 := by
-  decide
+  decide +kernel
 
 theorem matching100_edges : matching100 ⊆ edges 100 := by
   intro e he
@@ -75,11 +75,11 @@ theorem matching100_edges : matching100 ⊆ edges 100 := by
   · simp only [negative, mem_filter, mem_range, Nat.lt_succ_iff]
     exact ⟨hy, hmy⟩
 
-theorem matching100_size : matching100.card = 30 := by decide
+theorem matching100_size : matching100.card = 30 := by decide +kernel
 
-theorem negative100_size : (negative 100).card = 30 := by decide
+theorem negative100_size : (negative 100).card = 30 := by decide +kernel
 
-theorem positive100_size : (positive 100).card = 31 := by decide
+theorem positive100_size : (positive 100).card = 31 := by decide +kernel
 
 theorem right_cover (N : ℕ) : Covers (edges N) ∅ (negative N) := by
   intro e he
@@ -98,6 +98,7 @@ theorem matching100_unmatched :
 
 theorem mertens100 : UBT.RH.PrimePairing.mertens 100 = 1 := by
   rw [mertens_counts, positive100_size, negative100_size]
+  norm_num
 
 theorem matching100_signs : ∀ e ∈ matching100, μ e.1 + μ e.2 = 0 := by
   intro e he
