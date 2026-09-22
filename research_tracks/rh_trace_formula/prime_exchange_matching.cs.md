@@ -12,7 +12,7 @@ UBT-AI-PROVENANCE-END
 
 # Párování výměnou prvočísel: přesný konečný experiment
 
-**Datum:** 2026-09-22. **Stav:** `FINITE-CERTIFICATES-PASS`; `LEAN-PENDING` pro tento párovací mechanismus; RH `OPEN`.
+**Datum:** 2026-09-22. **Stav:** `FINITE-CERTIFICATES-PASS`; `LEAN-PASS` pro princip certifikátu a meze 100, 1000; RH `OPEN`.
 
 <!-- BILINGUAL-UNIT: exchange-graph -->
 
@@ -84,4 +84,4 @@ Současný výpočet tento odhad nedává. Musí být odvozen z aritmetické str
 
 Spusťte `python tools/verify_prime_exchange_matching.py`. Doklad je v `reports/prime_exchange_matching_2026_09_22.json`; regresní test je `tests/test_prime_exchange_matching.py`. Möbiovy hodnoty používají zkušební rozklad; počty faktorů pro graf používají nezávislé síto nejmenšího prvočíselného faktoru. Pro malé meze se klasifikace hran křížově ověřuje explicitními množinami prvočíselných faktorů. Úplné kontroly párování a pokrytí používají přesná celá čísla.
 
-Pro tento experiment netvrdíme novou větu v Leanu a neměníme žádný zdroj Leanu. Dřívější úspěšné výsledky Leanu neověřují tuto implementaci párování. Výše uvedený argument s konečným certifikátem a jeho spustitelné kontroly odlišujeme od formalizace ověřené jádrem. Zdrojem překladu je anglická verze; před sloučením je nutná lidská kontrola významové shody.
+Doprovodný soubor `prime_exchange_lean.cs.md` nyní zaznamenává důkazy principu certifikátu a skutečných párování při 100 a 1000 ověřené jádrem. Úplný vyhledávací program v Pythonu a ostatní vzorkované meze tím nejsou formalizovány. Zejména případ 10000 zůstává certifikátem ověřeným Pythonem. Doklad: `reports/lean_prime_exchange_2026_09_22.json`. Zdrojem překladu je anglická verze; před sloučením je nutná lidská kontrola významové shody.

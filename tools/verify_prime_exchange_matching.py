@@ -22,7 +22,7 @@ def arithmetic(limit):
     return mu, omega, spf
 
 
-def certify(adjacency, left, right):
+def certify(adjacency, left, right, include_certificate=False):
     """Return a matching and equal-size vertex cover, checked edge by edge."""
     ml, mr = [-1]*len(left), [-1]*len(right)
     greedy = 0
@@ -86,14 +86,17 @@ def certify(adjacency, left, right):
                    'cover_positive':sorted(left[u] for u in cl),
                    'cover_negative':sorted(right[v] for v in cr)}
     digest = hashlib.sha256(json.dumps(certificate,sort_keys=True,separators=(',',':')).encode()).hexdigest()
-    return {'edges':sum(map(len,adjacency)), 'matching_size':len(pairs),
+    result = {'edges':sum(map(len,adjacency)), 'matching_size':len(pairs),
             'cover_size':len(cl)+len(cr), 'unmatched':len(left)+len(right)-2*len(pairs),
             'greedy_unmatched':len(left)+len(right)-2*greedy,
             'augmenting_rounds':rounds, 'certificate_sha256':digest,
             'certificate_result':'PASS'}
+    if include_certificate:
+        result['certificate'] = certificate
+    return result
 
 
-def experiment(n, data):
+def experiment(n, data, include_certificates=False):
     mu, omega, spf = data
     left = [m for m in range(1,n+1) if mu[m] == 1]
     right = [m for m in range(1,n+1) if mu[m] == -1]
@@ -119,8 +122,8 @@ def experiment(n, data):
                 combined[u].append(v)
     m = sum(mu[1:n+1])
     result = {'N':n,'M':m,'positive':len(left),'negative':len(right),
-              'toggle':certify(single,left,right),
-              'exchange':certify(combined,left,right)}
+              'toggle':certify(single,left,right,include_certificates),
+              'exchange':certify(combined,left,right,include_certificates)}
     for mode in ('toggle','exchange'):
         result[mode]['excess_over_absolute_M'] = result[mode]['unmatched']-abs(m)
         assert result[mode]['excess_over_absolute_M'] >= 0

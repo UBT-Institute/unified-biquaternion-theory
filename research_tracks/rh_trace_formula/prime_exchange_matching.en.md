@@ -12,7 +12,7 @@ UBT-AI-PROVENANCE-END
 
 # Prime exchange matching: exact finite experiment
 
-**Date:** 2026-09-22. **Status:** `FINITE-CERTIFICATES-PASS`; `LEAN-PENDING` for this matching mechanism; RH `OPEN`.
+**Date:** 2026-09-22. **Status:** `FINITE-CERTIFICATES-PASS`; `LEAN-PASS` for the certificate principle and cutoffs 100, 1000; RH `OPEN`.
 
 <!-- BILINGUAL-UNIT: exchange-graph -->
 
@@ -84,4 +84,4 @@ The present computation does not supply that estimate. It must be derived from t
 
 Run `python tools/verify_prime_exchange_matching.py`. Evidence is in `reports/prime_exchange_matching_2026_09_22.json`; the regression test is `tests/test_prime_exchange_matching.py`. Möbius values use trial factorization; factor counts for the graph use an independent smallest-prime-factor sieve. At small cutoffs, edge classification is cross-checked using explicit prime supports. Full matching and cover checks use exact integers.
 
-No new Lean theorem is claimed for this experiment, and no Lean source is changed. The earlier passing Lean results do not certify this matching implementation. The finite certificate argument above and its executable checks are distinguished from a kernel-checked formalization. English is the translation source; human semantic-equivalence review is required before merge.
+The companion `prime_exchange_lean.en.md` now records kernel-checked proofs of the certificate principle and actual matching instances at 100 and 1000. The complete Python search program and the remaining sampled cutoffs are not thereby formalized. In particular the 10000 case remains a Python-checked certificate. Evidence: `reports/lean_prime_exchange_2026_09_22.json`. English is the translation source; human semantic-equivalence review is required before merge.
