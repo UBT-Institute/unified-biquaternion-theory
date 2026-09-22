@@ -1,7 +1,7 @@
 {
   "schema": "ubt-verification/v1",
   "date": "2026-09-22",
-  "result": "PARTIAL",
+  "result": "PASS",
   "identity_theorems": {
     "status": "LEAN-PASS",
     "head_commit": "354cc5489511f5dada54aadd517426267554b4d2",
@@ -23,9 +23,17 @@
     }
   },
   "cardinality_extension": {
-    "status": "LEAN-PENDING",
+    "status": "LEAN-PASS",
     "theorem": "UBT.RH.PrimePairing.mertens_band_bound",
-    "reason": "GitHub connector HTTP 400 Invalid MCP request metadata; git push lacks credentials; local Lean unavailable. No successful check of this extension observed.",
+    "ci": {
+      "workflow": "Lean theorem verification",
+      "run_id": 35703409640,
+      "job_id": 106666502101,
+      "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35703409640",
+      "conclusion": "success",
+      "head_commit": "eed5dc275f1733796a20566104c258878f181a9b",
+      "checked_merge_commit": "561f3c465460ab69cc004e01b7e07dbfe0a7cb93"
+    },
     "source_sha256": "b1f8eea037e90b239534b1eb2661228c656b95cd14065bd49de60850f80c005a"
   },
   "independent_verification": {
@@ -44,9 +52,8 @@
   },
   "limitations": [
     "Finite checks do not prove RH or any asymptotic bound.",
-    "Successful workflow is evidence for the five-theorem revision only.",
-    "Job logs returned HTTP 403; no declaration count or detailed axiom list is asserted in this record.",
-    "Floor count formulas are proved in prose and finite-tested, not Lean-formalized.",
+    "Floor formulas and multi-prime extensions are not Lean-formalized.",
     "No UBT physical bridge is derived."
-  ]
+  ],
+  "historical_delivery_block": "Earlier GitHub writes failed; access recovered and cardinality extension passed on 2026-09-22."
 }

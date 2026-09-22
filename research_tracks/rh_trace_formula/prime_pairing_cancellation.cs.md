@@ -12,7 +12,7 @@ UBT-AI-PROVENANCE-END
 
 # Přesné prvočíselné párování a zbývající odhad rušení
 
-**Datum:** 2026-09-22. **Stav:** identity `LEAN-PASS`; přidaný odhad počtem členů `LEAN-PENDING`; RH `OPEN`.
+**Datum:** 2026-09-22. **Stav:** identity `LEAN-PASS`; přidaný odhad počtem členů `LEAN-PASS`; RH `OPEN`.
 
 <!-- BILINGUAL-UNIT: prime-pair-statement -->
 ## Věta a důkaz
@@ -50,7 +50,7 @@ C_2(N)=\left\lfloor\frac{N+1}{2}\right\rfloor
 =\frac N4+O(1).
 \]
 
-Navržená věta `mertens_band_bound` v Leanu vyjadřuje odhad počtem členů. Její překlad dosud čeká na ověření. Vzorce s dolními celými částmi a asymptotické vyhodnocení jsou zde dokázány počítáním indexů v intervalech; nejde o další věty ověřené Leanem. Konečný verifikátor kontroluje také přesné vzorce. Pro p=2 má počet vedoucí koeficient 1/4. Pro každé pevné prvočíslo zůstává růst lineární.
+Navržená věta `mertens_band_bound` v Leanu vyjadřuje odhad počtem členů. Její překlad, kontrola jádrem a audit axiomů prošly. Vzorce s dolními celými částmi a asymptotické vyhodnocení jsou zde dokázány počítáním indexů v intervalech; nejde o další věty ověřené Leanem. Konečný verifikátor kontroluje také přesné vzorce. Pro p=2 má počet vedoucí koeficient 1/4. Pro každé pevné prvočíslo zůstává růst lineární.
 
 <!-- BILINGUAL-UNIT: prime-pair-gap -->
 ## Co zbývá dokázat
@@ -68,8 +68,8 @@ Tato aritmetická práce nemění jediné bikvaternionové pole ani kovariantní
 <!-- BILINGUAL-UNIT: prime-pair-verification -->
 ## Ověření a předání
 
-[Úspěšná kontrola Lean](https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35201941077) ověřila commit `354cc5489511f5dada54aadd517426267554b4d2` obsahující pět vět o identitách. Kontrola zapíná `lake build --wfail`, kontrolu jádrem a audit axiomů. Tento úspěch nepokrývá pozdější větu o počtu členů. Zápis na GitHub je nyní nedostupný, proto je přidaná věta předána jako patch a zůstává `LEAN-PENDING`.
+[Úspěšná kontrola Lean](https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35201941077) ověřila commit `354cc5489511f5dada54aadd517426267554b4d2` obsahující pět vět o identitách. Kontrola zapíná `lake build --wfail`, kontrolu jádrem a audit axiomů. Pozdější věta o počtu členů prošla v [běhu 35703409640](https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35703409640) po obnovení přístupu ke GitHubu.
 
 `tools/verify_prime_pairing.py` používá celočíselnou aritmetiku, Möbiovo síto a nezávislý rozklad zkušebním dělením pro 2001 vstupů. Kontroluje 1000005 intervalových případů pro prvočísla 2, 3, 5, 7, 11 do N=200000. Všechny konečné kontroly procházejí. Nedokazují asymptotický odhad. `tests/test_prime_pairing.py` spouští verifikátor.
 
-Zdrojem překladu je anglická verze; česká verze před sloučením vyžaduje lidskou kontrolu významové shody. Záznam ověření odlišuje ověřenou revizi s pěti větami od neověřeného rozšíření.
+Zdrojem překladu je anglická verze; česká verze před sloučením vyžaduje lidskou kontrolu významové shody. Záznam ověření odlišuje dřívější revizi s pěti větami od následně ověřeného rozšíření.

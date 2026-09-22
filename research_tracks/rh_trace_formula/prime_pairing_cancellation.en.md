@@ -12,7 +12,7 @@ UBT-AI-PROVENANCE-END
 
 # Exact prime pairing and the remaining cancellation estimate
 
-**Date:** 2026-09-22. **Status:** identities `LEAN-PASS`; added cardinality bound `LEAN-PENDING`; RH `OPEN`.
+**Date:** 2026-09-22. **Status:** identities `LEAN-PASS`; added cardinality bound `LEAN-PASS`; RH `OPEN`.
 
 <!-- BILINGUAL-UNIT: prime-pair-statement -->
 ## Theorem and proof
@@ -50,7 +50,7 @@ C_2(N)=\left\lfloor\frac{N+1}{2}\right\rfloor
 =\frac N4+O(1).
 \]
 
-The proposed Lean theorem `mertens_band_bound` gives the cardinality bound. Its compilation is still pending. The floor formulas and asymptotic evaluations are proved here by interval counting; they are not additional Lean-verified theorems. The finite verifier also checks the exact formulas. For p=2 the count has leading coefficient 1/4. For any fixed prime the scale remains linear.
+The proposed Lean theorem `mertens_band_bound` gives the cardinality bound. Its build, kernel check and axiom audit passed. The floor formulas and asymptotic evaluations are proved here by interval counting; they are not additional Lean-verified theorems. The finite verifier also checks the exact formulas. For p=2 the count has leading coefficient 1/4. For any fixed prime the scale remains linear.
 
 <!-- BILINGUAL-UNIT: prime-pair-gap -->
 ## What remains to prove
@@ -68,8 +68,8 @@ This arithmetic work does not change the single biquaternionic field or covarian
 <!-- BILINGUAL-UNIT: prime-pair-verification -->
 ## Verification and delivery
 
-[Successful Lean workflow](https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35201941077) checked commit `354cc5489511f5dada54aadd517426267554b4d2` containing the five identity theorems. The workflow enables `lake build --wfail`, kernel checking and the axiom audit. This success does not cover the later cardinality theorem. GitHub writes are currently unavailable, so the added theorem is supplied as a patch and remains `LEAN-PENDING`.
+[Successful Lean workflow](https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35201941077) checked commit `354cc5489511f5dada54aadd517426267554b4d2` containing the five identity theorems. The workflow enables `lake build --wfail`, kernel checking and the axiom audit. The later cardinality theorem passed in [run 35703409640](https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35703409640) after GitHub access recovered.
 
 `tools/verify_prime_pairing.py` uses integer arithmetic, a Möbius sieve, and independent trial factorization on 2001 inputs. It checks 1000005 interval cases for primes 2, 3, 5, 7, 11 through N=200000. All finite checks pass. They do not prove an asymptotic estimate. `tests/test_prime_pairing.py` runs the verifier.
 
-English is the translation source; the Czech edition requires human semantic-equivalence review before merge. The verification record distinguishes the checked five-theorem revision from the unverified extension.
+English is the translation source; the Czech edition requires human semantic-equivalence review before merge. The verification record distinguishes the earlier five-theorem revision from the subsequently verified extension.

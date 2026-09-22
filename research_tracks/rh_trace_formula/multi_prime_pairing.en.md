@@ -77,6 +77,6 @@ Thus this particular counting envelope remains of linear order for every fixed f
 <!-- BILINGUAL-UNIT: multi-prime-verification -->
 ## Verification
 
-`tools/verify_multi_prime_pairing.py` independently factors the integers and checks both the coefficient convolution and direct weighted sums. It checks 8004 interval cases through N=2000, including N=0 separately, and the exact two-band formula and four rational leading coefficients. `tests/test_multi_prime_pairing.py` runs these checks. These finite checks are not a proof for all N. No new Lean success is claimed: the GitHub connector is unavailable, and these multi-prime statements have not been formalized. The earlier five single-prime theorems retain their separate successful check.
+`tools/verify_multi_prime_pairing.py` independently factors the integers and checks both the coefficient convolution and direct weighted sums. It checks 8004 interval cases through N=2000, including N=0 separately, and the exact two-band formula and four rational leading coefficients. `tests/test_multi_prime_pairing.py` runs these checks. These finite checks are not a proof for all N. These multi-prime statements have not been formalized; the later successful Lean check of single-prime cardinality and signed energy does not cover them. The earlier five single-prime theorems retain their separate successful check.
 
 English is the translation source; human semantic-equivalence review is required before merge. This document and the verifier supply no RH-strength cancellation estimate or UBT derivation of one.

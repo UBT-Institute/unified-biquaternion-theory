@@ -77,6 +77,6 @@ Tato konkrétní početní obálka tedy pro každou pevnou konečnou množinu pr
 <!-- BILINGUAL-UNIT: multi-prime-verification -->
 ## Ověření
 
-`tools/verify_multi_prime_pairing.py` nezávisle rozkládá celá čísla a kontroluje koeficientovou konvoluci i přímé vážené součty. Kontroluje 8004 intervalových případů do N=2000, včetně samostatného případu N=0, a přesný vzorec pro dvě pásma i čtyři racionální vedoucí koeficienty. `tests/test_multi_prime_pairing.py` spouští tyto kontroly. Konečné kontroly nejsou důkazem pro všechna N. Netvrdíme nový úspěch Leanu: připojení ke GitHubu je nedostupné a tato tvrzení pro více prvočísel dosud nejsou formalizována. Dřívějších pět vět pro jedno prvočíslo si zachovává vlastní úspěšné ověření.
+`tools/verify_multi_prime_pairing.py` nezávisle rozkládá celá čísla a kontroluje koeficientovou konvoluci i přímé vážené součty. Kontroluje 8004 intervalových případů do N=2000, včetně samostatného případu N=0, a přesný vzorec pro dvě pásma i čtyři racionální vedoucí koeficienty. `tests/test_multi_prime_pairing.py` spouští tyto kontroly. Konečné kontroly nejsou důkazem pro všechna N. Tato tvrzení pro více prvočísel dosud nejsou formalizována; pozdější úspěšná kontrola Leanu pro počet členů při jednom prvočísle a pro druhou mocninu součtu se znaménky je nepokrývá. Dřívějších pět vět pro jedno prvočíslo si zachovává vlastní úspěšné ověření.
 
 Zdrojem překladu je anglická verze; před sloučením je nutná lidská kontrola významové shody. Tento dokument ani verifikátor nedávají odhad rušení potřebný pro RH ani jeho odvození z UBT.
