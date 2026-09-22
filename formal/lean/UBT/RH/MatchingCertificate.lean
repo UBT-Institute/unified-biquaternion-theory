@@ -22,7 +22,7 @@ theorem matching_le_cover (M E : Finset (ℕ × ℕ)) (CL CR : Finset ℕ)
     intro e he
     have hc := hC e (hsub he)
     by_cases h : e.1 ∈ CL
-    · simpa [tag, h] using h
+    · simp [tag, h]
     · simpa [tag, h] using hc.resolve_left h
   have hi : Set.InjOn tag (M : Set (ℕ × ℕ)) := by
     intro e he f hf hef
