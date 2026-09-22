@@ -81,4 +81,22 @@ theorem mertens_prime_band (p N : ℕ) (hp : p.Prime) :
   unfold freeSum
   linarith
 
+/-- An unconditional bound by the number of surviving p-free indices.
+This is a linear-scale counting bound, not an RH-strength estimate. -/
+theorem mertens_band_bound (p N : ℕ) (hp : p.Prime) :
+    |mertens N| ≤ (((range (N + 1)).filter (fun n => N / p < n)).filter
+      (fun n => ¬p ∣ n)).card := by
+  rw [mertens_prime_band p N hp]
+  calc
+    _ ≤ ∑ n ∈ (range (N + 1)).filter (fun n => N / p < n), |primeFree p n| :=
+      abs_sum_le_sum_abs _ _
+    _ ≤ ∑ n ∈ (range (N + 1)).filter (fun n => N / p < n),
+        if ¬p ∣ n then (1 : ℤ) else 0 := by
+      apply sum_le_sum
+      intro n hn
+      by_cases hd : p ∣ n
+      · simp [primeFree, hd]
+      · simpa [primeFree, hd] using (ArithmeticFunction.abs_moebius_le_one (n := n))
+    _ = _ := by rw [← sum_filter]; simp
+
 end UBT.RH.PrimePairing

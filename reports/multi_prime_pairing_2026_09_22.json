@@ -1,0 +1,25 @@
+{
+  "result": "PASS",
+  "limit": 2000,
+  "interval_cases": 8004,
+  "coefficients": [
+    {
+      "Q": 2,
+      "linear_coefficient": "1/4"
+    },
+    {
+      "Q": 6,
+      "linear_coefficient": "2/9"
+    },
+    {
+      "Q": 30,
+      "linear_coefficient": "16/75"
+    },
+    {
+      "Q": 210,
+      "linear_coefficient": "256/1225"
+    }
+  ],
+  "lean_status": "LEAN-PENDING",
+  "scope": "Exact finite checks; no uniform growing-Q estimate or RH proof."
+}
