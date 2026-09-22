@@ -1,0 +1,184 @@
+{
+  "result": "PASS",
+  "sweep_max": 200,
+  "sweep_excess_cutoffs": [],
+  "samples": [
+    {
+      "N": 30,
+      "M": -3,
+      "positive": 8,
+      "negative": 11,
+      "toggle": {
+        "edges": 27,
+        "matching_size": 8,
+        "cover_size": 8,
+        "unmatched": 3,
+        "greedy_unmatched": 5,
+        "augmenting_rounds": 1,
+        "certificate_sha256": "a11d879f2715d10152d504d00295d820462082d7fc92cc342fe6249382c186a2",
+        "certificate_result": "PASS",
+        "excess_over_absolute_M": 0
+      },
+      "exchange": {
+        "edges": 87,
+        "matching_size": 8,
+        "cover_size": 8,
+        "unmatched": 3,
+        "greedy_unmatched": 3,
+        "augmenting_rounds": 0,
+        "certificate_sha256": "78aa74feb3bd2eff8e741046a5ae9c26463a1f11ce1afff8e3814aa91731333e",
+        "certificate_result": "PASS",
+        "excess_over_absolute_M": 0
+      }
+    },
+    {
+      "N": 100,
+      "M": 1,
+      "positive": 31,
+      "negative": 30,
+      "toggle": {
+        "edges": 100,
+        "matching_size": 21,
+        "cover_size": 21,
+        "unmatched": 19,
+        "greedy_unmatched": 21,
+        "augmenting_rounds": 1,
+        "certificate_sha256": "c244811ce0fccec0150b0890d21ddf4c69644480fe60ef1091da155494816996",
+        "certificate_result": "PASS",
+        "excess_over_absolute_M": 18
+      },
+      "exchange": {
+        "edges": 902,
+        "matching_size": 30,
+        "cover_size": 30,
+        "unmatched": 1,
+        "greedy_unmatched": 1,
+        "augmenting_rounds": 0,
+        "certificate_sha256": "cc40ca4b7a0991cd92fde24a2ed9642fa18491e183643561ee99dc58575fa0e5",
+        "certificate_result": "PASS",
+        "excess_over_absolute_M": 0
+      }
+    },
+    {
+      "N": 300,
+      "M": -5,
+      "positive": 89,
+      "negative": 94,
+      "toggle": {
+        "edges": 336,
+        "matching_size": 68,
+        "cover_size": 68,
+        "unmatched": 47,
+        "greedy_unmatched": 61,
+        "augmenting_rounds": 2,
+        "certificate_sha256": "1881275bdcf361659cc344b494e782c8d9a241ae50436e97a71831e5556e8cc3",
+        "certificate_result": "PASS",
+        "excess_over_absolute_M": 42
+      },
+      "exchange": {
+        "edges": 7219,
+        "matching_size": 89,
+        "cover_size": 89,
+        "unmatched": 5,
+        "greedy_unmatched": 5,
+        "augmenting_rounds": 0,
+        "certificate_sha256": "ba14c46de5c91cb5b1f663eace9caf991fee3c6c7bcaf6b53e68e88a5230f130",
+        "certificate_result": "PASS",
+        "excess_over_absolute_M": 0
+      }
+    },
+    {
+      "N": 1000,
+      "M": 2,
+      "positive": 305,
+      "negative": 303,
+      "toggle": {
+        "edges": 1213,
+        "matching_size": 222,
+        "cover_size": 222,
+        "unmatched": 164,
+        "greedy_unmatched": 200,
+        "augmenting_rounds": 2,
+        "certificate_sha256": "e35775e273adefb971ac5d3019219b6ed8df0a4a9c68747d0896c17347113518",
+        "certificate_result": "PASS",
+        "excess_over_absolute_M": 162
+      },
+      "exchange": {
+        "edges": 68027,
+        "matching_size": 303,
+        "cover_size": 303,
+        "unmatched": 2,
+        "greedy_unmatched": 4,
+        "augmenting_rounds": 1,
+        "certificate_sha256": "a90a6b4040b80597dfc069a9dad45a31db39becf62213afb4914dae7af8c60b8",
+        "certificate_result": "PASS",
+        "excess_over_absolute_M": 0
+      }
+    },
+    {
+      "N": 3000,
+      "M": -6,
+      "positive": 909,
+      "negative": 915,
+      "toggle": {
+        "edges": 3871,
+        "matching_size": 661,
+        "cover_size": 661,
+        "unmatched": 502,
+        "greedy_unmatched": 604,
+        "augmenting_rounds": 2,
+        "certificate_sha256": "e2537bec2027a6865ae7e114e665b226c8d29f64ec61f1fd0c47b5415c332c8a",
+        "certificate_result": "PASS",
+        "excess_over_absolute_M": 496
+      },
+      "exchange": {
+        "edges": 516891,
+        "matching_size": 909,
+        "cover_size": 909,
+        "unmatched": 6,
+        "greedy_unmatched": 8,
+        "augmenting_rounds": 1,
+        "certificate_sha256": "9305c73e75cb528b08125f5c8c18a649daa146c9d30f77046d006c1412483157",
+        "certificate_result": "PASS",
+        "excess_over_absolute_M": 0
+      }
+    },
+    {
+      "N": 10000,
+      "M": -23,
+      "positive": 3030,
+      "negative": 3053,
+      "toggle": {
+        "edges": 13665,
+        "matching_size": 2199,
+        "cover_size": 2199,
+        "unmatched": 1685,
+        "greedy_unmatched": 2029,
+        "augmenting_rounds": 2,
+        "certificate_sha256": "15723a734f8e9c05433338f047a490b2437e26ca632cad86351261d39dd70aaf",
+        "certificate_result": "PASS",
+        "excess_over_absolute_M": 1662
+      },
+      "exchange": {
+        "edges": 4749839,
+        "matching_size": 3030,
+        "cover_size": 3030,
+        "unmatched": 23,
+        "greedy_unmatched": 23,
+        "augmenting_rounds": 0,
+        "certificate_sha256": "5bf7919a48e7bf63712ca43072b547ad37ff17aeddcd3d0d601e202fb771b813",
+        "certificate_result": "PASS",
+        "excess_over_absolute_M": 0
+      }
+    }
+  ],
+  "lean_status": "EXPERIMENT_NOT_LEAN_FORMALIZED",
+  "scope": "Exact finite maximum-matching certificates. No general saturation theorem, asymptotic unmatched bound, or RH proof.",
+  "date": "2026-09-22",
+  "python_version": "3.12.14",
+  "source_sha256": {
+    "tools/verify_prime_exchange_matching.py": "332c2107f68980e884c77feddcfce4ff1aa67881830b056968c1c756e2b6e89f",
+    "tools/verify_prime_pairing.py": "16b46ecc049960bf7635540b2f12f32a41799ae132674db85a5d1651ec27e67c",
+    "tests/test_prime_exchange_matching.py": "e0155a4c369d5780c82d55faf6f86ef545bf9fa03d82feab3487f6ce1c7fe515"
+  }
+}
