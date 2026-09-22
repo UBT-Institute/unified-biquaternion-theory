@@ -45,7 +45,19 @@ theorem matching100_valid : IsMatching matching100 := by
   · apply card_image_iff.mp
     decide
 
-theorem matching100_edges : matching100 ⊆ edges 100 := by decide
+theorem matching100_checks : ∀ e ∈ matching100,
+    e.1 ≤ 100 ∧ muEval e.1 = 1 ∧ e.2 ≤ 100 ∧ muEval e.2 = -1 ∧ Allowed e.1 e.2 := by
+  decide
+
+theorem matching100_edges : matching100 ⊆ edges 100 := by
+  intro e he
+  obtain ⟨hx, hmx, hy, hmy, ha⟩ := matching100_checks e he
+  apply mem_filter.mpr
+  refine ⟨mem_product.mpr ⟨?_, ?_⟩, ha⟩
+  · simp only [positive, mem_filter, mem_range, Nat.lt_succ_iff]
+    exact ⟨hx, hmx⟩
+  · simp only [negative, mem_filter, mem_range, Nat.lt_succ_iff]
+    exact ⟨hy, hmy⟩
 
 theorem matching100_size : matching100.card = 30 := by decide
 

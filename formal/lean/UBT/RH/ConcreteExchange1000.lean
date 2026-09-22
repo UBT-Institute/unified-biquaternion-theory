@@ -45,7 +45,19 @@ theorem matching1000_valid : IsMatching matching1000 := by
   · apply card_image_iff.mp
     decide
 
-theorem matching1000_edges : matching1000 ⊆ edges 1000 := by decide
+theorem matching1000_checks : ∀ e ∈ matching1000,
+    e.1 ≤ 1000 ∧ muEval e.1 = 1 ∧ e.2 ≤ 1000 ∧ muEval e.2 = -1 ∧ Allowed e.1 e.2 := by
+  decide
+
+theorem matching1000_edges : matching1000 ⊆ edges 1000 := by
+  intro e he
+  obtain ⟨hx, hmx, hy, hmy, ha⟩ := matching1000_checks e he
+  apply mem_filter.mpr
+  refine ⟨mem_product.mpr ⟨?_, ?_⟩, ha⟩
+  · simp only [positive, mem_filter, mem_range, Nat.lt_succ_iff]
+    exact ⟨hx, hmx⟩
+  · simp only [negative, mem_filter, mem_range, Nat.lt_succ_iff]
+    exact ⟨hy, hmy⟩
 
 theorem matching1000_size : matching1000.card = 303 := by decide
 
