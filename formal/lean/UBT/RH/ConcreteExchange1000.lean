@@ -10,10 +10,18 @@ set_option maxRecDepth 100000
 set_option maxHeartbeats 8000000
 
 def positive (N : ℕ) : Finset ℕ :=
-  (range (N + 1)).filter (fun n => μ n = 1)
+  (range (N + 1)).filter (fun n => muEval n = 1)
 
 def negative (N : ℕ) : Finset ℕ :=
-  (range (N + 1)).filter (fun n => μ n = -1)
+  (range (N + 1)).filter (fun n => muEval n = -1)
+
+theorem positive_eq (N : ℕ) :
+    positive N = (range (N + 1)).filter (fun n => μ n = 1) := by
+  simp only [positive, muEval_eq]
+
+theorem negative_eq (N : ℕ) :
+    negative N = (range (N + 1)).filter (fun n => μ n = -1) := by
+  simp only [negative, muEval_eq]
 
 def Allowed (x y : ℕ) : Prop :=
   let a := (x / Nat.gcd x y).primeFactorsList.length
@@ -65,6 +73,7 @@ theorem matching1000_signs : ∀ e ∈ matching1000, μ e.1 + μ e.2 = 0 := by
   have hp := mem_product.mp (mem_filter.mp (matching1000_edges he)).1
   have hl := (mem_filter.mp hp.1).2
   have hr := (mem_filter.mp hp.2).2
+  simp only [muEval_eq] at hl hr
   omega
 
 end UBT.RH.ConcreteExchange1000

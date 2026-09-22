@@ -7,6 +7,20 @@ namespace UBT.RH.MatchingCertificate
 open Finset
 open scoped ArithmeticFunction.Moebius
 
+/-- Executable evaluator, proved equal to mathlib's Mobius function. -/
+def muEval (n : ℕ) : ℤ :=
+  if n = 0 then 0 else
+    if n.primeFactorsList.Nodup then (-1 : ℤ) ^ n.primeFactorsList.length else 0
+
+theorem muEval_eq (n : ℕ) : muEval n = μ n := by
+  by_cases hz : n = 0
+  · subst n
+    simp [muEval]
+  · rw [muEval, if_neg hz]
+    change (if n.primeFactorsList.Nodup then (-1 : ℤ) ^ n.primeFactorsList.length else 0) =
+      (if Squarefree n then (-1 : ℤ) ^ n.primeFactorsList.length else 0)
+    rw [Nat.squarefree_iff_nodup_primeFactorsList hz]
+
 def IsMatching (M : Finset (ℕ × ℕ)) : Prop :=
   Set.InjOn Prod.fst (M : Set (ℕ × ℕ)) ∧ Set.InjOn Prod.snd (M : Set (ℕ × ℕ))
 
