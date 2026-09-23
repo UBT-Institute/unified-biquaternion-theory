@@ -22,3 +22,4 @@ import UBT.RH.ConcreteExchange
 import UBT.RH.ConcreteExchange1000
 import UBT.RH.PrimeBlockCoarsening
 import UBT.RH.HallBudget
+import UBT.RH.HallObstruction
