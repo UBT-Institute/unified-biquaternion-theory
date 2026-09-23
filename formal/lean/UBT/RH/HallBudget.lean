@@ -8,10 +8,10 @@ open Finset
 open scoped ArithmeticFunction.Moebius
 
 section Finite
-variable {ι α : Type*} [Fintype ι] [DecidableEq α]
+variable {ι α : Type*} [DecidableEq α]
 
 /-- Adding d distinct auxiliary targets converts a deficit bound into Hall's condition. -/
-theorem hall_with_budget (t : ι → Finset α) (d : ℕ)
+theorem hall_with_budget [Fintype ι] (t : ι → Finset α) (d : ℕ)
     (h : ∀ s : Finset ι, s.card ≤ (s.biUnion t).card + d) :
     ∃ f : ι → α ⊕ Fin d, Function.Injective f ∧
       (∀ i, f i ∈ (t i).disjSum (univ : Finset (Fin d))) ∧
@@ -25,7 +25,9 @@ theorem hall_with_budget (t : ι → Finset α) (d : ℕ)
         ext z
         cases z with
         | inl a => simp [u]
-        | inr b => simp [u, hs]
+        | inr b =>
+          simp [u]
+          exact hs
       rw [he, card_disjSum]
       simpa using h s
     · have he : s = ∅ := not_nonempty_iff_eq_empty.mp hs
