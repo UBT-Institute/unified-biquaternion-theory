@@ -1,0 +1,292 @@
+{
+  "schema": "ubt-verification/v1",
+  "date": "2026-09-22",
+  "result": "PASS",
+  "scope": "GENERAL_MATCHING_CERTIFICATE_AND_CONCRETE_MOBIUS_EXCHANGES_100_1000",
+  "tools": {
+    "lean": "4.33.1",
+    "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+    "mathlib": "v4.33.1",
+    "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "axiom_audit": "v0.1.2",
+    "axiom_audit_commit": "46024e005996495c65ef609368e11ab39c4222e3"
+  },
+  "ci": {
+    "workflow": "Lean theorem verification",
+    "run_id": 35752056147,
+    "job_id": 106828428434,
+    "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35752056147",
+    "conclusion": "success",
+    "head_commit": "2bc2dbc86cbac3a9d825347d5370812117d489dd",
+    "checked_merge_commit": "20f6deba37b59831fdb00749f9d137861609ba3e"
+  },
+  "source_files": {
+    ".github/workflows/lean.yml": {
+      "sha256": "5c86433b1f30c8c5e0e528eb3b3e972b2c679513362995fd0fb623e6eee23dd0",
+      "git_blob_sha": "1ae241d6f37c7292e00e85fbadc1060e60949250"
+    },
+    "formal/lean/UBT.lean": {
+      "sha256": "23a02ae77ff4f2dc19fae7a0328ad6ae3a7b6b92c72b1739a9d3666a9a7728a6",
+      "git_blob_sha": "e856a4125337dc3db97e30ad513692e063d6a862"
+    },
+    "formal/lean/UBT/Action/ChiralInteraction.lean": {
+      "sha256": "f6a32f00c39839038353f5d5a44c0933620322b4c73e209c9d17e1e62ae67064",
+      "git_blob_sha": "df9956a14d4ceb3c0c088666aaa4c3fc1ea330ce"
+    },
+    "formal/lean/UBT/Action/PotentialInvariants.lean": {
+      "sha256": "88fb2257d7fd7e61a7c85099dd104c4d8258528dec08c33025fb81d8c17515da",
+      "git_blob_sha": "5e3d9f14f871469446090385394b6c0c343686f2"
+    },
+    "formal/lean/UBT/Action/PotentialMinimumOrbit.lean": {
+      "sha256": "c01db053ab7332668f1d62915dbbfa71e130be0e1447ff970e13520daee422b7",
+      "git_blob_sha": "0654cd2cc555c00469f2495aef839815259baede"
+    },
+    "formal/lean/UBT/Action/PotentialVacuum.lean": {
+      "sha256": "ac4da25fb407fd67c3fcaa5316d8a57e9fe0b858e9db39430c08712e8b94bb33",
+      "git_blob_sha": "8b42fe0a3a34454fce7e9cc75c968294e81d685a"
+    },
+    "formal/lean/UBT/Action/PsiRestHamiltonian.lean": {
+      "sha256": "9886ff10257504ca1ea1591f565d6afe0aa8973b5e9383f7a57766dd13267b63",
+      "git_blob_sha": "e19057fbc8dbbbbffe4ef0ac10f699ff6c745a05"
+    },
+    "formal/lean/UBT/GR/CompositeActionStationarity.lean": {
+      "sha256": "ec7b7138c9d0c0760f990c392ddcf3442c9d89c91b4ea49bd65554884c31023f",
+      "git_blob_sha": "ac727a0b286396a7e5a882aec04c1c43ab397345"
+    },
+    "formal/lean/UBT/GR/CompositeKinetic.lean": {
+      "sha256": "58bff7173c5b68eb81de0a79d53367900f4eddbfdf5fe75fa7cb945ec2bdc859",
+      "git_blob_sha": "a8ca31e2f13e307371bbf4a45f4179dc50becb66"
+    },
+    "formal/lean/UBT/GR/CompositeSecondVariation.lean": {
+      "sha256": "af7cd8750d286890fb57447f6993411d824a05725dff1b60deb84b9b6bf0fef4",
+      "git_blob_sha": "3ff83505046ee347567500f3e3d74b5d4c530abe"
+    },
+    "formal/lean/UBT/GR/CurvatureUnderdetermination.lean": {
+      "sha256": "f73e0a2a93de047c2ca9ce5e5912b75c361e6f13924ecf78690e64eeb2ab80c3",
+      "git_blob_sha": "eb54f55b334850823f17afa4a0d296d866eb3d0d"
+    },
+    "formal/lean/UBT/GR/LegacyActionObstructions.lean": {
+      "sha256": "80c47b2c80ccf10e17ab9a168f3c3b9e670fe83fac91341ecdb70c204584e42b",
+      "git_blob_sha": "ef8ca581ff6e51977b0f098292c994df2036354d"
+    },
+    "formal/lean/UBT/GR/VolumePrincipalSymbol.lean": {
+      "sha256": "a85aac9ecd71dc04f9107f7389a54b8eeb5170d8a008d58912c595fbcea840ab",
+      "git_blob_sha": "e9dcdbb9c8af09772838136eb697a8296d0b3fcb"
+    },
+    "formal/lean/UBT/GR/VolumeVariation.lean": {
+      "sha256": "371e5583bcac9acf0fe87790f863b1f6cdf3409237b7e2828f3850411d656214",
+      "git_blob_sha": "91be5269d7df7300c760ebc44e6ee04f38cae6dc"
+    },
+    "formal/lean/UBT/RH/AbelLimit.lean": {
+      "sha256": "558e8412802d3815a0d2aaaaed62ace4a41612a751640a8f2f39bf5f31a3c59d",
+      "git_blob_sha": "ff79eb6092beeb005c81f7da181f5097b1ff5f1a"
+    },
+    "formal/lean/UBT/RH/MobiusAbel.lean": {
+      "sha256": "213be62e2a9b742cd6069048cafdf1e2cfe4d07ff0176feb83b86977e811f829",
+      "git_blob_sha": "7d8204b67481d365bec80537e86a87d8c78d8039"
+    },
+    "formal/lean/UBT/RH/PowerWeightLimit.lean": {
+      "sha256": "7f5b6de91e02a966ec63e41d0e23e2959e1856c1a852004d5ecbb39a81f74150",
+      "git_blob_sha": "9a4850d243c097e75ee14385bece324c13f36513"
+    },
+    "formal/lean/lake-manifest.json": {
+      "sha256": "b39b3cb24ff476b4054c0033ff89b296b117697d12ff55eef2bcdc127527475e",
+      "git_blob_sha": "de12326c08ca2fe36aef5c94db1c379b740e4848"
+    },
+    "formal/lean/lakefile.toml": {
+      "sha256": "5099e6f10557172813e7e372e3d0b6debbaf20bd4b45bc594553ccccc032fab5",
+      "git_blob_sha": "7b2135efc0066fb5407011a489f7bfb648a5dfd4"
+    },
+    "formal/lean/lean-toolchain": {
+      "sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+      "git_blob_sha": "a8afa7d1b02d96f0671eba854a8dc4b416beb473"
+    },
+    "formal/lean/UBT/RH/PrimePairing.lean": {
+      "sha256": "b1f8eea037e90b239534b1eb2661228c656b95cd14065bd49de60850f80c005a",
+      "git_blob_sha": "845eaf348f17ca47b359cc745bd0b8272315ef76"
+    },
+    "formal/lean/UBT/RH/SignedEnergy.lean": {
+      "sha256": "c3d714c31e6404217513e3bcafd11639385d50aa6df244a74b825989f7e03428",
+      "git_blob_sha": "eea1d4998d9eae7feea796596b4492840868d93a"
+    },
+    "formal/lean/UBT/RH/SubsetCancellation.lean": {
+      "sha256": "5b160bc6433b9343577450c62fd903d824cd9b2f70735374a44051bad98e14ab",
+      "git_blob_sha": "0d445d88ac85c49d3812bc3e46297cf542a2b0dd"
+    },
+    "formal/lean/UBT/RH/ParityLayers.lean": {
+      "sha256": "baf891446c9b06d18d296c8027b756af8e479923e061a7c12aafb18668c64aa0",
+      "git_blob_sha": "eaf8b97a595e8a34a7c6c47dc1bc9b474545af60"
+    },
+    "formal/lean/UBT/RH/MatchingCertificate.lean": {
+      "sha256": "44159ce39c87cd0b4dc95dc5232c3fe2bd45f582f8f02fc6a11d28dcf7759367",
+      "git_blob_sha": "cfa31559ece6f4735c2f38518ee22df1e3d2136d"
+    },
+    "formal/lean/UBT/RH/ConcreteExchange.lean": {
+      "sha256": "1caf18780479f2d32fa5c3fefc25fb9f1a049b1f0969a4224183be45a2951aad",
+      "git_blob_sha": "36b4dc168d1566a9ecac15d710a8abe2adf51e69"
+    },
+    "formal/lean/UBT/RH/ConcreteExchange1000.lean": {
+      "sha256": "613e3e18b4be115709442c9170eeb8a2f74e57d8f805cb513d30d861299c9343",
+      "git_blob_sha": "6832a144e1dff1cdfcf449adeb8548d62f9c8558"
+    }
+  },
+  "checks": [
+    {
+      "command": "lake build --wfail",
+      "result": "PASS"
+    },
+    {
+      "command": "leanchecker UBT",
+      "result": "PASS"
+    },
+    {
+      "check": "axiom-audit",
+      "declarations_audited": 286,
+      "allowed_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "unexpected_axioms": [],
+      "result": "PASS"
+    },
+    {
+      "check": "source identity",
+      "files_matched": 27,
+      "result": "PASS"
+    }
+  ],
+  "theorems": {
+    "MatchingCertificate": [
+      "muEval_eq",
+      "matching_le_cover",
+      "certificate_maximum",
+      "matched_sum_zero",
+      "residual_sum",
+      "prime_exchange_cancel"
+    ],
+    "ConcreteExchange": [
+      "positive_eq",
+      "negative_eq",
+      "mertens_counts",
+      "matching100_valid",
+      "matching100_checks",
+      "matching100_edges",
+      "matching100_size",
+      "negative100_size",
+      "positive100_size",
+      "right_cover",
+      "matching100_maximum",
+      "matching100_unmatched",
+      "mertens100",
+      "matching100_signs"
+    ],
+    "ConcreteExchange1000": [
+      "positive_eq",
+      "negative_eq",
+      "mertens_counts",
+      "matching1000_valid",
+      "matching1000_checks",
+      "matching1000_edges",
+      "matching1000_size",
+      "negative1000_size",
+      "positive1000_size",
+      "right_cover",
+      "matching1000_maximum",
+      "matching1000_unmatched",
+      "mertens1000",
+      "matching1000_signs"
+    ]
+  },
+  "independent_verification": {
+    "script": "tools/verify_prime_exchange_matching.py",
+    "samples": [
+      {
+        "N": 100,
+        "M": 1,
+        "positive": 31,
+        "negative": 30,
+        "toggle": {
+          "edges": 100,
+          "matching_size": 21,
+          "cover_size": 21,
+          "unmatched": 19,
+          "greedy_unmatched": 21,
+          "augmenting_rounds": 1,
+          "certificate_sha256": "c244811ce0fccec0150b0890d21ddf4c69644480fe60ef1091da155494816996",
+          "certificate_result": "PASS",
+          "excess_over_absolute_M": 18
+        },
+        "exchange": {
+          "edges": 902,
+          "matching_size": 30,
+          "cover_size": 30,
+          "unmatched": 1,
+          "greedy_unmatched": 1,
+          "augmenting_rounds": 0,
+          "certificate_sha256": "cc40ca4b7a0991cd92fde24a2ed9642fa18491e183643561ee99dc58575fa0e5",
+          "certificate_result": "PASS",
+          "excess_over_absolute_M": 0
+        }
+      },
+      {
+        "N": 1000,
+        "M": 2,
+        "positive": 305,
+        "negative": 303,
+        "toggle": {
+          "edges": 1213,
+          "matching_size": 222,
+          "cover_size": 222,
+          "unmatched": 164,
+          "greedy_unmatched": 200,
+          "augmenting_rounds": 2,
+          "certificate_sha256": "e35775e273adefb971ac5d3019219b6ed8df0a4a9c68747d0896c17347113518",
+          "certificate_result": "PASS",
+          "excess_over_absolute_M": 162
+        },
+        "exchange": {
+          "edges": 68027,
+          "matching_size": 303,
+          "cover_size": 303,
+          "unmatched": 2,
+          "greedy_unmatched": 4,
+          "augmenting_rounds": 1,
+          "certificate_sha256": "a90a6b4040b80597dfc069a9dad45a31db39becf62213afb4914dae7af8c60b8",
+          "certificate_result": "PASS",
+          "excess_over_absolute_M": 0
+        }
+      }
+    ]
+  },
+  "trust_boundary": [
+    "Concrete data exported by Python, validated by decide +kernel.",
+    "muEval is proved equal to mathlib moebius for every natural input.",
+    "No native_decide or additional axioms."
+  ],
+  "limitations": [
+    "No verification of every augmenting-path program execution.",
+    "No saturation theorem for every cutoff.",
+    "No RH-strength asymptotic unmatched-count bound.",
+    "The earlier N=10000 experiment is not kernel-checked by these modules.",
+    "No UBT arithmetic bridge."
+  ],
+  "failed_attempts": [
+    {
+      "run_id": 35721620275,
+      "reason": "Strict lint warning in cover proof; replaced unnecessary simpa."
+    },
+    {
+      "run_id": 35721749214,
+      "reason": "Default decide could not reduce the Squarefree-based Mobius definition."
+    },
+    {
+      "run_id": 35722038394,
+      "reason": "Dependent rewrite in evaluator equivalence; replaced with explicit squarefree cases."
+    },
+    {
+      "run_id": 35722235290,
+      "reason": "Default decide stuck on well-founded factorization; used decide +kernel and closed integer arithmetic with norm_num."
+    }
+  ]
+}

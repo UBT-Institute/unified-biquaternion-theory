@@ -1,0 +1,59 @@
+{
+  "schema": "ubt-verification/v1",
+  "date": "2026-09-22",
+  "result": "PASS",
+  "identity_theorems": {
+    "status": "LEAN-PASS",
+    "head_commit": "354cc5489511f5dada54aadd517426267554b4d2",
+    "run_id": 35201941077,
+    "job_id": 105138523620,
+    "workflow_conclusion": "success",
+    "lean_action_step_conclusion": "success",
+    "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35201941077",
+    "source_files": {
+      "formal/lean/UBT/RH/PrimePairing.lean": {
+        "sha256": "a68f6e0cb769aac17aecba05fea5c1ee1a739802d0c0f8705f5db1d76c4b4413"
+      },
+      "formal/lean/UBT.lean": {
+        "sha256": "604de7b96f15ffb9291e541fd987b137fd3df577726638a980e3128f4765502a"
+      },
+      ".github/workflows/lean.yml": {
+        "sha256": "5c86433b1f30c8c5e0e528eb3b3e972b2c679513362995fd0fb623e6eee23dd0"
+      }
+    }
+  },
+  "cardinality_extension": {
+    "status": "LEAN-PASS",
+    "theorem": "UBT.RH.PrimePairing.mertens_band_bound",
+    "ci": {
+      "workflow": "Lean theorem verification",
+      "run_id": 35703409640,
+      "job_id": 106666502101,
+      "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35703409640",
+      "conclusion": "success",
+      "head_commit": "eed5dc275f1733796a20566104c258878f181a9b",
+      "checked_merge_commit": "561f3c465460ab69cc004e01b7e07dbfe0a7cb93"
+    },
+    "source_sha256": "b1f8eea037e90b239534b1eb2661228c656b95cd14065bd49de60850f80c005a"
+  },
+  "independent_verification": {
+    "result": "PASS",
+    "limit": 200000,
+    "primes": [
+      2,
+      3,
+      5,
+      7,
+      11
+    ],
+    "band_cases": 1000005,
+    "independent_factorizations": 2001,
+    "scope": "Finite integer checks only; no asymptotic bound or RH proof."
+  },
+  "limitations": [
+    "Finite checks do not prove RH or any asymptotic bound.",
+    "Floor formulas and multi-prime extensions are not Lean-formalized.",
+    "No UBT physical bridge is derived."
+  ],
+  "historical_delivery_block": "Earlier GitHub writes failed; access recovered and cardinality extension passed on 2026-09-22."
+}
