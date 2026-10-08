@@ -64,7 +64,7 @@ Forma u a její normalizace jsou v této alternativě dodatečným vstupem; jeji
 <!-- BILINGUAL-UNIT: c5.signature -->
 ## Spinory, realita a srovnání se strunami
 
-Cliffordův modul pro pět komplexních směrů může používat čtyři komplexní složky. Plný desetirozměrný komplexní Diracův modul má 32 složek; Weylův modul má 16 komplexních složek a Majoranův–Weylův modul v Lorentzově signatuře má 16 reálných složek. Samotný bikvaternion tedy není plným desetirozměrným Lorentzovým spinorem. Symbolická kontrola také dokazuje, že žádná nenulová matice stejné velikosti neantikomutuje se všemi pěti zvolenými generátory.
+Cliffordův modul pro pět komplexních směrů může používat čtyři komplexní složky. Plný desetirozměrný komplexní Diracův modul má 32 složek; Weylův modul má 16 komplexních složek a Majoranův–Weylův modul v Lorentzově signatuře má 16 reálných složek. Samotný bikvaternion tedy není plným desetirozměrným Lorentzovým spinorem. Při řešení lineárních podmínek antikomutace pro matice stejné velikosti nachází symbolická kontrola pro všech pět zvolených generátorů současně pouze nulovou matici.
 
 Reálná část nedegenerované komplexní symetrické metriky má reálnou signaturu (5,5): násobení komplexní jednotkou obrací její znaménko. Hermitovská signatura (p,q) se naopak mění na (2p,2q). Reálná signatura (1,9) vyžaduje jiný předpis reality či metriky; Lorentzův pětirozměrný reálný model je samostatnou volbou.
 

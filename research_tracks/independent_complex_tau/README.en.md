@@ -64,7 +64,7 @@ The form u and its normalization are extra input in this alternative; their dyna
 <!-- BILINGUAL-UNIT: c5.signature -->
 ## Spinors, reality and string comparison
 
-A five-complex-direction Clifford module can use four complex components. A full ten-dimensional complex Dirac module has 32 components; a Weyl module has 16 complex components, and the Majorana–Weyl module in Lorentz signature has 16 real components. A biquaternion alone is therefore not the full ten-dimensional Lorentz spinor. The symbolic checker also proves that no nonzero matrix of the same size anticommutes with all five chosen generators.
+A five-complex-direction Clifford module can use four complex components. A full ten-dimensional complex Dirac module has 32 components; a Weyl module has 16 complex components, and the Majorana–Weyl module in Lorentz signature has 16 real components. A biquaternion alone is therefore not the full ten-dimensional Lorentz spinor. Solving the linear anticommutation constraints for matrices of the same size, the symbolic checker finds only the zero matrix for all five chosen generators together.
 
 The real part of a nondegenerate complex symmetric metric has real signature (5,5): multiplication by the complex unit reverses its sign. A Hermitian signature (p,q) instead becomes (2p,2q). A real signature (1,9) requires another reality/metric prescription; a Lorentzian five-dimensional real model is a separate choice.
 
