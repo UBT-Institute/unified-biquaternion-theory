@@ -1,0 +1,67 @@
+{
+  "schema": "ubt-research-status/v1",
+  "track": "independent_complex_tau",
+  "date": "2026-10-08",
+  "baseline_commit": "2102540b0beb06d3abe707ba941c2a46cae394b9",
+  "layer": "research_tracks",
+  "status": "DERIVED_WITH_ASSUMPTIONS",
+  "physical_completion": "OPEN_GAP",
+  "canonical_claim_statuses_changed": false,
+  "scope": "Author-requested independent complex tau alternative; conditional real five-dimensional tests are distinguished from full ten-real-parameter physics.",
+  "canonical_status_reconciliation": {
+    "surfaces": ["CLAIMS.yaml", "STATUS_OF_UBT.md", "WHAT_IS_PROVED.md", "CLAIMS_MATRIX.md", "DERIVATION_INDEX.md"],
+    "disposition": "Unchanged: this self-contained research record does not replace the canonical action or promote, close, or downgrade an existing canonical claim.",
+    "authority": ["../../canonical/ACTION.en.md", "../../canonical/ACTION.cs.md"]
+  },
+  "claims": [
+    {
+      "id": "C5-RANK-SIGNATURE",
+      "status": "DERIVED_WITH_ASSUMPTIONS",
+      "statement": "The unchanged four-complex-component Gram metric has complex rank at most four; a specified extra one-form completes it. This does not establish a ten-dimensional Lorentz spinor or string equivalence.",
+      "evidence": ["README.en.md", "README.cs.md", "verify_c5.py", "c5_verification_results.json"]
+    },
+    {
+      "id": "C5-GRADIENT-ACTION",
+      "status": "DERIVED_WITH_ASSUMPTIONS",
+      "statement": "For an invertible exact completed coframe and constant pairing the metric is locally flat; the stated field-value-potential action is a local bulk null Lagrangian on a fixed orientation branch.",
+      "prior_result": "../../canonical/gr_closure/gap_10t_composite_flat_admissibility.tex",
+      "evidence": ["README.en.md", "README.cs.md", "verify_c5_dynamics.py", "c5_dynamics_results.json"]
+    },
+    {
+      "id": "C5-EMBEDDING-FLRW",
+      "status": "DERIVED_WITH_ASSUMPTIONS",
+      "statement": "A conditional induced Einstein-Hilbert action with one normal gives the Regge-Teitelboim equation and an extra homogeneous integration constant. Its small-correction scaling is conditional and is not a UBT parameter prediction.",
+      "prior_result": "https://arxiv.org/abs/1106.5212",
+      "evidence": ["README.en.md", "README.cs.md", "verify_c5_dynamics.py", "c5_dynamics_results.json"]
+    },
+    {
+      "id": "C5-AUXILIARY-KINETIC",
+      "status": "DERIVED_WITH_ASSUMPTIONS",
+      "statement": "Independent algebraic split-jet variations force V=2 and dV=0; the quadratic bulk action contains only the potential Hessian and no derivatives of perturbations.",
+      "assumptions": ["Smooth real five-dimensional oriented patch", "Nonnull Lorentz-real original field", "Nondegenerate full coframe (E,u)", "Fixed nowhere-zero u and prescribed reference connection", "Independent Lorentz-antisymmetric K and relative-central w", "Equal metric/kinetic pairing", "Smooth algebraic potential", "No curvature, auxiliary-derivative, or additional action terms", "Compactly supported variations"],
+      "prior_result": "../../canonical/gr_closure/gap_10t_split_jet_right_inverse.tex",
+      "evidence": ["auxiliary_action.en.md", "auxiliary_action.cs.md", "verify_auxiliary_action.py", "auxiliary_action_results.json"]
+    }
+  ],
+  "verification": {
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "encoded_checks": {"verify_c5.py": 51, "verify_c5_dynamics.py": 32, "verify_auxiliary_action.py": 22},
+    "independent_auxiliary_channel": "Python fractions.Fraction; independently implemented determinant and interpolation, finite rational witnesses",
+    "test": "../../tests/test_independent_complex_tau.py",
+    "lean_status": "LEAN-PENDING",
+    "lean_reason": "Lean and Lake executables were unavailable in the execution runtime; no checked Lean proof of the generic geometric or variational claims is supplied.",
+    "limits": ["Encoded identities only", "Rational witnesses do not prove the generic theorem", "No physical spectrum, stability, data fit, or microscopic action derivation"]
+  },
+  "bilingual": {
+    "translation_source": "en",
+    "pairs": [["README.en.md", "README.cs.md"], ["auxiliary_action.en.md", "auxiliary_action.cs.md"]],
+    "human_semantic_equivalence_review": "PENDING_BEFORE_MERGE"
+  },
+  "open_work": [
+    "Finalize the one microscopic action and its independent variables",
+    "Compute the full Hessian and constraint quotient for a specified derivative-dependent composite jet, or derive its curvature term",
+    "Derive a physical reality/signature prescription and account for all complex field modes",
+    "Establish quantization, stability, and an observational parameter bridge"
+  ]
+}
