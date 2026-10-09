@@ -189,7 +189,7 @@ A kinematically valid colour derivative can therefore be written
 \partial_\mu-\frac{i g_s}{2}G_\mu^a\Lambda_a.
 \]
 
-This only proves that the existing UBT carrier supports the required endomorphism
+This establishes only that the existing UBT carrier supports the required endomorphism
 representation. It does not derive the eight coefficient fields \(G_\mu^a\) from
 \(S[\Theta]\).
 
