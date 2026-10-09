@@ -12,8 +12,6 @@ UBT-AI-PROVENANCE-END
 -->
 
 
-> **2026-10-09 correction:** The old table used the same symbol `tau` for two different roles.  Use `tau_UBT=t+i psi` for canonical complex time and `tau_J` for a Jacobi modular parameter.  Do not map `phi -> psi` as a canonical identity.  The established spectral mapping is `tau_J(s)=i s/(pi R_psi^2)` for the compact-fibre heat trace.
-
 # Theta-to-UBT Symbol Mapping
 
 Status: Bridge support document
@@ -27,9 +25,8 @@ Purpose: This file prevents notation drift between the reduced theta complex-tim
 | $a_n$ | Reduced discrete mode amplitude / projected field component | Bridge | Not identified with the full canonical field $\Theta(q,\tau)$. |
 | $s$ | External evolution index | Bridge | Use as an external label only. Do not confuse with real kernel time $t$ or with canonical spacetime coordinates. |
 | $t$ | Real part of complex time $\tau$ | Canonical anchor | Compatible with canonical UBT real time. |
-| $\phi$ | Positive damping parameter of the reduced toy kernel | Bridge | Not canonically identical to compact UBT $\psi$; a map must be derived. |
-| $\tau_{\rm UBT}$ | Canonical complex time | Canonical anchor | $t+i\psi$ with compact internal $\psi$. |
-| $\tau_J$ | Jacobi modular parameter | Mathematical theta variable | Lives in the upper half-plane. In the established KK heat trace, $\tau_J=i s/(\pi R_\psi^2)$. |
+| $\phi$ | Imaginary diffusion component of $\tau$ in sprint notation | Bridge | In canonical UBT-facing notation this should map to $\psi$, because $\psi$ is the reserved scalar imaginary time component. |
+| $\tau$ | Complex time parameter | Canonical anchor | In UBT, $\tau = t + i\psi$ is the isotropic limit of $T_B = t + i\psi + j\chi + k\xi$. |
 | $S_s(t,\phi)$ | Reduced theta amplitude / projected propagator-like observable | Bridge | Compatible with a reduced operator viewpoint, but not the full canonical field. |
 | $\Theta_s(t,\phi)$ | Energy-like observable | Bridge | Strong notation conflict with canonical $\Theta(q,\tau)$. Prefer $\mathcal{E}_s(t,\psi)$ in UBT-facing text. |
 
