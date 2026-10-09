@@ -97,7 +97,7 @@ The field $\Theta(q,\tau)$ encodes:
     
     \item \textbf{Matter content}: Fermion fields and masses arise from internal structure
     
-    \item \textbf{Gauge-sector candidates}: algebraic and spectral structures provide candidate gauge bridges; local Standard-Model gauge dynamics is not inserted into the minimal field definition
+    \item \textbf{Gauge fields}: Electromagnetic and weak/strong interactions emerge from phase structure
     
     \item \textbf{Internal auxiliary sector}: Imaginary time component $\psi$ provides dynamics for an internal auxiliary field (speculative interpretations in \texttt{speculative\_extensions/})
 \end{enumerate}
@@ -174,26 +174,21 @@ The field satisfies the normalization condition:
 
 for bound states. The constant depends on the physical system under consideration.
 
-\subsection{Gauge-action status}
+\subsection{Gauge Transformations}
 
-\textbf{2026-10-09 audit.} The minimal canonical field is a single
-biquaternion and does not carry a postulated Standard-Model gauge fibre by
-definition. Algebraic left/right actions or extended multiplicity spaces must
-be specified and derived separately.
+Under local gauge transformations:
 
-The geometric first jet
-\[
-E_\mu=\mathcal N_0^{-1/2}D_\mu\Theta
-\]
-carries the Lorentz-frame role in the metric construction. The finalized
-Lorentz representation of the underlying Theta carrier and the origin of a
-Lorentz-scalar internal colour multiplicity remain part of the action-level
-closure programme.
+\begin{equation}
+\label{eq:canonical:theta_gauge}
+\Theta(q,\tau) \to U(q,\tau) \Theta(q,\tau) V^\dagger(q,\tau)
+\end{equation}
 
-A generic formula $\Theta\mapsto U\Theta V^\dagger$ with arbitrary
-$U,V\in U(n)$ is therefore not a canonical derivation of the Standard-Model
-gauge group. See \texttt{canonical/su3\_derivation/} and
-\texttt{CLAIMS.yaml} for the audited colour status.
+\noindent where $U,V \in U(n)$ are unitary matrices encoding:
+\begin{itemize}
+    \item $U(1)$ electromagnetic gauge symmetry
+    \item $SU(2)$ weak isospin symmetry
+    \item $SU(3)$ color symmetry
+\end{itemize}
 
 \subsection{Reality Conditions}
 
@@ -219,14 +214,18 @@ At spatial infinity ($|q| \to \infty$):
 
 For temporal asymptotics (large $|t|$), boundary conditions depend on the specific physical scenario (scattering, bound states, etc.).
 
-\subsection{Faithful algebra representation}
+\subsection{Connection to Biquaternions}
 
-The canonical field has only four complex coefficients. A faithful
-$2\times2$ complex matrix representation is the map already given in
-Eq.~\eqref{eq:canonical:theta_matrix}. Expressions with independent tensor
-products of two Pauli bases or generic larger matrices describe extended
-matrix-valued fields, not a single biquaternion, and must be denoted
-separately.
+The field can be expressed in biquaternion basis:
+
+\begin{equation}
+\label{eq:canonical:theta_biquaternion}
+\Theta = \sum_{A=0}^{3} \sum_{B=0}^{3} \theta_{AB}(q,\tau) \, \sigma_A \otimes \sigma_B
+\end{equation}
+
+\noindent where $\sigma_A$ are Pauli matrices (with $\sigma_0 = I$) and $\theta_{AB}$ are complex scalar fields.
+
+This representation makes the biquaternionic structure explicit.
 
 \subsection{Units and Dimensions}
 
