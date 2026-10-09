@@ -118,6 +118,10 @@ claims:
     - 'GAP-RPSI-ONELOOP-SCALE: CLOSED AS NO-GO [L1] — for the uniformly rescaled massless torus Laplacian, the zeta-regularised determinant has only logarithmic scale dependence and no finite isolated one-loop minimum'
     - 'GAP-RPSI-INVERSION-SELECTION: CLOSED AS NO-GO [L1] — inversion symmetrisation of that logarithmic scale potential is flat for all radii; the self-dual radius is a symmetry fixed point, not a dynamically selected minimum'
     - 'GAP-TORUS-SHAPE-POTENTIAL: OPEN — derive a genuine action-level dimensionless shape/complex-structure modulus and an effective potential with certified minima'
+    - 'GAP-TORUS-MASSLESS-ZETA-SHAPE: CLOSED AS NO-GO [STD/L1 audit] — for a genuine fixed-area flat T2, the zeta-regularised massless scalar determinant is proportional to Im(tau_mod)|eta(tau_mod)|^4; square tau=i is the unique determinant maximum within rectangular tori but a saddle in full moduli, while the hexagonal torus is the determinant maximum among all fixed-area flat tori'
+    - 'GAP-TORUS-TERM-HESSIAN: CLOSED AS INVALID METHOD — the older positive second variation obtained by differentiating the divergent sum sum_{m,n} log lambda_{m,n} term by term is not the Hessian of the zeta-regularised determinant and cannot prove square-torus stability'
+    - 'GAP-TORUS-BOSONIC-ONELOOP-MIN: CLOSED AS NO-GO — for a real Gaussian boson Gamma_1=+(1/2) log det prime Delta; the massless fixed-area determinant tends to zero toward the cusp, so the isolated one-loop effective action has no finite global modulus minimum'
+    - 'GAP-TORUS-MASSIVE-INTERACTING-SHAPE: OPEN — a genuine massive/interacting UBT Hessian requires its own regularised determinant and bounded effective modulus potential; the massless eta-function result cannot be transferred without calculation'
     forbidden_wording:
     - one-loop determinant proves R_psi equals R_t
     - self-dual symmetry fixed point is automatically a dynamical vacuum minimum
