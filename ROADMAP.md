@@ -10,38 +10,6 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-## Immediate programme update — 2026-10-09
-
-The October programme is now theorem-gated and is detailed in
-RESEARCH_PRIORITIES_2026-10-09.md.
-
-| Order | Active target | Exit criterion |
-|---|---|---|
-| 1A | Theta / complex-time role audit | **Free S1 sector closed:** ordinary Jacobi heat kernel; interacting/composite kernel classification remains open |
-| 1B | SU(3) dynamics bridge | **Composite non-flat projector connection exists kinematically;** action/Hessian selection, SU3 determinant reduction, unrestricted YM and g_s remain open |
-| 2 | CMB full-covariance falsification | Protocol and fixed-model comparator implemented; independent H3-vs-H2 evaluation remains open |
-| 3 | Theta torus-potential selection | **Deferred/no-go for current single-circle topology;** reactivate only after a genuine second compact cycle/rank-two modulus is derived |
-
-New SU(3) algebraic progress: the quaternion-adjoint spin-1 triple plus symmetric
-traceless quadrupoles gives all eight Gell-Mann directions as a 3+5 operator
-decomposition. A separate exact no-go shows that one minimal two-sided
-A_mu Theta - Theta B_mu derivative cannot carry the full local SU(3) algebra.
-GAP-SU3-DYN therefore remains OPEN but is now sharply localized to the
-action-origin of an endomorphism-valued colour connection.
-
-The CMB track is no longer allowed to promote diagonal-spectrum features alone;
-the primary topology test is full harmonic covariance, with TT/TE/EE prioritized
-and BB secondary unless independently predicted.
-
-Additional October result: the exact free-circle heat-kernel mapping is
-z_theta=(psi-psi')/L and tau_theta=4 pi i s/L^2, so canonical complex time
-tau_UBT=t+i psi is not automatically the Jacobi modulus. A separate Theta-defined
-timelike-line projector construction supplies a rank-three moving colour bundle with
-curvature P(dP wedge dP)P and an exact nonzero traceless witness; this narrows but does
-not close GAP-SU3-DYN.
-
----
-
 ## Immediate programme update — 2026-07-27
 
 The active GR/quantum bridge is the canonical-relation generalized-Dirac route.
