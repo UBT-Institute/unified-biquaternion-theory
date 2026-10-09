@@ -91,6 +91,9 @@ claims:
     - 'GAP-THETA-T-LAW: CLOSED [STD/L0] — in the standard Jacobi convention theta_3(0|tau+1)=theta_4(0|tau) and theta_3(0|tau+2)=theta_3(0|tau); historical T-invariance arose from mixing this with the q=exp(2 pi i tau) convention for theta_3(0|2tau)'
     - 'GAP-THETA3-ZERO: CLOSED AS NO-GO [STD] — theta_3(0|tau) is nonzero throughout the upper half-plane by Jacobi product formula; zero-based stabilization mechanisms using theta_3(0|tau)=0 are invalid'
     - 'GAP-THETA-MODULAR-ACTION: OPEN — Poisson/Jacobi duality of a spectral heat trace does not imply SL(2,Z) invariance of the full UBT action, measure, interactions or physical complex time'
+    - 'GAP-THETA-NAME-CONFLATION: CLOSED — the fundamental field named Theta is a C tensor H-valued field, not by definition a Jacobi theta function; Jacobi modular properties cannot be transferred from notation alone'
+    - 'GAP-THETA-HEAT-KERNEL-CLASS: CLOSED [L1 in free S1 spectral sector] — the free compact-circle heat trace is an ordinary Jacobi theta constant with the standard theta-group/Poisson transformation law, not a mock-theta object'
+    - 'GAP-THETA-FULL-MODULAR-CLASS: OPEN — an interacting full-field modular/mock-modular classification requires an action-derived quantum or spectral kernel beyond the free heat trace'
     forbidden_wording:
     - UBT complex time is the Jacobi modular parameter
     - psi to zero is the same limit as Im tau_J to zero for every UBT theta construction
