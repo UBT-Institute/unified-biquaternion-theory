@@ -78,6 +78,19 @@ claims:
     - metric is obtained by an arbitrary projection
     - Maxwell field generates vacuum Schwarzschild
     - the legacy Schwarzschild ansatz is a valid canonical single-Theta solution
+  theta_complex_time:
+    status: DERIVED_WITH_ASSUMPTIONS
+    evidence:
+    - canonical/bridges/theta_parameter_separation.md
+    - canonical/gr_closure/gap_10d_induced_gravity_endgame.tex
+    assumptions:
+    - 'GAP-THETA-TAU-NAIVE: CLOSED AS NO-GO — canonical UBT complex time tau_UBT=t+i psi with compact psi is not canonically identical to the Jacobi modular parameter tau_J in the upper half-plane'
+    - 'GAP-THETA-KK-MODULUS: CLOSED [L1] IN THE CONDITIONAL SPECTRAL BRANCH — the compact-psi heat trace sum_n exp(-s n^2/R_psi^2) equals theta_3(0|tau_J) with tau_J=i s/(pi R_psi^2), and Jacobi S inversion is the corresponding Poisson resummation'
+    - 'Physical coupling between tau_UBT and a Jacobi modulus remains OPEN and must be derived from the finalized action'
+    forbidden_wording:
+    - UBT complex time is the Jacobi modular parameter
+    - psi to zero is the same limit as Im tau_J to zero for every UBT theta construction
+    - modular continuation proves propagation in negative imaginary UBT time
   gauge_group:
     status: DERIVED_WITH_ASSUMPTIONS
     evidence:
