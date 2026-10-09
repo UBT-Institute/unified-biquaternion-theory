@@ -1,3 +1,55 @@
+## Update 2026-10-10: focused UBT programme and SU(3) audit
+
+The October research cycle is focused on four items: complex-time/theta
+classification, the dynamical colour bridge, full-covariance CMB falsification,
+and torus-modulus selection.  No open dynamical claim is promoted by this
+update.
+
+### SU(3): what is actually established
+
+- The algebraic stabilizer construction on the selected three-dimensional
+  complex carrier is exact.
+- The spin/quadrupole operator identities reproduce the eight Gell-Mann
+  directions exactly.
+- A projected rank-three bundle can carry nonzero traceless curvature, but the
+  simplest projective connection is too constrained to supply the linearized
+  perturbative gluon sector.
+- A global SU(3) stabilizer does not imply local gauge invariance.
+- The raw four-complex-dimensional biquaternion Lorentz carrier has only a
+  scalar complex-linear Lorentz commutant, so it cannot simultaneously carry a
+  faithful internal SU(3) commuting with Lorentz.
+- Repeated Lorentz representations inside a finite jet are not independent
+  colour fields.  The proposed second-jet channel triplet is a rank-four
+  holonomic image of one field, and a generic copy-space SU(3) rotation does
+  not preserve that image.
+
+Therefore the direct "jet multiplicity = physical colour triplet" route is
+closed as a no-go.  The remaining one-field routes are composite/projected
+bundles or an exact collective/auxiliary rewrite whose local SU(3) redundancy
+is a true redundancy of the rewritten theory and whose low-energy gauge modes
+are healthy.
+
+### Complex time
+
+Strict frame-independent Cauchy-Riemann holomorphy in tau=t+i psi is
+incompatible with generic 4D Lorentz-covariant spacetime dependence if psi is
+an independent Lorentz scalar.  The minimal audit therefore treats psi as an
+independent fiber variable and reserves strict holomorphy for declared reduced
+theta sectors.  A fully covariant holomorphic alternative would require a
+larger complexified-spacetime architecture.
+
+### Conditional induced Yang-Mills statement
+
+If a gauge-fixed UBT Hessian is genuinely Laplace type and genuinely carries an
+SU(3) connection, the standard heat-kernel a4 coefficient contains the local
+tr(F_mu_nu F^mu_nu) invariant.  This is conditional on deriving the connection
+from the same microscopic UBT dynamics and does not determine g_s by itself.
+
+See:
+- research_tracks/T2_GAUGE/su3_dynamics_endgame_2026_10.md
+- research_tracks/T2_GAUGE/su3_holonomic_jet_no_go.md
+- research_tracks/priority_program_2026_10/README.md
+
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,127 +61,6 @@ policy: AI_PROVENANCE.md
 notice: The author has read the substance and accepts editorial responsibility.
 UBT-AI-PROVENANCE-END
 -->
-
-### Local-frame theorem and universal-jet route — 2026-10-10
-
-The logical gauge-principle boundary is now explicit.  A global (SU(3))
-stabilizer does not imply local gauge invariance.  However, if the single UBT
-field and its composites canonically determine a rank-three Hermitian bundle
-with a nonvanishing complex volume form, local (SU(3)) is automatically the
-redundancy of oriented orthonormal colour frames; its connection transforms
-with the standard inhomogeneous law.
-
-A rectangular frame (W\in\mathbb C^{N\times3}) has
-(A=W^\dagger dW) and
-(F=dW^\dagger(1-WW^\dagger)\wedge dW); unlike a square (N=3)
-Maurer--Cartan frame, (N>3) can carry nonzero curvature.  Standard
-Narasimhan--Ramanan universal-connection theory shows that sufficiently large
-projected connections are in principle rich enough to represent generic
-unitary connections.
-
-This does not close the microscopic UBT gap.  The remaining constructive target
-is to derive, from the finalized one-field action, a canonical finite-jet
-classifying map (J^r\Theta\to\mathrm{Gr}_3(\mathbb C^N)), its determinant
-trivialization/volume form, healthy quadratic gauge modes and normalization.
-
-### Lorentz/internal colour compatibility audit — 2026-10-10
-
-The exact (SU(3)) stabilizer on the fixed traceless carrier remains
-mathematically valid, but its direct interpretation as Standard-Model colour
-is now restricted: the physical Lorentz spin-congruence representation mixes
-the scalar and traceless parts under boosts, and the common complex-linear
-commutant on the raw biquaternion carrier is only scalar.  Hence a faithful
-nonabelian internal (SU(3)) cannot act on that same irreducible carrier while
-commuting with Lorentz.
-
-A Lorentz-compatible route exists on **multiplicity spaces** of repeated
-Lorentz irreps.  The full second jet contains three vector copies, but mixing
-the zero- and second-derivative copies requires an undetermined scale.  At a
-single fixed 4D derivative order only two vector channels are available.
-
-A conditional UBT-specific escape is now sharply identified: if the imaginary
-complex-time coordinate (psi) is an independent Lorentz-scalar fiber
-direction in the microscopic variational problem, then
-[
-(Box_4Theta^ho, 
- partial^hopartial_sigmaTheta^sigma, 
- partial_psi^2Theta^ho)
-]
-are three same-order Lorentz-vector channels.  Their copy index is a natural
-place for an internal (SU(3)) commuting with Lorentz.  Whether
-(partial_psi) is genuinely independent is now a joint
-theta/complex-time and gauge-sector decision problem.
-
-### Complex-time holomorphy/Lorentz fork — 2026-10-10
-
-A new exact no-go separates two meanings of complex time.  If
-(psi) is an independent Lorentz-scalar fiber coordinate, then demanding the
-Cauchy--Riemann relation
-(partial_psiTheta=ipartial_tTheta) in every inertial frame is
-incompatible with generic spacetime dependence: opposite nontrivial boosts
-force the relevant derivatives to vanish.
-
-Therefore strict Jacobi/complex-time holomorphy cannot simultaneously be a
-universal microscopic constraint and use an isolated Lorentz-scalar
-(psi).  The active minimal audit provisionally treats (psi) as an
-independent fiber variable and regards holomorphy as a reduced/theta-sector
-condition.  A fully Lorentz-covariant holomorphic alternative would require a
-declared complexified spacetime with imaginary spatial partners.
-
-This keeps the conditional same-order jet triplet
-((Box_4Theta,
-abla
-abla!cdot!Theta,partial_psi^2Theta))
-mathematically open pending derivation of the (psi)-direction kinetic and
-measure structure from the action.
-
-### First-jet action colour no-go — 2026-10-10
-
-The currently declared kinetic/potential family depends locally on the field
-value and first jet.  Its Lorentz representation is multiplicity-free,
-[
-(	frac12,	frac12)oplus(0,0)oplus(1,0)oplus(0,1)oplus(1,1),
-]
-and an exact (20	imes20) generator calculation gives a five-dimensional
-linear commutant with no (M_3(mathbb C)) multiplicity block.  Therefore the
-present first-jet action family cannot by itself derive a Lorentz-commuting
-internal (SU(3)) through a copy-space symmetry.
-
-A related exact rank result excludes unique reconstruction of all eight
-(su(3)) connection components from one nonzero triplet: the orbit map has
-rank five and an (su(2)) stabilizer of dimension three.  At a colour-singlet
-zero triplet it fixes none.
-
-The minimum viable single-fundamental-field route is consequently a
-second/higher-jet colour multiplicity, or a first-order auxiliary formulation
-provably equivalent to it.  The independent-(psi) total-second-order
-triplet is the leading zero-extra-scale candidate.
-
-### Holonomic-jet colour correction — 2026-10-10
-
-The previously identified repeated Lorentz-vector contractions in \(J^2\Theta\)
-do **not** constitute three independent internal colour fields.  On an actual
-Fourier mode of one field,
-\[
-(\Box_4\Theta^\mu,\ 
- \partial^\mu\partial_\nu\Theta^\nu,\ 
- \partial_\psi^2\Theta^\mu)
-\]
-is a rank-four holonomic image of the four amplitudes \(\Theta^\mu\), not a
-twelve-component independent triplet.  An exact witness shows that a generic
-copy-space Gell--Mann rotation takes this image outside the holonomic jet
-subspace.
-
-Accordingly, the direct "jet multiplicity = colour triplet" interpretation is
-withdrawn.  The independent-\(\psi\) branch remains relevant to the
-complex-time/action audit, but no longer supplies a Standard-Model colour
-triplet by itself.
-
-The leading one-field colour question is now whether the microscopic theory
-admits an **exact collective/auxiliary rewrite** with a genuine local \(SU(3)\)
-redundancy, no new independent UV data, and a healthy induced Yang--Mills
-sector.  Otherwise the minimal field-content claim must be reconsidered before
-a first-principles QCD derivation can be asserted.
 
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
