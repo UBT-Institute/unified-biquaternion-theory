@@ -113,6 +113,20 @@ claims:
     - one-loop determinant proves R_psi equals R_t
     - self-dual symmetry fixed point is automatically a dynamical vacuum minimum
     - E_3(0) equals -3 for the standard zero-mode-subtracted cubic Epstein zeta
+  cmb_tests:
+    status: EXPLORATORY_WITH_NO_GO
+    evidence:
+    - research_tracks/research_front/cmb_covariance/README.md
+    - research_tracks/research_front/cmb_covariance/internal_psi_spatial_cutoff_no_go.md
+    - docs/physics/cmb_status.md
+    assumptions:
+    - 'GAP-CMB-PSI-IR-CUTOFF: CLOSED AS NO-GO [L1] — compact internal S1_psi quantizes internal momentum and yields a KK mass tower, but the n=0 branch still permits arbitrarily small ordinary spatial k on noncompact physical space; k_min=1/R_psi does not follow'
+    - 'Historical low-l cutoff and Delta-l=137 comb calculations are exploratory signal families/null tests, not core UBT predictions'
+    - 'P3-COVARIANCE: ACTIVE — compare pre-registered H3 against H0 LambdaCDM, H1 ordinary compact topology and H2 topology plus generic oscillatory primordial structure using full TT/TE/EE covariance; BB secondary unless theory predicts otherwise'
+    forbidden_wording:
+    - compact psi directly imposes a spatial k_min equal to 1/R_psi
+    - R_psi equals c/H0 from first principles
+    - the historical CMB comb is a confirmed UBT prediction
   gauge_group:
     status: DERIVED_WITH_ASSUMPTIONS
     evidence:
