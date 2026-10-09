@@ -69,6 +69,16 @@ the internal S1_psi fibre is not a spatial identification.  Therefore H1/H2
 are external null models and H3 is BLOCKED until UBT derives a specific
 covariance-generating mechanism or global topology-selection principle.
 
+## Fundamental Theta versus Jacobi theta — 2026-10-09
+
+The symbol Theta names the fundamental C tensor H-valued field; it is not by
+definition a Jacobi theta function.  The exact Jacobi object currently
+established in the minimal theory is the free compact-S1 heat kernel/trace.
+Therefore modularity of that spectral trace does not imply modularity of the
+full interacting field or action.  Full-field vacuum-correlator theta kernels
+remain speculative until the quantum Hilbert space, vacuum and operator
+dynamics are derived.
+
 ## P1 modular classification — 2026-10-09
 
 The theta/complex-time programme is now sharply partitioned:
