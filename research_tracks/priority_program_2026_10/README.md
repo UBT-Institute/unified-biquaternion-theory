@@ -73,3 +73,78 @@ P4 waits until a genuine modulus is derived.
 
 All status promotions must be mirrored in \`CLAIMS.yaml\` and
 \`STATUS_OF_UBT.md\`.
+
+
+## Current scoreboard — 2026-10-10
+
+### P1 — theta / complex time: CLOSED FOR CURRENTLY DEFINED OBJECTS
+
+Established:
+- physical `tau_UBT=t+i psi` is dimensionful and is not canonically the
+  dimensionless Jacobi parameter;
+- the free compact-circle heat trace is an ordinary Jacobi theta function with
+  `tau_J=i s/(pi R_psi^2)`;
+- in the `exp(pi i n^2 tau)` convention the scalar theta group is
+  `Gamma_theta=<S,T^2>`, index 3 in `SL(2,Z)`;
+- generic finite weighted reduced sums are not modular, and are not
+  mock-modular without a separately derived completion;
+- strict microscopic holomorphy in `t+i psi` with scalar `psi` conflicts
+  with generic frame-independent Lorentz dynamics.
+
+Open beyond current objects: full interacting UBT modular covariance.
+
+### P2 — SU(3) dynamics: NARROWED, NOT CLOSED
+
+Established:
+- exact algebraic SU(3) stabilizer and 3+5 Gell-Mann operator decomposition;
+- Lorentz-equivariant moving rank-three carrier on the timelike branch;
+- exact conditional collective-frame redundancy `SU(1,3)/SU(3)`;
+- minimal norm-preserving bimodule contains exactly
+  `so(1,3)+u(1)_phase`, not full colour SU(3);
+- adding full raw-carrier colour to the boost sector closes to `su(1,3)`,
+  which conflicts with the current sharp/determinant GR core;
+- determinant-sensitive generic vacuum breaks candidate colour
+  `SU(3)->SO(3)`;
+- tree-level one-biquaternion Hessian cannot be an invertible rewrite of the
+  perturbative eight-gluon UV sector;
+- weak currents/background heat-kernel induction do not by themselves create a
+  non-Abelian gauge theory.
+
+Primary open target:
+derive a quantum/collective 1PI action with genuine local SU(3) redundancy,
+Yang-Mills ultraviolet vertices, and BRST/Slavnov-Taylor identities.  A
+gauge-invariant physical massless gluon pole is not required in a confining IR
+theory.
+
+### P3 — CMB full covariance: STATISTICAL INTERFACE READY, THEORY BLOCKED
+
+Implemented:
+- H0/H1/H2/H3 full-covariance likelihood/KL interface;
+- fail-closed H3 template requirement;
+- out-of-sample H3-vs-H2 decision rule.
+
+Closed negative inference:
+compact internal `S1_psi` produces KK masses but does not impose
+`k_spatial >= 1/R_psi`; the historical low-l spatial cutoff is
+phenomenological.
+
+Primary open target:
+derive the constrained scalar perturbation Hessian, the map
+`delta Theta -> R`, the initial-state prescription, and therefore the frozen
+primordial covariance `P_UBT`.
+
+### P4 — torus-modulus selection: MASSLESS ONE-LOOP BRANCH CLOSED AS NO-GO
+
+Established:
+- overall massless one-loop scale determinant has no finite selected radius;
+- inversion symmetrisation is flat rather than self-dual stabilising;
+- the fixed-area massless T2 determinant is
+  `Im(tau_mod)|eta(tau_mod)|^4`;
+- square is the rectangular determinant maximum but a saddle in full moduli;
+- hexagonal is the determinant maximum among fixed-area flat tori;
+- the standard positive bosonic one-loop log-determinant has no finite global
+  modulus minimum by itself.
+
+Primary open target:
+derive a genuine massive/interacting/backreacted bounded
+`V_eff(tau_mod,tau_mod_bar)` from the finalized UBT Hessian/action.
