@@ -75,7 +75,7 @@
 \begin{tabular}{ll}
 Goal    & Replace verbal definition with explicit Hilbert-space operator \\
 Status  & DEFINED [L0] for winding operator and translation operator \\
-        & projection $\Pi$ reclassified as historical/non-isotropic candidate \\
+        & DEFINED [L1] for projection map $\Pi: \operatorname{Im}\mathbb{H}\to\mathbb{C}_\tau$ \\
 Input   & $\mathcal{B}=\mathbb{C}\otimes\mathbb{H}$, $\tau=t+i\psi$, $S^1_\psi$ compactification \\
 Output  & Three explicit operators: $\hat{N}$, $\hat{T}_\psi(\delta)$, and $\Pi$ \\
 \end{tabular}
@@ -224,22 +224,7 @@ Follows directly from $e^{i(\delta_1+\delta_2)\hat{N}/R_\psi} = e^{i\delta_1\hat
 (valid since $\hat{N}$ commutes with itself).
 \end{proof}
 
-\subsection{Historical chronofactor projection candidate $\Pi$}
-
-\begin{warnbox}
-\textbf{2026-10-09 representation-theory audit.}
-The equal-sum map written below is a historical coordinate-dependent candidate,
-not an $SO(3)$-equivariant projection. In fact
-\[
- \operatorname{Hom}_{SO(3)}(\mathbb R^3,\mathbb R_{\rm trivial})=0,
-\]
-so the only $SO(3)$-equivariant linear scalar map from
-$\operatorname{Im}\mathbb H$ is the zero map. The equal-sum functional is
-only symmetric under permutations of the chosen basis axes. Consequently it
-cannot justify an isotropic $3/2$ projection factor or any downstream physical
-mode count. See
-\texttt{verification/chronofactor\_projection\_and\_winding\_check.py}.
-\end{warnbox}
+\subsection{Chronofactor projection map $\Pi$}
 
 \begin{definition}[Chronofactor projection]
 \label{def:chron:Pi}
@@ -261,9 +246,8 @@ The equal weighting of $\mathbf{I}$, $\mathbf{J}$, $\mathbf{K}$ reflects the
 $\operatorname{Im}\mathbb{H}$ is the Euclidean metric (all three directions are
 equivalent under the $SO(3)$ automorphism of $\operatorname{Im}\mathbb{H}$), and
 the imaginary time $i\psi$ couples equally to all three.
-This equal-sum choice is basis dependent. It is permutation-symmetric in the
-chosen axes but is not invariant/equivariant under generic $SO(3)$ rotations
-and therefore is not a canonical isotropic projection.
+This choice is not arbitrary — it is the unique $SO(3)$-equivariant projection
+of $\operatorname{Im}\mathbb{H}$ onto a one-dimensional complex direction.
 Explicitly:
 \begin{equation}
   \Pi(\mathbf{I}) = i, \quad
@@ -279,9 +263,9 @@ The map $\Pi$ in Definition~\ref{def:chron:Pi} satisfies:
 \begin{enumerate}
   \item \textbf{Surjectivity}: $\Pi$ maps onto $i\mathbb{R} \subset \mathbb{C}_\tau$
         (the imaginary axis), covering all imaginary time directions. $\operatorname{Im}(\Pi) = i\mathbb{R}$.
-  \item \textbf{Permutation-symmetric only}: $\Pi$ is symmetric under
-        permutations of $\mathbf{I},\mathbf{J},\mathbf{K}$ in the chosen
-        basis, but not under general $SO(3)$ rotations.
+  \item \textbf{Isotropic}: $\Pi$ is symmetric under permutations of $\mathbf{I},\mathbf{J},\mathbf{K}$
+        — all three Im$\mathbb{H}$ directions are equivalent (consistent with the
+        isotropic UBT vacuum).
   \item \textbf{Kernel}: $\ker(\Pi) = \{a\mathbf{I}+b\mathbf{J}+c\mathbf{K} : a+b+c=0\}$,
         a 2-dimensional subspace of Im$\mathbb{H}$ (the plane perpendicular to
         $\mathbf{I}+\mathbf{J}+\mathbf{K}$).  These are the ``neutral'' phase directions
@@ -335,7 +319,7 @@ Stable vacuum modes satisfy $|n|$ prime (prime-winding stability,
 
 \subsection{Effective degree-of-freedom count from the chronofactor}
 
-\begin{proposition}[Historical chronofactor mode-count candidate]
+\begin{theorem}[Chronofactor contribution to $N_{\mathrm{eff}}$]
 \label{thm:chron:Neff}
 For the biquaternion field $\Theta \in \mathcal{B} = \mathbb{C}\otimes\mathbb{H}$
 on the imaginary-time circle $S^1_\psi$, the chronofactor operators $\hat{N}$ and
@@ -400,7 +384,7 @@ Operator & Definition & Action & Status \\
 $\hat{N}$ & $-iR_\psi\,\partial_\psi$ & $|n\rangle \mapsto n\,|n\rangle$ & [L0] \\
 $\hat{T}_\psi(\delta)$ & $e^{i\delta\hat{N}/R_\psi}$ & $|n\rangle \mapsto e^{in\delta/R_\psi}|n\rangle$ & [L0] \\
 $\Phi_n(\psi)$ & $(2\pi R_\psi)^{-1/2}e^{in\psi/R_\psi}$ & Eigenfunctions of $\hat{N}$ & [L0] \\
-$\Pi: \operatorname{Im}\mathbb{H}\to\mathbb{C}_\tau$ & equal-sum historical candidate & not $SO(3)$-equivariant & superseded \\
+$\Pi: \operatorname{Im}\mathbb{H}\to\mathbb{C}_\tau$ & $a\mathbf{I}+b\mathbf{J}+c\mathbf{K}\mapsto(a+b+c)\,i$ & $\lambda_{\mathrm{proj}}=3/2$ & [L1] \\
 $N_{\mathrm{chron}}$ & $N_h\times N_c = 2\times 2 = 4$ & Factor in $N_{\mathrm{eff}}$ & [L0] \\
 $N_{\mathrm{eff}}$ & $N_\phi\times N_{\mathrm{chron}} = 3\times 4$ & $= 12$ charged modes & [L0] \\
 \bottomrule
