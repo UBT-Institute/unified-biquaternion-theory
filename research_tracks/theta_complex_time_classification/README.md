@@ -32,3 +32,25 @@ No equality among these variables is assumed.
 A theorem or obstruction note with explicit transformation matrices, weight,
 multiplier, domain and proof-level status. Numerical pattern matching alone is
 insufficient.
+
+
+## First result — parameter separation
+
+The first classification step is now closed:
+
+- tau_UBT=t+i psi is **not** canonically the Jacobi modular parameter.
+- The existing compact-fibre spectral branch has an exact Jacobi modulus
+  \[
+  \tau_J(s)=\frac{i s}{\pi R_\psi^2},
+  \]
+  because
+  \[
+  \sum_n e^{-s n^2/R_\psi^2}
+  =\vartheta_3(0|\tau_J(s)).
+  \]
+- Jacobi S inversion is exactly Poisson resummation of the KK tower.
+- Therefore Im(tau_J)->0+ means the proper-time UV limit s->0+ in this
+  established bridge, not automatically the physical limit psi->0.
+
+Next: search for any other action-derived lattice/quadratic-form kernel whose
+modular parameter couples nontrivially to tau_UBT.
