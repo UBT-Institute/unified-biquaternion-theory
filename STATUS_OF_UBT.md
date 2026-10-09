@@ -165,6 +165,30 @@ Thus full colour \(SU(3)\) now requires an independently derived
 sector; the generic stable \(\lambda_2>0\) pointwise branch retains only the
 three-direction \(SO(3)\) symmetry.
 
+### Positive timelike kinetic candidate — 2026-10-10
+
+The constant \(SU(1,3)\)-invariant pairing is indefinite and gives a
+fixed-background target-sign obstruction.  A field-dependent alternative is
+nevertheless available on the timelike stratum:
+\[
+K_\Theta^+(u,v)
+=
+-u^\dagger Gv
++
+2\frac{(u^\dagger G\Theta)(\Theta^\dagger Gv)}
+       {\Theta^\dagger G\Theta}.
+\]
+For \(h_B(\Theta,\Theta)>0\) this metric is positive definite,
+\(SU(1,3)\)-covariant, and becomes the identity at the timelike reference
+vacuum.  Combined with the enhanced \(\lambda_2=0\) pointwise potential it
+gives, at fixed background, one positive-kinetic radial massive mode and seven
+positive-kinetic tangent zero modes transforming as a complex triplet plus a
+real singlet under the isotropy \(SU(3)\).
+
+This is a new action-selection candidate, not a canonical status upgrade.  Its
+compatibility with the sharp-based tetrad/metric relation, the full constrained
+Hessian, the null stratum and the single-action GR branch remains open.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
