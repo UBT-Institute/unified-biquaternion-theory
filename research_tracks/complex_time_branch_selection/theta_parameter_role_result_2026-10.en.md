@@ -130,11 +130,45 @@ derivation this remains a modular model, not canonical UBT spacetime topology.
 | reduced bridge (	au_{m bridge}=t+ipsi) | mathematically valid bridge ansatz |
 | UBT kernel belongs to a Weil/Hermitian/mock theta class | OPEN |
 
+<!-- BILINGUAL-UNIT: theta-role-2026.classification -->
+## 5. Free-sector theta classification
+
+For the fixed-background compact-psi fluctuation operator with spectrum
+[
+lambda_n=rac{n^2}{R_psi^2},
+]
+the heat trace is exactly
+[
+operatorname{Tr}e^{-sH_psi}
+=
+sum_{ninmathbb Z}e^{-s n^2/R_psi^2}
+=
+artheta_3!left(0,middle|,rac{i s}{pi R_psi^2}ight).
+]
+
+Therefore the controlled free/fixed-background compact sector is classified as a
+**classical Jacobi / rank-one lattice theta function**.  It is not a mock theta
+function, and no mock-modular completion or resurgence hypothesis is needed for this
+free sector.
+
+This agrees with the existing fixed-background Hessian result: after controlled
+Euclidean continuation its principal part is Laplace type, so the standard heat-kernel
+construction is the correct mathematical object.
+
+Howard's Weil-representation framework is therefore useful as a representation-theory
+benchmark for this ordinary lattice theta sector.  Costin--Dunne--Saraeb becomes relevant
+only if a later interacting/composite kernel is proved to have mock/modular asymptotics
+or a nontrivial natural-boundary/resurgent problem.
+
 <!-- BILINGUAL-UNIT: theta-role-2026.next -->
-## 5. Remaining P1 target
+## 6. Remaining P1 target
 
-The remaining nontrivial task is no longer symbol identification.  It is to derive from
-the canonical action an operator or correlation function whose kernel is a specified
-theta object, then classify that object under the Jacobi/Weil/Hermitian/mock hierarchy.
+P1 is **closed for the free compact heat-kernel sector**.
 
-This narrows P1 but does not yet close the full theta/complex-time audit.
+The remaining nontrivial task concerns the full interacting/composite Hessian or a
+canonical correlation function: derive it from the final action, determine its lower-order
+operator data, and only then ask whether the resulting kernel stays in the classical
+Jacobi/Weil class or moves to a more general modular object.
+
+Thus the direct parameter-role ambiguity is closed; the interacting theta classification
+remains open.
