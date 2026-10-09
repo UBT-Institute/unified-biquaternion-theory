@@ -14,8 +14,6 @@ UBT-AI-PROVENANCE-END
 -->
 
 
-> **2026-10-09 SCALE/MODULUS AUDIT OVERRIDE:** Preserve the fixed-volume shape calculation below as a conditional Euclidean-torus result only.  It is not a derivation from minimal canonical complex time, because a second compact real/Euclidean-time cycle is additional structure.  The separate historical claim that a one-loop overall-scale determinant dynamically selects the self-dual radius is now closed as a no-go: the scale dependence is logarithmic and inversion symmetrisation is flat.  See `research_tracks/theta_torus_potential/one_loop_scale_no_go.md`.
-
 # Self-Dual Torus Condition Verdict
 
 **Task**: `derive_or_reject_self_dual_torus_condition`  
