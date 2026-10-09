@@ -181,11 +181,11 @@ for bound states. The constant depends on the physical system under consideratio
 
 \subsection{Gauge-action status}
 
-The fundamental biquaternion index carries the spacetime/Lorentz action required by the geometric sector. It must not simultaneously be treated as an arbitrary $U(n)$ internal index.
+The geometric first jet $E_\mu=D_\mu\Theta/\sqrt{\mathcal N_0}$ carries the local Lorentz-vector/frame action.  The finalized representation of the underlying $\Theta$ carrier itself is still part of the connection/representation-selection problem and must be stated explicitly.
 
 The current exact colour audit gives two guardrails:
 \begin{enumerate}
-  \item On the same $M_2(\mathbb C)$ carrier with Lorentz action $X\mapsto SXS^\dagger$, the complex-linear commutant of the full Lorentz action is scalar only. Therefore a nontrivial Standard-Model internal $SU(3)$ cannot act on this same index while commuting with Lorentz transformations.
+  \item \textbf{Conditional same-carrier no-go:} if the same $M_2(\mathbb C)$ carrier is assigned the Lorentz four-vector action $X\mapsto SXS^\dagger$, its complex-linear Lorentz commutant is scalar only. In that representation a nontrivial Standard-Model internal $SU(3)$ cannot act on the same index while commuting with Lorentz transformations.
   \item The minimal two-sided action $X\mapsto A_\mu X-XB_\mu$ that preserves the canonical colour carrier and its complex volume reduces to the three quaternion-adjoint directions and does not furnish full $su(3)$.
 \end{enumerate}
 
@@ -193,7 +193,7 @@ Accordingly a generic formula
 \[
  \Theta\longmapsto U\Theta V^\dagger,\qquad U,V\in U(n),
 \]
-is not a canonical statement about all Standard-Model gauge factors acting on the core biquaternion field. Algebraic left/right actions may be used where their representation is explicitly specified, while physical internal colour requires a separately derived Lorentz-scalar multiplicity/mode carrier (or an equivalent internal bundle).
+is not a canonical statement about all Standard-Model gauge factors acting on the core biquaternion field. Algebraic left/right actions may be used where their representation is explicitly specified, while physical internal colour requires either (i) a separately derived Lorentz-scalar multiplicity/mode carrier, or (ii) a different action-derived representation of $\Theta$ whose Lorentz commutant contains the required internal algebra.
 
 The local QCD target and current candidate constructions are documented in \texttt{canonical/interactions/qcd.tex} and \texttt{canonical/su3\_derivation/}. The action-level gauge connection and coupling normalisation remain open.
 
