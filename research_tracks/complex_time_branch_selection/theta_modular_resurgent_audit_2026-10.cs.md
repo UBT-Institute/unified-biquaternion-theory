@@ -37,7 +37,7 @@ Tento dokument kanonický čas UBT nepředefinovává.
 Pro UBT řešení nebo kernel označovaný neformálně jako "theta-like" zjistit, zda existuje
 odvozené zobrazení
 \[
-\Phi:(t,\psi,\Theta,\ldots)\mapsto(z_\theta,\tau_\theta),
+\Phi:(t,\psi,\Theta,\ldots)\mapsto(z_\theta,\tau_\theta)
 \]
 pro které je kernel skutečně Jacobiho/mřížkovou theta funkcí nebo kontrolovaným
 zobecněním.
