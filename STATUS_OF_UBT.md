@@ -83,6 +83,28 @@ abla!cdot!Theta,partial_psi^2Theta))
 mathematically open pending derivation of the (psi)-direction kinetic and
 measure structure from the action.
 
+### First-jet action colour no-go — 2026-10-10
+
+The currently declared kinetic/potential family depends locally on the field
+value and first jet.  Its Lorentz representation is multiplicity-free,
+[
+(	frac12,	frac12)oplus(0,0)oplus(1,0)oplus(0,1)oplus(1,1),
+]
+and an exact (20	imes20) generator calculation gives a five-dimensional
+linear commutant with no (M_3(mathbb C)) multiplicity block.  Therefore the
+present first-jet action family cannot by itself derive a Lorentz-commuting
+internal (SU(3)) through a copy-space symmetry.
+
+A related exact rank result excludes unique reconstruction of all eight
+(su(3)) connection components from one nonzero triplet: the orbit map has
+rank five and an (su(2)) stabilizer of dimension three.  At a colour-singlet
+zero triplet it fixes none.
+
+The minimum viable single-fundamental-field route is consequently a
+second/higher-jet colour multiplicity, or a first-order auxiliary formulation
+provably equivalent to it.  The independent-(psi) total-second-order
+triplet is the leading zero-extra-scale candidate.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
