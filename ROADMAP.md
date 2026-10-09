@@ -10,23 +10,6 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-
-## Active focused programme — 2026-10-09
-
-The current research focus is now defined by
-`research_tracks/priority_program_2026_10/README.md`.
-
-Execution order:
-1. theta/complex-time analytic classification;
-2. GAP-SU3-DYN action-level bridge, with the machine-verified spin–quadrupole
-   decomposition as the current algebraic subresult;
-3. full-covariance CMB topology falsification test against H0-H3;
-4. torus-modulus theta-energy selection only after a genuine UBT modulus is derived.
-
-This update does **not** promote any open dynamical or phenomenological claim.
-The principal SU(3) gap remains derivation of a non-pure-gauge local
-End_C(V)-valued colour connection and its normalization from the canonical UBT action.
-
 ## Immediate programme update — 2026-07-27
 
 The active GR/quantum bridge is the canonical-relation generalized-Dirac route.
