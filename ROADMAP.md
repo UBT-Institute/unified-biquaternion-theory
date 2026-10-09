@@ -1,3 +1,28 @@
+## Immediate programme update — 2026-10-09
+
+The October programme is now theorem-gated and is detailed in
+RESEARCH_PRIORITIES_2026-10-09.md.
+
+| Order | Active target | Exit criterion |
+|---|---|---|
+| 1A | Theta / complex-time role audit | Explicit map to theta variables with verified transformation laws, or a no-go theorem |
+| 1B | SU(3) dynamics bridge | Action-derived non-flat colour connection, or an action-level no-go; representation alone is insufficient |
+| 2 | CMB full-covariance falsification | Frozen H0/H1/H2/H3 protocol with independent evaluation; H3 must beat generic oscillatory topology H2 |
+| 3 | Theta torus-potential selection | Activate only after deriving V_eff(tau_mod) from UBT; then certify the minimum |
+
+New SU(3) algebraic progress: the quaternion-adjoint spin-1 triple plus symmetric
+traceless quadrupoles gives all eight Gell-Mann directions as a 3+5 operator
+decomposition. A separate exact no-go shows that one minimal two-sided
+A_mu Theta - Theta B_mu derivative cannot carry the full local SU(3) algebra.
+GAP-SU3-DYN therefore remains OPEN but is now sharply localized to the
+action-origin of an endomorphism-valued colour connection.
+
+The CMB track is no longer allowed to promote diagonal-spectrum features alone;
+the primary topology test is full harmonic covariance, with TT/TE/EE prioritized
+and BB secondary unless independently predicted.
+
+---
+
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
