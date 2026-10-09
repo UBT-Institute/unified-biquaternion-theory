@@ -12,6 +12,8 @@ UBT-AI-PROVENANCE-END
 -->
 
 
+> **2026-10-09 AUDIT OVERRIDE:** The historical [L0] wording below overstates the current result.  The canonical algebraic result is the carrier/stabilizer theorem `Stab(h,Omega)=SU(3)`, plus the machine-verified spin-quadrupole operator realization.  Local QCD gauging is **not** derived from the current UBT action.  The minimal two-sided biquaternion derivative is now proved insufficient for full SU(3) on the canonical carrier; see `canonical/su3_derivation/su3_dynamical_no_go_and_induced_ym.tex`.  Treat older involution/qubit claims in this file as provenance until they are fully rewritten.
+
 # T2_GAUGE — Gauge Derivation Map
 
 **Track**: T2_GAUGE — Standard Model Gauge Structure  
