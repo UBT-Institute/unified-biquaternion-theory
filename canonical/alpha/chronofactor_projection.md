@@ -14,8 +14,6 @@ UBT-AI-PROVENANCE-END
 -->
 
 
-> **2026-10-09 REPRESENTATION AUDIT OVERRIDE:** The historical claims below that the equal-sum Im H -> complex-time map is isotropic/SO(3)-equivariant and that N_eff=12 follows at [L0] from 3x2x2 are superseded.  Exact representation theory gives Hom_SO(3)(R3,R_trivial)=0, so no nonzero isotropic linear scalar projection exists.  The single S1_psi winding eigenspaces have complex multiplicity one.  The physical independence of the helicity/charge factors is not established by the circle spectrum alone.  Use canonical/n_eff/step2_AUDIT.tex and research_tracks/T2_GAUGE/winding_colour_multiplicity_audit.md for current status.
-
 # chronofactor_projection.md — Mathematical Definition of the Chronofactor and Projection Map
 
 **Author**: Ing. David Jaroš  
