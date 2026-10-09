@@ -76,10 +76,7 @@ Kanonická UBT nezávisle definuje
 Výše uvedená heat-kernel věta tuto souřadnici s Jacobiho modulem neztotožňuje.
 Současné kanonické axiomy tedy dávají pouze
 \[
-\boxed{
-\tau_{\rm UBT}\not\equiv\tau_\theta
-\quad\text{jako odvozenou identitu.}
-}
+\boxed{\tau_{\rm UBT}\not\equiv\tau_\theta}
 \]
 
 Jde o stav odvození, nikoli o tvrzení, že budoucí mapa mezi nimi nemůže existovat.
