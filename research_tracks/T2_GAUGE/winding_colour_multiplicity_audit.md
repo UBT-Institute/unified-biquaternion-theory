@@ -85,3 +85,22 @@ triplet or selecting three unequal winding numbers by hand.
 
 This result narrows GAP-SU3-DYN; it does not rule out a derived multiplicity
 from a more complete constrained fluctuation spectrum.
+
+## Result 3 — the free S1 Laplacian has multiplicity at most two
+
+The representation-preserving physical Hessian is more naturally sensitive to
+the Laplacian eigenvalue n^2/R_psi^2 than to the signed winding generator n.
+That does not rescue a colour triplet.  For
+\[
+-\partial_\psi^2 e^{in\psi/R_\psi}=\frac{n^2}{R_\psi^2}e^{in\psi/R_\psi},
+\]
+the zero eigenvalue has complex multiplicity one, while every nonzero
+eigenvalue has exactly the two modes +n and -n.  Hence the free compact-circle
+spectrum has multiplicities 1 or 2, never 3.
+
+Therefore a threefold Lorentz-scalar eigenspace cannot arise from the free
+S1_psi Laplacian alone.  A triplet would require an interaction/constrained
+sector producing a genuine threefold degeneracy or an independently derived
+internal multiplicity space.
+
+**GAP-SU3-FREE-S1-HESSIAN-TRIPLET: CLOSED AS NO-GO.**
