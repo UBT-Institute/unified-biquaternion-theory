@@ -43,3 +43,7 @@ A reproducible pipeline plus one of:
 2. a quantitative upper bound excluding the tested UBT signal family.
 
 No observed anomaly is called an UBT prediction unless it was pre-specified.
+
+## Spatial-topology gate
+
+Canonical local flat-FRW recovery does not select a global spatial topology. The internal S1_psi fibre is not a cosmic spatial torus.  Therefore H1/H2 are external null/competitor models, while H3 must remain UNDEFINED until a UBT spatial-topology or other covariance-generating mechanism is independently derived. See spatial_topology_gate.md.
