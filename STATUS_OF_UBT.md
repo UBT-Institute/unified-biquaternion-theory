@@ -32,6 +32,34 @@ is to derive, from the finalized one-field action, a canonical finite-jet
 classifying map (J^r\Theta\to\mathrm{Gr}_3(\mathbb C^N)), its determinant
 trivialization/volume form, healthy quadratic gauge modes and normalization.
 
+### Lorentz/internal colour compatibility audit — 2026-10-10
+
+The exact (SU(3)) stabilizer on the fixed traceless carrier remains
+mathematically valid, but its direct interpretation as Standard-Model colour
+is now restricted: the physical Lorentz spin-congruence representation mixes
+the scalar and traceless parts under boosts, and the common complex-linear
+commutant on the raw biquaternion carrier is only scalar.  Hence a faithful
+nonabelian internal (SU(3)) cannot act on that same irreducible carrier while
+commuting with Lorentz.
+
+A Lorentz-compatible route exists on **multiplicity spaces** of repeated
+Lorentz irreps.  The full second jet contains three vector copies, but mixing
+the zero- and second-derivative copies requires an undetermined scale.  At a
+single fixed 4D derivative order only two vector channels are available.
+
+A conditional UBT-specific escape is now sharply identified: if the imaginary
+complex-time coordinate (psi) is an independent Lorentz-scalar fiber
+direction in the microscopic variational problem, then
+[
+(Box_4Theta^ho, 
+ partial^hopartial_sigmaTheta^sigma, 
+ partial_psi^2Theta^ho)
+]
+are three same-order Lorentz-vector channels.  Their copy index is a natural
+place for an internal (SU(3)) commuting with Lorentz.  Whether
+(partial_psi) is genuinely independent is now a joint
+theta/complex-time and gauge-sector decision problem.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
