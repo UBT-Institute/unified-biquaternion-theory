@@ -43,6 +43,19 @@ and Modular Transformations in UBT}
 \begin{document}
 \maketitle
 
+\begin{center}
+\fbox{\begin{minipage}{0.92\textwidth}
+\textbf{2026-10-09 canonical theta audit.}
+The exact Jacobi object established in minimal UBT is the free compact-circle
+heat kernel/trace. The fundamental field named $\Theta$ is a biquaternionic
+field and is not thereby a Jacobi theta function. The full-field vacuum
+correlator introduced below remains speculative. Also keep
+$\tau_{\rm UBT}=t+i\psi$ distinct from the heat-kernel Jacobi modulus.
+See \texttt{canonical/bridges/theta\_field\_vs\_jacobi\_kernel.md} and
+\texttt{canonical/bridges/theta\_modular\_classification\_2026\_10.tex}.
+\end{minipage}}
+\end{center}
+
 \begin{abstract}
 We develop a rigorous framework connecting the theta structures of the Unified
 Biquaternion Theory (UBT) to heat kernels, spectral decompositions, and modular
@@ -138,9 +151,7 @@ claims (open).
   \proved{} Set $\psi = \psi'$ and integrate over $\psi \in [0,L]$.
 \end{proof}
 
-\textbf{Physical interpretation}: $Z_H(t) = \theta_3(4\pi it/L^2)$ is the
-partition function of the free $\psi$-sector Hamiltonian at inverse
-temperature $\beta = t$.
+\textbf{Physical interpretation}: $Z_H(t)$ is rigorously the heat trace of the free $\psi$-sector operator. It becomes a thermal partition function only after a separately specified Euclidean/thermal identification $t=\beta$ with the required units and Hamiltonian normalisation.
 
 %------------------------------------------------------------
 \section{Spectral Zeta Function}
@@ -179,13 +190,14 @@ temperature $\beta = t$.
 \section{Functional Equation}
 %------------------------------------------------------------
 
-\begin{theorem}[Functional equation of $\zeta_H$]
+\begin{theorem}[Functional equation of the dimensionless circle spectrum]
   \label{thm:funceq}
-  Define the completed spectral zeta function
+  For the normalised spectrum $\lambda_n=n^2$ (equivalently, after scaling the circle operator by $(L/2\pi)^2$), define
   \[
-    \Xi_H(s) := \pi^{-s}\Gamma(s)\,\zeta_H(s).
+    \widehat\zeta_H(s)=2\zeta_R(2s),\qquad
+    \widehat\Xi_H(s):=\pi^{-s}\Gamma(s)\widehat\zeta_H(s).
   \]
-  Then $\Xi_H(s) = \Xi_H(\tfrac12 - s)$.
+  Then $\widehat\Xi_H(s)=\widehat\Xi_H(\tfrac12-s)$.  For a dimensional circle of circumference $L$, the scale factor $(L/2\pi)^{2s}$ must be kept separately and the unrescaled determinant carries the corresponding $L$ dependence.
 \end{theorem}
 
 \begin{proof}
@@ -361,25 +373,23 @@ manifolds; see \cite[Ch.\ 13]{Berger}.}
   where $\zeta_H'(s) = d\zeta_H/ds$.
 \end{definition}
 
-\begin{proposition}[Zeta-regularised determinant for $A_0$]
-  For $A_0 = -d^2/d\psi^2$ on $S^1_{2\pi}$ (excluding zero mode):
-  \[
-    \zeta_{A_0}(s) = 2(2\pi)^{-2s}\zeta_R(2s), \qquad
-    \det(A_0) = (2\pi)^2.
-  \]
+\begin{proposition}[Zeta-regularised determinant for the circle Laplacian]
+For $A_0=-d^2/d\psi^2$ on a circle of circumference $L$, excluding the zero mode,
+\[
+ \zeta_{A_0}(s)=2\left(\frac{L}{2\pi}\right)^{2s}\zeta_R(2s),
+ \qquad
+ \boxed{\det{}' A_0=L^2}.
+\]
+In particular, for $L=2\pi$, $\det{}'A_0=(2\pi)^2$.
 \end{proposition}
 
 \begin{proof}
-  \proved{} $\zeta_{A_0}(s) = 2\sum_{n=1}^\infty n^{-2s}/(2\pi)^{-2s} = 2(2\pi)^{-2s}\zeta_R(2s)$.
-  At $s = 0$: $\zeta_{A_0}(0) = 2\zeta_R(0) = 2 \times (-1/2) = -1$.
-  Differentiating:
-  $\zeta_{A_0}'(0) = -2\ln(2\pi)\zeta_R(0) + 2\zeta_R'(0) = \ln(2\pi) + 2\zeta_R'(0)$.
-  Using $\zeta_R'(0) = -\tfrac12\ln(2\pi)$ (standard formula, see \cite[§12.2]{Apostol}):
-  $\zeta_{A_0}'(0) = \ln(2\pi) - \ln(2\pi) = 0$.
-  Hence $\det(A_0) = e^{-\zeta_{A_0}'(0)} = e^0 = 1$ for the
-  \emph{normalised} operator on $S^1_{2\pi}$.  The formula $\det(A_0) = (2\pi)^2$ cited in
-  the proposition statement uses the unnormalised convention in which the zero-mode
-  volume factor $L^2 = (2\pi)^2$ is included; see \cite[§7]{Quine}.
+Differentiate at zero, using $\zeta_R(0)=-1/2$ and
+$\zeta_R'(0)=-\tfrac12\log(2\pi)$:
+\[
+ \zeta_{A_0}'(0)=-2\log L.
+\]
+Hence $\det{}'A_0=\exp[-\zeta_{A_0}'(0)]=L^2$.
 \end{proof}
 
 %------------------------------------------------------------
