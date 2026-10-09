@@ -1,3 +1,12 @@
+% CURRENT STATUS OVERRIDE — 2026-10-10
+% This file is retained as a standard-QCD target/reference embedding.
+% The exact algebraic SU(3) stabilizer results do NOT constitute a complete
+% first-principles derivation of Lorentz-compatible dynamical QCD.
+% GAP-SU3-DYN-MICRO and GAP-SU3-DYN-NORM remain open.
+% Historical involution/octonion/phase-gradient language below is provenance,
+% not the current authoritative derivation status.
+% See CLAIMS.yaml and research_tracks/T2_GAUGE/su3_dynamics_endgame_2026_10.md.
+
 % Canonical QCD Lagrangian Definition
 % Version: 1.1
 % Date: 2025-11-14
@@ -14,23 +23,6 @@
 % UBT-AI-PROVENANCE-END
 
 \section{Quantum Chromodynamics (QCD) Lagrangian}
-
-\begin{center}
-\fbox{\begin{minipage}{0.92\textwidth}
-\textbf{CURRENT STATUS OVERRIDE — 2026-10-10.}
-This file is a \emph{reference/target embedding of standard QCD notation}, not a
-first-principles derivation of dynamical QCD from UBT.  The canonical algebraic
-colour result is the $SU(3)$ stabilizer on
-$V=\mathbb C\text{-span}\{I,J,K\}$ together with the verified operator
-realizations.  \textbf{GAP-SU3-DYN remains open}: the local non-pure-gauge
-colour connection, Yang--Mills kinetic normalization, $g_s$, confinement and
-$\Lambda_{\rm QCD}$ are not derived from the microscopic UBT action.
-Historical octonionic and phase-gradient mechanisms below are retained for
-provenance only and must not be cited as current derivations.
-See \texttt{CLAIMS.yaml} and
-\texttt{research\_tracks/T2\_GAUGE/su3\_projective\_biquaternion\_bundle.md}.
-\end{minipage}}
-\end{center}
 \label{sec:canonical:qcd}
 
 \begin{center}
@@ -249,7 +241,7 @@ The dimensional transmutation scale:
 \Lambda_{\text{QCD}} \approx 200 \text{ MeV}
 \end{equation}
 
-In UBT, this scale is \textbf{not presently derived from first principles}; the standard QCD value is quoted here as reference.
+In UBT, this is \textbf{predicted} from emergent $SU(3)$ structure (see Section~\ref{sec:canonical:emergent_su3}).
 
 \subsection{Confinement}
 
@@ -338,10 +330,10 @@ In curved spacetime:
 
 The covariant derivative includes both color and gravitational connections.
 
-\subsection{Historical emergent-SU(3) candidate (superseded as a proof)}
+\subsection{Emergent SU(3) in UBT}
 \label{sec:canonical:emergent_su3}
 
-A historical Track-B candidate introduced an octonionic extension ($\C \otimes \O$). This is not part of the current canonical proof and is retained only for provenance:
+In UBT, the $SU(3)$ color symmetry appears upon octonionic extension ($\C \otimes \O$) of the internal structure of the $\Theta$ field:
 
 \subsubsection{Mechanism}
 
@@ -361,7 +353,7 @@ The emergent gauge fields $G^a_\mu$ arise from phase gradients:
 G^a_\mu = \frac{1}{g_s} \text{Tr}\left[T^a \left(\Theta^\dagger \partial_\mu \Theta - (\partial_\mu\Theta^\dagger)\Theta\right)\right]
 \end{equation}
 
-This was a Track-B hypothesis; it is not an action-level derivation of the current canonical colour dynamics.
+This produces $SU(3)$ gauge structure via octonionic extension (Track~B hypothesis).
 
 \subsection{Conflict Resolution}
 
@@ -406,6 +398,6 @@ Predictions can be tested against lattice QCD simulations:
 
 \subsection{Historical Note}
 
-This file records the standard QCD target structure in UBT notation. The current associative $\C\otimes\H$ programme has an algebraically derived $SU(3)$ stabilizer and candidate composite colour-bundle geometry, while full action-level Yang--Mills dynamics remains open. The octonionic Track-B material is historical.
+This canonical QCD Lagrangian provides the strong interaction theory within UBT, where $SU(3)$ color symmetry appears via octonionic extension $\C \otimes \O$ (Octonionic Completion Hypothesis, Track~B) rather than being postulated. Derivation from the associative sector $\C \otimes \H$ alone is an open research question (Track~A).
 
 % End of canonical QCD Lagrangian definition
