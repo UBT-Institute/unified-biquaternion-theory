@@ -12,6 +12,8 @@ UBT-AI-PROVENANCE-END
 -->
 
 
+> **2026-10-09 PARAMETER AUDIT:** This document is a reduced toy/bridge model only.  Its earlier direct symbol map between the Jacobi modular parameter and canonical UBT complex time is **not canonical**.  Canonical UBT uses `tau_UBT=t+i psi` with compact `psi`, while the Jacobi modulus `tau_J` lies in the upper half-plane.  The exact UBT theta bridge currently established is instead the KK heat trace with `tau_J(s)=i s/(pi R_psi^2)`; see `canonical/bridges/theta_parameter_separation.md`.
+
 # Theta Complex-Time Bridge
 
 Status: Bridge / non-canonical derivation
@@ -125,13 +127,7 @@ $$
 
 where $\psi$ is the scalar imaginary time component. The full canonical time is $\tau = t + i\psi$; biquaternion time $T_B = t + i\psi + j\chi + k\xi$ is a deprecated/historical extension.
 
-Bridge: To avoid silently changing symbols, the sprint notation $\phi$ should be read as a reduced-model symbol that maps to the canonical UBT scalar imaginary time $\psi$ only in the isotropic limit. Accordingly,
-
-$$
-\phi \longleftrightarrow \psi
-$$
-
-is a notation bridge, not a new canonical definition.
+Bridge: The sprint variable $\phi$ is a positive damping parameter of the reduced toy kernel.  It must not be identified canonically with the compact UBT coordinate $\psi$.  A physical map $\phi=f(\psi,\ldots)$ would require a separate derivation.
 
 Bridge: In UBT-aligned notation the same reduced amplitude can therefore be written as
 
