@@ -85,9 +85,9 @@ claims:
     - canonical/su3_derivation/
     - canonical/su3_derivation/su3_stabilizer_exterior_fock.tex
     - verification/su3_stabilizer_fock_check.py
-    - research_tracks/T2_GAUGE/su3_dynamics_operator_bridge.md
+    - research_tracks/T2_GAUGE/su3_dynamics_update_2026-10.en.md
+    - research_tracks/T2_GAUGE/su3_dynamics_update_2026-10.cs.md
     - verification/su3_spin_quadrupole_check.py
-    - research_tracks/T2_GAUGE/su3_projector_connection_candidate.md
     - verification/su3_projector_connection_check.py
     - papers/UBT_Gauge_Submission.tex
     - reviews/gauge_qm_honest_status_audit_2026-07-17.md
