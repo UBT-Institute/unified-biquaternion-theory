@@ -371,6 +371,31 @@ hexagonal UBT torus.  A physical P4 result now requires a genuinely
 action-derived compact modulus and a bounded massive/interacting/backreacted
 effective potential calculated after regularization.
 
+### Primordial covariance derivation boundary — 2026-10-10
+
+FRW background recovery does not determine a primordial spectrum.  A valid H3
+requires the constrained second variation of the finalized cosmological UBT
+action, a gauge-invariant map from physical \(\delta\Theta\) perturbations to
+the comoving curvature perturbation \(\mathcal R\), and an action/regularity
+principle selecting the quantum initial state.  None is currently derived.
+
+A further exact correction closes the historical internal-circle cutoff
+mechanism.  On
+\[
+\mathbb R^3\times S^1_\psi
+\]
+the separated spectrum is
+\[
+\lambda_{\mathbf k,n}
+=
+|\mathbf k|^2+n^2/R_\psi^2.
+\]
+Compactification quantizes the internal momentum and gives KK masses, but the
+\(n=0\) sector retains arbitrarily small ordinary spatial momentum.  Therefore
+compact \(S^1_\psi\) alone does not imply
+\(k_{\rm spatial,min}=1/R_\psi\), and the old low-\(\ell\) cutoff ansatz is
+phenomenological rather than derived.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
