@@ -276,6 +276,46 @@ a revision of microscopic field content.  Algebraic SU(3), local frame
 redundancy, induced background \(F^2\), and weak charged loops are all
 insufficient by themselves.
 
+### Theta/complex-time classification — 2026-10-10
+
+The current theta objects are now separated rigorously.
+
+Canonical physical complex time
+\[
+\tau_{\rm UBT}=t+i\psi
+\]
+is dimensionful, with \([t]=[\psi]=\) length, and is not canonically the
+dimensionless Jacobi modular parameter.
+
+The established free compact-circle heat trace is
+\[
+Z_H(s)=\vartheta_3(0|\tau_J),
+\qquad
+\tau_J=\frac{i s}{\pi R_\psi^2},
+\]
+where \(s>0\) is heat/proper time.  This is ordinary Jacobi theta mathematics.
+
+For the convention
+\[
+\vartheta_3(\tau)=\sum_n e^{\pi i n^2\tau},
+\]
+the natural scalar modular subgroup is
+\(\Gamma_\theta=\langle S,T^2\rangle\), of index 3 in \(SL(2,\mathbb Z)\).
+The rescaled \(e^{2\pi i n^2\tau}\) convention is the one usually stated on
+\(\Gamma_0(4)\).
+
+The finite weighted reduced amplitude
+\[
+S_s=\sum_{n=0}^{N-1}a_n^{(s)}e^{\pi i n^2\tau_J}
+\]
+is not generically modular under \(S\) and is not mock-modular without a
+separately derived completion.
+
+Thus P1 is closed for the currently defined objects: ordinary Jacobi heat
+kernel/trace, nonmodular-by-default finite reduced projections, and a physical
+complex-time coordinate whose full modular transformation law is not derived.
+Full interacting UBT modular covariance remains open.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
