@@ -10,6 +10,8 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
+> **2026-10-09 CMB AUDIT:** The internal-psi compactification route does not imply a spatial k_min=1/R_psi.  That historical low-l mechanism is now CLOSED AS NO-GO.  The old comb and cutoff calculations remain exploratory/null-test provenance.  The active P3 programme is the pre-registered full-covariance H0-H3 comparison in research_tracks/research_front/cmb_covariance/.
+
 # CMB Work in UBT — Status Summary
 
 **Author:** David Jaroš  
@@ -78,12 +80,7 @@ derivation does not yet exist.
 
 ### 2. Low-l suppression (ψ-compactification cutoff)
 
-The compactification of ψ at scale R_ψ ~ l_Planck introduces a
-minimum wavenumber k_min ~ 1/R_ψ. Below k_min no modes exist.
-In C_l space this manifests as power suppression at l ≤ 3 (large
-angular scales), matching the well-known "low-l anomaly" in Planck 2018
-data. This mechanism is independent of the comb and has not been
-computed.
+The earlier proposal that the internal ψ circle enforces a physical-spatial k_min=1/R_ψ is now ruled out kinematically. The ψ tower shifts effective masses but leaves the n=0 branch with continuous spatial momentum. Any low-l suppression must therefore come from a separately derived spatial-topology, initial-state, transfer-kernel, or other cosmological mechanism.
 
 ### 3. Connection to Planck era physics
 
