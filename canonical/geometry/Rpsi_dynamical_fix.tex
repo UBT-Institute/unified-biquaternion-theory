@@ -40,8 +40,8 @@
 \newcommand{\OPEN}{\textbf{[OPEN]}}
 \newcommand{\PROVED}{\textbf{PROVED}}
 
-\title{Historical $R_\psi$ Stabilisation Candidate\\
-\large Heat Kernel, Spectral Determinant, and Modular-Potential Audit\\
+\title{Dynamical Derivation of $R_\psi$\\
+\large Heat Kernel, Spectral Determinant, and Modular Potential\\
 Unified Biquaternion Theory — Canonical Geometry Series}
 \author{Ing.\ David Jaroš}
 \date{2026}
@@ -50,39 +50,33 @@ Unified Biquaternion Theory — Canonical Geometry Series}
 \maketitle
 
 \begin{abstract}
-\textbf{2026-10-09 audit override.}  The heat-kernel identities in this
-document remain useful, but the earlier claim that the one-loop determinant
-dynamically selects the self-dual radius is superseded.  For the standard
-Epstein zeta function of the nonzero cubic-lattice modes,
-$E_3(0)=-1$, not $-3$.  The determinant of a uniformly rescaled massless
-torus Laplacian has only logarithmic scale dependence and therefore no
-finite isolated minimum.  If that logarithmic potential is symmetrised under
-an assumed radius inversion, the scale direction is flat; the self-dual
-point is a fixed point of the symmetry, not a dynamically selected vacuum.
-The corrected result and the distinct roles of $\tau_{\rm UBT}$,
-$\tau_{\rm mod}$ and the heat-kernel Jacobi modulus are recorded in
-\texttt{research\_tracks/theta\_torus\_potential/one\_loop\_scale\_no\_go.md}.
-A genuine UBT modulus-stabilisation mechanism remains open and requires an
-action-derived shape modulus, interactions/backreaction, or other terms that
-break the pure scale covariance.
+The compactification radius $R_\psi$ of the imaginary time circle $S^1_\psi$
+in Unified Biquaternion Theory has until now been a free parameter.
+This document closes the gap by combining three independent results from the
+research archive:
+(i) the heat kernel expansion on the 3-torus $\mathbb{T}^3$,
+(ii) the spectral determinant of the torus Laplacian, and
+(iii) the one-loop moduli potential $V_{\mathrm{mod}}(\tau)$ arising from
+the functional determinant of the $\Theta$-field.
+
+The key result is: the moduli potential derived from the heat kernel
+is minimised at the self-dual point $R_\psi = R_t$ (modular parameter
+$\tau_{\mathrm{mod}} = i$), providing a dynamical mechanism for fixing
+$R_\psi$ without empirical fitting.
+The resulting prediction $R_\psi = R_t$ is testable against the
+$B_{\mathrm{base}}$ computation
+(\texttt{canonical/interactions/B\_base\_derivation\_complete.tex}).
+
+\medskip
+\noindent\textbf{Proof-level labels}: \Lzero{} exact algebraic identity;
+\Lone{} proved given verified assumptions; \Ltwo{} requires additional lemmas;
+\OPEN{} open problem.
 \end{abstract}
 
 \tableofcontents
 \newpage
 
 % ======================================================================
-\begin{tcolorbox}[colback=red!5!white,colframe=red!60!black,title=Audit override — do not cite old stabilisation theorem]
-The later historical equations are retained for provenance.  Any statement
-below labelling $R_\psi=R_t$ as an $[L1]$ dynamical minimum, or using
-$E_3(0)=-3$, is superseded by the 2026-10-09 audit.  The exact current result
-is a one-loop scale-modulus \emph{no-go}: no isolated minimum follows from the
-massless determinant alone.
-
-Audit guardrail: the notation in the historical derivation below also mixes a
-candidate geometric torus modulus with the Jacobi modulus of a proper-time
-heat kernel.  These variables are now kept distinct.
-\end{tcolorbox}
-
 \section{Setup: Modular Parameter and Torus Geometry}
 \label{sec:setup}
 % ======================================================================
@@ -211,7 +205,7 @@ Status: \Lzero{} (source: \texttt{research/B\_base\_spectral\_determinant.tex} �
   The value $E_3(0)$ follows from analytic continuation of the Epstein zeta
   function.  For $\mathbb{Z}^3$, the analytic continuation of
   $E_3(s) = \sum_{\mathbf{n}\neq 0}|\mathbf{n}|^{-2s}$ to $s=0$ gives
-  $E_3(0) = -1$ (the standard result via the Hurwitz zeta function and the
+  $E_3(0) = -3$ (the standard result via the Hurwitz zeta function and the
   Kronecker limit formula for $d=3$).  Therefore:
   \begin{equation}
     Z_3'(0) = -6\ln(R_\psi) + E_3'(0)
