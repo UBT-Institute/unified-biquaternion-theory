@@ -97,6 +97,8 @@ claims:
     - 'GAP-SU3-MAURER-CARTAN: NO-GO FOR GENERIC DYNAMICS — a connection of the form U^{-1}dU is locally pure gauge and has zero curvature'
     - 'GAP-SU3-BIMODULE: OPEN/NO-GO BOUNDARY — the minimal A_mu Theta - Theta B_mu bimodule derivative must not be claimed to realise full dynamical su(3) without an explicit faithful action-level construction'
     - 'GAP-SU3-ENDOMORPHISM-CONNECTION: CANDIDATE — the natural local colour connection acts in End_C(V); deriving it and its Yang-Mills normalization from S[Theta] remains open'
+    - 'GAP-SU3-BIMODULE-RESTRICTION: CLOSED AS NO-GO [L1] — if T_{A,B}(X)=AX-XB preserves V=sl2(C), then A-B=cI and T|_V=ad(A0)+cI; preservation of the canonical complex volume forces c=0, leaving only the three ad(sl2) directions'
+    - 'GAP-SU3-YM-INDUCED: CLOSED CONDITIONALLY [L1] — if a genuine End_C(V) colour connection occurs in a gauge-fixed Laplace-type physical Theta Hessian, the standard four-dimensional heat-kernel a4 coefficient contains (1/12) tr(F_mu_nu F^mu_nu); deriving the connection, physical quotient and normalization from S_UBT remains open'
     - 'GAP-SU3-TRIQUBIT-LEAKAGE: CLOSED [L1] — every single X_i/Y_i error leaves the color sector'
     - 'GAP-SU3-TRIQUBIT-QEC: CLOSED AS NO-GO [L1] — the Knill-Laflamme conditions fail for {I,X_1,X_2,X_3}, compressed Z_i errors are non-scalar logical operations, and the three-dimensional carrier is not a Pauli stabilizer code'
     - 'The triqubit result is a representation/quantum-simulation encoding statement and does not imply a simulation ontology'
