@@ -102,7 +102,7 @@ The field $\Theta(q,\tau)$ encodes:
     
     \item \textbf{Matter content}: Fermion fields and masses arise from internal structure
     
-    \item \textbf{Gauge fields}: Electromagnetic and weak/strong interactions emerge from phase structure
+    \item \textbf{Gauge-sector candidates}: algebraic carrier symmetries and phase/mode structures provide candidate bridges to gauge sectors; local Standard-Model gauge dynamics is not yet derived from the unfinished single action
     
     \item \textbf{Internal auxiliary sector}: Imaginary time component $\psi$ provides dynamics for an internal auxiliary field (speculative interpretations in \texttt{speculative\_extensions/})
 \end{enumerate}
@@ -179,21 +179,23 @@ The field satisfies the normalization condition:
 
 for bound states. The constant depends on the physical system under consideration.
 
-\subsection{Gauge Transformations}
+\subsection{Gauge-action status}
 
-Under local gauge transformations:
+The fundamental biquaternion index carries the spacetime/Lorentz action required by the geometric sector. It must not simultaneously be treated as an arbitrary $U(n)$ internal index.
 
-\begin{equation}
-\label{eq:canonical:theta_gauge}
-\Theta(q,\tau) \to U(q,\tau) \Theta(q,\tau) V^\dagger(q,\tau)
-\end{equation}
+The current exact colour audit gives two guardrails:
+\begin{enumerate}
+  \item On the same $M_2(\mathbb C)$ carrier with Lorentz action $X\mapsto SXS^\dagger$, the complex-linear commutant of the full Lorentz action is scalar only. Therefore a nontrivial Standard-Model internal $SU(3)$ cannot act on this same index while commuting with Lorentz transformations.
+  \item The minimal two-sided action $X\mapsto A_\mu X-XB_\mu$ that preserves the canonical colour carrier and its complex volume reduces to the three quaternion-adjoint directions and does not furnish full $su(3)$.
+\end{enumerate}
 
-\noindent where $U,V \in U(n)$ are unitary matrices encoding:
-\begin{itemize}
-    \item $U(1)$ electromagnetic gauge symmetry
-    \item $SU(2)$ weak isospin symmetry
-    \item $SU(3)$ color symmetry
-\end{itemize}
+Accordingly a generic formula
+\[
+ \Theta\longmapsto U\Theta V^\dagger,\qquad U,V\in U(n),
+\]
+is not a canonical statement about all Standard-Model gauge factors acting on the core biquaternion field. Algebraic left/right actions may be used where their representation is explicitly specified, while physical internal colour requires a separately derived Lorentz-scalar multiplicity/mode carrier (or an equivalent internal bundle).
+
+The local QCD target and current candidate constructions are documented in \texttt{canonical/interactions/qcd.tex} and \texttt{canonical/su3\_derivation/}. The action-level gauge connection and coupling normalisation remain open.
 
 \subsection{Reality Conditions}
 
