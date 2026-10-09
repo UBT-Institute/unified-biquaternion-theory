@@ -1,4 +1,16 @@
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: B_machine_verified
+ai_assistance: disclosed
+human_review: machine-verification
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Machine-verified against named sources or verifiers; individual attestation is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 ## 2026-10-09 parameter-role guardrail
 
 The reduced identity
@@ -22,18 +34,6 @@ The bridge mapping (phi\leftrightarrow\psi) below remains an ansatz/notation bri
 not a canonical action-level derivation.
 
 ---
-
-<!--
-UBT-AI-PROVENANCE-BEGIN
-schema: ubt-ai-provenance/v1
-tier: B_machine_verified
-ai_assistance: disclosed
-human_review: machine-verification
-editorial_responsibility: Ing. David Jaroš
-policy: ../../AI_PROVENANCE.md
-notice: Machine-verified against named sources or verifiers; individual attestation is not claimed.
-UBT-AI-PROVENANCE-END
--->
 
 
 # Theta Complex-Time Bridge
