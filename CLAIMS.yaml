@@ -224,6 +224,20 @@ claims:
     - U(3) is isomorphic to U(1) times SU(3) as groups
     - dynamical QCD gauge symmetry is proved from UBT action
     - same Mat(2,C) Lorentz carrier itself is the physical SU(3) internal index
+  cmb_full_covariance:
+    assumptions:
+    - 'CMB-COMB-OLD: DOCUMENTED NULL — the historical periodic TT comb variant returned p=0.919 and remains a null constraint on that specific model'
+    - 'CMB-LOWL-CUTOFF-OLD: DOCUMENTED NEGATIVE BENCHMARK — the simple psi-compactification primordial cutoff produced only sub-percent low-l suppression in the documented approximation and does not explain the observed low-l anomaly'
+    - 'GAP-CMB-FULL-COV-INTERFACE: CLOSED [L1/code] — in a finite real-vector mode representation the observable covariance is C=A P A^T+N; strict Gaussian likelihood and KL comparison are implemented and synthetically verified'
+    - 'GAP-CMB-H3-PRIMORDIAL-COV: OPEN PRIMARY TARGET — UBT has not yet derived a preregisterable primordial covariance P_UBT(k,k_prime) or discrete mode analogue, so a full-covariance H3 test is blocked by theory template rather than statistics code'
+    - 'GAP-CMB-H3-FAIL-CLOSED: CLOSED [code] — the new model-selection module refuses an H3-labelled run unless an externally supplied frozen H3 covariance template is present and hashed'
+    - 'GAP-CMB-H2-NULL: REQUIRED — a UBT-specific claim must outperform compact topology plus a generic preregistered oscillatory primordial spectrum H2 out of sample; beating LambdaCDM H0 alone is insufficient'
+    - 'GAP-CMB-PRIMARY-BLOCKS: PROTOCOL — prioritize TT+TE+EE full harmonic covariance; BB is secondary unless an action-level UBT prediction makes it primary'
+    forbidden_wording:
+    - a post-hoc prime/theta filter on observed C_l is a derived H3 primordial covariance
+    - beating LambdaCDM alone establishes a UBT CMB signature
+    - the historical comb null result supports a new UBT topology signal
+
   three_generations:
     status: DERIVED_WITH_ASSUMPTIONS
     evidence:
