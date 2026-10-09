@@ -252,29 +252,32 @@ The one-field programme now requires genuinely new quantum/composite poles in
 exact correlators; finding algebraic SU(3) generators or an \(F^2\) background
 term is not sufficient.
 
-### Composite-gluon pole benchmark — 2026-10-10
+### Emergent gauge-action benchmark — 2026-10-10
 
-The remaining one-field colour target is now explicitly nonperturbative.  A
-candidate adjoint composite operator must have an exact transverse two-point
-function satisfying
-\[
-\lim_{p^2\to0}p^2G_T(p^2)=Z>0
-\]
-in all eight adjoint directions.  A weak bilinear triplet current fails this
-test: it creates two-particle states and gives logarithmic/continuum behaviour,
-not an isolated massless vector pole.
+The remaining one-field colour target is explicitly quantum/collective, but the
+previous requirement of a gauge-invariant physical massless adjoint pole has
+been corrected.  Weinberg--Witten forbids massless spin-one states carrying an
+ordinary Lorentz-covariant conserved-current charge under its assumptions, and
+confining QCD does not require positive-norm gauge-invariant asymptotic gluon
+states.
 
-The existing GR split-jet auxiliary action also cannot provide the missing
-strong channel.  It is linear in the Lagrange multiplier,
-\(S_{\rm aux}=\int\lambda C\); on non-null patches variation of \(K^J,w\)
-forces \(\lambda=0\), while variation of \(\lambda\) imposes \(C=0\).  Thus
-eliminating the auxiliary jet variables produces a constraint, not a
-current-current interaction or vector propagator.
+The correct target is therefore an effective set of collective variables with
+a genuine local \(SU(3)\) redundancy and a gauge-fixed 1PI action whose
+two-, three- and four-point vertices obey the corresponding
+BRST/Slavnov--Taylor identities, share one Yang--Mills coupling, and reproduce
+the perturbative non-Abelian ultraviolet limit.  Infrared confinement or
+positivity violation of a gauge-fixed gluon propagator is not by itself a
+failure.
 
-Consequently P2 is narrowed to a genuinely new strong/collective mechanism or
-a revision of microscopic field content.  Algebraic SU(3), local frame
-redundancy, induced background \(F^2\), and weak charged loops are all
-insufficient by themselves.
+The weak bilinear triplet current remains insufficient: it gives continuum/log
+response rather than a new independent gauge redundancy.  The existing GR
+split-jet auxiliary action is also only a Lagrange-multiplier right-inverse
+constraint and generates no current-current kernel.
+
+Thus algebraic \(SU(3)\), local frame redundancy, induced background
+\(F^2\), and weak charged loops are all insufficient by themselves.  P2 now
+asks for a genuinely emergent Yang--Mills 1PI structure or a revision of
+microscopic field content.
 
 ### Theta/complex-time classification — 2026-10-10
 
