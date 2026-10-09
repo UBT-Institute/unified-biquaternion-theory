@@ -133,6 +133,38 @@ the presently undetermined ratio \(\Lambda R_\psi\).  Until the finalized
 action independently fixes that ratio (and the zero-mode threshold), matching
 \(g_s\) by choosing it is a fit rather than a prediction.
 
+### Determinant-term colour breaking — 2026-10-10
+
+The classified potential invariant satisfies
+\[
+H(X)=2h_B(\Theta,\Theta).
+\]
+The proven nonzero pointwise minimum is therefore timelike and lies in the
+domain of the moving rank-three colour-carrier construction.
+
+However, the allowed quartic determinant term changes the symmetry of the
+tangent dynamics.  At the timelike reference vacuum its transverse quadratic
+form is proportional to
+\[
+\lambda_2\,\|\operatorname{Im}z\|^2,\qquad z\in\mathbb C^3.
+\]
+The exact stabilizer of this form inside \(SU(3)\) is only \(SO(3)\), generated
+by the three quaternion-adjoint/spin directions
+\(i\lambda_2,i\lambda_5,i\lambda_7\).  The five quadrupole directions are
+explicitly broken.
+
+At \(\lambda_2=0\), the pointwise potential depends only on \(H\), its timelike
+minimum is \(SU(1,3)/SU(3)\), and the Hessian has rank one with seven tangent
+zero modes.  But full microscopic \(SU(1,3)\) cannot simply be imposed on the
+present UBT core: its unique constant invariant Hermitian form is indefinite,
+and generic \(SU(1,3)\) transformations do not preserve the sharp/determinant
+structure used by the canonical tetrad.
+
+Thus full colour \(SU(3)\) now requires an independently derived
+\(\lambda_2\to0\) infrared/enhancement mechanism or a different action-derived
+sector; the generic stable \(\lambda_2>0\) pointwise branch retains only the
+three-direction \(SO(3)\) symmetry.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
