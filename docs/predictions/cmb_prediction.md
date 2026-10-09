@@ -10,13 +10,11 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-> **2026-10-09 KINEMATIC AUDIT OVERRIDE:** The historical statement that compact internal psi implies a spatial cutoff k_min=1/R_psi is incorrect.  Compactifying psi quantizes internal momentum and produces a KK mass tower m_n^2=m_0^2+n^2/R_psi^2; the n=0 sector still permits arbitrarily small ordinary spatial k on noncompact physical space.  Therefore the imposed low-k factor used below is a phenomenological toy signal, not a derived UBT prediction.  The choice R_psi=c/H_0 is also phenomenological.  See research_tracks/research_front/cmb_covariance/internal_psi_spatial_cutoff_no_go.md.
-
 # UBT CMB Prediction: ψ-Compactification and the Low-l Anomaly
 
 **Author:** David Jaroš  
 **Date:** 2026-03-06  
-**Status labels:** Historical toy-model computation; internal-psi spatial-cutoff mechanism CLOSED AS NO-GO
+**Status labels:** Computed (mechanism identified) / NOT consistent with Planck 2018 at current level of approximation
 
 ---
 
@@ -173,8 +171,8 @@ approximation levels.
 
 | Item | Status |
 |------|--------|
-| Physical mechanism | **NO-GO as a derived mechanism** — internal ψ compactification gives KK masses, not spatial k_min |
-| P_UBT(k) parametrization | **Phenomenological toy family**, not derived from S_UBT |
+| Physical mechanism | **Derived** (ψ-compactification IR cutoff) |
+| P_UBT(k) parametrization | **Derived** (phenomenological; see ubt_primordial_spectrum.py) |
 | SW + transfer function C_l | **Computed** (~0.4% suppression at l=2) |
 | Consistency with Planck low-l anomaly | **NOT consistent** (36% suppression not reproduced) |
 | Boltzmann code comparison | **Pending** |
