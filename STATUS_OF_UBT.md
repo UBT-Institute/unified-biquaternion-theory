@@ -83,6 +83,27 @@ fluctuations, so independent perturbative gluons are not yet derived.
 The remaining central colour problem is now the quantum/collective dynamics of
 this exact redundancy, not the existence of an SU(3) frame group.
 
+### Induced colour-coupling stress test — 2026-10-10
+
+The charged part of the conditional \(SU(1,3)/SU(3)\) coset is one complex
+fundamental \(SU(3)\) triplet plus a singlet.  If that triplet has a minimal
+Laplace-type Euclidean Hessian and there is no bare Yang--Mills term, the
+standard one-loop heat-kernel coefficient gives
+\[
+\frac1{g_{\rm ind}^2}
+=
+\frac{I_0}{96\pi^2}
+\]
+for one triplet, with \(I_0\) the logarithmic proper-time threshold integral.
+For \(N_{\rm eff}\) equivalent charged triplets the right-hand side is
+multiplied by \(N_{\rm eff}\).
+
+Thus an order-one induced coupling from a single triplet requires a logarithm
+of order \(96\pi^2\), an extreme hierarchy.  The induced-only route is
+therefore quantitatively viable only if UBT independently derives a sufficiently
+large charged spectral multiplicity/tower, an appropriate threshold structure,
+or another normalization mechanism.  The full QCD running remains open.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
