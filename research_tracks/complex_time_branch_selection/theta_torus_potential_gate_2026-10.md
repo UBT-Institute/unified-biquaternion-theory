@@ -20,45 +20,44 @@ UBT-AI-PROVENANCE-END
 
 Can the present canonical UBT action dynamically select a two-dimensional torus shape
 by minimizing an effective potential
-[
-V_{m eff}(	au_{m mod})?
-]
+\[
+V_{\rm eff}(\tau_{\rm mod})?
+\]
 
 ## Canonical topology actually available
 
 The active complex-time formulation has
-[
-	au_{m UBT}=t+ipsi,
-qquad
-psisimpsi+2pi R_psi,
-]
-where (t) is ordinary non-compact physical time and (S^1_psi) is a compact internal
+\[
+\tau_{\rm UBT}=t+i\psi,
+\qquad
+\psi\sim\psi+2\pi R_\psi,
+\]
+where \(t\) is ordinary non-compact physical time and \(S^1_\psi\) is a compact internal
 phase fibre.
 
 Therefore the canonical compact complex-time sector contains one compact cycle:
-[
-oxed{S^1_psi.}
-]
+\[
+\boxed{S^1_\psi.}
+\]
 
-A single circle has a radius/scale modulus (R_psi), but it does not have the complex
+A single circle has a radius/scale modulus \(R_\psi\), but it does not have the complex
 shape modulus of a rank-two lattice
-[
-mathbb C/(mathbb Z+	au_{m mod}mathbb Z).
-]
+\[
+\mathbb C/(\mathbb Z+\tau_{\rm mod}\mathbb Z).
+\]
 
 ## No-go statement
 
-Compactness of (psi) does not compactify real Minkowski time.  Hence the pair
-((t,psi)) does not by itself supply two compact lattice periods.
+Compactness of \(\psi\) does not compactify real Minkowski time. Hence the pair
+\((t,\psi)\) does not by itself supply two compact lattice periods.
 
 Consequently, within the current canonical topology:
-
-[
-oxed{
-	ext{there is no action-derived physical torus shape }
-	au_{m mod}	ext{ for a theta lattice potential to select.}
+\[
+\boxed{
+\text{there is no action-derived physical torus shape }
+\tau_{\rm mod}\text{ for a theta lattice potential to select.}
 }
-]
+\]
 
 This rules out promoting square/hexagonal/rhombic theta-lattice minimization results to
 a canonical UBT prediction at present.
@@ -66,13 +65,13 @@ a canonical UBT prediction at present.
 ## What remains legitimate
 
 The canonical single-circle sector can have an effective radius potential
-[
-V_{m eff}(R_psi)
-]
+\[
+V_{\rm eff}(R_\psi)
+\]
 or spectral/heat-kernel dependence through
-[
-artheta_3!left(0,middle|,rac{i s}{pi R_psi^2}ight).
-]
+\[
+\vartheta_3\!\left(0\,\middle|\,\frac{i s}{\pi R_\psi^2}\right).
+\]
 
 That is a **scale-selection** problem, not a two-dimensional torus-shape problem.
 
@@ -84,15 +83,15 @@ one of the following:
 3. another canonical object whose moduli space is genuinely the upper half-plane modulo
    a modular group.
 
-An arbitrary bookkeeping scale (R_t) is insufficient.
+An arbitrary bookkeeping scale \(R_t\) is insufficient.
 
 ## Relation to old repository material
 
 Older modular notes that introduce
-[
-	au_{m mod}=iR_psi/R_t
-]
-are mathematically valid after assuming two lattice scales.  They are not a derivation
+\[
+\tau_{\rm mod}=iR_\psi/R_t
+\]
+are mathematically valid after assuming two lattice scales. They are not a derivation
 that real physical time is compact, and therefore do not establish a canonical UBT
 torus-shape modulus.
 
@@ -100,11 +99,11 @@ torus-shape modulus.
 
 | Target | Status |
 |---|---|
-| single-circle (R_psi) effective-potential programme | legitimate / separate |
+| single-circle \(R_\psi\) effective-potential programme | legitimate / separate |
 | physical rank-two torus shape in current canonical complex time | NOT DERIVED |
 | theta-lattice geometry-selection programme | DEFERRED |
 | importing external lattice minima as UBT geometry | PROHIBITED without derived functional |
 
-P4 is therefore not an active theory-building task.  The higher-priority problem is to
-derive the actual theta/operator kernel and the (R_psi) dependence from the canonical
+P4 is therefore not an active theory-building task. The higher-priority problem is to
+derive the actual theta/operator kernel and the \(R_\psi\) dependence from the canonical
 action.
