@@ -316,6 +316,33 @@ kernel/trace, nonmodular-by-default finite reduced projections, and a physical
 complex-time coordinate whose full modular transformation law is not derived.
 Full interacting UBT modular covariance remains open.
 
+### Full-covariance CMB protocol — 2026-10-10
+
+The new CMB branch is now fail-closed and preregisterable.  In a finite mode
+basis the theory/data interface is
+\[
+C=A P A^T+N,
+\]
+with Gaussian likelihood and KL-divergence comparison implemented for frozen
+covariance templates.
+
+The statistical code is not the current blocker.  A legitimate UBT H3 model
+requires an action-derived primordial covariance
+\[
+P_{\rm UBT}(\mathbf k,\mathbf k')
+\]
+or its compact discrete analogue **before** evaluation data are inspected.
+The new module refuses an H3-labelled run when that frozen template is absent.
+
+The protocol compares H0=LambdaCDM, H1=ordinary compact topology,
+H2=compact topology plus generic oscillatory primordial modifications, and
+H3=pre-specified UBT.  A UBT-specific result must beat H2 out of sample, not
+merely H0.
+
+Historical CMB results remain negative constraints: the TT comb returned
+\(p=0.919\), and the simple primordial cutoff did not reproduce the low-l
+suppression.  They are not evidence for the new H3 branch.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
