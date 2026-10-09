@@ -1,0 +1,161 @@
+% © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0
+% UBT-AI-PROVENANCE-BEGIN
+% schema: ubt-ai-provenance/v1
+% tier: B_machine_verified
+% ai_assistance: disclosed
+% human_review: machine-verification
+% editorial_responsibility: Ing. David Jaroš
+% policy: ../../AI_PROVENANCE.md
+% notice: Same-carrier commutant claim machine-verified; physical routing implications remain model-level.
+% UBT-AI-PROVENANCE-END
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[most]{tcolorbox}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\title{Lorentz--Colour Compatibility in UBT:\\
+A Same-Carrier Commutant No-Go}
+\author{Ing.\ David Jaro\v{s}}
+\date{9 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We test whether the algebraic $SU(3)$ colour action can be identified directly
+with an internal Standard-Model symmetry acting on the same
+$W=\mathbb C\otimes\mathbb H\simeq M_2(\mathbb C)$ carrier that transforms
+under the canonical Lorentz action $X\mapsto SXS^\dagger$.
+The complex-linear commutant of the full Lorentz action on this carrier is
+one-dimensional: only scalar multiples of the identity commute with all six
+Lorentz generators.  Therefore a nontrivial $SU(3)$ internal symmetry cannot
+act on this same matrix index while commuting with Lorentz transformations.
+This does not invalidate the algebraic $SU(3)$ stabiliser theorem; it fixes the
+physical bridge requirement.  Colour must act on a distinct internal
+multiplicity/mode bundle, or on another action-derived Lorentz-scalar carrier,
+rather than being identified naively with the spacetime biquaternion index.
+\end{abstract}
+
+\section{Setup}
+
+Let
+\[
+ W=M_2(\mathbb C)\simeq\mathbb C^4.
+\]
+The Lorentz action used in the UBT action audit is
+\[
+ \rho(S)X=SXS^\dagger,\qquad S\in SL(2,\mathbb C).
+\]
+As a complex representation of the real Lorentz group this is the complexified
+four-vector carrier.
+
+Choose the ordered complex basis
+\[
+ (\mathbf1,I,J,K).
+\]
+Rotations act on the spatial triplet $(I,J,K)$ and boosts mix the scalar
+direction with the corresponding spatial direction.
+
+\section{Commutant theorem}
+
+\begin{theorem}[Same-carrier Lorentz commutant]
+Let $C\in\operatorname{End}_{\mathbb C}(W)$ commute with the infinitesimal
+action of all three rotations and all three boosts.  Then
+\[
+ \boxed{C=c\,\mathbf1_W,\qquad c\in\mathbb C.}
+\]
+Equivalently,
+\[
+ \operatorname{End}_{\mathrm{Lorentz}}(W)\simeq\mathbb C.
+\]
+\end{theorem}
+
+\begin{proof}
+In the ordered basis $(0,1,2,3)$, use rotation generators
+\[
+ (J_i)_{jk}=\epsilon_{ijk},\qquad (J_i)_{0\mu}=0,
+\]
+and boost generators, in the $(\mathbf1,I,J,K)$ convention,
+\[
+ (K_i)_{0j}=i\delta_{ij},\qquad
+ (K_i)_{j0}=-i\delta_{ij},
+\]
+with all other entries zero.  Solving the linear system
+\[
+ [C,J_i]=0,\qquad [C,K_i]=0,\qquad i=1,2,3,
+\]
+for the sixteen complex entries of $C$ gives rank fifteen and hence a
+one-complex-dimensional solution space.  The identity is a nonzero solution,
+so it spans the commutant.  The exact rational/symbolic rank calculation is
+reproduced by
+\texttt{verification/su3\_lorentz\_commutant\_check.py}.
+\end{proof}
+
+\begin{corollary}[No nontrivial internal $SU(3)$ on the same Lorentz index]
+A nontrivial representation of $SU(3)$ acting on the same $W$ index cannot
+commute with the full Lorentz action above.  In particular, extending a
+Gell--Mann action on
+$V=\mathbb C\operatorname{-span}\{I,J,K\}$ by fixing the scalar direction does
+not define a Standard-Model internal symmetry on the same carrier: boosts mix
+the scalar and spatial directions and fail to commute with generic colour
+generators.
+\end{corollary}
+
+\section{Meaning for the stabiliser theorem}
+
+The theorem
+\[
+ \operatorname{Stab}_{GL(V)}(h,\Omega)=SU(3)
+\]
+remains a correct algebraic statement about the complex three-dimensional
+carrier $V$.  The present no-go concerns the next physical identification:
+if that same $V$ is literally the spatial part of the Lorentz-transforming
+biquaternion $W$, its full $SU(3)$ endomorphism algebra is not an independent
+internal symmetry commuting with Lorentz transformations.
+
+Therefore a Standard-Model bridge requires a separation of roles such as
+\[
+ \mathcal H_{\rm local}
+ \sim
+ \mathcal H_{\rm Lorentz}\otimes\mathcal H_{\rm internal},
+\]
+or an equivalent mode/multiplicity construction in which Lorentz acts on the
+first factor and $SU(3)$ on the second.  This need not introduce a new
+fundamental algebra if the internal multiplicity is derived from existing
+$\psi$, spectral, exterior/Fock or other $\Theta$ modes, but the factorisation
+must be derived rather than assumed.
+
+\section{Impact on the projector candidate}
+
+A projector
+\[
+ P=\mathbf1-|n\rangle\langle n|
+\]
+built directly from the positive Hermitian norm of the same Lorentz carrier is
+not automatically Lorentz equivariant.  Indeed the positive
+Hilbert--Schmidt/dagger norm is not invariant under nonunitary Lorentz boosts,
+as already established in the canonical action audit.
+
+Hence the composite-projector connection is viable as an internal colour
+candidate only if its normalized direction $\Phi[\Theta]$ is first shown to be
+a Lorentz scalar/internal multiplet with an allowed positive Hermitian pairing.
+The naive assignment $\Phi=\Theta$ on the spacetime biquaternion carrier is
+not justified.
+
+\begin{tcolorbox}[colback=yellow!8!white,colframe=orange!70!black,title=Status]
+\textbf{GAP-SU3-LORENTZ-COMMUTANT: CLOSED AS NO-GO [L1].}
+No nontrivial internal $SU(3)$ can act on the same
+$M_2(\mathbb C)$ Lorentz index while commuting with the canonical full Lorentz
+action.
+
+\medskip
+\textbf{Remaining bridge:}
+derive a Lorentz-scalar internal triplet/multiplicity bundle from the single
+UBT field/mode content and show that the $SU(3)$ stabiliser/operator algebra
+acts there.  Only after that separation is established should the local
+connection and induced Yang--Mills programme be promoted.
+\end{tcolorbox}
+
+\end{document}
