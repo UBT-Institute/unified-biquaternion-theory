@@ -133,18 +133,16 @@ $n = n^* = 137$ & Prime attractor & Fine-structure mode (minimum of $V_{\mathrm{
 \section{Toroidal Topology}\label{sec:torus}
 % -----------------------------------------------------------------
 
-\begin{proposition}[Geometry of compactification]\label{prop:torus}
-The UBT field lives on the total space
-$\mathcal{M} \times T^3 \times S^1_\psi$, where:
-\begin{itemize}
-  \item $\mathcal{M} = \mathbb{R}^{1,3}$ is the non-compact Minkowski spacetime
-    (or its curved generalisation)
-  \item $T^3 = (S^1_{R_t})^3$ is the compactified spatial torus
-  \item $S^1_\psi = S^1_{R_\psi}$ is the imaginary-time circle with $\psi \sim \psi + 2\pi R_\psi$
-\end{itemize}
+\begin{proposition}[Canonical compact direction and optional lattice model]\label{prop:torus}
+The active canonical complex-time formulation contains the compact internal circle
+$S^1_\psi=S^1_{R_\psi}$ with
+$\psi\sim\psi+2\pi R_\psi$, over ordinary non-compact spacetime
+$\mathcal M$.  A spatial $T^3=(S^1_{R_t})^3$ is an \emph{additional compactification
+ansatz} used in modular/lattice research models; it is not implied by the canonical
+complex-time axiom.
 \end{proposition}
 
-The partition function of the $T^3$ sector is:
+For that optional rank-three Gaussian lattice model, define:
 \begin{equation}\label{eq:Z_T3}
   \hat{Z}_{T^3}(\tau_\theta)
   = \sum_{\mathbf{k}\in\mathbb{Z}^3}
@@ -171,7 +169,7 @@ which equals the cube of the Jacobi theta function:
 \end{equation}
 \end{definition}
 
-\begin{theorem}[Connection to UBT partition function]\label{thm:partition}
+\begin{theorem}[Rank-three Gaussian theta identity]\label{thm:partition}
 For the standard rank-three Gaussian lattice sum above, the mathematical
 identity
 $\hat{Z}_{T^3}(\tau_\theta)=\vartheta_3(0|\tau_\theta)^3$
@@ -180,7 +178,10 @@ holds and transforms under modular inversion as:
   \hat{Z}_{T^3}(-1/\tau_\theta)
   = (-i\tau_\theta)^{3/2}\,\hat{Z}_{T^3}(\tau_\theta).
 \end{equation}
-The modular weight is $k = 3/2 = d/2$ where $d = 3 = \dim_\mathbb{R}(\mathrm{Im}\,\mathbb{H})$.
+The theta weight is $k=3/2=d/2$ for this rank-three lattice ($d=3$).
+Identifying that lattice rank physically with
+$\dim_\mathbb{R}(\mathrm{Im}\,\mathbb H)=3$ is a UBT bridge hypothesis,
+not part of the classical theta identity.
 \end{theorem}
 
 \begin{proof}
@@ -189,19 +190,18 @@ The Jacobi identity for $\vartheta_3$ gives:
   \vartheta_3(-1/\tau) = (-i\tau)^{1/2}\,\vartheta_3(\tau).
 \end{equation}
 Cubing: $\vartheta_3(0|-1/\tau_\theta)^3 = (-i\tau_\theta)^{3/2}\,\vartheta_3(0|\tau_\theta)^3$.
-The weight $3/2 = d/2$ follows from $d = 3 = \dim_\mathbb{R}(\mathrm{Im}\,\mathbb{H})$,
-giving the same algebraic origin as the $B_{\mathrm{base}} = N_{\mathrm{eff}}^{3/2}$
-exponent in the $\alpha$ derivation. $\square$
+The weight $3/2=d/2$ follows mathematically from the rank $d=3$ Gaussian
+lattice.  No equality with an independently defined UBT exponent is needed for
+this proof. $\square$
 \end{proof}
 
 \noindent\textbf{Source}: \texttt{research\_tracks/research/partition\_function\_modular.md \S v57--v59}.
 
 \begin{remark}
-The modular weight $k = 3/2$ of $\hat{Z}_{T^3}(\tau)$ is consistent with the
-$B_{\mathrm{base}} = N_{\mathrm{eff}}^{3/2}$ exponent in the $\alpha$-derivation.
-Both arise from $d = \dim_\mathbb{R}(\mathrm{Im}\,\mathbb{H}) = 3$.
-However, the Kac-Moody level $k_{\mathrm{KM}} = 1$ (Gap G3-k) is a \emph{different}
-quantity and remains open.
+The mathematical rank-three theta sum has weight $3/2$.  A possible relation
+to the appearance of a $3/2$ exponent elsewhere in UBT is only a structural
+comparison until both quantities are derived from the same canonical object.
+The Kac--Moody level $k_{\mathrm{KM}}$ is a different quantity.
 \end{remark}
 
 % -----------------------------------------------------------------
@@ -277,8 +277,10 @@ as:
   (T_p\,\hat{Z})_n
   = \sum_{d|n,\; d|p} d^{k-1}\hat{Z}_{n^2/(dp)},
 \end{equation}
-and the prime $p = 137$ is a Hecke eigenvalue associated with the attractor mode
-$n^* = 137$ (numerical support: \texttt{docs/reports/hecke\_lepton/}).
+Historical numerical scans singled out $p=137$ in a separate phenomenological
+programme (see \texttt{docs/reports/hecke\_lepton/}).  No canonical theorem in
+this appendix identifies that numerical observation with a physical Hecke
+eigenmode.
 
 % -----------------------------------------------------------------
 \section{Poisson Summation Duality}\label{sec:poisson}
@@ -307,9 +309,9 @@ Summing over $\mathbb{Z}^d$ gives~\eqref{eq:poisson}. $\square$
 \noindent\textbf{Source}: \texttt{ubt\_with\_chronofactor/scripts/spectral/poisson\_duality\_demo.py}.
 
 \begin{remark}
-The prefactor $\tau^{d/2}$ with $d = 3$ is the same $3/2$ exponent as the
-modular weight of $\hat{Z}_{T^3}$ and the $B_{\mathrm{base}}$ exponent.
-All three arise from $d = \dim_\mathbb{R}(\mathrm{Im}\,\mathbb{H}) = 3$.
+The prefactor has exponent $d/2$, and therefore equals $3/2$ for a rank-three
+Gaussian lattice.  Any physical identification of that lattice rank with an
+independent UBT counting argument requires a separate bridge theorem.
 \end{remark}
 
 % -----------------------------------------------------------------
@@ -323,11 +325,13 @@ Result & Status & Layer & Source \\
 \midrule
 Spectral decomposition~\eqref{eq:spectral} & Defined & L0 &
   Def.~\ref{def:spectral} \\
-Toroidal topology $T^3\times S^1_\psi$ & Proved & L0 &
+Compact $S^1_\psi$ & Canonical/assumed compact fiber & L1 &
   Prop.~\ref{prop:torus} \\
-$\hat{Z}_{T^3} = \vartheta_3(\tau)^3$ & Proved & L0 &
+Spatial $T^3$ compactification & Optional bridge ansatz & Open physical status &
+  Prop.~\ref{prop:torus} \\
+Rank-three Gaussian sum $=\vartheta_3(0|\tau_\theta)^3$ & Proved mathematics & L0 &
   Thm.~\ref{thm:partition} \\
-Modular weight $k = 3/2 = d/2$ & Proved & L0 &
+Theta weight $k=3/2$ for rank $d=3$ & Proved mathematics & L0 &
   Thm.~\ref{thm:partition} \\
 Poisson duality $W = \tau^{3/2}S$ & Proved & L0 &
   Thm.~\ref{thm:poisson} \\
