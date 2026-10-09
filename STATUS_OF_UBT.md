@@ -105,6 +105,32 @@ second/higher-jet colour multiplicity, or a first-order auxiliary formulation
 provably equivalent to it.  The independent-(psi) total-second-order
 triplet is the leading zero-extra-scale candidate.
 
+### Holonomic-jet colour correction — 2026-10-10
+
+The previously identified repeated Lorentz-vector contractions in \(J^2\Theta\)
+do **not** constitute three independent internal colour fields.  On an actual
+Fourier mode of one field,
+\[
+(\Box_4\Theta^\mu,\ 
+ \partial^\mu\partial_\nu\Theta^\nu,\ 
+ \partial_\psi^2\Theta^\mu)
+\]
+is a rank-four holonomic image of the four amplitudes \(\Theta^\mu\), not a
+twelve-component independent triplet.  An exact witness shows that a generic
+copy-space Gell--Mann rotation takes this image outside the holonomic jet
+subspace.
+
+Accordingly, the direct "jet multiplicity = colour triplet" interpretation is
+withdrawn.  The independent-\(\psi\) branch remains relevant to the
+complex-time/action audit, but no longer supplies a Standard-Model colour
+triplet by itself.
+
+The leading one-field colour question is now whether the microscopic theory
+admits an **exact collective/auxiliary rewrite** with a genuine local \(SU(3)\)
+redundancy, no new independent UV data, and a healthy induced Yang--Mills
+sector.  Otherwise the minimal field-content claim must be reconsidered before
+a first-principles QCD derivation can be asserted.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
