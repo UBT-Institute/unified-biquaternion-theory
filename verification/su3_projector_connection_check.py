@@ -27,11 +27,28 @@ def realvec(M):
         out.extend([sp.re(z).expand(complex=True),sp.im(z).expand(complex=True)])
     return sp.Matrix(out)
 
+# Verify the projector-curvature formula directly at n=e0 in C^4.
+n=sp.Matrix([1,0,0,0])
+P4=sp.eye(4)-n*n.conjugate().T
+assert P4*P4==P4
+assert P4.rank()==3
+
+def embed(u):
+    return sp.Matrix([0,u[0],u[1],u[2]])
+
+def dP(u):
+    u4=embed(u)
+    return -(u4*n.conjugate().T+n*u4.conjugate().T)
+
 curv=[]
 for a in range(len(tangent)):
     for b in range(a+1,len(tangent)):
         C=F(tangent[a],tangent[b])
         assert sp.simplify(C.H + C)==sp.zeros(3)
+        comm=sp.simplify(dP(tangent[a])*dP(tangent[b])
+                         -dP(tangent[b])*dP(tangent[a]))
+        projected=sp.simplify(P4*comm*P4)
+        assert sp.simplify(projected[1:4,1:4]-C)==sp.zeros(3)
         curv.append(C)
 
 M=sp.Matrix.hstack(*[realvec(C) for C in curv])
