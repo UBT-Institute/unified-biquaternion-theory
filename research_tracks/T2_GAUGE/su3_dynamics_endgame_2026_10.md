@@ -332,3 +332,35 @@ Until those steps are completed, the correct statement is:
 \text{UBT has an exact/conditional SU(3) geometric carrier structure,
 but full Standard-Model colour dynamics remains open.}
 }
+
+
+## 12. Quantitative induced-coupling benchmark
+
+The exact \(SU(1,3)/SU(3)\) collective rewrite identifies the charged coset
+sector as one complex fundamental triplet plus a singlet.
+
+Under the explicit minimal assumptions of a Laplace-type triplet Hessian and
+zero bare Yang--Mills term, the one-loop heat kernel gives
+\[
+\frac1{g_{\rm ind}^2}
+=
+\frac{N_{\rm eff}}{96\pi^2}
+I_0,
+\]
+where \(I_0\) is the logarithmic threshold/proper-time integral.
+
+For one triplet and \(g_{\rm ind}\sim1\), one needs
+\[
+I_0\sim96\pi^2\approx947.5.
+\]
+This is an extreme scale hierarchy if \(N_{\rm eff}=1\).
+
+Therefore the next action/spectrum question is sharply quantitative:
+does the complex-time/\(\psi\) spectrum derive a sufficiently large
+\(N_{\rm eff}\) or threshold enhancement without fitting the answer?
+
+See
+\`research_tracks/T2_GAUGE/su3_induced_coupling_stress_test.md\`.
+
+This benchmark is conditional and does not yet include gauge self-loops,
+ghosts, quarks, or the QCD beta function.
