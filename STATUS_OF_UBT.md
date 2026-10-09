@@ -343,6 +343,34 @@ Historical CMB results remain negative constraints: the TT comb returned
 \(p=0.919\), and the simple primordial cutoff did not reproduce the low-l
 suppression.  They are not evidence for the new H3 branch.
 
+### Zeta-regularized torus-shape audit — 2026-10-10
+
+The older positive-Hessian argument for a square Euclidean torus differentiated
+a divergent mode sum before regularization and is superseded.
+
+For a genuine fixed-area flat \(T^2\), the massless scalar zeta determinant is,
+up to a shape-independent constant,
+\[
+\det{}'\Delta_\tau
+\propto
+\Im\tau\,|\eta(\tau)|^4.
+\]
+The square torus \(\tau=i\) uniquely maximizes this determinant within the
+rectangular family but is a saddle in the full modulus plane.  The hexagonal
+torus is the determinant maximum among all fixed-area flat tori.
+
+For the standard real-boson one-loop effective action
+\[
+\Gamma_1=+\frac12\log\det{}'\Delta,
+\]
+these determinant maxima are not stable minima; the isolated massless
+functional runs toward the cusp and has no finite global modulus minimum.
+
+Thus the massless one-loop determinant does not dynamically select a square or
+hexagonal UBT torus.  A physical P4 result now requires a genuinely
+action-derived compact modulus and a bounded massive/interacting/backreacted
+effective potential calculated after regularization.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
