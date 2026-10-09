@@ -37,3 +37,24 @@ points.
 Either a selected modulus with stated assumptions and certified stability, or
 a no-go theorem showing that the present canonical action leaves the modulus
 undetermined.
+
+
+## October 10 regularized result
+
+The massless scalar determinant branch is now closed as a no-go for finite
+modulus selection.
+
+For fixed area,
+\[
+\det{}'\Delta_\tau\propto\Im\tau\,|\eta(\tau)|^4.
+\]
+The square torus is a rectangular determinant maximum but a saddle in full
+moduli; the hexagonal torus is the full fixed-area determinant maximum.  The
+standard bosonic effective action \(+\frac12\log\det{}'\Delta\) has no finite
+global minimum in this isolated massless branch.
+
+Therefore P4 remains open only for a **derived massive/interacting/backreacted
+modulus potential**.  The old termwise positive-Hessian proof must not be used.
+
+See
+\`research_tracks/theta_torus_potential/zeta_regularized_shape_audit.md\`.
