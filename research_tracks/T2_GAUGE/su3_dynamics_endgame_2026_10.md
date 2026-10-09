@@ -444,7 +444,10 @@ eight at a simple pole.  Eight massless gluons require sixteen physical
 transverse polarizations.  Hence no invertible local tree-level rewrite of the
 single-Theta Hessian can be the perturbative QCD gluon sector.
 
-The primary remaining Axiom-A-compatible target is now nonperturbative:
-construct an adjoint composite current/operator whose exact two-point function
-develops eight massless transverse spin-one poles with positive residues,
-followed by the correct non-Abelian Ward identities and self-couplings.
+The primary remaining Axiom-A-compatible target is now quantum/collective:
+derive effective variables with a genuine local SU(3) redundancy and a
+gauge-fixed 1PI action whose two-, three- and four-point vertices satisfy the
+same Yang--Mills/BRST/Slavnov--Taylor identities and reproduce the perturbative
+eight-gauge-direction ultraviolet limit.  An exact confining infrared theory
+is not required to contain positive-norm gauge-invariant massless coloured
+one-particle poles.
