@@ -1,4 +1,28 @@
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
+## 2026-10-09 parameter-role guardrail
+
+The reduced identity
+[
+sum_n a_n e^{-\pi\psi n^2}e^{\pi i t n^2}
+=
+sum_n a_n e^{\pi i (t+i\psi)n^2}
+]
+is mathematically valid when the damping coordinate is positive.  However,
+(	au_{\rm bridge}=t+i\psi) in this reduced ansatz is **not** thereby proved to be
+the Jacobi modulus of the canonical UBT field.
+
+For the controlled free heat kernel on the canonical compact circle,
+[
+z_\theta=(\psi-\psi')/L,qquad
+	au_\theta=4\pi i s/L^2.
+]
+See
+`research_tracks/complex_time_branch_selection/theta_parameter_role_result_2026-10.en.md`.
+The bridge mapping (phi\leftrightarrow\psi) below remains an ansatz/notation bridge,
+not a canonical action-level derivation.
+
+---
+
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
