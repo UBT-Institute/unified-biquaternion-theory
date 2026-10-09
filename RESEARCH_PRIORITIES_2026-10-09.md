@@ -19,6 +19,21 @@ This note converts the October literature scan and the current repository state 
 testable research programmes. It separates proved mathematics from physical identification
 and from speculative interpretation.
 
+## Progress snapshot — 2026-10-09
+
+| Priority | Current result | Remaining decisive gate |
+|---|---|---|
+| P1 theta / complex time | **Free compact sector CLOSED:** exact S1 heat kernel is a classical rank-one Jacobi theta kernel with z_theta=(psi-psi')/L and tau_theta=4 pi i s/L^2. Direct tau_UBT=t+i psi = tau_theta identification is **NOT DERIVED**. | Derive and classify the full interacting/composite Hessian or canonical correlator. |
+| P2 SU(3) dynamics | **Kinematic bridge substantially closed:** exact 3+5 spin/quadrupole construction, minimal bimodule and pure-MC no-gos, plus a Theta-defined rank-three projector bundle with nonzero traceless composite curvature. | Prove that the canonical Hessian/action selects this connection, reduce U(3) to the physical SU(3) determinant sector, and derive unrestricted YM dynamics and g_s. |
+| P3 CMB | **Protocol + comparator implemented:** H0/H1/H2/H3 full-covariance likelihood/KL tooling and regression tests are in repo. | Generate/fetch physically justified topology covariances, freeze parameters, and run independent evaluation. |
+| P4 torus shape | **DEFERRED / no-go for current canonical topology:** one compact S1_psi has a radius but no rank-two torus shape modulus. | Reactivate only after a second compact cycle or genuine rank-two lattice modulus is action-derived. |
+
+The active programme therefore concentrates on P1 interacting-kernel classification,
+P2 Hessian selection of the composite colour connection, and P3 independent CMB
+evaluation. P4 must not be expanded by analogy alone.
+
+---
+
 ## Locked execution order
 
 1. Theta / complex-time role audit and SU(3) dynamics bridge in parallel.
