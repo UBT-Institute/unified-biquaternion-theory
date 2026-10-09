@@ -104,6 +104,35 @@ therefore quantitatively viable only if UBT independently derives a sufficiently
 large charged spectral multiplicity/tower, an appropriate threshold structure,
 or another normalization mechanism.  The full QCD running remains open.
 
+### KK tower and colour-coupling underdetermination — 2026-10-10
+
+For the conditional one-triplet \(SU(3)\) induced-coupling branch, the compact
+\(S^1_\psi\) tower contributes
+\[
+\Delta_{\rm KK}(a)
+=
+2\sum_{n\ge1}E_1(n^2/a^2),
+\qquad a=\Lambda R_\psi.
+\]
+At the optional self-dual value \(a=1\),
+\[
+\Delta_{\rm KK}=0.4463514816\ldots,
+\]
+so the nonzero tower gives only a small threshold correction.  For large
+\(a\), \(\Delta_{\rm KK}\sim2\sqrt\pi\,a\); obtaining an order-one induced
+coupling from the tower alone requires \(a=O(10^2)\).
+
+More importantly,
+\[
+\Delta_{\rm KK}'(a)
+=
+\frac4a\sum_{n\ge1}e^{-n^2/a^2}>0.
+\]
+Thus the tower coefficient is a continuous strictly increasing function of
+the presently undetermined ratio \(\Lambda R_\psi\).  Until the finalized
+action independently fixes that ratio (and the zero-mode threshold), matching
+\(g_s\) by choosing it is a fit rather than a prediction.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
