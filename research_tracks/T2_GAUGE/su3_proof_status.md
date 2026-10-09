@@ -12,18 +12,29 @@ Current authoritative SU(3) status:
 | Quaternion spin + quadrupole 3+5 construction of all Gell-Mann directions | PROVED / exact symbolic verification |
 | Full SU(3) inside one minimal A Theta - Theta B derivative | CLOSED AS NO-GO |
 | Pure Maurer-Cartan U^-1 dU as generic dynamical gluon field | CLOSED AS NO-GO: locally flat |
-| Endomorphism-valued SU(3) connection on the colour carrier | KINEMATICALLY AVAILABLE |
-| Derivation of the local non-flat colour connection from canonical S[Theta] | OPEN: GAP-SU3-DYN |
-| Strong coupling g_s from first principles | OPEN |
+| Timelike-vacuum transverse colour bundle E=n^(perp_G) | PROVED on H(Theta)>0 patch |
+| Projected connection nabla^E=P d with F=P(dP wedge dP)P | PROVED kinematically |
+| Nonzero traceless composite colour curvature | PROVED by exact -i lambda2 witness |
+| Reduction of moving U(3) frame bundle to the physical SU(3) determinant sector | OPEN / compatibility condition |
+| Selection of this composite connection by the canonical background-field Hessian | OPEN: GAP-SU3-DYN |
+| Unrestricted low-energy Yang-Mills dynamics and strong coupling g_s | OPEN |
 | Dynamical confinement / mass gap | OPEN |
 
-The active bridge note is research_tracks/T2_GAUGE/su3_dynamics_operator_bridge.md.
-Its exact verifier is verification/su3_spin_quadrupole_check.py.
+Active bridge notes:
+- research_tracks/T2_GAUGE/su3_dynamics_operator_bridge.md
+- research_tracks/T2_GAUGE/su3_projector_connection_candidate.md
+
+Exact verifiers:
+- verification/su3_spin_quadrupole_check.py
+- verification/su3_projector_connection_check.py
 
 Important correction to legacy language: SU(3) is not the algebra-automorphism group
 of C tensor H, and the existence of eight generators does not by itself derive local
 QCD gauge dynamics. Historical involution/qubit routes are retained as provenance and
-representation-level motivation, but action-level gauging remains open.
+representation-level motivation. The new projector construction shows that a non-flat
+composite colour connection can arise from a moving Theta-defined transverse bundle,
+but full GAP-SU3-DYN remains open until the physical Hessian/action selects that
+connection and its determinant-line reduction and low-energy dynamics are derived.
 
 ---
 
