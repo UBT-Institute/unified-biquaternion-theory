@@ -252,6 +252,30 @@ The one-field programme now requires genuinely new quantum/composite poles in
 exact correlators; finding algebraic SU(3) generators or an \(F^2\) background
 term is not sufficient.
 
+### Composite-gluon pole benchmark — 2026-10-10
+
+The remaining one-field colour target is now explicitly nonperturbative.  A
+candidate adjoint composite operator must have an exact transverse two-point
+function satisfying
+\[
+\lim_{p^2\to0}p^2G_T(p^2)=Z>0
+\]
+in all eight adjoint directions.  A weak bilinear triplet current fails this
+test: it creates two-particle states and gives logarithmic/continuum behaviour,
+not an isolated massless vector pole.
+
+The existing GR split-jet auxiliary action also cannot provide the missing
+strong channel.  It is linear in the Lagrange multiplier,
+\(S_{\rm aux}=\int\lambda C\); on non-null patches variation of \(K^J,w\)
+forces \(\lambda=0\), while variation of \(\lambda\) imposes \(C=0\).  Thus
+eliminating the auxiliary jet variables produces a constraint, not a
+current-current interaction or vector propagator.
+
+Consequently P2 is narrowed to a genuinely new strong/collective mechanism or
+a revision of microscopic field content.  Algebraic SU(3), local frame
+redundancy, induced background \(F^2\), and weak charged loops are all
+insufficient by themselves.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
