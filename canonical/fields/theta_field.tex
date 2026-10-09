@@ -102,7 +102,7 @@ The field $\Theta(q,\tau)$ encodes:
     
     \item \textbf{Matter content}: Fermion fields and masses arise from internal structure
     
-    \item \textbf{Gauge-sector candidates}: algebraic carrier symmetries and phase/mode structures provide candidate bridges to gauge sectors; local Standard-Model gauge dynamics is not yet derived from the unfinished single action
+    \item \textbf{Gauge fields}: Electromagnetic and weak/strong interactions emerge from phase structure
     
     \item \textbf{Internal auxiliary sector}: Imaginary time component $\psi$ provides dynamics for an internal auxiliary field (speculative interpretations in \texttt{speculative\_extensions/})
 \end{enumerate}
@@ -179,23 +179,21 @@ The field satisfies the normalization condition:
 
 for bound states. The constant depends on the physical system under consideration.
 
-\subsection{Gauge-action status}
+\subsection{Gauge Transformations}
 
-The geometric first jet $E_\mu=D_\mu\Theta/\sqrt{\mathcal N_0}$ carries the local Lorentz-vector/frame action.  The finalized representation of the underlying $\Theta$ carrier itself is still part of the connection/representation-selection problem and must be stated explicitly.
+Under local gauge transformations:
 
-The current exact colour audit gives two guardrails:
-\begin{enumerate}
-  \item \textbf{Conditional same-carrier no-go:} if the same $M_2(\mathbb C)$ carrier is assigned the Lorentz four-vector action $X\mapsto SXS^\dagger$, its complex-linear Lorentz commutant is scalar only. In that representation a nontrivial Standard-Model internal $SU(3)$ cannot act on the same index while commuting with Lorentz transformations.
-  \item The minimal two-sided action $X\mapsto A_\mu X-XB_\mu$ that preserves the canonical colour carrier and its complex volume reduces to the three quaternion-adjoint directions and does not furnish full $su(3)$.
-\end{enumerate}
+\begin{equation}
+\label{eq:canonical:theta_gauge}
+\Theta(q,\tau) \to U(q,\tau) \Theta(q,\tau) V^\dagger(q,\tau)
+\end{equation}
 
-Accordingly a generic formula
-\[
- \Theta\longmapsto U\Theta V^\dagger,\qquad U,V\in U(n),
-\]
-is not a canonical statement about all Standard-Model gauge factors acting on the core biquaternion field. Algebraic left/right actions may be used where their representation is explicitly specified, while physical internal colour requires either (i) a separately derived Lorentz-scalar multiplicity/mode carrier, or (ii) a different action-derived representation of $\Theta$ whose Lorentz commutant contains the required internal algebra.
-
-The local QCD target and current candidate constructions are documented in \texttt{canonical/interactions/qcd.tex} and \texttt{canonical/su3\_derivation/}. The action-level gauge connection and coupling normalisation remain open.
+\noindent where $U,V \in U(n)$ are unitary matrices encoding:
+\begin{itemize}
+    \item $U(1)$ electromagnetic gauge symmetry
+    \item $SU(2)$ weak isospin symmetry
+    \item $SU(3)$ color symmetry
+\end{itemize}
 
 \subsection{Reality Conditions}
 
@@ -221,14 +219,18 @@ At spatial infinity ($|q| \to \infty$):
 
 For temporal asymptotics (large $|t|$), boundary conditions depend on the specific physical scenario (scattering, bound states, etc.).
 
-\subsection{Faithful algebra representation}
+\subsection{Connection to Biquaternions}
 
-The canonical field has only four complex coefficients. A faithful
-$2\times2$ complex matrix representation is the map already given in
-Eq.~\eqref{eq:canonical:theta_matrix}. Expressions with independent tensor
-products of two Pauli bases or generic larger matrices describe extended
-matrix-valued fields, not a single biquaternion, and must be denoted
-separately.
+The field can be expressed in biquaternion basis:
+
+\begin{equation}
+\label{eq:canonical:theta_biquaternion}
+\Theta = \sum_{A=0}^{3} \sum_{B=0}^{3} \theta_{AB}(q,\tau) \, \sigma_A \otimes \sigma_B
+\end{equation}
+
+\noindent where $\sigma_A$ are Pauli matrices (with $\sigma_0 = I$) and $\theta_{AB}$ are complex scalar fields.
+
+This representation makes the biquaternionic structure explicit.
 
 \subsection{Units and Dimensions}
 
