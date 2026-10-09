@@ -63,6 +63,12 @@ models and cannot supply this multiplicity without an independent derivation.
   H0-H3 comparison, with H3 required to outperform the stronger H2 null
   model out of sample.
 
+**CMB spatial-topology gate:** local flat-FRW recovery does not select global
+spatial topology.  R3 and flat quotients such as T3 are locally isometric, and
+the internal S1_psi fibre is not a spatial identification.  Therefore H1/H2
+are external null models and H3 is BLOCKED until UBT derives a specific
+covariance-generating mechanism or global topology-selection principle.
+
 ## P1 modular classification — 2026-10-09
 
 The theta/complex-time programme is now sharply partitioned:
