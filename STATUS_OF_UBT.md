@@ -10,6 +10,28 @@ notice: The author has read the substance and accepts editorial responsibility.
 UBT-AI-PROVENANCE-END
 -->
 
+## Update 2026-10-09: focused theta/SU3/CMB programme
+
+Four active priorities are now frozen in
+`research_tracks/priority_program_2026_10/README.md`.
+
+**SU(3) algebraic subresult:** on
+(V=\mathbb C\operatorname{-span}\{I,J,K\}), the quaternion-adjoint spin-1
+triplet plus five symmetric traceless quadrupoles spans all eight Gell-Mann
+directions. This is machine checked by
+`verification/su3_spin_quadrupole_check.py`.
+
+**Boundary:** this does not close `GAP-SU3-DYN`. A Maurer-Cartan form
+(U^{-1}dU) is locally pure gauge, and the minimal two-sided
+(A_\mu\Theta-\Theta B_\mu) form must not be identified with generic
+colour dynamics without a faithful action-level derivation.
+
+**Other active targets:** classify the actual UBT theta kernel with strict
+separation of UBT complex time from the Jacobi modular parameter; replace
+diagonal-only CMB searches by full TT/TE/EE covariance tests against H0-H3;
+and derive a torus-modulus potential only if a genuine modulus follows from
+the UBT action/Hessian/partition function.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
