@@ -224,7 +224,22 @@ Follows directly from $e^{i(\delta_1+\delta_2)\hat{N}/R_\psi} = e^{i\delta_1\hat
 (valid since $\hat{N}$ commutes with itself).
 \end{proof}
 
-\subsection{Chronofactor projection map $\Pi$}
+\subsection{Historical chronofactor projection candidate $\Pi$}
+
+\begin{warnbox}
+\textbf{2026-10-09 representation-theory audit.}
+The equal-sum map written below is a historical coordinate-dependent candidate,
+not an $SO(3)$-equivariant projection. In fact
+\[
+ \operatorname{Hom}_{SO(3)}(\mathbb R^3,\mathbb R_{\rm trivial})=0,
+\]
+so the only $SO(3)$-equivariant linear scalar map from
+$\operatorname{Im}\mathbb H$ is the zero map. The equal-sum functional is
+only symmetric under permutations of the chosen basis axes. Consequently it
+cannot justify an isotropic $3/2$ projection factor or any downstream physical
+mode count. See
+\texttt{verification/chronofactor\_projection\_and\_winding\_check.py}.
+\end{warnbox}
 
 \begin{definition}[Chronofactor projection]
 \label{def:chron:Pi}
