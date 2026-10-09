@@ -218,3 +218,8 @@ claims:
     evidence:
     - speculative_extensions/consciousness/
     forbidden_wording: []
+
+    - 'GAP-SU3-HOLONOMIC-JET: CLOSED AS NO-GO — the formal three-channel set {Box_4 Theta, grad div Theta, partial_psi^2 Theta} is the holonomic image of one field, not three independent colour fields; an exact Fourier witness has channel-map rank 4 rather than 12, and a generic copy-space SU(3) rotation does not preserve this image'
+    - 'GAP-SU3-PSI-TRIPLET-PHYSICS: WITHDRAWN AS DIRECT COLOUR CARRIER — independent psi keeps a third same-order Lorentz contraction available mathematically, but jet multiplicity alone does not define a Standard-Model internal triplet'
+    - 'GAP-SU3-COPY-METRIC: SUPERSEDED AS PRIMARY ROUTE — K_AB classification remains an algebraic statement for formal channel variables, but K proportional to I_3 would not by itself create a physical U(3) symmetry on the single-field holonomic theory'
+    - 'GAP-SU3-COLLECTIVE-REWRITE: OPEN PRIMARY ROUTE — test whether the single-Theta path integral/action admits an exact auxiliary or collective-variable rewrite with genuine local SU(3) redundancy, no extra fundamental UV data, and an induced healthy Yang-Mills sector'
