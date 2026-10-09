@@ -128,11 +128,43 @@ jde o modulární model, nikoli o kanonickou topologii UBT časoprostoru.
 | redukované (	au_{m bridge}=t+ipsi) | matematicky platný bridge ansatz |
 | UBT kernel patří do Weil/Hermitovské/mock theta třídy | OPEN |
 
+<!-- BILINGUAL-UNIT: theta-role-2026.classification -->
+## 5. Klasifikace volného sektoru
+
+Pro fixed-background fluktuační operátor kompaktního psi sektoru se spektrem
+[
+lambda_n=rac{n^2}{R_psi^2}
+]
+je heat trace přesně
+[
+operatorname{Tr}e^{-sH_psi}
+=
+sum_{ninmathbb Z}e^{-s n^2/R_psi^2}
+=
+artheta_3!left(0,middle|,rac{i s}{pi R_psi^2}ight).
+]
+
+Kontrolovaný volný/fixed-background kompaktní sektor je tedy **klasická Jacobiho /
+rank-one lattice theta funkce**.  Není to mock theta funkce a pro tento volný sektor
+není potřeba mock-modulární completion ani resurgentní hypotéza.
+
+To souhlasí s existujícím výsledkem pro fixed-background Hessian: po kontrolované
+eukleidizaci je jeho hlavní část Laplace type, takže standardní heat-kernel konstrukce
+je správný matematický objekt.
+
+Howardův Weilův framework je proto vhodný benchmark reprezentace běžné mřížkové theta.
+Costin--Dunne--Saraeb je relevantní až tehdy, pokud plný interacting/composite kernel
+prokazatelně získá mock/modulární asymptotiku nebo netriviální natural-boundary /
+resurgentní problém.
+
 <!-- BILINGUAL-UNIT: theta-role-2026.next -->
-## 5. Zbývající cíl P1
+## 6. Zbývající cíl P1
 
-Zbývajícím netriviálním úkolem už není přiřazení symbolů. Je třeba z kanonické
-akce odvodit operátor nebo korelační funkci, jejíž kernel je konkrétní theta objekt,
-a ten následně klasifikovat v Jacobi/Weil/Hermitovské/mock hierarchii.
+P1 je **uzavřena pro volný kompaktní heat-kernel sektor**.
 
-Tím je P1 významně zúžena, ale celý theta/complex-time audit ještě není uzavřen.
+Zbývající netriviální úloha se týká plného interacting/composite Hessianu nebo kanonické
+korelační funkce: odvodit ji z finální akce, určit lower-order data operátoru a teprve
+potom rozhodnout, zda kernel zůstává v klasické Jacobi/Weil třídě, nebo přechází do
+obecnější modulární struktury.
+
+Nejasnost rolí parametrů je tedy uzavřena; interacting theta klasifikace zůstává otevřená.
