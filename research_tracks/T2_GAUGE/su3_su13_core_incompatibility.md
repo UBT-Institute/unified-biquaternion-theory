@@ -220,3 +220,61 @@ representation structure without a protected dynamical gauge symmetry.
 
 Verification:
 \`verification/su3_su13_core_incompatibility_check.py\`.
+
+
+## 7. Fixed-background kinetic-sign obstruction
+
+The unique constant invariant Hermitian form
+\[
+G=\operatorname{diag}(1,-1,-1,-1)
+\]
+also fixes the target-space signature of the naive quadratic kinetic term.
+
+Around a timelike reference vacuum
+\[
+\Theta_0=r e_0,
+\]
+write an unconstrained fluctuation as
+\[
+\delta\Theta
+=
+\delta z_0\,e_0
++
+\delta z_i\,e_i.
+\]
+
+Then
+\[
+\delta\Theta^\dagger G\,\delta\Theta
+=
+|\delta z_0|^2
+-
+\sum_{i=1}^3|\delta z_i|^2.
+\]
+
+As a real quadratic form this has signature
+\[
+\boxed{(2,6)}
+\]
+or \((6,2)\) after an overall sign flip.
+
+Thus, if all eight real components are treated as independent ordinary
+fixed-background scalar fluctuations, no overall kinetic sign makes all modes
+positive.
+
+On the \(\lambda_2=0\) timelike vacuum manifold this means that the six real
+directions in the complex triplet and the radial/phase sector necessarily
+carry opposite signs under the constant linear pairing.
+
+Therefore the symmetry-enhanced branch is not a healthy unconstrained scalar
+sigma model with the presently simplest constant kinetic pairing.
+
+Possible escapes must be derived:
+- constraints/gauge conditions removing the negative-sign modes;
+- a nonlinear positive \(SU(1,3)/SU(3)\) sigma-model metric on the timelike
+  branch;
+- a different first-order formulation in which the apparent target signature
+  does not represent propagating ghost states.
+
+The physical constrained Hessian, not only the algebraic pairing, must decide
+this issue.
