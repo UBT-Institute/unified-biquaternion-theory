@@ -189,6 +189,35 @@ This is a new action-selection candidate, not a canonical status upgrade.  Its
 compatibility with the sharp-based tetrad/metric relation, the full constrained
 Hessian, the null stratum and the single-action GR branch remains open.
 
+### Positive kinetic metric-lock audit — 2026-10-10
+
+The field-dependent positive \(K_\Theta^+\) metric remains a valid
+fixed-background sigma-model candidate, but it does not provide an independent
+colour kinetic sector after the canonical metric is substituted.
+
+On the Lorentz tetrad slice,
+\[
+E_\mu^\dagger GE_\nu=-g_{\mu\nu}.
+\]
+Hence
+\[
+g^{\mu\nu}K_\Theta^+(D_\mu\Theta,D_\nu\Theta)
+=
+4\mathcal N_0+
+\frac{2}{h}g^{\mu\nu}\bar c_\mu c_\nu,
+\qquad
+c_\mu=\Theta^\dagger GD_\mu\Theta.
+\]
+On a constant-\(h\) branch only a real singlet/phase current remains beyond
+the volume term.  At the adapted reference vacuum \(\Theta\parallel1\), the
+full contraction is exactly \(2\mathcal N_0\) for every nondegenerate Lorentz
+tetrad.
+
+Therefore the healthy fixed-background seven tangent zero modes cannot be
+relabelled as seven independent colour excitations of the metric-locked
+single-Theta theory.  A physical gluon sector still requires a separate
+collective/quantum mechanism.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
