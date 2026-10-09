@@ -188,6 +188,9 @@ claims:
     - 'GAP-SU3-COSET-INDUCED-COUPLING: CLOSED CONDITIONALLY AS A BENCHMARK — if the six charged SU(1,3)/SU(3) coset fluctuations form one minimally coupled complex fundamental triplet with a Laplace-type Hessian and no bare Yang-Mills term, then 1/g_ind^2 = I0/(96*pi^2), where I0 is the proper-time logarithmic threshold integral'
     - 'GAP-SU3-COSET-INDUCED-MAGNITUDE: OPEN/CONSTRAINED — for one triplet and g_ind of order one, the induced-only formula requires a logarithmic hierarchy of order 96*pi^2; a realistic mechanism therefore needs an action-derived charged multiplicity/tower, threshold structure, or another normalization mechanism'
     - 'GAP-SU3-QCD-RUNNING: OPEN — matter/coset induction of F^2 does not establish the QCD beta function; independent gauge modes, ghosts and the derived quark/matter spectrum must reproduce the non-Abelian running'
+    - 'GAP-SU3-KK-SELFDUAL: CLOSED AS NEGATIVE BENCHMARK — for one charged complex triplet on S1_psi, the finite nonzero-KK threshold at Lambda R_psi=1 is Delta_KK=0.4463514816..., far too small to repair the minimal induced-coupling deficit'
+    - 'GAP-SU3-KK-LARGE-TOWER: CONDITIONAL — Delta_KK(a)=2 sum_{n>=1} E1(n^2/a^2) grows as 2 sqrt(pi) a; a tower-only order-one induced coupling requires Lambda R_psi of order 10^2 (about 271 for the g=1 orientation benchmark)'
+    - 'GAP-SU3-KK-COUPLING-UNDERDETERMINATION: CLOSED AS NO-PREDICTION THEOREM — Delta_KK is continuous and strictly increasing because Delta_KK prime(a)=(4/a) sum exp(-n^2/a^2)>0, so without an independent action-level determination of Lambda R_psi the induced coupling can be tuned to any positive target and is not a UBT prediction'
     forbidden_wording:
     - SU(3) derived from automorphisms
     - gauge group follows from automorphisms alone
