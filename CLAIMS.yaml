@@ -94,6 +94,12 @@ claims:
     - 'GAP-THETA-NAME-CONFLATION: CLOSED — the fundamental field named Theta is a C tensor H-valued field, not by definition a Jacobi theta function; Jacobi modular properties cannot be transferred from notation alone'
     - 'GAP-THETA-HEAT-KERNEL-CLASS: CLOSED [L1 in free S1 spectral sector] — the free compact-circle heat trace is an ordinary Jacobi theta constant with the standard theta-group/Poisson transformation law, not a mock-theta object'
     - 'GAP-THETA-FULL-MODULAR-CLASS: OPEN — an interacting full-field modular/mock-modular classification requires an action-derived quantum or spectral kernel beyond the free heat trace'
+    - 'GAP-THETA-GROUP-INDEX: CLOSED [STD/L1 bookkeeping] — for vartheta_3(tau)=sum_n exp(pi i n^2 tau), the scalar theta subgroup Gamma_theta=<S,T^2> has index 3 in SL(2,Z); older index-2 wording is incorrect'
+    - 'GAP-THETA-CONVENTION-GAMMA04: CLOSED — the common Gamma_0(4) weight-1/2 statement refers to the rescaled convention sum_n exp(2 pi i n^2 tau)=vartheta_3(2 tau); it must not be mixed with the pi i n^2 tau convention'
+    - 'GAP-THETA-REDUCED-FINITE-MODULAR: CLOSED AS GENERIC NO-GO — the finite weighted reduced amplitude S_s=sum_{n=0}^{N-1} a_n^(s) exp(pi i n^2 tau_J) is an entire finite exponential polynomial with T^2 periodicity but has no generic S-transformation closure; it is not a modular form without additional coefficient/Weil-representation structure'
+    - 'GAP-THETA-REDUCED-MOCK: CLOSED AS NO-CLAIM — failure of ordinary modularity does not imply mock modularity; no shadow/nonholomorphic completion has been derived for the generic finite UBT projection'
+    - 'GAP-THETA-DIMENSIONAL-SEPARATION: CLOSED — canonical tau_UBT=t+i psi is dimensionful with [t]=[psi]=length, whereas the Jacobi tau_J is dimensionless; any identification requires an explicit action-derived scale map'
+    - 'GAP-THETA-P1-CLASSIFICATION: CLOSED FOR CURRENT OBJECTS — current UBT contains an ordinary Jacobi free heat kernel/trace, a finite nonmodular-by-default reduced projection, and a dimensionful physical complex-time coordinate with no derived full modular transformation law; the interacting full-field modular classification remains open'
     forbidden_wording:
     - UBT complex time is the Jacobi modular parameter
     - psi to zero is the same limit as Im tau_J to zero for every UBT theta construction
