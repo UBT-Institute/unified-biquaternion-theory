@@ -144,8 +144,44 @@ F^E_{xy}=-i\lambda_2\ne0.
 **Stav:** kompozitní rank-three connection a nenulový traceless curvature witness
 jsou kinematicky PROVED.
 
+
+<!-- BILINGUAL-UNIT: su3-oct2026.projector-nogo -->
+## 4. No-go pro Yang--Mills tvořený pouze projektorem
+
+Projektovaná connection
+\[
+\nabla^E=P\,d
+\]
+je jednoznačně určena pohybujícím se projektorem \(P\).  Není tedy libovolnou
+connection na stejném rank-three bundle.
+
+Rozhodující protipříklad je okamžitý.  Pokud
+\[
+dP=0,
+\]
+pak
+\[
+F^E=P(dP\wedge dP)P=0.
+\]
+Na témže konstantním rank-three bundle však existují běžné
+\(\mathfrak{su}(3)\)-valued connections s nenulovou curvature.
+
+Proto zobrazení
+\[
+P\longmapsto \nabla^E=P\,d
+\]
+není surjektivní na prostor Yang--Mills connections.
+
+**Stav:** CLOSED AS NO-GO pro tvrzení, že samotná projector connection dává
+neomezenou QCD/Yang--Mills dynamiku.
+
+Projektorová konstrukce zůstává užitečná jako geometrický původ barevného bundle
+a jako omezená kompozitní connection.  Plná QCD vyžaduje další
+action-derived efektivní/local-frame connection stupeň volnosti nad rámec jediné
+univerzální connection určené \(P\).
+
 <!-- BILINGUAL-UNIT: su3-oct2026.open -->
-## 4. Zbývající dynamický gate
+## 5. Zbývající dynamický gate
 
 Pohybující se příčný frame je přirozeně \(U(3)\)-valued. Fyzikální SU(3) sektor
 vyžaduje kompatibilní determinant/volume redukci.
@@ -162,7 +198,7 @@ Rozhodující otevřené úlohy jsou:
 **Stav:** GAP-SU3-DYN OPEN.
 
 <!-- BILINGUAL-UNIT: su3-oct2026.verify -->
-## 5. Verifikace
+## 6. Verifikace
 
 Přesné konečně-rozměrné kontroly jsou implementovány v:
 
