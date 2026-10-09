@@ -26,6 +26,20 @@ directions. This is machine checked by
 (A_\mu\Theta-\Theta B_\mu) form must not be identified with generic
 colour dynamics without a faithful action-level derivation.
 
+**New exact SU(3) dynamical boundary:** `GAP-SU3-BIMODULE-RESTRICTION`
+is CLOSED AS NO-GO [L1].  A minimal operator (X\mapsto AX-XB) that preserves
+the colour carrier (V\simeq sl_2(\mathbb C)) restricts to
+(\operatorname{ad}_{A_0}+cI); preserving the canonical complex volume forces
+(c=0), so only the three quaternion-adjoint/spin directions remain.  Full
+(su(3)) requires the five quadratic spin-quadrupole endomorphisms or another
+non-minimal operator construction.
+
+**Conditional Yang--Mills bridge:** `GAP-SU3-YM-INDUCED` is CLOSED
+CONDITIONALLY [L1].  If a genuine colour connection enters the physical
+Laplace-type Theta Hessian, the standard heat-kernel (a_4) term contains
+(\frac1{12}\operatorname{tr}F_{\mu\nu}F^{\mu\nu}).  This does not derive
+the connection or (g_s) from the unfinished fundamental action.
+
 **Other active targets:** classify the actual UBT theta kernel with strict
 separation of UBT complex time from the Jacobi modular parameter; replace
 diagonal-only CMB searches by full TT/TE/EE covariance tests against H0-H3;
