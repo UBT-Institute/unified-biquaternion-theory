@@ -51,6 +51,24 @@ models and cannot supply this multiplicity without an independent derivation.
 - **GAP-TORUS-SHAPE-POTENTIAL — OPEN:** a genuine action-derived shape or
   complex-structure modulus is still required.
 
+## P1 modular classification — 2026-10-09
+
+The theta/complex-time programme is now sharply partitioned:
+
+- **exact spectral theta:** compact-S1 heat trace with
+  tau_H = i s/(pi R_psi^2) and Jacobi/Poisson inversion;
+- **conditional geometric torus:** requires an independently compact Euclidean
+  time cycle; minimal real-time x S1_psi is a cylinder, not a torus;
+- **full UBT modular symmetry:** OPEN.
+
+Additional closed audit results:
+- standard theta_3 obeys theta_3(tau+1)=theta_4(tau), while T^2 leaves it
+  invariant; older T-invariance statements mixed theta conventions;
+- theta_3(0|tau) has no zeros in the upper half-plane, so zero-based
+  stabilization candidates are mathematically excluded;
+- the historical theta_3^3 / weight-3/2 compact partition function belongs to
+  the extended three-cycle model, not the minimal S1_psi compact sector.
+
 ## Theta parameter audit — 2026-10-09
 
 - **GAP-THETA-TAU-NAIVE — CLOSED AS NO-GO:** canonical UBT complex time
