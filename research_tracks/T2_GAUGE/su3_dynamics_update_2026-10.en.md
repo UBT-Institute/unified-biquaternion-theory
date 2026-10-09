@@ -144,8 +144,44 @@ F^E_{xy}=-i\lambda_2\ne0.
 **Status:** the composite rank-three connection and a nonzero traceless curvature
 witness are PROVED kinematically.
 
+
+<!-- BILINGUAL-UNIT: su3-oct2026.projector-nogo -->
+## 4. Projector-only Yang--Mills no-go
+
+The projected connection
+\[
+\nabla^E=P\,d
+\]
+is uniquely determined by the moving projector \(P\).  It is therefore not an
+arbitrary connection on the same rank-three bundle.
+
+A decisive counterexample is immediate.  If
+\[
+dP=0,
+\]
+then
+\[
+F^E=P(dP\wedge dP)P=0.
+\]
+However, on that same constant rank-three bundle there exist ordinary
+\(\mathfrak{su}(3)\)-valued connections with nonzero curvature.
+
+Therefore the map
+\[
+P\longmapsto \nabla^E=P\,d
+\]
+is not surjective onto the space of Yang--Mills connections.
+
+**Status:** CLOSED AS NO-GO for the claim that the projector connection alone gives
+unrestricted QCD/Yang--Mills dynamics.
+
+The projector construction remains useful as a geometric origin of the colour bundle
+and as a constrained composite connection.  Full QCD requires an additional
+action-derived effective/local-frame connection degree of freedom beyond the unique
+universal connection fixed by \(P\).
+
 <!-- BILINGUAL-UNIT: su3-oct2026.open -->
-## 4. Remaining dynamics gate
+## 5. Remaining dynamics gate
 
 The moving transverse frame is naturally \(U(3)\)-valued. A physical SU(3) sector
 requires a compatible determinant/volume reduction.
@@ -162,7 +198,7 @@ The decisive open tasks are:
 **Status:** GAP-SU3-DYN OPEN.
 
 <!-- BILINGUAL-UNIT: su3-oct2026.verify -->
-## 5. Verification
+## 6. Verification
 
 Exact finite-dimensional checks are implemented in:
 
