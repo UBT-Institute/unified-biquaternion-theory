@@ -61,3 +61,7 @@ Until replaced by a stronger frozen rule:
 
 No post-hoc change of prime set, theta kernel, multipole range, topology,
 orientation, phase or filtering is allowed on the evaluation set.
+
+## H3 readiness gate
+
+Do not freeze a real-data H3 configuration merely by choosing a convenient torus. Before pre-registration, cite the UBT derivation that fixes the physical covariance-generating mechanism.  If no such derivation exists, H3 is UNDEFINED and real-data evaluation is blocked. A derived spatial topology is one possible route; a different action-derived covariance mechanism is also acceptable if specified before evaluation.
