@@ -14,6 +14,8 @@ UBT-AI-PROVENANCE-END
 -->
 
 
+> **2026-10-09 CANONICAL MODULAR AUDIT OVERRIDE:** This document predates the strict separation of `tau_UBT`, geometric/thermal torus moduli, and the Jacobi heat-kernel modulus.  Compact `S1_psi` plus noncompact real time is a cylinder, not a torus.  A genuine two-torus requires an additional compact Euclidean-time cycle.  Standard `theta_3(0|tau)` obeys `theta_3(tau+1)=theta_4(tau)` and has no zeros in the upper half-plane.  For current canonical status see `canonical/bridges/theta_modular_classification_2026_10.tex` and `canonical/bridges/theta_parameter_separation.md`.  Older `[L1]` torus/modular-symmetry claims below are provenance, not current claim status.
+
 # Modular Covariance Verdict for `S[Theta]`
 
 **Task**: `prove_or_kill_modular_covariance_of_ubt_action`  
