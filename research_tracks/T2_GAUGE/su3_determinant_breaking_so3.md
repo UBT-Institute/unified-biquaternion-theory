@@ -161,3 +161,63 @@ action.
 
 Verification:
 \`verification/su3_determinant_breaking_so3_check.py\`.
+
+
+## 6. Symmetric-tensor / Higgs interpretation
+
+The same symmetry breaking can be expressed using a complex symmetric tensor
+\[
+\Sigma_{ij}\propto\delta_{ij}.
+\]
+
+Under \(SU(3)\),
+\[
+\Sigma\mapsto U\Sigma U^T.
+\]
+
+For \(\Sigma=I_3\), the stabilizer condition is
+\[
+UU^T=I_3.
+\]
+Together with unitarity and determinant one this gives
+\[
+\boxed{
+\operatorname{Stab}_{SU(3)}(\Sigma=I_3)=SO(3).
+}
+\]
+
+Infinitesimally, the symmetry-breaking map is
+\[
+\mathcal M:su(3)\to\operatorname{Sym}_3(\mathbb C),
+\qquad
+\mathcal M(X)=X+X^T.
+\]
+
+Its real rank is five and its kernel is the three-dimensional
+\[
+so(3)=\operatorname{span}_{\mathbb R}
+\{i\lambda_2,i\lambda_5,i\lambda_7\}.
+\]
+
+Therefore the determinant-sensitive quaternionic structure can be interpreted
+as a colour symmetric-tensor background whose presence would Higgs
+\[
+SU(3)\to SO(3)
+\]
+if the full candidate colour symmetry were made dynamical.
+
+A standard covariant kinetic term
+\[
+\operatorname{tr}(D_\mu\Sigma)^\dagger(D^\mu\Sigma)
+\]
+around \(\Sigma\propto I_3\) produces a gauge-boson mass matrix proportional to
+\[
+\|A_\mu+A_\mu^T\|^2.
+\]
+It has rank five: five gauge directions become massive and only the three
+\(SO(3)\) directions remain massless.
+
+This is incompatible with identifying the generic \(\lambda_2>0\) vacuum with
+unbroken QCD colour.  A QCD interpretation therefore requires the
+determinant-induced symmetric tensor to vanish, decouple, or become
+dynamically irrelevant in the colour infrared sector.
