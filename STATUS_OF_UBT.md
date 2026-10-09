@@ -218,6 +218,40 @@ relabelled as seven independent colour excitations of the metric-locked
 single-Theta theory.  A physical gluon sector still requires a separate
 collective/quantum mechanism.
 
+### Raw-carrier colour closure and gluon DOF boundary — 2026-10-10
+
+An exact operator audit now identifies the norm-preserving content of the
+minimal two-sided biquaternion derivative:
+\[
+\operatorname{im}(L-R)\cap u(1,3)
+=
+so(1,3)\oplus u(1)_{\rm phase}.
+\]
+The traceless intersection is exactly the six-dimensional Lorentz algebra.
+Inside the reference colour fibre only its three \(so(3)\) rotation directions
+survive; the five additional Gell--Mann/quadrupole directions are absent.
+
+If those five colour directions are nevertheless added as linear raw-carrier
+generators, Lie closure with the existing three boost directions produces the
+full
+\[
+su(1,3).
+\]
+That larger raw-carrier symmetry is already known not to preserve the
+sharp/determinant GR core.  This rules out a simple linear realization of
+physical Lorentz and full colour on the same raw \(\mathbb C^4\) value carrier
+while keeping the present GR architecture unchanged.
+
+There is also a tree-level degree-of-freedom obstruction.  One biquaternion has
+eight real components, so a healthy local second-order quadratic propagator has
+residue rank at most eight.  Eight massless gluons require sixteen physical
+transverse helicity modes.  Therefore full perturbative QCD cannot be an
+invertible local tree-level rewrite of the ordinary single-Theta Hessian.
+
+The one-field programme now requires genuinely new quantum/composite poles in
+exact correlators; finding algebraic SU(3) generators or an \(F^2\) background
+term is not sufficient.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
