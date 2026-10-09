@@ -123,6 +123,9 @@ claims:
     - 'GAP-CMB-PSI-IR-CUTOFF: CLOSED AS NO-GO [L1] — compact internal S1_psi quantizes internal momentum and yields a KK mass tower, but the n=0 branch still permits arbitrarily small ordinary spatial k on noncompact physical space; k_min=1/R_psi does not follow'
     - 'Historical low-l cutoff and Delta-l=137 comb calculations are exploratory signal families/null tests, not core UBT predictions'
     - 'P3-COVARIANCE: ACTIVE — compare pre-registered H3 against H0 LambdaCDM, H1 ordinary compact topology and H2 topology plus generic oscillatory primordial structure using full TT/TE/EE covariance; BB secondary unless theory predicts otherwise'
+    - 'GAP-CMB-LOCAL-FRW-TOPOLOGY: CLOSED AS LOCAL-SELECTION NO-GO — the local flat-FRW metric does not determine whether the spatial slice is R3 or a flat quotient such as T3; local recovered GR equations alone cannot select global spatial topology'
+    - 'GAP-CMB-SPATIAL-TOPOLOGY-ORIGIN: OPEN — derive global boundary, holonomy, regularity or variational data selecting a physical spatial topology before using a torus as the UBT H3 model'
+    - 'P3-H3-READINESS: BLOCKED — H3 remains undefined until a UBT covariance-generating mechanism is derived and frozen before evaluation data'
     forbidden_wording:
     - compact psi directly imposes a spatial k_min equal to 1/R_psi
     - R_psi equals c/H0 from first principles
