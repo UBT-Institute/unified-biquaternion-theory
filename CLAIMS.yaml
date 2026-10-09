@@ -85,6 +85,10 @@ claims:
     - canonical/su3_derivation/
     - canonical/su3_derivation/su3_stabilizer_exterior_fock.tex
     - verification/su3_stabilizer_fock_check.py
+    - research_tracks/T2_GAUGE/su3_dynamics_operator_bridge.md
+    - verification/su3_spin_quadrupole_check.py
+    - research_tracks/T2_GAUGE/su3_projector_connection_candidate.md
+    - verification/su3_projector_connection_check.py
     - papers/UBT_Gauge_Submission.tex
     - reviews/gauge_qm_honest_status_audit_2026-07-17.md
     assumptions:
@@ -92,7 +96,11 @@ claims:
     - 'GAP-SU3-STABILIZER: PROVED [L1] — canonical h and Omega on V=C-span{I,J,K} derived from biquaternionic adjoint and quaternion multiplication; Stab_{GL(V)}(h,Omega)=SU(3); machine verified by exact SymPy checks'
     - 'GAP-SU3-FOCK: PROVED [L1] — Lambda^bullet V = 1+3+3-bar+1; second-quantised su(3) generator algebra verified exactly; Lean-PENDING'
     - 'GAP-SU3-GLOBAL: STATED — correct global group is U(3) cong (SU(3)xU(1))/Z_3, not a direct product; Lie-algebra split u(3)=su(3)+u(1) valid'
-    - 'GAP-SU3-DYN: OPEN — derive the local QCD gauge field from canonical UBT action; algebraic stabiliser proved but dynamical gauging not yet derived'
+    - 'GAP-SU3-SPIN-QUAD: PROVED [L1] — quaternion adjoints give the spin-1 triple lambda7,-lambda5,lambda2 and symmetric traceless quadrupoles give the other five Gell-Mann directions; exact SymPy verifier'
+    - 'GAP-SU3-BIMODULE: CLOSED AS NO-GO — one minimal two-sided A Theta - Theta B action has image Lie algebra sl2(C)+sl2(C)+C of complex dimension 7 and cannot contain sl3(C)'
+    - 'GAP-SU3-MC: CLOSED AS NO-GO — a candidate colour connection of pure Maurer-Cartan form U^-1 dU is locally flat and cannot represent generic gluon curvature'
+    - 'GAP-SU3-PROJECTOR-KIN: PROVED [L1] — on an H(Theta)>0 patch the transverse rank-three bundle defined by P=1-n n^flat carries the projected U(3) connection P d with curvature P(dP wedge dP)P; an exact witness has nonzero traceless curvature -i lambda2'
+    - 'GAP-SU3-DYN: OPEN AND NARROWED — prove that the canonical background-field Hessian selects the composite transverse connection (or another non-flat endomorphism connection), reduce its determinant line consistently to the physical colour SU(3), and derive unrestricted low-energy Yang-Mills dynamics and g_s'
     - 'GAP-SU3-TRIQUBIT-LEAKAGE: CLOSED [L1] — every single X_i/Y_i error leaves the color sector'
     - 'GAP-SU3-TRIQUBIT-QEC: CLOSED AS NO-GO [L1] — the Knill-Laflamme conditions fail for {I,X_1,X_2,X_3}, compressed Z_i errors are non-scalar logical operations, and the three-dimensional carrier is not a Pauli stabilizer code'
     - 'The triqubit result is a representation/quantum-simulation encoding statement and does not imply a simulation ontology'
