@@ -7,7 +7,7 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Pre-registration style experimental protocol; no positive UBT claim is made.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
