@@ -1,3 +1,4 @@
+<!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -10,47 +11,6 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-## Audit override — 2026-10-09
-
-This section supersedes older wording below wherever the two conflict.
-
-Current authoritative SU(3) status:
-
-| Item | Status |
-|---|---|
-| Canonical colour carrier V=C-span{I,J,K} with h and Omega | PROVED / canonical source |
-| Stab(h,Omega)=SU(3) | PROVED / exact finite-dimensional theorem |
-| Exterior/Fock 1+3+3bar+1 representation | PROVED as representation statement |
-| Quaternion spin + quadrupole 3+5 construction of all Gell-Mann directions | PROVED / exact symbolic verification |
-| Full SU(3) inside one minimal A Theta - Theta B derivative | CLOSED AS NO-GO |
-| Pure Maurer-Cartan U^-1 dU as generic dynamical gluon field | CLOSED AS NO-GO: locally flat |
-| Timelike-vacuum transverse colour bundle E=n^(perp_G) | PROVED on H(Theta)>0 patch |
-| Projected connection nabla^E=P d with F=P(dP wedge dP)P | PROVED kinematically |
-| Nonzero traceless composite colour curvature | PROVED by exact -i lambda2 witness |
-| Reduction of moving U(3) frame bundle to the physical SU(3) determinant sector | OPEN / compatibility condition |
-| Selection of this composite connection by the canonical background-field Hessian | OPEN: GAP-SU3-DYN |
-| Unrestricted low-energy Yang-Mills dynamics and strong coupling g_s | OPEN |
-| Dynamical confinement / mass gap | OPEN |
-
-Active bridge notes:
-- research_tracks/T2_GAUGE/su3_dynamics_operator_bridge.md
-- research_tracks/T2_GAUGE/su3_projector_connection_candidate.md
-
-Exact verifiers:
-- verification/su3_spin_quadrupole_check.py
-- verification/su3_projector_connection_check.py
-
-Important correction to legacy language: SU(3) is not the algebra-automorphism group
-of C tensor H, and the existence of eight generators does not by itself derive local
-QCD gauge dynamics. Historical involution/qubit routes are retained as provenance and
-representation-level motivation. The new projector construction shows that a non-flat
-composite colour connection can arise from a moving Theta-defined transverse bundle,
-but full GAP-SU3-DYN remains open until the physical Hessian/action selects that
-connection and its determinant-line reduction and low-energy dynamics are derived.
-
----
-
-<!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
 
 # T2_GAUGE — SU(3) Proof Status
 
