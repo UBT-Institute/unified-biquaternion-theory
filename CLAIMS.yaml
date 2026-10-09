@@ -91,6 +91,19 @@ claims:
     - UBT complex time is the Jacobi modular parameter
     - psi to zero is the same limit as Im tau_J to zero for every UBT theta construction
     - modular continuation proves propagation in negative imaginary UBT time
+  torus_modulus:
+    status: OPEN_GAP
+    evidence:
+    - research_tracks/theta_torus_potential/one_loop_scale_no_go.md
+    - canonical/geometry/Rpsi_dynamical_fix.tex
+    assumptions:
+    - 'GAP-RPSI-ONELOOP-SCALE: CLOSED AS NO-GO [L1] — for the uniformly rescaled massless torus Laplacian, the zeta-regularised determinant has only logarithmic scale dependence and no finite isolated one-loop minimum'
+    - 'GAP-RPSI-INVERSION-SELECTION: CLOSED AS NO-GO [L1] — inversion symmetrisation of that logarithmic scale potential is flat for all radii; the self-dual radius is a symmetry fixed point, not a dynamically selected minimum'
+    - 'GAP-TORUS-SHAPE-POTENTIAL: OPEN — derive a genuine action-level dimensionless shape/complex-structure modulus and an effective potential with certified minima'
+    forbidden_wording:
+    - one-loop determinant proves R_psi equals R_t
+    - self-dual symmetry fixed point is automatically a dynamical vacuum minimum
+    - E_3(0) equals -3 for the standard zero-mode-subtracted cubic Epstein zeta
   gauge_group:
     status: DERIVED_WITH_ASSUMPTIONS
     evidence:
@@ -114,6 +127,8 @@ claims:
     - 'GAP-SU3-YM-INDUCED: CLOSED CONDITIONALLY [L1] — if a genuine End_C(V) colour connection occurs in a gauge-fixed Laplace-type physical Theta Hessian, the standard four-dimensional heat-kernel a4 coefficient contains (1/12) tr(F_mu_nu F^mu_nu); deriving the connection, physical quotient and normalization from S_UBT remains open'
     - 'GAP-SU3-LORENTZ-COMMUTANT: CLOSED AS NO-GO [L1] — on the same Mat(2,C) carrier with Lorentz action X->S X S^dagger, the complex-linear commutant of all rotations and boosts is scalar only; a nontrivial internal SU(3) must therefore act on a distinct Lorentz-scalar multiplicity/mode bundle or equivalent internal carrier'
     - 'GAP-SU3-PROJECTOR-CONNECTION: KINEMATIC CANDIDATE — a varying rank-three projector P=I-|n><n| has projected curvature P(dP wedge dP)P whose local values span u(3), with traceless span su(3); identifying n with an action-derived Lorentz-scalar internal field, global determinant-line reduction, QCD solution-space sufficiency and dynamical normalization remain open'
+    - 'GAP-SU3-WINDING-MULTIPLICITY: CLOSED AS NO-GO FOR THE SINGLE S1 SECTOR — every winding eigenspace of L2(S1_psi) is one-dimensional over C; selecting three unequal windings is not an internal degenerate triplet and generic SU(3) mixing would not commute with the winding generator'
+    - 'GAP-CHRONO-PI-SO3: CLOSED AS NO-GO [L1] — Hom_SO(3)(R3,R_trivial)=0; the historical equal-sum map (a,b,c)->a+b+c is permutation-symmetric in a chosen basis but not SO(3)-equivariant and cannot justify an isotropic 3/2 projection factor'
     - 'GAP-SU3-TRIQUBIT-LEAKAGE: CLOSED [L1] — every single X_i/Y_i error leaves the color sector'
     - 'GAP-SU3-TRIQUBIT-QEC: CLOSED AS NO-GO [L1] — the Knill-Laflamme conditions fail for {I,X_1,X_2,X_3}, compressed Z_i errors are non-scalar logical operations, and the three-dimensional carrier is not a Pauli stabilizer code'
     - 'The triqubit result is a representation/quantum-simulation encoding statement and does not imply a simulation ontology'
