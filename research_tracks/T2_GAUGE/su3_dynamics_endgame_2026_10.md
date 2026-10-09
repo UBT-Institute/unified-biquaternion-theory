@@ -364,3 +364,47 @@ See
 
 This benchmark is conditional and does not yet include gauge self-loops,
 ghosts, quarks, or the QCD beta function.
+
+
+## 13. Determinant obstruction and SO(3) residual symmetry
+
+The classified quadratic invariant is exactly
+\[
+H(X)=2h_B(\Theta,\Theta),
+\]
+so the proven nonzero pointwise vacuum is timelike and supports the moving
+rank-three carrier.
+
+But the allowed quartic term \(\lambda_2|\det X|^2\) is not invariant under
+the enlarged coefficient-space \(SU(1,3)\).  At the timelike vacuum its
+transverse Hessian is proportional to
+\[
+\lambda_2\|\operatorname{Im}z\|^2,\qquad z\in\mathbb C^3.
+\]
+
+The exact stabilizer of this tangent form inside \(SU(3)\) is
+\[
+SO(3),
+\]
+with generators \(i\lambda_2,i\lambda_5,i\lambda_7\).  Thus the earlier
+operator split
+\[
+8=3_{\rm spin}+5_{\rm quadrupole}
+\]
+now has a dynamical interpretation: the generic determinant-sensitive
+potential preserves the three spin directions and breaks the five quadrupole
+directions.
+
+The enhanced branch \(\lambda_2=0\) restores the seven-dimensional timelike
+potential vacuum \(SU(1,3)/SU(3)\), but this coefficient choice is not protected
+by the present microscopic UBT core.  Full exact \(SU(1,3)\) is incompatible
+with the constant healthy pairing and with the sharp/determinant structures
+used by the canonical tetrad.
+
+Therefore a first-principles colour derivation now needs an independent
+action/RG reason for
+\[
+\lambda_2\to0
+\]
+in the colour infrared sector.  Otherwise the generic pointwise dynamics
+supports only \(SO(3)\), not physical QCD \(SU(3)\).
