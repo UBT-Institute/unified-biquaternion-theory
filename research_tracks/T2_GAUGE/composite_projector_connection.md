@@ -142,7 +142,33 @@ u(3)=su(3)\oplus u(1).
 Any identification of the trace component with hypercharge or another U(1)
 requires a separate representation/charge derivation.
 
-## 5. What this does and does not close
+## 5. Lorentz-covariance blocker
+
+The simplest identification \(\Phi=\Theta\) on the same spacetime
+biquaternion carrier is **not** currently admissible.  The UBT action audit
+uses the Lorentz action
+\[
+X\mapsto SXS^\dagger,\qquad S\in SL(2,\mathbb C),
+\]
+and explicitly finds that the positive dagger/Hilbert--Schmidt norm is not
+invariant under generic boosts.  Therefore the normalized projector built
+with \(H_4\) is not automatically Lorentz equivariant when applied directly
+to the Lorentz-transforming \(\Theta\) index.
+
+Moreover, the exact same-carrier commutant theorem shows that no nontrivial
+internal \(SU(3)\) can commute with the full Lorentz action on that same
+\(M_2(\mathbb C)\) index.
+
+Accordingly the projector route survives only in the sharper form:
+
+- first derive a Lorentz-scalar internal/multiplicity variable
+  \(\Phi[\Theta]\);
+- then form its positive-Hermitian rank-three quotient bundle;
+- only then test whether its traceless projected connection is physical colour.
+
+See canonical/su3_derivation/su3_lorentz_commutant_no_go.tex.
+
+## 6. What this does and does not close
 
 ### Exact kinematic result
 
