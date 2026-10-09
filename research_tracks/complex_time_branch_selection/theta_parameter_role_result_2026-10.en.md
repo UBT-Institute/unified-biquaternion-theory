@@ -77,10 +77,7 @@ Canonical UBT independently defines
 The heat-kernel theorem above does not identify this coordinate with the Jacobi
 modulus. Therefore the present canonical axioms imply only
 \[
-\boxed{
-\tau_{\rm UBT}\not\equiv\tau_\theta
-\quad\text{as a derived identity.}
-}
+\boxed{\tau_{\rm UBT}\not\equiv\tau_\theta}
 \]
 
 This is a statement about derivational status, not a theorem that no future map can
