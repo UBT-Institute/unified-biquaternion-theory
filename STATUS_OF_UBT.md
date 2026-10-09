@@ -10,6 +10,28 @@ notice: The author has read the substance and accepts editorial responsibility.
 UBT-AI-PROVENANCE-END
 -->
 
+## Chronofactor/internal multiplicity audit — 2026-10-09
+
+- **GAP-CHRONO-PI-SO3 — CLOSED AS NO-GO [L1]:** there is no nonzero
+  SO(3)-equivariant linear map from the quaternion imaginary-vector triplet to
+  a trivial scalar.  The historical equal-sum map is only basis/permutation
+  symmetric and cannot justify an isotropic 3/2 factor.
+- **GAP-SU3-WINDING-MULTIPLICITY — CLOSED AS NO-GO for the single S1 sector:**
+  each winding eigenspace is one-dimensional over C. Three unequal windings
+  are not a degenerate internal colour triplet.
+
+## Torus-modulus audit — 2026-10-09
+
+- **GAP-RPSI-ONELOOP-SCALE — CLOSED AS NO-GO [L1]:** the massless one-loop
+  determinant of a uniformly rescaled torus Laplacian has only logarithmic
+  radius dependence and no finite isolated minimum.
+- **GAP-RPSI-INVERSION-SELECTION — CLOSED AS NO-GO [L1]:** symmetrising that
+  logarithmic potential under radius inversion makes the scale direction flat.
+  The self-dual point is a fixed point of the inversion, not a dynamically
+  selected vacuum.
+- **GAP-TORUS-SHAPE-POTENTIAL — OPEN:** a genuine action-derived shape or
+  complex-structure modulus is still required.
+
 ## Theta parameter audit — 2026-10-09
 
 - **GAP-THETA-TAU-NAIVE — CLOSED AS NO-GO:** canonical UBT complex time
