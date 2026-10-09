@@ -19,6 +19,17 @@
 % notice: Machine-verified against named sources or verifiers; individual attestation is not claimed.
 % UBT-AI-PROVENANCE-END
 
+% -----------------------------------------------------------------
+% AUDIT CORRECTION — 2026-10-09
+% -----------------------------------------------------------------
+% This appendix previously identified the canonical UBT complex time
+% tau_UBT=t+i psi directly with a Jacobi modular parameter.  That identification
+% is not derived by the current canonical action.  The corrected text below
+% distinguishes tau_UBT from the theta modulus tau_theta and records the exact
+% S^1 heat-kernel map.  Historical modular/Hecke interpretations downstream
+% must be read subject to this distinction.
+% -----------------------------------------------------------------
+
 \documentclass[11pt,a4paper]{article}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{hyperref}
@@ -49,8 +60,10 @@
 \begin{tcolorbox}[colback=blue!4!white,colframe=blue!50!black,title=Purpose]
 This appendix formalises the theta spectral representation of the
 $\Theta$-field used across UBT.  It defines the spectral decomposition,
-connects toroidal topology with Jacobi theta functions, and analyses the
-role of the modular parameter $\tau = t + i\psi$.
+connects compact spectral sums with Jacobi theta functions, and distinguishes
+the canonical UBT complex time $\tau_{\rm UBT}=t+i\psi$ from the Jacobi
+modular parameter $\tau_\theta$.  No equality between these variables is
+assumed without a separate derivation.
 
 \medskip
 \textbf{Primary sources}:
@@ -65,8 +78,8 @@ Item & Status & Section \\
 \hline
 $\Theta$ spectral decomposition & \textbf{Defined} & \S\ref{sec:spectral_decomp} \\
 Toroidal topology $T^3\times S^1_\psi$ & \textbf{Proved} & \S\ref{sec:torus} \\
-Jacobi theta functions & \textbf{Connected} & \S\ref{sec:jacobi} \\
-Modular parameter $\tau$ & \textbf{Analysed} & \S\ref{sec:modular} \\
+Jacobi theta functions & \textbf{Connected (spectral/heat-kernel)} & \S\ref{sec:jacobi} \\
+Theta modular parameter $\tau_\theta$ & \textbf{Distinguished from $\tau_{\rm UBT}$} & \S\ref{sec:modular} \\
 Poisson summation duality & \textbf{Proved} & \S\ref{sec:poisson} \\
 \hline
 \end{tabular}
@@ -78,8 +91,10 @@ Poisson summation duality & \textbf{Proved} & \S\ref{sec:poisson} \\
 
 \begin{definition}[Spectral decomposition of $\Theta$]
 \label{def:spectral}
-On the torus $T^3 \times S^1_\psi$ with modular parameter $\tau = t + i\psi$,
-the biquaternion field $\Theta(q,\tau)$ admits the spectral decomposition:
+On an assumed compact product $T^3\times S^1_\psi$, the biquaternion field
+$\Theta(q,\tau_{\rm UBT})$ admits the Fourier/KK decomposition below.  Here
+$\tau_{\rm UBT}=t+i\psi$ is the UBT complex-time coordinate.  It is
+\emph{not} identified in this definition with a Jacobi modular parameter:
 \begin{equation}\label{eq:spectral}
   \Theta(q,\tau)
   = \sum_{n \in \mathbb{Z}}\sum_{\mathbf{k}\in\mathbb{Z}^3}
@@ -131,13 +146,14 @@ $\mathcal{M} \times T^3 \times S^1_\psi$, where:
 
 The partition function of the $T^3$ sector is:
 \begin{equation}\label{eq:Z_T3}
-  \hat{Z}_{T^3}(\tau)
-  = \sum_{\mathbf{k}\in\mathbb{Z}^3} q^{|\mathbf{k}|^2},
-  \qquad q = e^{2\pi i\tau},
+  \hat{Z}_{T^3}(\tau_\theta)
+  = \sum_{\mathbf{k}\in\mathbb{Z}^3}
+    e^{\pi i\tau_\theta |\mathbf{k}|^2},
+  \qquad q_\theta = e^{\pi i\tau_\theta},
 \end{equation}
 which equals the cube of the Jacobi theta function:
 \begin{equation}\label{eq:Z_theta3}
-  \hat{Z}_{T^3}(\tau) = \vartheta_3(\tau)^3.
+  \hat{Z}_{T^3}(\tau_\theta) = \vartheta_3(0|\tau_\theta)^3.
 \end{equation}
 
 \noindent\textbf{Source}: \texttt{research\_tracks/research/partition\_function\_modular.md}.
@@ -156,12 +172,13 @@ which equals the cube of the Jacobi theta function:
 \end{definition}
 
 \begin{theorem}[Connection to UBT partition function]\label{thm:partition}
-The partition function of the compactified $\Theta$ field on $T^3$
-is $\hat{Z}_{T^3}(\tau) = \vartheta_3(\tau)^3$, transforming under
-modular inversion as:
+For the standard rank-three Gaussian lattice sum above, the mathematical
+identity
+$\hat{Z}_{T^3}(\tau_\theta)=\vartheta_3(0|\tau_\theta)^3$
+holds and transforms under modular inversion as:
 \begin{equation}\label{eq:modular_transform}
-  \hat{Z}_{T^3}(-1/\tau)
-  = (-i\tau)^{3/2}\,\hat{Z}_{T^3}(\tau).
+  \hat{Z}_{T^3}(-1/\tau_\theta)
+  = (-i\tau_\theta)^{3/2}\,\hat{Z}_{T^3}(\tau_\theta).
 \end{equation}
 The modular weight is $k = 3/2 = d/2$ where $d = 3 = \dim_\mathbb{R}(\mathrm{Im}\,\mathbb{H})$.
 \end{theorem}
@@ -171,7 +188,7 @@ The Jacobi identity for $\vartheta_3$ gives:
 \begin{equation}
   \vartheta_3(-1/\tau) = (-i\tau)^{1/2}\,\vartheta_3(\tau).
 \end{equation}
-Cubing: $\vartheta_3(-1/\tau)^3 = (-i\tau)^{3/2}\,\vartheta_3(\tau)^3$.
+Cubing: $\vartheta_3(0|-1/\tau_\theta)^3 = (-i\tau_\theta)^{3/2}\,\vartheta_3(0|\tau_\theta)^3$.
 The weight $3/2 = d/2$ follows from $d = 3 = \dim_\mathbb{R}(\mathrm{Im}\,\mathbb{H})$,
 giving the same algebraic origin as the $B_{\mathrm{base}} = N_{\mathrm{eff}}^{3/2}$
 exponent in the $\alpha$ derivation. $\square$
@@ -188,19 +205,46 @@ quantity and remains open.
 \end{remark}
 
 % -----------------------------------------------------------------
-\section{Role of the Modular Parameter $\tau$}\label{sec:modular}
+\section{Role of the Theta Modular Parameter $\tau_\theta$}\label{sec:modular}
 % -----------------------------------------------------------------
 
-\subsection{Complex Time as Modular Parameter}
+\subsection{Complex time and theta modulus are distinct}
 
-In UBT, the complex time $\tau = t + i\psi$ plays the dual role of:
-\begin{enumerate}
-  \item \textbf{Physical time parameter}: $t$ is real Minkowski time; $\psi$
-    is the imaginary part controlling quantum phase evolution.
-  \item \textbf{Modular parameter} of the toroidal compactification: $\tau$
-    parametrises the shape (complex structure) of the torus $T^2$ formed
-    by the time circle and the imaginary-time circle.
-\end{enumerate}
+Canonical UBT uses
+\[
+  \tau_{\rm UBT}=t+i\psi,
+\]
+with real physical time $t$ and a compact internal phase coordinate $\psi$.
+This does \emph{not} by itself define a complex torus
+$\mathbb C/(\mathbb Z+\tau_{\rm UBT}\mathbb Z)$: the real-time direction
+is not canonically a compact lattice generator.
+
+For the rigorously controlled free heat kernel on $S^1_L$, with heat parameter
+$s>0$,
+\[
+K_s(\psi,\psi')
+=\frac1L\sum_{n\in\mathbb Z}
+ e^{-(2\pi n/L)^2s}e^{2\pi i n(\psi-\psi')/L}
+=\frac1L\vartheta_3\!\left(
+ \frac{\psi-\psi'}{L}\,\middle|\,
+ \frac{4\pi i s}{L^2}\right).
+\]
+Hence in this theorem
+\[
+  z_\theta=\frac{\psi-\psi'}{L},
+  \qquad
+  \tau_\theta=\frac{4\pi i s}{L^2}.
+\]
+The compact coordinate enters the elliptic argument; the non-compact heat
+parameter determines the theta modulus.  Therefore
+\[
+  \boxed{\tau_{\rm UBT}\not\equiv\tau_\theta
+  \quad\text{from the present canonical axioms alone}.}
+\]
+
+A separate reduced bridge model may choose a mathematical kernel
+$\vartheta_3(0|t+i\psi)$; that is a bridge ansatz and not an action-derived
+identification of the UBT time coordinate with the Jacobi modulus.
 
 \begin{tcolorbox}[colback=yellow!5!white,colframe=orange!60!black,title=Important: $\psi$ is NOT Wick rotation]
 $\psi \in \mathbb{R}$ is a \emph{dynamical} degree of freedom — the imaginary
@@ -211,15 +255,19 @@ analytic continuation).  This is proved in
 
 \subsection{Modular Group Action}
 
-The modular group $\mathrm{SL}(2,\mathbb{Z})$ acts on $\tau$ by
+The modular group $\mathrm{SL}(2,\mathbb{Z})$ acts on the mathematical theta
+modulus $\tau_\theta$ by
 \begin{equation}
-  \tau \;\mapsto\; \frac{a\tau + b}{c\tau + d},
+  \tau_\theta \;\mapsto\;
+  \frac{a\tau_\theta + b}{c\tau_\theta + d},
   \qquad
   \begin{pmatrix}a&b\\c&d\end{pmatrix} \in \mathrm{SL}(2,\mathbb{Z}).
 \end{equation}
-The UBT partition function $\hat{Z}_{T^3}(\tau) = \vartheta_3(\tau)^3$ transforms
-as a modular form of weight $3/2$ under the index-2 subgroup of
-$\mathrm{SL}(2,\mathbb{Z})$ fixing $\vartheta_3$.
+The standard Gaussian rank-three theta sum
+$\hat{Z}_{T^3}(\tau_\theta)=\vartheta_3(0|\tau_\theta)^3$
+has the corresponding half-integral-weight theta transformation law on its
+appropriate theta subgroup.  Interpreting this mathematical modular symmetry
+as a symmetry of UBT dynamics remains an open bridge problem.
 
 \subsection{Spectral Modes and Hecke Operators}
 
