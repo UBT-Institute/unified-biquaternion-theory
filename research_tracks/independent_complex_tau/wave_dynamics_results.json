@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-10",
+  "passed": true,
+  "checks_count": 21,
+  "checks": [
+    {
+      "name": "common_coordinate_composite_factorization",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "dual_Lorentz_term_annihilates_field",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "completed_composite_volume_factor",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "normal_field_variation_Q_is_da",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "normal_quadratic_density",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "normal_full_Euler_0",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "normal_full_Euler_1",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "normal_full_Euler_2",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "normal_full_Euler_3",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "normal_symbol_antisymmetric",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "normal_symbol_kernel_gradient",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "normal_symbol_kernel_dF",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "normal_symbol_Pfaffian_zero",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "normal_symbol_rank_two_witness",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "fraction_normal_symbol_0",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_normal_symbol_1",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_normal_symbol_2",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_volume_pullback_0",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_volume_pullback_1",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "conditional_dispersion_polynomial",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "extra_timelike_high_frequency_growth",
+      "channel": "SymPy",
+      "passed": true
+    }
+  ],
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "scope": "Common-coordinate composite volume; flat Lorentz-slice normal Hessian of the existing symplectic action; conditional propagation/signature diagnostics.",
+  "not_tested": "Selected microscopic action, general derivative/composite curved connection, nonlinear constraint quotient, global/boundary modes, full C5 reality prescription, observations.",
+  "lean_status": "LEAN-PENDING: no Lean/Lake executables in this runtime and no checked formalization of the local exterior/PDE theorem supplied."
+}

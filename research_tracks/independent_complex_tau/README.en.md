@@ -235,10 +235,12 @@ The complete next calculation is in [the auxiliary-action test](auxiliary_action
 
 This narrows that candidate only. The finalized microscopic action, a derivative-dependent composite connection, its full Hessian and physical constraint quotient remain open. The action registry [U3] still takes precedence over older strong claims. No unconditional GR, string equivalence, alpha prediction or complete quantum theory is registered here. Existing canonical status labels are unchanged; the local machine-readable ledger records this scope.
 
+The [wave-dynamics continuation](wave_dynamics.en.md) now tests a derivative-dependent composite family and the transverse complex fluctuations of the existing flat symplectic candidate. Both remain locally degenerate under their stated assumptions. It also separates a conditional hyperbolic dispersion relation from the unresolved derivation of that physical operator and examines the additional-time signature problem.
+
 <!-- BILINGUAL-UNIT: c5.verification -->
 ## Verification
 
-`verify_c5.py` checks 51 exact identities. `verify_c5_dynamics.py` checks 32 exact identities, including full tensor components, Piola cancellation and the FLRW first integral. `verify_auxiliary_action.py` checks 22 identities using SymPy and an independent Python Fraction implementation. Each script writes its named result JSON beside itself. Versions and limitations are recorded in those outputs and `status.json`; tests run the same derivations on temporary copies to avoid overwriting tracked evidence.
+`verify_c5.py` checks 51 exact identities. `verify_c5_dynamics.py` checks 32 exact identities, including full tensor components, Piola cancellation and the FLRW first integral. `verify_auxiliary_action.py` checks 22 identities using SymPy and an independent Python Fraction implementation. `verify_wave_dynamics.py` adds 21 checks using the same two tool classes with separate implementations. Each script writes its named result JSON beside itself. Versions and limitations are recorded in those outputs and `status.json`; tests run the same derivations on temporary copies to avoid overwriting tracked evidence.
 
 **LEAN-PENDING:** Lean and Lake executables were unavailable in the execution runtime; the generic rank, spectral and differential-geometric statements have not been formalized here. Analytic proofs accompany the identities; finite symbolic or rational checks do not establish complete physics, stability, empirical agreement or human review. The earlier gradient and split-jet results are explicitly credited [U1, U2, U4]. English was the translation source for this repository edition. Structural parity is machine checked; human semantic-equivalence review remains required before merge.
 

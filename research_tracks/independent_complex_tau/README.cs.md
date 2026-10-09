@@ -235,10 +235,12 @@ Analytické pokračování musí na daném stavu existovat. Implikace plyne ze s
 
 To omezuje pouze daného kandidáta. Finalizovaná mikroskopická akce, kompozitní konexe závislá na derivacích, její úplný Hessián a fyzikální kvocient vazeb zůstávají otevřené. Registr akce [U3] má nadále přednost před staršími silnými tvrzeními. Nezapisujeme zde nepodmíněnou obecnou relativitu, ekvivalenci se strunami, předpověď alfa ani úplnou kvantovou teorii. Existující kanonické statusy zůstávají beze změny; lokální strojově čitelný registr zaznamenává tento rozsah.
 
+[Pokračování o vlnové dynamice](wave_dynamics.cs.md) nyní testuje rodinu složených jetů závislých na derivacích a příčné komplexní fluktuace existujícího plochého symplektického kandidáta. Obě zůstávají za uvedených předpokladů lokálně degenerované. Zápis také odděluje podmíněný hyperbolický disperzní vztah od nevyřešeného odvození tohoto fyzikálního operátoru a zkoumá problém signatury s dodatečnými časovými směry.
+
 <!-- BILINGUAL-UNIT: c5.verification -->
 ## Ověření
 
-`verify_c5.py` kontroluje 51 exaktních identit. `verify_c5_dynamics.py` kontroluje 32 exaktních identit včetně úplných tenzorových komponent, Piolova rušení a prvního integrálu FLRW. `verify_auxiliary_action.py` kontroluje 22 identit pomocí SymPy a nezávislé implementace Python Fraction. Každý skript zapíše svůj pojmenovaný výsledný JSON vedle sebe. Verze a omezení jsou zaznamenány v těchto výstupech a `status.json`; testy spouštějí stejná odvození na dočasných kopiích, aby nepřepisovaly sledované záznamy.
+`verify_c5.py` kontroluje 51 exaktních identit. `verify_c5_dynamics.py` kontroluje 32 exaktních identit včetně úplných tenzorových komponent, Piolova rušení a prvního integrálu FLRW. `verify_auxiliary_action.py` kontroluje 22 identit pomocí SymPy a nezávislé implementace Python Fraction. `verify_wave_dynamics.py` přidává 21 kontrol pomocí stejných dvou tříd nástrojů se samostatnými implementacemi. Každý skript zapíše svůj pojmenovaný výsledný JSON vedle sebe. Verze a omezení jsou zaznamenány v těchto výstupech a `status.json`; testy spouštějí stejná odvození na dočasných kopiích, aby nepřepisovaly sledované záznamy.
 
 **LEAN-PENDING:** v běhovém prostředí nebyly dostupné spustitelné programy Lean a Lake; obecná tvrzení o hodnosti, spektru a diferenciální geometrii zde nebyla formalizována. Identity doprovázejí analytické důkazy; konečné symbolické či racionální kontroly neprokazují úplnou fyziku, stabilitu, empirickou shodu ani lidskou revizi. Dřívější výsledky o gradientech a pomocném jetu jsou výslovně připsány svým zdrojům [U1, U2, U4]. Zdrojem překladu této repozitářové edice byla angličtina. Strukturální shoda je kontrolována strojově; před sloučením zůstává nutná lidská kontrola významové shody.
 
