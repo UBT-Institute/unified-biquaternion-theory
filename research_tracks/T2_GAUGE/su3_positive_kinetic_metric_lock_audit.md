@@ -190,6 +190,77 @@ Therefore
 }
 \]
 
+## 5a. Exact adapted-vacuum collapse
+
+At the reference timelike vacuum
+\[
+\Theta_0=r\,1,
+\]
+the positive internal metric is
+\[
+K_{\Theta_0}^+=I_4.
+\]
+
+For an arbitrary nondegenerate Lorentz tetrad write
+\[
+E_\mu{}^A
+=
+(i e_\mu{}^0,e_\mu{}^1,e_\mu{}^2,e_\mu{}^3).
+\]
+
+The positive internal Gram matrix is
+\[
+\delta_{ab}e_\mu{}^a e_\nu{}^b,
+\]
+whereas
+\[
+g_{\mu\nu}=e_\mu{}^a\eta_{ab}e_\nu{}^b.
+\]
+
+Using
+\[
+g^{-1}=e^{-T}\eta e^{-1},
+\]
+one obtains
+\[
+\begin{aligned}
+g^{\mu\nu}
+\delta_{ab}e_\mu{}^ae_\nu{}^b
+&=
+\operatorname{tr}
+\left(
+e^{-T}\eta e^{-1}e\delta e^T
+\right)\\
+&=
+\operatorname{tr}(\eta\delta)\\
+&=
+-1+1+1+1\\
+&=2.
+\end{aligned}
+\]
+
+Therefore
+\[
+\boxed{
+g^{\mu\nu}
+K_{\Theta_0}^+(D_\mu\Theta,D_\nu\Theta)
+=
+2\mathcal N_0
+}
+\]
+for every nondegenerate adapted Lorentz tetrad satisfying the canonical
+definition \(D_\mu\Theta=\sqrt{\mathcal N_0}E_\mu\).
+
+With the standard \(1/2\) prefactor this contributes only
+\[
+\mathcal N_0\sqrt{|g|}
+\]
+to the action.
+
+Thus at the most natural timelike colour reference vacuum the candidate
+kinetic term is exactly a volume term after the metric lock, not an independent
+triplet kinetic action.
+
 ## 6. Fixed-background Euler--Lagrange equation
 
 For completeness, when \(g_{\mu\nu}\) and a \(G\)-compatible connection are
