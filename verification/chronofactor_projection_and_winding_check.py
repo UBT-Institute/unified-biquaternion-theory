@@ -28,3 +28,13 @@ phi=sp.exp(sp.I*n*theta)
 assert sp.simplify(-sp.I*sp.diff(phi,theta)-n*phi)==0
 
 print("PASS: no nonzero SO(3)-equivariant R3->R map; S1 winding eigenspaces are multiplicity one")
+
+# Free Laplacian multiplicities: lambda_n=n^2/R^2 gives one zero mode and
+# exactly the pair +/-n for each positive eigenvalue.  Finite enumeration is
+# a regression check; the exact statement follows from m^2=n^2 => m=+/-n.
+vals={}
+for k in range(-20,21):
+    vals.setdefault(k*k, []).append(k)
+assert len(vals[0]) == 1
+assert all(len(modes) == 2 for ev,modes in vals.items() if ev != 0)
+print('PASS: free S1 Laplacian eigenvalue multiplicities are 1 or 2, never 3')
