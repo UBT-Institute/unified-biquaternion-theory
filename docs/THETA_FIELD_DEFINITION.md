@@ -10,8 +10,6 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-> **2026-10-09 SUPERSEDED DEFINITION NOTICE:** This 2025 document is not the current minimal canonical field definition.  It postulates spinor and full Standard-Model gauge fibres inside the definition of Theta and therefore cannot be used as evidence that UBT derives those structures.  The current canonical core field is a single biquaternion, Theta in C tensor H, with four complex coefficients; matrix/flavour/spinor/gauge extensions must be separately derived and separately denoted.  Use canonical/THEORY/math/fields/theta_field.tex, canonical/fields/theta_field.tex, canonical/ACTION.en.md, and CLAIMS.yaml for current status.  The old B tensor S tensor G, 384-component count, inserted gauge connection and SM-field identifications below are preserved only as historical provenance.
-
 # Formal Definition of the Biquaternionic Field Θ(q,τ)
 
 **Date:** November 2, 2025  
