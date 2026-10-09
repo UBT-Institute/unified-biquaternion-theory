@@ -3,12 +3,12 @@
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
-tier: B_machine_verified
+tier: C_working
 ai_assistance: disclosed
-human_review: machine-verification
+human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Exact S1 heat-kernel parameter map is proved; physical identifications beyond it remain open.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
