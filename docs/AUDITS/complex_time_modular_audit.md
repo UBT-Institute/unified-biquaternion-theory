@@ -1,4 +1,16 @@
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 ## Audit override — 2026-10-09
 
 This 2026-03-10 audit contains historical overstatements that are superseded by
@@ -20,18 +32,6 @@ read as a separate lattice/model layer unless its modular variable is derived fr
 canonical action.
 
 ---
-
-<!--
-UBT-AI-PROVENANCE-BEGIN
-schema: ubt-ai-provenance/v1
-tier: C_working
-ai_assistance: disclosed
-human_review: risk-based
-editorial_responsibility: Ing. David Jaroš
-policy: ../../AI_PROVENANCE.md
-notice: Working material; exhaustive human review is not claimed.
-UBT-AI-PROVENANCE-END
--->
 
 
 # Complex Time / Modular Audit
