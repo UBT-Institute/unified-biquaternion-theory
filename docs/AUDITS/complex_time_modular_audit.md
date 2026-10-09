@@ -1,4 +1,26 @@
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
+## Audit override — 2026-10-09
+
+This 2026-03-10 audit contains historical overstatements that are superseded by
+`research_tracks/complex_time_branch_selection/theta_parameter_role_result_2026-10.en.md`.
+
+The current authoritative distinction is:
+
+- canonical complex time: (	au_{\rm UBT}=t+i\psi);
+- free (S^1_\psi) heat-kernel argument:
+  (z_\theta=(\psi-\psi')/L);
+- free (S^1_\psi) heat-kernel modulus:
+  (	au_\theta=4\pi i s/L^2);
+- a rank-two modular torus parameter (	au_{\rm mod}) requires a separately derived
+  second compact cycle.
+
+Therefore the old chain “compact (\psi) + real time (t) ⇒ physical modular torus
+with (	au=t+i\psi)” is **not derived**.  Hecke/modular phenomenology below must be
+read as a separate lattice/model layer unless its modular variable is derived from the
+canonical action.
+
+---
+
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
