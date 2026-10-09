@@ -60,6 +60,29 @@ place for an internal (SU(3)) commuting with Lorentz.  Whether
 (partial_psi) is genuinely independent is now a joint
 theta/complex-time and gauge-sector decision problem.
 
+### Complex-time holomorphy/Lorentz fork — 2026-10-10
+
+A new exact no-go separates two meanings of complex time.  If
+(psi) is an independent Lorentz-scalar fiber coordinate, then demanding the
+Cauchy--Riemann relation
+(partial_psiTheta=ipartial_tTheta) in every inertial frame is
+incompatible with generic spacetime dependence: opposite nontrivial boosts
+force the relevant derivatives to vanish.
+
+Therefore strict Jacobi/complex-time holomorphy cannot simultaneously be a
+universal microscopic constraint and use an isolated Lorentz-scalar
+(psi).  The active minimal audit provisionally treats (psi) as an
+independent fiber variable and regards holomorphy as a reduced/theta-sector
+condition.  A fully Lorentz-covariant holomorphic alternative would require a
+declared complexified spacetime with imaginary spatial partners.
+
+This keeps the conditional same-order jet triplet
+((Box_4Theta,
+abla
+abla!cdot!Theta,partial_psi^2Theta))
+mathematically open pending derivation of the (psi)-direction kinetic and
+measure structure from the action.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
