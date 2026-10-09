@@ -51,6 +51,18 @@ models and cannot supply this multiplicity without an independent derivation.
 - **GAP-TORUS-SHAPE-POTENTIAL — OPEN:** a genuine action-derived shape or
   complex-structure modulus is still required.
 
+## CMB P3 audit — 2026-10-09
+
+- **GAP-CMB-PSI-IR-CUTOFF — CLOSED AS NO-GO [L1]:** compact internal
+  S1_psi produces KK masses n/R_psi but not an ordinary spatial momentum
+  cutoff. The n=0 sector allows arbitrarily small spatial k on noncompact
+  physical space.
+- The historical low-l suppression ansatz and Delta-l=137 comb are retained
+  as exploratory toy/null-test families, not core UBT predictions.
+- The active observational programme is a pre-registered full-covariance
+  H0-H3 comparison, with H3 required to outperform the stronger H2 null
+  model out of sample.
+
 ## P1 modular classification — 2026-10-09
 
 The theta/complex-time programme is now sharply partitioned:
