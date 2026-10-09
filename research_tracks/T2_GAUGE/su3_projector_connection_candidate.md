@@ -2,12 +2,12 @@
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
-tier: B_machine_verified
+tier: C_working
 ai_assistance: disclosed
-human_review: machine-verification
+human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Projector-connection identities are exact; identification with unrestricted QCD dynamics remains conditional.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
@@ -178,9 +178,9 @@ Theta direction without introducing an independent fundamental colour algebra.
 
 The moving transverse frame has a local (U(3)) redundancy.  Decompose
 [
-A=A_{m c}+rac13(operatorname{tr}A)mathbf1_3,
+m c}+rac13(operatorname{tr}A)mathbf1_3,
 qquad
-A_{m c}inmathfrak{su}(3).
+m c}inmathfrak{su}(3).
 ]
 
 The traceless part is the colour candidate.  A genuine reduction of the frame bundle
