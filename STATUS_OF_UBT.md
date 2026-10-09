@@ -40,6 +40,20 @@ Laplace-type Theta Hessian, the standard heat-kernel (a_4) term contains
 (\frac1{12}\operatorname{tr}F_{\mu\nu}F^{\mu\nu}).  This does not derive
 the connection or (g_s) from the unfinished fundamental action.
 
+**Lorentz/internal separation:** `GAP-SU3-LORENTZ-COMMUTANT` is
+CLOSED AS NO-GO [L1].  On the same (M_2(\mathbb C)) carrier transforming as
+(X\mapsto SXS^\dagger), the full Lorentz commutant is scalar only.  Therefore
+the algebraic colour (SU(3)) cannot be identified naively with a
+Standard-Model internal symmetry acting on that same Lorentz index.  A
+Lorentz-scalar multiplicity/mode carrier must be derived.
+
+**Non-flat composite candidate:** a varying rank-three projector
+(P=I-|n\rangle\langle n|) has natural projected curvature
+(P(dP\wedge dP)P); exact local rank checks show its values span (u(3)) and
+their traceless parts span (su(3)).  This is a kinematic candidate only.
+The naive (n=\Theta/\|\Theta\|) identification is not Lorentz justified
+because the positive dagger/Hilbert--Schmidt norm is not boost invariant.
+
 **Other active targets:** classify the actual UBT theta kernel with strict
 separation of UBT complex time from the Jacobi modular parameter; replace
 diagonal-only CMB searches by full TT/TE/EE covariance tests against H0-H3;
