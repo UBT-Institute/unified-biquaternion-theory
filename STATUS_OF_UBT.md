@@ -10,6 +10,21 @@ notice: The author has read the substance and accepts editorial responsibility.
 UBT-AI-PROVENANCE-END
 -->
 
+## Theta parameter audit — 2026-10-09
+
+- **GAP-THETA-TAU-NAIVE — CLOSED AS NO-GO:** canonical UBT complex time
+  \(\tau_{\rm UBT}=t+i\psi\), with compact \(\psi\), is not the Jacobi modular
+  parameter by notation alone.
+- **GAP-THETA-KK-MODULUS — CLOSED [L1] in the conditional spectral branch:**
+  the exact compact-fibre heat trace is
+  \[
+  \sum_n e^{-s n^2/R_\psi^2}
+  =\vartheta_3\!\left(0\mid\frac{i s}{\pi R_\psi^2}\right),
+  \]
+  and the Jacobi S transformation is precisely Poisson resummation.
+- The physical relation, if any, between this spectral modulus and
+  \(\tau_{\rm UBT}\) remains open.
+
 ## Update 2026-10-09: focused theta/SU3/CMB programme
 
 Four active priorities are now frozen in
