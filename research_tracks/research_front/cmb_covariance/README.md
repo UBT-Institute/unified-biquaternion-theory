@@ -1,49 +1,44 @@
 # UBT CMB full-covariance falsification track
 
-Status: exploratory / pre-registration design.
+Status: exploratory / preregistration design.
 
-This track supersedes diagonal-only power-spectrum searches as the primary
-topology discriminator. Existing 2D FFT and comb experiments remain archived
-as exploratory precursors.
+The primary topology statistic is the full harmonic covariance
+\[
+C^{XY}_{\ell m,\ell' m'}
+=
+\langle a^X_{\ell m}(a^Y_{\ell' m'})^*\rangle,
+\qquad X,Y\in\{T,E,B\},
+\]
+not only the diagonal power spectra \(C_\ell\).
 
 ## Hypotheses
 
-- H0: LambdaCDM, simply connected.
+- H0: simply connected \(\Lambda\)CDM.
 - H1: ordinary compact topology with standard primordial spectrum.
 - H2: compact topology plus a generic oscillatory primordial spectrum.
-- H3: the pre-specified UBT theta/prime-gated signal family.
+- H3: pre-specified UBT theta/prime-gated signal family.
 
-A UBT claim requires H3 to beat H2 out of sample, not merely H0.
+A UBT-specific claim requires H3 to outperform H2 out of sample, not merely H0.
 
-## Primary statistic
+## Priority observables
 
-Use the full harmonic covariance
-[
-C^{XY}_{\ell m,\ell' m'}=
-\langle a^X_{\ell m}(a^Y_{\ell'm'})^*\rangle,
-\quad X,Y\in\{T,E,B\}.
-]
-
-Priority order: TT + TE + EE, then BB unless the theory predicts a BB-specific
-effect.
+Use TT + TE + EE first.  BB is secondary unless a UBT derivation predicts a
+BB-specific signature.
 
 ## Anti-overfitting rules
 
-- freeze topology, prime set, theta kernel and all filter parameters before
-  evaluation;
-- use simulation/training data for tuning and an independent evaluation set;
-- include look-elsewhere correction for any family search;
-- publish null results;
-- compare likelihood, KL divergence or Bayes factor under all H0-H3 models.
+- Freeze topology, prime set, theta kernel, and filter parameters before
+  evaluation.
+- Tune only on simulations or a disjoint training subset.
+- Include look-elsewhere correction for family searches.
+- Publish null results.
+- Compare likelihood, KL divergence, or Bayes factor across H0--H3.
 
 ## Exit criterion
 
-A reproducible pipeline plus one of:
-1. an out-of-sample H3 discriminator that survives H2;
+A reproducible pipeline yielding either:
+1. an out-of-sample H3 discriminator that survives comparison with H2; or
 2. a quantitative upper bound excluding the tested UBT signal family.
 
-No observed anomaly is called an UBT prediction unless it was pre-specified.
-
-## Spatial-topology gate
-
-Canonical local flat-FRW recovery does not select a global spatial topology. The internal S1_psi fibre is not a cosmic spatial torus.  Therefore H1/H2 are external null/competitor models, while H3 must remain UNDEFINED until a UBT spatial-topology or other covariance-generating mechanism is independently derived. See spatial_topology_gate.md.
+An observed anomaly is not called an UBT prediction unless it was
+pre-specified.
