@@ -1,3 +1,32 @@
+## Audit override — 2026-10-09
+
+This section supersedes older wording below wherever the two conflict.
+
+Current authoritative SU(3) status:
+
+| Item | Status |
+|---|---|
+| Canonical colour carrier V=C-span{I,J,K} with h and Omega | PROVED / canonical source |
+| Stab(h,Omega)=SU(3) | PROVED / exact finite-dimensional theorem |
+| Exterior/Fock 1+3+3bar+1 representation | PROVED as representation statement |
+| Quaternion spin + quadrupole 3+5 construction of all Gell-Mann directions | PROVED / exact symbolic verification |
+| Full SU(3) inside one minimal A Theta - Theta B derivative | CLOSED AS NO-GO |
+| Pure Maurer-Cartan U^-1 dU as generic dynamical gluon field | CLOSED AS NO-GO: locally flat |
+| Endomorphism-valued SU(3) connection on the colour carrier | KINEMATICALLY AVAILABLE |
+| Derivation of the local non-flat colour connection from canonical S[Theta] | OPEN: GAP-SU3-DYN |
+| Strong coupling g_s from first principles | OPEN |
+| Dynamical confinement / mass gap | OPEN |
+
+The active bridge note is research_tracks/T2_GAUGE/su3_dynamics_operator_bridge.md.
+Its exact verifier is verification/su3_spin_quadrupole_check.py.
+
+Important correction to legacy language: SU(3) is not the algebra-automorphism group
+of C tensor H, and the existence of eight generators does not by itself derive local
+QCD gauge dynamics. Historical involution/qubit routes are retained as provenance and
+representation-level motivation, but action-level gauging remains open.
+
+---
+
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
