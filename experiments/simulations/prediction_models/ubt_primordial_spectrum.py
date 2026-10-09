@@ -1,3 +1,21 @@
+# 2026-10-10 THEORY STATUS OVERRIDE
+# ---------------------------------
+# This file is a historical phenomenological model, not an action-level UBT
+# primordial-spectrum derivation.
+#
+# Compactification of an internal S1_psi gives KK masses n/R_psi but does NOT
+# impose a spatial momentum cutoff k_spatial >= 1/R_psi.  The n=0 sector still
+# has continuous spatial momentum down to k=0 on R^3 x S1_psi.
+#
+# Consequently the IR factor 1-exp[-(k R_psi)^2] and the resonance mapping
+# k=n/R_psi are phenomenological ansaetze unless a spatial topology,
+# nonlocal mode-mixing equation, or physical perturbation Hessian derives them.
+#
+# Current authoritative status:
+# research_tracks/research_front/cmb_covariance/
+#   PRIMORDIAL_COVARIANCE_DERIVATION_GAP.md
+#   internal_circle_no_spatial_ir_cutoff.md
+#
 # Copyright (c) 2026 Ing. David Jaroš
 # Licensed under the MIT License
 # See LICENSE file in the repository root for full license text
