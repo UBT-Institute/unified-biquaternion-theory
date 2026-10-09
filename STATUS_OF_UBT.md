@@ -62,6 +62,27 @@ notice: The author has read the substance and accepts editorial responsibility.
 UBT-AI-PROVENANCE-END
 -->
 
+### Exact coset collective rewrite — 2026-10-10
+
+On the timelike branch and conditional on the finalized Theta Lorentz
+representation, a normalized Theta direction lies on
+\[
+SU(1,3)/SU(3).
+\]
+Writing \(\Theta=\rho\,g e_0\) introduces a local representative
+\(g\in SU(1,3)\) with the exact redundancy
+\(g\sim g h(x)\), \(h(x)\in SU(3)\).  This is an exact collective-coordinate
+rewrite of the same single Theta field: \(15-8=7\) real normalized-direction
+degrees plus the radial mode reproduce the original eight real components.
+
+The \(su(3)\) component of \(g^{-1}dg\) transforms as a gauge connection and
+can have nonzero projected curvature.  It is nevertheless composite; around a
+constant representative its curvature begins quadratically in coset
+fluctuations, so independent perturbative gluons are not yet derived.
+
+The remaining central colour problem is now the quantum/collective dynamics of
+this exact redundancy, not the existence of an SU(3) frame group.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
