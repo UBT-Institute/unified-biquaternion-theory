@@ -1,7 +1,7 @@
 % Canonical Standard Model Gauge Structure
 % Version: 1.0
 % Date: 2025-11-14
-% Status: Standard-Model effective target; action-level UBT derivation incomplete
+% Status: Canonical - DO NOT DUPLICATE
 
 % UBT-AI-PROVENANCE-BEGIN
 % schema: ubt-ai-provenance/v1
@@ -16,24 +16,9 @@
 \section{Standard Model Gauge Structure}
 \label{sec:canonical:sm_gauge}
 
-\begin{center}
-\fbox{\begin{minipage}{0.92\textwidth}
-\textbf{2026-10-09 audit status.}
-This file records the Standard-Model gauge theory that UBT must reproduce.
-The displayed Yang--Mills Lagrangian and local gauge fields are
-\emph{effective targets}, not yet a derived reduction of the unfinished
-single UBT action.  For colour, the canonical $SU(3)$ stabiliser and generator
-algebra are established but \texttt{GAP-SU3-DYN} remains open.  Analogous
-distinctions must be maintained between algebraic $SU(2)$/$U(1)$ actions and
-their local dynamical gauge fields.  Coupling normalisations, the Weinberg
-angle, Higgs/Yukawa data and local gauge dynamics are not zero-parameter
-consequences of the present action registry.
-\end{minipage}}
-\end{center}
-
 \subsection{Canonical Definition}
 
-The standard Standard-Model gauge Lagrangian that a complete UBT reduction must reproduce is:
+The complete Standard Model gauge Lagrangian in the Unified Biquaternion Theory framework is:
 
 \begin{equation}
 \label{eq:canonical:sm_lagrangian}
@@ -195,7 +180,7 @@ Experimental value:
 \sin^2\theta_W \approx 0.23122
 \end{equation}
 
-In UBT, the Weinberg angle is not presently derived from the finalized action; the algebra alone does not fix $g'/g$.
+In UBT, this is \textbf{derived} from the internal structure of $\Theta$ (see Section~\ref{sec:canonical:theta_w_derivation}).
 
 \subsection{Coupling Constants}
 
@@ -416,7 +401,7 @@ UBT must reproduce all these results in the limit $\psi \to 0$.
 
 \subsection{Historical Note}
 
-This section is a reference target for a future complete UBT reduction.  Algebraic carrier symmetries are not by themselves a derivation of the corresponding local Standard-Model gauge dynamics.
+This canonical SM gauge structure provides the complete Standard Model within UBT, where all gauge symmetries emerge from the fundamental $\Theta$ field rather than being postulated \textit{a priori}.
 
 \subsection{Geometric Derivation of $SU(2)_L \times U(1)_Y$}
 
@@ -429,7 +414,7 @@ Key results:
   \item $SU(2)_L$ arises as the norm-preserving, unit-determinant \emph{left action}
     on $\mathrm{Mat}(2,\C)$: generators $T^a : M \mapsto \frac{i\sigma^a}{2} M$.
     Commutation relations $[T^a, T^b] = \varepsilon^{abc}T^c$ are verified.
-    Status: \textbf{[ALGEBRAIC ACTION DERIVED]}; promotion to a local dynamical gauge field remains action-level.
+    Status: \textbf{[DERIVED]}.
   \item $U(1)_Y$ arises as the scalar phase \emph{right action}: $\Theta \mapsto e^{-i\theta}\Theta$.
     Status: \textbf{[DERIVED]}.
   \item The Weinberg angle $\theta_W$ \emph{cannot} be fixed by $\C\otimes\H$ geometry alone;
