@@ -10,6 +10,28 @@ notice: The author has read the substance and accepts editorial responsibility.
 UBT-AI-PROVENANCE-END
 -->
 
+### Local-frame theorem and universal-jet route — 2026-10-10
+
+The logical gauge-principle boundary is now explicit.  A global (SU(3))
+stabilizer does not imply local gauge invariance.  However, if the single UBT
+field and its composites canonically determine a rank-three Hermitian bundle
+with a nonvanishing complex volume form, local (SU(3)) is automatically the
+redundancy of oriented orthonormal colour frames; its connection transforms
+with the standard inhomogeneous law.
+
+A rectangular frame (W\in\mathbb C^{N\times3}) has
+(A=W^\dagger dW) and
+(F=dW^\dagger(1-WW^\dagger)\wedge dW); unlike a square (N=3)
+Maurer--Cartan frame, (N>3) can carry nonzero curvature.  Standard
+Narasimhan--Ramanan universal-connection theory shows that sufficiently large
+projected connections are in principle rich enough to represent generic
+unitary connections.
+
+This does not close the microscopic UBT gap.  The remaining constructive target
+is to derive, from the finalized one-field action, a canonical finite-jet
+classifying map (J^r\Theta\to\mathrm{Gr}_3(\mathbb C^N)), its determinant
+trivialization/volume form, healthy quadratic gauge modes and normalization.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
