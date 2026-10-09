@@ -89,6 +89,15 @@ That work is a methodological benchmark: in an idealized cubic three-torus analy
 primordial B modes add only marginal topology information, while topology is encoded in
 off-diagonal harmonic covariance. It does not validate any UBT model.
 
+## Repository implementation
+
+- `experiments/falsification/cmb_full_covariance_compare.py` evaluates fixed realified
+  covariance models H0--H3 using Gaussian log likelihoods and KL divergences.
+- `tests/test_cmb_full_covariance_protocol.py` checks KL normalization, model comparison,
+  and positive-definite regularization.
+- The comparator deliberately does **not** tune parameters.  Its NPZ inputs must be
+  produced only after the tuning/evaluation split and model definitions are frozen.
+
 ## Exit criteria
 
 **Positive:** \(H_3\) beats \(H_2\) on an independent evaluation set with a pre-frozen
