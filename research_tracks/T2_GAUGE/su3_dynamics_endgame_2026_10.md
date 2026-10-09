@@ -408,3 +408,43 @@ action/RG reason for
 \]
 in the colour infrared sector.  Otherwise the generic pointwise dynamics
 supports only \(SO(3)\), not physical QCD \(SU(3)\).
+
+
+## 14. Raw-carrier closure and perturbative DOF boundary
+
+The exact minimal two-sided operator class satisfies
+\[
+\operatorname{im}(L-R)\cap u(1,3)
+=
+so(1,3)\oplus u(1)_{\rm phase},
+\]
+and
+\[
+\operatorname{im}(L-R)\cap su(1,3)
+=
+so(1,3).
+\]
+Thus the minimal norm-preserving bimodule already explains the Lorentz sector
+but supplies only the \(SO(3)\) subset of the reference colour stabilizer.
+
+Adding the five missing colour generators on the same raw carrier does not
+produce a direct-product Lorentz-plus-colour algebra.  Exact commutator closure
+gives
+\[
+\operatorname{Lie}\langle su(3)_{\rm colour},K_1,K_2,K_3\rangle
+=
+su(1,3).
+\]
+Because full raw-carrier \(SU(1,3)\) conflicts with the sharp/determinant GR
+core, physical colour must be bundle-separated or genuinely collective.
+
+Finally, a local healthy second-order quadratic theory of one biquaternion has
+only eight real microscopic field components and therefore residue rank at most
+eight at a simple pole.  Eight massless gluons require sixteen physical
+transverse polarizations.  Hence no invertible local tree-level rewrite of the
+single-Theta Hessian can be the perturbative QCD gluon sector.
+
+The primary remaining Axiom-A-compatible target is now nonperturbative:
+construct an adjoint composite current/operator whose exact two-point function
+develops eight massless transverse spin-one poles with positive residues,
+followed by the correct non-Abelian Ward identities and self-couplings.
