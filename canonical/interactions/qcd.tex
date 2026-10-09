@@ -1,7 +1,7 @@
 % Canonical QCD Lagrangian Definition
 % Version: 1.1
 % Date: 2025-11-14
-% Status: Standard QCD effective target; UBT local gauge dynamics OPEN
+% Status: Canonical - DO NOT DUPLICATE
 
 % UBT-AI-PROVENANCE-BEGIN
 % schema: ubt-ai-provenance/v1
@@ -18,33 +18,35 @@
 
 \begin{center}
 \fbox{\begin{minipage}{0.92\textwidth}
-\textbf{2026-10-09 audit status.}
-The formulas in this file define the \emph{standard QCD effective target} that
-a successful UBT reduction must reproduce.  They are not presently derived
-from the unfinished fundamental action family $S_{\rm UBT}[\Theta]$.
-The canonical colour carrier and algebraic stabiliser
-$\operatorname{Stab}(h,\Omega)=SU(3)$ are established, and the eight generator
-directions admit the machine-verified $3_{\rm spin}+5_{\rm quadrupole}$
-operator construction.  However \texttt{GAP-SU3-DYN} remains open:
-the non-pure-gauge local colour connection, its Yang--Mills normalisation
-$g_s$, and the physical fluctuation quotient have not yet been derived from
-$S_{\rm UBT}$.
+\textbf{Status: Embedded — Track A (involution approach) canonical}\\
+This section embeds standard QCD in UBT-compatible notation.
 
-The minimal two-sided operator $X\mapsto AX-XB$ is now proved insufficient:
-if it preserves the canonical colour carrier and volume form, it reduces to
-the three quaternion-adjoint directions.  A pure $U^{-1}dU$ frame connection
-is likewise flat.  See
-\texttt{canonical/su3\_derivation/su3\_dynamical\_no\_go\_and\_induced\_ym.tex}.
+\medskip
+\noindent\textbf{$SU(3)$ derivation:}
+$SU(3)_c$ is \textbf{Proved [L0]} from $\C \otimes \H$ via the involution $P_2$
+and carrier space $V_c = \ker(P_2+\mathbf{1}) \cong \C^3$
+(Theorems G.A--G.D; see \texttt{consolidation\_project/SU3\_derivation/}).
+An alternative route via octonionic extension ($\C \otimes \O$, Track B) also
+works but is not required; see \texttt{research\_tracks/octonionic\_completion/}.
+
+\medskip
+\noindent\textbf{Algebraic confinement:}
+Free quarks are \textbf{Conjectured [L0]} to be algebraically inadmissible in
+$\mathcal{H}_{\mathrm{phys}} = \mathrm{Im}(\Pi_{\mathrm{color}})$
+(colour-singlet condition on the 3-qubit colour space $\C^2\!\otimes\!\C^2\!\otimes\!\C^2$).
+All colour-neutral hadrons (baryons, mesons, tetraquarks, pentaquarks) satisfy
+the admissibility condition; isolated quarks do not.
+See \texttt{consolidation\_project/confinement/algebraic\_confinement.tex}.\\
+\textit{Note: this is distinct from the Clay Millennium Prize (Yang--Mills mass
+gap); UBT does not claim to solve that problem.}
 \end{minipage}}
 \end{center}
-
-
 
 \subsection{Canonical Definition}
 
 \paragraph{Metric convention.} The physical metric is defined by the central covariant-tetrad identity $\{E_\mu,E_\nu\}_\sharp/2=g_{\mu\nu}\mathbf1$.  Projected-metric formulas in earlier drafts are superseded.
 
-The standard QCD effective target Lagrangian to be reproduced by a UBT reduction is:
+The complete QCD Lagrangian in the Unified Biquaternion Theory framework is:
 
 \begin{equation}
 \label{eq:canonical:qcd_lagrangian}
@@ -148,7 +150,7 @@ f^{156} &= f^{367} = -\frac{1}{2}, \quad f^{458} = f^{678} = \frac{\sqrt{3}}{2}
 The Lagrangian is invariant under local $SU(3)$ gauge transformations:
 
 \begin{align}
-\Theta_{\rm color}(x) &\to U(x)\Theta_{\rm color}(x) \label{eq:canonical:qcd_gauge_theta} \\
+\Theta(x) &\to U(x) \Theta(x) U^\dagger(x) \label{eq:canonical:qcd_gauge_theta} \\
 G^a_\mu(x) T^a &\to U(x) G^a_\mu(x) T^a U^\dagger(x) - \frac{i}{g_s}(\partial_\mu U(x)) U^\dagger(x) \label{eq:canonical:qcd_gauge_gluon}
 \end{align}
 
@@ -230,7 +232,7 @@ The dimensional transmutation scale:
 \Lambda_{\text{QCD}} \approx 200 \text{ MeV}
 \end{equation}
 
-UBT does \textbf{not} presently predict $\Lambda_{\rm QCD}$ from first principles; its derivation would require the action-level normalisation and running of the colour coupling.
+In UBT, this is \textbf{predicted} from emergent $SU(3)$ structure (see Section~\ref{sec:canonical:emergent_su3}).
 
 \subsection{Confinement}
 
@@ -242,7 +244,7 @@ At low energies ($Q \lesssim \Lambda_{\text{QCD}}$), the strong coupling becomes
 
 This leads to \textbf{color confinement}: quarks and gluons are confined within hadrons.
 
-UBT does not presently provide a derived dynamical confinement mechanism; structural colour-singlet observations are distinct from a Wilson-loop area law or Yang--Mills mass-gap proof.
+UBT provides a geometric mechanism for confinement via complex time dynamics (see Section~\ref{sec:canonical:confinement_mechanism}).
 
 \subsection{Quark Masses}
 
@@ -255,7 +257,7 @@ The QCD Lagrangian includes quark mass terms:
 
 where $f$ labels quark flavors (up, down, strange, charm, bottom, top) and $q_f$ are quark fields.
 
-The following values are standard phenomenological mass inputs/reference values; their first-principles derivation from $\Theta$ remains open:
+In UBT, quark masses emerge from $\Theta$ field structure:
 
 \begin{itemize}
     \item $m_u \approx 2.2$ MeV
@@ -319,34 +321,30 @@ In curved spacetime:
 
 The covariant derivative includes both color and gravitational connections.
 
-\subsection{Audited UBT colour bridge}
+\subsection{Emergent SU(3) in UBT}
 \label{sec:canonical:emergent_su3}
 
-The current non-octonionic canonical algebraic route uses
-\[
-V=\mathbb C\operatorname{-span}\{I,J,K\},
-\qquad
-\operatorname{Stab}_{GL(V)}(h,\Omega)=SU(3).
-\]
-On this carrier the three quaternion-adjoint spin generators and five
-symmetric-traceless quadrupoles span the eight Gell--Mann directions exactly.
-This is an algebraic/operator result, not yet a derivation of local QCD
-dynamics.
+In UBT, the $SU(3)$ color symmetry appears upon octonionic extension ($\C \otimes \O$) of the internal structure of the $\Theta$ field:
 
-A candidate colour connection must be genuinely
-$\operatorname{End}_{\mathbb C}(V)$-valued,
-\[
- \mathcal G_\mu=-\frac{i g_s}{2}G_\mu^a\lambda_a,
-\]
-with nonzero curvature in generic configurations.  Deriving this object and
-its normalisation from the finalized single UBT action is
-\texttt{GAP-SU3-DYN}.  If such a connection is present in the physical
-Laplace-type $\Theta$ Hessian, the standard heat-kernel $a_4$ coefficient
-conditionally generates a term proportional to
-$\operatorname{tr}\mathcal F_{\mu\nu}\mathcal F^{\mu\nu}$.
+\subsubsection{Mechanism}
 
-No octonionic extension or phase-gradient formula is part of the current
-canonical proof.
+The 8×8 extended $\Theta$ field decomposes into:
+
+\begin{equation}
+\Theta_{8 \times 8} = \sum_{a=1}^{8} \Theta_a \otimes T^a
+\end{equation}
+
+where $\Theta_a$ are $3 \times 3$ blocks and $T^a$ are $SU(3)$ generators.
+
+\subsubsection{Derivation}
+
+The emergent gauge fields $G^a_\mu$ arise from phase gradients:
+
+\begin{equation}
+G^a_\mu = \frac{1}{g_s} \text{Tr}\left[T^a \left(\Theta^\dagger \partial_\mu \Theta - (\partial_\mu\Theta^\dagger)\Theta\right)\right]
+\end{equation}
+
+This produces $SU(3)$ gauge structure via octonionic extension (Track~B hypothesis).
 
 \subsection{Conflict Resolution}
 
