@@ -26,19 +26,6 @@
 \section{Theta Transform with Complex Time as a Bridge to UBT}
 \label{sec:theta_complex_time_bridge}
 
-\paragraph{2026-10-09 parameter audit.}
-The Jacobi modular parameter and canonical UBT complex time are distinct
-variables.  Canonical UBT uses
-$\tau_{\rm UBT}=t+i\psi$ with compact $\psi$, whereas the Jacobi modulus
-$\tau_J$ belongs to the upper half-plane.  The direct identification used in
-this reduced toy model is not a canonical UBT statement.  The exact
-currently established theta bridge is the compact-$\psi$ KK heat trace with
-\[
- \tau_J(s)=\frac{i\,s}{\pi R_\psi^2},
-\]
-as documented in
-\texttt{canonical/bridges/theta\_parameter\_separation.md}.
-
 \paragraph{Status.}
 Bridge / non-canonical derivation. This note is a mathematically motivated bridge between a reduced Jacobi-theta construction and the canonical UBT framework. It does not replace the canonical definitions of $\tau$ or $\Theta(q,\tau)$.
 
@@ -144,7 +131,11 @@ In canonical UBT notation, the scalar imaginary component of complex time is $\p
 \end{equation}
 
 \paragraph{Bridge statement.}
-The reduced damping variable $\phi$ is not canonically equal to the compact UBT coordinate $\psi$.  Any map between them requires a separately derived dimensionless reduction.
+The reduced theta notation therefore maps
+\begin{equation}
+\phi \longleftrightarrow \psi
+\end{equation}
+only as a notation bridge inside the isotropic complex-time limit.
 
 The reduced amplitude may then be rewritten in UBT-aligned notation as
 \begin{equation}
