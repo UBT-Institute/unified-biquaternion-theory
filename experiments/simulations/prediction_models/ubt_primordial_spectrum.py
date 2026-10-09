@@ -2,11 +2,17 @@
 # Licensed under the MIT License
 # See LICENSE file in the repository root for full license text
 """
+2026-10-09 AUDIT: THIS IS A TOY SIGNAL FAMILY, NOT A DERIVED UBT SPECTRUM.
+Internal S1_psi compactification yields KK masses n/R_psi but does not impose
+an ordinary spatial k_min=1/R_psi.  The IR factor and spatial resonance
+locations below are phenomenological ansatz terms retained for reproducibility.
+See research_tracks/research_front/cmb_covariance/internal_psi_spatial_cutoff_no_go.md.
+
 ubt_primordial_spectrum.py
 ==========================
-UBT primordial power spectrum from ψ-compactification.
+Historical phenomenological primordial-spectrum ansatz inspired by ψ compactification.
 
-Derives and computes the UBT-modified primordial scalar power spectrum
+Computes a historical UBT-inspired phenomenological scalar power-spectrum family
 
     P_UBT(k) = P_standard(k) × F_psi(k, R_psi)
 
