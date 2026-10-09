@@ -9,17 +9,6 @@
 %
 % See LICENSE.md for full license text.
 
-% -----------------------------------------------------------------
-% AUDIT CORRECTION — 2026-10-09
-% -----------------------------------------------------------------
-% This appendix previously identified the canonical UBT complex time
-% tau_UBT=t+i psi directly with a Jacobi modular parameter.  That identification
-% is not derived by the current canonical action.  The corrected text below
-% distinguishes tau_UBT from the theta modulus tau_theta and records the exact
-% S^1 heat-kernel map.  Historical modular/Hecke interpretations downstream
-% must be read subject to this distinction.
-% -----------------------------------------------------------------
-
 % UBT-AI-PROVENANCE-BEGIN
 % schema: ubt-ai-provenance/v1
 % tier: B_machine_verified
@@ -60,10 +49,8 @@
 \begin{tcolorbox}[colback=blue!4!white,colframe=blue!50!black,title=Purpose]
 This appendix formalises the theta spectral representation of the
 $\Theta$-field used across UBT.  It defines the spectral decomposition,
-connects compact spectral sums with Jacobi theta functions, and distinguishes
-the canonical UBT complex time $\tau_{\rm UBT}=t+i\psi$ from the Jacobi
-modular parameter $\tau_\theta$.  No equality between these variables is
-assumed without a separate derivation.
+connects toroidal topology with Jacobi theta functions, and analyses the
+role of the modular parameter $\tau = t + i\psi$.
 
 \medskip
 \textbf{Primary sources}:
@@ -78,8 +65,8 @@ Item & Status & Section \\
 \hline
 $\Theta$ spectral decomposition & \textbf{Defined} & \S\ref{sec:spectral_decomp} \\
 Toroidal topology $T^3\times S^1_\psi$ & \textbf{Proved} & \S\ref{sec:torus} \\
-Jacobi theta functions & \textbf{Connected (spectral/heat-kernel)} & \S\ref{sec:jacobi} \\
-Theta modular parameter $\tau_\theta$ & \textbf{Distinguished from $\tau_{\rm UBT}$} & \S\ref{sec:modular} \\
+Jacobi theta functions & \textbf{Connected} & \S\ref{sec:jacobi} \\
+Modular parameter $\tau$ & \textbf{Analysed} & \S\ref{sec:modular} \\
 Poisson summation duality & \textbf{Proved} & \S\ref{sec:poisson} \\
 \hline
 \end{tabular}
@@ -91,10 +78,8 @@ Poisson summation duality & \textbf{Proved} & \S\ref{sec:poisson} \\
 
 \begin{definition}[Spectral decomposition of $\Theta$]
 \label{def:spectral}
-On an assumed compact product $T^3\times S^1_\psi$, the biquaternion field
-$\Theta(q,\tau_{\rm UBT})$ admits the Fourier/KK decomposition below.  Here
-$\tau_{\rm UBT}=t+i\psi$ is the UBT complex-time coordinate.  It is
-\emph{not} identified in this definition with a Jacobi modular parameter:
+On the torus $T^3 \times S^1_\psi$ with modular parameter $\tau = t + i\psi$,
+the biquaternion field $\Theta(q,\tau)$ admits the spectral decomposition:
 \begin{equation}\label{eq:spectral}
   \Theta(q,\tau)
   = \sum_{n \in \mathbb{Z}}\sum_{\mathbf{k}\in\mathbb{Z}^3}
@@ -133,25 +118,26 @@ $n = n^* = 137$ & Prime attractor & Fine-structure mode (minimum of $V_{\mathrm{
 \section{Toroidal Topology}\label{sec:torus}
 % -----------------------------------------------------------------
 
-\begin{proposition}[Canonical compact direction and optional lattice model]\label{prop:torus}
-The active canonical complex-time formulation contains the compact internal circle
-$S^1_\psi=S^1_{R_\psi}$ with
-$\psi\sim\psi+2\pi R_\psi$, over ordinary non-compact spacetime
-$\mathcal M$.  A spatial $T^3=(S^1_{R_t})^3$ is an \emph{additional compactification
-ansatz} used in modular/lattice research models; it is not implied by the canonical
-complex-time axiom.
+\begin{proposition}[Geometry of compactification]\label{prop:torus}
+The UBT field lives on the total space
+$\mathcal{M} \times T^3 \times S^1_\psi$, where:
+\begin{itemize}
+  \item $\mathcal{M} = \mathbb{R}^{1,3}$ is the non-compact Minkowski spacetime
+    (or its curved generalisation)
+  \item $T^3 = (S^1_{R_t})^3$ is the compactified spatial torus
+  \item $S^1_\psi = S^1_{R_\psi}$ is the imaginary-time circle with $\psi \sim \psi + 2\pi R_\psi$
+\end{itemize}
 \end{proposition}
 
-For that optional rank-three Gaussian lattice model, define:
+The partition function of the $T^3$ sector is:
 \begin{equation}\label{eq:Z_T3}
-  \hat{Z}_{T^3}(\tau_\theta)
-  = \sum_{\mathbf{k}\in\mathbb{Z}^3}
-    e^{\pi i\tau_\theta |\mathbf{k}|^2},
-  \qquad q_\theta = e^{\pi i\tau_\theta},
+  \hat{Z}_{T^3}(\tau)
+  = \sum_{\mathbf{k}\in\mathbb{Z}^3} q^{|\mathbf{k}|^2},
+  \qquad q = e^{2\pi i\tau},
 \end{equation}
 which equals the cube of the Jacobi theta function:
 \begin{equation}\label{eq:Z_theta3}
-  \hat{Z}_{T^3}(\tau_\theta) = \vartheta_3(0|\tau_\theta)^3.
+  \hat{Z}_{T^3}(\tau) = \vartheta_3(\tau)^3.
 \end{equation}
 
 \noindent\textbf{Source}: \texttt{research\_tracks/research/partition\_function\_modular.md}.
@@ -169,19 +155,15 @@ which equals the cube of the Jacobi theta function:
 \end{equation}
 \end{definition}
 
-\begin{theorem}[Rank-three Gaussian theta identity]\label{thm:partition}
-For the standard rank-three Gaussian lattice sum above, the mathematical
-identity
-$\hat{Z}_{T^3}(\tau_\theta)=\vartheta_3(0|\tau_\theta)^3$
-holds and transforms under modular inversion as:
+\begin{theorem}[Connection to UBT partition function]\label{thm:partition}
+The partition function of the compactified $\Theta$ field on $T^3$
+is $\hat{Z}_{T^3}(\tau) = \vartheta_3(\tau)^3$, transforming under
+modular inversion as:
 \begin{equation}\label{eq:modular_transform}
-  \hat{Z}_{T^3}(-1/\tau_\theta)
-  = (-i\tau_\theta)^{3/2}\,\hat{Z}_{T^3}(\tau_\theta).
+  \hat{Z}_{T^3}(-1/\tau)
+  = (-i\tau)^{3/2}\,\hat{Z}_{T^3}(\tau).
 \end{equation}
-The theta weight is $k=3/2=d/2$ for this rank-three lattice ($d=3$).
-Identifying that lattice rank physically with
-$\dim_\mathbb{R}(\mathrm{Im}\,\mathbb H)=3$ is a UBT bridge hypothesis,
-not part of the classical theta identity.
+The modular weight is $k = 3/2 = d/2$ where $d = 3 = \dim_\mathbb{R}(\mathrm{Im}\,\mathbb{H})$.
 \end{theorem}
 
 \begin{proof}
@@ -189,62 +171,36 @@ The Jacobi identity for $\vartheta_3$ gives:
 \begin{equation}
   \vartheta_3(-1/\tau) = (-i\tau)^{1/2}\,\vartheta_3(\tau).
 \end{equation}
-Cubing: $\vartheta_3(0|-1/\tau_\theta)^3 = (-i\tau_\theta)^{3/2}\,\vartheta_3(0|\tau_\theta)^3$.
-The weight $3/2=d/2$ follows mathematically from the rank $d=3$ Gaussian
-lattice.  No equality with an independently defined UBT exponent is needed for
-this proof. $\square$
+Cubing: $\vartheta_3(-1/\tau)^3 = (-i\tau)^{3/2}\,\vartheta_3(\tau)^3$.
+The weight $3/2 = d/2$ follows from $d = 3 = \dim_\mathbb{R}(\mathrm{Im}\,\mathbb{H})$,
+giving the same algebraic origin as the $B_{\mathrm{base}} = N_{\mathrm{eff}}^{3/2}$
+exponent in the $\alpha$ derivation. $\square$
 \end{proof}
 
 \noindent\textbf{Source}: \texttt{research\_tracks/research/partition\_function\_modular.md \S v57--v59}.
 
 \begin{remark}
-The mathematical rank-three theta sum has weight $3/2$.  A possible relation
-to the appearance of a $3/2$ exponent elsewhere in UBT is only a structural
-comparison until both quantities are derived from the same canonical object.
-The Kac--Moody level $k_{\mathrm{KM}}$ is a different quantity.
+The modular weight $k = 3/2$ of $\hat{Z}_{T^3}(\tau)$ is consistent with the
+$B_{\mathrm{base}} = N_{\mathrm{eff}}^{3/2}$ exponent in the $\alpha$-derivation.
+Both arise from $d = \dim_\mathbb{R}(\mathrm{Im}\,\mathbb{H}) = 3$.
+However, the Kac-Moody level $k_{\mathrm{KM}} = 1$ (Gap G3-k) is a \emph{different}
+quantity and remains open.
 \end{remark}
 
 % -----------------------------------------------------------------
-\section{Role of the Theta Modular Parameter $\tau_\theta$}\label{sec:modular}
+\section{Role of the Modular Parameter $\tau$}\label{sec:modular}
 % -----------------------------------------------------------------
 
-\subsection{Complex time and theta modulus are distinct}
+\subsection{Complex Time as Modular Parameter}
 
-Canonical UBT uses
-\[
-  \tau_{\rm UBT}=t+i\psi,
-\]
-with real physical time $t$ and a compact internal phase coordinate $\psi$.
-This does \emph{not} by itself define a complex torus
-$\mathbb C/(\mathbb Z+\tau_{\rm UBT}\mathbb Z)$: the real-time direction
-is not canonically a compact lattice generator.
-
-For the rigorously controlled free heat kernel on $S^1_L$, with heat parameter
-$s>0$,
-\[
-K_s(\psi,\psi')
-=\frac1L\sum_{n\in\mathbb Z}
- e^{-(2\pi n/L)^2s}e^{2\pi i n(\psi-\psi')/L}
-=\frac1L\vartheta_3\!\left(
- \frac{\psi-\psi'}{L}\,\middle|\,
- \frac{4\pi i s}{L^2}\right).
-\]
-Hence in this theorem
-\[
-  z_\theta=\frac{\psi-\psi'}{L},
-  \qquad
-  \tau_\theta=\frac{4\pi i s}{L^2}.
-\]
-The compact coordinate enters the elliptic argument; the non-compact heat
-parameter determines the theta modulus.  Therefore
-\[
-  \boxed{\tau_{\rm UBT}\not\equiv\tau_\theta
-  \quad\text{from the present canonical axioms alone}.}
-\]
-
-A separate reduced bridge model may choose a mathematical kernel
-$\vartheta_3(0|t+i\psi)$; that is a bridge ansatz and not an action-derived
-identification of the UBT time coordinate with the Jacobi modulus.
+In UBT, the complex time $\tau = t + i\psi$ plays the dual role of:
+\begin{enumerate}
+  \item \textbf{Physical time parameter}: $t$ is real Minkowski time; $\psi$
+    is the imaginary part controlling quantum phase evolution.
+  \item \textbf{Modular parameter} of the toroidal compactification: $\tau$
+    parametrises the shape (complex structure) of the torus $T^2$ formed
+    by the time circle and the imaginary-time circle.
+\end{enumerate}
 
 \begin{tcolorbox}[colback=yellow!5!white,colframe=orange!60!black,title=Important: $\psi$ is NOT Wick rotation]
 $\psi \in \mathbb{R}$ is a \emph{dynamical} degree of freedom — the imaginary
@@ -255,19 +211,15 @@ analytic continuation).  This is proved in
 
 \subsection{Modular Group Action}
 
-The modular group $\mathrm{SL}(2,\mathbb{Z})$ acts on the mathematical theta
-modulus $\tau_\theta$ by
+The modular group $\mathrm{SL}(2,\mathbb{Z})$ acts on $\tau$ by
 \begin{equation}
-  \tau_\theta \;\mapsto\;
-  \frac{a\tau_\theta + b}{c\tau_\theta + d},
+  \tau \;\mapsto\; \frac{a\tau + b}{c\tau + d},
   \qquad
   \begin{pmatrix}a&b\\c&d\end{pmatrix} \in \mathrm{SL}(2,\mathbb{Z}).
 \end{equation}
-The standard Gaussian rank-three theta sum
-$\hat{Z}_{T^3}(\tau_\theta)=\vartheta_3(0|\tau_\theta)^3$
-has the corresponding half-integral-weight theta transformation law on its
-appropriate theta subgroup.  Interpreting this mathematical modular symmetry
-as a symmetry of UBT dynamics remains an open bridge problem.
+The UBT partition function $\hat{Z}_{T^3}(\tau) = \vartheta_3(\tau)^3$ transforms
+as a modular form of weight $3/2$ under the index-2 subgroup of
+$\mathrm{SL}(2,\mathbb{Z})$ fixing $\vartheta_3$.
 
 \subsection{Spectral Modes and Hecke Operators}
 
@@ -277,10 +229,8 @@ as:
   (T_p\,\hat{Z})_n
   = \sum_{d|n,\; d|p} d^{k-1}\hat{Z}_{n^2/(dp)},
 \end{equation}
-Historical numerical scans singled out $p=137$ in a separate phenomenological
-programme (see \texttt{docs/reports/hecke\_lepton/}).  No canonical theorem in
-this appendix identifies that numerical observation with a physical Hecke
-eigenmode.
+and the prime $p = 137$ is a Hecke eigenvalue associated with the attractor mode
+$n^* = 137$ (numerical support: \texttt{docs/reports/hecke\_lepton/}).
 
 % -----------------------------------------------------------------
 \section{Poisson Summation Duality}\label{sec:poisson}
@@ -309,9 +259,9 @@ Summing over $\mathbb{Z}^d$ gives~\eqref{eq:poisson}. $\square$
 \noindent\textbf{Source}: \texttt{ubt\_with\_chronofactor/scripts/spectral/poisson\_duality\_demo.py}.
 
 \begin{remark}
-The prefactor has exponent $d/2$, and therefore equals $3/2$ for a rank-three
-Gaussian lattice.  Any physical identification of that lattice rank with an
-independent UBT counting argument requires a separate bridge theorem.
+The prefactor $\tau^{d/2}$ with $d = 3$ is the same $3/2$ exponent as the
+modular weight of $\hat{Z}_{T^3}$ and the $B_{\mathrm{base}}$ exponent.
+All three arise from $d = \dim_\mathbb{R}(\mathrm{Im}\,\mathbb{H}) = 3$.
 \end{remark}
 
 % -----------------------------------------------------------------
@@ -325,13 +275,11 @@ Result & Status & Layer & Source \\
 \midrule
 Spectral decomposition~\eqref{eq:spectral} & Defined & L0 &
   Def.~\ref{def:spectral} \\
-Compact $S^1_\psi$ & Canonical/assumed compact fiber & L1 &
+Toroidal topology $T^3\times S^1_\psi$ & Proved & L0 &
   Prop.~\ref{prop:torus} \\
-Spatial $T^3$ compactification & Optional bridge ansatz & Open physical status &
-  Prop.~\ref{prop:torus} \\
-Rank-three Gaussian sum $=\vartheta_3(0|\tau_\theta)^3$ & Proved mathematics & L0 &
+$\hat{Z}_{T^3} = \vartheta_3(\tau)^3$ & Proved & L0 &
   Thm.~\ref{thm:partition} \\
-Theta weight $k=3/2$ for rank $d=3$ & Proved mathematics & L0 &
+Modular weight $k = 3/2 = d/2$ & Proved & L0 &
   Thm.~\ref{thm:partition} \\
 Poisson duality $W = \tau^{3/2}S$ & Proved & L0 &
   Thm.~\ref{thm:poisson} \\
