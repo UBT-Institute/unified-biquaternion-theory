@@ -10,6 +10,25 @@ notice: The author has read the substance and accepts editorial responsibility.
 UBT-AI-PROVENANCE-END
 -->
 
+## Internal-colour multiplicity theorem — 2026-10-09
+
+Under the standard representation-preserving connection architecture,
+\[
+W_{\rm tot}=W_{\rm Lor}\otimes M,
+\qquad
+\operatorname{End}_{\rm Lor}(W_{\rm tot})\cong\operatorname{End}(M).
+\]
+Exact centralizer dimensions are 1, 4 and 9 for complex multiplicities
+m=1,2,3. Therefore **m=3 is the minimal Lorentz-scalar multiplicity capable
+of a faithful fundamental internal SU(3)**.
+GAP-SU3-INTERNAL-MULTIPLICITY-MINIMALITY is CLOSED CONDITIONALLY [L1].
+The origin of such a threefold degenerate multiplicity from the single UBT
+field/spectrum remains OPEN.
+
+The current minimal compact internal geometry is only S1_psi. Historical
+T3 constructions using additional chi,xi directions are conditional extended
+models and cannot supply this multiplicity without an independent derivation.
+
 ## Chronofactor/internal multiplicity audit — 2026-10-09
 
 - **GAP-CHRONO-PI-SO3 — CLOSED AS NO-GO [L1]:** there is no nonzero
