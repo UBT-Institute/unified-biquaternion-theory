@@ -10,35 +10,6 @@ notice: The author has read the substance and accepts editorial responsibility.
 UBT-AI-PROVENANCE-END
 -->
 
-## 2026-10-10 update — cross-program status
-
-The following table is a synchronization layer over the detailed ledger in
-`CLAIMS.yaml`. It does not replace the individual theorem/no-go files.
-
-| ID | Claim | Status | Primary source |
-|---|---|---|---|
-| OCT-THETA-1 | Physical `tau_UBT=t+i psi` is dimensionful and is not canonically the Jacobi modular parameter; the compact-circle heat trace uses `tau_J=i s/(pi R_psi^2)` | **CLOSED** | `canonical/bridges/theta_parameter_separation.md` |
-| OCT-THETA-2 | For `theta3(tau)=sum exp(pi i n^2 tau)`, the scalar theta group is `<S,T^2>` of index 3; generic finite weighted reduced sums are not modular/mock-modular by default | **CLOSED / NO-GO for generic stronger claim** | same; `verification/theta_parameter_separation_check.py` |
-| OCT-SU3-1 | Minimal norm-preserving bimodule operators intersect `u(1,3)` as `so(1,3)+u(1)_phase`; the traceless intersection is exactly Lorentz `so(1,3)` | **CLOSED [L1]** | `research_tracks/T2_GAUGE/su3_bimodule_u13_intersection.md` |
-| OCT-SU3-2 | Adding full raw-carrier colour `su(3)` to the three minimal boost directions closes to all `su(1,3)` | **CLOSED [L1]** | `research_tracks/T2_GAUGE/su3_raw_carrier_lie_closure.md` |
-| OCT-SU3-3 | A constrained complex 4x3 frame `Z^dagger G Z=-I3` modulo local `SU(3)` has exactly seven normalized physical modes and is locally equivalent to the timelike `SU(1,3)/SU(3)` coset | **CLOSED KINEMATICALLY [L1]** | `research_tracks/T2_GAUGE/su3_stiefel_hls_rewrite.md` |
-| OCT-SU3-4 | `4x3` is the unique minimal complex three-frame size reproducing the seven normalized one-Theta modes; quotienting by `U(3)` instead removes the phase and leaves six | **CLOSED [L1]** | `research_tracks/T2_GAUGE/su3_vs_u3_stiefel_count.md` |
-| OCT-SU3-5 | Weak fixed-frame HLS loops generate positive `Z_B` but keep a finite HLS mass for finite locking coefficient; useful Yang--Mills hierarchy is not obtained in the controlled weak regime | **CLOSED AS WEAK-REGIME BOUNDARY** | `research_tracks/T2_GAUGE/su3_hls_fixed_frame_one_loop.md`; `research_tracks/T2_GAUGE/su3_hls_ym_threshold_matching.md` |
-| OCT-SU3-6 | The Stiefel rewrite collapses at raw-field origin `rho=0`; the exact finite-radius phase is the preferred HLS target | **CLOSED GEOMETRIC OBSTRUCTION** | `su3_stiefel_critical_origin_obstruction.md` |
-| OCT-SU3-7 | `SU(1,3)/SU(3) ~= S1 x C3`; the exact one-Theta composite frame bundle is topologically trivial and supplies no independent `c2`/instanton bundle sectors | **CLOSED [L1 topology]** | `research_tracks/T2_GAUGE/su3_coset_topology_instanton_boundary.md` |
-| OCT-SU3-8 | Full dynamical QCD from the finite 4x3 HLS phase, including autonomous gauge topology and Yang--Mills/BRST/Slavnov--Taylor closure | **OPEN PRIMARY TARGET** | `research_tracks/T2_GAUGE/su3_stiefel_hls_frg_program.md` |
-| OCT-CMB-1 | Full-covariance H0--H3 likelihood/KL interface `C=A P A^T+N` is implemented and fails closed when an H3 template is absent | **CLOSED AS INFRASTRUCTURE** | `research_tracks/research_front/cmb_covariance/FULL_COVARIANCE_PROTOCOL.md` |
-| OCT-CMB-2 | Compact internal `S1_psi` creates KK masses but does not imply `k_spatial >= 1/R_psi` | **CLOSED AS NO-GO [L1]** | `research_tracks/research_front/cmb_covariance/internal_circle_no_spatial_ir_cutoff.md` |
-| OCT-CMB-3 | Action-derived scalar perturbation Hessian, `delta Theta -> R`, state prescription and frozen `P_UBT` | **OPEN PRIMARY TARGET** | `PRIMORDIAL_COVARIANCE_DERIVATION_GAP.md` |
-| OCT-TORUS-1 | For the fixed-area massless flat `T2`, `det' Delta` is proportional to `Im(tau)|eta(tau)|^4`; square is a rectangular maximum but a full-moduli saddle, while the hexagonal lattice maximizes the determinant | **CLOSED / corrected regularized result** | `research_tracks/theta_torus_potential/zeta_regularized_shape_audit.md` |
-| OCT-TORUS-2 | The isolated standard bosonic massless `+1/2 log det` branch has no finite global modulus minimum | **CLOSED AS NO-GO** | same |
-| OCT-ACTION-1 | A unique finalized fundamental one-Theta action that selects all GR/gauge/quantum structures | **OPEN** | `canonical/ACTION.en.md` |
-
-**Positioning note:** these results make UBT a more sharply constrained
-research programme, but they do not constitute a completed quantum-gravity
-theory or a first-principles derivation of the Standard Model. See
-`docs/UBT_POSITIONING_2026_10.md`.
-
 ## 2026-07-27 update — canonical generalized-Dirac lift
 
 | # | Claim | Level | Source |
