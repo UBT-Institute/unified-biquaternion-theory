@@ -32,6 +32,7 @@ SHARED_LANGUAGE_NEUTRAL_FILES = {
     "docs/textbook/main.tex",
     "docs/textbook/chapters/04_covariant_tetrad_geometry.tex",
     "README.md",
+    "STATUS_OF_UBT.md",
     "ROADMAP.md",
     "WHAT_IS_PROVED.md",
     "DERIVATION_INDEX.md",
