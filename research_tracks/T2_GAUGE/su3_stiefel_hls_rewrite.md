@@ -2,7 +2,7 @@
 # Exact Stiefel / hidden-local-SU(3) rewrite of the timelike colour coset
 
 **Status:** exact kinematic rewrite plus a sharply defined quantum-dynamics
-programme.  This is the strongest remaining one-Theta route to an emergent
+programme. This is the strongest remaining one-Theta route to an emergent
 gauge 1PI action.
 
 ## 1. Rank-three negative frame
@@ -22,9 +22,7 @@ Z=(z_1,z_2,z_3)
 \]
 obeying
 \[
-\boxed{
-Z^\dagger GZ=-I_3.
-}
+\boxed{Z^\dagger GZ=-I_3.}
 \]
 
 A local change of oriented orthonormal frame acts on the right:
@@ -40,53 +38,33 @@ This changes no physical three-plane.
 
 ## 2. Exact degree count
 
-A complex \(4\times3\) matrix contains
-\[
-24
-\]
-real components.
+A complex \(4\times3\) matrix contains 24 real components.
 
-The Hermitian constraint
-\[
-Z^\dagger GZ=-I_3
-\]
-contains
-\[
-9
-\]
-independent real equations.
+The Hermitian constraint \(Z^\dagger GZ=-I_3\) supplies 9 real equations, and
+the local \(SU(3)\) frame redundancy removes 8.
 
-Therefore the constrained Stiefel field has
+Hence
 \[
-24-9=15
+\boxed{24-9-8=7}
 \]
-real components.
-
-The local \(SU(3)\) frame redundancy removes eight:
-\[
-\boxed{
-24-9-8=7.
-}
-\]
-
-This exactly matches
+physical real variables, exactly
 \[
 \dim_{\mathbb R}SU(1,3)/SU(3)=15-8=7.
 \]
 
-Thus the Stiefel/HLS variables introduce no new physical degree of freedom.
+No new physical degree of freedom is introduced.
 
 ## 3. Equivalence to the timelike normal
 
 Given \(Z\), its \(G\)-orthogonal complement is a positive complex line.
 
-Choose the unique unit timelike normal \(n\) satisfying
+Choose the unit timelike normal \(n\) satisfying
 \[
 n^\dagger Gn=1,
 \qquad
 Z^\dagger Gn=0,
 \]
-with phase fixed by the oriented condition
+and fix its phase by
 \[
 \det(n,Z)=1.
 \]
@@ -96,16 +74,9 @@ Then
 g=(n,Z)\in SU(1,3).
 \]
 
-Right multiplication
-\[
-Z\to Zh,\qquad h\in SU(3),
-\]
-leaves \(n\) unchanged because \(\det h=1\).
+Right multiplication \(Z\to Zh\), \(h\in SU(3)\), does not change \(n\).
 
-Conversely, any normalized timelike \(n\) plus an oriented orthonormal frame
-of \(n^{\perp_h}\) gives such a \(Z\).
-
-Hence locally
+Thus locally
 \[
 \boxed{
 \{Z:Z^\dagger GZ=-I_3\}/SU(3)
@@ -114,248 +85,326 @@ SU(1,3)/SU(3).
 }
 \]
 
-This is the Stiefel form of the previously proved coset rewrite.
+This is exactly the Stiefel form of the previously proved timelike coset.
 
-## 4. Auxiliary hidden-local connection
-
-Introduce
-\[
-B_\mu\in su(3)
-\]
-and define
-\[
-D_\mu Z
-=
-\partial_\mu Z+ZB_\mu.
-\]
-
-Under
-\[
-Z\to Zh,
-\]
-take
-\[
-B_\mu
-\to
-h^{-1}B_\mu h-h^{-1}\partial_\mu h.
-\]
-
-Then
-\[
-D_\mu Z\to(D_\mu Z)h.
-\]
-
-A minimal constrained kinetic action is
-\[
-\boxed{
-S_Z
-=
--f^2
-\int\sqrt{|g|}\,
-\operatorname{tr}
-\left[
-(D_\mu Z)^\dagger G(D^\mu Z)
-\right]
-+
-S_{\rm constr}.
-}
-\]
-
-At this stage \(B_\mu\) has no independent kinetic term.
-
-## 5. Algebraic equation for B
+## 4. Horizontal and singlet decomposition
 
 Define
 \[
-C_\mu
-=
-Z^\dagger G\partial_\mu Z.
+C_\mu:=Z^\dagger G\partial_\mu Z.
 \]
 
 Differentiating the constraint gives
 \[
 C_\mu^\dagger=-C_\mu,
 \]
-so \(C_\mu\in u(3)\).
-
-Because \(B_\mu\) is traceless anti-Hermitian, its algebraic field equation is
+so
 \[
-\boxed{
-B_\mu
+C_\mu\in u(3).
+\]
+
+Decompose
+\[
+C_\mu
 =
-P_{su(3)}C_\mu
+C_{\mu,0}
++i a_\mu I_3,
+\]
+where
+\[
+C_{\mu,0}
 =
 C_\mu-\frac13\operatorname{tr}(C_\mu)I_3
-}
+\in su(3)
 \]
-up to the sign convention chosen in \(D_\mu Z\).
-
-The trace
+and
 \[
 \boxed{
 a_\mu
 =
-\frac13\operatorname{tr}C_\mu
+-\frac{i}{3}\operatorname{tr}C_\mu
+\in\mathbb R.
 }
 \]
-is not removed by the local \(SU(3)\) redundancy.  It is precisely the
-additional real phase/singlet direction needed to make the coset
-seven-dimensional rather than the six-dimensional complex-hyperbolic space
-\(SU(1,3)/U(3)\).
 
-Eliminating \(B_\mu\) therefore returns the ordinary
-\(SU(1,3)/SU(3)\) sigma model.
+The real one-form \(a_\mu\) is the physical singlet/phase tangent left over
+because the local redundancy is \(SU(3)\), not \(U(3)\).
 
-## 6. Why this formulation is physically better than adding a gauge field by hand
+The gauge-invariant positive-line projector is
+\[
+\boxed{
+P_+
+=
+I_4+ZZ^\dagger G
+=
+nn^\dagger G.
+}
+\]
 
-The local \(SU(3)\) is present **before** a kinetic term for \(B_\mu\) is
-generated.
+It obeys
+\[
+P_+Z=0,
+\qquad
+P_+^2=P_+.
+\]
 
-Therefore, if quantum effects generate
+The six real triplet tangent directions are encoded in
+\[
+P_+\partial_\mu Z.
+\]
+
+## 5. Positive physical coset kinetic
+
+A healthy \(SU(1,3)\)-covariant target metric must weight the triplet and
+singlet irreducible \(SU(3)\) sectors separately.
+
+A minimal positive fixed-background form is
+\[
+\boxed{
+\mathcal L_A
+=
+c_3\,
+\operatorname{tr}
+\left[
+(P_+\partial_\mu Z)^\dagger
+G
+(P_+\partial^\mu Z)
+\right]
++
+c_1\,a_\mu a^\mu,
+\qquad
+c_3,c_1>0.
+}
+\]
+
+The first term is positive on the positive normal image of \(P_+\); the second
+gives an independent positive coefficient to the real singlet.
+
+This avoids the signature problem of the naive single-trace expression
+\[
+-\operatorname{tr}(\partial Z)^\dagger G(\partial Z),
+\]
+which gives opposite target signs to the six normal-mixing directions and the
+singlet phase direction.
+
+## 6. Auxiliary hidden-local connection
+
+Introduce
+\[
+B_\mu\in su(3)
+\]
+with
+\[
+B_\mu
+\to
+h^{-1}B_\mu h-h^{-1}\partial_\mu h.
+\]
+
+The traceless frame current transforms as a connection,
+\[
+C_{\mu,0}
+\to
+h^{-1}C_{\mu,0}h+h^{-1}\partial_\mu h.
+\]
+
+Therefore
+\[
+B_\mu-C_{\mu,0}
+\to
+h^{-1}(B_\mu-C_{\mu,0})h.
+\]
+
+Add the purely redundant vertical term
+\[
+\boxed{
+\mathcal L_V
+=
+-c_V\,
+\operatorname{tr}
+\left[
+(B_\mu-C_{\mu,0})
+(B^\mu-C_0^\mu)
+\right],
+\qquad
+c_V>0.
+}
+\]
+
+Because anti-Hermitian matrices have
+\[
+-\operatorname{tr}X^2\ge0,
+\]
+this has the healthy algebraic sign in the internal gauge directions.
+
+There is initially no \(F_B^2\) term.
+
+## 7. Exact algebraic elimination
+
+Variation of \(B_\mu\) gives
+\[
+\boxed{
+B_\mu=C_{\mu,0}.
+}
+\]
+
+Therefore
+\[
+\boxed{\mathcal L_V=0}
+\]
+on the algebraic solution, and the action reduces exactly to
+\[
+\mathcal L_A.
+\]
+
+The coefficient \(c_V\) is classically redundant before a \(B_\mu\) kinetic
+term is generated.
+
+This is the precise HLS situation: a local gauge redundancy and auxiliary
+connection are introduced without changing the original sigma model.
+
+## 8. Why this is better than adding a gauge field by hand
+
+The local \(SU(3)\) exists before \(B_\mu\) is dynamical.
+
+If quantum dynamics generates
 \[
 -\frac{1}{4g_H^2}
 \operatorname{tr}F_{\mu\nu}(B)F^{\mu\nu}(B),
 \]
-the non-Abelian gauge transformation law and BRST completion are already
-kinematic consequences of the exact redundant variables.
+the non-Abelian transformation law is already exact, so the induced vector
+sector comes with a genuine gauge redundancy rather than eight unrelated
+composite vectors.
 
-This is structurally different from trying to interpret eight unrelated
-composite vector operators as gluons after the fact.
+This is structurally the same hidden-local-symmetry mechanism known in
+nonlinear sigma and Grassmannian models.
 
-It is also the standard hidden-local-symmetry logic known in nonlinear sigma
-and Grassmannian models.
+## 9. Semiclassical fixed-frame phase
 
-## 7. Important correction to the earlier classical catch-22
-
-Around a fixed classical frame \(Z=Z_0\), the term
+Around a fixed gauge/frame with
 \[
--f^2\operatorname{tr}(D_\mu Z)^\dagger G(D^\mu Z)
+C_{\mu,0}=0,
 \]
-contains a quadratic \(B_\mu\) term.
-
-In a fixed/unitary-gauge semiclassical expansion this is the ordinary
-hidden-local/Stueckelberg mass structure.
-
-Therefore the earlier statement remains valid for the **fixed-frame broken
-branch**:
-a generated kinetic term gives a massive HLS vector unless the mass
-coefficient vanishes dynamically.
-
-However this is **not an absolute quantum no-go**.
-
-Constrained Grassmannian/HLS models are known to possess quantum phases in
-which the gauge-fixed order parameter vanishes while the constraint remains,
-and an auxiliary hidden-local gauge field can acquire a kinetic term through
-quantum effects.  Critical/unbroken phases can contain massless dynamical HLS
-gauge bosons.
-
-Thus the correct UBT question is a phase-structure problem, not a purely
-classical mass-term argument.
-
-## 8. UBT-specific quantum target
-
-For the present \(4\times3\) noncompact Stiefel model one must derive the
-effective action of the constrained variables rather than import large-\(N\)
-results.
-
-Introduce a Hermitian multiplier
+the redundant vertical term contains
 \[
-\Lambda(x)
+-c_V\operatorname{tr}B_\mu B^\mu.
 \]
-for
+
+After an independent \(F_B^2\) term is generated this is a
+Stueckelberg/HLS vector-mass structure.
+
+Therefore the earlier catch-22 is correct for the ordinary fixed-frame
+semiclassical branch:
+
+\[
+\boxed{
+\text{generated kinetic term}
++
+c_V^{\rm ren}>0
+\Rightarrow
+\text{massive HLS vector}.
+}
+\]
+
+That branch is vector-meson-like, not unbroken QCD colour.
+
+## 10. Why this is not an absolute quantum no-go
+
+Known constrained Grassmannian/HLS models possess different quantum phases.
+
+The gauge-fixed order parameter can vanish while the nonlinear constraint is
+maintained by quantum fluctuations and a Lagrange multiplier.  In suitable
+unbroken/critical phases the auxiliary HLS connection can acquire a kinetic
+term without a gauge-boson mass.
+
+Thus the decisive UBT question is whether the finite noncompact
+\(SU(1,3)/SU(3)\) model has an analogous phase.
+
+The existence of such phases in large-\(N\) compact models is precedent, not a
+proof for UBT.
+
+## 11. Finite UBT quantum problem
+
+Introduce a Hermitian multiplier \(\Lambda(x)\) enforcing
 \[
 Z^\dagger GZ+I_3=0
 \]
-and compute
+and gauge-fix the hidden \(SU(3)\) consistently.
+
+The quantum target is the 1PI action
 \[
-\Gamma[B,\Lambda]
-=
--\log
-\int DZ\,
-e^{-S[Z,B,\Lambda]}.
+\Gamma[B,\Lambda,\ldots].
 \]
 
-The decisive quantities are:
+A viable unbroken colour phase must satisfy:
 
-1. the effective potential/gap equation for the gauge-fixed frame order
-   parameter and multiplier;
-2. the transverse vacuum polarization
+1. a positive transverse coefficient
    \[
-   \Pi_{\mu\nu}^{ab}(p);
-   \]
-3. whether
-   \[
-   \Pi_T^{ab}(p)
-   =
+   \Gamma^{(2)\,ab}_{\mu\nu}
+   \supset
    \delta^{ab}
-   \left[
-   Z_B p^2+O(p^4)
-   \right]
+   Z_B
+   (p^2\eta_{\mu\nu}-p_\mu p_\nu),
+   \qquad
+   Z_B>0;
    \]
-   with \(Z_B>0\);
-4. whether the zero-momentum mass term vanishes in an unbroken/critical phase;
-5. whether the induced 3- and 4-point vertices obey the same HLS
-   Slavnov--Taylor identities.
 
-## 9. No large-N shortcut is currently available
+2. no zero-momentum Proca/HLS mass term in the unbroken phase;
 
-Known analytic proofs of dynamical HLS gauge fields often use large-\(N\)
-Grassmannian models.
+3. common non-Abelian coupling in the induced 3- and 4-point vertices;
 
-UBT currently has the fixed finite dimensions
+4. BRST/Slavnov--Taylor identities;
+
+5. compatibility with the one-Theta measure and the GR/tetrad sector.
+
+## 12. No large-N shortcut
+
+Analytic demonstrations of dynamical HLS gauge fields often exploit large
+flavour number.
+
+UBT has the fixed finite Stiefel size
 \[
 4\times3.
 \]
 
-Therefore a direct transplantation of large-\(N\) coefficients is not a proof.
+Large-\(N\) results therefore cannot be copied as a proof.
 
-The useful lesson is only structural:
-\[
-\boxed{
-\text{an auxiliary exact HLS connection can become dynamical quantum
-mechanically without being fundamental.}
-}
-\]
-
-For UBT this must be demonstrated by:
-- an exact finite-dimensional calculation if possible;
+They identify a concrete mechanism to test by:
 - functional RG;
-- lattice/discretized sigma-model analysis;
-- or a controlled analytic continuation/large-family extension followed by a
-  justified return to \(4\times3\).
+- a finite-dimensional Schwinger--Dyson/gap analysis;
+- lattice/discretized sigma-model simulation;
+- or a controlled large-family embedding followed by a justified return to
+  \(4\times3\).
 
-## 10. Relation to the one-Theta axiom
+## 13. Relation to Axiom A
 
-The variables \((Z,B,\Lambda)\) are acceptable only as collective/redundant
+\(Z\), \(B\), and \(\Lambda\) are acceptable only as redundant/collective
 variables.
 
-The physical configuration count must remain that of:
-- seven normalized timelike angular variables represented by \(Z/SU(3)\);
-- plus the one radial Theta variable.
+Before quantum approximation:
+- quotienting \(Z\) by local \(SU(3)\) leaves seven real angular variables;
+- the radial Theta variable supplies the eighth;
+- eliminating \(B\) exactly returns the same coset action.
 
-Integrating out \(B,\Lambda\) before quantum approximation must return the same
-single-Theta/coset theory.
+Hence the rewrite itself does not enlarge the UV physical field content.
 
-If an approximation changes that exact equivalence without an independently
-derived phase transition, it is a theory extension rather than a derivation.
+A new dynamical gauge sector is acceptable only as a genuine quantum phase of
+this exact collective formulation.
 
-## 11. Primary P2 calculation
+## 14. Primary P2 target
 
-The strongest remaining P2 calculation is now:
-
+The strongest remaining calculation is now
 \[
 \boxed{
-\text{Does the finite }SU(1,3)/SU(3)\text{ Stiefel HLS model possess a quantum
-phase with a positive induced }SU(3)\text{ kinetic term and no HLS mass term?}
+\text{Does the finite noncompact Stiefel HLS model possess an unbroken/critical
+phase with }Z_B>0\text{ and }m_B^2=0?
 }
 \]
 
-A positive answer would provide the missing route from exact local frame
-redundancy to a dynamical gauge 1PI action while preserving the one-field UV
-count.
+A positive result would be a concrete route from the exact local frame
+redundancy to a Yang--Mills-like 1PI action.
 
-A negative answer would substantially strengthen the conclusion that the
-minimal UBT field content cannot generate QCD colour.
+A negative result would sharply disfavour QCD emergence from the present
+one-biquaternion field content.
 
 ## References
 
