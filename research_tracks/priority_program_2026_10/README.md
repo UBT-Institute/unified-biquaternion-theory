@@ -150,90 +150,79 @@ derive a genuine massive/interacting/backreacted bounded
 `V_eff(tau_mod,tau_mod_bar)` from the finalized UBT Hessian/action.
 
 
-### P2 route refinement — Stiefel HLS critical phase
+### P2 route refinement — exact Stiefel/HLS route
 
-The strongest remaining one-field colour route is now an exact constrained
-(4	imes3) Stiefel / hidden-local-(SU(3)) formulation.
+The strongest remaining one-field colour route is an exact constrained
+\(4\times3\) Stiefel / hidden-local-\(SU(3)\) formulation.
 
-Key points:
-- (Z^dagger GZ=-I_3) modulo local (SU(3)) has exactly seven normalized
-  physical real modes; the radial Theta mode restores eight.
+Established:
+- \(Z^\dagger GZ=-I_3\) modulo local \(SU(3)\) has exactly seven
+  normalized physical real modes; the radial Theta mode restores eight.
 - The derived traceless frame current contains the adjoint bilinear
-  (B,eta,partialeta) vertex needed for HLS vacuum polarization.
-- A weak fixed-frame phase generates (Z_B>0) but remains vector-meson-like
-  and massive.
-- The HLS mass operator is gauge invariant and relevant, so massless colour
-  requires a genuine critical/unbroken phase rather than gauge redundancy
-  alone.
-- The positive timelike kinetic gives angular coefficients proportional to
-  (ho^2).  With (c_V=a_Hho^2), the enhanced-potential endpoint
-  (mu	o0^-) provides a candidate scaling in which
-  (m_B^2	o0) while (Z_B) and the induced gauge coupling can remain finite.
-- This candidate also requires (lambda_2	o0); otherwise the determinant
-  structure breaks candidate colour (SU(3)	o SO(3)).
+  \(B\,\beta\,\partial\beta\) vertex required for HLS vacuum
+  polarization.
+- A weak fixed-frame phase generates \(Z_B>0\) but remains massive and
+  vector-meson-like.
+- The HLS locking operator is gauge invariant and relevant; local gauge
+  redundancy alone does not force a massless colour phase.
+- The naive compact-Grassmannian single-trace kinetic has the wrong
+  noncompact target signature; UBT requires separate positive triplet and
+  singlet metric coefficients.
 
-The next actual calculation is the finite noncompact (4	imes3) HLS phase
-diagram, preferably by background-field FRG or an equivalent constrained
-gap/Schwinger--Dyson analysis.
+### P2 finite-radius refinement — current preferred target
 
-The preferred QCD-like endpoint is
-[
-m_{B,m ren}^2=0,qquad
-Z_B>0,qquad
-M_eta^2>0,
-]
-so that below the charged-frame gap the colour EFT can approach pure
-(SU(3)) Yang--Mills.
+The raw-field endpoint \(\rho\to0\) is a singular boundary of the exact
+Stiefel rewrite:
 
+\[
+d\mu_\Theta\propto
+\rho^7\,d\rho\,d\mu_{SU(1,3)/SU(3)}.
+\]
 
-### P2 finite-radius refinement — 2026-10-10
+A homogeneous frame \(W=\rho Z\) cannot remain rank three at the origin
+because a Hermitian form of signature \((1,3)\) has complex Witt index one.
 
-The preferred HLS target has changed from the singular raw-field endpoint
-(ho	o0) to a **finite-radius quantum critical/decoupling surface**.
+The preferred endpoint is therefore finite-radius:
 
-New exact boundaries:
-- the timelike field space is a cone with measure
-  (ho^7dho,dmu_7); the Stiefel rewrite loses invertibility at
-  (ho=0);
-- a homogeneous frame (W=ho Z) cannot stay rank three at the origin,
-  because a Hermitian form of signature ((1,3)) has complex Witt index one;
-- after (F_B^2) exists, (c_V=0) restores independent local
-  (SU(3)_Z	imes SU(3)_B), while (c_V
-e0) locks them to the diagonal;
-- weak current polarization generates (Z_B) but cannot perturbatively cancel
-  a finite HLS mass intercept;
-- useful pure-Yang--Mills scale separation requires order-one (Z_B); the
-  weak one-triplet induction is far too small unless its nominal coupling/log
-  is already outside a controlled weak regime;
-- (SU(1,3)/SU(3)cong S^1	imesmathbb C^3), so the exact one-Theta
-  composite frame bundle is topologically trivial and has no independent
-  instanton (c_2) sectors;
-- full Yang--Mills topology therefore requires a genuinely autonomous,
-  non-invertible collective gauge-field emergence step;
-- the determinant anisotropy is a symmetric ({f6}) spurion with physical
-  stabilizer (SO(3)); in an autonomous gauge EFT its canonical Higgs pattern
-  has rank five (five symmetric Gell--Mann directions broken, three
-  (SO(3)) directions unbroken).
+\[
+\boxed{
+\rho_0>0,\qquad
+Z_B>0,\qquad
+c_V\to0,\qquad
+\lambda_2\to0,\qquad
+M_\beta^2>0.
+}
+\]
 
-Preferred finite-radius endpoint:
-[
-ho_0>0,qquad
-Z_B>0,qquad
-c_V	o0,qquad
-lambda_2	o0,qquad
-M_eta^2>0.
-]
+Key structural facts:
+- once an autonomous \(F_B^2\) exists, \(c_V=0\) restores independent
+  local \(SU(3)_Z\times SU(3)_B\); the locking term reduces the product to
+  the diagonal;
+- weak conserved-current polarization generates the \(p^2\) gauge kernel
+  but does not cancel a finite \(p^0\) HLS mass intercept;
+- useful pure-Yang--Mills scale separation requires order-one \(Z_B\), far
+  beyond the controlled one-triplet weak induction;
+- \(SU(1,3)/SU(3)\cong S^1\times\mathbb C^3\), so the exact composite
+  frame bundle is topologically trivial; full Yang--Mills instanton sectors
+  require an autonomous/non-invertible collective gauge-field emergence;
+- the determinant anisotropy is a symmetric \({\bf6}\) spurion with
+  physical stabilizer \(SO(3)\); an unbroken QCD-like phase therefore
+  requires the anisotropy to vanish/decouple.
 
-At (c_V=0), the autonomous (B) sector can retain ordinary Yang--Mills gauge
-protection.  The remaining major radiative-stability problem is
-(lambda_2): the isolated colour sigma sector protects
-(lambda_2=0) by global (SU(1,3)), but the canonical sharp/GR core breaks
-that symmetry and can act as a spurion source.
+### Decisive next P2 calculation
 
-The next decisive calculation is therefore the mixed GR/colour contribution
-to
-[
-left.eta_{lambda_2}ight|_{lambda_2=0},
-]
-or an equivalent demonstration that the sharp-sector spurions decouple at the
-colour matching scale.
+The isolated colour sigma sector protects \(\lambda_2=0\) by the enlarged
+\(SU(1,3)\) symmetry, but the canonical sharp/tetrad GR core breaks that
+symmetry. The next high-value calculation is therefore
+
+\[
+\boxed{
+\left.\beta_{\lambda_2}\right|_{\lambda_2=0}
+}
+\]
+
+from the canonical GR/sharp spurions, or an equivalent proof that these
+spurions decouple at the colour matching scale.
+
+A positive colour result still requires a controlled finite \(4\times3\)
+FRG/gap/lattice analysis with Yang--Mills/BRST/Slavnov--Taylor consistency.
