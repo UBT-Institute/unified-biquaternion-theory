@@ -10,6 +10,32 @@ notice: The author has read the substance and accepts editorial responsibility.
 UBT-AI-PROVENANCE-END
 -->
 
+## 2026-10-10 update — focused programme closures and boundaries
+
+The October programme adds theorem-level results and no-go boundaries without
+promoting the open microscopic dynamics to a completed theory.
+
+| # | Claim | Level | Source |
+|---|---|---|---|
+| OCT-T1 | Physical \(\tau_{\rm UBT}=t+i\psi\) is a dimensionful UBT coordinate and is not canonically the dimensionless Jacobi modular parameter; the free compact-circle heat trace uses \(\tau_J=i s/(\pi R_\psi^2)\) | [L1/STD bookkeeping] | canonical/bridges/theta_parameter_separation.md; verification/theta_parameter_separation_check.py |
+| OCT-T2 | For \(\vartheta_3(\tau)=\sum_n e^{\pi i n^2\tau}\), the scalar theta subgroup is \(\Gamma_\theta=\langle S,T^2\rangle\) of index 3; generic finite weighted reductions are not modular by default | [STD/L1] | canonical/bridges/theta_parameter_separation.md; research_tracks/theta_spectral/ |
+| OCT-S1 | A constrained complex \(4\times3\) Stiefel frame \(Z^\dagger GZ=-I_3\) modulo local right \(SU(3)\) has exactly seven real normalized modes; with the radial mode it is locally equivalent to the eight-real-component one-biquaternion timelike sector | [L1] | research_tracks/T2_GAUGE/su3_stiefel_hls_rewrite.md; verifier |
+| OCT-S2 | The minimal \(N\times3\) Stiefel construction matching seven normalized real modes uniquely has \(N=4\); quotienting by \(U(3)\) would remove one additional phase mode | [L1] | research_tracks/T2_GAUGE/su3_vs_u3_stiefel_count.md; verifier |
+| OCT-S3 | The Stiefel chart is singular at \(\rho=0\): the cone measure scales as \(\rho^7\), and a homogeneous rank-three frame cannot survive the origin because the Hermitian signature \((1,3)\) has complex Witt index one | [L1 NO-GO for smooth rank-3 continuation] | research_tracks/T2_GAUGE/su3_stiefel_critical_origin_obstruction.md; verifier |
+| OCT-S4 | After an autonomous \(F_B^2\) term exists, \(c_V=0\) restores independent local \(SU(3)_Z\times SU(3)_B\); the locking operator reduces this product to the diagonal | [L1 effective-sector theorem] | research_tracks/T2_GAUGE/su3_hls_locking_symmetry_enhancement.md; verifier |
+| OCT-S5 | Weak fixed-frame triplet loops generate a positive transverse \(Z_B\), but do not remove the finite HLS mass intercept; weak induction is also too small for a large pure-Yang--Mills hierarchy in its controlled regime | [L1 conditional / perturbative benchmark] | research_tracks/T2_GAUGE/su3_hls_fixed_frame_one_loop.md; research_tracks/T2_GAUGE/su3_hls_ym_threshold_matching.md |
+| OCT-S6 | \(SU(1,3)/SU(3)\cong S^1\times\mathbb C^3\); the exact one-\(\Theta\) composite frame bundle is topologically trivial and supplies no independent \(c_2\)/instanton bundle sectors | [L1 topology] | research_tracks/T2_GAUGE/su3_coset_topology_instanton_boundary.md; verifier |
+| OCT-C1 | Compact internal \(S^1_\psi\) gives \(k^2+n^2/R_\psi^2\) and KK masses but does not impose a spatial cutoff \(k_{\rm spatial}\ge1/R_\psi\) | [L1 NO-GO] | research_tracks/research_front/cmb_covariance/internal_circle_no_spatial_ir_cutoff.md; verifier |
+| OCT-C2 | Full-covariance CMB likelihood/KL infrastructure is implemented, but a UBT H3 test remains blocked until \(P_{\rm UBT}\) is derived from the constrained perturbation action and state prescription | [code verified / OPEN physics] | research_tracks/research_front/cmb_covariance/FULL_COVARIANCE_PROTOCOL.md; research_tracks/research_front/cmb_covariance/PRIMORDIAL_COVARIANCE_DERIVATION_GAP.md |
+| OCT-M1 | For a fixed-area flat two-torus, the zeta-regularized massless scalar determinant is proportional to \(\Im\tau\,|\eta(\tau)|^4\); square is a saddle in full moduli and the isolated positive bosonic one-loop log determinant has no finite global modulus minimum | [STD/L1 audit / NO-GO for isolated massless selection] | research_tracks/theta_torus_potential/zeta_regularized_shape_audit.md; verifier |
+
+**Still open after these closures:** finalization of one microscopic UBT action
+and quantum measure; unconditional microscopic Einstein dynamics; the finite
+noncompact Stiefel/HLS phase with full Yang--Mills 1PI/BRST structure and
+autonomous topology; the GR/sharp source for \(\lambda_2\); an action-derived
+primordial covariance \(P_{\rm UBT}\); and a bounded interacting torus-modulus
+potential.
+
 ## 2026-07-27 update — canonical generalized-Dirac lift
 
 | # | Claim | Level | Source |
