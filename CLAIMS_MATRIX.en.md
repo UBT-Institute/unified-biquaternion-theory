@@ -28,9 +28,10 @@ Definitions are governed by [`docs/UBT_SCOPE_AND_CLAIM_LEVELS.md`](docs/UBT_SCOP
 
 ## Canonical / Research Claims
 
+> October 2026 synchronization: the rows below reflect the current public snapshot; CLAIMS.yaml remains the authoritative granular ledger.
+
 | Claim | Status | Primary source | Notes |
 |---|---|---|---|
-| October 2026 Stiefel / theta / CMB / torus sync | DERIVED_WITH_ASSUMPTIONS | STATUS_OF_UBT.md; CLAIMS.yaml; research_tracks/priority_program_2026_10/README.md | Synchronization row: the detailed claims below are the current public-facing snapshot; the authoritative granular ledger remains CLAIMS.yaml. |
 | Timelike \(4\times3\) Stiefel colour-frame rewrite modulo local \(SU(3)\) | PROVED | research_tracks/T2_GAUGE/su3_stiefel_hls_rewrite.md; verification/su3_stiefel_hls_rewrite_check.py | Kinematic theorem on the stated timelike branch: 24 real frame components - 9 Hermitian constraints - 8 local \(SU(3)\) redundancies = 7 normalized physical modes. This does **not** derive full QCD. |
 | Full dynamical QCD from the Stiefel/HLS route | OPEN_GAP | research_tracks/T2_GAUGE/su3_stiefel_hls_frg_program.md | Preferred target is a finite-radius quantum phase with autonomous \(SU(3)\) gauge dynamics, \(Z_B>0\), vanishing locking/mass obstruction, controlled determinant anisotropy, correct BRST/Slavnov--Taylor structure, and full Yang--Mills topology. |
 | Theta-parameter separation and current-object classification | PROVED | canonical/bridges/theta_parameter_separation.md; research_tracks/theta_complex_time_classification/holomorphy_lorentz_no_go.md | Physical dimensionful \(\tau_{\rm UBT}=t+i\psi\) is not the Jacobi modular parameter. The free heat-kernel theta sector is classified; full interacting modular covariance remains open. |
