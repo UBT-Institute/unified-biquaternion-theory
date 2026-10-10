@@ -1,4 +1,16 @@
 <!-- BILINGUAL-UNIT: current-status -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # UBT Current Status — 10 October 2026
 
 - **Action:** the single fundamental action is not finalized.
@@ -9,3 +21,5 @@
 - **P4:** isolated massless one-loop torus stabilization is a no-go; an interacting bounded modulus potential remains open.
 
 Granular authority: CLAIMS.yaml and STATUS_OF_UBT.md.
+
+Comparative positioning: [UBT scientific positioning — October 2026](UBT_POSITIONING_2026_10.en.md).

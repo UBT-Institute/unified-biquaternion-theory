@@ -1,4 +1,16 @@
 <!-- BILINGUAL-UNIT: current-status -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Aktuální stav UBT — 10. října 2026
 
 - **Akce:** jediná fundamentální akce není finalizována.
@@ -9,3 +21,5 @@
 - **P4:** izolovaná massless one-loop stabilizace toru je no-go; interagující omezený potenciál modulu zůstává otevřený.
 
 Jemnozrnná autorita: CLAIMS.yaml a STATUS_OF_UBT.md.
+
+Srovnávací pozicování: [Vědecké pozicování UBT — říjen 2026](UBT_POSITIONING_2026_10.cs.md).
