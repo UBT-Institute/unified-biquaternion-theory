@@ -487,38 +487,38 @@ Stiefel model has a distinct critical/unbroken phase with
 
 ### Stiefel critical-origin obstruction — 2026-10-10
 
-The attractive radial scaling (ho	o0) is not a smooth continuation of the
+The attractive radial scaling (\rho\to0) is not a smooth continuation of the
 exact one-Theta Stiefel rewrite.  The positive timelike field metric has cone
 form
 [
-ds^2=dho^2+ho^2ds_7^2,
+ds^2=d\rho^2+\rho^2ds_7^2,
 ]
 so the field-space measure carries
 [
-ho^7,dho,dmu_7.
+\rho^7,d\rho,dmu_7.
 ]
 The angular/Stiefel change of variables is therefore singular at the raw-field
 origin.
 
-A homogeneous frame (W=ho Z) does not remove the problem:
+A homogeneous frame (W=\rho Z) does not remove the problem:
 [
-W^dagger GW=-ho^2I_3.
+W^dagger GW=-\rho^2I_3.
 ]
-At (ho=0) the three columns would have to span a totally isotropic complex
+At (\rho=0) the three columns would have to span a totally isotropic complex
 subspace of a Hermitian space of signature ((1,3)), whose Witt index is only
 one.  Hence the rank-three colour frame necessarily collapses.
 
-The (ho	o0) critical HLS gauge-emergence scaling remains a useful limiting
+The (\rho\to0) critical HLS gauge-emergence scaling remains a useful limiting
 diagnostic, but the preferred P2 target is now a **finite-radius
 quantum-disordered HLS phase** with a well-defined timelike frame,
-(m_{B,m ren}^2=0), (Z_B>0), and gapped charged frame excitations.
+(m_{B,\rm ren}^2=0), (Z_B>0), and gapped charged frame excitations.
 
 ### Finite-radius HLS refinement and topology gate — 2026-10-10
 
 After a dynamical (F_B^2) term exists, the zero-locking surface
 (c_V=0) has an enhanced local product redundancy
 [
-SU(3)_Z	imes SU(3)_B.
+SU(3)_Z\times SU(3)_B.
 ]
 The Stiefel locking operator (-(B-C_0)^2) reduces this product to the
 diagonal.  Thus (c_V=0) is technically natural once reached, although the
@@ -526,23 +526,23 @@ relevant locking operator is not generically driven there and additional
 cross-sector locking operators must also be controlled.
 
 Threshold matching provides a quantitative strong-coupling warning.  If the
-charged frame triplet has gap (M_eta) and the low-energy colour sector is
+charged frame triplet has gap (M_\beta) and the low-energy colour sector is
 pure (SU(3)),
 [
-Lambda_{m YM}
+Lambda_{\rm YM}
 =
-M_eta
-exp[-8pi^2 Z_B(M_eta)/11].
+M_\beta
+exp[-8pi^2 Z_B(M_\beta)/11].
 ]
-A hierarchy (M_eta/Lambda_{m YM}=10^3) needs
+A hierarchy (M_\beta/Lambda_{\rm YM}=10^3) needs
 (Z_Bsimeq0.96).  The weak frame-loop formula then requires
-(a_H^2log(Lambda_{m UV}^2/M_eta^2)sim9.1	imes10^2), well outside an
+(a_H^2log(Lambda_{\rm UV}^2/M_\beta^2)sim9.1\times10^2), well outside an
 ordinary weak-current regime.  The weak loop establishes the positive kinetic
 sign, not a realistic QCD hierarchy.
 
 The normalized timelike coset has topology
 [
-SU(1,3)/SU(3)cong S^1	imesmathbb C^3.
+SU(1,3)/SU(3)cong S^1\timesmathbb C^3.
 ]
 Its homogeneous (SU(3)) frame bundle is topologically trivial.  Hence the
 purely composite one-Theta frame connection can have local curvature but no
