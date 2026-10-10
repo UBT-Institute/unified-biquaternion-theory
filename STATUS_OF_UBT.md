@@ -476,7 +476,7 @@ At (ho=0) the three columns would have to span a totally isotropic complex
 subspace of a Hermitian space of signature ((1,3)), whose Witt index is only
 one.  Hence the rank-three colour frame necessarily collapses.
 
-The (ho	o0) vector-manifestation scaling remains a useful limiting
+The (ho	o0) critical HLS gauge-emergence scaling remains a useful limiting
 diagnostic, but the preferred P2 target is now a **finite-radius
 quantum-disordered HLS phase** with a well-defined timelike frame,
 (m_{B,m ren}^2=0), (Z_B>0), and gapped charged frame excitations.
