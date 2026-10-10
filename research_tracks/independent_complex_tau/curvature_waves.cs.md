@@ -179,7 +179,7 @@ v_\lambda''+\left(k^2-\frac{a''}{a}\right)v_\lambda=0.
 \[
 a=-\frac\ell\eta,\quad \eta<0,\quad \frac{a''}{a}=\frac2{\eta^2},\qquad
 h_{\lambda,k}=C_\lambda(\eta-i/k)e^{-ik\eta}
-D_\lambda(\eta+i/k)e^{ik\eta},\quad k>0.
++D_\lambda(\eta+i/k)e^{ik\eta},\quad k>0.
 \]
 
 Konstanty jsou počáteční data. Pro vlnové délky mnohem kratší než škála zakřivení se oscilující amplituda mění jako převrácená hodnota a; mimo tento režim se přesné řešení v pozdním čase blíží konečné konstantě. Zdánlivě záporný člen s druhou derivací a v kanonické proměnné není zápornou kinetickou normou. Zeslabování pochází z rozpínání, nikoli z disipace nebo odstraňování vyšších fraktálních úrovní. Nezískáváme Planckův cutoff, pravidlo kvantování energie, hodnotu alfa ani nezávisle vybranou délku. Na tuto tenzorovou akci lze dodatečně uplatnit kanonické kvantování, ale odvození jeho kvantových postulátů z UBT je samostatný úkol.

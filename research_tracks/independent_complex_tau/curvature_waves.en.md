@@ -179,7 +179,7 @@ v_\lambda''+\left(k^2-\frac{a''}{a}\right)v_\lambda=0.
 \[
 a=-\frac\ell\eta,\quad \eta<0,\quad \frac{a''}{a}=\frac2{\eta^2},\qquad
 h_{\lambda,k}=C_\lambda(\eta-i/k)e^{-ik\eta}
-D_\lambda(\eta+i/k)e^{ik\eta},\quad k>0.
++D_\lambda(\eta+i/k)e^{ik\eta},\quad k>0.
 \]
 
 The constants are initial data. At wavelengths much shorter than the curvature scale, the oscillatory amplitude scales as the inverse of a; outside that regime the exact solution approaches a finite constant at late time. The apparent negative pump term in the canonical variable is not a negative kinetic norm. The attenuation comes from expansion, not dissipation or removal of high fractal levels. No Planck cutoff, energy quantization rule, alpha value or independently selected length is obtained. Canonical quantization could be imposed on this tensor action, but deriving its quantum postulates from UBT is a separate task.
