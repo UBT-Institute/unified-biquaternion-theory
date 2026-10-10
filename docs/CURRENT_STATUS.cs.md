@@ -1,5 +1,4 @@
 <!-- BILINGUAL-UNIT: current-status -->
-
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -11,6 +10,7 @@ policy: ../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 # Aktuální stav UBT — 10. října 2026
 
 - **Akce:** jediná fundamentální akce není finalizována.
