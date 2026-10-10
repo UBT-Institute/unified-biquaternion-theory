@@ -221,3 +221,66 @@ This is incompatible with identifying the generic \(\lambda_2>0\) vacuum with
 unbroken QCD colour.  A QCD interpretation therefore requires the
 determinant-induced symmetric tensor to vanish, decouple, or become
 dynamically irrelevant in the colour infrared sector.
+
+
+## 7. Gauge-redundancy clarification
+
+The statement
+[
+SU(3)	o SO(3)
+]
+in this file concerns the **physical tangent isotropy/dynamical degeneracy** of
+the candidate colour triplet around the determinant-sensitive vacuum.
+
+It does not mean that the exact Stiefel frame redundancy
+[
+Z	o Zh(x),
+qquad h(x)in SU(3),
+]
+ceases to exist.
+
+That local (SU(3)) is a change of oriented orthonormal basis in the same
+rank-three bundle and leaves the underlying (Theta) unchanged.  Any
+potential written only in terms of (Theta) is automatically independent of
+this redundant frame choice.
+
+In the hidden-local formulation the determinant anisotropy is therefore
+represented by a covariant symmetric-tensor spurion/background rather than an
+explicit violation of gauge redundancy.
+
+For a symmetric tensor
+[
+Sigma	o h^{-1}Sigma h^{-T}
+]
+(or the equivalent convention), a vacuum representative
+[
+Sigmapropto I_3
+]
+has stabilizer
+[
+SO(3)subset SU(3).
+]
+
+If the hidden-local connection becomes dynamical, such a nonzero physical
+background can Higgs five gauge directions while the underlying local
+redundancy remains exact.
+
+Thus the precise statement is
+[
+oxed{
+lambda_2
+e0
+Rightarrow
+	ext{an }SO(3)	ext{-isotropic/Higgsed physical colour phase,}
+}
+]
+not
+[
+oxed{
+	ext{explicit destruction of the local }SU(3)	ext{ frame redundancy.}
+}
+]
+
+For an unbroken QCD-like phase the anisotropy/spurion still has to vanish or
+decouple, so the earlier requirement (lambda_2	o0) remains physically
+relevant.
