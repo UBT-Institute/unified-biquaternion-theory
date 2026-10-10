@@ -20,6 +20,7 @@ TRACK = Path(__file__).resolve().parents[1] / "research_tracks" / "independent_c
         ("verify_c5_dynamics.py", "c5_dynamics_results.json", 32),
         ("verify_auxiliary_action.py", "auxiliary_action_results.json", 22),
         ("verify_wave_dynamics.py", "wave_dynamics_results.json", 21),
+        ("verify_curvature_waves.py", "curvature_waves_results.json", 33),
     ],
 )
 def test_exact_research_derivations(tmp_path, script, output, expected_count):
@@ -39,7 +40,7 @@ def test_exact_research_derivations(tmp_path, script, output, expected_count):
     assert all(check["passed"] is True for check in result["checks"])
     stored = json.loads((TRACK / output).read_text(encoding="utf-8"))
     assert result["checks"] == stored["checks"]
-    if script in {"verify_auxiliary_action.py", "verify_wave_dynamics.py"}:
+    if script in {"verify_auxiliary_action.py", "verify_wave_dynamics.py", "verify_curvature_waves.py"}:
         assert {check["channel"] for check in result["checks"]} == {
             "SymPy", "Python Fraction"
         }
