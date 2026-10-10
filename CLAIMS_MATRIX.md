@@ -20,4 +20,5 @@ UBT-AI-PROVENANCE-END
 - Aktuální stav CS: [docs/CURRENT_STATUS.cs.md](docs/CURRENT_STATUS.cs.md)
 
 - Synchronized: 10 October 2026
-- Scientific positioning: [docs/UBT_POSITIONING_2026_10.md](docs/UBT_POSITIONING_2026_10.md)
+- Scientific positioning EN: [docs/UBT_POSITIONING_2026_10.en.md](docs/UBT_POSITIONING_2026_10.en.md)
+- Vědecké pozicování CS: [docs/UBT_POSITIONING_2026_10.cs.md](docs/UBT_POSITIONING_2026_10.cs.md)
