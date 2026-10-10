@@ -1,17 +1,48 @@
 ## Active focused programme — 2026-10-10
 
-1. Finalize the theta/complex-time analytic classification without conflating
-   physical complex time with the Jacobi modular parameter.
-2. Close or falsify the microscopic SU(3) dynamics bridge.  The direct raw
-   carrier and direct finite-jet colour-triplet interpretations are now
-   excluded; the remaining one-field target is an exact collective/composite
-   gauge construction.
-3. Replace diagonal-only CMB searches by preregistered full-covariance
-   TT/TE/EE tests against ordinary topology and generic oscillatory null models.
-4. Study theta-energy torus selection only after a genuine compact modulus is
-   derived from the UBT action/Hessian/partition function.
+The October programme has moved from broad exploration to explicit stage gates.
 
-Status promotions must be mirrored in CLAIMS.yaml and STATUS_OF_UBT.md.
+1. **Finalize the single action family.** This remains the cross-cutting
+   foundational priority: configuration space, measure, pairing, independent
+   versus composite connections, Hessian, physical modes and sector-reduction
+   maps must be fixed by one variational principle.
+
+2. **P1 theta / complex time — closed for the currently defined objects.**
+   Keep \(\tau_{\rm UBT}\), the Jacobi modular parameter and elliptic argument
+   distinct. Full interacting modular covariance remains open.
+
+3. **P2 colour \(SU(3)\) — primary active physics target.**
+   The direct raw-carrier and direct finite-jet routes are closed as no-go
+   mechanisms. The strongest one-field route is the exact constrained
+   \(4\times3\) Stiefel / hidden-local-\(SU(3)\) rewrite. The preferred target
+   is a finite-radius quantum phase with
+   \[
+   \rho_0>0,\qquad Z_B>0,\qquad c_V\to0,\qquad
+   \lambda_2\to0,\qquad M_\beta^2>0,
+   \]
+   followed by matching to an autonomous Yang--Mills sector. The next
+   decisive calculation is the mixed sharp/GR source for
+   \(\beta_{\lambda_2}\) and the finite noncompact HLS phase flow.
+
+4. **P3 CMB — statistics ready, theory template blocked.**
+   Do not run post-hoc prime/theta searches as H3 evidence. Derive the
+   constrained scalar perturbation action, the map
+   \(\delta\Theta\to\mathcal R\), the state prescription and finally
+   \(P_{\rm UBT}\); then compare H3 out of sample against H2.
+
+5. **P4 torus modulus — massless one-loop route closed as no-go.**
+   Continue only with an action-derived genuine compact modulus and a bounded
+   massive/interacting/backreacted effective potential.
+
+6. **Prediction discipline.** No quantitative claim becomes a prediction until
+   its inputs are fixed before comparison with data and derived from the same
+   finalized action.
+
+Status promotions must be mirrored in CLAIMS.yaml, STATUS_OF_UBT.md,
+WHAT_IS_PROVED.md, and the public claim matrix.
+
+The older 21-day-window material retained below is historical planning context,
+not the current priority ordering.
 
 <!--
 UBT-AI-PROVENANCE-BEGIN
