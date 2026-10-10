@@ -9,3 +9,5 @@
 - **P4:** izolovaná massless one-loop stabilizace toru je no-go; interagující omezený potenciál modulu zůstává otevřený.
 
 Jemnozrnná autorita: CLAIMS.yaml a STATUS_OF_UBT.md.
+
+Srovnávací pozicování: [Vědecké pozicování UBT — říjen 2026](UBT_POSITIONING_2026_10.md).
