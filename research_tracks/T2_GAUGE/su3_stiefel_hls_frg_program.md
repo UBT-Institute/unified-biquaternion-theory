@@ -193,7 +193,44 @@ while testing whether
 Z_{B,k}\to Z_B^*>0.
 \]
 
-This is the finite-UBT analogue of a vector-manifestation search.
+This is the finite-UBT analogue of a critical gauge-emergence search.
+
+### Locking-operator tower
+
+The relevant operator
+[
+mathcal O_V=-operatorname{tr}(B-C_0)^2
+]
+is not the only interaction compatible with the diagonal local (SU(3)).
+
+Once the locked phase is quantized, marginal/higher-derivative cross-sector
+operators can also be generated, schematically
+[
+operatorname{tr}F_BF_C,qquad
+operatorname{tr}(B-C_0)^4,qquad
+operatorname{tr}[D(B-C_0)]^2,ldots .
+]
+
+A strict restoration of independent
+[
+SU(3)_Z	imes SU(3)_B
+]
+therefore requires the complete set of product-symmetry-breaking locking
+operators to approach the corresponding critical surface, not merely the
+coefficient (c_V).
+
+For the low-energy **masslessness** question, (c_V) is nevertheless the
+leading relevant obstruction.  Marginal derivative mixing can renormalize the
+gauge kinetic matching and other interactions without by itself producing a
+zero-momentum Proca intercept after the gapped frame sector is consistently
+integrated out.
+
+The FRG truncation must therefore at least add a representative marginal
+locking coefficient, e.g. a background-field projection onto
+[
+operatorname{tr}F_BF_C,
+]
+to test whether the product-symmetry surface is really approached.
 
 ## 7. Phase classification
 
