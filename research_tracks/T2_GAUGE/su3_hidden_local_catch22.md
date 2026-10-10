@@ -181,3 +181,65 @@ mechanism that can induce an independent massless }SU(3)\text{ connection.}
 
 Verification:
 \`verification/su3_hidden_local_catch22_check.py\`.
+
+
+## 7. 2026-10-10 quantum-phase correction
+
+The classical fixed-frame conclusion above is retained, but its earlier use as
+an absolute no-go is superseded.
+
+The exact Stiefel rewrite
+[
+Z^dagger GZ=-I_3,qquad Zsim Zh(x),quad h(x)in SU(3)
+]
+admits a standard hidden-local-symmetry formulation with an auxiliary
+(SU(3)) connection (B_mu).
+
+Known constrained nonlinear-sigma/Grassmannian models show that such an
+auxiliary hidden-local connection can acquire a kinetic term through quantum
+effects, and that critical/unbroken phases with a massless dynamical HLS gauge
+boson can occur.
+
+Therefore the correct statement is:
+
+[
+oxed{
+	ext{fixed-frame semiclassical branch}
+Rightarrow
+	ext{massive HLS vector},
+}
+]
+
+but not
+
+[
+oxed{
+	ext{all quantum phases}
+Rightarrow
+	ext{massive HLS vector}.
+}
+]
+
+For UBT the open problem is now the finite noncompact (4	imes3) Stiefel
+phase diagram.
+
+A viable QCD-like phase must have a renormalized inverse gauge kernel
+[
+Gamma_T(p)=m_{B,m ren}^2+Z_Bp^2+cdots
+]
+with
+[
+m_{B,m ren}^2=0,qquad Z_B>0,
+]
+and the induced 3/4-point vertices must obey the same local (SU(3))
+Slavnov--Taylor identities.
+
+See:
+- `su3_stiefel_hls_rewrite.md`
+- `su3_stiefel_current_vertex.md`
+
+References:
+Bando--Kugo--Yamawaki, Phys. Rept. 164 (1988) 217;
+Harada--Yamawaki, Phys. Rept. 381 (2003) 1;
+Yamawaki, arXiv:1803.07271;
+Yamawaki, Symmetry 15 (2023) 2209.
