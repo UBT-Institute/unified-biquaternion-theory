@@ -21,54 +21,6 @@ For claim-level definitions, see [`docs/UBT_SCOPE_AND_CLAIM_LEVELS.md`](docs/UBT
 
 ---
 
-## October 2026 active derivation map
-
-The canonical GR chain below remains authoritative. The following active
-research branches are the current high-level continuation points:
-
-### Theta / complex time
-- Parameter separation and modular status:
-  `canonical/bridges/theta_parameter_separation.md`
-- Lorentz/holomorphy obstruction:
-  `research_tracks/theta_complex_time_classification/holomorphy_lorentz_no_go.md`
-- Current status: classification closed for currently defined objects; full
-  interacting modular covariance remains open.
-
-### SU(3) / colour dynamics
-- Minimal bimodule intersection:
-  `research_tracks/T2_GAUGE/su3_bimodule_u13_intersection.md`
-- Raw-carrier Lie-closure boundary:
-  `research_tracks/T2_GAUGE/su3_raw_carrier_lie_closure.md`
-- Exact 4x3 Stiefel/HLS rewrite:
-  `research_tracks/T2_GAUGE/su3_stiefel_hls_rewrite.md`
-- Finite HLS phase programme:
-  `research_tracks/T2_GAUGE/su3_stiefel_hls_frg_program.md`
-- Finite-radius/product-symmetry and topology boundaries:
-  `research_tracks/T2_GAUGE/su3_hls_locking_symmetry_enhancement.md`,
-  `research_tracks/T2_GAUGE/su3_coset_topology_instanton_boundary.md`,
-  `research_tracks/T2_GAUGE/su3_emergent_topology_noninvertibility.md`
-- Current status: algebra/bundle rewrite strong; full dynamical QCD open.
-
-### CMB / cosmological perturbations
-- Full-covariance protocol:
-  `research_tracks/research_front/cmb_covariance/FULL_COVARIANCE_PROTOCOL.md`
-- Primordial-covariance derivation gap:
-  `research_tracks/research_front/cmb_covariance/PRIMORDIAL_COVARIANCE_DERIVATION_GAP.md`
-- Internal-circle spatial-cutoff no-go:
-  `research_tracks/research_front/cmb_covariance/internal_circle_no_spatial_ir_cutoff.md`
-- Current status: statistics ready; action-derived `P_UBT` open.
-
-### Torus / spectral modulus
-- Regularized determinant audit:
-  `research_tracks/theta_torus_potential/zeta_regularized_shape_audit.md`
-- Current status: isolated massless one-loop finite-modulus selection closed
-  as a no-go; interacting/backreacted `V_eff` open.
-
-### Cross-program positioning
-- `docs/UBT_POSITIONING_2026_10.md`
-- This is a review/status document, not a theorem source.
-
----
 ## Canonical Core Chain
 
 ### 1) Algebraic foundation
