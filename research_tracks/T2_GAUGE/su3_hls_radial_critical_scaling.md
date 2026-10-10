@@ -1,5 +1,5 @@
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
-# Critical radial scaling as a candidate vector-manifestation limit
+# Critical radial scaling as a candidate critical HLS gauge-emergence limit
 
 **Status:** exact radial/angular decomposition plus a conditional HLS critical
 scaling mechanism.  The existence of the quantum critical phase remains open.
@@ -211,7 +211,7 @@ Hence
 At classical mean-field level this is the symmetry-restoration endpoint of the
 timelike nonzero branch.
 
-Combining the two scalings gives the candidate vector-manifestation pattern
+Combining the two scalings gives the candidate critical HLS gauge-emergence pattern
 \[
 \boxed{
 \rho_0^2\to0,
@@ -309,3 +309,31 @@ manifestation candidate.
 
 Verification:
 \`verification/su3_hls_radial_critical_scaling_check.py\`.
+
+
+## 9. Terminology correction against standard HLS Vector Manifestation
+
+The scaling candidate in this file should **not** be identified with the
+standard Harada--Yamawaki Vector Manifestation fixed point.
+
+In the standard HLS Vector Manifestation associated with chiral restoration,
+the HLS gauge coupling itself tends to zero and the critical vector becomes
+free/massless at the transition.
+
+The UBT candidate studied here is different: it asks whether an already
+generated finite (Z_B) can survive while the locking/mass coefficient tends
+to zero, potentially leaving an interacting Yang--Mills sector below the
+charged-frame threshold.
+
+Therefore the correct terminology is:
+
+[
+oxed{
+	ext{critical HLS gauge-emergence/decoupling candidate},
+}
+]
+
+not a claimed realization of the standard Vector Manifestation.
+
+External precedent remains useful for the existence of quantum HLS phases, but
+the finite-coupling UBT trajectory must be established independently.
