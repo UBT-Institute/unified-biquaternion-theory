@@ -15,11 +15,3 @@ UBT-AI-PROVENANCE-END
 
 - EN: [`CLAIMS_MATRIX.en.md`](CLAIMS_MATRIX.en.md)
 - CS: [`CLAIMS_MATRIX.cs.md`](CLAIMS_MATRIX.cs.md)
-
-
-## Current status snapshot — October 2026
-
-- EN: [docs/CURRENT_STATUS_2026_10.en.md](docs/CURRENT_STATUS_2026_10.en.md)
-- CS: [docs/CURRENT_STATUS_2026_10.cs.md](docs/CURRENT_STATUS_2026_10.cs.md)
-
-The granular authoritative claim ledger remains `CLAIMS.yaml`.
