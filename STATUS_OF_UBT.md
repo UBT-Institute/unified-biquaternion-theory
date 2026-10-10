@@ -399,6 +399,60 @@ compact \(S^1_\psi\) alone does not imply
 \(k_{\rm spatial,min}=1/R_\psi\), and the old low-\(\ell\) cutoff ansatz is
 phenomenological rather than derived.
 
+### Stiefel hidden-local SU(3) route — 2026-10-10
+
+The timelike coset now has an exact hidden-local-symmetry formulation.  A
+complex (4\times3) frame (Z) satisfying
+[
+Z^\dagger GZ=-I_3
+]
+has 24 real components, nine orthonormality constraints and a local right
+(SU(3)) redundancy, leaving
+[
+24-9-8=7
+]
+physical normalized modes.  Adding the radial Theta mode restores the original
+eight real one-biquaternion degrees of freedom.  The (4\times3) size is
+minimal and unique by degree count.
+
+The traceless vertical frame current begins at
+[
+C_{\mu,0}
+=
+\tfrac12
+(\beta\,\partial_\mu\beta^\dagger
+-\partial_\mu\beta\,\beta^\dagger)_0,
+]
+so the auxiliary hidden-local connection couples to a derived adjoint
+bilinear current of the physical complex triplet.
+
+A compact-Grassmannian large-N result cannot be copied directly: the naive
+single-trace noncompact target metric has signature ((6,1)).  The healthy
+UBT formulation requires separate positive triplet and singlet metric
+coefficients plus a classically redundant vertical HLS term.
+
+In the weak fixed-frame branch, the triplet loop generates a positive
+transverse gauge kinetic coefficient,
+[
+Z_B
+=
+\frac{(c_V/c_3)^2}{96\pi^2}
+\log\frac{\Lambda^2}{\mu^2},
+]
+but the same branch retains a vector mass,
+[
+m_B^2
+\simeq
+\frac{96\pi^2c_3^2}
+{c_V\log(\Lambda^2/\mu^2)}.
+]
+No finite-(c_V) interacting massless point appears in this leading-log
+semiclassical phase.  The remaining P2 question is therefore sharply
+nonperturbative: whether the finite noncompact constrained (4\times3)
+Stiefel model has a distinct critical/unbroken phase with
+(m_{B,\rm ren}^2=0) and (0<Z_B<\infty), together with the correct local
+(SU(3)) Slavnov--Taylor structure.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
