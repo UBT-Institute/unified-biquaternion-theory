@@ -1,3 +1,35 @@
+## Global status snapshot — 2026-10-10
+
+UBT is currently best described as an **early-stage but increasingly
+well-constrained mathematical-physics research programme**.
+
+**Strongest layers:**
+- biquaternion algebra and local Lorentz/tetrad geometry;
+- many exact GR kinematic subclosures and conditional effective Einstein
+  recovery;
+- exact algebraic colour structures and the 4x3 Stiefel/hidden-local-SU(3)
+  rewrite;
+- explicit no-go theorems that exclude several previously tempting routes.
+
+**Major open layers:**
+- unique finalized one-Theta action and constrained quantum measure;
+- complete microscopic/on-shell GR selection and UV closure;
+- autonomous dynamical QCD/Yang--Mills phase;
+- electroweak/Yukawa/fermion-mass first-principles closure;
+- action-derived primordial covariance;
+- a unique independently validated quantitative prediction beyond
+  SM + LambdaCDM.
+
+**Closest external intersections:** hidden local symmetry / Grassmannian
+sigma models; Kaluza--Klein and heat-kernel/spectral geometry; and parts of
+complex/twistor spin geometry. Similarities to string/M theory, loop quantum
+gravity, asymptotic safety and spectral noncommutative geometry are more
+limited or methodological unless additional defining structures are derived.
+
+Comparison and maturity audit:
+`docs/UBT_POSITIONING_2026_10.md`.
+
+---
 ## Update 2026-10-10: focused UBT programme and SU(3) audit
 
 The October research cycle is focused on four items: complex-time/theta
