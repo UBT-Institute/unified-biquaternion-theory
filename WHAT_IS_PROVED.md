@@ -10,500 +10,257 @@ notice: The author has read the substance and accepts editorial responsibility.
 UBT-AI-PROVENANCE-END
 -->
 
-## 2026-10-10 update — focused programme closures and boundaries
+# WHAT_IS_PROVED.md — Current map of proved, conditional and no-go results
 
-The October programme adds theorem-level results and no-go boundaries without
-promoting the open microscopic dynamics to a completed theory.
+**Status date:** 10 October 2026
 
-| # | Claim | Level | Source |
-|---|---|---|---|
-| OCT-T1 | Physical \(\tau_{\rm UBT}=t+i\psi\) is a dimensionful UBT coordinate and is not canonically the dimensionless Jacobi modular parameter; the free compact-circle heat trace uses \(\tau_J=i s/(\pi R_\psi^2)\) | [L1/STD bookkeeping] | canonical/bridges/theta_parameter_separation.md; verification/theta_parameter_separation_check.py |
-| OCT-T2 | For \(\vartheta_3(\tau)=\sum_n e^{\pi i n^2\tau}\), the scalar theta subgroup is \(\Gamma_\theta=\langle S,T^2\rangle\) of index 3; generic finite weighted reductions are not modular by default | [STD/L1] | canonical/bridges/theta_parameter_separation.md; research_tracks/theta_spectral/ |
-| OCT-S1 | A constrained complex \(4\times3\) Stiefel frame \(Z^\dagger GZ=-I_3\) modulo local right \(SU(3)\) has exactly seven real normalized modes; with the radial mode it is locally equivalent to the eight-real-component one-biquaternion timelike sector | [L1] | research_tracks/T2_GAUGE/su3_stiefel_hls_rewrite.md; verifier |
-| OCT-S2 | The minimal \(N\times3\) Stiefel construction matching seven normalized real modes uniquely has \(N=4\); quotienting by \(U(3)\) would remove one additional phase mode | [L1] | research_tracks/T2_GAUGE/su3_vs_u3_stiefel_count.md; verifier |
-| OCT-S3 | The Stiefel chart is singular at \(\rho=0\): the cone measure scales as \(\rho^7\), and a homogeneous rank-three frame cannot survive the origin because the Hermitian signature \((1,3)\) has complex Witt index one | [L1 NO-GO for smooth rank-3 continuation] | research_tracks/T2_GAUGE/su3_stiefel_critical_origin_obstruction.md; verifier |
-| OCT-S4 | After an autonomous \(F_B^2\) term exists, \(c_V=0\) restores independent local \(SU(3)_Z\times SU(3)_B\); the locking operator reduces this product to the diagonal | [L1 effective-sector theorem] | research_tracks/T2_GAUGE/su3_hls_locking_symmetry_enhancement.md; verifier |
-| OCT-S5 | Weak fixed-frame triplet loops generate a positive transverse \(Z_B\), but do not remove the finite HLS mass intercept; weak induction is also too small for a large pure-Yang--Mills hierarchy in its controlled regime | [L1 conditional / perturbative benchmark] | research_tracks/T2_GAUGE/su3_hls_fixed_frame_one_loop.md; research_tracks/T2_GAUGE/su3_hls_ym_threshold_matching.md |
-| OCT-S6 | \(SU(1,3)/SU(3)\cong S^1\times\mathbb C^3\); the exact one-\(\Theta\) composite frame bundle is topologically trivial and supplies no independent \(c_2\)/instanton bundle sectors | [L1 topology] | research_tracks/T2_GAUGE/su3_coset_topology_instanton_boundary.md; verifier |
-| OCT-C1 | Compact internal \(S^1_\psi\) gives \(k^2+n^2/R_\psi^2\) and KK masses but does not impose a spatial cutoff \(k_{\rm spatial}\ge1/R_\psi\) | [L1 NO-GO] | research_tracks/research_front/cmb_covariance/internal_circle_no_spatial_ir_cutoff.md; verifier |
-| OCT-C2 | Full-covariance CMB likelihood/KL infrastructure is implemented, but a UBT H3 test remains blocked until \(P_{\rm UBT}\) is derived from the constrained perturbation action and state prescription | [code verified / OPEN physics] | research_tracks/research_front/cmb_covariance/FULL_COVARIANCE_PROTOCOL.md; research_tracks/research_front/cmb_covariance/PRIMORDIAL_COVARIANCE_DERIVATION_GAP.md |
-| OCT-M1 | For a fixed-area flat two-torus, the zeta-regularized massless scalar determinant is proportional to \(\Im\tau\,|\eta(\tau)|^4\); square is a saddle in full moduli and the isolated positive bosonic one-loop log determinant has no finite global modulus minimum | [STD/L1 audit / NO-GO for isolated massless selection] | research_tracks/theta_torus_potential/zeta_regularized_shape_audit.md; verifier |
+This file is a current status map, not a chronological changelog. Historical
+snapshots remain in git history. Fine-grained claim IDs and forbidden wording
+are maintained in CLAIMS.yaml.
 
-**Still open after these closures:** finalization of one microscopic UBT action
-and quantum measure; unconditional microscopic Einstein dynamics; the finite
-noncompact Stiefel/HLS phase with full Yang--Mills 1PI/BRST structure and
-autonomous topology; the GR/sharp source for \(\lambda_2\); an action-derived
-primordial covariance \(P_{\rm UBT}\); and a bounded interacting torus-modulus
-potential.
+## Claim-level convention
 
-## 2026-07-27 update — canonical generalized-Dirac lift
+- [L0]: exact algebraic/formal identity.
+- [L1]: proved theorem within the explicitly stated UBT assumptions.
+- [L1 conditional]: theorem after a declared physical/dynamical premise.
+- [STD]: standard external mathematics/physics result used correctly.
+- [NUM]/[OBS]: numerical result/observation, not a proof.
+- [OPEN]: unresolved.
+- [NO-GO]: the stated route is excluded under its assumptions.
 
-| # | Claim | Level | Source |
-|---|---|---|---|
-| GR-D1 | The canonical Lorentz-slice relation has an injective block lift `C(E)` satisfying `1/2{C(E),C(F)}=H_L(E,F)I_4` | [L0] | `canonical/geometry/biquaternion_dirac_lift.tex`; `tools/verify_canonical_relation_dirac_lift.py` |
-| GR-D2 | With `Gamma_mu=C(E_mu)`, the canonical metric identity is exactly equivalent to the curved Clifford relation `1/2{Gamma_mu,Gamma_nu}=g_mu_nu I_4` | [L0] | same |
-| GR-D3 | For every nondegenerate tetrad, `D_e g` is surjective of rank 10; its complete kernel is the six-dimensional Lorentz Lie algebra | [L1] | same; `canonical/gr_closure/covariant_tetrad_rank_theorem.tex` |
-| GR-D4 | `Gamma_*=diag(I_2,-I_2)` anticommutes with every lifted `Gamma_mu`; `Gamma_*` and `i_c Gamma_*` give exact fifth channels of square `+I` and `-I` | [L0] | same |
-| GR-D5 | The four-channel principal symbol squares to `g^{mu nu} xi_mu xi_nu I_4`, its determinant is the square of the metric quadratic form, and the fifth channel gives the exact extension `g^{-1}(xi,xi)+epsilon xi_psi^2` | [L0] | same; exact verifier |
-| GR-D6 | If the generalized equation is in an independent `psi`-normal form, the invertible fifth channel uniquely solves for `D_psi Psi`, so the pointwise equation does not restrict the four spacetime tetrad slots and preserves rank 10 | [L0-C] | same; conditional on independent `D_psi` |
-| GR-D7 | For a real eight-component constraint `F(Psi,e)=0`, the exact constrained metric rank is `dim(A+K)-6`, where `A={de:F_e de in im F_Psi}` and `K=ker D_e g`; full rank ten is equivalent to `A+K=R^16` | [L1] | `canonical/geometry/biquaternion_dirac_lift.tex`; `research_tracks/canonical_relation_generalized_dirac/no_extra_variable_rank_theorem.tex`; `tools/verify_no_extra_variable_rank.py` |
-| GR-D8 | If the equation Jacobian with respect to the value of the original field, `F_Psi`, is invertible, every tetrad variation is admissible and the pointwise first-jet metric rank remains ten without any added field | [L1-C] | same |
-| GR-D9 | A nonzero scalar block `M=mI_4`, or scalar-pseudoscalar block `M=m_sI_4+i m_p Gamma_*` with `(m_s,m_p)!=(0,0)`, is an explicit sufficient realization of invertible `F_Psi`, including after strict holomorphy | [L1-C] | same; derivation from the canonical action remains open |
-| GR-D10 | If `F_Psi=0` and the first-order equation imposes eight independent real constraints only on the tetrad, the constrained metric rank is at most eight | [L1] | same |
-| GR-D11 | Derivation of the required zero-order block/transversality from one UBT action, local PDE existence/integrability, Lorentz-slice preservation and Einstein/quantum dynamics | [OPEN] | `research_tracks/canonical_relation_generalized_dirac/PROOF_STATUS.md` |
+## 1. Biquaternion / metric / GR sector
 
-The historical spinor-current tetrad rank calculations are valid only for that
-alternative map and are not part of canonical UBT closure.
+### Proved local geometry
 
-## 2026-07-26 GR endgame update — auxiliary jet and induced coefficient
+| Claim | Status | Primary source |
+|---|---|---|
+| The central anticommutator of the covariant tetrad defines a Lorentzian metric on the declared Lorentz slice | [L1] | canonical/gr_closure/covariant_tetrad_rank_theorem.tex |
+| The tetrad-to-metric differential has rank 10 with six-dimensional Lorentz kernel | [L1] | same; verification tools |
+| Metric-compatible connection is uniquely Levi--Civita plus contortion for specified torsion | [L1] | canonical/gr_closure/gap_10omega_connection_elimination.tex |
+| Every smooth local Lorentzian tetrad has a local single-\(\Theta\) split-jet/torsionful representer in the stated construction | [L1 local] | canonical/gr_closure/gap_10i_torsionful_local_representer.tex |
+| Constant Lorentz tetrads, including Minkowski, have explicit affine single-\(\Theta\) representers | [L1] | canonical/gr_closure/gap_10i_integrability_selection.tex |
+| The generalized-Dirac block lift reproduces the curved Clifford relation and gives the exact constrained metric-rank criterion | [L0/L1] | canonical/geometry/biquaternion_dirac_lift.tex; research_tracks/canonical_relation_generalized_dirac/ |
 
-- **GAP-10T-JET-AUX — CLOSED [L1]:** the split-jet multiplier action enforces the right-inverse constraint; variation of the Lorentz jet tensor and relative-central one-form forces the multiplier to vanish on every non-null patch. The jet sector is algebraic, nonpropagating, and has no on-shell metric or spin source.
-- **GAP-10T-JET-CONSTRAINT-SELECTION — CLOSED AS NO-GO [L1]:** because the right inverse is surjective for every non-null `X`, the pure constraint is solved with zero action for every tetrad and cannot select `E[Theta]`.
-- **GAP-10T-JET-DYN — NARROWED:** nonpropagation is closed; the origin of a separate metric effective action/non-surjective selector, null-patch continuation, and the constrained quantum measure remain.
-- **GAP-10D-UNDERDETERMINATION — CLOSED AS NO-GO [L1]:** all current kinematic axioms are compatible with an arbitrary coefficient multiplying `integral sqrt(g) R`; they cannot determine Newton's constant.
-- **GAP-10D-A2-FORM — CLOSED CONDITIONALLY [L1]:** a specified gauge-fixed Laplace-type Theta Hessian generates the Einstein term with `1/G_ind = N_B(1-6 xi) I_1/(12 pi)`, where `I_1` is the exact compact-psi proper-time KK integral.
-- **GAP-10D-SPECTRAL-IR — CLOSED CONDITIONALLY [L1]:** together with the nonpropagating split-jet auxiliary sector, the induced two-derivative action gives a complete conditional effective GR branch with generic local Levi-Civita curvature.
-- **GAP-10D — NARROWED:** the finalized UBT measure still must derive the physical mode count `N_B`, nonminimal coupling `xi`, UV identification and regulator/renormalisation prescription without fitting `G`.
+### Closed no-go / narrowing results
 
-<!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
-
-# WHAT_IS_PROVED.md — Definitive Map of Proved Results
-
-## 2026-07-19 update — torsion-free no-go and torsionful local representer
-
-| # | Claim | Level | Source |
-|---|---|---|---|
-| GR-T1 | Central identity $\tfrac12(E_\mu^\sharp E_\nu+E_\nu^\sharp E_\mu)=g_{\mu\nu}\mathbf1$ on the Lorentz slice | [L0] | `canonical/gr_closure/covariant_tetrad_rank_theorem.tex` |
-| GR-T2 | Every local Lorentz metric has a nondegenerate tetrad representation of the central identity | [STD]+[L1] | same |
-| GR-T3 | Tetrad-to-metric differential has rank 10; kernel dimension 6 equals local Lorentz freedom | [L1] | same; `tools/verify_covariant_tetrad_rank.py` |
-| GR-T4 | For specified tetrad and torsion, the metric-compatible frame connection is uniquely $\omega=\mathring\omega(e)+K(T)$ | [L1] | `canonical/gr_closure/gap_10omega_connection_elimination.tex`; `tools/verify_gap_10omega_connection.py` |
-| GR-T5 | The torsion-free GR branch has the unique Levi--Civita spin connection | [L1] | same |
-| GR-T6 | Metric-compatible Lorentz transport preserves $\eta_{ab}$ and the Lorentz slice | [L1] | same |
-| GR-T7 | Every constant Lorentz tetrad has an explicit affine single-$\Theta$ representer | [L1] | `canonical/gr_closure/gap_10i_integrability_selection.tex` |
-| GR-T8 | $\Theta_{\rm SR}=\Theta_0+\sqrt{\mathcal N_0}(ix^0\mathbf1+x^k\mathbf e_k)$ generates Minkowski spacetime and has zero second derivatives | [L1] | same; `tools/verify_gap_10i_integrability.py` |
-| GR-T9 | Naive one-sided regular connection + invertible $\Theta$ + torsion-free compatibility forces zero curvature | [L1 NO-GO] | same |
-| GR-T10 | Two-sided derivative obeys $[D_\mu,D_\nu]\Theta=F^A_{\mu\nu}\Theta-\Theta F^B_{\mu\nu}$ and permits nonzero intertwined curvatures | [L1] | same |
-| GR-T11 | Lorentz-slice and metric compatibility reduce the pure pair to $A_\mu=\Omega_\mu$, $B_\mu=-\Omega_\mu^\ddagger$ modulo a cancelling central term | [L1] | `canonical/gr_closure/gap_10i_paired_connection_audit.tex`; `tools/verify_gap_10i_paired_connection.py` |
-| GR-T12 | With $K=0$, the pure Lorentz pair implies $\mathring\nabla_\mu V^\nu=\delta_\mu{}^\nu$ and excludes the non-flat Schwarzschild vacuum exterior with $M\ne0$ | [L1 NO-GO] | same |
-| GR-T13 | Every smooth Lorentzian tetrad has a local single-$\Theta$ representer with explicit composite metric-compatible contortion | [L1, local] | `canonical/gr_closure/gap_10i_torsionful_local_representer.tex`; `tools/verify_gap_10i_torsionful_local_representer.py` |
-| GR-T14 | Direct fixed-background pure-pair matter spin current is derived; the minimal affine torsion-free branch and Lorentz-invariant pairing escape route are no-go results | [L1 conditional / L1 no-go] | `canonical/gr_closure/gap_10tdyn_10d_canonical_action_audit.tex`; `tools/verify_canonical_spin_current.py` |
-| GR-T15 | Split-jet multiplier action enforces the local right inverse; jet variables are algebraic and their multiplier vanishes on shell on non-null patches | [L1] | `canonical/gr_closure/gap_10t_split_jet_auxiliary_completion.tex`; `tools/verify_gr_endgame_completion.py` |
-| GR-T16 | A pure surjective split-jet constraint cannot select a tetrad from $\Theta$ | [L1 NO-GO] | same |
-| GR-T17 | For a specified gauge-fixed Laplace-type $\Theta$ Hessian, the compact-$\psi$ proper-time determinant generates the Einstein term with the explicit coefficient $1/G_{\rm ind}=N_B(1-6\xi)\mathcal I_1/(12\pi)$ | [L1 conditional] | `canonical/gr_closure/gap_10d_induced_gravity_endgame.tex` |
-| GR-T18 | Current kinematic axioms do not determine the coefficient of $\int\sqrt gR$ or the numerical Newton constant | [L1 NO-GO] | same |
-| GR-T19 | Generic local Levi--Civita Einstein--$\Lambda$ dynamics through two derivatives, combined with the nonpropagating split-jet sector | [L1 conditional effective branch] | `canonical/gr_closure/gap_10_gr_effective_completion.tex` |
-| GR-T20 | Unconditional single-$\Theta$ derivation of the constrained Hessian, physical mode count, curvature coupling, UV matching and global/null-patch continuation | [OPEN/NARROWED] | GAP-10T-JET-DYN, GAP-10D, GAP-Q |
-
-The former compact-$\psi$ fiber-average rank closure is noncanonical and must
-not be listed as the proved UBT metric mechanism.
-
----
-
-
-**Author**: Ing. David Jaroš  
-**Date**: 2026-07-19  
-**Purpose**: Authoritative list of what UBT has proved, at what level,
-and where the proof lives.  Every claim here is backed by a source file.
-If it is not on this list, it is not claimed as proved.
-
----
-
-## Proof Level Key
-
-| Level | Meaning |
-|-------|---------|
-| **[L0]** | Algebraic identity — follows from the definition of ℂ⊗ℍ alone |
-| **[L1]** | Formal theorem — requires axioms A1–A3 and standard mathematics |
-| **[NUM]** | Numerically verified (reproducible script) |
-| **[STD]** | Standard mathematics or physics result; not novel |
-| **[MC]** | Motivated conjectural bridge; not yet derived |
-| **[OBS]** | Numerical or structural observation; not a derivation |
-
----
-
-## 2026-05-14 update (v28)
-
-| # | Claim | Level | Source |
-|---|-------|-------|--------|
-| EW6 | Anomaly cancellation (chiral) | [L1 cond. C2] | `research_tracks/EW/anomaly_cancellation.tex` |
-| EW7 | EW-1b PROVED: $\lambda=g^2/2$ from SS projection | [L1 cond.] | `research_tracks/EW/rpsi_from_action.tex` |
-| Q2 | T-duality lemma target formulated | [OPEN/MC] | `canonical/THEORY/t_duality_ubt.tex` |
-| GR10 | Zerilli equation | [L1] | `canonical/gr_closure/zerilli_derivation.tex` |
-
----
-
-## 2026-05-19 update (v33)
-
-| # | Claim | Level | Source |
-|---|-------|-------|--------|
-| SM10 | Y_Q=1/6 unique via grav. anomaly A_grav(n)=n-1=0 | [L1 family check] | `canonical/interactions/colour_charge_lattice.tex` Thm. C2-uniqueness |
-| NO-GO5 | Eisenstein E_4(i) route for B: ratio 0.920 | [NO-GO] | `tools/eisenstein_B_check.py` |
-| L0-B1 | Algebraic identity for B: $\sum_{n=1}^\infty \frac{q^{n^2}}{1-q^n} = \prod_{n=1}^\infty (1-q^n)^{-1}$ | [L0] | `research_tracks/T3_ALPHA/mellin_insertion_B.tex` |
-| NO-GO6 | Gap G137-B: NO-GO verdict removed, narrowed to algebraic identity | [NARROWED] | `research_tracks/T3_ALPHA/mellin_insertion_B.tex` |
-| EW3 | Higgs: m²_eff=-6.494 from KK scan | [MC/NUM] | `research_tracks/EW/higgs_from_theta.tex` |
-| COSMO5 | de Sitter Λ=3H² from Θ=e^{Ht}Θ₀ | [Prop.] | `research_tracks/quantum_ubt/frw_from_ubt.tex` Cor. |
-| COSMO6 | ΔN_eff: CONDITIONAL TENSION for g*=198 explicit UBT | [CONDITIONAL TENSION] | `research_tracks/quantum_ubt/delta_neff_prediction.tex` |
-| COSMO7 | ΔN_eff: OK for g*≥389 (extended scenarios) | [CONDITIONAL OK] | `research_tracks/quantum_ubt/delta_neff_prediction.tex` |
-| EW4 | Hosotani mechanism on S¹_ψ: SSB from Wilson line | [OPEN] | `research_tracks/EW/higgs_from_theta.tex` |
-| SM11 | C2 from Dirac quantisation on T²: Y_min=1/6 | [MC/candidate] | `canonical/interactions/colour_charge_lattice.tex` |
-
----
-
-
-## 2026-06-11 update (v59)
-
-| # | Claim | Level | Source |
-|---|-------|-------|--------|
-| C2-iv-NO-GO | C2-iv formal NO-GO: all 3 routes (p=3, homeomorphism, approach-b) fail; fiber decoupling is algebraic root cause | [FORMAL NO-GO within current $S[\Theta]$] | `research_tracks/EW/hypercharge_from_ubt.tex §3 Rem rem:c2iii_attempts` (v59) |
-| λ-consistency | $\lambda=g^2/2$ from SS projection matches $\lambda_{\mathrm{target}}\approx0.119$ to within $2.7\%$; no other UBT combination within $20\%$ | [MC/L1 conditional on SS] | `research_tracks/EW/rpsi_from_action.tex §7 Rem rem:lambda_ubt_comparison` (v59) |
-
----
-
-
-## 2026-05-21 update (v41)
-
-| α32 | Minimální chybějící teorém pro Gap G137-B formulován | [OPEN — formalized] | mellin_insertion_B.tex §minimal-open |
-| EW8 | Weinberg 1-loop: sin²θ_W(M_Z)≈0.185 (1-loop limit) | [NUM — 1-loop only] | weinberg_angle_ew1_rg.tex §rg-numerical |
-| EW9 | Weinberg 2-loop [STD]: 0.231 — konzistentní s exp. | [STD] | weinberg_angle_ew1_rg.tex §rg-numerical |
-| COSMO9 | FRW N konzistence: dim. mismatch → [OPEN] | [OPEN] | frw_from_ubt.tex §N-open |
-| SM14 | τ₁∘τ₂∘τ₃=id ověřeno z Pauliho matic → p=3 [L0] | [L0] | colour_charge_lattice.tex §proof |
-
-| # | Claim | Level | Source |
-|---|-------|-------|--------|
-| COSMO8 | FRW explicit T_μν from UBT | [Prop. pending] | `research_tracks/quantum_ubt/frw_from_ubt.tex` |
-| EW5 | Hosotani SSB: Wilson line minimum | [OPEN/NUM] | `research_tracks/EW/higgs_from_theta.tex` |
-| SM12 | C2: Dirac quantisation Y_min=1/6 from T² periods | [MC/candidate] | `canonical/interactions/colour_charge_lattice.tex` |
-| α28 | Mock theta route for B | [OPEN — new] | `research_tracks/T3_ALPHA/mellin_insertion_B.tex` |
-
----
-
-## 2026-05-18 update
-
-| # | Claim | Level | Source |
-|---|-------|-------|--------|
-| COSMO1 | ΔN_eff prediction: 0.05-0.25 (benchmark g*≥427, above CMB-S4) | [OPEN pending g* derivation] | `research_tracks/quantum_ubt/delta_neff_prediction.tex` |
-| COSMO2 | FRW metric from refined Θ ansatz | [Prop.] | `research_tracks/quantum_ubt/frw_from_ubt.tex` |
-| GR11 | Cl⁺₁,₃ izomorfismus (even subalgebra) | [L0] | `papers/UBT_GR_Submission.tex §2.1` |
-| PY1 | Python scaffold: UBT Hilbert space [OPEN_GAP placeholder] | [scaffold] | `src/ubt/quantum/quantum_scaffold.py` |
-| PY2 | Chirality algebra scaffold | [scaffold] | `src/ubt/algebra/chirality.py` |
-| PY3 | Observable bridge: g-2 OPEN_GAP | [OPEN_GAP] | `src/ubt/observables/physics_observable_bridge.py` |
-| COSMO3 | FRW from UBT: g_{0i}=0 globally for Θ₀=1₂ | [Prop.] | `research_tracks/quantum_ubt/frw_from_ubt.tex` |
-| COSMO4 | ΔN_eff: g*(T_Pl)≥120.75 z UBT field content | [Prop.] | `research_tracks/quantum_ubt/delta_neff_prediction.tex` |
-| NO-GO3 | V_eff z M⁴ ζ-regularizace: faktor 11386× | [NO-GO] | `tools/veff_functional_deriv.py` |
-| NO-GO4 | V_eff z Casimir T³: faktor 9003× | [NO-GO] | `research_tracks/T3_ALPHA/mellin_insertion_B.tex §8` |
-| QFT1 | Quantum scaffold: Hilbert space placeholder | [scaffold/OPEN_GAP] | `src/ubt/quantum/` |
-| QFT2 | Soliton regularization: finite-energy model | [NUMERICAL_EVIDENCE] | `src/ubt/solitons/` |
-
----
-
-## Track T1_GR: General Relativity Recovery
-
-The authoritative local route is the projection-free covariant tetrad
-\(E_\mu=\mathcal N_0^{-1/2}D_\mu\Theta\).  Historical metric, fiber, FRW,
-and Schwarzschild ansätze are not promoted to current canonical proofs until
-they are rederived in this route.
-
-### Current proved/narrowed chain
-
-| # | Claim | Level | Source |
-|---|---|---|---|
-| G1 | Central anticommutator metric on the Lorentz slice | [L0] | `canonical/gr_closure/covariant_tetrad_rank_theorem.tex` |
-| G2 | Nondegenerate tetrad-to-metric differential has rank 10 and Lorentz kernel 6 | [L1] | same; `tools/verify_covariant_tetrad_rank.py` |
-| G3 | For specified tetrad and torsion, \(\omega=\mathring\omega(e)+K(T)\) is the unique metric-compatible frame connection | [L1] | `canonical/gr_closure/gap_10omega_connection_elimination.tex` |
-| G4 | Torsion-free branch is the Levi--Civita spin connection | [L1] | same |
-| G5 | Metric-compatible Lorentz transport preserves \(\eta_{ab}\) and the Lorentz slice | [L1] | same |
-| G6 | Every constant Lorentz tetrad has an affine single-\(\Theta\) representer; Minkowski is explicit | [L1] | `canonical/gr_closure/gap_10i_integrability_selection.tex` |
-| G7 | Naive one-sided, invertible, torsion-free curved representation forces zero curvature | [L1 NO-GO, under stated assumptions] | same |
-| G8 | Two-sided derivative gives exact left/right curvature identity and allows nonzero intertwined curvatures | [L1 identity; route narrowed] | same |
-| G9 | Minimal Palatini action yields Einstein--Λ and Lovelock assumptions make the four-dimensional infrared endpoint unique | [L1 conditional] | `gap_10d_low_energy_uniqueness.tex` |
-| G10 | Prescribed paired-connection system has an exact augmented-holonomy existence criterion | [L1] | `gap_10i_augmented_holonomy.tex` |
-| G11 | Minimal Palatini branch has an invertible algebraic torsion equation | [L1 conditional] | `gap_10t_palatini_torsion_dynamics.tex` |
-| G11b | Direct fixed-background pure-pair matter current derived; affine torsion-free and Lorentz-invariant pairing escape routes excluded | [L1 conditional / L1 no-go] | `gap_10tdyn_10d_canonical_action_audit.tex` |
-| G11c | Full composite UBT selects its torsion completion and self-consistent curved tetrad | [NARROWED/OPEN] | `GAP-10T-DYN`, `GAP-10I-CURVED` |
-| G12 | Schwarzschild full tetrad/lapse selected by canonical \(\Theta\) dynamics | [OPEN] | `GAP-U2Theta` |
-
-### Perturbations and named metrics
-
-| Claim | Current status |
+| Claim | Status |
 |---|---|
-| Regge--Wheeler and Zerilli reductions | Standard GR reductions, conditional on `GAP-B-MASTER` and an on-shell covariant-tetrad Schwarzschild background |
-| Schwarzschild spatial numerical ansatz | Historical/numerical evidence only until rederived with the central anticommutator tetrad |
-| Temporal Schwarzschild lapse | `GAP-U2Theta` OPEN; the former phase/Maxwell wording is withdrawn |
-| FRW, Kerr, and wave branches | Candidate/historical branches requiring covariant-tetrad on-shell rederivation |
-| Fiber-closure perturbation theorem | Exploratory result inside the noncanonical fiber branch; not closure of `GAP-B-MASTER` |
+| Naive one-sided invertible torsion-free connection cannot represent generic curved GR | [L1 NO-GO] |
+| The pure surjective split-jet right-inverse constraint does not dynamically select the tetrad | [L1 NO-GO] |
+| Current kinematic axioms do not determine the numerical Einstein-Hilbert coefficient/Newton constant | [L1 NO-GO] |
+| Split-jet auxiliary variables are algebraic/nonpropagating on the stated non-null branch | [L1] |
 
-### Covariant-tetrad closure ledger
+### Einstein dynamics
 
-| Gap | Description |
-|---|---|
-| GAP-10K | **CLOSED locally:** tetrad-to-metric rank 10; Lorentz kernel 6 |
-| GAP-10Ω-KIN | **CLOSED [L1]:** specified tetrad and torsion reconstruct the metric-compatible connection |
-| GAP-10Ω-GR | **CLOSED [L1]:** torsion-free branch is Levi--Civita |
-| GAP-10T-PALATINI | **CLOSED CONDITIONALLY [L1]:** minimal Cartan torsion map is algebraic and invertible |
-| GAP-10T-SPIN | **CLOSED CONDITIONALLY [L1]:** direct fixed-background pure-pair matter current derived |
-| GAP-10T-FLAT-NOGO | **CLOSED AS NO-GO [L1]:** minimal affine torsion-free branch excluded |
-| GAP-10T-PAIRING-NOGO | **CLOSED AS NO-GO [L1]:** no nonzero nondegenerate symmetric Lorentz-invariant pairing cure |
-| GAP-10T-DCOMP-WL-SECTOR | **CLOSED CONDITIONALLY [L0]:** Theta in W_L is a consistent subsector; necessity disproved (constant Hermitian shift counterexample) |
-| GAP-10T-DCOMP-LIN-OFFRES | **CLOSED CONDITIONALLY [L1]:** frozen-coefficient real-exponential symbol identity A³=qA²; off q=1 driven solutions exactly holonomic (pullback-flat) |
-| GAP-10T-DCOMP-LIN-REALFREQ | **CLOSED AS NO-GO [L1]:** for real Fourier k, det(I-A(ik))=(1-iλ·k)^6≠0; no nonzero homogeneous curved Fourier mode exists in the frozen torsion-free W_L linearization |
-| GAP-10T-DCOMP-RES | **OPEN:** all linearized anholonomy is confined to the 6-dim real-exponential sector at q=1; generic exact points have injective curl and Riemann maps, but variable-coefficient/nonlinear assembly and exceptional loci remain open |
-| GAP-10T-GRADIENT-FLATNESS | **CLOSED AS NO-GO [L1]:** every nondegenerate exact-gradient tetrad `e^a=N₀^{-1/2}dY^a` is locally a pullback of Minkowski space; curvature and the Hilbert-Palatini term vanish identically, while affine stationarity is only a Jacobian/null-Lagrangian corollary |
-| GAP-10T-DYN | **NARROWED:** the canonical self-consistent `D`-composite variation and any non-minimal or translational/relative torsion completion remain |
-| GAP-10L-CONN | **CLOSED [L1]:** compatible Lorentz transport preserves the Lorentz slice |
-| GAP-10L-SYM | **CLOSED CONDITIONALLY [L1]:** unique equivariant dynamics preserves the fixed set |
-| GAP-10L-DYN | **NARROWED:** verify canonical equivariance and well-posed uniqueness |
-| GAP-10I-SR | **CLOSED [L1]:** affine representer for constant Lorentz tetrads |
-| GAP-10I-1S | **CLOSED AS NO-GO [L1]:** stated one-sided invertible curved route forces flatness |
-| GAP-10I-PAIR-KIN | **CLOSED [L1]:** the Lorentz-compatible pair reduces to one spin connection; no independent A,B fields |
-| GAP-10I-PAIR-GR | **CLOSED AS A TORSION-FREE NO-GO [L1]:** with $K=0$ the pure Lorentz pair implies a concurrent vector and excludes the non-flat Schwarzschild vacuum exterior |
-| GAP-10I-TORSION-LOCAL | **CLOSED LOCALLY [L1]:** every smooth Lorentzian tetrad has a local single-$\Theta$ representer with composite metric-compatible contortion |
-| GAP-10I-2S | **NOT REQUIRED FOR LOCAL KINEMATICS:** remains an optional torsion-free composite/auxiliary route |
-| GAP-10I-PRESCRIBED | **CLOSED [L1]:** exact augmented-holonomy criterion for specified coefficients |
-| GAP-10I-CURVED | **LOCAL KINEMATICS CLOSED; DYNAMICS/GLOBAL PART NARROWED:** action selection, physical torsion constraints, and global continuation remain |
-| GAP-10D-PALATINI / UNIQUENESS | **CLOSED CONDITIONALLY [L1]:** conditional Einstein--Λ infrared endpoint |
-| GAP-10D | **NARROWED:** derive the low-energy assumptions, coefficients, and matter action from UBT |
-| GAP-10ψ-KIN / SYM | **CLOSED / CLOSED CONDITIONALLY [L1]:** gauge or translation symmetry protects the metric |
-| GAP-10ψ | **NARROWED:** prove canonical selection and exclude unstable physical modes |
-| GAP-B-MASTER | **OPEN:** perturbation bridge from original canonical dynamics |
-| GAP-U2Theta | **OPEN:** on-shell full Schwarzschild tetrad/lapse |
+A local Einstein--\(\Lambda\) infrared branch is recovered **conditionally**
+once a suitable two-derivative effective action / Laplace-type Hessian premise
+is supplied. Standard Schwarzschild, Regge--Wheeler and Zerilli physics then
+follows in that recovered effective branch.
 
----
+This is:
+\[
+\boxed{\text{DERIVED WITH ASSUMPTIONS, not an unconditional microscopic closure.}}
+\]
 
-## Track T2_GAUGE: Standard Model Gauge Structure
+Still open:
+- final microscopic single-\(\Theta\) action;
+- constrained quantum measure and physical mode count;
+- first-principles Newton coefficient;
+- global/null-patch completion;
+- microscopic branch selection and full quantum stability.
 
-All proofs in `canonical/interactions/`, `canonical/su3_derivation/`,
-`canonical/chirality/`.  Source map: `reports/gauge_truth_matrix.md`.
+## 2. Colour SU(3) sector
 
-### Algebraic Foundation
+### Exact algebraic / geometric results
 
-| # | Claim | Level | Source |
-|---|-------|-------|--------|
-| A1 | ℂ⊗ℍ ≅ Mat(2,ℂ) | [L0] | `biquaternion_algebra.tex` |
-| A2 | ℂ⊗ℍ ≅ Cl⁺₁,₃(ℝ) (even subalgebra) | [L0] | `papers/UBT_GR_Submission.tex §2.1` |
-| A3 | dim_ℝ(ℂ⊗ℍ) = 8 | [L0] | Definition |
+| Claim | Status | Source |
+|---|---|---|
+| The selected complex three-dimensional carrier with its Hermitian metric and complex volume form has stabilizer \(SU(3)\) | [L1] | research_tracks/T2_GAUGE/ |
+| Quaternion-adjoint spin generators plus five quadrupoles span the eight Gell-Mann directions, \(8=3+5\) | [L1] | su3_spin_quadrupole_dynamical_bridge.md; verifier |
+| Minimal norm-preserving two-sided raw-carrier algebra contains \(\mathfrak{so}(1,3)\oplus\mathfrak u(1)_{\rm phase}\), not full colour | [L1] | su3_raw_carrier_lie_closure.md |
+| Adding the missing raw-carrier colour directions with boosts closes to \(\mathfrak{su}(1,3)\) | [L1] | same |
+| A constrained complex \(4\times3\) Stiefel frame modulo local right \(SU(3)\) has exactly seven normalized real modes; adding the radial mode restores eight | [L1] | su3_stiefel_hls_rewrite.md |
+| \(4\times3\) is the unique minimal Stiefel size matching the seven normalized modes | [L1] | su3_vs_u3_stiefel_count.md |
+| The derived traceless frame current begins with the adjoint bilinear \(B\,\beta\,\partial\beta\) HLS vertex | [L1] | su3_stiefel_current_vertex.md |
+| The Stiefel chart is singular at \(\rho=0\); a rank-three homogeneous frame cannot survive the raw-field origin | [L1 NO-GO for smooth continuation] | su3_stiefel_critical_origin_obstruction.md |
+| \(SU(1,3)/SU(3)\cong S^1\times\mathbb C^3\); the exact composite frame bundle is topologically trivial | [L1 topology] | su3_coset_topology_instanton_boundary.md |
 
-### SU(3) Colour
+### HLS / emergent-gauge boundaries
 
-| # | Claim | Level | Source |
-|---|-------|-------|--------|
-| S1 | 𝔰𝔲(3) realised in ℂ⊗ℍ via ℤ₂×ℤ₂×ℤ₂ involutions | [L0] | `su3_from_involutions.tex` |
-| S2 | Quarks in fundamental **3** representation | [L0] | `sm_gauge.tex §G.B` |
-| S3 | Gluons in adjoint **8** representation (all 28 commutator pairs) | [L0] | `sm_gauge.tex §G.C` |
-| S4 | EW/strong sector algebraic decoupling | [L0] | `sm_gauge.tex §G.D` |
-| S5 | Independent triqubit derivation confirms SU(3) | [L0] | `su3_qubit_encoding.tex` |
-| S6 | Structural colour confinement: free quarks algebraically inadmissible | [L0] | `su3_from_involutions.tex Thm G.B` |
-| S7 | Involution and triqubit routes are equivalent | [L0] | `su3_gauge_qubit_equivalence.tex` |
-| S8 | One-hot color detects every single `X_i`/`Y_i` error as leakage | [L1] | `gap_su3_triqubit_qec.tex`, `verify_triqubit_qec_status.py` |
-| S9 | One-hot color cannot correct an unknown single `X_i` and does not detect general `Z_i` | [L1 no-go] | Knill--Laflamme witness in `gap_su3_triqubit_qec.tex` |
+After an autonomous \(F_B^2\) term exists, the surface \(c_V=0\) restores
+independent local
+\[
+SU(3)_Z\times SU(3)_B,
+\]
+while the locking operator reduces the symmetry to the diagonal.
 
-*Note*: Dynamical confinement (Wilson loop area law) is the Clay Millennium Problem; it is not claimed.
+Weak fixed-frame triplet loops:
+- generate a positive transverse \(Z_B\);
+- do not remove the finite HLS mass intercept;
+- are quantitatively too weak, in their controlled regime, to generate a
+  large pure-Yang--Mills hierarchy.
 
-### Electroweak Sector
+The determinant-sensitive anisotropy is a symmetric \(\mathbf6\) physical
+spurion with \(SO(3)\) stabilizer and the corresponding rank-five Higgs pattern
+if promoted into an autonomous gauge EFT.
 
-| # | Claim | Level | Source |
-|---|-------|-------|--------|
-| E1 | SU(2)_L from left norm-preserving action on Mat(2,ℂ) | [L0] | `sm_gauge.tex §SU2` |
-| E2 | SU(2)_L acts on left-chiral doublets (chirality gap C1 closed) | [L1] | `chirality/step3_gap_C1_resolution.tex` |
-| C1-S4 | $SU(2)_R$ geometric decoupling via $\psi$-parity | [MC] | `canonical/chirality/step4_no_wr_derivation.tex §3 Thm 3.1` |
-| OP-S4 | Full algebraic exclusion of $SU(2)_R$ | [L1 conditional] (Loophole~1 [L1 cond.], Loophole~2 [L1 cond.], Loophole~3 [STD]) | `canonical/chirality/step4_no_wr_derivation.tex §4` |
-| OP-S4-min | Minimality anomaly-safe (cond. on C2-i); unitarity (EW-2) deferred | Remark | `canonical/chirality/step4_no_wr_derivation.tex §4 Rem rem:minimality_anomaly` |
-| E3 | W±, W³ as gauge connections of SU(2)_L | [L1] | Gauge principle |
-| E4 | U(1)_Y from right scalar phase action on Mat(2,ℂ) | [L0] | `sm_gauge.tex §U1` |
-| E5 | Hypercharge quantisation from Dirac condition on ψ-circle | [L0] | `appendix_alpha_geometry.tex §1` |
-| E5b | SU(3) colour-lattice Step 1: target theorem $Q\in\mathbb{Z}$ from $S[\Theta]$ on $S^1_\psi$ | [OPEN/MC] (blocker explicit) | `canonical/interactions/colour_charge_lattice.tex` |
-| SM5 | Hypercharge assignment $Y_Q=1/6$ | [L1 conditional on C2 Step 1] (C2-i now closed v55) | `canonical/interactions/colour_charge_lattice.tex`, `papers/UBT_Gauge_Submission.tex` |
-| SM10 | Y_Q=1/6 unique via grav. anomaly A_grav(n)=n-1=0 | [L1 family check] | `canonical/interactions/colour_charge_lattice.tex` Thm. C2-uniqueness |
-| C2-S1 | Gap C2 Step 1: $Y=(B{-}L)/2$ from OP-S4 + SU(3) colour | [L1 cond. on OP-S4 + SU(3)] | `research_tracks/EW/hypercharge_from_ubt.tex §2 Lem lem:hypercharge_formula` (v55) |
-| C2-i | $B_q=1/3$ from SU(3) colour-singlet constraint | [L1 cond. on SU(3) colour structure from UBT] | `research_tracks/EW/hypercharge_from_ubt.tex §3 Lem lem:Bq_from_su3` (CLOSED v56) |
-| C2-ii | $U(1)_B$ from $\psi$-winding topology | [OPEN/MC]; Lem `lem:c2ii_candidate` [MC] added v57 | `research_tracks/EW/hypercharge_from_ubt.tex §3 Rem rem:c2ii_psi_winding, Lem lem:c2ii_candidate` |
-| C2-iii | Geometric coupling $S^1_\psi\leftrightarrow\mathbb{Z}_3$ colour cycle | [OPEN/MC] (blocks C2-ii); Steps 1+2 attempted v58 | `research_tracks/EW/hypercharge_from_ubt.tex §3 Rem rem:c2iii_attempts` (v58) |
-| C2-iv | Fiber Decoupling in $S[\Theta]$: $S^1_\psi$ and colour fiber $\mathbb{C}^3$ algebraically decoupled | [FORMAL NO-GO within current $S[\Theta]$] (v59, deadendbox) — root cause of C2-iii; does not block papers | `research_tracks/EW/hypercharge_from_ubt.tex §3 Rem rem:c2iii_attempts` (v59) |
-| EW-1b | $\sin^2\theta_W(M_Z)\approx0.231$ (Corollary) | [L1 cond. on OP-S4 + SU(3) colour structure + scale closure] | `research_tracks/EW/weinberg_angle_ew1_rg.tex §7 Prop prop:sin2_thetaW_corollary` (v56) |
-| E6 | U(1)_EM from ψ-cycle phase after SSB | [L0] | `qed.tex` |
-| E7 | Q = T₃ + Y/2 (Gell-Mann–Nishijima relation) | [L1] | Standard EW algebra |
-| E8 | Photon field $A_\mu = \sin\theta_W W^3_\mu + \cos\theta_W B_\mu$ | [L1] | Standard EW |
+### What is not proved
 
-### Three Generations
+Full QCD is **not derived**.
 
-| # | Claim | Level | Source |
-|---|-------|-------|--------|
-| T1 | N_gen = 3 from dim_ℝ(Im ℍ) = 3 | [L0] | `DERIVATION_INDEX.md §ψ-modes` |
-| T2 | Three ψ-winding modes carry identical gauge quantum numbers | [L0] | `su3_proof_status.md §Three generations` |
-| T2b | Higher ψ-modes \(n\ge 4\) are currently best interpreted as heavy KK excitations above the compactification scale; a first-principles proof that only three light generations remain is still OPEN/[MC] | OPEN / [MC] | `research_tracks/EW/higher_harmonics_analysis.tex` |
+The preferred open endpoint is
+\[
+\rho_0>0,\qquad
+Z_B>0,\qquad
+c_V\to0,\qquad
+\lambda_2\to0,\qquad
+M_\beta^2>0,
+\]
+followed by:
+- full Yang--Mills 1PI two/three/four-point structure;
+- BRST/Slavnov--Taylor consistency;
+- gapped frame matter;
+- autonomous Yang--Mills topological sectors;
+- compatibility with the sharp/GR core.
 
-### QED Sector
+The decisive unresolved source term is the mixed sharp/GR contribution to
+\[
+\left.\beta_{\lambda_2}\right|_{\lambda_2=0}.
+\]
 
-| # | Claim | Level | Source |
-|---|-------|-------|--------|
-| Q1 | Photon is massless in UBT QED sector | [L1] | `canonical/interactions/qed.tex` |
-| Q2 | Electron g-factor = 2 at tree level | [L1] | `canonical/interactions/qed.tex` |
-| Q3 | QED running coupling α(μ) reproduced | [L1] | `canonical/interactions/qed.tex` |
+## 3. Theta / complex-time sector
 
-### Covariant-tetrad closure ledger
+Established for the currently defined objects:
 
-| Gap | Description |
-|-----|-------------|
-| EW-1 | Weinberg angle from pure algebra (dead end — stated explicitly) |
-| EW-1b | EW1+RG conditional branch: $\sin^2\theta_W(M_Z)\approx0.231$ [L1 cond. on OP-S4 + SU(3) colour + scale closure]; C2-i conditionality removed (v55) — see `research_tracks/EW/weinberg_angle_ew1_rg.tex §7` |
-| EW-2 | Higgs doublet VEV from S[Θ] |
-| C2 | Gap C2 Step 1: $Y=(B{-}L)/2$ [L1 cond. on OP-S4 + SU(3) colour structure from UBT] (v55); sub-gap C2-i CLOSED [L1 cond.]; sub-gap C2-ii [OPEN/MC] — does not block | `research_tracks/EW/hypercharge_from_ubt.tex` |
-| C2-ii | $U(1)_B$ from $\psi$-winding topology | does not block any paper |
-| Y2 | Yukawa couplings |
+\[
+\tau_{\rm UBT}=t+i\psi
+\]
+is a dimensionful physical UBT coordinate and is not canonically the
+dimensionless Jacobi modular parameter.
 
----
+For the compact-circle heat trace,
+\[
+\tau_J=\frac{i s}{\pi R_\psi^2},
+\]
+and ordinary Jacobi-theta transformation theory applies.
 
-## Track T3_ALPHA: Fine Structure Constant
+For
+\[
+\vartheta_3(\tau)=\sum_n e^{\pi i n^2\tau},
+\]
+the natural scalar theta subgroup is
+\[
+\Gamma_\theta=\langle S,T^2\rangle
+\]
+of index 3 in \(SL(2,\mathbb Z)\).
 
-Source: `canonical/alpha/`, `reports/alpha_routes_ranked.md`.
+Generic finite weighted theta-like reductions are not modular forms by default
+and are not mock-modular without a separately derived completion.
 
-| # | Claim | Level | Source |
-|---|-------|-------|--------|
-| α1 | N_phases = 3 from Im(ℍ) | [L0] | `canonical/n_eff/step2_AUDIT.tex` |
-| α1a | $N_{\mathrm{eff}}^{\mathrm{twist}} = 12 = 3\times2\times2$ via SU(2) twist | [L1] | `canonical/n_eff/step2_AUDIT.tex`, `research_tracks/quantum_ubt/su2_twist_neff12.tex` |
-| α1b | $N_{\mathrm{eff}}^{\mathrm{loop}} = 3$ from direct $S_{\mathrm{kin}}[\Theta]$ loop counting | [L1] | `canonical/n_eff/step2_AUDIT.tex`, `canonical/n_eff/neff_reconciliation.tex` |
-| α1c | Identification $N_{\mathrm{eff}}^{\mathrm{loop}} = N_{\mathrm{eff}}^{\mathrm{twist}}$ | [MC/OPEN frozen] | `canonical/n_eff/step2_AUDIT.tex` |
-| α1d | $B_0^{\mathrm{loop}} = 2\pi$ from $S_{\mathrm{kin}}[\Theta]$ (one-loop scalar QED, $N_{\mathrm{eff}}^{\mathrm{loop}}=3$) | [L1] | `canonical/n_eff/neff_reconciliation.tex` |
-| α1e | $B_0 = 8\pi$ from the SU(2)-twist route with $N_{\mathrm{eff}}^{\mathrm{twist}}=12$ | [L1] | `papers/ncg_poisson_B0_derivation.tex`, `research_tracks/quantum_ubt/su2_twist_neff12.tex` |
-| α2 | Charge quantisation from Dirac condition on ψ-circle | [L0] | `appendix_alpha_geometry.tex §1` |
-| α3 | V_eff winding-mode potential: $V_\mathrm{eff}(n) = n^2 - Bn\ln n$ | [L1] | `canonical/alpha/alpha_best_route.tex` |
-| α4 | $n^*(B_\mathrm{phenom}) = 137$ | [L1] (given B) | `canonical/alpha/alpha_best_route.tex` |
-| α5 | 137 is prime; prime status implies V_eff stability | [L0]+[STD] | Number theory |
-| α6 | One-loop QED running: α(μ₂) from α(μ₁) reproduced | [L1] | `canonical/interactions/qed.tex` |
-| α7 | Hecke coincidence for 76a1: $|a_{137}|=g(X_0(137))=11$ is unique in $\{131,137,139\}$ by direct point counting; a₁₃₁=−9, a₁₃₉=−3 [L0] přímý výpočet | [MC] | `research_tracks/T3_ALPHA/hecke_alpha_connection.tex`, `reports/hecke_eigenvalue_twin_prime_test.md` |
-| α8 | $\vartheta_3(0\|i)/\eta(i) = \sqrt{2}$ [Ramanujan + $\Gamma$-doplňkový vzorec] | [STD] | `research_tracks/T3_ALPHA/rogers_ramanujan_c3_connection.tex` |
-| α9 | $B = 12^{3/2}\cdot 2^{1/8}\cdot\vartheta_3(0\|i)^{1/4} = 46.281$, err $0.0066\%$ | [OBS] | `research_tracks/T3_ALPHA/rogers_ramanujan_c3_connection.tex` |
-| α10 | $a_2(D_{\mathrm{UBT}})$ reprodukuje Einstein-Hilbertovu akci | [Prop.] | `research_tracks/T3_ALPHA/seeley_dewitt_coefficients.tex` |
-| α11 | $a_4 \propto \vartheta_3(0\|i)$ conjecture | [MC/OPEN] | `research_tracks/T3_ALPHA/seeley_dewitt_b_bridge.tex` |
-| α_B_obs | $B = 12^{3/2}(2\eta(i))^{1/4} \approx 46.28$ numerical match | [OBS] | `research_tracks/T3_ALPHA/mellin_insertion_B.tex §3` |
-| α_B_L0 | $B = 12^{3/2}(2\eta(i))^{1/4}$ algebraic identity | [L0] | `research_tracks/T3_ALPHA/mellin_insertion_B.tex §alg-identity` |
-| α_nstar | $n^*(B_{\mathrm{phenom}}) = 137$ for $B_{\mathrm{phenom}} \approx 46.298$ | [L1 cond.] | `canonical/alpha/` |
-| α_Neff | $N_{\mathrm{eff}} = 12$ from SU(2)-twist | [L1] | `research_tracks/quantum_ubt/su2_twist_neff12.tex` |
-| N_eff_use | Integer-137 claim uses $N_{\rm eff}^{\rm twist}=12$ [L1], not $N_{\rm eff}^{\rm loop}=3$; identification twist=loop is \textbf{[OPEN/MC frozen]} | [L1] | `canonical/n_eff/step2_AUDIT.tex §rem:neff_alpha_dependency` |
-| α_Z1loop | $Z_{1\mathrm{loop}}(\tau=i) = \vartheta_3\vartheta_4^2/\eta^3 = 2$ | [L0] | `research_tracks/T3_ALPHA/mellin_insertion_B.tex §mechanism` |
-| G137-B-i | Volumetric factorization $W_{\mathrm{eff}} = N_{\mathrm{eff}}^{3/2}\cdot f(Z_b)$ | [OPEN/MC] | `research_tracks/T3_ALPHA/mellin_insertion_B.tex §formal-gap` |
-| G137-B-ii | $Z_{1\mathrm{real}} = 2\eta(i)$ from NS sector heat kernel | [OPEN/MC] | `research_tracks/T3_ALPHA/mellin_insertion_B.tex §formal-gap` |
-| G137-B-iii | $N_{\mathrm{eff}}^{1/2}$ from $T^3$ volume element at self-dual point | [OPEN/MC] | `research_tracks/T3_ALPHA/mellin_insertion_B.tex §formal-gap` |
+Strict frame-independent microscopic holomorphy in \(t+i\psi\), with \(\psi\)
+an independent Lorentz scalar, is incompatible with generic Lorentz-covariant
+spacetime dependence under the stated assumptions.
 
-### Rogers-Ramanujan Algebraic Identities (2026-05-11)
+Open: full interacting UBT modular covariance.
 
-| # | Claim | Level | Source |
-|---|-------|-------|--------|
-| α18 | $\vartheta_3(0\|i) = \pi^{1/4}/\Gamma(3/4)$ (Ramanujan CM value at $\tau=i$) | [STD] | Berndt, *Ramanujan's Notebooks*, Part III, Ch. 17 |
-| α19 | $\eta(i) = \Gamma(1/4)/(2\pi^{3/4})$ | [STD] | classical |
-| α20 | $\vartheta_3(0\|i)/\eta(i) = \sqrt{2}$ — exact algebraic identity via Gamma reflection formula $\Gamma(1/4)\Gamma(3/4)=\pi\sqrt{2}$ | [L0]/[STD] | `research_tracks/T3_ALPHA/rogers_ramanujan_c3_connection.tex` |
-| α21 | $Z_{c=3}(\tau=i) = [\vartheta_3(0\|i)/\eta(i)]^3 = 2\sqrt{2}$ — three free compact bosons at self-dual torus | [STD] | `research_tracks/T3_ALPHA/rogers_ramanujan_c3_connection.tex` |
-| α22 | Algebraic rewriting [OBS]: $B_{\mathrm{cand}} = 12^{3/2}\cdot 2^{1/8}\cdot\vartheta_3(0\|i)^{1/4} \approx 46.281$ — numerical accuracy $0.0066\%$; **not a first-principles derivation** | [OBS] | `research_tracks/T3_ALPHA/rogers_ramanujan_c3_connection.tex` |
-| α23 | $Z_{\mathrm{wind}}(\tau=i) = \vartheta_3(0\|i)$ — winding partition function at self-dual point | [STD] | `research_tracks/quantum_ubt/ncg_poisson_b0derivation.tex` |
+## 4. CMB / cosmology sector
 
-The algebraic rewriting sharpens Gap G137-B: it makes explicit that the three
-factors in the candidate $B$-formula have different physical origins (algebraic
-structure, self-dual normalisation, winding partition function) and must each
-be derived from $S[\Theta]$ separately.
+A strict H0--H3 full-covariance likelihood/KL interface is implemented.
 
-### Explicitly Open
+The current H3 physics chain is **not complete**. A valid UBT prediction needs:
+\[
+S_{\rm scalar}^{(2)}
+\to
+\delta\Theta\to\mathcal R
+\to
+\text{state prescription}
+\to
+P_{\rm UBT}.
+\]
 
-| Gap | Description |
-|-----|-------------|
-| G137-B | Derive $B = N_{\mathrm{eff}}^{3/2}\cdot 2^{1/8}\cdot Z_{\mathrm{wind}}(1)^{1/4}$ from $S[\Theta]$ without α/137/B_required input; all three factors must be derived; alpha status is STRUCTURAL / CONDITIONAL / OPEN GAP. Sharpened statement: `canonical/alpha/alpha_gap_closure_matrix.tex` |
+Compact internal \(S^1_\psi\) gives
+\[
+\lambda_{\mathbf k,n}=|\mathbf k|^2+n^2/R_\psi^2
+\]
+and therefore KK masses, but it does **not** imply a three-dimensional spatial
+IR cutoff \(k_{\rm spatial}\ge1/R_\psi\).
 
-**Single canonical reference for T3_ALPHA chain status**: `canonical/alpha/alpha_gap_closure_matrix.tex`
+Historical CMB comb/cutoff tests remain negative or phenomenological
+constraints on those specific ansätze, not positive UBT evidence.
 
-| # | Claim | Level | Source |
-|---|-------|-------|--------|
-| alpha_matrix | Gap closure matrix for T3_ALPHA | [canonical] | `canonical/alpha/alpha_gap_closure_matrix.tex` |
+## 5. Torus / modulus sector
 
-### Modular Symmetry and R_ψ Fixation (v62, 2026-06-11)
+For a genuine fixed-area flat two-torus, standard zeta regularization gives
+\[
+\det{}'\Delta_\tau\propto\Im\tau\,|\eta(\tau)|^4.
+\]
 
-| ID | Claim | Level | Source |
-|----|-------|-------|--------|
-| psi-compact-SS | ψ compact from SS BC: Θ(ψ+2πR_ψ)=σ₃Θσ₃ | [L1] | `su2_twist_neff12.tex` |
-| psi-compact-Z | ψ compact from periodicity \|Z[τ+1]\|²=\|Z[τ]\|² | [L0] | `modular_symmetry_rpsi.tex Prop prop:compact` |
-| Z-total | Z[τ_E]=η(τ_E)^{-12} from det P=η² [STD] + N_eff=12 [L1] | [L1 conditional] | `modular_symmetry_rpsi.tex Prop prop:Z` |
-| Rpsi-sdp | τ_E=i unique S-fixed point on {iR_ψ : R_ψ>0} | [L0] | `modular_symmetry_rpsi.tex Def def:sdp` |
-| Rpsi-stat | Re S[Θ] stationary under modular flow at τ_E=i | [L0] | `modular_symmetry_rpsi.tex Prop prop:Smod` |
-| Rpsi-Z | R_ψ=1 fixed point of Z[τ] symmetry | [L1 conditional] | `modular_symmetry_rpsi.tex Thm thm:fixed` |
-| Rpsi-poly | Polynomial R⁶+R⁴+R²=3 unique solution R_ψ=1; N_eff cancels | [L0] | `modular_symmetry_rpsi.tex Thm thm:poly` |
-| Rpsi-min | R_ψ=1 is minimum of S_eff, d²S/dR²=20C>0 | [L0]+[NUM] | `modular_symmetry_rpsi.tex Cor cor:min` |
+Consequences:
+- the older termwise positive-Hessian argument is not a valid regularized
+  stability proof;
+- the square torus is a determinant maximum inside the rectangular family but
+  a saddle in full moduli space;
+- the hexagonal torus is the fixed-area determinant maximum;
+- the isolated standard positive bosonic one-loop log determinant has no
+  finite global modulus minimum.
 
-### Information-Loss Alpha Derivation Chain (v70–v72, 2026-06-13)
+Therefore the isolated massless one-loop branch does **not** dynamically select
+a stable UBT torus modulus.
 
-| ID | Claim | Level | Source |
-|----|-------|-------|--------|
-| il-Omega | Ω_η(1) = 1/24 − 1/(8π) from Eisenstein G₂(i) | [L0] | `layer2_kernel_derivation.tex Lem lem:omega_eta` |
-| il-12pi | 12π·Ω_η(1) = (π−3)/2 | [L0] | `layer2_kernel_derivation.tex Cor cor:12pi_omega` |
-| il-CQ | C_Q = 4 from Dirac spinor dimension in UBT | [L1 cond.] | `layer2_kernel_derivation.tex Prop prop:CQ4` |
-| il-Hcolour | H_colour = Ω_η·Π_colour (one-loop colour Hamiltonian) | [L1 cond.] | `layer2_kernel_derivation.tex Def def:H_colour` |
-| il-Zcolour | Z_colour = Tr_{ℂ³}[I+H_colour] = 3(1+Ω_η) | [L0] | `layer2_kernel_derivation.tex Lem lem:Z_colour` |
-| il-KL2 | K_L2 = √(1+Ω_η)·Π_colour (Layer2 Kraus operator) | [L1 cond.] | `layer2_kernel_derivation.tex Prop prop:kraus` |
-| il-rL2 | r_L2 = Tr(Π_colour K†K) = 3(1+Ω_η) | [L1 cond.] | `layer2_kernel_derivation.tex Thm thm:rL2` |
-| il-mwind | m²_wind = n²π (winding zero-mode mass) | [L1 cond.] | `gap_A_proof.tex Lem lem:wind_action` |
-| il-meff | m²_eff = n²π/C_Q (equipartition across C_Q channels) | [L1 cond.] | `gap_A_proof.tex Lem lem:c0var` |
-| il-rho | ρ = exp(−C_Q/(2πn)) from Gaussian zero-mode fidelity | [L1 cond.] | `gap_A_proof.tex Thm thm:gapA` |
-| il-alpha | α⁻¹_UBT = 137.035999177549 (+0.026σ CODATA 2022) | [L1 cond.] | `information_loss_alpha_self_consistency.tex` |
+Open: action-derived massive/interacting/backreacted
+\(V_{\rm eff}(\tau_{\rm mod},\bar\tau_{\rm mod})\).
 
-**All steps are [L1 conditional]. Conditions**: det P=η² [STD]; N_eff=12 [L1]; one-loop approximation; Dirac eq. [L1]; SS BC [L1].
-**Alpha: NOT DERIVED unconditionally.**
+## 6. Alpha / numerical-structure sector
 
-**Conditions for [L1 conditional]**: (i) det P_eff=η² [STD, Polchinski §7.2]; (ii) N_eff=12 [L1]; (iii) one-loop approximation (higher loops do not shift the fixed point). All conditions are explicit.
+Several exact theta/eta identities and reproducible numerical relations exist,
+but the fine-structure constant is **not derived from first principles**.
 
----
+In particular, numerical closeness of candidate expressions to
+\(\alpha^{-1}\) remains [OBS]/conditional until every input is derived from the
+same finalized action without using \(\alpha\), 137, or a fitted target value.
 
-## Miscellaneous Proved Results
+The primary alpha derivation gap remains open.
 
-| # | Claim | Level | Source |
-|---|-------|-------|--------|
-| M2 | $B_0^{\mathrm{loop}} = 2\pi$ from the direct scalar loop of $S_{\mathrm{kin}}[\Theta]$ | [L1] | `canonical/n_eff/neff_reconciliation.tex` |
-| M2a | $B_0=8\pi$ from the SU(2)-twist route with $N_{\mathrm{eff}}^{\mathrm{twist}}=12$ | [L1] | `papers/ncg_poisson_B0_derivation.tex`, `research_tracks/quantum_ubt/su2_twist_neff12.tex` |
-| M3 | FPE equivalent formulation (scalar sector) | [L1] | `research_tracks/` |
-| M4 | ΔN_eff prediction: 0.05–0.25 for benchmark $g_*\ge 427$ | [OPEN pending g* derivation] | `research_tracks/quantum_ubt/delta_neff_prediction.tex` |
-| Q1 | Kanonická kvantizace gravitonů (Zerilli+RW módy) | [STD] | `research_tracks/quantum_ubt/graviton_quantisation.tex` |
-| NCG1 | B₀=8π from N_eff=12 via NCG Poisson | [L1] | `papers/ncg_poisson_B0_derivation.tex` |
-| PRED1 | Proton decay τ_p~10³⁴ yr (conditional) | [CONDITIONAL] | `reports/falsifiable_prediction_sheet.md` |
-| PRED2 | ΔN_eff prediction (CMB-S4): total 0.05–0.25 depending on $g_*(T_{\rm Pl})$ | [OPEN — computation done, g* derivation pending] | `research_tracks/quantum_ubt/delta_neff_prediction.tex` |
+## 7. Single-action and quantum status
 
----
+canonical/ACTION.en.md is authoritative:
 
-## What Is NOT Claimed as Proved
+\[
+\boxed{\text{fundamental action family defined, not finalized}.}
+\]
 
-The following are open problems, dead ends, or out-of-scope items.
-They are **not** in the above list and **not** claimed by UBT at this stage:
+Still open:
+- microscopic measure;
+- unique real variational principle;
+- complete constrained Hessian;
+- quantum path integral;
+- UV completion/renormalization closure;
+- all sector reductions from one action;
+- a zero-parameter quantitative prediction.
 
-| Topic | Status |
-|-------|--------|
-| Cosmological/α — Gap G137-B | STRUCTURAL EVIDENCE — 6 routes NO-GO; 3 sub-gaps named; α NOT DERIVED; see mellin_insertion_B.tex §formal-gap |
-| Weinberg angle sin²θ_W | Conditional open — pure-algebra route is dead end; EW-1b (EW1+RG) remains conditional |
-| W/Z boson masses | Open — Gap EW-2 |
-| Higgs mass 125 GeV | Open |
-| Fermion masses | Open-hard (KK obstruction theorem; see `research_tracks/fermion_masses/fermion_mass_status_v2.md §3`) |
-| Mass formula structure `m(n) = A·nᵖ − Bₘ·n·ln n` | [SE] formula structure [L1]; parameters A, p, Bₘ are fitted, not derived |
-| m_e reproduced to 0.22% | [SE] semi-empirical — parameters fitted |
-| Mass ratios m_μ/m_e, m_τ/m_μ | Open — no UBT prediction |
-| KK-mismatch theorem proof | Open — source not confirmed; see `fermion_mass_status_v2.md §3` |
-| CKM/PMNS matrices | Open |
-| Dynamical colour confinement | Clay Millennium Problem |
-| Strong coupling g_s | Open |
-| Quantum gravity / path integral | Long term — GAP-Q |
-| Cosmological solutions (FRW/de Sitter) | PARTIALLY CLOSED — FRW in solution space [L1]; Θ-ansatz [L1 conditional]; $g_{0i}=0$ comoving [L1 conditional] — GAP-C; see `canonical/gr_closure/frw_cosmological_solutions.tex` |
-| Covariant-tetrad local closure | GAP-10K, GAP-10Ω-KIN/GR, GAP-10L-CONN, and GAP-10I-SR closed; one-sided curved route closed as no-go; torsion dynamics, curved integrability, Einstein dynamics, and ψ-stability remain open |
+No completed quantum theory of UBT is claimed.
 
-## Minimal one-connection GR architecture
+## 8. Superseded interpretations that must not be revived
 
-**GAP-10T-MINIMAL-ONE-CONNECTION-GR — CLOSED AS NO-GO [L1].** If the same metric-compatible Lorentz connection both
-defines `E_mu=N0^(-1/2)D_mu Theta` and is the physical spacetime connection,
-then the torsion-free branch has the concurrent-vector restriction and is not
-generic GR. The local construction that represents an arbitrary tetrad uses
-nonzero contortion and therefore makes that same physical connection
-torsionful. Thus exact generic torsion-free GR plus universal local
-single-Theta representability requires a distinct nonpropagating jet
-connection (or abandonment of exact GR in favour of a torsionful theory).
+- Physical UBT complex time is not automatically the Jacobi modular parameter.
+- Compact internal \(\psi\) does not automatically impose a spatial CMB cutoff.
+- Algebraic \(SU(3)\) generators are not by themselves QCD gluons.
+- A heat-kernel \(F^2\) term for a composite frame is not by itself eight
+  independent gluon kinetic terms.
+- The weak fixed-frame HLS phase is not an interacting massless-QCD phase.
+- The massless one-loop determinant does not prove square-torus stabilization.
+- The repository currently has no first-principles numerical derivation of
+  \(\alpha\), \(G\), or another new precision observable.
 
-**GAP-10T-JET-KIN — CLOSED LOCALLY [L1].** The exact-GR split architecture
-has an explicit local right inverse: the component of
-`sE-D_LC X` parallel to non-null `X` is supplied by a composite relative
-central jet one-form, and the orthogonal component by a composite Lorentz jet
-tensor. The physical connection remains Levi-Civita, so arbitrary GR curvature
-is kinematically representable.
+## 9. Authoritative status sources
 
-This does **not** complete the GR derivation. `GAP-10T-JET-DYN` (action-level
-tetrad/jet selection and nonpropagation) and the Hilbert-Palatini curvature term
-with its coefficient still require canonical derivations.
+Use together:
+- CLAIMS.yaml — fine-grained claim ledger;
+- STATUS_OF_UBT.md — current narrative status;
+- ROADMAP.md — current priorities;
+- CLAIMS_MATRIX.en.md / CLAIMS_MATRIX.cs.md — public status matrix;
+- DERIVATION_INDEX.md — derivation/source navigation;
+- canonical/ACTION.en.md — single-action guardrail.
+
+When this file conflicts with an older research note, the newer explicit
+status/override and CLAIMS.yaml take precedence.
