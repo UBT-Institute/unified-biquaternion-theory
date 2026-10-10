@@ -97,6 +97,21 @@ LEGACY_BASELINE = {
         "proves that",
         "proves that the sharp-symmetrised product is central for arbitrary",
     ),
+    (
+        "research_tracks/theta_complex_time_classification/README.md",
+        "proves that",
+        "The companion no-go proves that strict frame-independent Cauchy--Riemann",
+    ),
+    (
+        "research_tracks/T2_GAUGE/su3_raw_carrier_lie_closure.md",
+        "proves that",
+        "The separate core audit already proves that full coefficient-space",
+    ),
+    (
+        "research_tracks/T2_GAUGE/su3_flat_affine_vacuum_no_go.md",
+        "proves that",
+        "But it proves that the enhanced colour vacuum cannot simply be combined with",
+    ),
 }
 
 # Phrases that neutralise a banned phrase on the same line.
