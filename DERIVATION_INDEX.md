@@ -21,6 +21,59 @@ For claim-level definitions, see [`docs/UBT_SCOPE_AND_CLAIM_LEVELS.md`](docs/UBT
 
 ---
 
+## October 2026 focused research derivation map
+
+These research tracks refine the canonical status but do not replace the
+canonical chain below.
+
+### Theta / complex time
+
+- canonical/bridges/theta_parameter_separation.md
+- research_tracks/theta_complex_time_classification/holomorphy_lorentz_no_go.md
+- research_tracks/theta_spectral/
+
+Current result: the free compact-circle heat kernel/trace has ordinary Jacobi
+theta structure with a dimensionless spectral parameter; physical
+\(\tau_{\rm UBT}=t+i\psi\) is a distinct dimensionful coordinate. Full
+interacting modular covariance remains open.
+
+### Colour SU(3)
+
+- research_tracks/T2_GAUGE/su3_dynamics_endgame_2026_10.md
+- research_tracks/T2_GAUGE/su3_stiefel_hls_rewrite.md
+- research_tracks/T2_GAUGE/su3_stiefel_current_vertex.md
+- research_tracks/T2_GAUGE/su3_hls_locking_symmetry_enhancement.md
+- research_tracks/T2_GAUGE/su3_stiefel_critical_origin_obstruction.md
+- research_tracks/T2_GAUGE/su3_coset_topology_instanton_boundary.md
+- research_tracks/T2_GAUGE/su3_hls_ym_threshold_matching.md
+- research_tracks/T2_GAUGE/su3_stiefel_hls_frg_program.md
+
+Current result: exact algebraic and collective-frame \(SU(3)\) structure is
+substantially stronger than before, but full QCD is not closed. The preferred
+one-field route is a finite-radius Stiefel/HLS phase with an autonomous gauge
+sector, controlled locking transition, gapped frame matter, correct
+BRST/Slavnov--Taylor structure and autonomous Yang--Mills topology.
+
+### CMB full covariance
+
+- research_tracks/research_front/cmb_covariance/FULL_COVARIANCE_PROTOCOL.md
+- research_tracks/research_front/cmb_covariance/PRIMORDIAL_COVARIANCE_DERIVATION_GAP.md
+- research_tracks/research_front/cmb_covariance/internal_circle_no_spatial_ir_cutoff.md
+
+Current result: statistical model-selection infrastructure is ready, but H3 is
+blocked by the missing action-derived \(P_{\rm UBT}\).
+
+### Torus/modulus
+
+- research_tracks/theta_torus_potential/zeta_regularized_shape_audit.md
+- research_tracks/theta_torus_potential/one_loop_scale_no_go.md
+
+Current result: the isolated massless one-loop determinant does not select a
+finite stable modulus. Interacting/backreacted modulus dynamics remains open.
+
+
+---
+
 ## Canonical Core Chain
 
 ### 1) Algebraic foundation

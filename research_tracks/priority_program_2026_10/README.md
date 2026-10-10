@@ -80,41 +80,73 @@ All status promotions must be mirrored in \`CLAIMS.yaml\` and
 ### P1 — theta / complex time: CLOSED FOR CURRENTLY DEFINED OBJECTS
 
 Established:
-- physical `tau_UBT=t+i psi` is dimensionful and is not canonically the
-  dimensionless Jacobi parameter;
+- physical \(\tau_{\rm UBT}=t+i\psi\) is dimensionful and is not canonically
+  the dimensionless Jacobi modular parameter;
 - the free compact-circle heat trace is an ordinary Jacobi theta function with
-  `tau_J=i s/(pi R_psi^2)`;
-- in the `exp(pi i n^2 tau)` convention the scalar theta group is
-  `Gamma_theta=<S,T^2>`, index 3 in `SL(2,Z)`;
-- generic finite weighted reduced sums are not modular, and are not
-  mock-modular without a separately derived completion;
-- strict microscopic holomorphy in `t+i psi` with scalar `psi` conflicts
-  with generic frame-independent Lorentz dynamics.
+  \[
+  \tau_J=\frac{i s}{\pi R_\psi^2};
+  \]
+- for \(\vartheta_3(\tau)=\sum_n e^{\pi i n^2\tau}\), the scalar theta group
+  is \(\Gamma_\theta=\langle S,T^2\rangle\), of index 3 in \(SL(2,\mathbb Z)\);
+- generic finite weighted reductions are not modular by default and are not
+  mock-modular without a derived completion;
+- strict microscopic frame-independent holomorphy in \(t+i\psi\), with
+  \(\psi\) an independent Lorentz scalar, conflicts with generic Lorentz
+  dynamics.
 
 Open beyond current objects: full interacting UBT modular covariance.
 
-### P2 — SU(3) dynamics: NARROWED, NOT CLOSED
+### P2 — colour SU(3): NARROWED, NOT CLOSED
 
 Established:
-- exact algebraic SU(3) stabilizer and 3+5 Gell-Mann operator decomposition;
-- Lorentz-equivariant moving rank-three carrier on the timelike branch;
-- exact conditional collective-frame redundancy `SU(1,3)/SU(3)`;
-- minimal norm-preserving bimodule contains exactly
-  `so(1,3)+u(1)_phase`, not full colour SU(3);
-- adding full raw-carrier colour to the boost sector closes to `su(1,3)`,
-  which conflicts with the current sharp/determinant GR core;
-- determinant-sensitive generic vacuum breaks candidate colour
-  `SU(3)->SO(3)`;
-- tree-level one-biquaternion Hessian cannot be an invertible rewrite of the
-  perturbative eight-gluon UV sector;
-- weak currents/background heat-kernel induction do not by themselves create a
-  non-Abelian gauge theory.
+- exact algebraic \(SU(3)\) stabilizer and \(3+5\) Gell-Mann operator
+  decomposition;
+- moving rank-three carrier on the timelike branch;
+- minimal norm-preserving two-sided carrier algebra gives
+  \(\mathfrak{so}(1,3)\oplus\mathfrak u(1)_{\rm phase}\), not full colour;
+- adding raw-carrier full colour to the boost sector closes to
+  \(\mathfrak{su}(1,3)\), conflicting with the present sharp/determinant GR
+  core;
+- a tree-level one-biquaternion Hessian cannot be an invertible local rewrite
+  of eight perturbative gluons;
+- the exact constrained \(4\times3\) Stiefel rewrite
+  \(Z^\dagger GZ=-I_3\) modulo local \(SU(3)\) has exactly seven normalized
+  physical modes; adding the radial mode restores the original eight;
+- the Stiefel current produces the derived adjoint
+  \(B\,\beta\,\partial\beta\) HLS vertex;
+- weak fixed-frame loops generate a positive \(Z_B\) but leave a massive
+  vector-meson-like HLS phase;
+- the timelike field space is a cone and the Stiefel chart collapses at
+  \(\rho=0\), so the preferred target is finite-radius rather than a raw-field
+  origin transition;
+- after an autonomous \(F_B^2\) exists, \(c_V=0\) restores independent local
+  \(SU(3)_Z\times SU(3)_B\), while the locking term reduces them to the
+  diagonal;
+- useful Yang--Mills scale separation requires order-one \(Z_B\), far beyond
+  the ordinary weak one-triplet induction benchmark;
+- \(SU(1,3)/SU(3)\cong S^1\times\mathbb C^3\), so the exact one-\(\Theta\)
+  composite frame bundle has no independent instanton \(c_2\) sectors;
+- the determinant anisotropy is a symmetric \(\mathbf6\) spurion with
+  physical stabilizer \(SO(3)\); an autonomous gauge EFT would have the
+  corresponding rank-five Higgs pattern.
 
-Primary open target:
-derive a quantum/collective 1PI action with genuine local SU(3) redundancy,
-Yang-Mills ultraviolet vertices, and BRST/Slavnov-Taylor identities.  A
-gauge-invariant physical massless gluon pole is not required in a confining IR
-theory.
+Preferred finite-radius endpoint:
+\[
+\boxed{
+\rho_0>0,\qquad
+Z_B>0,\qquad
+c_V\to0,\qquad
+\lambda_2\to0,\qquad
+M_\beta^2>0.
+}
+\]
+
+Primary open target: determine the finite noncompact Stiefel/HLS phase diagram,
+the full locking-operator flow, and especially the sharp/GR source
+\[
+\left.\beta_{\lambda_2}\right|_{\lambda_2=0}.
+\]
+Full QCD has not been derived.
 
 ### P3 — CMB full covariance: STATISTICAL INTERFACE READY, THEORY BLOCKED
 
@@ -124,116 +156,41 @@ Implemented:
 - out-of-sample H3-vs-H2 decision rule.
 
 Closed negative inference:
-compact internal `S1_psi` produces KK masses but does not impose
-`k_spatial >= 1/R_psi`; the historical low-l spatial cutoff is
-phenomenological.
+\[
+\mathbb R^3\times S^1_\psi:
+\qquad
+\lambda_{\mathbf k,n}=|\mathbf k|^2+n^2/R_\psi^2.
+\]
+Compact internal \(\psi\) therefore creates KK masses but does not impose
+\(k_{\rm spatial}\ge1/R_\psi\).
 
-Primary open target:
-derive the constrained scalar perturbation Hessian, the map
-`delta Theta -> R`, the initial-state prescription, and therefore the frozen
-primordial covariance `P_UBT`.
+Primary open target: derive the constrained scalar perturbation Hessian, the
+map \(\delta\Theta\to\mathcal R\), the state prescription and the frozen
+primordial covariance \(P_{\rm UBT}\).
 
-### P4 — torus-modulus selection: MASSLESS ONE-LOOP BRANCH CLOSED AS NO-GO
+### P4 — torus modulus: MASSLESS ONE-LOOP BRANCH CLOSED AS NO-GO
+
+For a genuine fixed-area flat two-torus,
+\[
+\det{}'\Delta_\tau\propto\Im\tau\,|\eta(\tau)|^4.
+\]
 
 Established:
-- overall massless one-loop scale determinant has no finite selected radius;
-- inversion symmetrisation is flat rather than self-dual stabilising;
-- the fixed-area massless T2 determinant is
-  `Im(tau_mod)|eta(tau_mod)|^4`;
-- square is the rectangular determinant maximum but a saddle in full moduli;
-- hexagonal is the determinant maximum among fixed-area flat tori;
-- the standard positive bosonic one-loop log-determinant has no finite global
-  modulus minimum by itself.
+- no finite scale is selected by the isolated massless one-loop determinant;
+- square is the determinant maximum in the rectangular family but a saddle in
+  the full modulus plane;
+- the hexagonal torus is the fixed-area determinant maximum;
+- the standard positive bosonic \(+\frac12\log\det{}'\Delta\) action has no
+  finite global modulus minimum by itself;
+- the older termwise positive-Hessian proof is superseded because it
+  differentiated a divergent sum before regularization.
 
-Primary open target:
-derive a genuine massive/interacting/backreacted bounded
-`V_eff(tau_mod,tau_mod_bar)` from the finalized UBT Hessian/action.
+Primary open target: derive a genuine massive/interacting/backreacted bounded
+\(V_{\rm eff}(\tau_{\rm mod},\bar\tau_{\rm mod})\) from the finalized UBT
+action/Hessian.
 
+### Cross-cutting blocker — single action
 
-### P2 route refinement — Stiefel HLS critical phase
-
-The strongest remaining one-field colour route is now an exact constrained
-(4	imes3) Stiefel / hidden-local-(SU(3)) formulation.
-
-Key points:
-- (Z^dagger GZ=-I_3) modulo local (SU(3)) has exactly seven normalized
-  physical real modes; the radial Theta mode restores eight.
-- The derived traceless frame current contains the adjoint bilinear
-  (B,eta,partialeta) vertex needed for HLS vacuum polarization.
-- A weak fixed-frame phase generates (Z_B>0) but remains vector-meson-like
-  and massive.
-- The HLS mass operator is gauge invariant and relevant, so massless colour
-  requires a genuine critical/unbroken phase rather than gauge redundancy
-  alone.
-- The positive timelike kinetic gives angular coefficients proportional to
-  (ho^2).  With (c_V=a_Hho^2), the enhanced-potential endpoint
-  (mu	o0^-) provides a candidate scaling in which
-  (m_B^2	o0) while (Z_B) and the induced gauge coupling can remain finite.
-- This candidate also requires (lambda_2	o0); otherwise the determinant
-  structure breaks candidate colour (SU(3)	o SO(3)).
-
-The next actual calculation is the finite noncompact (4	imes3) HLS phase
-diagram, preferably by background-field FRG or an equivalent constrained
-gap/Schwinger--Dyson analysis.
-
-The preferred QCD-like endpoint is
-[
-m_{B,m ren}^2=0,qquad
-Z_B>0,qquad
-M_eta^2>0,
-]
-so that below the charged-frame gap the colour EFT can approach pure
-(SU(3)) Yang--Mills.
-
-
-### P2 finite-radius refinement — 2026-10-10
-
-The preferred HLS target has changed from the singular raw-field endpoint
-(ho	o0) to a **finite-radius quantum critical/decoupling surface**.
-
-New exact boundaries:
-- the timelike field space is a cone with measure
-  (ho^7dho,dmu_7); the Stiefel rewrite loses invertibility at
-  (ho=0);
-- a homogeneous frame (W=ho Z) cannot stay rank three at the origin,
-  because a Hermitian form of signature ((1,3)) has complex Witt index one;
-- after (F_B^2) exists, (c_V=0) restores independent local
-  (SU(3)_Z	imes SU(3)_B), while (c_V
-e0) locks them to the diagonal;
-- weak current polarization generates (Z_B) but cannot perturbatively cancel
-  a finite HLS mass intercept;
-- useful pure-Yang--Mills scale separation requires order-one (Z_B); the
-  weak one-triplet induction is far too small unless its nominal coupling/log
-  is already outside a controlled weak regime;
-- (SU(1,3)/SU(3)cong S^1	imesmathbb C^3), so the exact one-Theta
-  composite frame bundle is topologically trivial and has no independent
-  instanton (c_2) sectors;
-- full Yang--Mills topology therefore requires a genuinely autonomous,
-  non-invertible collective gauge-field emergence step;
-- the determinant anisotropy is a symmetric ({f6}) spurion with physical
-  stabilizer (SO(3)); in an autonomous gauge EFT its canonical Higgs pattern
-  has rank five (five symmetric Gell--Mann directions broken, three
-  (SO(3)) directions unbroken).
-
-Preferred finite-radius endpoint:
-[
-ho_0>0,qquad
-Z_B>0,qquad
-c_V	o0,qquad
-lambda_2	o0,qquad
-M_eta^2>0.
-]
-
-At (c_V=0), the autonomous (B) sector can retain ordinary Yang--Mills gauge
-protection.  The remaining major radiative-stability problem is
-(lambda_2): the isolated colour sigma sector protects
-(lambda_2=0) by global (SU(1,3)), but the canonical sharp/GR core breaks
-that symmetry and can act as a spurion source.
-
-The next decisive calculation is therefore the mixed GR/colour contribution
-to
-[
-left.eta_{lambda_2}ight|_{lambda_2=0},
-]
-or an equivalent demonstration that the sharp-sector spurions decouple at the
-colour matching scale.
+None of P2--P4 can be promoted to a first-principles physical closure until the
+single fundamental action is finalized and its constrained quantum measure,
+Hessian and effective-sector reduction maps are fixed.
