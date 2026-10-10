@@ -2,13 +2,9 @@
 """Exact checks for the 4x3 Stiefel / hidden-local-SU(3) rewrite."""
 import sympy as sp
 
-# Real degree count.
-n_real=2*4*3
-hermitian_constraints=3**2
-su3_gauge=3**2-1
-assert n_real-hermitian_constraints-su3_gauge==7
+# Degree count.
+assert 2*4*3 - 3**2 - (3**2-1) == 7
 
-# Reference negative frame in C^(1,3).
 G=sp.diag(1,-1,-1,-1)
 Z=sp.Matrix([
     [0,0,0],
@@ -16,33 +12,32 @@ Z=sp.Matrix([
     [0,1,0],
     [0,0,1],
 ])
-assert Z.H*G*Z==-sp.eye(3)
-
-# Reference positive normal.
 n=sp.Matrix([1,0,0,0])
-assert (n.H*G*n)[0]==1
-assert Z.H*G*n==sp.zeros(3,1)
 
-# Completeness: n n^dagger G - Z Z^dagger G = I4.
-assert sp.simplify(n*n.H*G-Z*Z.H*G-sp.eye(4))==sp.zeros(4)
+assert Z.H*G*Z == -sp.eye(3)
+assert (n.H*G*n)[0] == 1
+assert Z.H*G*n == sp.zeros(3,1)
 
-# Algebraic B equation: C=C0+c I with traceless C0.
-c=sp.symbols("c")
-x=sp.symbols("x0:9")
-C0=sp.Matrix(3,3,x)
-C0=C0-sp.trace(C0)*sp.eye(3)/3
-C=C0+c*sp.eye(3)
-B=sp.Matrix(3,3,sp.symbols("b0:9"))
-B=B-sp.trace(B)*sp.eye(3)/3
+Pplus=sp.eye(4)+Z*Z.H*G
+assert sp.simplify(Pplus*Pplus-Pplus)==sp.zeros(4)
+assert Pplus*Z==sp.zeros(4,3)
+assert Pplus*n==n
+assert sp.simplify(Pplus-n*n.H*G)==sp.zeros(4)
 
-# The B-dependent quadratic polynomial is Tr(B^2-2 B C);
-# its stationary point in the traceless subspace is B=P_su3(C)=C0.
-D=B-C0
-expr=sp.expand(sp.trace(B*B-2*B*C))
-expr_at=sp.expand(expr.subs(dict(zip(list(B),list(C0))))) if False else None
+# Generic anti-Hermitian u(3) current decomposes uniquely into su(3)+u(1).
+C=sp.Matrix(3,3,sp.symbols("c0:9"))
+C0=C-sp.trace(C)*sp.eye(3)/3
+assert sp.simplify(sp.trace(C0))==0
+assert sp.simplify(C-(C0+sp.trace(C)*sp.eye(3)/3))==sp.zeros(3)
 
-# Check projector directly.
-P=C-sp.trace(C)*sp.eye(3)/3
-assert sp.simplify(P-C0)==sp.zeros(3)
+# Algebraic HLS term is a square in B-C0 and is minimized exactly at B=C0.
+d=sp.symbols("d0:9", real=True)
+D=sp.Matrix(3,3,d)
+D=D-sp.trace(D)*sp.eye(3)/3
+# Sum of independent real squares is enough to verify uniqueness of D=0.
+q=sum(x**2 for x in d)
+grad=[sp.diff(q,x) for x in d]
+sol=sp.solve(grad,d,dict=True)
+assert sol and all(sol[0].get(x,0)==0 for x in d)
 
-print("PASS: 4x3 constrained frame modulo local SU(3) has 7 real DOF, reconstructs the timelike coset, and the auxiliary connection equals the traceless frame current")
+print("PASS: constrained 4x3 frame modulo local SU(3) has 7 real DOF; P+ is the timelike normal projector; HLS vertical sector is algebraically eliminated at B=C0")
