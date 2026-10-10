@@ -16,6 +16,49 @@ UBT-AI-PROVENANCE-END
 
 # Unified Biquaternion Theory (UBT)
 
+## Current research status — 10 October 2026
+
+UBT is **not a completed theory of everything** and does not currently claim a
+first-principles derivation of the full Standard Model or a unique quantum
+gravity completion.
+
+The present status is:
+
+- **Fundamental action:** the single-\(\Theta\) action is a defined family but
+  is **not finalized**. Its microscopic measure, complete Hessian, physical
+  mode content and all effective-sector reductions are not yet uniquely fixed.
+- **GR:** projection-free covariant-tetrad geometry, rank-ten metric kinematics
+  and several local closure theorems are proved; Einstein--\(\Lambda\) recovery
+  exists as a **conditional low-energy effective branch**, not yet as an
+  unconditional microscopic derivation from the finalized action.
+- **Colour \(SU(3)\):** the algebraic stabilizer, Gell-Mann operator structure,
+  rank-three moving carrier and exact \(4\times3\) Stiefel/hidden-local
+  \(SU(3)\) rewrite are established at the stated levels. Full QCD dynamics is
+  **open**. The preferred route is a finite-radius collective/HLS phase with an
+  autonomous Yang--Mills sector; weak fixed-frame induction alone is
+  insufficient.
+- **Theta / complex time:** current objects are classified. Physical
+  \(\tau_{\rm UBT}=t+i\psi\) is distinct from the dimensionless Jacobi modular
+  parameter. The free compact-circle heat trace is ordinary Jacobi-theta
+  mathematics; generic finite weighted reductions are not modular by default.
+- **CMB:** the full-covariance H0--H3 statistical interface is implemented, but
+  a genuine UBT H3 test is blocked until the action derives the primordial
+  covariance \(P_{\rm UBT}\).
+- **Torus modulus:** the isolated massless one-loop determinant does **not**
+  select a stable finite modulus. A massive/interacting/backreacted
+  \(V_{\rm eff}\) remains open.
+- **Quantitative prediction:** no zero-parameter numerical prediction is
+  currently registered as derived from a unique finalized fundamental action.
+
+Authoritative status sources:
+STATUS_OF_UBT.md, CLAIMS.yaml, WHAT_IS_PROVED.md, and
+research_tracks/priority_program_2026_10/README.md.
+
+For a comparison with neighbouring research programmes, see
+docs/UBT_THEORY_LANDSCAPE_2026_10.md.
+
+---
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21347352.svg)](https://doi.org/10.5281/zenodo.21347352)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
