@@ -9,3 +9,5 @@
 - **P4:** isolated massless one-loop torus stabilization is a no-go; an interacting bounded modulus potential remains open.
 
 Granular authority: CLAIMS.yaml and STATUS_OF_UBT.md.
+
+Comparative positioning: [UBT scientific positioning — October 2026](UBT_POSITIONING_2026_10.md).
