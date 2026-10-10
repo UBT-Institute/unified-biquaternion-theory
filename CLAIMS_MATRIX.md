@@ -15,3 +15,6 @@ UBT-AI-PROVENANCE-END
 
 - EN: [`CLAIMS_MATRIX.en.md`](CLAIMS_MATRIX.en.md)
 - CS: [`CLAIMS_MATRIX.cs.md`](CLAIMS_MATRIX.cs.md)
+
+- Current status EN: [docs/CURRENT_STATUS.en.md](docs/CURRENT_STATUS.en.md)
+- Aktuální stav CS: [docs/CURRENT_STATUS.cs.md](docs/CURRENT_STATUS.cs.md)
