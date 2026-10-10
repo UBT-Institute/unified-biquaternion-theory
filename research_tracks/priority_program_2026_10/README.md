@@ -148,3 +148,39 @@ Established:
 Primary open target:
 derive a genuine massive/interacting/backreacted bounded
 `V_eff(tau_mod,tau_mod_bar)` from the finalized UBT Hessian/action.
+
+
+### P2 route refinement — Stiefel HLS critical phase
+
+The strongest remaining one-field colour route is now an exact constrained
+(4	imes3) Stiefel / hidden-local-(SU(3)) formulation.
+
+Key points:
+- (Z^dagger GZ=-I_3) modulo local (SU(3)) has exactly seven normalized
+  physical real modes; the radial Theta mode restores eight.
+- The derived traceless frame current contains the adjoint bilinear
+  (B,eta,partialeta) vertex needed for HLS vacuum polarization.
+- A weak fixed-frame phase generates (Z_B>0) but remains vector-meson-like
+  and massive.
+- The HLS mass operator is gauge invariant and relevant, so massless colour
+  requires a genuine critical/unbroken phase rather than gauge redundancy
+  alone.
+- The positive timelike kinetic gives angular coefficients proportional to
+  (ho^2).  With (c_V=a_Hho^2), the enhanced-potential endpoint
+  (mu	o0^-) provides a candidate scaling in which
+  (m_B^2	o0) while (Z_B) and the induced gauge coupling can remain finite.
+- This candidate also requires (lambda_2	o0); otherwise the determinant
+  structure breaks candidate colour (SU(3)	o SO(3)).
+
+The next actual calculation is the finite noncompact (4	imes3) HLS phase
+diagram, preferably by background-field FRG or an equivalent constrained
+gap/Schwinger--Dyson analysis.
+
+The preferred QCD-like endpoint is
+[
+m_{B,m ren}^2=0,qquad
+Z_B>0,qquad
+M_eta^2>0,
+]
+so that below the charged-frame gap the colour EFT can approach pure
+(SU(3)) Yang--Mills.
