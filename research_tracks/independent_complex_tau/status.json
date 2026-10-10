@@ -106,10 +106,47 @@
     {
       "id": "C5-WAVE-PHYSICAL",
       "status": "OPEN_GAP",
-      "statement": "The displayed hyperbolic dispersion and periodic spacelike spectrum are conditional diagnostics, not a derived UBT Hessian, physical mode count, or quantization mechanism.",
+      "statement": "The displayed five-dimensional hyperbolic diagnostic and periodic spacelike spectrum remain conditional. The later curvature calculation establishes only the specified four-dimensional gravitational candidate tensor sector, not a microscopic UBT Hessian or independent-tau quantization mechanism.",
       "evidence": [
         "wave_dynamics.en.md",
         "wave_dynamics.cs.md"
+      ]
+    },
+    {
+      "id": "C5-WAVE-CURVED-SYMPLECTIC",
+      "status": "DERIVED_WITH_ASSUMPTIONS",
+      "statement": "For the specified fixed isotropic Lorentz connection and generated homogeneous background, the normal map is delta Q=beta d(alpha/beta). The quadratic action retains the locally degenerate weighted exterior-square form despite nonzero curvature.",
+      "assumptions": [
+        "Fixed connection with boost beta(t) dx^i",
+        "Lorentz-real X=T(t) delta_0 with nondegenerate generated coframe",
+        "Existing scalar symplectic action and unrestricted normal perturbations",
+        "Compactly supported local variations"
+      ],
+      "evidence": [
+        "curvature_waves.en.md",
+        "curvature_waves.cs.md",
+        "verify_curvature_waves.py",
+        "curvature_waves_results.json"
+      ]
+    },
+    {
+      "id": "C5-WAVE-TENSOR-CANDIDATE",
+      "status": "DERIVED_WITH_ASSUMPTIONS",
+      "statement": "The existing split-jet MacDowell-Mansouri candidate has a positive reduced tensor Hessian and two luminal tensor polarizations on its positive-coupling de Sitter vacuum. An explicit lift holds Theta constant, locating propagation in the jet/connection geometry rather than deriving a Theta-only propagator.",
+      "assumptions": [
+        "The existing curvature candidate is chosen, not microscopically derived",
+        "Real non-null nondegenerate four-dimensional split-jet patch",
+        "Independent candidate connection and jet variations with complete chain rule",
+        "Spinless vacuum and positive g_G squared, positive ell, positive cosmological sign",
+        "Linearized Cartan and gravitational constraints resolved",
+        "Compact support and fixed topology"
+      ],
+      "prior_result": "../action_selection/single_theta_macdowell_mansouri_candidate.en.md",
+      "evidence": [
+        "curvature_waves.en.md",
+        "curvature_waves.cs.md",
+        "verify_curvature_waves.py",
+        "curvature_waves_results.json"
       ]
     }
   ],
@@ -120,7 +157,8 @@
       "verify_c5.py": 51,
       "verify_c5_dynamics.py": 32,
       "verify_auxiliary_action.py": 22,
-      "verify_wave_dynamics.py": 21
+      "verify_wave_dynamics.py": 21,
+      "verify_curvature_waves.py": 33
     },
     "independent_auxiliary_channel": "Python fractions.Fraction; independently implemented determinant and interpolation, finite rational witnesses",
     "test": "../../tests/test_independent_complex_tau.py",
@@ -129,9 +167,10 @@
     "limits": [
       "Encoded identities only",
       "Rational witnesses do not prove the generic theorem",
-      "No physical spectrum, stability, data fit, or microscopic action derivation"
+      "No complete complex/independent-tau spectrum, microscopic action derivation, quantization, or observational fit; tensor stability is restricted to the stated real candidate sector"
     ],
-    "independent_wave_channel": "Python fractions.Fraction; separate permutation-sign, exterior-symbol kernel and Leibniz determinant implementations"
+    "independent_wave_channel": "Python fractions.Fraction; separate permutation-sign, exterior-symbol kernel and Leibniz determinant implementations",
+    "independent_curvature_channel": "Python fractions.Fraction; separately implemented finite curved-normal-map and tensor-lift/normalization identities"
   },
   "bilingual": {
     "translation_source": "en",
@@ -147,15 +186,21 @@
       [
         "wave_dynamics.en.md",
         "wave_dynamics.cs.md"
+      ],
+      [
+        "curvature_waves.en.md",
+        "curvature_waves.cs.md"
       ]
     ],
     "human_semantic_equivalence_review": "PENDING_BEFORE_MERGE"
   },
   "open_work": [
     "Finalize the one microscopic action and its independent variables",
+    "Derive the curvature candidate origin and its physical variable/constraint content; a constant-Theta tensor lift does not supply a Theta-only propagator",
     "Specify a connection outside the tested factorized family; compute its complete chain-rule Hessian and nonlinear constraints, including the physical reality sector",
     "Derive a physical reality/signature prescription and account for all complex field modes",
     "Establish quantization, stability, and an observational parameter bridge"
   ],
-  "updated_date": "2026-10-10"
+  "updated_date": "2026-10-10",
+  "continuation_baseline_commit": "d51d5d47428dd228086b5460ddfd2702e9251818"
 }

@@ -1,0 +1,177 @@
+{
+  "date": "2026-10-10",
+  "passed": true,
+  "checks_count": 33,
+  "checks": [
+    {
+      "name": "curved_background_generated_coframe",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "curved_background_nondegeneracy_factor",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "curvature_time_boost_component",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "curvature_spatial_rotation_component",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "curved_normal_map_twisted_exact_form",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "curved_normal_map_covariant_chain_rule",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "curved_quadratic_weight_beta_squared",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "TT_exponential_volume_through_second_order",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "TT_inverse_metric_through_second_order",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "ADM_background_extrinsic_term",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "ADM_linear_tensor_extrinsic_term",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "ADM_quadratic_tensor_kinetic_coefficient",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "ADM_linear_tensor_spatial_curvature",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "ADM_quadratic_tensor_gradient_coefficient",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "ADM_two_polarization_action_normalization",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "TT_linear_momentum_constraint",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "TT_linear_trace_constraint",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "nonzero_momentum_TT_constraint_rank",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "tensor_full_Euler_equation",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "tensor_Hamiltonian_positive_sum",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "tensor_frozen_characteristic_polynomial",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "candidate_de_Sitter_Friedmann_constraint",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "candidate_tensor_coefficient",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "canonical_rescaled_tensor_equation",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "de_Sitter_conformal_pump",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "de_Sitter_exact_tensor_mode",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "de_Sitter_finite_late_time_mode",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "TT_split_jet_lift_at_constant_Theta",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "TT_split_jet_lift_Lorentz_antisymmetry",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "fraction_curved_normal_identity_0",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_curved_normal_identity_1",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_tensor_normalization_and_lift_0",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_tensor_normalization_and_lift_1",
+      "channel": "Python Fraction",
+      "passed": true
+    }
+  ],
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "scope": "Fixed curved isotropic symplectic branch; conditional four-dimensional vacuum tensor dynamics of the existing split-jet curvature candidate.",
+  "not_tested": "Microscopic action selection, full nonlinear constraint formalization, arbitrary composite connections, all complex/independent-tau modes, quantization or observations.",
+  "lean_status": "LEAN-PENDING: no Lean/Lake executables or checked formalization of the geometric and variational arguments supplied."
+}
