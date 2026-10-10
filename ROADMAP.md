@@ -1,17 +1,74 @@
-## Active focused programme — 2026-10-10
+## Active research roadmap — 2026-10-10
 
-1. Finalize the theta/complex-time analytic classification without conflating
-   physical complex time with the Jacobi modular parameter.
-2. Close or falsify the microscopic SU(3) dynamics bridge.  The direct raw
-   carrier and direct finite-jet colour-triplet interpretations are now
-   excluded; the remaining one-field target is an exact collective/composite
-   gauge construction.
-3. Replace diagonal-only CMB searches by preregistered full-covariance
-   TT/TE/EE tests against ordinary topology and generic oscillatory null models.
-4. Study theta-energy torus selection only after a genuine compact modulus is
-   derived from the UBT action/Hessian/partition function.
+This section supersedes the older May/July execution ordering below. Older
+week-by-week plans are retained as historical planning records, not as the
+current priority order.
 
-Status promotions must be mirrored in CLAIMS.yaml and STATUS_OF_UBT.md.
+### Priority 0 — finalize the fundamental one-Theta action
+
+Exit criterion: one action with the field space, measure, involutions,
+connection/tetrad status, derivative order, potential, boundary terms and free
+parameters fixed well enough to derive the full Euler--Lagrange system and
+constrained Hessian. Current status: **OPEN**.
+
+### Priority 1 — finite-radius emergent colour / HLS phase
+
+Use the exact constrained 4x3 Stiefel rewrite, but do not claim QCD from the
+kinematics alone. The preferred endpoint is
+
+\[
+\rho_0>0,\qquad Z_B>0,\qquad c_V\to0,\qquad
+\lambda_2\to0,\qquad M_\beta^2>0.
+\]
+
+Immediate calculation: determine the sharp/GR-sector source
+
+\[
+\left.\beta_{\lambda_2}\right|_{\lambda_2=0}
+\]
+
+or prove a scale/sequestering mechanism that removes the SU(1,3)-breaking
+spurions from the colour matching regime. Then solve the finite noncompact
+4x3 HLS phase problem with a gauge-consistent FRG/gap/lattice method.
+
+### Priority 2 — cosmological second variation and primordial covariance
+
+Derive the constrained scalar perturbation action, the map
+\(\delta\Theta\to\mathcal R\), the quantum-state prescription, and
+\(P_{\rm UBT}\). Only then run the preregistered H0--H3 full-covariance
+CMB comparison.
+
+### Priority 3 — quantum definition and RG closure
+
+Specify the path-integral/measure or equivalent quantum framework, physical
+mode count, BRST/constraint treatment, and a reproducible renormalization/FRG
+scheme. No UV-completion claim without an explicit fixed point, continuum
+limit, or other controlled quantum closure.
+
+### Priority 4 — electroweak, hypercharge, Yukawa and fermion-mass closure
+
+Keep the proved/conditional algebraic gauge results, but derive matter
+representations, hypercharges, anomaly cancellation, Higgs/VEV structure and
+Yukawa/mass data from the same finalized action.
+
+### Priority 5 — discriminative prediction and external validation
+
+Produce one preregistered quantitative prediction beyond SM + LambdaCDM that
+is not fitted after looking at the evaluation data. Seek independent
+reproduction/review of the central algebraic and GR derivations.
+
+### Completed/narrowed October items
+
+- Theta/complex-time classification: **closed for currently defined objects**;
+  full interacting modular covariance remains open.
+- CMB statistics: full-covariance interface ready; theory template missing.
+- Massless torus determinant: **closed as a no-go for finite stable modulus**;
+  massive/interacting V_eff remains open.
+- Raw-carrier colour and weak one-loop shortcuts: multiple exact no-go results;
+  the finite-radius HLS/collective phase is the preferred remaining route.
+
+Every status promotion must be mirrored in `CLAIMS.yaml`,
+`STATUS_OF_UBT.md`, `WHAT_IS_PROVED.md` and the bilingual claim matrix.
 
 <!--
 UBT-AI-PROVENANCE-BEGIN
@@ -48,8 +105,7 @@ evidence only.
 
 **Author**: Ing. David Jaroš  
 **Date**: 2026-05-14  
-**Purpose**: Forward-looking plan for the next 21 days and beyond.
-Based on current proof status; no aspirational items without a clear path.
+**Historical purpose (May 2026):** retained record of the former 21-day plan. It is superseded by the October 2026 roadmap at the top of this file.
 
 ---
 
