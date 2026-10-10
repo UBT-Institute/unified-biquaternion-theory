@@ -248,9 +248,9 @@ residue rank at most eight.  Eight massless gluons require sixteen physical
 transverse helicity modes.  Therefore full perturbative QCD cannot be an
 invertible local tree-level rewrite of the ordinary single-Theta Hessian.
 
-The one-field programme now requires a genuinely emergent local gauge 1PI
-structure or another nonperturbative collective mechanism; finding algebraic
-SU(3) generators or an \(F^2\) background term is not sufficient.
+The one-field programme now requires genuinely new quantum/composite poles in
+exact correlators; finding algebraic SU(3) generators or an \(F^2\) background
+term is not sufficient.
 
 ### Emergent gauge-action benchmark — 2026-10-10
 
@@ -455,79 +455,274 @@ Stiefel model has a distinct critical/unbroken phase with
 
 ### Stiefel critical-origin obstruction — 2026-10-10
 
-The attractive radial scaling \(\rho\to0\) is not a smooth continuation of the
-exact one-Theta Stiefel rewrite. The positive timelike field metric has cone
+The attractive radial scaling (ho	o0) is not a smooth continuation of the
+exact one-Theta Stiefel rewrite.  The positive timelike field metric has cone
 form
-\[
-ds^2=d\rho^2+\rho^2ds_7^2,
-\]
+[
+ds^2=dho^2+ho^2ds_7^2,
+]
 so the field-space measure carries
-\[
-\rho^7\,d\rho\,d\mu_7.
-\]
+[
+ho^7,dho,dmu_7.
+]
 The angular/Stiefel change of variables is therefore singular at the raw-field
 origin.
 
-A homogeneous frame \(W=\rho Z\) does not remove the problem:
-\[
-W^\dagger GW=-\rho^2I_3.
-\]
-At \(\rho=0\) the three columns would have to span a totally isotropic complex
-subspace of a Hermitian space of signature \((1,3)\), whose complex Witt index
-is only one. Hence the rank-three colour frame necessarily collapses.
+A homogeneous frame (W=ho Z) does not remove the problem:
+[
+W^dagger GW=-ho^2I_3.
+]
+At (ho=0) the three columns would have to span a totally isotropic complex
+subspace of a Hermitian space of signature ((1,3)), whose Witt index is only
+one.  Hence the rank-three colour frame necessarily collapses.
 
-The \(\rho\to0\) critical HLS gauge-emergence scaling remains a useful limiting
+The (ho	o0) critical HLS gauge-emergence scaling remains a useful limiting
 diagnostic, but the preferred P2 target is now a **finite-radius
 quantum-disordered HLS phase** with a well-defined timelike frame,
-\[
-m_{B,\rm ren}^2=0,\qquad
-Z_B>0,
-\]
-and gapped charged frame excitations.
+(m_{B,m ren}^2=0), (Z_B>0), and gapped charged frame excitations.
 
 ### Finite-radius HLS refinement and topology gate — 2026-10-10
 
-After a dynamical \(F_B^2\) term exists, the zero-locking surface
-\(c_V=0\) has an enhanced local product redundancy
-\[
-SU(3)_Z\times SU(3)_B.
-\]
-The Stiefel locking operator \(-(B-C_0)^2\) reduces this product to the
-diagonal. Thus \(c_V=0\) is technically natural once reached, although the
+After a dynamical (F_B^2) term exists, the zero-locking surface
+(c_V=0) has an enhanced local product redundancy
+[
+SU(3)_Z	imes SU(3)_B.
+]
+The Stiefel locking operator (-(B-C_0)^2) reduces this product to the
+diagonal.  Thus (c_V=0) is technically natural once reached, although the
 relevant locking operator is not generically driven there and additional
 cross-sector locking operators must also be controlled.
 
-Threshold matching provides a quantitative strong-coupling warning. If the
-charged frame triplet has gap \(M_\beta\) and the low-energy colour sector is
-pure \(SU(3)\),
-\[
-\Lambda_{\rm YM}
+Threshold matching provides a quantitative strong-coupling warning.  If the
+charged frame triplet has gap (M_eta) and the low-energy colour sector is
+pure (SU(3)),
+[
+Lambda_{m YM}
 =
-M_\beta
-\exp\!\left[
--\frac{8\pi^2}{11}Z_B(M_\beta)
-\right].
-\]
-A hierarchy \(M_\beta/\Lambda_{\rm YM}=10^3\) needs
-\(Z_B\simeq0.96\). The weak frame-loop formula then requires
-\[
-a_H^2
-\log\frac{\Lambda_{\rm UV}^2}{M_\beta^2}
-\sim
-9.1\times10^2,
-\]
-well outside an ordinary weak-current regime. The weak loop establishes the
-positive kinetic sign, not a realistic QCD hierarchy.
+M_eta
+exp[-8pi^2 Z_B(M_eta)/11].
+]
+A hierarchy (M_eta/Lambda_{m YM}=10^3) needs
+(Z_Bsimeq0.96).  The weak frame-loop formula then requires
+(a_H^2log(Lambda_{m UV}^2/M_eta^2)sim9.1	imes10^2), well outside an
+ordinary weak-current regime.  The weak loop establishes the positive kinetic
+sign, not a realistic QCD hierarchy.
 
 The normalized timelike coset has topology
-\[
-SU(1,3)/SU(3)\cong S^1\times\mathbb C^3.
-\]
-Its homogeneous \(SU(3)\) frame bundle is topologically trivial. Hence the
-purely composite one-\(\Theta\) frame connection can have local curvature but
-no independent second-Chern/instanton bundle sector. A genuine QCD-like phase
-must enlarge the collective \(B\)-field path integral to autonomous
+[
+SU(1,3)/SU(3)cong S^1	imesmathbb C^3.
+]
+Its homogeneous (SU(3)) frame bundle is topologically trivial.  Hence the
+purely composite one-Theta frame connection can have local curvature but no
+independent second-Chern/instanton bundle sector.  A genuine QCD-like phase
+must enlarge the collective (B)-field path integral to autonomous
 Yang--Mills topological sectors after frame matter decouples.
+
+## Update 2026-07-27: one canonical relation, exact Dirac lift
+
+The active geometric route is now explicitly single-path:
+
+\[
+\Theta\to E_\mu=\mathcal N_0^{-1/2}D_\mu\Theta
+\to
+\begin{cases}
+\tfrac12(E_\mu^\sharp E_\nu+E_\nu^\sharp E_\mu)=g_{\mu\nu}\mathbf1,\\
+\Gamma_\mu=\mathcal C(E_\mu),\quad
+\tfrac12\{\Gamma_\mu,\Gamma_\nu\}=g_{\mu\nu}I_4.
+\end{cases}
+\]
+
+The block Clifford lift is injective and exact; it adds no independent tetrad.
+The metric differential has rank 10 at every nondegenerate tetrad, with the
+six-dimensional Lorentz algebra as its complete kernel.  The grading matrix
+`Gamma_* = diag(I_2,-I_2)` anticommutes exactly with all lifted `Gamma_mu`,
+providing an algebraic fifth/complex-time channel with selectable square `+I`
+or `-I`.
+
+**Proved:** canonical relation -> curved Clifford relation; rank 10 and kernel
+6; exact fifth-channel anticommutation; the exact constrained-rank formula
+`rank(Dg|A)=dim(A+K)-6`; and the no-extra-field result that an invertible
+Jacobian with respect to the value of the original `Theta` preserves pointwise
+first-jet rank ten.  A nonzero scalar or scalar-pseudoscalar Dirac zero-order
+block is an explicit sufficient realization.  Eight independent real
+constraints acting only on the tetrad give rank at most eight.  
+**Open:** derivation of the required zero-order block or another exact
+transversality mechanism from the UBT action, self-consistent local PDE
+existence, Lorentz-slice preservation, and Einstein/quantum dynamics.
+
+The former spinor-current tetrad branch is retained only in
+`research_tracks/history/legacy_spinor_current_tetrad_2026-07-26/`.
+
+## Update 2026-07-26: GR endgame boundary
+
+The local split-jet construction now has an action-level auxiliary completion. `GAP-10T-JET-AUX` is **CLOSED [L1]** and `GAP-10T-JET-CONSTRAINT-SELECTION` is **CLOSED AS NO-GO [L1]**: the jet variables are nonpropagating and decouple on shell, but universal representability means that the pure constraint cannot choose a tetrad. The corrected proper-time/Kaluza-Klein calculation closes `GAP-10D-A2-FORM` and `GAP-10D-SPECTRAL-IR` conditionally, while `GAP-10D-UNDERDETERMINATION` is closed as a no-go. UBT therefore has a **complete conditional effective GR branch**, but not an unconditional single-Theta prediction of Newton's constant; `N_B`, `xi`, the UV scale and the constrained measure remain to be derived.
+
+# 2026-07-19 — Torsion-free no-go and torsionful local curved representer
+
+## Canonical geometry
+
+The canonical local metric remains projection-free and pointwise:
+
+\[
+E_\mu=\mathcal N_0^{-1/2}D_\mu\Theta,\qquad
+\frac12(E_\mu^\sharp E_\nu+E_\nu^\sharp E_\mu)=g_{\mu\nu}\mathbf1.
+\]
+
+The Lorentz slice is
+$E_\mu=i e_\mu{}^0\mathbf1+e_\mu{}^k\mathbf e_k$.  The tetrad-to-metric map
+has rank ten at every nondegenerate tetrad and a six-dimensional Lorentz-gauge
+kernel.
+
+## Newly closed or narrowed subgaps
+
+- **GAP-10K — CLOSED locally:** rank ten, kernel six.
+- **GAP-10Ω-KIN — CLOSED [L1]:** for specified tetrad and torsion, the unique
+  metric-compatible connection is
+  \(\omega=\mathring\omega(e)+K(T)\), with
+  \(K_{abc}=\tfrac12(T_{cab}-T_{abc}-T_{bca})\).
+- **GAP-10Ω-GR — CLOSED [L1]:** the torsion-free branch has
+  \(K=0\) and the unique Levi-Civita spin connection.
+- **GAP-10L-CONN — CLOSED [L1]:** every metric-compatible Lorentz connection
+  preserves \(\eta_{ab}\) and the Lorentz slice.
+- **GAP-10I-SR — CLOSED [L1]:** every constant Lorentz tetrad has the explicit
+  affine representer
+  \[
+  \Theta_{\rm aff}=\Theta_0+\sqrt{\mathcal N_0}\,E_\mu x^\mu.
+  \]
+  In particular,
+  \(\Theta_{\rm SR}=\Theta_0+\sqrt{\mathcal N_0}(ix^0\mathbf1+x^k\mathbf e_k)\)
+  generates Minkowski spacetime and has zero second spacetime derivatives.
+- **GAP-10I-1S — CLOSED AS NO-GO [L1]:** a naive one-sided regular connection
+  with invertible \(\Theta\) forces zero curvature under torsion-free tetrad
+  compatibility.
+- **GAP-10I-PAIR-KIN — CLOSED [L1]:** Lorentz-slice and metric compatibility
+  reduce the apparent pair to one spin connection,
+  \(A_\mu=\Omega_\mu,\ B_\mu=-\Omega_\mu^\ddagger\), modulo a central
+  one-form that cancels identically.
+- **GAP-10I-PAIR-GR — CLOSED AS A TORSION-FREE NO-GO [L1]:** with
+  \(K=0\), the pure Lorentz pairing makes a tetrad generated by one
+  \(\Theta\) imply
+  \(\mathring\nabla_\mu V^\nu=\delta_\mu{}^\nu\). Hence the torsion-free
+  branch is concurrent/homothetic and excludes the non-flat Schwarzschild
+  vacuum exterior with \(M\ne0\).
+- **GAP-10I-TORSION-LOCAL — CLOSED LOCALLY [L1]:** every smooth Lorentzian
+  tetrad has, on a sufficiently small non-null Gaussian patch, an explicit
+  Lorentz-real single-\(\Theta\) representer with
+  \(A=\Omega(e,K)\), \(B=-\Omega(e,K)^\ddagger\) and the composite
+  metric-compatible contortion
+  \[
+  K_{\nu\mu\rho}=
+  \frac{W_{\mu\nu}V_\rho-V_\nu W_{\mu\rho}}{V^2},
+  \qquad
+  W_{\mu\nu}=g_{\mu\nu}-\mathring\nabla_\mu V_\nu.
+  \]
+  This closes local curved representability without independent connection
+  fields, but does not select the torsion dynamically.
+- **GAP-10T-MINIMAL-ONE-CONNECTION-GR — CLOSED AS NO-GO [L1]:** combining
+  the torsion-free concurrent-vector theorem with the arbitrary-tetrad
+  composite-contortion right inverse yields a dichotomy. If the one connection
+  in `DTheta` is also the physical Levi-Civita connection, generic GR is
+  excluded; if the required contortion is retained in that same physical
+  connection, the branch is torsionful rather than exact ordinary GR.
+- **GAP-10T-JET-KIN — CLOSED LOCALLY [L1]:** for every tetrad and every
+  non-null Lorentz-real projection `X`, the mismatch
+  `Z_mu=s E_mu-D_LC_mu X` has an exact covariant decomposition. Its parallel
+  part fixes a composite relative central one-form, and its orthogonal part
+  fixes a composite Lorentz jet tensor. Their jet action gives
+  `Dhat_mu X=s E_mu` identically while physical curvature remains Levi-Civita.
+- **GAP-10T-JET-AUX — CLOSED [L1]:** an explicit multiplier action makes the
+  split-jet variables algebraic and nonpropagating; the multiplier and the
+  auxiliary metric/spin sources vanish on shell on every non-null patch.
+- **GAP-10T-JET-CONSTRAINT-SELECTION — CLOSED AS NO-GO [L1]:** because the
+  right inverse is surjective for every tetrad, the pure split-jet constraint
+  cannot select a physical tetrad from `Theta`.
+- **GAP-10T-JET-DYN — NARROWED:** nonpropagation and on-shell decoupling are
+  closed. The canonical action must still select the physical tetrad and jet
+  representative, or derive a separate non-surjective metric effective law;
+  null-patch/global continuation and the constrained mode measure also remain.
+- **GAP-10I-2S — NOT REQUIRED FOR LOCAL KINEMATIC REPRESENTABILITY:** the
+  general two-sided derivative remains useful, and a nontrivial relative
+  left/right component is still a possible torsion-free completion. If used,
+  it must be derived as composite or auxiliary and shown not to add
+  propagating degrees of freedom.
+
+The tensor $K(T)$ is the contorsion determined by the specified torsion.
+
+## Further closed conditional subgaps
+
+- **GAP-10T-PALATINI — CLOSED CONDITIONALLY [L1]:** in the minimal
+  Hilbert--Palatini branch the Cartan torsion map has rank 24/24.  Zero spin
+  current gives zero torsion; specified spin current gives unique contorsion.
+- **GAP-10T-SPIN — CLOSED CONDITIONALLY [L1]:** the direct tree-level matter
+  spin current is derived for the pure-pair representative in the effective
+  Palatini variation with tetrad, metric, volume form and $\Theta$ fixed.
+- **GAP-10T-FLAT-NOGO — CLOSED AS NO-GO [L1]:** that minimal effective branch
+  forces nonzero torsion away from at most one point of every flat affine
+  representer and therefore excludes the flat inertial torsion-free solution.
+- **GAP-10T-PAIRING-NOGO — CLOSED AS NO-GO [L1]:** the $\sharp$/Minkowski
+  pairing is unique up to scale among real symmetric Lorentz-invariant slice
+  pairings; the $\ddagger$ Hilbert--Schmidt form fails boost invariance, so
+  pairing selection alone cannot remove the affine obstruction.
+- **GAP-10T-GRADIENT-FLATNESS — CLOSED AS NO-GO [L1]:** if
+  $e^a=\mathcal N_0^{-1/2}dY^a$ with nondegenerate Jacobian, then
+  $g=\mathcal N_0^{-1}Y^*\eta$ is locally flat, the Levi-Civita curvature
+  and Hilbert--Palatini density vanish identically, and the locked kinetic
+  plus cosmological terms reduce to a Jacobian null Lagrangian.  The affine
+  stationarity result is therefore an auxiliary corollary, not a surviving
+  curved-GR branch
+  (`canonical/gr_closure/gap_10t_composite_flat_admissibility.tex`).
+- **GAP-10L-SYM — CLOSED CONDITIONALLY [L1]:** the Lorentz slice is the fixed
+  set of \(\mathcal JX=-\overline{X^\sharp}\) and is preserved by every unique
+  equivariant evolution with fixed data and sources.
+- **GAP-10I-PRESCRIBED — CLOSED [L1]:** for specified \((E,A,B)\), exact
+  existence and path independence are controlled by augmented holonomy.
+- **GAP-10D-PALATINI / GAP-10D-UNIQUENESS — CLOSED CONDITIONALLY [L1]:** the
+  minimal first-order action yields Einstein--\(\Lambda\), and Lovelock
+  assumptions make that four-dimensional infrared endpoint unique.
+- **GAP-10ψ-KIN — CLOSED [L1]:** a \(\psi\)-flow tangent to a local Lorentz
+  orbit leaves the metric invariant.
+- **GAP-10ψ-SYM — CLOSED CONDITIONALLY [L1]:** unique
+  \(\psi\)-translation-invariant dynamics preserves \(\psi\)-independent data.
+
+## Remaining narrowed/open GR bridge
+
+- **GAP-10T-DYN — NARROWED:** compute the full composite $\Theta$-only
+  variation and derive a torsion sector that admits the affine flat
+  representer through a canonical non-minimal cancellation or a
+  translational/relative-bimodule completion with no independent propagating
+  fields; derive the selected branch and normalization.
+- **GAP-10I-CURVED — LOCAL KINEMATICS CLOSED; DYNAMICS/GLOBAL PART
+  NARROWED:** an explicit local right inverse now exists for arbitrary smooth
+  tetrads using composite contortion. Canonical action-level selection,
+  physical torsion constraints, regularity at \(V^2=0\), horizons/caustics,
+  and global continuation remain open.
+- **GAP-10L-DYN — NARROWED:** verify equivariance and well-posed uniqueness for
+  the complete \(\Theta\) dynamics and sources.
+- **GAP-10D — NARROWED:** derive the Palatini/Lovelock infrared assumptions,
+  coefficients, and matter action from canonical UBT.
+- **GAP-10ψ — NARROWED:** identify the selected stability mechanism and exclude
+  unstable non-gauge imaginary-time modes.
+- **GAP-B-MASTER and GAP-U2Θ — OPEN.**
+- Compact-\(\psi\) fiber closure remains an **exploratory noncanonical branch**.
+- T1_GR remains **NOT SUBMISSION-READY** pending the curved dynamical bridge.
+
+## Interpretation of the implicit equation
+
+After connection reconstruction, the curved system is schematically
+
+\[
+E_\mu=\mathcal N_0^{-1/2}
+\left[\partial_\mu\Theta+A_\mu[E,T]\Theta-\Theta B_\mu[E,T]\right].
+\]
+
+This is an implicit nonlinear first-order PDE/fixed-point system.  If the
+allowed \(\Theta(q,\tau)\) is a Jacobi-theta or another transcendental function,
+the concrete system may additionally be transcendental.  Implicitness and
+transcendental functional dependence are distinct properties.
+
+---
+
+## 2026-06-14 (v95 — ALPHA STATUS FROZEN; Gap C1 CLOSED; OP-S4 CLOSED)
 
 ### T3_ALPHA: STATUS FREEZE (structural + numerical evidence; full derivation open)
 
