@@ -10,28 +10,6 @@ notice: The author has read the substance and accepts editorial responsibility.
 UBT-AI-PROVENANCE-END
 -->
 
-## 2026-10-10 update — focused programme theorem/no-go status
-
-This update records only theorem-level, standard-mathematics, conditional, or
-no-go results already present in the claim ledger. It does **not** promote the
-open HLS phase to a QCD derivation.
-
-| # | Claim | Level | Source |
-|---|---|---|---|
-| OCT-SU3-1 | A constrained complex \(4\times3\) frame \(Z^\dagger GZ=-I_3\) modulo local right \(SU(3)\) has exactly \(24-9-8=7\) real normalized modes and is locally equivalent to the timelike \(SU(1,3)/SU(3)\) collective rewrite | [L1] | research_tracks/T2_GAUGE/su3_stiefel_hls_rewrite.md; verification/su3_stiefel_hls_rewrite_check.py |
-| OCT-SU3-2 | The \(4\times3\) Stiefel size is uniquely minimal for seven normalized modes; quotienting by \(U(3)\) leaves six and removes the phase direction | [L1] | research_tracks/T2_GAUGE/su3_vs_u3_stiefel_count.md; verification/su3_vs_u3_stiefel_count_check.py |
-| OCT-SU3-3 | The Stiefel rewrite is singular at \(\rho=0\): the cone measure scales as \(\rho^7\), and signature \((1,3)\) has complex Witt index one, so a homogeneous rank-three frame cannot survive the raw-field origin | [L1 NO-GO / boundary] | research_tracks/T2_GAUGE/su3_stiefel_critical_origin_obstruction.md; verification/su3_stiefel_origin_obstruction_check.py |
-| OCT-SU3-4 | Once an autonomous \(F_B^2\) term exists, \(c_V=0\) restores independent local \(SU(3)_Z\times SU(3)_B\); the locking operator reduces the product to the diagonal | [L1 effective-sector theorem] | research_tracks/T2_GAUGE/su3_hls_locking_symmetry_enhancement.md; verification/su3_hls_locking_symmetry_check.py |
-| OCT-SU3-5 | \(SU(1,3)/SU(3)\cong S^1\times\mathbb C^3\); its homogeneous \(SU(3)\) frame bundle is topologically trivial, so the exact one-\(\Theta\) composite frame has no independent second-Chern/instanton bundle sector | [L1 topology] | research_tracks/T2_GAUGE/su3_coset_topology_instanton_boundary.md; verification/su3_coset_topology_check.py |
-| OCT-SU3-6 | The determinant anisotropy is a symmetric \(\mathbf6\) spurion with physical \(SO(3)\) stabilizer; its canonical gauge-Higgs quadratic form has rank five, leaving the \(\lambda_2,\lambda_5,\lambda_7\) directions unbroken | [L1 representation theory] | research_tracks/T2_GAUGE/su3_determinant_symmetric_spurion.md; verification/su3_symmetric_spurion_rank5_check.py |
-| OCT-THETA-1 | Physical \(\tau_{\rm UBT}\) and Jacobi \(\tau_J\) are distinct; for \(\vartheta_3(\tau)=\sum_n e^{\pi i n^2\tau}\), the scalar theta subgroup \(\Gamma_\theta=\langle S,T^2\rangle\) has index 3; generic finite weighted projections are not modular by default | [STD/L1 audit] | canonical/bridges/theta_parameter_separation.md; verification/theta_parameter_separation_check.py |
-| OCT-CMB-1 | On \(\mathbb R^3\times S^1_\psi\), \(\lambda_{\mathbf k,n}=|\mathbf k|^2+n^2/R_\psi^2\); compact internal \(\psi\) does not imply a spatial \(k_{\min}=1/R_\psi\) because the \(n=0\) sector reaches \(k\to0\) | [L1 NO-GO] | research_tracks/research_front/cmb_covariance/internal_circle_no_spatial_ir_cutoff.md; verification/cmb_internal_circle_no_spatial_cutoff_check.py |
-| OCT-TORUS-1 | For a fixed-area flat \(T^2\), the zeta-regularized massless scalar determinant is proportional to \(\operatorname{Im}\tau\,|\eta(\tau)|^4\); the square torus is a rectangular determinant maximum but a saddle in full moduli, and the isolated positive bosonic one-loop log-determinant has no finite global modulus minimum | [STD/L1 audit / NO-GO] | research_tracks/theta_torus_potential/zeta_regularized_shape_audit.md; verification/theta_torus_regularized_shape_check.py |
-
-**Still open:** a finalized single microscopic action; a finite noncompact
-Stiefel/HLS phase yielding full Yang--Mills dynamics; the action-derived CMB
-primordial covariance; and a bounded interacting torus-modulus potential.
-
 ## 2026-07-27 update — canonical generalized-Dirac lift
 
 | # | Claim | Level | Source |
