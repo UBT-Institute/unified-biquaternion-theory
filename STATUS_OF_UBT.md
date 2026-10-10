@@ -481,6 +481,43 @@ diagnostic, but the preferred P2 target is now a **finite-radius
 quantum-disordered HLS phase** with a well-defined timelike frame,
 (m_{B,m ren}^2=0), (Z_B>0), and gapped charged frame excitations.
 
+### Finite-radius HLS refinement and topology gate — 2026-10-10
+
+After a dynamical (F_B^2) term exists, the zero-locking surface
+(c_V=0) has an enhanced local product redundancy
+[
+SU(3)_Z	imes SU(3)_B.
+]
+The Stiefel locking operator (-(B-C_0)^2) reduces this product to the
+diagonal.  Thus (c_V=0) is technically natural once reached, although the
+relevant locking operator is not generically driven there and additional
+cross-sector locking operators must also be controlled.
+
+Threshold matching provides a quantitative strong-coupling warning.  If the
+charged frame triplet has gap (M_eta) and the low-energy colour sector is
+pure (SU(3)),
+[
+Lambda_{m YM}
+=
+M_eta
+exp[-8pi^2 Z_B(M_eta)/11].
+]
+A hierarchy (M_eta/Lambda_{m YM}=10^3) needs
+(Z_Bsimeq0.96).  The weak frame-loop formula then requires
+(a_H^2log(Lambda_{m UV}^2/M_eta^2)sim9.1	imes10^2), well outside an
+ordinary weak-current regime.  The weak loop establishes the positive kinetic
+sign, not a realistic QCD hierarchy.
+
+The normalized timelike coset has topology
+[
+SU(1,3)/SU(3)cong S^1	imesmathbb C^3.
+]
+Its homogeneous (SU(3)) frame bundle is topologically trivial.  Hence the
+purely composite one-Theta frame connection can have local curvature but no
+independent second-Chern/instanton bundle sector.  A genuine QCD-like phase
+must enlarge the collective (B)-field path integral to autonomous
+Yang--Mills topological sectors after frame matter decouples.
+
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 
 The active geometric route is now explicitly single-path:
