@@ -54,6 +54,23 @@ Definice se řídí dokumentem [`docs/UBT_SCOPE_AND_CLAIM_LEVELS.md`](docs/UBT_S
 
 ---
 
+## Synchronizace — říjen 2026
+
+| Tvrzení | Status | Primární zdroj | Poznámky |
+|---|---|---|---|
+| Fyzický komplexní čas versus Jacobiho parametr | PROVED / STATUS CORRECTION | `canonical/bridges/theta_parameter_separation.md` | `tau_UBT=t+i psi` je rozměrový; volný heat trace kompaktního kruhu používá bezrozměrné `tau_J=i s/(pi R_psi^2)`. Obecné konečné vážené součty nejsou automaticky modulární ani mock-modulární. |
+| Minimální norm-preserving bimodule | PROVED | `research_tracks/T2_GAUGE/su3_bimodule_u13_intersection.md` | Průnik s `u(1,3)` je `so(1,3)+u(1)_phase`; bezstopá část je přesně Lorentzovo `so(1,3)`, nikoli full color `su(3)`. |
+| Lie closure raw carrieru Lorentz + full color | PROVED / NO-GO boundary | `research_tracks/T2_GAUGE/su3_raw_carrier_lie_closure.md` | Full raw-carrier `su(3)` spolu se třemi boost směry uzavírá celé `su(1,3)`, což koliduje se současným sharp/determinant GR core. |
+| 4x3 Stiefel / hidden-local-SU(3) přepis | DERIVED_WITH_ASSUMPTIONS | `research_tracks/T2_GAUGE/su3_stiefel_hls_rewrite.md` | Přesný kinematický přepis normalizovaného timelike sektoru: 24 reálných komponent frame - 9 constraintů - 8 lokálních `SU(3)` redundancí = 7 fyzických módů. Dynamické QCD z toho samo neplyne. |
+| Weak fixed-frame HLS fáze | DERIVED_WITH_ASSUMPTIONS / NO-GO pro slabě vázané massless color | `su3_hls_fixed_frame_one_loop.md`; `su3_hls_transversality_mass_boundary.md`; `su3_hls_ym_threshold_matching.md` | Slabá tripletová smyčka generuje kladný gauge kinetic response, ale neruší locking/mass intercept a v kontrolovaném weak režimu nevytvoří velkou pure-YM hierarchii. |
+| Finite-radius autonomní HLS/Yang-Mills fáze | OPEN_GAP | `su3_stiefel_hls_frg_program.md`; `su3_hls_locking_symmetry_enhancement.md` | Preferovaný P2 cíl: `rho0>0`, `Z_B>0`, kritická locking/anizotropní plocha, gapped frame matter, správné BRST/ST identity a autonomní gauge topologie. |
+| Topologie composite frame | PROVED / BOUNDARY | `su3_coset_topology_instanton_boundary.md`; `su3_emergent_topology_noninvertibility.md` | `SU(1,3)/SU(3) ~= S1 x C3`; přesný one-Theta frame bundle je topologicky triviální, takže plné Yang-Mills instanton sektory vyžadují autonomní/non-invertibilní kolektivní gauge krok. |
+| Full-covariance CMB H0-H3 interface | DERIVED_WITH_ASSUMPTIONS | `research_tracks/research_front/cmb_covariance/FULL_COVARIANCE_PROTOCOL.md` | Statistický interface je připraven; reálné H3 vyhodnocení je blokováno, dokud nevznikne z akce odvozené frozen `P_UBT`. |
+| Inference interního `S1_psi` na prostorový IR cutoff | PROVED NO-GO | `internal_circle_no_spatial_ir_cutoff.md` | Kompaktní `psi` dává KK hmotnosti, ale `n=0` sektor ponechává běžný prostorový moment spojitý až k nule. |
+| Massless flat-torus one-loop výběr modulu | PROVED NO-GO / CORRECTION | `research_tracks/theta_torus_potential/zeta_regularized_shape_audit.md` | Zeta-regularizovaný determinant je úměrný `Im(tau)|eta(tau)|^4`; standardní bosonický massless logdet nedává konečné globální minimum modulu. |
+| Jedinečná finalizovaná fundamentální one-Theta akce | OPEN_GAP | `canonical/ACTION.en.md` | Rodina akcí je definovaná, ale jedinečná mikroskopická akce/míra/constraint systém nejsou finalizovány. |
+| Vědecké pozicování vůči ostatním programům | REVIEW / NON-THEOREM | `docs/UBT_POSITIONING_2026_10.md` | Nejsilnější současné průniky jsou HLS/Grassmannian a KK/spektrální metody; podobnosti se string/LQG/asymptotic-safety/NCG jsou omezené nebo metodologické, dokud není odvozena další struktura. |
+
 ## Explicitně spekulativní tvrzení (nekanonická)
 
 Pokud je reprodukovatelný empirický protokol neposune výše, následující zůstávají **SPECULATIVE**:
