@@ -1,49 +1,3 @@
-## Active focused programme — 2026-10-10
-
-The October programme has moved from broad exploration to explicit stage gates.
-
-1. **Finalize the single action family.** This remains the cross-cutting
-   foundational priority: configuration space, measure, pairing, independent
-   versus composite connections, Hessian, physical modes and sector-reduction
-   maps must be fixed by one variational principle.
-
-2. **P1 theta / complex time — closed for the currently defined objects.**
-   Keep \(\tau_{\rm UBT}\), the Jacobi modular parameter and elliptic argument
-   distinct. Full interacting modular covariance remains open.
-
-3. **P2 colour \(SU(3)\) — primary active physics target.**
-   The direct raw-carrier and direct finite-jet routes are closed as no-go
-   mechanisms. The strongest one-field route is the exact constrained
-   \(4\times3\) Stiefel / hidden-local-\(SU(3)\) rewrite. The preferred target
-   is a finite-radius quantum phase with
-   \[
-   \rho_0>0,\qquad Z_B>0,\qquad c_V\to0,\qquad
-   \lambda_2\to0,\qquad M_\beta^2>0,
-   \]
-   followed by matching to an autonomous Yang--Mills sector. The next
-   decisive calculation is the mixed sharp/GR source for
-   \(\beta_{\lambda_2}\) and the finite noncompact HLS phase flow.
-
-4. **P3 CMB — statistics ready, theory template blocked.**
-   Do not run post-hoc prime/theta searches as H3 evidence. Derive the
-   constrained scalar perturbation action, the map
-   \(\delta\Theta\to\mathcal R\), the state prescription and finally
-   \(P_{\rm UBT}\); then compare H3 out of sample against H2.
-
-5. **P4 torus modulus — massless one-loop route closed as no-go.**
-   Continue only with an action-derived genuine compact modulus and a bounded
-   massive/interacting/backreacted effective potential.
-
-6. **Prediction discipline.** No quantitative claim becomes a prediction until
-   its inputs are fixed before comparison with data and derived from the same
-   finalized action.
-
-Status promotions must be mirrored in CLAIMS.yaml, STATUS_OF_UBT.md,
-WHAT_IS_PROVED.md, and the public claim matrix.
-
-The older 21-day-window material retained below is historical planning context,
-not the current priority ordering.
-
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -56,189 +10,144 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-## Immediate programme update — 2026-07-27
+# UBT Development Roadmap
 
-The active GR/quantum bridge is the canonical-relation generalized-Dirac route.
-No second spinor-current tetrad is to be developed as a competing metric.
+**Current programme date:** 10 October 2026
 
-| Order | Proof target | Exit criterion |
-|---|---|---|
-| 1 | Derive the generalized-Dirac operator from one UBT action over `tau=t+i psi` | First-order Euler--Lagrange equation with all coefficients and involutions fixed; no independent metric/tetrad/connection inserted |
-| 2 | Close the implicit local system `Theta -> E -> Gamma -> omega(E) -> D Theta` | Local existence theorem on a stated non-null/nondegenerate class, or a precise no-go theorem |
-| 3 | Prove Lorentz-slice preservation and nondegeneracy | Constraint propagation theorem under the derived evolution |
-| 4 | Prove on-shell rank 10 | Rank of admissible metric variations after equations, gauge and complex-time constraints is exactly 10 (or six physical directions modulo diffeomorphisms, with constraints handled explicitly) |
-| 5 | Derive low-energy GR and quantum limits | Einstein branch and Dirac/Schrodinger limits obtained from the same action with assumptions isolated |
+This file records the current priority order. Earlier week-by-week roadmaps are
+preserved in git history rather than duplicated here.
 
-The exact kinematic Clifford lift, rank-ten tetrad theorem and fifth grading
-channel are already closed.  The archived current-tetrad branch is historical
-evidence only.
+## 1. Cross-cutting priority — finalize one fundamental action
 
-<!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
+The single-\(\Theta\) action family is defined but not finalized.
 
-# ROADMAP.md — UBT Development Roadmap
+Required closure:
+- configuration space and status of \(\psi\);
+- microscopic integration measure and Jacobian;
+- real pairing and sign conventions;
+- independent versus composite metrics/connections;
+- derivative order, potential and boundary terms;
+- complete Euler--Lagrange system;
+- constrained/gauge-fixed Hessian and physical mode count;
+- explicit reduction maps to GR, gauge, matter and cosmology sectors.
 
-**Author**: Ing. David Jaroš  
-**Date**: 2026-05-14  
-**Purpose**: Forward-looking plan for the next 21 days and beyond.
-Based on current proof status; no aspirational items without a clear path.
+No sector-specific effective functional may silently replace this object as a
+second fundamental action.
 
----
+## 2. P1 — theta / complex time
 
-## Current State (2026-05-13)
+**Status:** closed for the currently defined free/reduced theta objects.
 
-- T1_GR paper is submit-ready (`papers/UBT_GR_Submission.tex`)
-- GAP-Z (Zerilli, even-parity graviton) is PROVED [L1]; the canonical proof is documented in `canonical/gr_closure/zerilli_derivation.tex` and matches the GR paper. All status files now list this as a closed gap.
-- T2_GAUGE theorems are proved; paper not yet written
-- T3_ALPHA integer-137 result is conditional on Gap G137-B
+Established:
+\[
+\tau_{\rm UBT}=t+i\psi
+\]
+is a physical dimensionful coordinate and is not canonically the Jacobi
+modular parameter. The compact-circle heat trace has ordinary Jacobi-theta
+structure with
+\[
+\tau_J=\frac{i s}{\pi R_\psi^2}.
+\]
 
----
+Open:
+- full interacting modular covariance;
+- any action-derived map from physical complex time to a genuine modulus.
 
-## Implemented Top-10 Priority/Gaps Program (Execution-Control Layer)
+## 3. P2 — colour SU(3)
 
-This section operationalizes the current top 10 priorities/gaps from the
-authoritative status set:
-`STATUS_OF_UBT.md`, `canonical/gauge/GAUGE_MASTER_STATUS.md`,
-`canonical/alpha/ALPHA_MASTER_STATUS.md`.
+**Status:** primary active physics target; algebra/geometry strong, full QCD
+open.
 
-**Execution order (locked):** **1 → 2 → (3,4 in parallel) → 5/6/7/8/9 → 10**
+Closed/narrowed:
+- exact algebraic \(SU(3)\) stabilizer and Gell-Mann structure;
+- direct raw-carrier and simple finite-jet gluon interpretations are no-go;
+- exact constrained \(4\times3\) Stiefel/HLS rewrite on the timelike branch;
+- derived adjoint frame current;
+- weak fixed-frame induction gives \(Z_B>0\) but a massive vector phase;
+- Stiefel continuation through \(\rho=0\) is singular;
+- pure composite frame topology has no independent instanton bundle sectors.
 
-| # | Priority / Gap | Implementation instruction | Exit criterion |
-|---|----------------|----------------------------|----------------|
-| 1 | Publish T1_GR (submit-ready) | Finalize arXiv + journal submission package from `papers/UBT_GR_Submission.tex`; include canonical proof references; keep GAP-10 explicitly labeled open/non-blocking. | Submission confirmation IDs recorded; GAP-10 statement present in manuscript. |
-| 2 | Complete and submit T2_GAUGE paper | Consolidate proved algebraic claims into one canonical manuscript; include explicit no-go statement that pure algebra cannot fix g'/g (Weinberg dead-end statement). | T2_GAUGE manuscript submitted with dead-end wording retained. |
-| 3 | Close G137-B (alpha blocker) | Run one focused first-principles route only (modular bootstrap / equivalent strict path) to derive \(B_{\mathrm{phenom}}\) from \(S[\Theta]\) without alpha input; enforce hard go/no-go gate. | Either [L1] closure of G137-B or formal no-go/conditional downgrade memo. |
-| 4 | Resolve N_eff loop-counting audit | Close multiplicity-factor audit in **loop-counting** branch (not SU(2) twist, which is [L1]). | `N_eff` status upgraded from OPEN/[MC] to proved, or frozen as explicitly unresolved with blocker proof note. |
-| 5 | Close C2 hypercharge-assignment gap | Derive specific fermion hypercharge assignments from UBT structure, including uniqueness conditions and admissible-class boundaries. | C2 moved from OPEN to proved/conditional with full theorem assumptions stated. |
-| 6 | Upgrade EW-1b (or kill) | Complete first-principles EW+RG closure including \(R_\psi\) origin from \(S[\Theta]\); if closure fails, formally downgrade/kill EW-1b route. | EW-1b reclassified to PROVED or KILLED (no ambiguous middle state). |
-| 7 | Address EW-2 Higgs-VEV gap | Open Higgs-focused derivation track/paper; derive Higgs doublet VEV from \(S[\Theta]\) with assumptions isolated from gauge theorem claims. | EW-2 status moved from deferred/open to explicit proved/conditional theorem statement. |
-| 8 | Address Y2 Yukawa/fermion-mass gap | Build first-principles fermion mass/coupling program while keeping KK-mismatch constraints explicit and non-negotiable. | Y2 status moved from OPEN to formally scoped theorem program with closed sub-lemmas or explicit impossibility statements. |
-| 9 | Close anomaly first-principles gap | Derive anomaly cancellation from UBT-first principles (not assumed SM assignments), or mark exactly which anomalies remain conditional. | Anomaly section upgraded from conditional to proved or fully partitioned open items with blockers. |
-| 10 | Produce one unique falsifiable prediction beyond ΛCDM+SM | Prioritize one parameter-controlled, discriminative observable (e.g., mirror-sector quantitative signature or robust cosmology discriminator) and define falsification protocol up front. | Public pre-registered prediction sheet with parameter bounds and fail/pass criterion. |
+Preferred finite-radius target:
+\[
+\rho_0>0,\qquad
+Z_B>0,\qquad
+c_V\to0,\qquad
+\lambda_2\to0,\qquad
+M_\beta^2>0.
+\]
 
-**Governance constraints**
-- No speculative track expansion while items 1–4 are unresolved.
-- No new alpha routes outside the active portfolio gate process.
-- Every status change above must be mirrored same-day in `STATUS_OF_UBT.md`.
+Next decisive calculations:
+1. finite noncompact Stiefel/HLS phase flow;
+2. complete locking-operator flow;
+3. mixed sharp/GR source
+   \[
+   \left.\beta_{\lambda_2}\right|_{\lambda_2=0};
+   \]
+4. Yang--Mills 1PI/BRST/Slavnov--Taylor matching;
+5. autonomous gauge topology after frame-matter decoupling.
 
----
+## 4. P3 — CMB full covariance
 
-## Phase 1: First Public Release (Weeks 1–3)
+**Status:** statistical infrastructure ready; H3 theory template open.
 
-### Week 1
+Do not treat post-hoc prime/theta filtering as a UBT prediction.
 
-| Task | Owner | Status |
-|------|-------|--------|
-| Fix Newton's G clarification in §3.5 of UBT_GR_Submission.tex | DJ | ✅ Done (2026-05-10) |
-| Include canonical files as arXiv ancillary material | DJ | Prepare on submission |
-| Submit T1_GR to arXiv (gr-qc or math-ph) | DJ | Target: end of week 1 |
-| Submit T1_GR to Classical and Quantum Gravity or JMP | DJ | Simultaneous with arXiv |
+Required physics chain:
+\[
+S^{(2)}_{\rm scalar}
+\to
+\delta\Theta\to\mathcal R
+\to
+\text{state prescription}
+\to
+P_{\rm UBT}
+\to
+C_{\ell m,\ell'm'}^{XY}.
+\]
 
-### Week 2
+Only then compare H3 against H2 out of sample.
 
-| Task | Owner | Status |
-|------|-------|--------|
-| Begin T2_GAUGE paper draft (§1–§3: algebra + SU(3) + SU(2)_L) | DJ | 8-week paper |
-| Start modular bootstrap on Gap G137-B (4-week time-box begins) | DJ | Research |
-| Status update: `STATUS.md` reflecting arXiv submission | DJ | Maintenance |
+## 5. P4 — torus modulus
 
-### Week 3
+**Status:** isolated massless one-loop selection closed as no-go.
 
-| Task | Owner | Status |
-|------|-------|--------|
-| Continue T2_GAUGE draft (§4: U(1)_Y, §5: three generations) | DJ | — |
-| Midpoint assessment of Gap G137-B progress | DJ | Go/no-go at week 4 |
+For fixed area,
+\[
+\det{}'\Delta_\tau\propto\Im\tau\,|\eta(\tau)|^4.
+\]
 
----
+The square point is not a stable minimum of the standard positive bosonic
+one-loop action, and no finite global modulus minimum is selected by that
+isolated massless determinant.
 
-## Phase 2: T2_GAUGE Submission (Weeks 4–10)
+Next step: derive a genuine compact modulus and bounded
+massive/interacting/backreacted \(V_{\rm eff}\) from the finalized action.
 
-### Weeks 4–6: Paper core
+## 6. Quantitative-prediction gate
 
-| Task | Notes |
-|------|-------|
-| T2_GAUGE §6: electroweak sector with honest dead-end statement on θ_W | Critical |
-| T2_GAUGE §7: chirality result (Gap C1 closed) | Theorem write-up |
-| T2_GAUGE §8: open problems (C2, EW-2, Y2, confinement) | Honest accounting |
-| Gap G137-B: complete modular bootstrap attempt | Go/no-go by week 4 |
+No numerical result is promoted to a first-principles UBT prediction unless:
+- all theory inputs are fixed before comparison with data;
+- the observable follows from the same finalized action;
+- uncertainty and nuisance parameters are declared;
+- competing generic null models are tested;
+- the result is reproducible out of sample.
 
-### Weeks 7–8: T2_GAUGE completion
+## 7. Current success criteria
 
-| Task | Notes |
-|------|-------|
-| Internal review pass | — |
-| arXiv submission of T2_GAUGE | Target: week 8 |
-| Journal submission | Simultaneous |
+Near-term success means:
+- one finalized microscopic action/measure;
+- a controlled physical Hessian with no hidden ghost branch;
+- a decisive result on the finite-radius HLS colour phase;
+- an action-derived \(P_{\rm UBT}\);
+- at least one preregistered quantitative prediction not obtained by fitting.
 
----
+## Status synchronization rule
 
-## Phase 3: T3_ALPHA Decision Point (Week 4)
+Status changes must be mirrored in:
+- CLAIMS.yaml;
+- STATUS_OF_UBT.md;
+- WHAT_IS_PROVED.md;
+- CLAIMS_MATRIX.en.md and CLAIMS_MATRIX.cs.md;
+- research_tracks/priority_program_2026_10/README.md.
 
-**Go/no-go decision on Gap G137-B at week 4.**
-
-### Scenario A: Gap G137-B solved
-
-| Task | Notes |
-|------|-------|
-| Write T3_ALPHA paper: integer-137 result with full proof | 4-week write-up |
-| Paper claim: "α⁻¹_bare = 137 from UBT structural argument" | Level [L1] |
-| Submit as companion note to T1_GR | Target: week 10–12 |
-
-### Scenario B: Gap G137-B not solved (more likely — 70%)
-
-| Task | Notes |
-|------|-------|
-| Write short companion note: conditional integer-137 with gap stated | 1–2 weeks |
-| Downgrade T3_ALPHA track from flagship to "structural evidence" | Honest status |
-| Redirect effort fully to T2_GAUGE and T1_GR revisions | — |
-
----
-
-## Phase 4: Long-Term Open Problems (Beyond Week 21)
-
-These are not active targets in the 21-day window.
-
-| Problem | Why deferred | Priority |
-|---------|-------------|----------|
-| Zerilli equation (GAP-Z) | **PROVED [L1]**; canonical proof in `canonical/gr_closure/zerilli_derivation.tex` and GR paper. Both graviton polarisation sectors are now closed at [L1]. | — |
-| Chirality C1b (dynamical SU(2)_R exclusion) | Enhances T2_GAUGE but not required | Medium |
-| Fermion masses | KK-mismatch theorem — needs new approach | Low |
-| Higgs mechanism / W-Z masses | Separate paper | Low |
-| Anomaly cancellation from first principles | Requires fermion hypercharge assignments first | Low |
-| Quantum UBT / path integral (GAP-Q) | Long-term foundational work | Very long term |
-| Cosmological solutions (GAP-C) | FRW Θ ansatz | Low |
-| Dynamical confinement | Clay Millennium Problem | Not in scope |
-
----
-
-## Success Criteria for 21-Day Window
-
-| Criterion | Target | How measured |
-|-----------|--------|-------------|
-| GR paper on arXiv | ✅ | arXiv submission number |
-| GR paper submitted to journal | ✅ | Submission confirmation |
-| Repo understandable in 5 minutes | ✅ | README, STATUS, WHAT_IS_PROVED, ROADMAP in place |
-| Alpha route decision made | ✅ | PRIMARY_ROUTE.md + weak routes killed |
-| Gauge status honest | ✅ | gauge_truth_matrix.md with dead-ends stated |
-| T2_GAUGE paper draft started | ✅ | First 3 sections exist |
-
----
-
-## What Is Not On The Roadmap
-
-The following are explicitly excluded from the 21-day window and the near-term plan:
-
-- New speculative branches (CTC, psychons, consciousness)
-- New top-level theory roots
-- Consciousness/CCT development
-- Papers claiming more than what is proved
-
----
-
-## Document Update Policy
-
-This roadmap is updated when:
-1. A track changes status (submitted/blocked/killed)
-2. A gap is solved or declared dead
-3. A new critical finding changes priorities
-
-Previous roadmap versions are not deleted — see git history.
+Historical roadmaps remain recoverable through git history.
