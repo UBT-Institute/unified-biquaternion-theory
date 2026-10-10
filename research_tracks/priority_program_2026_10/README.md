@@ -184,3 +184,56 @@ M_eta^2>0,
 ]
 so that below the charged-frame gap the colour EFT can approach pure
 (SU(3)) Yang--Mills.
+
+
+### P2 finite-radius refinement — 2026-10-10
+
+The preferred HLS target has changed from the singular raw-field endpoint
+(ho	o0) to a **finite-radius quantum critical/decoupling surface**.
+
+New exact boundaries:
+- the timelike field space is a cone with measure
+  (ho^7dho,dmu_7); the Stiefel rewrite loses invertibility at
+  (ho=0);
+- a homogeneous frame (W=ho Z) cannot stay rank three at the origin,
+  because a Hermitian form of signature ((1,3)) has complex Witt index one;
+- after (F_B^2) exists, (c_V=0) restores independent local
+  (SU(3)_Z	imes SU(3)_B), while (c_V
+e0) locks them to the diagonal;
+- weak current polarization generates (Z_B) but cannot perturbatively cancel
+  a finite HLS mass intercept;
+- useful pure-Yang--Mills scale separation requires order-one (Z_B); the
+  weak one-triplet induction is far too small unless its nominal coupling/log
+  is already outside a controlled weak regime;
+- (SU(1,3)/SU(3)cong S^1	imesmathbb C^3), so the exact one-Theta
+  composite frame bundle is topologically trivial and has no independent
+  instanton (c_2) sectors;
+- full Yang--Mills topology therefore requires a genuinely autonomous,
+  non-invertible collective gauge-field emergence step;
+- the determinant anisotropy is a symmetric ({f6}) spurion with physical
+  stabilizer (SO(3)); in an autonomous gauge EFT its canonical Higgs pattern
+  has rank five (five symmetric Gell--Mann directions broken, three
+  (SO(3)) directions unbroken).
+
+Preferred finite-radius endpoint:
+[
+ho_0>0,qquad
+Z_B>0,qquad
+c_V	o0,qquad
+lambda_2	o0,qquad
+M_eta^2>0.
+]
+
+At (c_V=0), the autonomous (B) sector can retain ordinary Yang--Mills gauge
+protection.  The remaining major radiative-stability problem is
+(lambda_2): the isolated colour sigma sector protects
+(lambda_2=0) by global (SU(1,3)), but the canonical sharp/GR core breaks
+that symmetry and can act as a spurion source.
+
+The next decisive calculation is therefore the mixed GR/colour contribution
+to
+[
+left.eta_{lambda_2}ight|_{lambda_2=0},
+]
+or an equivalent demonstration that the sharp-sector spurions decouple at the
+colour matching scale.
