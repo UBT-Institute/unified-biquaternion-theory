@@ -10,4 +10,4 @@
 
 Granular authority: CLAIMS.yaml and STATUS_OF_UBT.md.
 
-Comparative positioning: [UBT scientific positioning — October 2026](UBT_POSITIONING_2026_10.md).
+Comparative positioning: [UBT scientific positioning — October 2026](UBT_POSITIONING_2026_10.en.md).
