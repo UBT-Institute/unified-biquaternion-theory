@@ -51,7 +51,8 @@ The present status is:
   currently registered as derived from a unique finalized fundamental action.
 
 Authoritative status sources:
-STATUS_OF_UBT.md, CLAIMS.yaml, WHAT_IS_PROVED.md, and
+STATUS_OF_UBT.md, CLAIMS.yaml, WHAT_IS_PROVED.md,
+CLAIMS_MATRIX.en.md / CLAIMS_MATRIX.cs.md, and
 research_tracks/priority_program_2026_10/README.md.
 
 
