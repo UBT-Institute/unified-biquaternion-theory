@@ -455,31 +455,35 @@ Stiefel model has a distinct critical/unbroken phase with
 
 ### Stiefel critical-origin obstruction — 2026-10-10
 
-The attractive radial scaling (ho	o0) is not a smooth continuation of the
-exact one-Theta Stiefel rewrite.  The positive timelike field metric has cone
+The attractive radial scaling \(\rho\to0\) is not a smooth continuation of the
+exact one-Theta Stiefel rewrite. The positive timelike field metric has cone
 form
-[
-ds^2=dho^2+ho^2ds_7^2,
-]
+\[
+ds^2=d\rho^2+\rho^2ds_7^2,
+\]
 so the field-space measure carries
-[
-ho^7,dho,dmu_7.
-]
+\[
+\rho^7\,d\rho\,d\mu_7.
+\]
 The angular/Stiefel change of variables is therefore singular at the raw-field
 origin.
 
-A homogeneous frame (W=ho Z) does not remove the problem:
-[
-W^dagger GW=-ho^2I_3.
-]
-At (ho=0) the three columns would have to span a totally isotropic complex
-subspace of a Hermitian space of signature ((1,3)), whose Witt index is only
-one.  Hence the rank-three colour frame necessarily collapses.
+A homogeneous frame \(W=\rho Z\) does not remove the problem:
+\[
+W^\dagger GW=-\rho^2I_3.
+\]
+At \(\rho=0\) the three columns would have to span a totally isotropic complex
+subspace of a Hermitian space of signature \((1,3)\), whose complex Witt index
+is only one. Hence the rank-three colour frame necessarily collapses.
 
-The (ho	o0) critical HLS gauge-emergence scaling remains a useful limiting
+The \(\rho\to0\) critical HLS gauge-emergence scaling remains a useful limiting
 diagnostic, but the preferred P2 target is now a **finite-radius
 quantum-disordered HLS phase** with a well-defined timelike frame,
-(m_{B,m ren}^2=0), (Z_B>0), and gapped charged frame excitations.
+\[
+m_{B,\rm ren}^2=0,\qquad
+Z_B>0,
+\]
+and gapped charged frame excitations.
 
 ### Finite-radius HLS refinement and topology gate — 2026-10-10
 
