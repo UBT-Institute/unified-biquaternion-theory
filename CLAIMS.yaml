@@ -78,6 +78,71 @@ claims:
     - metric is obtained by an arbitrary projection
     - Maxwell field generates vacuum Schwarzschild
     - the legacy Schwarzschild ansatz is a valid canonical single-Theta solution
+  theta_complex_time:
+    status: DERIVED_WITH_ASSUMPTIONS
+    evidence:
+    - canonical/bridges/theta_parameter_separation.md
+    - canonical/gr_closure/gap_10d_induced_gravity_endgame.tex
+    assumptions:
+    - 'GAP-THETA-TAU-NAIVE: CLOSED AS NO-GO — canonical UBT complex time tau_UBT=t+i psi with compact psi is not canonically identical to the Jacobi modular parameter tau_J in the upper half-plane'
+    - 'GAP-THETA-KK-MODULUS: CLOSED [L1] IN THE CONDITIONAL SPECTRAL BRANCH — the compact-psi heat trace sum_n exp(-s n^2/R_psi^2) equals theta_3(0|tau_J) with tau_J=i s/(pi R_psi^2), and Jacobi S inversion is the corresponding Poisson resummation'
+    - 'Physical coupling between tau_UBT and a Jacobi modulus remains OPEN and must be derived from the finalized action'
+    - 'GAP-THETA-CYLINDER-TORUS: CLOSED AS NO-GO — R_t x S1_psi with noncompact physical time is a cylinder; a geometric two-torus modulus requires an additional compact Euclidean/thermal time cycle and is conditional'
+    - 'GAP-THETA-T-LAW: CLOSED [STD/L0] — in the standard Jacobi convention theta_3(0|tau+1)=theta_4(0|tau) and theta_3(0|tau+2)=theta_3(0|tau); historical T-invariance arose from mixing this with the q=exp(2 pi i tau) convention for theta_3(0|2tau)'
+    - 'GAP-THETA3-ZERO: CLOSED AS NO-GO [STD] — theta_3(0|tau) is nonzero throughout the upper half-plane by Jacobi product formula; zero-based stabilization mechanisms using theta_3(0|tau)=0 are invalid'
+    - 'GAP-THETA-MODULAR-ACTION: OPEN — Poisson/Jacobi duality of a spectral heat trace does not imply SL(2,Z) invariance of the full UBT action, measure, interactions or physical complex time'
+    - 'GAP-THETA-NAME-CONFLATION: CLOSED — the fundamental field named Theta is a C tensor H-valued field, not by definition a Jacobi theta function; Jacobi modular properties cannot be transferred from notation alone'
+    - 'GAP-THETA-HEAT-KERNEL-CLASS: CLOSED [L1 in free S1 spectral sector] — the free compact-circle heat trace is an ordinary Jacobi theta constant with the standard theta-group/Poisson transformation law, not a mock-theta object'
+    - 'GAP-THETA-FULL-MODULAR-CLASS: OPEN — an interacting full-field modular/mock-modular classification requires an action-derived quantum or spectral kernel beyond the free heat trace'
+    - 'GAP-THETA-GROUP-INDEX: CLOSED [STD/L1 bookkeeping] — for vartheta_3(tau)=sum_n exp(pi i n^2 tau), the scalar theta subgroup Gamma_theta=<S,T^2> has index 3 in SL(2,Z); older index-2 wording is incorrect'
+    - 'GAP-THETA-CONVENTION-GAMMA04: CLOSED — the common Gamma_0(4) weight-1/2 statement refers to the rescaled convention sum_n exp(2 pi i n^2 tau)=vartheta_3(2 tau); it must not be mixed with the pi i n^2 tau convention'
+    - 'GAP-THETA-REDUCED-FINITE-MODULAR: CLOSED AS GENERIC NO-GO — the finite weighted reduced amplitude S_s=sum_{n=0}^{N-1} a_n^(s) exp(pi i n^2 tau_J) is an entire finite exponential polynomial with T^2 periodicity but has no generic S-transformation closure; it is not a modular form without additional coefficient/Weil-representation structure'
+    - 'GAP-THETA-REDUCED-MOCK: CLOSED AS NO-CLAIM — failure of ordinary modularity does not imply mock modularity; no shadow/nonholomorphic completion has been derived for the generic finite UBT projection'
+    - 'GAP-THETA-DIMENSIONAL-SEPARATION: CLOSED — canonical tau_UBT=t+i psi is dimensionful with [t]=[psi]=length, whereas the Jacobi tau_J is dimensionless; any identification requires an explicit action-derived scale map'
+    - 'GAP-THETA-P1-CLASSIFICATION: CLOSED FOR CURRENT OBJECTS — current UBT contains an ordinary Jacobi free heat kernel/trace, a finite nonmodular-by-default reduced projection, and a dimensionful physical complex-time coordinate with no derived full modular transformation law; the interacting full-field modular classification remains open'
+    forbidden_wording:
+    - UBT complex time is the Jacobi modular parameter
+    - psi to zero is the same limit as Im tau_J to zero for every UBT theta construction
+    - modular continuation proves propagation in negative imaginary UBT time
+    - complex time plus compact psi automatically forms a geometric torus
+    - theta_3 is invariant under tau to tau+1 in the standard Jacobi convention
+    - theta_3 has a zero in the upper half-plane
+  torus_modulus:
+    status: OPEN_GAP
+    evidence:
+    - research_tracks/theta_torus_potential/one_loop_scale_no_go.md
+    - canonical/geometry/Rpsi_dynamical_fix.tex
+    assumptions:
+    - 'GAP-COMPACT-MINIMAL: CLOSED — the active minimal canonical compact internal fibre is S1_psi; chi and xi belong to deprecated/historical full-biquaternion-time extensions'
+    - 'GAP-INTERNAL-T3: CONDITIONAL/HISTORICAL — formulas using S1_psi x S1_chi x S1_xi, theta_3^3 or cubic Epstein zeta do not follow from the minimal canonical theory unless the extra compact directions are independently restored from the action'
+    - 'GAP-RPSI-ONELOOP-SCALE: CLOSED AS NO-GO [L1] — for the uniformly rescaled massless torus Laplacian, the zeta-regularised determinant has only logarithmic scale dependence and no finite isolated one-loop minimum'
+    - 'GAP-RPSI-INVERSION-SELECTION: CLOSED AS NO-GO [L1] — inversion symmetrisation of that logarithmic scale potential is flat for all radii; the self-dual radius is a symmetry fixed point, not a dynamically selected minimum'
+    - 'GAP-TORUS-SHAPE-POTENTIAL: OPEN — derive a genuine action-level dimensionless shape/complex-structure modulus and an effective potential with certified minima'
+    - 'GAP-TORUS-MASSLESS-ZETA-SHAPE: CLOSED AS NO-GO [STD/L1 audit] — for a genuine fixed-area flat T2, the zeta-regularised massless scalar determinant is proportional to Im(tau_mod)|eta(tau_mod)|^4; square tau=i is the unique determinant maximum within rectangular tori but a saddle in full moduli, while the hexagonal torus is the determinant maximum among all fixed-area flat tori'
+    - 'GAP-TORUS-TERM-HESSIAN: CLOSED AS INVALID METHOD — the older positive second variation obtained by differentiating the divergent sum sum_{m,n} log lambda_{m,n} term by term is not the Hessian of the zeta-regularised determinant and cannot prove square-torus stability'
+    - 'GAP-TORUS-BOSONIC-ONELOOP-MIN: CLOSED AS NO-GO — for a real Gaussian boson Gamma_1=+(1/2) log det prime Delta; the massless fixed-area determinant tends to zero toward the cusp, so the isolated one-loop effective action has no finite global modulus minimum'
+    - 'GAP-TORUS-MASSIVE-INTERACTING-SHAPE: OPEN — a genuine massive/interacting UBT Hessian requires its own regularised determinant and bounded effective modulus potential; the massless eta-function result cannot be transferred without calculation'
+    forbidden_wording:
+    - one-loop determinant proves R_psi equals R_t
+    - self-dual symmetry fixed point is automatically a dynamical vacuum minimum
+    - E_3(0) equals -3 for the standard zero-mode-subtracted cubic Epstein zeta
+  cmb_tests:
+    status: EXPLORATORY_WITH_NO_GO
+    evidence:
+    - research_tracks/research_front/cmb_covariance/README.md
+    - research_tracks/research_front/cmb_covariance/internal_psi_spatial_cutoff_no_go.md
+    - docs/physics/cmb_status.md
+    assumptions:
+    - 'GAP-CMB-PSI-IR-CUTOFF: CLOSED AS NO-GO [L1] — compact internal S1_psi quantizes internal momentum and yields a KK mass tower, but the n=0 branch still permits arbitrarily small ordinary spatial k on noncompact physical space; k_min=1/R_psi does not follow'
+    - 'Historical low-l cutoff and Delta-l=137 comb calculations are exploratory signal families/null tests, not core UBT predictions'
+    - 'P3-COVARIANCE: ACTIVE — compare pre-registered H3 against H0 LambdaCDM, H1 ordinary compact topology and H2 topology plus generic oscillatory primordial structure using full TT/TE/EE covariance; BB secondary unless theory predicts otherwise'
+    - 'GAP-CMB-LOCAL-FRW-TOPOLOGY: CLOSED AS LOCAL-SELECTION NO-GO — the local flat-FRW metric does not determine whether the spatial slice is R3 or a flat quotient such as T3; local recovered GR equations alone cannot select global spatial topology'
+    - 'GAP-CMB-SPATIAL-TOPOLOGY-ORIGIN: OPEN — derive global boundary, holonomy, regularity or variational data selecting a physical spatial topology before using a torus as the UBT H3 model'
+    - 'P3-H3-READINESS: BLOCKED — H3 remains undefined until a UBT covariance-generating mechanism is derived and frozen before evaluation data'
+    forbidden_wording:
+    - compact psi directly imposes a spatial k_min equal to 1/R_psi
+    - R_psi equals c/H0 from first principles
+    - the historical CMB comb is a confirmed UBT prediction
   gauge_group:
     status: DERIVED_WITH_ASSUMPTIONS
     evidence:
@@ -93,9 +158,86 @@ claims:
     - 'GAP-SU3-FOCK: PROVED [L1] — Lambda^bullet V = 1+3+3-bar+1; second-quantised su(3) generator algebra verified exactly; Lean-PENDING'
     - 'GAP-SU3-GLOBAL: STATED — correct global group is U(3) cong (SU(3)xU(1))/Z_3, not a direct product; Lie-algebra split u(3)=su(3)+u(1) valid'
     - 'GAP-SU3-DYN: OPEN — derive the local QCD gauge field from canonical UBT action; algebraic stabiliser proved but dynamical gauging not yet derived'
+    - 'GAP-SU3-SPIN-QUADRUPOLE: MACHINE-VERIFIED SUBRESULT — quaternion adjoint spin-1 triplet plus five symmetric traceless quadrupoles span the eight Gell-Mann directions; this is an operator decomposition 8=3+5, distinct from the Fock-state decomposition 1+3+3-bar+1'
+    - 'GAP-SU3-MAURER-CARTAN: NO-GO FOR GENERIC DYNAMICS — a connection of the form U^{-1}dU is locally pure gauge and has zero curvature'
+    - 'GAP-SU3-BIMODULE: OPEN/NO-GO BOUNDARY — the minimal A_mu Theta - Theta B_mu bimodule derivative must not be claimed to realise full dynamical su(3) without an explicit faithful action-level construction'
+    - 'GAP-SU3-ENDOMORPHISM-CONNECTION: CANDIDATE — the natural local colour connection acts in End_C(V); deriving it and its Yang-Mills normalization from S[Theta] remains open'
+    - 'GAP-SU3-PROJECTIVE-BUNDLE: MACHINE-VERIFIED CANDIDATE BRIDGE — for nonzero projective Theta in C^4, E=Theta^perp is a canonical rank-three Hermitian bundle; its projected curvature P(dP wedge dP)P has a traceless su(3) part that spans all eight local su(3) directions at the canonical colour point'
+    - 'GAP-SU3-PROJECTIVE-QCD: OPEN — the projective connection is composite and constrained by a CP^3 field, so generic Yang-Mills representability, action selection, propagating degrees of freedom and coupling normalization are not established'
+    - 'GAP-SU3-PROJECTIVE-GLUON: CLOSED AS NO-GO FOR PERTURBATIVE QCD — around constant projective Theta, the universal projected curvature starts quadratically in Theta fluctuations, so its F^2 term is quartic/four-derivative and supplies no linearized free-gluon kinetic sector'
+    - 'GAP-SU3-DYN-KIN: CLOSED CONDITIONALLY — if local colour-frame equivalence preserving canonical h and Omega is imposed, the compatible connection is su(3)-valued'
+    - 'GAP-SU3-DYN-INDUCED: CLOSED CONDITIONALLY — for a fixed-background Laplace-type Theta Hessian carrying that connection, the standard a4 heat coefficient contains (1/12) tr F_mu_nu F^mu_nu'
+    - 'GAP-SU3-DYN-MICRO: OPEN — derive the local colour-frame connection from the microscopic UBT action rather than adding it as an independent postulate'
+    - 'GAP-SU3-GLOBAL-TO-LOCAL: CLOSED AS NO-GO — a global SU(3) stabilizer does not by itself imply local gauge invariance; ordinary derivatives produce uncancelled (partial_mu U) terms'
+    - 'GAP-SU3-FRAME-REDUNDANCY: CLOSED KINEMATICALLY — once a canonical rank-three Hermitian bundle with a nonvanishing complex volume form is supplied by Theta/composites, local oriented orthonormal frame changes are SU(3) and the induced connection transforms with the standard inhomogeneous gauge law'
+    - 'GAP-SU3-UNIVERSAL-JET: OPEN CONSTRUCTIVE ROUTE — standard universal-connection theory shows sufficiently large projected/Stiefel connections can represent generic unitary connections; UBT must derive a canonical finite-jet classifying map J^r Theta -> Gr_3(C^N) from the finalized single action'
+    - 'GAP-SU3-DYN-NORM: OPEN — derive physical mode/ghost content, renormalization and strong-coupling normalization g_s'
+    - 'GAP-SU3-BIMODULE-RESTRICTION: CLOSED AS NO-GO [L1] — if T_{A,B}(X)=AX-XB preserves V=sl2(C), then A-B=cI and T|_V=ad(A0)+cI; preservation of the canonical complex volume forces c=0, leaving only the three ad(sl2) directions'
+    - 'GAP-SU3-YM-INDUCED: CLOSED CONDITIONALLY [L1] — if a genuine End_C(V) colour connection occurs in a gauge-fixed Laplace-type physical Theta Hessian, the standard four-dimensional heat-kernel a4 coefficient contains (1/12) tr(F_mu_nu F^mu_nu); deriving the connection, physical quotient and normalization from S_UBT remains open'
+    - 'GAP-SU3-LORENTZ-COMMUTANT: CLOSED AS CONDITIONAL NO-GO [L1] — if the same Mat(2,C) carrier is assigned the Lorentz four-vector action X->S X S^dagger, its complex-linear commutant is scalar only; physical colour then requires a separate multiplicity/internal carrier or a different action-derived Theta representation whose Lorentz commutant contains SU(3)'
+    - 'GAP-SU3-THETA-REPRESENTATION: OPEN — derive the Lorentz representation carried by the fundamental Theta field from covariance of E_mu=D_mu Theta and the finalized action, then compute its internal commutant before identifying physical colour'
+    - 'GAP-SU3-INTERNAL-MULTIPLICITY-MINIMALITY: CLOSED CONDITIONALLY [L1] — for a standard representation-preserving connection on W_L tensor M, Lorentz acts on W_L and its commutant is End(M); multiplicities m=1,2,3 have complex commutant dimensions 1,4,9, so m=3 is the minimum capable of a faithful fundamental SU(3)'
+    - 'GAP-SU3-INTERNAL-TRIPLET-ORIGIN: OPEN — derive a Lorentz-scalar threefold degenerate mode/multiplicity space from the finalized UBT action or constrained spectrum; the single S1_psi winding sector does not provide it'
+    - 'GAP-SU3-PROJECTOR-CONNECTION: KINEMATIC CANDIDATE — a varying rank-three projector P=I-|n><n| has projected curvature P(dP wedge dP)P whose local values span u(3), with traceless span su(3); identifying n with an action-derived Lorentz-scalar internal field, global determinant-line reduction, QCD solution-space sufficiency and dynamical normalization remain open'
+    - 'GAP-SU3-WINDING-MULTIPLICITY: CLOSED AS NO-GO FOR THE SINGLE S1 SECTOR — every winding eigenspace of L2(S1_psi) is one-dimensional over C; selecting three unequal windings is not an internal degenerate triplet and generic SU(3) mixing would not commute with the winding generator'
+    - 'GAP-SU3-FREE-S1-HESSIAN-TRIPLET: CLOSED AS NO-GO — the free circle Laplacian has multiplicity one at n=0 and multiplicity two from +/-n at every nonzero eigenvalue, never the threefold degeneracy required for a fundamental internal colour triplet'
+    - 'GAP-CHRONO-PI-SO3: CLOSED AS NO-GO [L1] — Hom_SO(3)(R3,R_trivial)=0; the historical equal-sum map (a,b,c)->a+b+c is permutation-symmetric in a chosen basis but not SO(3)-equivariant and cannot justify an isotropic 3/2 projection factor'
     - 'GAP-SU3-TRIQUBIT-LEAKAGE: CLOSED [L1] — every single X_i/Y_i error leaves the color sector'
     - 'GAP-SU3-TRIQUBIT-QEC: CLOSED AS NO-GO [L1] — the Knill-Laflamme conditions fail for {I,X_1,X_2,X_3}, compressed Z_i errors are non-scalar logical operations, and the three-dimensional carrier is not a Pauli stabilizer code'
     - 'The triqubit result is a representation/quantum-simulation encoding statement and does not imply a simulation ontology'
+    - 'GAP-SU3-HOLONOMIC-JET: CLOSED AS NO-GO — the formal three-channel set {Box_4 Theta, grad div Theta, partial_psi^2 Theta} is the holonomic image of one field, not three independent colour fields; an exact Fourier witness has channel-map rank 4 rather than 12, and a generic copy-space SU(3) rotation does not preserve this image'
+    - 'GAP-SU3-PSI-TRIPLET-PHYSICS: WITHDRAWN AS DIRECT COLOUR CARRIER — independent psi keeps a third same-order Lorentz contraction available mathematically, but jet multiplicity alone does not define a Standard-Model internal triplet'
+    - 'GAP-SU3-COPY-METRIC: SUPERSEDED AS PRIMARY ROUTE — K_AB classification remains an algebraic statement for formal channel variables, but K proportional to I_3 would not by itself create a physical U(3) symmetry on the single-field holonomic theory'
+    - 'GAP-SU3-COLLECTIVE-REWRITE: OPEN PRIMARY ROUTE — test whether the single-Theta path integral/action admits an exact auxiliary or collective-variable rewrite with genuine local SU(3) redundancy, no extra fundamental UV data, and an induced healthy Yang-Mills sector'
+    - 'GAP-SU3-MOVING-CARRIER: CLOSED CONDITIONALLY [L1] — assuming the finalized Theta representation is the complexified Lorentz-vector representation and h_B(Theta,Theta)>0, the moving orthogonal complement E_Theta=Theta^{perp_h} is a rank-three complex bundle; -h_B restricts to a positive Hermitian form and contraction of the ambient complex four-volume with normalized Theta gives a nonvanishing three-volume, so the fiber stabilizer is SU(3) and the construction is Lorentz equivariant'
+    - 'GAP-SU3-MOVING-CARRIER-REFERENCE: CLOSED [L1] — at normalized Theta parallel to the scalar unit, E_Theta equals C-span{I,J,K} and the moving-carrier Hermitian/volume tensors reduce to the existing canonical h and Omega up to normalization'
+    - 'GAP-SU3-MOVING-CARRIER-DYN: OPEN — the canonical projected connection on E_Theta is composite and its curvature starts quadratically around a constant Theta direction; independent perturbative gluon modes, charged matter sections, Yang-Mills normalization, and null/spacelike-stratum continuation are not derived'
+    - 'GAP-SU3-COSET-REWRITE: CLOSED CONDITIONALLY [L1] — assuming the finalized Theta representation is the complexified Lorentz-vector representation and h_B(Theta,Theta)>0, the normalized timelike direction is the homogeneous space SU(1,3)/SU(3); a local representative g has the exact redundancy g -> g h(x), h(x) in SU(3), with no added physical degree of freedom'
+    - 'GAP-SU3-COSET-CONNECTION: CLOSED KINEMATICALLY [L1] — decomposing g^{-1}dg=A+E under su(1,3)=su(3)+m gives A -> h^{-1}Ah+h^{-1}dh and E -> h^{-1}Eh; the projected curvature satisfies F_A=-(E wedge E)_{su(3)} and can be nonzero'
+    - 'GAP-SU3-COSET-GLUON: OPEN — the coset/frame connection is still composite and has no independent linearized free-gluon curvature around a constant representative; a quantum collective mechanism must generate healthy independent low-energy gauge excitations before this can be identified with QCD'
+    - 'GAP-SU3-COSET-INDUCED-COUPLING: CLOSED CONDITIONALLY AS A BENCHMARK — if the six charged SU(1,3)/SU(3) coset fluctuations form one minimally coupled complex fundamental triplet with a Laplace-type Hessian and no bare Yang-Mills term, then 1/g_ind^2 = I0/(96*pi^2), where I0 is the proper-time logarithmic threshold integral'
+    - 'GAP-SU3-COSET-INDUCED-MAGNITUDE: OPEN/CONSTRAINED — for one triplet and g_ind of order one, the induced-only formula requires a logarithmic hierarchy of order 96*pi^2; a realistic mechanism therefore needs an action-derived charged multiplicity/tower, threshold structure, or another normalization mechanism'
+    - 'GAP-SU3-QCD-RUNNING: OPEN — matter/coset induction of F^2 does not establish the QCD beta function; independent gauge modes, ghosts and the derived quark/matter spectrum must reproduce the non-Abelian running'
+    - 'GAP-SU3-KK-SELFDUAL: CLOSED AS NEGATIVE BENCHMARK — for one charged complex triplet on S1_psi, the finite nonzero-KK threshold at Lambda R_psi=1 is Delta_KK=0.4463514816..., far too small to repair the minimal induced-coupling deficit'
+    - 'GAP-SU3-KK-LARGE-TOWER: CONDITIONAL — Delta_KK(a)=2 sum_{n>=1} E1(n^2/a^2) grows as 2 sqrt(pi) a; a tower-only order-one induced coupling requires Lambda R_psi of order 10^2 (about 271 for the g=1 orientation benchmark)'
+    - 'GAP-SU3-KK-COUPLING-UNDERDETERMINATION: CLOSED AS NO-PREDICTION THEOREM — Delta_KK is continuous and strictly increasing because Delta_KK prime(a)=(4/a) sum exp(-n^2/a^2)>0, so without an independent action-level determination of Lambda R_psi the induced coupling can be tuned to any positive target and is not a UBT prediction'
+    - 'GAP-SU3-TIMELIKE-VACUUM: CLOSED CONDITIONALLY [L1] — in the proven nonzero pointwise vacuum branch, H(X)=2 h_B(Theta,Theta) and the representative X0=i r I2 has h_B=r^2>0, so the moving rank-three colour carrier is well defined at the potential minimum'
+    - 'GAP-SU3-SU13-POTENTIAL: CONDITIONAL ENHANCED BRANCH — setting lambda2=0 leaves V=V0+mu H+lambda1 H^2, whose timelike minimum is the seven-real-dimensional orbit SU(1,3)/SU(3) with rank-one potential Hessian and seven tangent zero modes'
+    - 'GAP-SU3-DETERMINANT-BREAKING: CLOSED [L1] — at the timelike nonzero vacuum, the lambda2 determinant term induces a physical tangent quadratic form proportional to ||Im z||^2 whose isotropy subgroup is exactly SO(3), generated by the lambda2/lambda5/lambda7 spin triplet; in Stiefel/HLS variables the exact local frame SU(3) redundancy remains, while the determinant anisotropy is a covariant symmetric-tensor/Higgs spurion selecting an SO(3)-isotropic physical phase'
+    - 'GAP-SU3-SU13-CORE: CLOSED AS MICROSCOPIC OBSTRUCTION [L1] — the only constant SU(1,3)-invariant Hermitian form on the fundamental C4 carrier is the indefinite signature-(1,3) form, and generic SU(1,3) transformations do not preserve the biquaternion sharp/determinant structure used by the canonical tetrad; exact microscopic SU(1,3) is therefore not a symmetry of the present UBT core'
+    - 'GAP-SU3-LAMBDA2-PROTECTION: OPEN — lambda2=0 is not protected by the currently declared microscopic symmetry; derive an independent selection rule or an infrared flow/decoupling mechanism that suppresses the allowed determinant invariant without fitting it to obtain colour SU(3)'
+    - 'GAP-SU3-SO3-HIGGS: CLOSED AS A DYNAMICAL WARNING [L1] — the determinant-sensitive tangent structure is equivalent to a symmetric colour tensor Sigma proportional to I3 with stabilizer SO(3); the infinitesimal map X -> X+X^T on su(3) has rank 5 and kernel span{i lambda2,i lambda5,i lambda7}, so gauging SU(3) in this background would Higgs five gauge directions and leave only three massless'
+    - 'GAP-SU3-SU13-KINETIC-SIGN: CLOSED AS A FIXED-BACKGROUND NO-GO — the unique constant SU(1,3)-invariant Hermitian pairing has complex signature (1,3), hence real signature (2,6); if all Theta components are independent scalar fluctuations, no overall sign yields a positive kinetic form, so the lambda2=0 enhanced branch requires a derived constrained quotient or nonlinear positive coset metric'
+    - 'GAP-SU3-POSITIVE-TIMELIKE-KINETIC: CANDIDATE [L1 algebra] — on h_B(Theta,Theta)>0 the field-dependent Hermitian metric K^+_Theta(u,v)=-u^dagger G v+2(u^dagger G Theta)(Theta^dagger G v)/(Theta^dagger G Theta) is positive definite and SU(1,3)-covariant, reducing to the identity at the timelike reference vacuum; it provides a healthy fixed-background kinetic candidate for the lambda2=0 branch but is not the current canonical kinetic'
+    - 'GAP-SU3-POSITIVE-KINETIC-GR-COMPAT: OPEN — test whether the nonlinear positive timelike kinetic can coexist with the canonical sharp-based tetrad/metric lock, constrained Hessian, null-stratum continuation and single-action GR closure without introducing new fundamental structure'
+    - 'GAP-SU3-POSITIVE-KINETIC-METRIC-LOCK: CLOSED AS A NO-GO FOR DIRECT COLOUR MODES [L1] — on the canonical Lorentz tetrad slice the nonlinear positive kinetic contracts to 4 N0 + (2/h) g^{mu nu} cbar_mu c_nu; on the constant-h branch only a real singlet/phase current remains beyond the volume term, and at the adapted timelike reference vacuum Theta parallel 1 the entire contracted K^+ kinetic is exactly 2 N0, independent of the nondegenerate tetrad'
+    - 'GAP-SU3-BIMODULE-U13: CLOSED [L1] — the exact real intersection of minimal operators X -> A X - X B with u(1,3) has dimension 7 and is so(1,3) plus one central phase u(1); its traceless intersection with su(1,3) is exactly the six-dimensional Lorentz algebra generated by J_i=(L_i-R_i)/2 and K_i=i(L_i+R_i)/2'
+    - 'GAP-SU3-BIMODULE-COLOUR: CLOSED AS NO-GO [L1] — inside the reference colour stabilizer the minimal norm-preserving bimodule contains only the so(3) span of the lambda2/lambda5/lambda7 directions; the five quadrupole colour generators are absent'
+    - 'GAP-SU3-RAW-CARRIER-LIE-CLOSURE: CLOSED [L1] — adjoining full lower-right su(3) colour to the three minimal boost directions on the raw C4 carrier and closing under commutators generates all su(1,3), real dimension 15; therefore a simple raw-carrier Lorentz plus full-colour linear realization forces the larger symmetry already known to conflict with the sharp/determinant UBT core'
+    - 'GAP-SU3-TREE-GLUON-DOF: CLOSED AS NO-GO [L1] — a healthy local second-order quadratic theory of one biquaternion has an 8x8 real propagator residue of rank at most 8, while eight massless gluons require physical transverse residue rank 16; no invertible local field redefinition or purely auxiliary rewrite without new poles can produce the perturbative QCD gluon spectrum'
+    - 'GAP-SU3-EMERGENT-GAUGE-1PI: OPEN PRIMARY TARGET — preserving the one-fundamental-field axiom now requires a genuinely quantum/collective mechanism whose effective variables possess local SU(3) gauge redundancy and whose gauge-fixed 1PI two-, three- and four-point vertices satisfy Yang-Mills/BRST/Slavnov-Taylor identities with the correct ultraviolet gauge-field content; a gauge-invariant physical massless gluon pole is not required in the confining infrared'
+    - 'GAP-SU3-STIEFEL-HLS: CLOSED KINEMATICALLY [L1] — a constrained complex 4x3 frame Z with Z^dagger G Z=-I3 modulo local right SU(3) has 24-9-8=7 real physical modes and is locally equivalent to SU(1,3)/SU(3); adding the radial Theta mode restores the original 8 real one-biquaternion degrees of freedom'
+    - 'GAP-SU3-STIEFEL-MINIMALITY: CLOSED [L1] — for a complex Nx3 orthonormal frame modulo SU(3), the physical real dimension is 6N-17; matching the seven normalized Theta modes uniquely gives N=4'
+    - 'GAP-SU3-SU3-VS-U3-STIEFEL: CLOSED [L1] — quotienting the 4x3 frame by U(3) leaves only 6 real modes and gauges away the normalized-Theta phase; SU(3) is the stabilizer of a normalized timelike vector while U(3) is the stabilizer of its complex ray'
+    - 'GAP-SU3-STIEFEL-CURRENT: CLOSED [L1] — around the reference frame the traceless frame current starts as C_mu,0 = 1/2(beta d_mu beta^dagger - d_mu beta beta^dagger)_0, giving a derived adjoint B-beta-dbeta HLS vertex rather than an inserted current'
+    - 'GAP-SU3-NONCOMPACT-HLS-SIGNATURE: CLOSED AS GUARDRAIL [L1] — the naive single-trace noncompact Stiefel kinetic Tr(dZ^dagger G dZ) has physical target signature (6,1), so compact-Grassmannian large-N formulas cannot be transplanted directly; a healthy UBT HLS analysis must keep separate positive triplet and singlet metric coefficients'
+    - 'GAP-SU3-HLS-FIXED-FRAME: CLOSED AS MASSIVE BENCHMARK — in the weak fixed-frame phase one complex triplet induces Z_B=(c_V/c_3)^2 log(Lambda^2/mu^2)/(96 pi^2)>0, but the vertical term yields m_B^2 approximately 96 pi^2 c_3^2/[c_V log], so no finite-c_V interacting massless gauge point appears in the leading-log branch'
+    - 'GAP-SU3-HLS-CRITICAL-PHASE: OPEN PRIMARY SUBTARGET — determine whether the finite noncompact 4x3 constrained Stiefel model has a distinct quantum/critical phase with m_B,ren^2=0 and 0<Z_B<infinity while preserving local SU(3) Slavnov-Taylor identities and GR compatibility'
+    - 'GAP-SU3-STIEFEL-ORIGIN: CLOSED AS GEOMETRIC OBSTRUCTION [L1] — the timelike positive-metric field space is a cone with measure rho^7 d rho dmu_7; the Stiefel/angular change of variables is singular at rho=0, and a homogeneous frame W=rho Z obeys W^dagger G W=-rho^2 I3, so at rho=0 its columns would span a totally isotropic subspace of signature-(1,3), whose complex Witt index is only 1; a rank-three colour frame therefore cannot survive the raw-field origin'
+    - 'GAP-SU3-HLS-RADIAL-VM: DOWNGRADED — the rho->0 scaling remains a useful approach from the timelike side but is not a proved exact continuation of the same one-Theta Stiefel rewrite through the critical origin; retaining full independent Z,B at rho=0 would require a separately derived collective extension'
+    - 'GAP-SU3-HLS-FINITE-RADIUS-PHASE: OPEN PREFERRED TARGET — search first for a gauge-consistent quantum-disordered phase with local timelike rho>0, well-defined rank-three frame, m_B,ren^2=0, Z_B>0 and gapped charged frame excitations, rather than forcing the raw field through rho=0'
+    - 'GAP-SU3-HLS-PRODUCT-SYMMETRY: CLOSED EFFECTIVE-SECTOR THEOREM [L1] — after a positive autonomous F_B^2 term exists, c_V=0 factorizes the Stiefel and gauge sectors and enhances the local redundancy to SU(3)_Z x SU(3)_B; the locking term -(B-C_0)^2 reduces this product to the diagonal, so the exact zero-locking surface is technically natural against additive regeneration by strictly decoupled sectors'
+    - 'GAP-SU3-HLS-LOCKING-TOWER: OPEN — RG evolution from the locked regime can generate additional diagonal-only cross operators such as Tr F_B F_C and higher derivative/relative-connection operators; strict product-symmetry restoration requires the full locking tower to approach the critical surface, although c_V is the leading relevant mass obstruction'
+    - 'GAP-SU3-HLS-YM-MATCH: CLOSED AS WEAK-REGIME BENCHMARK — below a gapped frame-triplet threshold, pure SU(3) one-loop running gives Lambda_YM=M_beta exp[-8 pi^2 Z_B(M_beta)/11]; a hierarchy M_beta/Lambda_YM=10^3 requires Z_B about 0.962, while the weak induced formula Z_B=a_H^2 L/(96 pi^2) would require a_H^2 L about 9.1e2, outside an ordinary weak-log regime'
+    - 'GAP-SU3-HLS-WEAK-HIERARCHY: CLOSED AS NO-GO — weak a_H of order one with a perturbative logarithm produces Z_B much smaller than one and essentially no Yang-Mills scale separation; useful QCD-like hierarchy therefore requires strong/critical enhancement beyond the weak-current loop'
+    - 'GAP-SU3-COSET-TOPOLOGY: CLOSED [L1 topology] — SU(1,3)/SU(3) is diffeomorphic to S1 x C3 and has H4=0 with pi_k=0 for k>=2; the homogeneous principal SU(3) frame bundle is topologically trivial'
+    - 'GAP-SU3-COMPOSITE-INSTANTON: CLOSED AS BOUNDARY — the pure one-Theta composite frame connection is a pullback of the trivial SU(3) bundle and carries no independent c2/instanton bundle sector; a QCD-like emergent B field must acquire an autonomous configuration space supporting ordinary Yang-Mills topological sectors after frame decoupling'
+    - 'GAP-SU3-HIDDEN-LOCAL-CATCH22: NARROWED — the earlier mass-versus-decoupling argument remains valid for the fixed-frame semiclassical phase but is not an absolute quantum no-go; known constrained HLS/Grassmannian models provide precedent for dynamically generated gauge kinetic terms and critical/unbroken phases, which must be rederived for finite noncompact UBT'
+    - 'GAP-SU3-WEAK-CURRENT-POLE: CLOSED AS NO-GO [L1 spectral] — a bilinear adjoint current of a free/weak complex triplet creates two-particle states from the vacuum and has continuum/logarithmic transverse correlator behaviour rather than an isolated 1/p^2 vector pole; weak charged loops can induce background F^2 but do not by themselves create composite massless gluons'
+    - 'GAP-SU3-WEINBERG-WITTEN: EXTERNAL-THEOREM BOUNDARY — a massless spin-1 state cannot carry nonzero charge of an ordinary Lorentz-covariant conserved current under Weinberg-Witten assumptions; an emergent colour theory must evade this in the gauge-theory way, with SU(3) as a local redundancy rather than a global gauge-invariant current symmetry of physical coloured states'
+    - 'GAP-SU3-COMPOSITE-POLE-CRITERION: SUPERSEDED AS NECESSARY QCD CONDITION — a positive gauge-invariant massless adjoint pole is only a diagnostic for a deconfined physical vector channel; exact QCD may confine coloured gluons, so the required benchmark is instead a consistent local SU(3) gauge 1PI action with Yang-Mills ultraviolet behaviour and correct BRST/Slavnov-Taylor structure'
+    - 'GAP-SU3-SPLIT-JET-AUX-COLOUR: CLOSED AS NO-GO [L1] — the existing GR split-jet action S_aux=int lambda.C is a pure Lagrange-multiplier right-inverse constraint; K^J and w variation force lambda=0 on non-null patches, so eliminating this sector generates no J_mu J^mu interaction, no vector inverse propagator, and no composite-colour pole mechanism'
+    - 'GAP-SU3-FIXED-BACKGROUND-7MODES: DOWNGRADED — the one-radial-plus-seven-tangent healthy spectrum is valid only with the spacetime metric held external; it must not be interpreted as seven independent internal colour modes after the canonical metric g[D Theta] is substituted'
     forbidden_wording:
     - SU(3) derived from automorphisms
     - gauge group follows from automorphisms alone
@@ -103,6 +245,24 @@ claims:
     - quark color proves that reality is a simulation
     - U(3) is isomorphic to U(1) times SU(3) as groups
     - dynamical QCD gauge symmetry is proved from UBT action
+    - same Mat(2,C) Lorentz carrier itself is the physical SU(3) internal index
+  cmb_full_covariance:
+    assumptions:
+    - 'CMB-COMB-OLD: DOCUMENTED NULL — the historical periodic TT comb variant returned p=0.919 and remains a null constraint on that specific model'
+    - 'CMB-LOWL-CUTOFF-OLD: DOCUMENTED NEGATIVE BENCHMARK — the simple psi-compactification primordial cutoff produced only sub-percent low-l suppression in the documented approximation and does not explain the observed low-l anomaly'
+    - 'GAP-CMB-FULL-COV-INTERFACE: CLOSED [L1/code] — in a finite real-vector mode representation the observable covariance is C=A P A^T+N; strict Gaussian likelihood and KL comparison are implemented and synthetically verified'
+    - 'GAP-CMB-H3-PRIMORDIAL-COV: OPEN PRIMARY TARGET — UBT has not yet derived a preregisterable primordial covariance P_UBT(k,k_prime) or discrete mode analogue, so a full-covariance H3 test is blocked by theory template rather than statistics code'
+    - 'GAP-CMB-PRIMORDIAL-HESSIAN: OPEN — background FRW recovery fixes only the first-variation cosmological equations; H3 requires the constrained second-order scalar action, a derived gauge-invariant map delta Theta -> R, and an initial-state prescription before P_UBT can be computed'
+    - 'GAP-CMB-INTERNAL-PSI-SPATIAL-CUTOFF: CLOSED AS NO-GO [L1] — on R3 x S1_psi the spectrum is |k|^2+n^2/R_psi^2; compact psi quantizes internal momentum and generates KK masses but the n=0 sector has spatial k arbitrarily close to zero, so S1_psi compactification alone does not imply k_spatial >= 1/R_psi'
+    - 'GAP-CMB-OLD-FPSI: DOWNGRADED — the historical factors 1-exp[-(k R_psi)^2] and resonances at k=n/R_psi are phenomenological ansaetze unless a coupled perturbation/topology derivation maps internal KK structure into the spatial primordial covariance'
+    - 'GAP-CMB-H3-FAIL-CLOSED: CLOSED [code] — the new model-selection module refuses an H3-labelled run unless an externally supplied frozen H3 covariance template is present and hashed'
+    - 'GAP-CMB-H2-NULL: REQUIRED — a UBT-specific claim must outperform compact topology plus a generic preregistered oscillatory primordial spectrum H2 out of sample; beating LambdaCDM H0 alone is insufficient'
+    - 'GAP-CMB-PRIMARY-BLOCKS: PROTOCOL — prioritize TT+TE+EE full harmonic covariance; BB is secondary unless an action-level UBT prediction makes it primary'
+    forbidden_wording:
+    - a post-hoc prime/theta filter on observed C_l is a derived H3 primordial covariance
+    - beating LambdaCDM alone establishes a UBT CMB signature
+    - the historical comb null result supports a new UBT topology signal
+
   three_generations:
     status: DERIVED_WITH_ASSUMPTIONS
     evidence:

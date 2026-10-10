@@ -207,12 +207,39 @@ Po snížení prvního indexu jsou tyto složky lorentzovsky antisymetrické. Ne
 
 Tenzorová vlna proto sídlí ve složené geometrii kódované jetovými a konexními proměnnými; tento výpočet není nenulovým propagátorem samotného Theta. Proměnná vystupující bez derivací v lagrangiánu prvního řádu nemusí po eliminaci jiné proměnné zmizet z fyzikálních šířících se kombinací. Zde eliminace fyzikální konexe dodává derivace tetrády. Označení všech jetových proměnných za algebraické nestačí k odvození akce pouze pro Theta. Další sektory mohou tento zdvih omezit, ale ve zvoleném vakuovém kandidátu nejsou zahrnuty.
 
+<!-- BILINGUAL-UNIT: c5-curvature.observations -->
+## Podmíněné srovnání s pozorováním
+
+Vypočtený tenzorový sektor přebírá zákon šíření z GR. Srovnání jeho metrického světelného kužele s pozorovanou rychlostí světla navíc předpokládá, že se fotony vážou na stejnou fyzikální metriku; tato vazba hmoty zde nebyla odvozena. Za tohoto předpokladu leží hodnota c_T=c uvnitř meze z GW170817/GRB 170817A [S2], která závisí na předpokladech o emisi zdroje v dané analýze:
+
+\[
+-3\times10^{-15}\lesssim\frac{c_T-c}{c}\lesssim7\times10^{-16}.
+\]
+
+Dvě tenzorové polarizace jsou slučitelné s absencí silné evidence dalších polarizací v testech GWTC-5.0 [S3]. To nevylučuje každý slabě vázaný dodatečný mód UBT. Standardní expanzní člen 3H nedodává další parametr disipace. Nebyla vyhodnocena věrohodnost vlnových průběhů, vypočten vznik vln ve zdroji ani proveden fit amplitud nebo historie expanze. Samotné čisté de Sitterovo vakuum nepopisuje éru hmoty a záření.
+
+Pouze pro referenční kalibraci použijme hodnoty Planck 2018 pro plochý základní model LambdaCDM [S4] se zanedbáním dnešního příspěvku záření. Po obnovení c dostaneme
+
+\[
+H_0=67.4\,\mathrm{km\,s^{-1}\,Mpc^{-1}},\qquad
+\Omega_m=0.315,\quad \Omega_\Lambda\simeq0.685,
+\]
+\[
+\Lambda=\frac{3H_0^2\Omega_\Lambda}{c^2}
+\simeq1.09\times10^{-52}\,\mathrm{m^{-2}},\qquad
+\ell=\sqrt{\frac3\Lambda}
+=\frac{c}{H_0\sqrt{\Omega_\Lambda}}
+\simeq1.66\times10^{26}\,\mathrm m\simeq5.37\,\mathrm{Gpc}.
+\]
+
+Ell je zde kosmologická délka zakřivení, nikoli identifikovaná Planckova mez. Tyto vstupy kalibrují volný parametr kandidáta; nejde o předpověď UBT ani nový kosmologický fit. Slučitelnost převzatá z tohoto sektoru GR neprokazuje soulad celé teorie komplexního časoprostoru s nezávislým tau s pozorováním.
+
 <!-- BILINGUAL-UNIT: c5-curvature.verification -->
 ## Ověření a zbývající dynamické rozhodnutí
 
 `verify_curvature_waves.py` kontroluje zakřivené normálové zobrazení včetně členu se zakřivením, ADM tenzorové koeficienty, hodnost vazeb, Eulerovu rovnici, hamiltonián, přesný de Sitterův mód a split-jet zdvih s konstantním polem. Samostatná implementace pomocí Python Fraction kontroluje konečné identity zakřiveného zobrazení a tenzorového zdvihu. `curvature_waves_results.json` zaznamenává počet kontrol a jejich omezení. Analytické argumenty se týkají lokálních variací s kompaktním nosičem; konečné kontroly neformalizují úplný kvocient vazeb.
 
-**LEAN-PENDING:** nejsou dodány spustitelné Lean/Lake ani ověřená formalizace těchto geometrických a variačních argumentů. Zdrojem překladu je angličtina; lidská kontrola významové ekvivalence před sloučením zůstává neprovedena.
+**LEAN-PENDING:** nejsou dodány spustitelné Lean/Lake ani ověřená formalizace těchto geometrických a variačních argumentů. Zdrojem překladu je angličtina; lidská kontrola významové ekvivalence není doložena.
 
 Užitečným kladným výsledkem je konkrétní šířící se tenzorový sektor existujícího kandidáta. Následujícím mikroskopickým požadavkem je odvodit jeho rozšířenou konexi, gradování a obsah proměnných i vazeb, nebo odvodit jinou akci s vlastním fyzikálním hessiánem. Konexní proměnné zejména nelze pouze přejmenovat na derivace Theta bez dodání a variování takového funkcionálu. Úplné komplexní pole, dynamika nezávislého tau, předpis reality, hmotový/Diracův sektor a výběr parametrů zůstávají otevřené. Kanonická akce a statusy tvrzení se nemění.
 
@@ -224,3 +251,6 @@ Užitečným kladným výsledkem je konkrétní šířící se tenzorový sektor
 - [U3] [Hodnostní hranice skalárního ekvivariantního zakřivení](../action_selection/equivariant_symplectic_curvature_rank_no_go.cs.md).
 - [U4] [Variační split-jet zdvih Palatiniho akce](../action_selection/split_jet_palatii_variational_lift.cs.md).
 - [S1] J. Maldacena, [Non-Gaussian features of primordial fluctuations in single field inflationary models](https://arxiv.org/abs/astro-ph/0210603), rovnice (2.27).
+- [S2] LIGO/Virgo a partnerské kolaborace, [Gravitational Waves and Gamma-rays from a Binary Neutron Star Merger: GW170817 and GRB 170817A](https://dcc.ligo.org/P1700308/public), 2017.
+- [S3] LIGO/Virgo/KAGRA, [GWTC-5.0: Tests of General Relativity](https://arxiv.org/abs/2607.19293), 2026.
+- [S4] Kolaborace Planck, [Planck 2018 results. VI. Cosmological parameters](https://arxiv.org/abs/1807.06209), 2020, revize 2021.

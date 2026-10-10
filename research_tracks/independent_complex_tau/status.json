@@ -192,7 +192,7 @@
         "curvature_waves.cs.md"
       ]
     ],
-    "human_semantic_equivalence_review": "PENDING_BEFORE_MERGE"
+    "human_semantic_equivalence_review": "NOT_ATTESTED"
   },
   "open_work": [
     "Finalize the one microscopic action and its independent variables",
@@ -202,5 +202,26 @@
     "Establish quantization, stability, and an observational parameter bridge"
   ],
   "updated_date": "2026-10-10",
-  "continuation_baseline_commit": "d51d5d47428dd228086b5460ddfd2702e9251818"
+  "continuation_baseline_commit": "d51d5d47428dd228086b5460ddfd2702e9251818",
+  "observational_comparison": {
+    "status": "CONDITIONAL_COMPATIBILITY_ONLY",
+    "scope": "The selected real GR tensor sector; not the full complex-spacetime/independent-tau theory",
+    "photon_metric_coupling": "ASSUMED_NOT_DERIVED",
+    "data_fit_performed": false,
+    "parameter_prediction": false,
+    "reference_calibration": {
+      "source": "https://arxiv.org/abs/1807.06209",
+      "model": "Planck 2018 flat base-LambdaCDM, present radiation neglected",
+      "H0_km_s_Mpc": 67.4,
+      "Omega_m": 0.315,
+      "Omega_Lambda": 0.685,
+      "Lambda_m_inverse_squared_approx": 1.09e-52,
+      "ell_Gpc_approx": 5.37
+    },
+    "sources": [
+      "https://dcc.ligo.org/P1700308/public",
+      "https://arxiv.org/abs/2607.19293"
+    ],
+    "evidence": ["curvature_waves.en.md", "curvature_waves.cs.md"]
+  }
 }

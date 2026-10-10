@@ -207,12 +207,39 @@ These are Lorentz-antisymmetric after lowering the first index. The unused spati
 
 The tensor wave therefore resides in the composite geometry encoded by the jet/connection variables; this calculation is not a nonzero propagator for Theta alone. A variable appearing without derivatives in a first-order Lagrangian need not disappear from the physical propagating combinations after another variable is eliminated. Here eliminating the physical connection supplies the tetrad derivative terms. Calling all jet variables algebraic is not sufficient to derive an action for Theta alone. Additional sectors might constrain this lift, but they are absent from the chosen vacuum candidate.
 
+<!-- BILINGUAL-UNIT: c5-curvature.observations -->
+## Conditional comparison with observations
+
+The calculated tensor sector inherits the GR propagation law. Comparing its metric light cone with the observed speed of light additionally assumes that photons couple to the same physical metric; that matter coupling has not been derived here. Under that assumption, its value c_T=c lies within the GW170817/GRB 170817A bound [S2], which depends on the source-emission assumptions in that analysis:
+
+\[
+-3\times10^{-15}\lesssim\frac{c_T-c}{c}\lesssim7\times10^{-16}.
+\]
+
+The two tensor polarizations are compatible with the absence of strong evidence for additional polarizations in the GWTC-5.0 tests [S3]. This does not exclude every weakly coupled extra UBT mode. The standard expansion term 3H supplies no additional dissipation parameter. No waveform likelihood, source-generation calculation, amplitude fit or fit to the expansion history has been performed. A pure de Sitter vacuum alone does not describe the matter and radiation eras.
+
+For a reference calibration only, use the Planck 2018 flat base-LambdaCDM values [S4], neglecting today's radiation contribution. Restoring c gives
+
+\[
+H_0=67.4\,\mathrm{km\,s^{-1}\,Mpc^{-1}},\qquad
+\Omega_m=0.315,\quad \Omega_\Lambda\simeq0.685,
+\]
+\[
+\Lambda=\frac{3H_0^2\Omega_\Lambda}{c^2}
+\simeq1.09\times10^{-52}\,\mathrm{m^{-2}},\qquad
+\ell=\sqrt{\frac3\Lambda}
+=\frac{c}{H_0\sqrt{\Omega_\Lambda}}
+\simeq1.66\times10^{26}\,\mathrm m\simeq5.37\,\mathrm{Gpc}.
+\]
+
+Here ell is a cosmological curvature length, not an identified Planck cutoff. These inputs calibrate a free candidate parameter; they are not a UBT prediction or a new cosmological fit. Compatibility inherited from this GR sector does not establish observational agreement of the full complex-spacetime/independent-tau theory.
+
 <!-- BILINGUAL-UNIT: c5-curvature.verification -->
 ## Verification and the remaining dynamical decision
 
 `verify_curvature_waves.py` checks the curved normal map including the curvature term, the ADM tensor coefficients, constraint rank, Euler equation, Hamiltonian, exact de Sitter mode and the constant-field split-jet lift. A separate Python Fraction implementation checks finite curved-map and tensor-lift identities. `curvature_waves_results.json` records the check count and limits. The analytic arguments concern compactly supported local variations; the finite checks do not formalize the complete constraint quotient.
 
-**LEAN-PENDING:** no Lean/Lake executables or checked formalization of these geometric/variational arguments are supplied. English is the translation source; human semantic-equivalence review is pending before merge.
+**LEAN-PENDING:** no Lean/Lake executables or checked formalization of these geometric/variational arguments are supplied. English is the translation source; human semantic-equivalence review is not attested.
 
 The useful positive result is a concrete propagating tensor sector of an existing candidate. The next microscopic requirement is to derive the candidate's extended connection, grading and variable/constraint content, or derive a different action with its own physical Hessian. In particular the connection variables must not simply be renamed derivatives of Theta without supplying and varying that functional. The full complex field, independent tau dynamics, reality prescription, matter/Dirac sector and parameter selection remain open. Canonical action and claim statuses are unchanged.
 
@@ -224,3 +251,6 @@ The useful positive result is a concrete propagating tensor sector of an existin
 - [U3] [Scalar equivariant curvature rank boundary](../action_selection/equivariant_symplectic_curvature_rank_no_go.en.md).
 - [U4] [Split-jet Palatini variational lift](../action_selection/split_jet_palatii_variational_lift.en.md).
 - [S1] J. Maldacena, [Non-Gaussian features of primordial fluctuations in single field inflationary models](https://arxiv.org/abs/astro-ph/0210603), equation (2.27).
+- [S2] LIGO/Virgo and partner collaborations, [Gravitational Waves and Gamma-rays from a Binary Neutron Star Merger: GW170817 and GRB 170817A](https://dcc.ligo.org/P1700308/public), 2017.
+- [S3] LIGO/Virgo/KAGRA, [GWTC-5.0: Tests of General Relativity](https://arxiv.org/abs/2607.19293), 2026.
+- [S4] Planck Collaboration, [Planck 2018 results. VI. Cosmological parameters](https://arxiv.org/abs/1807.06209), 2020, revised 2021.
