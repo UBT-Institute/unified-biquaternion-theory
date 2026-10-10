@@ -1,4 +1,4 @@
-> **Current status update (10 October 2026):** UBT now has a mature conditional GR-recovery chain and a substantially sharpened research programme for colour, theta/complex-time, CMB covariance, and torus-modulus dynamics. The single fundamental action is still **not finalized**; full QCD, a first-principles primordial covariance, and a bounded interacting torus-modulus potential remain open. See `STATUS_OF_UBT.md`, `CLAIMS.yaml`, and `research_tracks/priority_program_2026_10/README.md`.
+> **GR geometry update (16 July 2026):** The canonical metric is the central anticommutator of the covariant tetrad $E_\mu=D_\mu\Theta/\sqrt{\mathcal N_0}$. The local rank-ten map, connection reconstruction, affine Minkowski representer, and one-sided no-go are closed. New sharply scoped subclosures establish algebraic torsion selection in the minimal Palatini branch, exact augmented-holonomy integrability for prescribed coefficients, Lorentz/imaginary-time symmetry propagation, and the conditional Palatini/Lovelock Einstein--$\Lambda$ infrared endpoint. The fundamental action origin, self-consistent curved global solution, perturbation bridge, and on-shell Schwarzschild selection remain unresolved.
 
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
 <!--
@@ -33,48 +33,6 @@ after death, ThetaComm, or metaphysical ontology are not part of the
 canonical physical claims. They are maintained separately under
 speculative_extensions/ and should be read as exploratory hypotheses, not
 established physics.
-
----
-
-## Current Research Status — 10 October 2026
-
-The repository distinguishes exact theorems, conditional reductions, no-go
-results, and open research targets. The current high-level status is:
-
-- **Fundamental action:** one action is required, but the registered
-  \(S_\Theta\) family is still DEFINED_FAMILY_NOT_FINALIZED. No sector action
-  may be promoted to a second fundamental action.
-- **GR:** the covariant-tetrad geometry, rank-ten map, connection
-  reconstruction, split-jet nonpropagation, and the local Einstein--\(\Lambda\)
-  infrared branch are strongly developed. The effective GR recovery remains
-  conditional on the still-open microscopic Hessian/measure/coupling
-  derivation.
-- **Colour \(SU(3)\):** the algebraic stabilizer, Gell--Mann operator
-  decomposition, moving rank-three carrier, and exact \(4\times3\)
-  Stiefel/hidden-local-\(SU(3)\) rewrite are established. **Full QCD is not
-  derived.** The preferred remaining target is a finite-radius quantum phase
-  with autonomous gauge dynamics, \(Z_B>0\), vanishing HLS locking, suppressed
-  determinant anisotropy, and gapped charged frame modes.
-- **Theta / complex time:** physical
-  \(\tau_{\rm UBT}=t+i\psi\) is distinct from the dimensionless Jacobi modular
-  parameter. The free compact-circle heat trace is ordinary Jacobi theta
-  mathematics; generic finite weighted sums are not modular/mock-modular by
-  default.
-- **CMB:** the H0/H1/H2/H3 full-covariance comparison machinery is prepared,
-  but an action-derived primordial covariance \(P_{\rm UBT}\) is still
-  missing. Compact \(S^1_\psi\) alone does not impose a spatial
-  \(k_{\min}=1/R_\psi\).
-- **Torus modulus:** the isolated massless one-loop determinant does not
-  produce a finite stable modulus minimum. A genuine
-  massive/interacting/backreacted \(V_{\rm eff}\) remains open.
-- **Fine structure / \(\alpha\):** structural and numerical observations remain
-  explicitly separated from a first-principles derivation.
-
-Authoritative status sources:
-- STATUS_OF_UBT.md
-- CLAIMS.yaml
-- WHAT_IS_PROVED.md
-- research_tracks/priority_program_2026_10/README.md
 
 ---
 
