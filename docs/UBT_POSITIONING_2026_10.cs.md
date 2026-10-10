@@ -1,5 +1,4 @@
 <!-- BILINGUAL-UNIT: ubt-positioning-2026-10 -->
-
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -11,6 +10,7 @@ policy: ../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 # Vědecké pozicování UBT — říjen 2026
 
 **Status:** přehledový/poziční dokument, nikoli zdroj vět. Jemnozrnnou
