@@ -54,6 +54,23 @@ Definitions are governed by [`docs/UBT_SCOPE_AND_CLAIM_LEVELS.md`](docs/UBT_SCOP
 
 ---
 
+## October 2026 synchronization
+
+| Claim | Status | Primary source | Notes |
+|---|---|---|---|
+| Physical complex time versus Jacobi parameter | PROVED / STATUS CORRECTION | `canonical/bridges/theta_parameter_separation.md` | `tau_UBT=t+i psi` is dimensionful; the free compact-circle heat trace uses the dimensionless `tau_J=i s/(pi R_psi^2)`. Generic finite weighted sums are not modular/mock-modular by default. |
+| Minimal norm-preserving bimodule content | PROVED | `research_tracks/T2_GAUGE/su3_bimodule_u13_intersection.md` | The intersection with `u(1,3)` is `so(1,3)+u(1)_phase`; the traceless part is exactly Lorentz `so(1,3)`, not full colour `su(3)`. |
+| Raw-carrier Lorentz + full colour closure | PROVED / NO-GO boundary | `research_tracks/T2_GAUGE/su3_raw_carrier_lie_closure.md` | Full raw-carrier `su(3)` plus the three minimal boost directions closes to all `su(1,3)`, conflicting with the current sharp/determinant GR core. |
+| 4x3 Stiefel / hidden-local-SU(3) rewrite | DERIVED_WITH_ASSUMPTIONS | `research_tracks/T2_GAUGE/su3_stiefel_hls_rewrite.md` | Exact kinematic rewrite of the normalized timelike sector: 24 real frame components - 9 constraints - 8 local `SU(3)` redundancies = 7 physical modes. Dynamical QCD does not follow from the rewrite alone. |
+| Weak fixed-frame HLS phase | DERIVED_WITH_ASSUMPTIONS / NO-GO for weak massless colour | `su3_hls_fixed_frame_one_loop.md`; `su3_hls_transversality_mass_boundary.md`; `su3_hls_ym_threshold_matching.md` | Weak triplet loops generate positive gauge kinetic response but do not remove the finite locking/mass intercept, and controlled weak induction is too small for a large pure-YM hierarchy. |
+| Finite-radius autonomous HLS/Yang-Mills phase | OPEN_GAP | `su3_stiefel_hls_frg_program.md`; `su3_hls_locking_symmetry_enhancement.md` | Preferred P2 target: `rho0>0`, `Z_B>0`, locking/aniso­tropy critical surface, gapped frame matter, correct BRST/ST identities and autonomous gauge topology. |
+| Composite-frame topology | PROVED / BOUNDARY | `su3_coset_topology_instanton_boundary.md`; `su3_emergent_topology_noninvertibility.md` | `SU(1,3)/SU(3) ~= S1 x C3`; the exact one-Theta frame bundle is topologically trivial, so full Yang-Mills instanton sectors require a genuinely autonomous/non-invertible collective gauge step. |
+| Full-covariance CMB H0-H3 interface | DERIVED_WITH_ASSUMPTIONS | `research_tracks/research_front/cmb_covariance/FULL_COVARIANCE_PROTOCOL.md` | Statistical interface is implemented; real H3 inference is blocked until an action-derived frozen `P_UBT` exists. |
+| Internal `S1_psi` spatial-IR-cutoff inference | PROVED NO-GO | `internal_circle_no_spatial_ir_cutoff.md` | Compact `psi` produces KK masses but leaves the `n=0` ordinary spatial momentum continuous down to zero. |
+| Massless flat-torus one-loop modulus selection | PROVED NO-GO / CORRECTION | `research_tracks/theta_torus_potential/zeta_regularized_shape_audit.md` | Zeta-regularized determinant is proportional to `Im(tau)|eta(tau)|^4`; the standard bosonic massless logdet does not produce a finite global modulus minimum. |
+| Unique finalized fundamental one-Theta action | OPEN_GAP | `canonical/ACTION.en.md` | The action family is defined, but the unique microscopic action/measure/constraint system is not finalized. |
+| Scientific positioning versus other programmes | REVIEW / NON-THEOREM | `docs/UBT_POSITIONING_2026_10.md` | HLS/Grassmannian and KK/spectral methods are the strongest current intersections; similarities to string/LQG/asymptotic-safety/NCG are limited or methodological unless further structure is derived. |
+
 ## Explicitly Speculative Claims (non-canonical)
 
 Unless a reproducible empirical protocol upgrades them, the following remain **SPECULATIVE**:
