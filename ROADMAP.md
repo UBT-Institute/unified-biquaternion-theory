@@ -1,83 +1,17 @@
 ## Active focused programme — 2026-10-10
 
-The current programme is governed by the merged October status audit, not by
-the older May/July time-boxes retained below for history.
+1. Finalize the theta/complex-time analytic classification without conflating
+   physical complex time with the Jacobi modular parameter.
+2. Close or falsify the microscopic SU(3) dynamics bridge.  The direct raw
+   carrier and direct finite-jet colour-triplet interpretations are now
+   excluded; the remaining one-field target is an exact collective/composite
+   gauge construction.
+3. Replace diagonal-only CMB searches by preregistered full-covariance
+   TT/TE/EE tests against ordinary topology and generic oscillatory null models.
+4. Study theta-energy torus selection only after a genuine compact modulus is
+   derived from the UBT action/Hessian/partition function.
 
-### Priority 0 — finalize the single action
-
-The registered fundamental action family remains
-DEFINED_FAMILY_NOT_FINALIZED. Finalization must fix the microscopic
-configuration space, measure/Jacobian, pairing, derivative order, potential,
-independent/composite connections, Hessian, stability, and reduction maps.
-No later sector may silently supply missing fundamental dynamics.
-
-### P1 — theta / complex time
-
-**Status: closed for the currently defined theta objects.**
-
-- Separate physical \(\tau_{\rm UBT}=t+i\psi\) from the Jacobi \(\tau_J\).
-- Free compact-circle heat kernels/traces are ordinary Jacobi theta objects.
-- Generic finite weighted projections are not modular by default.
-- Full interacting modular covariance remains open.
-
-### P2 — colour dynamics
-
-**Status: narrowed, not closed.**
-
-The direct raw-carrier and finite-jet colour interpretations are no-go routes.
-The strongest one-field candidate is now the exact \(4\times3\) constrained
-Stiefel / hidden-local-\(SU(3)\) rewrite.
-
-Preferred finite-radius target:
-\[
-\rho_0>0,\qquad
-Z_B>0,\qquad
-c_V\to0,\qquad
-\lambda_2\to0,\qquad
-M_\beta^2>0.
-\]
-
-Immediate blockers:
-1. derive the finite noncompact HLS phase rather than extrapolating weak loops;
-2. control the complete locking-operator tower;
-3. compute whether the canonical sharp/GR sector sources
-   \(\lambda_2\) at \(\lambda_2=0\);
-4. show how an autonomous gauge path integral acquires full Yang--Mills
-   topological sectors;
-5. recover Yang--Mills/BRST/Slavnov--Taylor structure and viable threshold
-   matching.
-
-### P3 — CMB full covariance
-
-**Status: statistical interface ready; theory template blocked.**
-
-The next physics target is the constrained scalar perturbation action,
-gauge-invariant \(\delta\Theta\to\mathcal R\) map, state prescription, and the
-frozen primordial covariance
-\[
-P_{\rm UBT}.
-\]
-No post-hoc prime/theta filtering of observed \(C_\ell\) counts as H3.
-
-### P4 — torus-modulus selection
-
-**Status: massless one-loop branch closed as a no-go for finite stabilization.**
-
-A meaningful positive result now requires a genuine action-derived
-massive/interacting/backreacted
-\[
-V_{\rm eff}(\tau_{\rm mod},\bar\tau_{\rm mod})
-\]
-with a certified bounded minimum.
-
-### Status discipline
-
-Every theorem/no-go/conditional promotion must be mirrored in CLAIMS.yaml and
-STATUS_OF_UBT.md. Public-facing summaries must also be synchronized in
-README.md, WHAT_IS_PROVED.md, CLAIMS_MATRIX.en.md / CLAIMS_MATRIX.cs.md, and
-DERIVATION_INDEX.md.
-
----
+Status promotions must be mirrored in CLAIMS.yaml and STATUS_OF_UBT.md.
 
 <!--
 UBT-AI-PROVENANCE-BEGIN
@@ -90,14 +24,6 @@ policy: AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
-
-## Historical roadmap material
-
-The May/July execution plans below are retained for provenance and project
-history. They are **not** the current priority ordering; use the October 2026
-programme above for active work.
-
----
 
 ## Immediate programme update — 2026-07-27
 
