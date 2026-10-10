@@ -1,4 +1,4 @@
-> **Current research status (10 October 2026):** UBT is an early-stage mathematical-physics research programme with strong local biquaternion/tetrad geometry results, an exact algebraic and Stiefel/hidden-local-\(SU(3)\) colour structure, and a growing set of explicit no-go theorems. It is **not** yet a completed theory of quantum gravity or a first-principles derivation of the Standard Model. The unique fundamental one-\(\Theta\) action, full quantum definition, dynamical QCD phase, electroweak/Yukawa closure, and action-derived primordial cosmological covariance remain open. See [STATUS_OF_UBT.md](STATUS_OF_UBT.md), [CLAIMS.yaml](CLAIMS.yaml), and [UBT scientific positioning — October 2026](docs/UBT_POSITIONING_2026_10.md).
+> **GR geometry update (16 July 2026):** The canonical metric is the central anticommutator of the covariant tetrad $E_\mu=D_\mu\Theta/\sqrt{\mathcal N_0}$. The local rank-ten map, connection reconstruction, affine Minkowski representer, and one-sided no-go are closed. New sharply scoped subclosures establish algebraic torsion selection in the minimal Palatini branch, exact augmented-holonomy integrability for prescribed coefficients, Lorentz/imaginary-time symmetry propagation, and the conditional Palatini/Lovelock Einstein--$\Lambda$ infrared endpoint. The fundamental action origin, self-consistent curved global solution, perturbation bridge, and on-shell Schwarzschild selection remain unresolved.
 
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
 <!--
@@ -36,29 +36,6 @@ established physics.
 
 ---
 
-## October 2026 snapshot
-
-| Area | Current status |
-|---|---|
-| Biquaternion algebra and local Lorentz/tetrad geometry | **Strong / many exact subclosures** |
-| Full one-field action and on-shell GR selection | **Open / conditional** |
-| Algebraic \(SU(3)\), moving colour bundle and Stiefel/HLS rewrite | **Strong structural results** |
-| Full dynamical QCD | **Open** — finite-radius HLS/collective phase is the primary route |
-| Theta / complex-time classification | **Closed for currently defined objects**; full interacting modular covariance remains open |
-| CMB | Full-covariance H0--H3 statistics ready; **action-derived \(P_{\rm UBT}\) missing** |
-| Torus modulus | Massless one-loop selection **closed as a no-go**; interacting \(V_{\rm eff}\) open |
-| Alpha | **Not derived from first principles** |
-| Quantum/path-integral/UV completion | **Open** |
-| Distinct experimentally validated UBT prediction | **Not yet established** |
-
-The strongest current external overlap is with **hidden local symmetry /
-Grassmannian sigma models**, **Kaluza--Klein and spectral/heat-kernel methods**,
-and parts of **complex/twistor geometry**. Similarities to string/M theory,
-loop quantum gravity, asymptotic safety and spectral noncommutative geometry
-are more limited or methodological. See
-[UBT scientific positioning — October 2026](docs/UBT_POSITIONING_2026_10.md).
-
----
 ## What Is UBT?
 
 UBT is a biquaternionic field framework over complex time **τ = t + iψ** that aims to recover:
@@ -164,8 +141,6 @@ See:
 
 - Canonical derivation chain: [`DERIVATION_INDEX.md`](DERIVATION_INDEX.md)
 - Claim-status matrix: [`CLAIMS_MATRIX.md`](CLAIMS_MATRIX.md)
-- Current scientific positioning: [docs/UBT_POSITIONING_2026_10.md](docs/UBT_POSITIONING_2026_10.md)
-- October focused programme: [research_tracks/priority_program_2026_10/README.md](research_tracks/priority_program_2026_10/README.md)
 - Scope and claim levels: [`docs/UBT_SCOPE_AND_CLAIM_LEVELS.md`](docs/UBT_SCOPE_AND_CLAIM_LEVELS.md)
 - Quantum development roadmap: [`docs/QUANTUM_ROADMAP.md`](docs/QUANTUM_ROADMAP.md)
 - Canonical theory tree: [`canonical/`](canonical/)
