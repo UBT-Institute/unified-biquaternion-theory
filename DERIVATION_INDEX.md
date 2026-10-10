@@ -71,13 +71,6 @@ blocked by the missing action-derived \(P_{\rm UBT}\).
 Current result: the isolated massless one-loop determinant does not select a
 finite stable modulus. Interacting/backreacted modulus dynamics remains open.
 
-### Cross-programme comparison
-
-- docs/UBT_THEORY_LANDSCAPE_2026_10.md
-
-This comparison records genuine overlap with EFT/induced gravity, Kaluza--Klein
-spectral methods and hidden-local-symmetry sigma models, while explicitly
-separating UBT from string theory, loop quantum gravity and asymptotic safety.
 
 ---
 
