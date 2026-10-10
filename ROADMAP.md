@@ -1,3 +1,18 @@
+## Active focused programme — 2026-10-10
+
+1. Finalize the theta/complex-time analytic classification without conflating
+   physical complex time with the Jacobi modular parameter.
+2. Close or falsify the microscopic SU(3) dynamics bridge.  The direct raw
+   carrier and direct finite-jet colour-triplet interpretations are now
+   excluded; the remaining one-field target is an exact collective/composite
+   gauge construction.
+3. Replace diagonal-only CMB searches by preregistered full-covariance
+   TT/TE/EE tests against ordinary topology and generic oscillatory null models.
+4. Study theta-energy torus selection only after a genuine compact modulus is
+   derived from the UBT action/Hessian/partition function.
+
+Status promotions must be mirrored in CLAIMS.yaml and STATUS_OF_UBT.md.
+
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1

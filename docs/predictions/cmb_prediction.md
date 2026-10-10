@@ -1,3 +1,17 @@
+> **2026-10-10 SPATIAL-CUTOFF STATUS OVERRIDE.**
+> The historical mechanism below assumed that compactifying the internal
+> \(S^1_\psi\) implies a minimum ordinary spatial wavenumber
+> \(k_{\min}=1/R_\psi\).  This inference is incorrect for the product spectrum
+> \(\mathbb R^3\times S^1_\psi\):
+> \[
+> \lambda_{\mathbf k,n}=|\mathbf k|^2+n^2/R_\psi^2,
+> \]
+> and the \(n=0\) sector permits arbitrarily small spatial \(k\).
+> The numerical low-\(\ell\) exercise is retained as a historical
+> phenomenological test, not a derived UBT prediction.
+> See
+> \`research_tracks/research_front/cmb_covariance/internal_circle_no_spatial_ir_cutoff.md\`.
+>
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
