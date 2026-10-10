@@ -54,8 +54,6 @@ Authoritative status sources:
 STATUS_OF_UBT.md, CLAIMS.yaml, WHAT_IS_PROVED.md, and
 research_tracks/priority_program_2026_10/README.md.
 
-For a comparison with neighbouring research programmes, see
-docs/UBT_THEORY_LANDSCAPE_2026_10.md.
 
 ---
 
