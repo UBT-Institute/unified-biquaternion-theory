@@ -28,9 +28,10 @@ Definice se řídí dokumentem [`docs/UBT_SCOPE_AND_CLAIM_LEVELS.md`](docs/UBT_S
 
 ## Kanonická / výzkumná tvrzení
 
+> Synchronizace říjen 2026: následující řádky odpovídají aktuálnímu veřejnému snapshotu; autoritativním jemnozrnným ledgerem zůstává CLAIMS.yaml.
+
 | Tvrzení | Status | Primární zdroj | Poznámky |
 |---|---|---|---|
-| Synchronizace říjen 2026 — Stiefel / theta / CMB / torus | DERIVED_WITH_ASSUMPTIONS | STATUS_OF_UBT.md; CLAIMS.yaml; research_tracks/priority_program_2026_10/README.md | Synchronizační řádek: následující položky jsou aktuální veřejný snapshot; autoritativní jemnozrnný ledger zůstává CLAIMS.yaml. |
 | Timelike přepis barevného rámce \(4\times3\) Stiefel modulo lokální \(SU(3)\) | PROVED | research_tracks/T2_GAUGE/su3_stiefel_hls_rewrite.md; verification/su3_stiefel_hls_rewrite_check.py | Kinematická věta na uvedené timelike větvi: 24 reálných komponent rámce - 9 hermitovských omezení - 8 lokálních redundancí \(SU(3)\) = 7 normalizovaných fyzických módů. Toto **není** odvození plného QCD. |
 | Plně dynamické QCD ze Stiefel/HLS trasy | OPEN_GAP | research_tracks/T2_GAUGE/su3_stiefel_hls_frg_program.md | Preferovaný cíl je finite-radius kvantová fáze s autonomní \(SU(3)\) gauge dynamikou, \(Z_B>0\), nulovým locking/mass blockerem, kontrolovanou determinantovou anizotropií, správnou BRST/Slavnov--Taylor strukturou a plnou Yang--Mills topologií. |
 | Oddělení theta parametrů a klasifikace současných objektů | PROVED | canonical/bridges/theta_parameter_separation.md; research_tracks/theta_complex_time_classification/holomorphy_lorentz_no_go.md | Fyzické rozměrové \(\tau_{\rm UBT}=t+i\psi\) není Jacobiho modulární parametr. Volný heat-kernel theta sektor je klasifikován; plná interagující modulární kovariance zůstává otevřená. |
