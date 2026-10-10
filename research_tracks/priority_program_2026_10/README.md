@@ -149,91 +149,117 @@ Primary open target:
 derive a genuine massive/interacting/backreacted bounded
 `V_eff(tau_mod,tau_mod_bar)` from the finalized UBT Hessian/action.
 
+### P2 route refinement — finite-radius Stiefel/HLS gauge emergence
 
-### P2 route refinement — Stiefel HLS critical phase
+The strongest remaining one-field colour route is the exact constrained
+\(4\times3\) Stiefel / hidden-local-\(SU(3)\) formulation.
 
-The strongest remaining one-field colour route is now an exact constrained
-(4	imes3) Stiefel / hidden-local-(SU(3)) formulation.
+#### What is established
 
-Key points:
-- (Z^dagger GZ=-I_3) modulo local (SU(3)) has exactly seven normalized
-  physical real modes; the radial Theta mode restores eight.
-- The derived traceless frame current contains the adjoint bilinear
-  (B,eta,partialeta) vertex needed for HLS vacuum polarization.
-- A weak fixed-frame phase generates (Z_B>0) but remains vector-meson-like
-  and massive.
-- The HLS mass operator is gauge invariant and relevant, so massless colour
-  requires a genuine critical/unbroken phase rather than gauge redundancy
-  alone.
-- The positive timelike kinetic gives angular coefficients proportional to
-  (ho^2).  With (c_V=a_Hho^2), the enhanced-potential endpoint
-  (mu	o0^-) provides a candidate scaling in which
-  (m_B^2	o0) while (Z_B) and the induced gauge coupling can remain finite.
-- This candidate also requires (lambda_2	o0); otherwise the determinant
-  structure breaks candidate colour (SU(3)	o SO(3)).
+- \(Z^\dagger GZ=-I_3\) modulo local \(SU(3)\) has exactly seven normalized
+  real physical modes; the radial \(\Theta\) mode restores the original eight.
+- \(4\times3\) is the unique minimal complex three-frame size matching the
+  normalized one-biquaternion degree count.
+- The traceless vertical frame current begins as
+  \[
+  C_{\mu,0}
+  =
+  \frac12
+  \left(
+  \beta\,\partial_\mu\beta^\dagger
+  -
+  (\partial_\mu\beta)\beta^\dagger
+  \right)_0
+  +O(\beta^3),
+  \]
+  producing a derived adjoint \(B\,\beta\,\partial\beta\) HLS vertex.
+- The naive single-trace noncompact Stiefel kinetic has target signature
+  \((6,1)\); a healthy UBT formulation must keep separate positive triplet and
+  singlet metric coefficients.
+- Weak fixed-frame loops generate a positive transverse \(Z_B\), but the same
+  branch remains HLS-massive. Weak current transversality does not cancel the
+  \(p^0\) mass intercept.
+- The timelike field space is a cone with measure
+  \[
+  \rho^7\,d\rho\,d\mu_7.
+  \]
+  The Stiefel rewrite is singular at \(\rho=0\); because signature \((1,3)\)
+  has complex Witt index one, a homogeneous rank-three frame cannot survive
+  the raw-field origin.
+- Once an autonomous \(F_B^2\) term exists, \(c_V=0\) restores independent
+  local
+  \[
+  SU(3)_Z\times SU(3)_B,
+  \]
+  whereas the locking operator \(-(B-C_0)^2\) reduces this product to the
+  diagonal.
+- The normalized timelike coset has topology
+  \[
+  SU(1,3)/SU(3)\cong S^1\times\mathbb C^3.
+  \]
+  Its exact composite frame bundle is topologically trivial and does not by
+  itself supply independent Yang--Mills instanton sectors.
+- The determinant anisotropy is a symmetric \(\mathbf6\) spurion with physical
+  \(SO(3)\) stabilizer. In an autonomous gauge EFT its canonical Higgs
+  quadratic form has rank five.
 
-The next actual calculation is the finite noncompact (4	imes3) HLS phase
-diagram, preferably by background-field FRG or an equivalent constrained
-gap/Schwinger--Dyson analysis.
+#### Preferred finite-radius target
 
-The preferred QCD-like endpoint is
-[
-m_{B,m ren}^2=0,qquad
-Z_B>0,qquad
-M_eta^2>0,
-]
-so that below the charged-frame gap the colour EFT can approach pure
-(SU(3)) Yang--Mills.
+The preferred QCD-like endpoint is now
+\[
+\boxed{
+\rho_0>0,\qquad
+Z_B>0,\qquad
+c_V\to0,\qquad
+\lambda_2\to0,\qquad
+M_\beta^2>0.
+}
+\]
 
+This avoids the singular \(\rho=0\) chart. The desired interpretation is:
+a locked/frame regime first generates a positive gauge kinetic term; the flow
+then reaches a critical decoupling surface, the charged frame sector becomes
+gapped, and the autonomous \(SU(3)_B\) sector matches onto Yang--Mills.
 
-### P2 finite-radius refinement — 2026-10-10
+#### Quantitative matching boundary
 
-The preferred HLS target has changed from the singular raw-field endpoint
-(ho	o0) to a **finite-radius quantum critical/decoupling surface**.
+Below the charged-frame threshold,
+\[
+\Lambda_{\rm YM}
+=
+M_\beta
+\exp\left[
+-\frac{8\pi^2}{11}Z_B(M_\beta)
+\right]
+\]
+at one-loop pure-\(SU(3)\) accuracy.
 
-New exact boundaries:
-- the timelike field space is a cone with measure
-  (ho^7dho,dmu_7); the Stiefel rewrite loses invertibility at
-  (ho=0);
-- a homogeneous frame (W=ho Z) cannot stay rank three at the origin,
-  because a Hermitian form of signature ((1,3)) has complex Witt index one;
-- after (F_B^2) exists, (c_V=0) restores independent local
-  (SU(3)_Z	imes SU(3)_B), while (c_V
-e0) locks them to the diagonal;
-- weak current polarization generates (Z_B) but cannot perturbatively cancel
-  a finite HLS mass intercept;
-- useful pure-Yang--Mills scale separation requires order-one (Z_B); the
-  weak one-triplet induction is far too small unless its nominal coupling/log
-  is already outside a controlled weak regime;
-- (SU(1,3)/SU(3)cong S^1	imesmathbb C^3), so the exact one-Theta
-  composite frame bundle is topologically trivial and has no independent
-  instanton (c_2) sectors;
-- full Yang--Mills topology therefore requires a genuinely autonomous,
-  non-invertible collective gauge-field emergence step;
-- the determinant anisotropy is a symmetric ({f6}) spurion with physical
-  stabilizer (SO(3)); in an autonomous gauge EFT its canonical Higgs pattern
-  has rank five (five symmetric Gell--Mann directions broken, three
-  (SO(3)) directions unbroken).
+A hierarchy \(M_\beta/\Lambda_{\rm YM}=10^3\) requires
+\[
+Z_B(M_\beta)\simeq0.962.
+\]
+The weak one-triplet induced coefficient is far too small for a large hierarchy
+unless its nominal coupling/logarithm is already outside a controlled weak
+regime. A useful QCD-like phase therefore requires genuinely strong/critical
+dynamics, not merely the one-loop sign calculation.
 
-Preferred finite-radius endpoint:
-[
-ho_0>0,qquad
-Z_B>0,qquad
-c_V	o0,qquad
-lambda_2	o0,qquad
-M_eta^2>0.
-]
+#### Primary remaining blocker
 
-At (c_V=0), the autonomous (B) sector can retain ordinary Yang--Mills gauge
-protection.  The remaining major radiative-stability problem is
-(lambda_2): the isolated colour sigma sector protects
-(lambda_2=0) by global (SU(1,3)), but the canonical sharp/GR core breaks
-that symmetry and can act as a spurion source.
+Within the isolated colour sigma model, \(\lambda_2=0\) is protected by the
+enhanced global \(SU(1,3)\) symmetry. The canonical sharp/tetrad GR core does
+not possess that full symmetry and can act as a spurion source.
 
-The next decisive calculation is therefore the mixed GR/colour contribution
-to
-[
-left.eta_{lambda_2}ight|_{lambda_2=0},
-]
-or an equivalent demonstration that the sharp-sector spurions decouple at the
-colour matching scale.
+The next decisive mixed-sector quantity is therefore
+\[
+\boxed{
+\left.
+\beta_{\lambda_2}
+\right|_{\lambda_2=0}
+}
+\]
+from the canonical sharp/GR interactions, or an equivalent proof that those
+symmetry-breaking spurions decouple at the colour matching scale.
+
+Full QCD remains **OPEN** until the finite noncompact phase, the complete
+locking-operator tower, Yang--Mills/BRST/Slavnov--Taylor identities, and the
+autonomous gauge topological configuration space are derived.
