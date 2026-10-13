@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # UBT operator-first programme — Weyl factorization and the action-selection gap
 
 **Date:** 2026-10-11  
@@ -78,3 +90,34 @@ Thus neither Weyl factorization nor a Clifford operator alone derives GR, quantu
 **Not established:** a canonical UBT operator, a unique action, propagation of spin-2 modes, induced Newton coupling, global UBT solutions.
 
 **Repository impact:** this note is research-only. No changes to canonical status or claims matrix are justified by it.
+
+
+## Research map — post-merge notes (October 2026)
+
+All links below are **Tier C / working**, AI-assisted notes. Their local derivations and UBT interpretations are not peer-reviewed, and Lean formalizations are **LEAN-PENDING** unless a separate verifier is recorded. They are NOT amendments to canonical GR claims.
+
+| Stage | Note | Source type and claim boundary |
+|---|---|---|
+| Representation | [Lorentz-equivariant vector operators](lorentz_equivariant_vector_operators.md) | Standard representation-theoretic decomposition; no canonical first-order vector endomorphism |
+| Operator | [Dirac–Kähler closure](dirac_kahler_closure_audit.md) | Established Hodge–Dirac identities, conditional on a metric; not a Theta action |
+| Geometry | [Composite metric/Hodge bootstrap](composite_hodge_metric_audit.md) | Exact flatness of gradient coframes; curved UBT dynamics still open |
+| Connection | [Stabilizer kernel and integrability](connection_stabilizer_integrability.md) | Conditional local kernel count (12), identity, no dynamical selection |
+| Connection | [Curvature/holonomy counterexample](stabilizer_curvature_holonomy_counterexample.md) | Local example with same metric but different Lorentz-connection curvature |
+| Observables | [Second covariant jet and quotient](second_jet_observables_and_quotient.md) | Second jets generally distinguish stabilizer deformations |
+| Selection | [Master-equation status audit](master_equation_stabilizer_audit.md) | Conditional obstruction; no final UBT master equation sourced |
+| Selection | [Metric quotient vs full connection](metric_quotient_vs_connection_closure.md) | Metric observables close; torsion-free uniqueness is extra condition |
+| Selection | [Minkowski proxy comparison](minkowski_master_proxy_comparison.md) | Two explicit **proxy** operators, not canonical equations |
+| Algebra | [Derivations vs Lorentz congruence](algebra_derivation_vs_lorentz_congruence.md) | Standard matrix derivation and Lorentz product compatibility audit |
+| Literature | [Dorau–Much entropy/GR bridge](dorau_much_relative_entropy_gr_bridge.md) | Independent 2026 PRL result properly attributed; UBT connection no-go is conditional |
+
+### Credit and originality boundary
+
+**Established external mathematics:** Pauli–Weyl matrices, complex Clifford algebra classification, Dirac–Kähler/Hodge calculus, Skolem–Noether derivations, Lorentz stabilizer dimensions, standard torsion/spin-connection identities and Jacobson-type horizon arguments. These are **not claimed as novel UBT discoveries**. Their role is to audit whether particular UBT assumptions are mathematically compatible.
+
+**Independent related work:** P. Dorau and A. Much, *From Quantum Relative Entropy to the Semiclassical Einstein Equations*, *Phys. Rev. Lett.* **136**, 091602 (2026), https://doi.org/10.1103/lmq8-nsty ; arXiv:2510.24491. They derive a scalar-field relative-entropy/energy-flux relation in a specified horizon setting and assume an entropy–area relation to obtain semiclassical Einstein equations. Do not label their quantum-information derivation as a new UBT proof. The separate UBT-specific conditional deduction is that a **metric-only scalar** entropy prescription does not distinguish Lorentz stabilizer shifts preserving g. No text, table or figure from that paper is reproduced here verbatim.
+
+**UBT-specific results and limitations:** The conditional algebraic examples and no-go statements here analyze the existing composite coframe e=(1/s)D V and are *research-stage deductions*, not asserted priority/novelty claims or empirical laws. Some lemmas should be independently machine-checked or Lean-formalized before theorem-level promotion. The programme still lacks a unique independently selected physical connection and fundamental action.
+
+**Scope management:** Keep the present material within this one research track and a dedicated follow-up PR. Do not duplicate it across canonical documents; promote only externally verified results after author's substantive review. The repo-wide [AI provenance policy](../../AI_PROVENANCE.md) remains authoritative; research-track paths are Tier C and must not be silently elevated to Tier A. 
+
+---
