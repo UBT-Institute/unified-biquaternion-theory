@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Dorau–Much (PRL 2026): modular relative entropy as a conditional GR-selection bridge
 
 Date: 2026-10-13. Research note; AI-assisted; noncanonical. Source: Philipp Dorau and Albert Much, "From Quantum Relative Entropy to the Semiclassical Einstein Equations," Physical Review Letters **136**, 091602 (published March 2, 2026), DOI: https://doi.org/10.1103/lmq8-nsty ; arXiv:2510.24491v3 https://arxiv.org/html/2510.24491v3 .
