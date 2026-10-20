@@ -135,7 +135,7 @@ research_tracks/action_selection/canonical_family_hamiltonian_bridge.cs.md
 
 Pro deklarovanou maticovou reprezentaci a Lorentzovo/fázové
 kongruenční působení je jediným reálným kvadratickým invariantem
-až na měřítko H(X)=Tr(X^sharp X^dagger). Na všech osmi reálných
+až na měřítko H(X)=Tr(X^sharp X^dagger). Na všech 8 reálných
 složkách má signaturu **(2,6)**. V bodě nenulového globálního
 minima X0=irI má čtyřrozměrná normála k orbitě fáze/boostů
 kinetickou signaturu **(1,3)**, ačkoli Hessián potenciálu
