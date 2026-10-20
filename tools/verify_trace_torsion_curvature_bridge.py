@@ -103,6 +103,29 @@ def verify_trace_torsion_bridge() -> dict[str, bool]:
     checks["Einstein_frame_scalar_potential_variation"] = (
         sp.simplify(sp.diff(Einstein_potential,rho)
         -(sp.diff(Ur,rho)*Fr-2*Ur*sp.diff(Fr,rho))/Fr**3)==0)
+
+    # Canonical radial quartic potential: the algebraic Einstein-frame
+    # scalar equation generically fixes a constant rho on connected patches.
+    r0, f0, xi, lam, uc=sp.symbols("r0 f0 xi lam Uc",positive=True)
+    Fquad=f0+xi*rho**2
+    Uquartic=uc+lam*(rho**2-r0**2)**2
+    scalar_numerator=sp.expand(
+        Fquad*sp.diff(Uquartic,rho)
+        -2*Uquartic*sp.diff(Fquad,rho)
+    )
+    expected_num=4*rho*(
+        lam*(rho**2-r0**2)*(f0+xi*r0**2)-xi*uc
+    )
+    checks["quartic_potential_scalar_equation_factors_exactly"] = (
+        sp.simplify(scalar_numerator-expected_num)==0
+    )
+    target_rho_squared=r0**2+xi*uc/(lam*(f0+xi*r0**2))
+    checks["quartic_scalar_root_fixes_radial_field"] = (
+        sp.simplify(
+            (expected_num/(4*rho)).subs(rho**2,target_rho_squared)
+        )==0
+    )
+    checks["quadratic_positive_coupling_disallows_flat_scalar_equation"] = (lam*(f0+xi*r0**2)).is_positive is True
     return checks
 
 
