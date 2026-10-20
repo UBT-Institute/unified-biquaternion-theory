@@ -202,6 +202,16 @@ naive auxiliary-gauge repair on that fixed background, not a full constrained
 UBT completion. See Proposition 7 of the Hamiltonian bridge and
 `tools/verify_theta_auxiliary_connection_reduction.py`.
 
+**Timelike Lorentz-real branch:** assuming a consistent positive-Hermitian
+Lorentz-real slice and an independent auxiliary SL(2,C) connection, the
+radial scalar can be stable for positive kinetic normalization.
+But the same exact algebraic connection equation forces its on-shell
+covariant tetrad to have rank at most one on a prescribed metric.
+Thus this naive stable reduction does not generate a nondegenerate
+emergent UBT spacetime. See Proposition 8 of the Hamiltonian bridge
+and tools/verify_theta_timelike_auxiliary_rank.py. Full composite-metric
+variation may evade the restricted no-go and remains OPEN.
+
 <!-- BILINGUAL-UNIT: single-action.falsification -->
 ## Precommitted falsification criterion
 
