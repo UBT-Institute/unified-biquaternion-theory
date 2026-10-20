@@ -145,6 +145,41 @@ For the nontrivial radial branch, the equation is solved only at an isolated con
 \]
 when the right side is positive; otherwise no real positive solution exists. On any connected smooth solution, rho therefore cannot vary with cosmic time under these hypotheses. But the earlier single-Theta FLRW coframe needs nonzero time derivative of rho to produce a nondegenerate temporal leg. **Consequently the naive independent-variable scalar–Cartan model with this canonical quartic cannot simply be transported unchanged to the nondegenerate radial-Theta FLRW solution.** This is an *additional conditional obstruction*, not a theorem excluding a fully composite UBT variation, other kinetic or matter terms, or modified scalar couplings. It is essential to vary the actual composite action rather than borrow the Einstein-frame equation after independent-field reduction.
 
+## Chain-rule correction: the real composite-UBT connection equation
+
+For the actual radial single-Theta representation the metric/tetrad is **not independent** of the boost spin connection. Let the independent-tetrad first-order parent functional be (S[e,omega,ho]), and set the radial coframe only after its Euler derivatives are defined:
+\[
+e_\mu{}^0=\frac{\partial_\mu\rho}{\sqrt{\mathcal N_0}},\qquad
+e_\mu{}^i=\frac{\rho\,b_\mu{}^i}{\sqrt{\mathcal N_0}}.
+\]
+Let the Euler densities at fixed other parent variables be
+\[
+\mathcal E^\mu{}_a:=\left.\frac{\delta S}{\delta e_\mu{}^a}\right|_{\omega,\rho},
+\quad \mathcal C^\mu{}_i:=\left.\frac{\delta S}{\delta b_\mu{}^i}\right|_{e,\rho},
+\quad \mathcal U_\rho:=\left.\frac{\delta S}{\delta\rho}\right|_{e,\omega}.
+\]
+Then exact functional chain differentiation, including variation of all metric/measure terms through e, gives the **true composite boost equation**:
+\[
+\boxed{
+\frac{\delta S_{\mathrm{comp}}}{\delta b_\mu{}^i}
+=\mathcal C^\mu{}_i+\frac{\rho}{\sqrt{\mathcal N_0}}\mathcal E^\mu{}_i=0.
+}
+\]
+Likewise integrating by parts the derivative of rho in the temporal coframe gives the composite scalar equation:
+\[
+\boxed{
+\frac{\delta S_{\mathrm{comp}}}{\delta\rho}
+=\mathcal U_\rho+
+\frac{b_\mu{}^i}{\sqrt{\mathcal N_0}}\mathcal E^\mu{}_i
+-\frac1{\sqrt{\mathcal N_0}}\partial_\mu\mathcal E^\mu{}_0=0.
+}
+\]
+Here (mathcal E^mu{}_a) already includes the contributions of the parent curvature, tetrad and metric variations; explicit (ho) dependence is in (mathcal U_ho). If the parent action contains derivative terms, these are **Euler functional derivatives** rather than partial derivatives, so the identities still hold under regular boundary assumptions.
+
+**Critical correction to the preceding torison-matching argument:** The independent Cartan equation (mathcal C^mu{}_i=0), and hence its simple trace solution, is NOT generally the equation after substituting the composite tetrad. The exact boost equation includes the extra (homathcal E^mu{}_i/sqrt{mathcal N_0}) source. The earlier matching relation (a^2F=C^2V^2) is therefore a necessary condition **only in the independent-variable comparator (or in a branch where the relevant tetrad Euler terms independently vanish)**. It is *not* established as a necessary condition of any full single-Theta UBT action. A genuine dynamical rank/Hamiltonian claim must solve the coupled composite connection and Theta equations and their constraints, not borrow independent Palatini equations.
+
+The exact toy functional identity is checked in `tools/verify_composite_spin_chain_rule.py` and `tests/test_composite_spin_chain_rule.py`. It is a structural calculus result, not a complete field-equation solution.
+
 ## Falsification gates and connection to existing UBT
 
 The scalar-curvature comparison does NOT derive the function F from the biquaternion invariant action, the absolute gravitational coupling, the physical trace spin-current, or the UBT Dirac algebra. In the independent-variable Einstein frame with no scalar potential or matter, ordinary vacuum Einstein equations give no expanding closed spherical FLRW solution, so the curvature-only comparator is not a completed cosmology. A specified potential or matter sector is essential to attempt an on-shell solution. Re-impose e=DTheta/sqrt(N0) and **vary the complete composite action before selecting a gauge**. The rank-ten off-shell certificate of PR #686 does not supply the constrained Einstein lapse equation.
