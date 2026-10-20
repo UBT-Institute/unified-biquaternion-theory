@@ -180,6 +180,20 @@ tools/verify_theta_kinetic_spectrum.py. The fundamental action is
 **still not finalized**: its dynamical constraints must be computed
 before any ghost-free claim is upgraded.
 
+### Bare-family gauge-connection limitation
+
+When an independent connection appears **only algebraically** through
+the covariant derivative of Theta, the minimal kinetic/potential family
+contains no derivatives of that connection. Its fixed-background
+connection Euler--Lagrange equations are algebraic and its connection
+momenta vanish. Therefore a propagating Yang--Mills curvature kinetic
+term does **not** follow at tree level from this bare family.
+The full composite-metric variation, a derived induced gauge action,
+or a separately justified curvature-dependent single action would
+require additional analysis. See Proposition 6 in
+[canonical_family_hamiltonian_bridge.en.md](../research_tracks/action_selection/canonical_family_hamiltonian_bridge.en.md).
+The fundamental action remains **DEFINED_FAMILY_NOT_FINALIZED**.
+
 <!-- BILINGUAL-UNIT: single-action.falsification -->
 ## Precommitted falsification criterion
 
