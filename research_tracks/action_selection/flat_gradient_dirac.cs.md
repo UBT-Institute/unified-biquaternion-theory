@@ -31,7 +31,7 @@ Takto omezená **již existující rodina** kinetických a potenciálových akc�
 S_{\rm red}=\int dt\,d^3x\,F(y)\det J,\qquad
 F(y)=4cN_0-U(\Theta(y)).
 \]
-Jde o omezenou hustotu identifikovanou v PR #680. Koeficient \(c\) a potenciál \(U\) zůstávají vstupy.
+Koeficient \(c\) a potenciál \(U\) zůstávají vstupy. Tato redukce již byla identifikována v PR #680.
 
 ## 2. Přesná rychlostní Hessova matice a primární vazby
 
@@ -72,7 +72,7 @@ Položme
 \mathcal W[y]=\int_\Sigma
 G(y)\,dy^1\wedge dy^2\wedge dy^3.
 \]
-Variace pullbacku této 3-formy používá identitu \(d[G\,dy^1\wedge dy^2\wedge dy^3]=F\,dy^0\wedge dy^1\wedge dy^2\wedge dy^3\) a integraci per partes bez okrajových členů; výsledkem je
+Pro cílovou 3-formu platí \(d[G\,dy^1\wedge dy^2\wedge dy^3]=F\,dy^0\wedge dy^1\wedge dy^2\wedge dy^3\). Variace pullbacku této formy a integrace per partes bez okrajových členů dávají
 \[
 \boxed{\frac{\delta\mathcal W}{\delta y^a(x)}=F(y(x))M_a(x).}
 \]
@@ -95,7 +95,7 @@ lokálních fyzikálních stupňů volnosti v **omezené** teorii \(y^a\). Kanon
 
 Transformace \(y^a\mapsto y^a+\varepsilon^a(x)\) jsou efektivní kalibrační degenerací omezeného okrajového funkcionálu. Nejsou tím dokázány 4 nové lokální symetrie úplné UBT.
 
-U fundamentální UBT bychom museli **nejprve** variovat všechny nezávislé proměnné \(\Theta\), spojení a případnou úplnou akci a **teprve potom** zavést omezení. Obecně to není totéž. Vztah k poli \(\Theta\) a omezené akci \(S_{\rm red}\) je podmíněný. Kinetická matice \(8\) komponent na pevném pozadí z PR #679 a charakteristický polynom z PR #681 se týkají jiných nezávislých proměnných.
+U fundamentální UBT bychom museli **nejprve** variovat všechny nezávislé proměnné \(\Theta\), spojení a případnou úplnou akci a **teprve potom** zavést omezení na \(\Theta\). Obecně to není totéž jako variovat \(S_{\rm red}\). Kinetická matice \(8\) komponent na pevném pozadí z PR #679 a charakteristický polynom z PR #681 se týkají jiných nezávislých proměnných.
 
 ## 5. Přesný důsledek pro skalární a tenzorové perturbace
 
@@ -109,8 +109,8 @@ Porucha metriky je čistě souřadnicová. Tato větev proto nevytváří fyzik�
 
 ## 6. Nezávislá verifikace a další krok
 
-- \`tools/verify_flat_gradient_dirac.py\` ověřuje přesnou 4x4 rychlostní Hessovu matici, ortogonalitu kofaktorů a všechny 4 identity funkcionální Eulerovy derivace při nezávislých symbolických prostorových prvních a symetrických druhých jetech.
-- \`tests/test_flat_gradient_dirac.py\` kontroluje nulová rezidua; samostatný výpočet identity \(\delta\mathcal W/\delta y^a=FM_a\) doplňuje obecný důkaz pomocí diferenciálních forem.
+- \`tools/verify_flat_gradient_dirac.py\` ověřuje přesnou 4x4 rychlostní Hessovu matici, ortogonalitu kofaktorů a všechny 4 identity funkcionální Eulerovy derivace \(\delta\mathcal W/\delta y^a=FM_a\) při nezávislých symbolických prostorových prvních a symetrických druhých jetech.
+- \`tests/test_flat_gradient_dirac.py\` kontroluje nulová rezidua; výpočet doplňuje obecný důkaz pomocí diferenciálních forem.
 - S dynamickým spojením je nutné spočítat rychlostní Hessovu matici a Diracovu algebru na **nedegenerovaném zakřiveném řešení**. Teprve poté lze odvozovat pozitivní energii, \(\Theta\to\zeta\) a fyzikální přenosové funkce.
 
 **Netvrdíme tím úplné odvození GR, volbu topologie, bezparametrické CMB spektrum ani pozitivní energii kompletní UBT.**
