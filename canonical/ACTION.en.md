@@ -134,6 +134,30 @@ for hypotheses, equations, proof and remaining Dirac-constraint obligations.
 **This does not change** `DEFINED_FAMILY_NOT_FINALIZED` or establish the
 full composite-field Hamiltonian.
 
+### Exact invariant kinetic-sector obstruction (conditional)
+
+For the declared generic matrix representation and connected Lorentz/phase
+congruence symmetry, the sole invariant real quadratic form is
+`H(X)=Tr(X^sharp X^dagger)`; its full 8-real inertia is **(2,6)**.
+At the proven pointwise quartic minimum `X0=i r I`, the four-dimensional
+normal to the phase/boost orbit has kinetic inertia **(1,3)** while the
+potential Hessian is positive there. With the connection frozen, the
+three normal-vector modes grow exponentially for positive kinetic sign
+(and the scalar normal mode grows for negative sign).
+See Propositions 4-5 and the exact SymPy/pytest certificate in
+`research_tracks/action_selection/canonical_family_hamiltonian_bridge.en.md`.
+This is a **fixed-background no-go**, not a full constrained UBT ghost
+proof: the zero-connection constant minimum has a degenerate tetrad.
+Variation of the complete composite metric and connection and Dirac
+constraint reduction may change the physical spectrum.
+
+There is a second structural boundary: the bare family with connections
+entering only through `D_mu Theta` has no derivatives of those
+connections, hence no classical propagating Yang--Mills connection
+kinetic term. Connection variations are algebraic. An induced
+effective gauge action remains to be demonstrated, not presumed.
+Neither conclusion selects a finalized fundamental action.
+
 <!-- BILINGUAL-UNIT: single-action.falsification -->
 ## Precommitted falsification criterion
 
