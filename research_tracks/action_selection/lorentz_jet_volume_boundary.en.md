@@ -11,7 +11,7 @@ UBT-AI-PROVENANCE-END -->
 
 # Composite Lorentz-slice kinetic volume collapse and flat-gradient boundary theorem
 
-**Status: DERIVED_WITH_ASSUMPTIONS.** Independent clarification of the much narrower timelike-gauge Proposition 9 in draft PR #679. This **does not** replace the canonical UBT field or introduce a new action. The objective is to determine what the *existing* invariant quadratic kinetic family can and cannot generate.
+**Status: DERIVED_WITH_ASSUMPTIONS.** Independent clarification of the much narrower timelike-gauge Proposition 9 in merged PR #679. This **does not** replace the canonical UBT field or introduce a new action. The objective is to determine what the *existing* invariant quadratic kinetic family can and cannot generate.
 
 ## I. Definition and exact algebraic theorem (any nondegenerate Lorentz tetrad)
 
@@ -96,11 +96,11 @@ The local Euler--Lagrange equations of this **restricted** action therefore vani
 ## III. Implications for action selection and CMB
 
 1. The fixed-background oscillator Hamiltonian in the merged dodecahedral track is a **conditional test-field truncation**, not automatically the Hamiltonian of the composite-metric family.
-2. The fixed-background ghost analysis and auxiliary-connection obstructions in draft PR #679 address different constraints. The algebraic volume identity here holds on *any* nondegenerate Lorentz-real tetrad, but makes no assertion about stability of the full constrained theory.
+2. The fixed-background ghost analysis and auxiliary-connection obstructions in merged PR #679 address different constraints. The algebraic volume identity here holds on *any* nondegenerate Lorentz-real tetrad, but makes no assertion about stability of the full constrained theory.
 3. In the gauge-trivial pure-gradient branch, every nondegenerate metric is locally Minkowski, so that branch cannot support GR curvature, FLRW perturbations, primordial gauge-invariant \(\zeta\), or a genuine derived CMB spectrum. Coordinate wiggles \(y^a(x)\) do not generate Riemann curvature.
 4. A successful candidate single UBT action must specify **which term** generates its nontrivial gravitational equations (curvature, holonomy, torsion, derivative connections or genuinely new constrained invariant), demonstrate a nondegenerate on-shell background, compute constraints/healthy physical energy, then derive \(\zeta[\Theta]\) and its power spectrum before using the \(S^3/2I\) CMB kernel.
 5. A generic local curvature term such as \(\int\sqrt{-g}\,R[g(\Theta,A,B)]\) is **not** derived from the kinetic family and changes the variational order; it is only a test ansatz unless its coefficient and origin are fixed by UBT. When \(g=y^*\eta\) pure-gradient, this scalar curvature is still exactly zero.
 
 **Independent verification:** \`tools/verify_lorentz_jet_boundary.py\` and \`tests/test_lorentz_jet_boundary.py\` include exact polynomial metric-determinant / boundary-current checks and finite-matrix checks with both coordinate-nonlinear and affine maps. SymPy checks are computational certificates for examples; the proofs above establish the unrestricted identities analytically.
 
-**Related:** \`canonical/fields/theta_field.tex\` (single field and central tetrad); \`research_tracks/action_selection/theta_potential_invariants.en.md\` (unique invariant); \`research_tracks/action_selection/canonical_family_hamiltonian_bridge.en.md\` in **draft PR #679** (conditional ghost and narrower composite timelike branch); \`research_tracks/dodecahedral_action_cmb/DERIVATION.md\` (toy CMB, not a data fit).
+**Related:** \`canonical/fields/theta_field.tex\` (single field and central tetrad); \`research_tracks/action_selection/theta_potential_invariants.en.md\` (unique invariant); \`research_tracks/action_selection/canonical_family_hamiltonian_bridge.en.md\` in **merged PR #679** (conditional ghost and narrower composite timelike branch); \`research_tracks/dodecahedral_action_cmb/DERIVATION.md\` (toy CMB, not a data fit).
