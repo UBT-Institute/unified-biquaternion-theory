@@ -72,8 +72,7 @@ zkoumaná podmíněná kinetická rodina hlavní část
 \]
 
 **Nejde o nově zvolenou fundamentální akci.**
-Pro rovinnou vlnu s frekvencí \(\omega\)
-a vlnovým vektorem \(\mathbf k\) je hlavní symbol
+Pro rovinnou vlnu s frekvencí a vlnovým vektorem \((\omega,\mathbf k)\) je hlavní symbol
 
 \[
 P_{AB}(\omega,\mathbf k)
@@ -96,8 +95,7 @@ rodiny na pevném pozadí leží na jediném
 Minkowského světelném kuželu
 \(\omega^2=c_{\rm light}^2|\mathbf k|^2\).
 Kinetický Hamiltonián přesto obsahuje
-záporné směry, protože signatura \(K\)
-je \((2,6)\) při \(\kappa>0\), resp.
+záporné směry, protože \(\operatorname{sig}K=(2,6)\) při \(\kappa>0\), resp.
 \((6,2)\) při \(\kappa<0\).
 
 **Důkaz:** Hlavní symbol je součinem skalárního
@@ -129,7 +127,7 @@ systém lze psát
 \mathcal L^{(2)}_{\rm prin}
 =\frac12\dot\varphi^T A\dot\varphi
 -\frac12\sum_i(\partial_i\varphi)^T B_i(\partial_i\varphi)
-+\cdots.
++\cdots,
 \]
 
 Charakteristický polynom v prostorovém
@@ -209,7 +207,7 @@ musíme:
    a určit vazby Diracovou metodou.
 3. Vypočítat hlavní symbol fyzikálních módů,
    hyperbolicitu a charakteristické kužely;
-   porovnat je s pozorovanou rychlostí světla.
+   porovnat je s pozorovanou rychlostí \(c_{\rm light}\).
 4. Nezávisle zkontrolovat omezenost fyzikálního
    Hamiltoniánu a disperzní nestability.
 5. Teprve případné další odvozené kužely
