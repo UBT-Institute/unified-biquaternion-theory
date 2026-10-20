@@ -106,3 +106,5 @@ Opačná implikace **neplatí**: kladné a záporné místní hustoty se mohou p
 Kanonické torzní zobrazení je v definovaném minimálním Palatiniho modelu algebraicky invertibilní a zdroj spinu musí vyplývat ze **stejné kompozitní** akce Theta. Volné boostové variace nesmíme považovat za fyzikální před uložením vazeb spojení, torze, difeomorfismů a Diracovy analýzy. On-shell rank, zdravé tenzorové módy a vztah Theta k CMB zůstávají otevřené. Již známá rekonstrukce zakřivené kontorze poskytuje lokální geometrickou realizaci za předpokladů, nikoliv řešení kanonických rovnic pohybu.
 
 **Reprodukovatelnost:** `tools/verify_temporal_gauge_metric_rank.py`, `tests/test_temporal_gauge_metric_rank.py`. Před mergem spustit specializované CI; neměnit kanonické soubory ani netvrdit naměřený fit CMB.
+
+**Kritérium revize:** Větu o ranku úplné UBT lze vyslovit až po odvození spinového a torzního zdroje ze stejné akce, její úplné algebry vazeb a prostorově proměnného sektoru lapse na nedegenerovaných řešeních.
