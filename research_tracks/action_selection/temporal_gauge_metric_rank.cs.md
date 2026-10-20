@@ -90,6 +90,17 @@ Samotný minisuperprostor FLRW má menší rank a zvlášť předpokládaná rov
 
 Poslední tvrzení platí pouze při předpokladech minimálního pomocného spojení z již mergnutého výzkumu; nejde o Cartanovu rovnici odvozené úplné akce Theta.
 
+## Důsledek pro Hamiltonovu akci
+
+Omezení lapse má přesný důsledek **pokud jej dosadíme do gravitační akce před variací**. U lokální ADM akce s lapse jako multiplikátorem a hustotou Hamiltonovské vazby \(\mathcal H(x)\) nezávislá variace lapse dává lokální vazbu. Pokud ale před variací omezíme lapse na funkci samotného času, dostaneme jen prostorový integrál:
+\[
+\frac{\delta S}{\delta N(t,x)}=0\quad\Rightarrow\quad\mathcal H(t,x)=0,
+\qquad
+\frac{\delta S|_{N=N(t)}}{\delta N(t)}=0
+\quad\Rightarrow\quad\int_\Sigma d^3x\,\mathcal H(t,x)=0.
+\]
+Opačná implikace **neplatí**: kladné a záporné místní hustoty se mohou při integraci vyrušit, ačkoliv lokální rovnice neplatí. Předčasné omezení na radiální/časovou kalibraci tedy mění algebru vazeb a nemůže prokázat obecnou relativitu. Variace úplné akce před omezením se obecně liší od variace omezené akce. Jde o srovnání s ADM, **nikoli** o odvozený Hamiltonián celé UBT.
+
 ## Rozhodující dynamický test
 
 Kanonické torzní zobrazení je v definovaném minimálním Palatiniho modelu algebraicky invertibilní a zdroj spinu musí vyplývat ze **stejné kompozitní** akce Theta. Volné boostové variace nesmíme považovat za fyzikální před uložením vazeb spojení, torze, difeomorfismů a Diracovy analýzy. On-shell rank, zdravé tenzorové módy a vztah Theta k CMB zůstávají otevřené. Již známá rekonstrukce zakřivené kontorze poskytuje lokální geometrickou realizaci za předpokladů, nikoliv řešení kanonických rovnic pohybu.
