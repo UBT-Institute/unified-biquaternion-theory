@@ -320,6 +320,25 @@ Exact symbolic verifier:
 tools/verify_theta_auxiliary_connection_reduction.py;
 regression tests: tests/test_theta_auxiliary_connection_reduction.py.
 
+### Corollary — eliminating auxiliary temporal gauge connections
+
+Assume the local phase and boost connection components have no independent time derivatives and are varied algebraically. Linearizing their action about the same fixed constant vacuum, write orbit-tangent fluctuation coordinates as t and normal coordinates as n. The temporal gauge components a and b enter the kinetic energy exactly as follows:
+
+\[
+L_{\rm kin}^{(2)}
+=c\left[(\dot t_0-r a_0)^2-\sum_{j=1}^3(\dot t_j+r b_j)^2
++(\dot n_0)^2-\sum_{j=1}^3(\dot n_j)^2\right].
+\]
+\[
+\frac{\partial L}{\partial a_0}=
+\frac{\partial L}{\partial b_j}=0
+\quad\Longrightarrow\quad
+L_{\rm kin,red}^{(2)}
+=c\left[(\dot n_0)^2-\sum_{j=1}^3(\dot n_j)^2\right].
+\]
+
+Variation sets the covariant tangent velocities to zero, so the tangent kinetic block disappears. **The indefinite normal kinetic block survives even after this particular auxiliary gauge reduction.** This is stronger than freezing the gauge field, but still is not the full constrained composite-gravity Dirac analysis. The exact elimination identity is checked symbolically in tools/verify_theta_kinetic_signature.py.
+
 ## Remaining theorem-critical work
 
 1. Finalize the single Theta action's pairing, measure, potential, composite metric and connection variations.
