@@ -250,6 +250,76 @@ long-wavelength dispersion relation for Proposition 5 are recorded in
 **Proposition 2 remains a conditional scalar truncation**, not a
 demonstration that the remaining modes of the full UBT action are stable.
 
+## Proposition 7 — eliminating auxiliary phase/boost connections does not cure the normal instability
+
+This is a **stronger, still conditional** statement than merely quotienting
+the symmetry orbit. Consider the same fixed-background minimal family,
+but now allow an **independent auxiliary** local
+\(U(1)\times SL(2,\mathbb C)\) connection inside \(D_\mu X\), with
+**no connection-curvature kinetic term**. Linearize at \(X_0=irI\)
+with vanishing background connection. The phase generator sends
+\(X_0\mapsto-rI\), the three boost generators send
+\(X_0\mapsto ir\sigma_j\), and the three rotation generators annihilate
+\(X_0\). The last three connection components do not enter the
+quadratic fluctuation action.
+
+For each spacetime index \(\mu\), the tangent covariant derivatives are
+
+\[
+D_\mu u_0=\partial_\mu u_0-rA_\mu^\phi,\qquad
+D_\mu v_j=\partial_\mu v_j+rA_\mu^{b_j}.
+\]
+
+The normal derivatives are \(\partial_\mu v_0\) and
+\(\partial_\mu u_j\) at quadratic order. The time-derivative part of
+the quadratic kinetic Lagrangian is therefore exactly
+
+\[
+\mathcal L_{\mathrm{kin,time}}^{(2)}
+=c\left[(\dot u_0-rA_0^\phi)^2
+-\sum_j(\dot v_j+rA_0^{b_j})^2
++\dot v_0^2-\sum_j\dot u_j^2\right].
+\]
+
+The algebraic connection equations have the **unique** solution
+
+\[
+A_\mu^\phi=\frac{\partial_\mu u_0}{r},\qquad
+A_\mu^{b_j}=-\frac{\partial_\mu v_j}{r}.
+\]
+
+Substitution cancels all tangent covariant derivatives, leaving
+
+\[
+\boxed{
+\mathcal L_{\mathrm{red}}^{(2)}
+=c\left[(\partial_t v_0)^2-\sum_j(\partial_t u_j)^2
+-(\nabla v_0)^2+\sum_j|\nabla u_j|^2\right]
+-4r^2\left[(4\lambda_1+\lambda_2)v_0^2+
+\lambda_2\sum_j u_j^2\right].
+}
+\]
+
+Thus the **actually eliminated** auxiliary phase/boost gauge sector
+still leaves a \((1,3)\) normal kinetic signature and the opposite-sign
+generalized squared masses of Proposition 5. For either nonzero
+real \(c\), a long-wavelength normal mode grows exponentially.
+This rules out repairing this **particular quadratic auxiliary-gauge
+realization** by merely treating the phase/boost tangent directions
+as gauge.
+
+The conclusion assumes a prescribed flat metric, a pointwise-minimum
+background, zero background connection, independent nonpropagating
+connections entering only through \(D_\mu X\), and no other constraints.
+The background has a **degenerate composite tetrad**, and the full
+single-Theta composite metric, torsion, relative connections, higher
+derivatives and their Dirac algebra are not included. Therefore this
+is **not** a no-go for all possible UBT completions.
+
+Exact symbolic verifier:
+tools/verify_theta_auxiliary_connection_reduction.py;
+regression tests: tests/test_theta_auxiliary_connection_reduction.py.
+
 ## Remaining theorem-critical work
 
 1. Finalize the single Theta action's pairing, measure, potential, composite metric and connection variations.
