@@ -31,11 +31,11 @@ Takto omezená **již existující rodina** kinetických a potenciálových akc�
 S_{\rm red}=\int dt\,d^3x\,F(y)\det J,\qquad
 F(y)=4cN_0-U(\Theta(y)).
 \]
-Koeficient \(c\) a potenciál \(U\) zůstávají vstupy.
+Jde o omezenou hustotu identifikovanou v PR #680. Koeficient \(c\) a potenciál \(U\) zůstávají vstupy.
 
 ## 2. Přesná rychlostní Hessova matice a primární vazby
 
-Označme \(x^0=t\) a \(x^1,x^2,x^3\). Pro prostorové kofaktory definujme
+Označme \(x^0=t,x^1,x^2,x^3\). Pro prostorové kofaktory definujme
 \[
 M_a(y)=\frac1{3!}\epsilon_{abcd}\epsilon^{ijk}
 (\partial_i y^b)(\partial_j y^c)(\partial_k y^d),\qquad
@@ -48,11 +48,11 @@ M_a\partial_i y^a=0\quad(i=1,2,3).
 \]
 Přesné momenty a Hessova matice jsou
 \[
-\boxed{\pi_a=F(y)M_a,\qquad W^{\rm velocity}_{ab}=0.}
+\boxed{\pi_a=\frac{\partial\mathcal L_{\rm red}}{\partial\dot y^a}=F(y)M_a,\quad W^{\rm velocity}_{ab}=\frac{\partial\pi_a}{\partial\dot y^b}=0.}
 \]
 Proto existují **4 primární vazby**
 \[
-\boxed{\phi_a(x)=\pi_a(x)-F(y(x))M_a(x)\approx0.}
+\boxed{\phi_a(x)=\pi_a(x)-F(y(x))M_a(x)\approx0}
 \]
 Objemový Hamiltonián je
 \[
@@ -72,11 +72,11 @@ Položme
 \mathcal W[y]=\int_\Sigma
 G(y)\,dy^1\wedge dy^2\wedge dy^3.
 \]
-Variace pullbacku této 3-formy a integrace per partes bez okrajových členů dávají
+Variace pullbacku této 3-formy používá identitu \(d[G\,dy^1\wedge dy^2\wedge dy^3]=F\,dy^0\wedge dy^1\wedge dy^2\wedge dy^3\) a integraci per partes bez okrajových členů; výsledkem je
 \[
 \boxed{\frac{\delta\mathcal W}{\delta y^a(x)}=F(y(x))M_a(x).}
 \]
-Jde o **funkcionální** derivaci včetně derivací podle prostorových gradientů, ne jen o obyčejnou derivaci \(G\). Tudíž
+Jde o **funkcionální** derivaci \(\delta/\delta y^a\) včetně derivací podle prostorových gradientů, ne jen o obyčejnou derivaci \(G\). Tudíž
 \[
 \phi_a=\pi_a-\delta\mathcal W/\delta y^a.
 \]
@@ -95,7 +95,7 @@ lokálních fyzikálních stupňů volnosti v **omezené** teorii \(y^a\). Kanon
 
 Transformace \(y^a\mapsto y^a+\varepsilon^a(x)\) jsou efektivní kalibrační degenerací omezeného okrajového funkcionálu. Nejsou tím dokázány 4 nové lokální symetrie úplné UBT.
 
-U fundamentální UBT bychom museli **nejprve** variovat všechny nezávislé proměnné \(\Theta\), spojení a případnou úplnou akci a **teprve potom** zavést omezení. Obecně to není totéž. Kinetická matice 8 komponent na pevném pozadí z PR #679 a charakteristický polynom z PR #681 se týkají jiných nezávislých proměnných.
+U fundamentální UBT bychom museli **nejprve** variovat všechny nezávislé proměnné \(\Theta\), spojení a případnou úplnou akci a **teprve potom** zavést omezení. Obecně to není totéž. Vztah k poli \(\Theta\) a omezené akci \(S_{\rm red}\) je podmíněný. Kinetická matice \(8\) komponent na pevném pozadí z PR #679 a charakteristický polynom z PR #681 se týkají jiných nezávislých proměnných.
 
 ## 5. Přesný důsledek pro skalární a tenzorové perturbace
 
@@ -110,7 +110,7 @@ Porucha metriky je čistě souřadnicová. Tato větev proto nevytváří fyzik�
 ## 6. Nezávislá verifikace a další krok
 
 - \`tools/verify_flat_gradient_dirac.py\` ověřuje přesnou 4x4 rychlostní Hessovu matici, ortogonalitu kofaktorů a všechny 4 identity funkcionální Eulerovy derivace při nezávislých symbolických prostorových prvních a symetrických druhých jetech.
-- \`tests/test_flat_gradient_dirac.py\` kontroluje nulová rezidua; výpočet doplňuje obecný důkaz pomocí diferenciálních forem.
+- \`tests/test_flat_gradient_dirac.py\` kontroluje nulová rezidua; samostatný výpočet identity \(\delta\mathcal W/\delta y^a=FM_a\) doplňuje obecný důkaz pomocí diferenciálních forem.
 - S dynamickým spojením je nutné spočítat rychlostní Hessovu matici a Diracovu algebru na **nedegenerovaném zakřiveném řešení**. Teprve poté lze odvozovat pozitivní energii, \(\Theta\to\zeta\) a fyzikální přenosové funkce.
 
 **Netvrdíme tím úplné odvození GR, volbu topologie, bezparametrické CMB spektrum ani pozitivní energii kompletní UBT.**
