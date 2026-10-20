@@ -252,6 +252,35 @@ renormalizovaný koeficient kalibrovaný z pozorování takovou predikcí není.
 První přijatá predikce musí před porovnáním s daty uvést číselnou hodnotu,
 nejistotu, experimentální pozorovatelnou veličinu a všechny vstupy.
 
+<!-- BILINGUAL-UNIT: single-action.causal-test -->
+## Einsteinovsky motivovaná kontrola kauzality (bez nové akce)
+
+Změřená rychlost světla `c_light` představuje **experimentální
+požadavek konzistence**, nikoli nový mikroskopický variační
+nebo výběrový princip. Fyzikální rovnice UBT po odstranění
+kalibračních volností musejí mít korektní kauzální počáteční
+úlohu slučitelnou s pozorovaným světelným kuželem.
+Případné další kužely je nutné odvodit z **téže** akce
+a experimentálně otestovat. Kladnost fyzikálního
+Hamiltoniánu a lineární stabilita jsou **samostatné** požadavky.
+
+Pro již zkoumanou invariantní kinetickou rodinu osmi reálných
+složek na pevném pozadí platí exaktní výsledek
+
+\[
+\det P=256\kappa^8
+\left(|\mathbf k|^2-\omega^2/c_{\rm light}^2\right)^8.
+\]
+
+Tato **nevázaná podmíněná rodina** má tedy jediný
+charakteristický kužel navzdory indefinitní vnitřní
+kinetické signatuře \((2,6)\). Tento determinant ani
+holomorfnost v \(\tau=t+i\psi\) však nedokazují
+odstranění fyzikálních ghostů ani kauzální strukturu
+úplné kompozitní akce UBT. Viz
+[Einsteinovský princip kauzality](../research_tracks/causality/einstein_causal_principle.cs.md)
+a exaktní kontrola `tools/verify_ubt_causal_cone.py`.
+
 <!-- BILINGUAL-UNIT: single-action.priority -->
 ## Priorita programu a zmrazení rozsahu
 
