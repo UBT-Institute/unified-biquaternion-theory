@@ -122,6 +122,29 @@ Jsou-li F0, xi, N0, C a V kladné, derivace dává
 
 Záporné zrychlení znamená, že tato **minimální kladná kvadratická vazba na křivost** sama v tomto sektoru nedokáže vytvořit pozdní kladné kosmické zrychlení, ještě před dosazením zbývajících Einsteinových a skalárních rovnic. Pokud F0 je nula, expanzní funkce je konstantní. Jiná znaménka či funkce mohou výsledek obejít pouze v přípustných oblastech F kladné, ale přizpůsobení F libovolné expanzi není předpověď.
 
+## Další rozhodující test: existující radiální kvartický potenciál
+
+Nyní můžeme překročit samotné porovnání expanzních funkcí. Ve srovnávacím modelu s nezávislou metrikou a spojením zvolme **stejný již klasifikovaný radiální kvartický potenciál UBT** a nejjednodušší vazbu na křivost:
+\[
+F(\rho)=F_0+\xi\rho^2,\quad
+U(\rho)=U_c+\lambda(\rho^2-r^2)^2,
+\qquad F_0>0,\ \lambda>0,\ \xi\ge0,\ \rho>0.
+\]
+Skalární variace celé kandidátní akce s potenciálem v Einsteinově reprezentaci je algebraická, nejde o vlnovou rovnici propagujícího skaláru. Čitatel její rovnice se **přesně** rozloží na
+\[
+\boxed{
+F U'-2UF'
+=4\rho\left[\lambda(\rho^2-r^2)(F_0+\xi r^2)-\xi U_c\right].
+}
+\]
+Pro nenulovou radiální větev rovnice připouští pouze izolovanou konstantní hodnotu
+\[
+\boxed{
+\rho^2=r^2+\frac{\xi U_c}{\lambda(F_0+\xi r^2)}
+}
+\]
+pokud je pravá strana kladná; jinak kladné reálné řešení neexistuje. Na souvislém hladkém řešení se proto rho v kosmickém čase nemůže měnit, pokud platí uvedené předpoklady. Dřívější FLRW tetráda jediného Theta ale potřebuje nenulovou časovou derivaci rho pro nedegenerovanou časovou složku. **Naivní skalárně-Cartanův model s nezávislými proměnnými a tímto kanonickým kvartickým potenciálem tedy nelze beze změny přenést na nedegenerované radiální FLRW řešení Theta.** Jde o *další podmíněnou překážku*, nikoli vyloučení úplné kompozitní variace UBT, jiných kinetických/látkových členů či změněných skalárních vazeb. Musíme variovat skutečnou kompozitní akci, nikoli převzít Einsteinovu skalární rovnici po redukci nezávislých polí.
+
 ## Kritéria rozhodnutí a vazba na UBT
 
 Tento skalárně-křivostní model NEODVOZUJE funkci F z bikvaternionové akce, celkovou gravitační konstantu, fyzikální spinový proud ani Diracovu algebru UBT. V konformní Einsteinově reprezentaci bez potenciálu a látky samotná vakuová Einsteinova rovnice nepřipouští expandující uzavřený sférický FLRW vesmír. K pokusu o řešení rovnic je nezbytný konkrétní potenciál nebo látkový sektor. Musíme znovu uložit e=DTheta/sqrt(N0) a **nejprve variovat úplnou kompozitní akci, teprve potom volit kalibraci**. Bodový rank z PR #686 neznamená vyřešenou lokální Hamiltonovu vazbu.
