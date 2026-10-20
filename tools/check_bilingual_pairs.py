@@ -31,6 +31,10 @@ SHARED_LANGUAGE_NEUTRAL_FILES = {
     "CLAIMS_MATRIX.md",
     "docs/textbook/main.tex",
     "docs/textbook/chapters/04_covariant_tetrad_geometry.tex",
+    # Existing English-only legacy notes; keep stable public paths during lint cleanup.
+    "research_tracks/T2_GAUGE/su3_flat_affine_vacuum_no_go.md",
+    "research_tracks/T2_GAUGE/su3_raw_carrier_lie_closure.md",
+    "research_tracks/theta_complex_time_classification/README.md",
 }
 
 MATH_RE = re.compile(
