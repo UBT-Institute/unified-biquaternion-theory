@@ -106,3 +106,5 @@ The converse implication is **false**: cancellation among spatially different co
 The canonical torsion map is algebraically invertible in the specified minimal Palatini setup and its spin source must be derived from the **same composite** Theta action. Free boost variations cannot be counted as physical until the connection, torsion, diffeomorphism and Dirac constraints are imposed. On-shell rank, healthy tensor modes, and the Theta-to-CMB map are open. The existing curved contortion reconstruction proves conditional local geometric realizability, not that its connection satisfies the canonical equations of motion.
 
 **Reproducibility:** `tools/verify_temporal_gauge_metric_rank.py`, `tests/test_temporal_gauge_metric_rank.py`. Run the focused CI before merge; do not change canonical files or assert an observational CMB fit.
+
+**Review criterion:** An actual rank theorem for full UBT must be stated only after the action-derived source for spin and torsion, its complete constraint algebra, and the spatially dependent lapse sector have been analyzed on nondegenerate solutions.
