@@ -5,25 +5,18 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Podmíněné matematické odvození; nikoli finalizovaná fundamentální akce UBT.
+notice: Conditional mathematical derivation, not finalized fundamental UBT action.
 UBT-AI-PROVENANCE-END -->
 
 # Hamiltonián kanonické rodiny a exaktní redukce na testovací sektor
 
-**Status: exaktní odvození za uvedených předpokladů; fundamentální uzavření je OTEVŘENÉ.**
-Text vychází výhradně z dosavadní rodiny akcí v canonical/ACTION.cs.md
-a canonical/THEORY/canonical/canonical_action.tex. Nezavádí druhou
-fundamentální akci. Podrobný výpočet i symbolický certifikát jsou v
-canonical_family_hamiltonian_bridge.en.md.
+**Stav: matematické odvození za výslovných předpokladů; fundamentální uzavření zůstává OPEN.** This is a Legendre transform of the family recorded in canonical/ACTION.en.md, not an additional competing fundamental action.
 
-## Tvrzení 1 — Legendreova transformace na předepsaném pozadí
+## Tvrzení 1 — Hamiltonián na předepsaném pozadí
 
-Biquaternionové pole zapisujeme osmi reálnými složkami q^A. Předpokládáme
-předepsanou ADM metriku se signaturou (-+++), lapse N>0, shift N^i, prostorovou
-metrikou h_ij a pevnou lineární dvojstrannou konexí
-D_t q = dot q + Omega_0 q.
-Nechť K_AB je konstantní reálná symetrická nedegenerovaná forma, c != 0
-a U(q) je zatím neurčený reálný potenciál. Podmíněná realizace rodiny je
+**České shrnutí:** Tento článek spojuje dříve odvozený testovací Hamiltonián s již zavedenou kineticko-potenciálovou rodinou UBT. Jeho hlavním novým výsledkem je přesný důkaz nekladné kinetické signatury a výčet dynamických překážek, které nesmějí být zaměňovány za důkaz nestability dokončené teorie. Matematické vzorce a číselné údaje jsou úmyslně identické s anglickou verzí; anglická odborná argumentace zůstává zatím připojena pro kontrolu překladu.
+
+Represent the biquaternion field by eight real components q^A. Assume a fixed ADM metric of signature (-+++), lapse N>0, shift N^i, spatial metric h_ij, a fixed linear two-sided connection with D_t q = dot q + Omega_0 q, and a real symmetric nondegenerate kinetic matrix K_AB. With c nonzero and U(q) an unspecified real potential, define the **conditional realization of the existing family**
 
 \[
 S=\int dt\,d^3x\,N\sqrt h\left[
@@ -32,14 +25,14 @@ S=\int dt\,d^3x\,N\sqrt h\left[
 \quad v^A=(D_tq)^A-N^i(D_iq)^A.
 \]
 
-Odvozené kanonické hybnosti a jejich inverze jsou
+This ADM sign convention is explicitly chosen, not derived from a unique microscopic UBT action. Then
 
 \[
 \pi_A=\frac{c\sqrt h}{N}K_{AB}v^B,\qquad
 v^A=\frac{N}{c\sqrt h}(K^{-1})^{AB}\pi_B.
 \]
 
-Po dosazení do \(\pi_A\dot q^A-\mathcal L\) vychází přesně
+The Legendre transform gives the **exact fixed-background Hamiltonian density**
 
 \[
 \boxed{\mathcal H=
@@ -48,154 +41,226 @@ N\left[\frac{\pi_A(K^{-1})^{AB}\pi_B}{2c\sqrt h}
 +N^i\pi_A(D_iq)^A-\pi_A(\Omega_0q)^A.}
 \]
 
-Při dynamické nebo kompozitní metrice a konexi přibývají jejich
-vazby a hybnosti. Toto **není** úplný gravitační Hamiltonián UBT.
-Nezávislý symbolický test Legendreovy transformace včetně lapse,
-shiftu a časové konexe je v tools/verify_theta_hamiltonian_bridge.py.
+**Důkaz:** Substitute dot q = v + N^i D_i q - Omega_0 q into pi dot q - L and eliminate v using the momentum relation. This is algebraic and exact under the assumptions. If the metric or connections are independent dynamical fields or composites of q, the full canonical momenta and constraints differ; this is NOT the gravitational ADM constraint.
 
-## Tvrzení 2 — redukce na již známý dodekahedrální Hamiltonián
+## Tvrzení 2 — redukce na existující dodekahedrální Hamiltonián
 
-Předpokládejme jedno normalizované fyzikální pole
-q=bar q+Q phi, kde K(Q,Q)=1, D_mu Q=0, D_mu bar q=0,
-ostatní kanály se při kvadratické aproximaci nemíchají,
-lineární člen potenciálu mizí a
+Redukce vyžaduje oddělený normalizovaný skalární kanál, nikoli další nezávislou fundamentální akci. Tento předpoklad musí být potvrzen v úplném vázaném systému.
+
+Assume q=bar q+Q phi, with K(Q,Q)=1, D_mu Q=0, D_mu bar q=0, vanishing linear potential term, decoupled transverse channels, and U(bar q+Q phi)=U(bar q)+m_eff^2 phi^2/2+O(phi^3). Choose c=1 as a **sector normalization**, not a fundamental parameter prediction. On a *prescribed* FLRW quotient background N=1, shift=0, h_ij=a(t)^2 h0_ij, the quadratic action is
 
 \[
-U(\bar q+Q\varphi)=U(\bar q)+\tfrac12m_{\rm eff}^2\varphi^2
-+O(\varphi^3).
+S_\phi^{(2)}=\frac12\int dt\,d\mathrm{vol}_{h0}\,a^3
+[\dot\phi^2-a^{-2}|\nabla_{h0}\phi|^2-m_{\rm eff}^2\phi^2].
 \]
 
-Sektorová normalizace c=1 na předepsané FLRW metrice
-h_ij=a(t)^2h0_ij, N=1, N^i=0 vede k akci
+Expand phi=sum_{n,j} u_nj(t) Y_nj(x), with orthonormal eigenfunctions -Delta_h0 Y_nj=lambda_n Y_nj. Then
 
 \[
-S^{(2)}_\varphi=\frac12\int dt\,d\operatorname{vol}_{h0}\,a^3
-[\dot\varphi^2-a^{-2}|\nabla_{h0}\varphi|^2-m_{\rm eff}^2\varphi^2].
-\]
-
-V ortonormálních vlastních funkcích
--\Delta_{h0}Y_{nj}=\lambda_nY_{nj} platí
-
-\[
-p_{nj}=a^3\dot u_{nj},\qquad
-\boxed{H^{(2)}=\frac12\sum_{nj}
+p_{nj}=a^3\dot u_{nj},\quad
+\boxed{H_\phi^{(2)}=\frac12\sum_{nj}
 \left[a^{-3}p_{nj}^2+a^3(\lambda_n/a^2+m_{\rm eff}^2)u_{nj}^2\right].}
 \]
 
-Pro S^3/2I s prostorovým poloměrem R_c dostáváme
-\(\lambda_n=n(n+2)/R_c^2\) na přípustných invariančních módech.
-To je exaktně Hamiltonián z
-research_tracks/dodecahedral_action_cmb/DERIVATION.md,
-**ale jen při explicitně uvedených dynamických předpokladech**.
-Výběr pozadí, fyzikálního kanálu, jeho hmotnosti a topologie UBT
-dosud nezávisle neodvodila.
+For h0=R_c^2 gamma on S^3/(binary icosahedral group), lambda_n=n(n+2)/R_c^2 on the allowed invariant modes. This **recovers exactly** the test Hamiltonian already proved in research_tracks/dodecahedral_action_cmb/DERIVATION.md. It is a conditional reduction from the existing family, not a new unrelated postulate.
 
-## Tvrzení 3 a 4 — signatura Lorentzovsky invariantní kinetické formy
+**Unproved dynamical inputs:** existence and selection of bar q, a physical gauge-invariant Q, absence of mixing with other seven real components, positive kinetic signature on physical modes, the compact quotient topology, and backreaction. The chosen K is not thereby proven to be Lorentz-invariant.
 
-Exaktní klasifikace kvadratických invariantů dává při deklarovaném
-U(1) x SL(2,C) působení formu
+## Tvrzení 3 — překážka nestability na pevném pozadí
+
+Pevná nedegenerovaná kinetická forma se zápornými směry vede při neomezené variaci k energii, která nemá dolní mez. Dynamické vazby celého pole zde dosud nejsou zahrnuty.
+
+If cK has a negative eigenvalue and there is no constraint on its conjugate momentum, the kinetic Hamiltonian pi^T K^{-1} pi/(2c sqrt h) is unbounded below: scale pi along a negative eigendirection. Thus an indefinite nondegenerate pairing cannot define an unconstrained stable eight-component test-field Hamiltonian. This is **not** a no-go for a constrained full UBT model; one must compute its first-class constraints and physical quotient.
+
+## Tvrzení 4 — jediná invariantní kinetická forma a její signatura
+
+Omezení daná Lorentzovou a fázovou symetrií určují tvar kvadratického párování až na měřítko. Kladný eukleidovský součin proto nelze bez dalšího prohlásit za ekvivalentní náhradu.
+
+The invariant-potential classification in
+theta_potential_invariants.en.md establishes that the real quadratic
+invariants of the declared U(1) x SL(2,C) congruence representation are
+spanned by
 
 \[
 H(X)=\operatorname{Tr}(X^\sharp X^\dagger).
 \]
 
-Zápis generického pole do Pauliho báze
+Polarizing H therefore gives the only nonzero invariant constant symmetric
+bilinear kinetic form, up to an overall scalar, **if the derivative field
+transforms in that same representation**. Explicitly, write a completely
+general complex matrix as
 
 \[
-X=(u_0+iv_0)I+\sum_{j=1}^3(u_j+iv_j)\sigma_j
+X=(u_0+iv_0)I+\sum_{j=1}^3(u_j+iv_j)\sigma_j,
+\quad u_\alpha,v_\alpha\in\mathbb R.
 \]
 
-vede po přímém vynásobení matic k identitě
+The 2-by-2 adjugate and Pauli identities yield
 
 \[
 \boxed{H(X)=2(u_0^2+v_0^2-\mathbf u^2-\mathbf v^2).}
 \]
 
-Symetrická kinetická matice má tedy signaturu **(2,6)**.
-Jestliže všech osm složek propaguje nezávisle na pevném pozadí,
-kinetický Hamiltonián je pro libovolné znaménko nenulového c
-neomezený zdola. To **není** důkaz ghostů v úplné vázané UBT.
-
-## Tvrzení 5 — přesný normálový rozklad kolem minima potenciálu
-
-Pro stejný kvartický invariantní potenciál jako v předchozím
-výzkumu
+Its real quadratic-form matrix, in the order
+\((u_0,u_1,u_2,u_3,v_0,v_1,v_2,v_3)\), is
 
 \[
-U(X)=V_0+\mu H+\lambda_1H^2+\lambda_2|\det X|^2,\quad
-\lambda_1\ge0,\quad\lambda_2>0,\quad
-\mu=-(4\lambda_1+\lambda_2)r^2
+K=2\operatorname{diag}(1,-1,-1,-1,1,-1,-1,-1),
+\quad\operatorname{inertia}(K)=(2,6).
 \]
 
-leží globální minimum v symetrické orbitě bodu X0=irI.
-Fáze a tři boosty vytvářejí čtyřrozměrný tečný prostor
-\(\delta X=-rI,\ ir\sigma_j\); tři prostorové rotace bod fixují.
-Kineticky ortogonální normála je
+**Výsledek:** the minimal *unconstrained, fixed-background* quadratic kinetic
+family with this exact connected symmetry has a negative Hamiltonian
+direction for either choice of nonzero kinetic sign \(c\).
+A positive Hilbert--Schmidt replacement is NOT invariant under the declared
+full noncompact spin congruence action. This excludes a straightforward
+positive-energy eight-component realization, not a theory with additional
+genuine first-class constraints or a different declared representation.
+
+## Tvrzení 5 — normální módy u již odvozeného nenulového minima
+
+Kladnost Hessianu potenciálu nestačí ke kladnosti energie fluktuací. Ortogonální rozklad ukazuje další překážku; degenerované testovací pozadí ovšem není fyzikálním vakuem zakřivené gravitace.
+
+Use **the same** invariant quartic potential already classified and minimized
+in biquaternionic_potential_vacuum.en.md:
 
 \[
-\delta X=i\,\delta v_0I+\sum_j\delta u_j\sigma_j.
+U(X)=V_0+\mu H(X)+\lambda_1 H(X)^2+\lambda_2|\det X|^2,
+\quad
+\lambda_1\ge0,\ \lambda_2>0,\ 
+\mu=-(4\lambda_1+\lambda_2)r^2,\ r>0.
 \]
 
-Na normále jsou exaktně
+It has a pointwise global minimizer \(X_0=irI\).
+The phase direction \(\delta X=-rI\) and the three boost directions
+\(\delta X=ir\sigma_j\) span its four-dimensional orbit under the declared
+connected symmetry. The three rotation generators stabilize \(X_0\).
+The **K-orthogonal normal** is spanned by
+\(\delta X=i\,\delta v_0 I+\sum_j\delta u_j\sigma_j\).
+
+On this normal, direct differentiation of the original quartic gives
 
 \[
-K_\perp=2\operatorname{diag}(1,-1,-1,-1),\quad
-M_\perp=8r^2\operatorname{diag}(4\lambda_1+\lambda_2,
-\lambda_2,\lambda_2,\lambda_2).
+\begin{aligned}
+K_{\perp}&=2\,\operatorname{diag}(1,-1,-1,-1),\\
+M_{\perp}&=\operatorname{Hess}U|_{\perp}
+=8r^2\,\operatorname{diag}(4\lambda_1+\lambda_2,
+                            \lambda_2,\lambda_2,\lambda_2),\\
+K_{\perp}^{-1}M_{\perp}
+&=4r^2\,\operatorname{diag}(4\lambda_1+\lambda_2,
+                         -\lambda_2,-\lambda_2,-\lambda_2).
+\end{aligned}
 \]
 
-Hessián potenciálu je kladný, avšak kinetická signatura normály
-zůstává **(1,3)**. Na pozadí s pevnou nulovou konexí mají
-homogenní normálové fluktuace rovnice
+The orbit directions lie in \(\ker\operatorname{Hess}U\);
+the normal is orthogonal to the orbit in the invariant pairing, and has
+signature **(1,3)**. This is stronger than the eight-component
+signature calculation: *simply quotienting the four phase/boost tangent
+directions cannot make the remaining normal kinetic metric positive*,
+provided the normal remains a propagating subspace of the frozen-background
+realization.
+
+On a local frozen Minkowski background with vanishing connection,
+homogeneous normal perturbations have the quadratic Lagrangian
+
+\[
+L^{(2)}_\perp
+=c\left[(\dot{\delta v}_0)^2-
+       \sum_j(\dot{\delta u}_j)^2\right]
+-4r^2\left[(4\lambda_1+\lambda_2)(\delta v_0)^2
+ +\lambda_2\sum_j(\delta u_j)^2\right].
+\]
+
+The associated equations are
 
 \[
 c\,\ddot{\delta v}_0+4r^2(4\lambda_1+\lambda_2)\delta v_0=0,
-\quad
+\qquad
 c\,\ddot{\delta u}_j-4r^2\lambda_2\delta u_j=0.
 \]
 
-Pro c>0 exponenciálně rostou tři vektorové módy, pro c<0
-roste skalární mód. Pouhé odečtení čtyř symetrických tečných
-směrů problém neřeší, **pokud normála skutečně propaguje**.
+For \(c>0\) the three normal-vector modes grow exponentially;
+for \(c<0\) the scalar normal mode grows exponentially. Hence this
+**specific unconstrained fixed-background vacuum linearization** cannot
+have only stable propagating normal modes with the invariant pairing,
+regardless of kinetic sign.
 
-Významné omezení: konstantní X0 a nulová konexe dávají
-D_mu X0=0, a tedy degenerovanou kompozitní tetrádu.
-Není to tedy prokázané fyzikální vakuum plné UBT.
-Nezbytná je dynamika nenulové tetrády, konexí a Diracovy vazby.
-Přesný kontrolní výpočet včetně potenciálového Hessiánu:
-tools/verify_theta_kinetic_signature.py.
+**Důležité omezení:** the constant vacuum with zero connection has
+\(D_\mu X_0=0\) and therefore a *degenerate composite tetrad*.
+It is **not** an admissible nondegenerate vacuum of completed UBT gravity.
+Moreover, the orbit is a symmetry orbit; identifying it as a removable
+*local gauge orbit* requires the full gauge transformations, dynamical
+connections and Dirac constraint algebra. This theorem does **not** prove
+that the complete composite, potentially constrained UBT has a ghost.
+It gives a sharp obstruction any claimed completion must evade and
+a counterexample to inferring stability from the pointwise positive
+potential Hessian alone.
 
-## Tvrzení 6 — chybějící klasická dynamika Yangových–Millsových polí
+**Exaktní výpočetní kontrola:**
+tools/verify_theta_kinetic_signature.py checks the Pauli-matrix
+expansion, 8-real Hessian, 4+4 orbit/normal decomposition, full potential
+gradient/Hessian and generalized normal eigenvalues symbolically.
+tests/test_theta_kinetic_signature.py is a regression check. The
+checker was executed independently with SymPy 1.14 and its focused
+pytest passed (1 test). Full repository CI and the Dirac algebra have
+**not** been checked by that local execution.
 
-Pokud nezávislá konexe C_mu^a vstupuje do samotné kineticko-potenciálové
-rodiny výhradně prostřednictvím
-D_mu X=partial_mu X+C_mu^a T_a X a nikde se nevyskytují
-derivace konexe, nemá konexe vlastní kanonickou hybnost:
+## Tvrzení 6 — holá rodina nemá klasický propagující Yangův–Millsův člen
+
+Pokud konexe nemají ve výchozí akci vlastní derivace, jejich variační rovnice jsou algebraické. Případná efektivní dynamika proto vyžaduje samostatně kontrolované odvození.
+
+Treat a connection \(C_\mu^a\) as an independent field entering only the
+covariant derivative \(D_\mu X=\partial_\mu X+C_\mu^aT_aX\),
+in the linear representation defined above, with **no** curvature
+\(F_{\mu\nu}F^{\mu\nu}\) or other connection-derivative term in the
+family action. On a prescribed metric the infinitesimal connection variation
+is exact:
 
 \[
-P^\mu_{C_a}=\partial\mathcal L/\partial(\partial_t C_\mu^a)=0.
+\delta_{C} S
+=c\int d^4x\,\sqrt{-g}\,g^{\mu\nu}
+B(T_aX,D_\nu X)\,\delta C_\mu^a,
 \]
 
-Na předepsané metrice dostáváme algebraické variační rovnice
+where \(B(U,V)\) is the polarization of the invariant quadratic form
+\(H\). Therefore
 
 \[
 \frac{\delta S}{\delta C_\mu^a}
-=c\sqrt{-g}\,g^{\mu\nu} B(T_aX,D_\nu X)=0,
+=c\sqrt{-g}\,g^{\mu\nu}B(T_aX,D_\nu X)=0,
+\qquad
+P^\mu_{C_a}=\frac{\partial\mathcal L}
+{\partial(\partial_t C_\mu^a)}=0.
 \]
 
-kde B je polarizace invariantní formy H.
-Nejde o hyperbolické Yangovy–Millsovy rovnice. Pokud je
-metrika algebraicky složená z D_mu X, změní se algebraický
-proud řetězovým pravidlem, ale bez nových derivací konexe
-nevznikne stromová kinetika F^2.
-Případný kvantově indukovaný člen F^2 je třeba odvodit
-samostatným plným výpočtem.
+These are **algebraic connection equations** and vanishing primary
+connection momenta. No Yang--Mills hyperbolic wave equation for
+\(C_\mu^a\) follows from this bare classical action. The same absence
+of \(\partial C\) persists for a metric built *algebraically*
+from \(D_\mu X\), provided no curvature/differentiated metric terms
+are added. Such a composite metric does change the algebraic current
+by the chain rule; the displayed fixed-metric current is **not**
+its full equation of motion.
 
-## Verdikt a otevřený článek
+This is a restricted **tree-level structural no-go** for this
+minimal family, not for quantum induced gauge kinetics, an explicitly
+curvature-dependent single action, or a connection that is a derivative
+composite of another dynamical field. Deriving a finite, positive
+Yang--Mills coefficient by a constrained one-loop effective action
+would constitute an additional physical result and cannot be presumed.
 
-Máme exaktní podmíněný Hamiltonián, jeho skalární redukci,
-vypočtenou signaturu i konkrétní strukturální překážky.
-Nemáme dosud jednotnou explicitní dynamickou a stabilní akci
-pro nezávislé či kompozitní konexe, metriku, vazby a fyzikální
-stupně volnosti. Tyto výsledky proto **neuzavírají**
-UBT-FUND-GR-ACTION a nejsou předpovědí Planckových dat.
+In particular, allowing independent \(C_0^a\) variations can impose
+constraints on \(X\) that were absent in the prescribed-connection
+Legendre transform of Proposition 1. The full Dirac analysis must
+include these algebraic constraints and their Poisson closure *before*
+interpreting any fixed-connection negative normal modes as
+physical instabilities of UBT.
+
+## Zbývající kritické kroky důkazu
+
+1. Finalize the single Theta action's pairing, measure, potential, composite metric and connection variations.
+2. Compute the full Dirac constraints and remove any ghost directions without breaking Lorentz covariance.
+3. Derive the selected vacuum, scalar channel and effective Einstein coefficient from that same action.
+4. Only then promote the conditional dodecahedral CMB calculation to a parameter-controlled physical prediction.
+
+**Rozsah tvrzení:** this note proves a conditional Hamiltonian and reduction identity. It does not prove fundamental UBT dynamics, GR recovery without effective-action assumptions, alpha, or a Planck fit.
