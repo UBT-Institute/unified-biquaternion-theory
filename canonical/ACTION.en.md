@@ -194,6 +194,14 @@ require additional analysis. See Proposition 6 in
 [canonical_family_hamiltonian_bridge.en.md](../research_tracks/action_selection/canonical_family_hamiltonian_bridge.en.md).
 The fundamental action remains **DEFINED_FAMILY_NOT_FINALIZED**.
 
+**Stronger quadratic check:** when independent nonpropagating phase/boost
+connections are actually varied and eliminated around the nonzero potential
+minimum, they remove four orbit-tangent derivatives but leave the normal
+kinetic signature (1,3) and its infrared instability. This excludes the
+naive auxiliary-gauge repair on that fixed background, not a full constrained
+UBT completion. See Proposition 7 of the Hamiltonian bridge and
+`tools/verify_theta_auxiliary_connection_reduction.py`.
+
 <!-- BILINGUAL-UNIT: single-action.falsification -->
 ## Precommitted falsification criterion
 
