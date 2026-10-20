@@ -51,7 +51,7 @@ UBT **aims to recover GR as its classical geometric sector and may extend it**; 
 ## Multi-Channel Stability
 
 The winding-mode effective potential $V_{\rm eff}(n) = n^2 - Bn\ln n$
-has a stationary point at $n^* = e^{B/2 - 1}$.
+has stationary points satisfying $2n=B(1+\ln n)$ (when real solutions exist), not $n^*=e^{B/2-1}$.
 For $B \approx 46.28$ (numerical observation [OBS]):
 $n^* \approx 137$.
 
