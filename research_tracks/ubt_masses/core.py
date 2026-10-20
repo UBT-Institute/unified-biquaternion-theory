@@ -54,14 +54,14 @@ def ubt_select_sector_p(mu: float | None = None, candidates: list[int] | None = 
     """
     Select sector_p (prime number) based on UBT theory-based selection rule.
     
-    This implements the UBT prime-selection mechanism from potential minimization
+    This implements a phenomenological prime-selection heuristic, NOT a derived potential minimization
     V_eff(n) = A*n² - B*n*ln(n). The minimum occurs at n_* = 137 for the CT baseline
     configuration (R_UBT = 1).
     
     Args:
         mu: Optional renormalization scale in MeV (currently unused, for future enhancement)
         candidates: Optional list of candidate primes to select from (default: primes in [101, 199])
-        rule: Selection rule to apply ("stability" for potential minimization)
+        rule: Selection rule to apply ("stability" uses a target-137 heuristic)
     
     Returns:
         Selected prime number (sector_p)
@@ -70,7 +70,7 @@ def ubt_select_sector_p(mu: float | None = None, candidates: list[int] | None = 
         ValueError: If selector logic is not yet implemented and explicit value is required
     
     Notes:
-        For CT baseline (R_UBT = 1), potential minimization predicts n_* = 137.
+        For CT baseline (R_UBT = 1), the heuristic targets n_* = 137; this is not a prediction.
         This is a THEORY PREDICTION from V_eff(n) = A*n² - B*n*ln(n), not fitted to experimental α.
         
         The selection evaluates stability score S(p) for each candidate prime:
@@ -85,7 +85,7 @@ def ubt_select_sector_p(mu: float | None = None, candidates: list[int] | None = 
         candidates = [101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199]
     
     if rule == "stability":
-        # Stability-based selection using V_eff potential minimization
+        # Heuristic target-based selection (not V_eff minimization)
         # V_eff(n) = A*n² - B*n*ln(n)
         # For CT baseline (R_UBT = 1), theory predicts minimum at n_* = 137
         #
@@ -93,7 +93,7 @@ def ubt_select_sector_p(mu: float | None = None, candidates: list[int] | None = 
         # The actual evaluation shows that 137 minimizes V_eff for the given configuration.
         # See: EMERGENT_ALPHA_README.md for full derivation
         
-        # For the CT baseline configuration, the potential minimization yields p = 137
+        # The CT baseline score explicitly targets p = 137 (phenomenological input)
         # We evaluate this by computing stability scores for all candidates
         
         best_score = float('inf')
