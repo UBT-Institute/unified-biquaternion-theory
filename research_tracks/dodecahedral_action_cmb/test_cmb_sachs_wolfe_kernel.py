@@ -67,8 +67,8 @@ class TestProjectedKernel(unittest.TestCase):
     def test_status_gates_are_explicit(self):
         status = observational_fit_status()
         self.assertEqual(status["planck_fit"], OBSERVATIONAL_FIT_STATUS)
-        self.assertIn("projection", status["full_sky_projection"].lower())
-        self.assertIn("blocked", status["full_sky_projection"].lower())
+        self.assertEqual(status["full_sky_projection"],
+                         "BLOCKED: exact xi_{nj,lm} projection is not implemented")
         with self.assertRaises(NotImplementedError):
             require_exact_projection_gate()
 

@@ -12,6 +12,6 @@
     "transfer-function and likelihood pipeline",
     "theta-to-zeta bridge and action-level proof obligation"
   ],
-  "allowed_use": "Diagnostic research-only calculations only; not a physical fit or evidence of a CMB detection.",
+  "allowed_use": "Diagnostic research-only calculations; not a physical fit or evidence of a CMB detection.",
   "provenance": "Research track status set by repository code and tests; no external observational dataset is loaded or claimed."
 }
