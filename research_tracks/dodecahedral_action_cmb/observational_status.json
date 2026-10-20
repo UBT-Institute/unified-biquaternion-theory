@@ -1,0 +1,17 @@
+{
+  "status": "NO OBSERVATIONAL FIT",
+  "summary": "The exact 2I quotient spectrum is implemented and tested independently. The exact spherical-harmonic projection xi_{nj,lm} and any real Planck TT/TE/EE likelihood comparison remain blocked because the required observer orientation, transfer functions, masks/noise model, and theta-to-zeta bridge are not derived or installed in this research track.",
+  "synthetic_null_checks": [
+    "low-l ordinary Sachs-Wolfe toy covariance",
+    "positive-semidefinite synthetic covariance checks",
+    "heat-trace proxy and spectral-gap diagnostics"
+  ],
+  "blocked_components": [
+    "xi_{nj,lm} projection for a chosen observer/orientation on S^3/2I",
+    "real Planck TT/TE/EE data product with provenance and checksum",
+    "transfer-function and likelihood pipeline",
+    "theta-to-zeta bridge and action-level proof obligation"
+  ],
+  "allowed_use": "Diagnostic research-only calculations only; not a physical fit or evidence of a CMB detection.",
+  "provenance": "Research track status set by repository code and tests; no external observational dataset is loaded or claimed."
+}

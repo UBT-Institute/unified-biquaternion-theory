@@ -4,10 +4,14 @@ import unittest
 
 from cmb_sachs_wolfe_kernel import (
     GROUP,
+    EXACT_PROJECTION_STATUS,
+    OBSERVATIONAL_FIT_STATUS,
     dot,
     left_multiply,
+    observational_fit_status,
     point_on_last_scattering_sphere,
     quotient_mode_kernel,
+    require_exact_projection_gate,
     sw_sky_covariance,
 )
 from spectral_dodecahedron import scalar_multiplicity
@@ -59,6 +63,14 @@ class TestProjectedKernel(unittest.TestCase):
     def test_no_monopole(self):
         with self.assertRaises(ValueError):
             sw_sky_covariance((1,0,0),(0,1,0),0.3,{0:1.0})
+
+    def test_status_gates_are_explicit(self):
+        status = observational_fit_status()
+        self.assertEqual(status["planck_fit"], OBSERVATIONAL_FIT_STATUS)
+        self.assertIn("projection", status["full_sky_projection"].lower())
+        self.assertIn("blocked", status["full_sky_projection"].lower())
+        with self.assertRaises(NotImplementedError):
+            require_exact_projection_gate()
 
 
 if __name__=="__main__":

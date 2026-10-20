@@ -11,7 +11,7 @@ UBT-AI-PROVENANCE-END -->
 
 # A directly computable 2I-projected CMB covariance kernel
 
-**Status:** exact mathematical spectral projection; Sachs--Wolfe-only toy CMB covariance **under assumptions**. See DERIVATION.md §5. This goes beyond merely listing multiplicities; it still does not calculate an observational \(C_\ell\).
+**Status:** exact mathematical spectral projection; Sachs--Wolfe-only toy CMB covariance **under assumptions**. See DERIVATION.md §5. This goes beyond merely listing multiplicities; it still does not calculate an observational \(C_\ell\). **Gate:** `NO OBSERVATIONAL FIT` — the exact full-sky \(\xi_{nj,\ell m}\) projection and a real Planck likelihood remain blocked.
 
 Let \(S^3\subset\mathbb R^4=\mathbb H\) have unit curvature radius, and let the 120-element binary icosahedral group \(2I\subset S^3\) act by left quaternion multiplication. The addition theorem for unit-\(S^3\) scalar harmonics of degree \(n\) is
 \[
