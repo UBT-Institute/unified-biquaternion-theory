@@ -158,6 +158,28 @@ kinetic term. Connection variations are algebraic. An induced
 effective gauge action remains to be demonstrated, not presumed.
 Neither conclusion selects a finalized fundamental action.
 
+## Exact kinetic-spectrum obstruction in the existing quartic family
+
+The Lorentz/phase-invariant quadratic pairing is
+\(H(X)=2(|z_0|^2-\sum_{j=1}^3|z_j|^2)\), with real kinetic signature
+\((2,6)\). Combining that pairing with the previously proved nonzero
+quartic-potential minimum gives an exact transverse generalized
+mass-squared spectrum containing one eigenvalue proportional to
+\(+(4\lambda_1+\lambda_2)/c\) and three proportional to
+\(-\lambda_2/c\). In the **unconstrained fixed-background realization**,
+one or more long-wavelength modes are therefore unstable for every
+nonzero real kinetic normalization \(c\). The velocity Hessian has full
+rank eight; potential-orbit symmetries do not themselves generate
+Theta-only primary constraints.
+
+This is a new **conditional no-go** for a naive stable eight-component
+realization, not a no-go for the full constrained/composite UBT theory.
+See [theta_kinetic_spectrum.en.md](../research_tracks/action_selection/theta_kinetic_spectrum.en.md)
+and the executable exact checker
+tools/verify_theta_kinetic_spectrum.py. The fundamental action is
+**still not finalized**: its dynamical constraints must be computed
+before any ghost-free claim is upgraded.
+
 <!-- BILINGUAL-UNIT: single-action.falsification -->
 ## Precommitted falsification criterion
 
