@@ -63,6 +63,26 @@ def verify() -> dict[str, bool]:
         sp.simplify(-q-(hub-1/v)) == 0
     )
 
+    # Irreducible Lorentz torsion: 24 = 4 trace + 4 axial + 16 tensor.
+    # Here T^nu_(mu,rho) is PURE TRACE with trace T^nu_(mu,nu).
+    torsion = lambda nu, mu, rho: k(nu, mu, rho) - k(nu, rho, mu)
+    trace = [
+        sp.simplify(sum(torsion(nu, mu, nu) for nu in range(4)))
+        for mu in range(4)
+    ]
+    checks["FLRW_torsion_trace_vector"] = (
+        trace[0] == -3*q
+        and all(sp.simplify(trace[mu]) == 0 for mu in range(1, 4))
+    )
+    checks["FLRW_torsion_pure_trace_no_axial_tensor"] = all(
+        sp.simplify(
+            torsion(nu, mu, rho)
+            -((1 if nu == rho else 0)*trace[mu]
+              -(1 if nu == mu else 0)*trace[rho])/3
+        ) == 0
+        for nu in range(4) for mu in range(4) for rho in range(4)
+    )
+
     # Full Lorentz spin lift contains both boosts and rotations:
     # Omega=(f-i/2) sigma_i upsilon^i, B=-Omega^dagger.
     f = a/(2*v)
