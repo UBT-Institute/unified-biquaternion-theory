@@ -1,0 +1,21 @@
+name: Dodecahedral mathematical checks
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/dodecahedral_action_cmb/**'
+      - '.github/workflows/dodecahedral-mathematical-checks.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unit-spectra-and-kernel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run exact-spectrum and Sachs-Wolfe toy unit tests
+        run: python -m unittest discover -v -s research_tracks/dodecahedral_action_cmb -p 'test_*.py'
