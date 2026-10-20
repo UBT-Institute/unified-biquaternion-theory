@@ -3,3 +3,5 @@
 # git archive (used by the 12 MiB CI gate) should package sources, not these plots.
 ARCHIVE/archive_legacy/consolidation_project/fig_QA_robustness_s0.png export-ignore
 ARCHIVE/archive_legacy/consolidation_project/fig_QA_robustness_s05.png export-ignore
+ARCHIVE/archive_legacy/consolidation_project/doc/fig_QA_unitarity_triangle_v2.png export-ignore
+ARCHIVE/archive_legacy/consolidation_project/fig_QA_unitarity_triangle_v2.png export-ignore
