@@ -256,6 +256,72 @@ include these algebraic constraints and their Poisson closure *before*
 interpreting any fixed-connection negative normal modes as
 physical instabilities of UBT.
 
+## Tvrzení 7 — eliminace pomocných konexí fáze a boostů nestačí k odstranění nestability
+
+Jde o silnější, avšak stále **podmíněný** výsledek než pouhé formální
+kvocientování symetrické orbity. Na předepsaném plochém pozadí nyní
+připusťme nezávislou pomocnou lokální konexi
+\(U(1)\times SL(2,\mathbb C)\), která vstupuje jen přes \(D_\mu X\)
+a nemá vlastní křivostní kinetický člen. Linearizujeme v bodě
+\(X_0=irI\) při nulové konexi pozadí.
+
+Generátor fáze vytváří směr \(-rI\), tři boosty směry
+\(ir\sigma_j\) a tři rotační generátory působí na \(X_0\) nulově.
+Pro každé \(\mu\) tedy tečné kovariantní derivace mají tvar
+
+\[
+D_\mu u_0=\partial_\mu u_0-rA_\mu^\phi,\qquad
+D_\mu v_j=\partial_\mu v_j+rA_\mu^{b_j}.
+\]
+
+Časová část kvadratické kinetické hustoty je přesně
+
+\[
+\mathcal L_{\mathrm{kin,time}}^{(2)}
+=c\left[(\dot u_0-rA_0^\phi)^2
+-\sum_j(\dot v_j+rA_0^{b_j})^2
++\dot v_0^2-\sum_j\dot u_j^2\right].
+\]
+
+Algebraické rovnice konexí dávají jediné řešení
+
+\[
+A_\mu^\phi=\frac{\partial_\mu u_0}{r},\qquad
+A_\mu^{b_j}=-\frac{\partial_\mu v_j}{r}.
+\]
+
+Po dosazení zmizí tečné kovariantní derivace a zůstane
+
+\[
+\boxed{
+\mathcal L_{\mathrm{red}}^{(2)}
+=c\left[(\partial_t v_0)^2-\sum_j(\partial_t u_j)^2
+-(\nabla v_0)^2+\sum_j|\nabla u_j|^2\right]
+-4r^2\left[(4\lambda_1+\lambda_2)v_0^2+
+\lambda_2\sum_j u_j^2\right].
+}
+\]
+
+**Výsledek:** Po skutečné algebraické eliminaci pomocných konexí
+zůstává kinetická signatura normálního sektoru \((1,3)\).
+Pro každé nenulové reálné \(c\) zůstává alespoň jeden
+exponenciálně rostoucí dlouhovlnný mód.
+Pouhé odstranění fázových a boostových směrů tedy tuto
+**konkrétní nevázanou kvadratickou realizaci** nestabilizuje.
+
+**Omezení:** Předpokládáme pevnou plochou metriku,
+bodové minimum, nulovou konexi pozadí a nezávislé
+nepropagující konexe bez křivostního členu.
+Kompozitní tetráda tohoto pozadí je degenerovaná.
+Úplná variace metriky, torze, relativních konexí,
+případných vyšších derivací a Diracova algebra zůstávají otevřené.
+Toto **není** obecné no-go pro každé dokončení UBT.
+
+Exaktní kontrola:
+tools/verify_theta_auxiliary_connection_reduction.py.
+Regresní test:
+tests/test_theta_auxiliary_connection_reduction.py.
+
 ## Zbývající kritické kroky důkazu
 
 1. Finalize the single Theta action's pairing, measure, potential, composite metric and connection variations.
