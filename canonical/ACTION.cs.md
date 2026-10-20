@@ -165,6 +165,15 @@ pro tuto pomocnou gauge realizaci na pevném pozadí, nikoli o vyvrácení
 úplné UBT. Viz Tvrzení 7 v kanonickém Hamiltonovském mostu a
 `tools/verify_theta_auxiliary_connection_reduction.py`.
 
+**Lorentzovsky reálná časová větev:** při předpokladu konzistentní
+reality slice a nezávislé pomocné konexe SL(2,C) je radiální skalár
+pro kladnou kinetickou normalizaci stabilní. Stejná algebraická
+rovnice konexe ale na předepsané metrice vynutí hodnost
+kompozitní tetrády nejvýše jedna. Tato stabilní redukce tedy
+nevytvoří nedegenerovaný časoprostor UBT. Viz Tvrzení 8
+Hamiltonovského mostu a tools/verify_theta_timelike_auxiliary_rank.py.
+Úplná variace kompozitní metriky zůstává OTEVŘENÁ.
+
 <!-- BILINGUAL-UNIT: single-action.falsification -->
 ## Předem stanovené falzifikační kritérium
 
