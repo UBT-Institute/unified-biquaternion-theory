@@ -125,3 +125,25 @@ Run:
 \`python -m unittest discover -v -s research_tracks/dodecahedral_action_cmb -p 'test_*.py'\`
 
 New code: \`matched_circles.py\`, \`test_matched_circles.py\`; these use the 120 unit quaternions in \`cmb_sachs_wolfe_kernel.py\` from merged PR #670. They are geometry and algebra tests only. Include positive/negative circles controls before any Planck analysis.
+
+
+## 6. Formal angular projection of CMB toy covariance
+
+Given the SW-only real-space kernel \(\mathcal C_{\mathrm{SW}}(\hat n,\hat m)\) from CMB_KERNEL.md and a **real** orthonormal spherical harmonic basis \(Y_{\ell m}^{(R)}\), the full angular mode covariance is
+\[
+\boxed{
+C_{(\ell m),(\ell'm')}
+=\int_{S^2}\!\!d\Omega_{\hat n}\int_{S^2}\!\!d\Omega_{\hat m}\,
+Y_{\ell m}^{(R)}(\hat n)\,
+\mathcal C_{\mathrm{SW}}(\hat n,\hat m)\,
+Y_{\ell'm'}^{(R)}(\hat m).
+}
+\]
+This is a real symmetric positive semidefinite matrix for nonnegative primordial modal powers \(P_n\), even when off-diagonal entries are nonzero. The familiar trace-average power is
+\[
+C_\ell^{\rm toy}=(2\ell+1)^{-1}\sum_{m=-\ell}^{\ell}
+C_{(\ell m),(\ell m)}.
+\]
+The code \`low_l_covariance.py\` evaluates these integrals by Gauss–Legendre \(\cos\theta\)-quadrature and uniform \(\phi\)-quadrature, using a normalized real harmonic basis. The \`test_low_l_covariance.py\` suite checks orthonormality, covariance symmetry and nonnegative quadratic forms. **Quadrature convergence for each (\(\ell_{\max},n_{\max}\)) must be established before reporting any final numerical values.**
+
+The outputs are **synthetic**, with freely specified \(\chi_\ast\) and \(P_n\); they are not physical UBT predictions for Planck or observed \(\Lambda\)CDM residuals. A physical test requires a derived gauge-invariant \(\zeta[\Theta]\), its primordial power, transfer functions, masks/noise and a predeclared likelihood. The magnitude of the \(\ell\ge2\) signal must also be checked in the curvature regime \(\chi_\ast\ll \pi/10\) actually permitted by Planck+BAO.
