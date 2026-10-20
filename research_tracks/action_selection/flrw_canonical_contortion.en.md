@@ -113,6 +113,27 @@ then inserting \(a=a_\star V\) yields
 \]
 which cannot equal a spacetime constant on a time interval. Hence this **one-representer, spinless minimal Palatini, closed FLRW, vacuum-\(\Lambda\)** combination has no nondegenerate solution on an interval. It is **not** a no-go for full UBT or arbitrary spinning matter: an independently derived nonzero spin current, another suitable \(\Theta\), generalized holonomy, or a different gravitational action may evade it.
 
+### Irreducible torsion decomposition
+
+Geometric algebra regards metric-compatible torsion as a vector-valued bivector. Its Lorentz components divide into the trace, axial-vector, and residual tensor representations:
+\[
+\boxed{\dim_{\mathbb R}(TM\otimes\Lambda^2T^*M)=4\cdot6=24=4+4+16.}
+\]
+The decomposition must not be confused with the finite field or a count of propagating particles. With convention \(T^\lambda{}_{\mu\nu}=\Gamma^\lambda{}_{\mu\nu}-\Gamma^\lambda{}_{\nu\mu}\) and trace \(\mathfrak t_\mu=T^\nu{}_{\mu\nu}\), our solution satisfies:
+\[
+\boxed{
+\mathfrak t_0=3(H-1/V),\quad \mathfrak t_i=0,\qquad
+T^\lambda{}_{\mu\nu}
+=\frac13(\delta^\lambda_\nu\mathfrak t_\mu
+-\delta^\lambda_\mu\mathfrak t_\nu).
+}
+\]
+The axial-vector and residual tensor sectors vanish identically: this example has only trace torsion.
+
+Under minimal Einstein–Cartan–Dirac coupling, the standard fermionic spin current sources only axial torsion. It therefore cannot independently support this pure-trace torsion in that restricted model. Nothing is inferred about as-yet uncomputed UBT spin currents or nonminimal matter.
+
+Standard references: https://doi.org/10.1103/PhysRevD.104.064036 ; https://doi.org/10.1140/epjc/s10052-019-7536-3 .
+
 ## 4. What changed relative to previous research
 
 - The **existence** of curved single-\(\Theta\) kinematic representers using composite torsion was ALREADY closed locally in the repository. Our previous claim of an entirely new closure was too strong.
