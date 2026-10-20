@@ -150,7 +150,7 @@ observable, and all inputs before comparison with data.
 <!-- BILINGUAL-UNIT: single-action.causal-test -->
 ## Einstein-style causal-consistency audit (no new action)
 
-The measured light speed \`c_light\` is an **empirical consistency
+The measured light speed `c_light` is an **empirical consistency
 constraint**, not a new microscopic variational or selection principle.
 The final, gauge-reduced UBT equations must have a well-posed causal
 initial-value problem compatible with the observed light cone. Any
@@ -172,7 +172,7 @@ Neither this determinant nor holomorphy in \(\tau=t+i\psi\)
 establishes physical ghost freedom or the causal cones of the
 full composite UBT action. See
 [Einstein causal principle](../research_tracks/causality/einstein_causal_principle.en.md)
-and the exact checker \`tools/verify_ubt_causal_cone.py\`.
+and the exact checker `tools/verify_ubt_causal_cone.py`.
 
 <!-- BILINGUAL-UNIT: single-action.priority -->
 ## Programme priority and scope freeze
