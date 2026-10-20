@@ -80,6 +80,12 @@ def verify() -> dict:
     assert sp.simplify(sp.diff(scale**3 * lam, t)) == 0
     assert sp.simplify(scale**3 * lam) == -sp.Rational(2, 3) * mass2
     assert sp.simplify((t * (scale/t)**3)) != 0  # nonzero coframe volume
+    hubble = sp.diff(scale, t) / scale
+    # Canonical EH Hamiltonian density in the flat FLRW, shift-free frame.
+    # pi^{ij} = -M2*sqrt(h)*H*h^{ij}; the 3-curvature vanishes.
+    h_perp = sp.simplify(-3 * mass2 * scale**3 * hubble**2)
+    assert sp.simplify(h_perp - 2 * scale**3 * lam) == 0
+    assert sp.simplify(h_perp + sp.Rational(4, 3) * mass2) == 0
 
     return {
         "unit_clock_identity": "PASS",
@@ -88,6 +94,7 @@ def verify() -> dict:
         "FLRW_curvature_and_Einstein_tensor": "PASS",
         "dust_current_conservation": "PASS",
         "Einstein_vacuum_counterexample": "PASS",
+        "ADM_lapse_constraint_not_imposed": "PASS",
         "scope": "assumed Einstein-Hilbert functional, independent boost coframe, local timelike patch",
     }
 
