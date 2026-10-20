@@ -244,38 +244,11 @@ include these algebraic constraints and their Poisson closure *before*
 interpreting any fixed-connection negative normal modes as
 physical instabilities of UBT.
 
-## Proposition 4 — the nonzero potential vacuum exposes a concrete stability obstruction
-
-The general ghost warning above can be made quantitative without adding a
-new action. Specialize the real pairing to the **already classified**
-Lorentz/phase invariant quadratic form
-\(H(X)=\operatorname{tr}(\operatorname{adj}X\,X^\dagger)\),
-and the existing quartic potential to its proven nonzero minimum region
-\(\lambda_1\ge0,\lambda_2>0,\mu=-(4\lambda_1+\lambda_2)r^2\).
-At \(X_0=irI_2\), in the Pauli coordinates
-\(q=(u_0,u_1,u_2,u_3,v_0,v_1,v_2,v_3)\), the exact fixed-background
-kinetic and potential-Hessian matrices are
-
-\[
-K=2\operatorname{diag}(1,-1,-1,-1,1,-1,-1,-1),\qquad
-M=\operatorname{diag}(0,8\lambda_2r^2,8\lambda_2r^2,
-8\lambda_2r^2,8(4\lambda_1+\lambda_2)r^2,0,0,0).
-\]
-
-Hence the generalized mass-squared eigenvalues are
-\(4(4\lambda_1+\lambda_2)r^2/c\) (one radial),
-\(-4\lambda_2r^2/c\) (three transverse), and zero (four orbit tangents).
-For **either** real nonzero kinetic sign \(c\), at least one transverse
-long-wavelength mode has \(\omega^2<0\) in this unconstrained
-fixed-background model. The Theta-only velocity Hessian is nondegenerate
-and therefore does not supply primary constraints to remove it.
-
-The proof, limitations and exact symbolic regression tests are in
+The independent full-eight-real-component symbolic verification and
+long-wavelength dispersion relation for Proposition 5 are recorded in
 [theta_kinetic_spectrum.en.md](theta_kinetic_spectrum.en.md).
-**Do not interpret Proposition 2 as an already-established stable
-physical UBT sector**: its isolated scalar channel is a consistent
-conditional quadratic truncation, while the remaining modes require
-an actual full-action constraint/stability derivation.
+**Proposition 2 remains a conditional scalar truncation**, not a
+demonstration that the remaining modes of the full UBT action are stable.
 
 ## Remaining theorem-critical work
 
