@@ -62,8 +62,32 @@ def verify() -> dict:
         "normal_kinetic_signature": {"positive": 1, "negative": 3},
         "potential_hessian_on_normal": ["8*r^2*(4*lambda1+lambda2)", "8*r^2*lambda2 (x3)"],
         "linearized_omega_squared_for_c_positive": ["positive scalar", "negative triplet (x3)"],
-        "scope": "fixed metric/connection; no full Dirac or composite Theta constraints",
+        "auxiliary_temporal_gauge_elimination": verify_auxiliary_temporal_gauge_elimination(),
+        "scope": "fixed metric; auxiliary gauge elimination at one constant vacuum, no composite Theta constraints",
     }
+
+
+
+def verify_auxiliary_temporal_gauge_elimination() -> str:
+    """Linearized time-connection constraints remove tangent, not normal, kinetic modes."""
+    r = sp.symbols("r", positive=True)
+    c = sp.symbols("c", real=True, nonzero=True)
+    tangents = sp.symbols("t0:4", real=True)
+    gauge = sp.symbols("a0:4", real=True)
+    normal = sp.symbols("n0:4", real=True)
+    w = [tangents[0] - r*gauge[0]] + [tangents[j] + r*gauge[j] for j in (1, 2, 3)]
+    kinetic = c * (w[0]**2 - sum(x*x for x in w[1:])
+                   + normal[0]**2 - sum(x*x for x in normal[1:]))
+    constraints = [sp.diff(kinetic, a) for a in gauge]
+    solved = sp.solve(constraints, gauge)
+    assert solved == {gauge[0]: tangents[0]/r,
+                      gauge[1]: -tangents[1]/r,
+                      gauge[2]: -tangents[2]/r,
+                      gauge[3]: -tangents[3]/r}
+    reduced = sp.expand(kinetic.subs(solved))
+    expected = c * (normal[0]**2 - sum(x*x for x in normal[1:]))
+    assert sp.expand(reduced - expected) == 0
+    return "PASS: tangent velocities removed, normal inertia (1,3) remains"
 
 
 if __name__ == "__main__":
