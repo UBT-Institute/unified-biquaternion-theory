@@ -247,6 +247,7 @@ claims:
     - dynamical QCD gauge symmetry is proved from UBT action
     - same Mat(2,C) Lorentz carrier itself is the physical SU(3) internal index
   cmb_full_covariance:
+    status: EXPLORATORY_WITH_NO_GO
     assumptions:
     - 'CMB-COMB-OLD: DOCUMENTED NULL — the historical periodic TT comb variant returned p=0.919 and remains a null constraint on that specific model'
     - 'CMB-LOWL-CUTOFF-OLD: DOCUMENTED NEGATIVE BENCHMARK — the simple psi-compactification primordial cutoff produced only sub-percent low-l suppression in the documented approximation and does not explain the observed low-l anomaly'
@@ -264,11 +265,14 @@ claims:
     - the historical comb null result supports a new UBT topology signal
 
   three_generations:
-    status: DERIVED_WITH_ASSUMPTIONS
+    status: OPEN_GAP
     evidence:
-    - canonical/n_eff/
-    - canonical/interactions/
-    forbidden_wording: []
+    - canonical/interactions/B_base_derivation_complete.tex
+    assumptions:
+    - 'GAP-GEN-3: OPEN — no theorem derives chiral families, their quantum numbers, or mass hierarchy from S[Theta]'
+    forbidden_wording:
+    - three generations are derived from UBT
+    - three fermion generations follow from winding modes
   alpha_full:
     status: OPEN_GAP
     evidence:
