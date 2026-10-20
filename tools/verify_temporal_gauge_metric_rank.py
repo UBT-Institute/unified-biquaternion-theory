@@ -61,6 +61,18 @@ def verify_temporal_rank():
     results["exact_ADM_lapse_squared_equals_u_squared"]=(
         sp.simplify((shift.T*gamma.inv()*shift)[0]-(b.T*b)[0])==0
     )
+    # Two-cell miniature of the local-vs-integrated lapse constraint:
+    # with one projectable multiplier local residuals may cancel.
+    N=sp.symbols("N", positive=True, real=True)
+    k0,k1,v0,v1=sp.symbols("k0 k1 v0 v1", real=True)
+    l0=k0/N-N*v0
+    l1=k1/N-N*v1
+    sample={k0:1,k1:1,v0:0,v1:-2,N:1}
+    local0=sp.diff(l0,N).subs(sample)
+    local1=sp.diff(l1,N).subs(sample)
+    results["global_projectable_constraint_not_local_constraint"]=(
+        local0!=0 and local1!=0 and sp.simplify(local0+local1)==0
+    )
     return results
 
 
