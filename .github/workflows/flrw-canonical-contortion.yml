@@ -1,0 +1,26 @@
+name: Canonical FLRW contortion identities
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/action_selection/flrw_canonical_contortion.*.md'
+      - 'tools/verify_flrw_canonical_contortion.py'
+      - 'tests/test_flrw_canonical_contortion.py'
+      - '.github/workflows/flrw-canonical-contortion.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  torsion-closed-flrw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install sympy pytest
+      - name: Verify canonical contortion, spatial and mixed spin curvature
+        run: python tools/verify_flrw_canonical_contortion.py
+      - name: Focused tests
+        run: python -m pytest -q tests/test_flrw_canonical_contortion.py
