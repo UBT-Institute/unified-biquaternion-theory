@@ -50,7 +50,7 @@ redukuje **identicky** na
 \[
 \boxed{\mathcal L_{\rm kin}=4c\mathcal N_0\sqrt{-g}.}
 \]
-Jde o identitu na dané Lorentzově větvi bez předpokladu \(X=i\rho I\), zvláštního potenciálu, specifického spojení nebo použití polních rovnic. Konkrétní koeficient závisí na normalizaci akce a dimenzi; ve 4 rozměrech s danými znaménky jde o \(+4c\mathcal N_0\).
+Jde o identitu na dané Lorentzově větvi bez předpokladu \(X=i\rho I\), zvláštního potenciálu, specifického spojení nebo použití polních rovnic. Konkrétní koeficient závisí na normalizaci akce a dimenzi; ve čtyřech rozměrech s danými znaménky jde o \(+4c\mathcal N_0\).
 
 **Interpretace:** Původní kvadratický člen se po dosazení *téže kompozitní metriky* chová jako objemový člen; nesmí být počítán ještě jednou jako nezávislé zdravé skalární oscilátory. Protože však \(\sqrt{-g}\) závisí na \(D\Theta\), není jeho variace obecně nulová při nezávislém spojení či variacích mimo Lorentzovu větev. Nejde o úplný Hamiltonián ani o vyvrácení celé UBT.
 
@@ -75,7 +75,7 @@ Na větvi s kladnou orientací \(\sqrt{-g}=\det J\) platí
 \mathcal L_{\rm red}=\det J\, F(y),\qquad
 F(y)=4c\mathcal N_0-U(\Theta(y)).
 \]
-Cílová čtyřforma \(\Omega=F(y)\,dy^0\wedge dy^1\wedge dy^2\wedge dy^3\) je lokálně exaktní. Přímo zaveďme
+Cílová 4-forma \(\Omega=F(y)\,dy^0\wedge dy^1\wedge dy^2\wedge dy^3\) je lokálně exaktní. Přímo zaveďme
 \[
 G(y)=\int_{0}^{y^0}F(s,y^1,y^2,y^3)\,ds,\quad
 \beta=G(y)\,dy^1\wedge dy^2\wedge dy^3,\quad
@@ -88,17 +88,17 @@ J^\mu_{\rm bdy}=G(y)\,\epsilon^{\mu\nu\rho\sigma}
 \quad
 \boxed{\partial_\mu J^\mu_{\rm bdy}=F(y)\det(\partial_\mu y^a).}
 \]
-Lokální Eulerovy–Lagrangeovy rovnice **takto omezené** akce tedy identicky mizí pro variace s kompaktním nosičem. V této redukci nevznikají nezávislé lokální gravitační módy. Pro \(\det J<0\) se hraniční proud liší pevným orientačním znaménkem. Globální topologie může přispět odděleně, aniž by změnila místní variační závěr.
+Lokální Eulerovy–Lagrangeovy rovnice **takto omezené** akce tedy identicky mizí pro variace \(y\) s kompaktním nosičem. V této redukci nevznikají nezávislé lokální gravitační módy. Pro \(\det J<0\) se hraniční proud liší pevným orientačním znaménkem. Globální topologie může přispět odděleně, aniž by změnila místní variační závěr.
 
-**Důležité:** Nejprve variovat **plnou neomezenou** akci v \(\Theta,A,B,\ldots\) a teprve pak redukovat obecně není ekvivalentní variaci takto omezené akce. Tato věta proto nezaručuje, že dané konfigurace splňují plné rovnice UBT.
+**Důležité:** Nejprve variovat **plnou neomezenou** akci v \(\Theta,A,B,\ldots\) a teprve pak redukovat obecně není ekvivalentní variaci takto omezené akce. Tato věta proto nezaručuje, že konfigurace \(y\) splňují plné rovnice UBT.
 
 ## III. Důsledky pro akci a CMB
 
 1. Hamiltonián testovacího oscilátoru v mergnuté dvanáctistěnné větvi je **podmíněná redukce**, nikoli automaticky Hamiltonián kompozitní metriky.
 2. Analýza nestabilit a pomocného spojení v draft PR #679 testuje jiné podmínky. Zde uvedená identita platí pro každý nedegenerovaný Lorentzovsky reálný tetrád, ale neprokazuje fyzikální nestabilitu celé omezené teorie.
-3. Při kalibračně triviálním čistě gradientním tetrádu je metrika lokálně Minkowského. Tato větev tedy nemůže vytvořit vlastní GR křivost, kosmologickou perturbaci, odvozené \(\zeta\) ani originální spektrum CMB; pouhé přeznačení souřadnic nezpůsobuje křivost.
+3. Při kalibračně triviálním čistě gradientním tetrádu je metrika lokálně Minkowského. Tato větev tedy nemůže vytvořit vlastní GR křivost, kosmologickou perturbaci, odvozené \(\zeta\) ani originální spektrum CMB; souřadnicové deformace \(y^a(x)\) nezpůsobují křivost.
 4. Úspěšná kandidátní jediná akce UBT musí určit, **který člen** vytváří gravitační rovnice (křivost, holonomie, torze, derivace spojení či nový konzistentní omezený invariant), doložit nedegenerované řešení, spočítat fyzikální omezení a energii, poté odvodit \(\zeta[\Theta]\) a jeho spektrum před použitím jádra \(S^3/2I\).
-5. Samostatně vložený člen \(\int\sqrt{-g}\,R[g(\Theta,A,B)]\) **není** odvozen ze stávající kinetické rodiny a mění variační řád; jde pouze o kandidátní ansatz, pokud UBT neurčí jeho původ a koeficient. Na čistě gradientní větvi je navíc \(R=0\).
+5. Samostatně vložený člen \(\int\sqrt{-g}\,R[g(\Theta,A,B)]\) **není** odvozen ze stávající kinetické rodiny a mění variační řád; jde pouze o kandidátní ansatz, pokud UBT neurčí jeho původ a koeficient. Při \(g=y^*\eta\) na čistě gradientní větvi je skalární křivost přesně nulová.
 
 **Nezávislé ověření:** \`tools/verify_lorentz_jet_boundary.py\` a \`tests/test_lorentz_jet_boundary.py\` kontrolují přesné identity determinantu metriky a hraničního proudu na nelineárních i afinních souřadnicích. Numerické či symbolické testy jednotlivých konfigurací nejsou důkazem obecné věty; analytický důkaz je uveden výše.
 
