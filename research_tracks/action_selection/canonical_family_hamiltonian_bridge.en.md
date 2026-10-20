@@ -339,6 +339,78 @@ L_{\rm kin,red}^{(2)}
 
 Variation sets the covariant tangent velocities to zero, so the tangent kinetic block disappears. **The indefinite normal kinetic block survives even after this particular auxiliary gauge reduction.** This is stronger than freezing the gauge field, but still is not the full constrained composite-gravity Dirac analysis. The exact elimination identity is checked symbolically in tools/verify_theta_kinetic_signature.py.
 
+## Proposition 8 — a healthy Lorentz-real radial reduction has a rank-one emergent tetrad
+
+The Lorentz-real slice suggests a possible escape from the transverse ghosts
+of Proposition 7, but it exposes a **different, exact obstruction** in the
+same minimal auxiliary-connection family.
+
+Assume the Lorentz-real field is \(X=iY\), with \(Y\) **positive-definite
+Hermitian** on a local timelike patch. By the positive Hermitian
+factorization \(Y=\rho SS^\dagger\), where
+\(\rho=\sqrt{\det Y}>0\) and \(S\in SL(2,\mathbb C)\),
+a local Lorentz gauge puts \(X=i\rho I\).
+Assume this reality slice is dynamically consistent; that is **not**
+established here. Fix the scalar phase, retain only an independent
+auxiliary \(SL(2,\mathbb C)\) connection, and prescribe a nondegenerate
+Lorentz metric independently of the composite UBT tetrad.
+
+In this gauge the potential is **exactly**, not merely quadratically,
+
+\[
+U(\rho)=U_0+(4\lambda_1+\lambda_2)(\rho^2-r^2)^2
+-(4\lambda_1+\lambda_2)r^4.
+\]
+
+Let the connection act by
+\(D_\mu X=\partial_\mu X+A_\mu X+X A_\mu^\dagger\).
+Its anti-Hermitian rotational part drops out at \(X=i\rho I\);
+write the Hermitian traceless boost part as
+\(A_\mu+A_\mu^\dagger=b_\mu^j\sigma_j\). Then
+
+\[
+D_\mu X=i\left[(\partial_\mu\rho)I+\rho b_\mu^j\sigma_j\right],
+\quad
+H(D_\mu X)=2\left[(\partial_\mu\rho)^2
+-\rho^2\sum_j(b_\mu^j)^2\right].
+\]
+
+The **exact algebraic** connection equations from the minimal kinetic
+term on a prescribed metric force \(b_\mu^j=0\) for \(\rho>0\).
+The reduced scalar kinetic term is positive for \(c>0\);
+the radial potential has
+\(U''(r)=8(4\lambda_1+\lambda_2)r^2>0\).
+Thus this restricted auxiliary-gauge model **does have a healthy
+radial scalar**.
+
+However the same on-shell equation gives
+
+\[
+\boxed{D_\mu X=i(\partial_\mu\rho)I,\qquad
+\operatorname{rank}E_\mu{}^a\le1,\qquad
+\det g_{\mu\nu}^{\mathrm{composite}}=0.}
+\]
+
+Indeed all four covariant-derivative columns are proportional to the
+single internal direction \(iI\); their central anticommutator metric
+is proportional to \(\partial_\mu\rho\,\partial_\nu\rho\), an outer
+product of rank at most one. Consequently the healthy scalar reduction
+**cannot simultaneously reproduce a nondegenerate emergent UBT
+spacetime** within this prescribed-metric, purely auxiliary
+connection branch.
+
+This is an **exact conditional no-go**, not a contradiction in the full
+theory: varying the *composite* metric rather than prescribing it
+modifies the connection equations, and a curvature-dependent,
+torsionful or other dynamically selected branch could evade it.
+The proof also assumes the positive Hermitian timelike patch and
+a dynamically admissible Lorentz-real restriction. It does not prove
+that either exists as a physical vacuum of UBT.
+
+Independent symbolic verification:
+tools/verify_theta_timelike_auxiliary_rank.py;
+regression tests: tests/test_theta_timelike_auxiliary_rank.py.
+
 ## Remaining theorem-critical work
 
 1. Finalize the single Theta action's pairing, measure, potential, composite metric and connection variations.
