@@ -145,7 +145,7 @@ actions.
 
 ## 6. Conflict with the current UBT core
 
-The separate core audit already proves that full coefficient-space
+The separate core audit already establishes that full coefficient-space
 \(SU(1,3)\):
 
 - has only the indefinite constant Hermitian invariant \(G\);

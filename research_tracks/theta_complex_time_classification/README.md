@@ -30,7 +30,7 @@ No equality among these variables is assumed.
 
 ## Lorentz guardrail
 
-The companion no-go proves that strict frame-independent Cauchy--Riemann
+The companion no-go establishes that strict frame-independent Cauchy--Riemann
 holomorphy in \(t+i\psi\) is incompatible with generic 4D Lorentz-covariant
 spacetime dependence if \(\psi\) is an independent Lorentz scalar.  Therefore
 holomorphy is provisionally treated as a reduced theta-sector property, not a

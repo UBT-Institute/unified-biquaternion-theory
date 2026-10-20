@@ -1,0 +1,5 @@
+# Legacy generated figures remain tracked and accessible in Git.
+# Exclude only duplicate historical raster renderings from source archives;
+# git archive (used by the 12 MiB CI gate) should package sources, not these plots.
+ARCHIVE/archive_legacy/consolidation_project/fig_QA_robustness_s0.png export-ignore
+ARCHIVE/archive_legacy/consolidation_project/fig_QA_robustness_s05.png export-ignore

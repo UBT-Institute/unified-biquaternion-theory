@@ -106,7 +106,7 @@ The result is intentionally narrow.  It does not exclude:
 4. a spacetime-dependent radial mode whose potential and derivative energy
    balance in the full Euler--Lagrange equations.
 
-But it proves that the enhanced colour vacuum cannot simply be combined with
+But it establishes that the enhanced colour vacuum cannot simply be combined with
 the repository's simplest flat affine GR representer.
 
 ## 5. Implication for the full Hessian programme

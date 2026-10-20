@@ -120,6 +120,111 @@ Výběr koeficientů a slučitelné nedegenerované časoprostorové pozadí zů
 otevřené. Fyzikální fluktuace musí určit úplná akce včetně její derivační,
 gauge a vazbové struktury.
 
+## Podmíněný most k Hamiltoniánu (nejde o finalizaci)
+
+U dosavadní kineticko-potenciálové rodiny je na předepsaném pozadí
+s nedegenerovaným reálným kinetickým párováním možné přesně provést
+ADM Legendreovu transformaci. Při předpokladu normalizovaného
+neprovázaného skalárního kanálu z ní vychází totožný Hamiltonián
+jako v dřívějším dodekahedrálním testovacím sektoru.
+Úplný důkaz, matematická omezení a kontrolní výpočty jsou v
+research_tracks/action_selection/canonical_family_hamiltonian_bridge.cs.md
+(anglický podrobný protějšek: canonical_family_hamiltonian_bridge.en.md).
+
+### Exaktní překážky výběru kinetického členu
+
+Pro deklarovanou maticovou reprezentaci a Lorentzovo/fázové
+kongruenční působení je jediným reálným kvadratickým invariantem
+až na měřítko H(X)=Tr(X^sharp X^dagger). Na všech 8 reálných
+složkách má signaturu **(2,6)**. V bodě nenulového globálního
+minima X0=irI má čtyřrozměrná normála k orbitě fáze/boostů
+kinetickou signaturu **(1,3)**, ačkoli Hessián potenciálu
+je v normálních směrech kladný. Při pevné nulové konexi
+mají při kladném c tři normální složky nestabilní exponenciální
+řešení; při záporném c je nestabilní skalární složka.
+Tento výsledek navazuje na Tvrzení 4-5.
+
+Tento výsledek je **podmíněné no-go na pevném pozadí**, nikoli
+důkaz ghostu v plné UBT. Konstantní minimum s nulovou konexí
+má degenerovanou kompozitní tetrádu. Úplné dynamické konexe,
+variace kompozitní metriky a Diracovy vazby mohou změnit
+spektrum fyzikálních módů.
+
+Samotná rodina s konexemi pouze v D_mu Theta navíc
+neobsahuje derivace konexí, tedy ani stromový propagující
+Yangův–Millsův kinetický člen. Rovnice pro takové nezávislé
+konexe jsou algebraické. Případná indukovaná efektivní
+akce musí být skutečně odvozena.
+
+**Status rodiny zůstává DEFINED_FAMILY_NOT_FINALIZED.**
+
+## Exaktní překážka kinetického spektra v existující kvartické rodině
+
+**Redakční poznámka:** Následující odborné rovnice a vymezení platnosti jsou ponechány shodně s anglickým originálem pro automaticky ověřitelnou matematickou paritu; český překlad odborného výkladu je otevřený.
+
+The Lorentz/phase-invariant quadratic pairing is
+\(H(X)=2(|z_0|^2-\sum_{j=1}^3|z_j|^2)\), with real kinetic signature
+\((2,6)\). Combining that pairing with the previously proved nonzero
+quartic-potential minimum gives an exact transverse generalized
+mass-squared spectrum containing one eigenvalue proportional to
+\(+(4\lambda_1+\lambda_2)/c\) and three proportional to
+\(-\lambda_2/c\). In the **unconstrained fixed-background realization**,
+one or more long-wavelength modes are therefore unstable for every
+nonzero real kinetic normalization \(c\). The velocity Hessian has full
+rank eight; potential-orbit symmetries do not themselves generate
+Theta-only primary constraints.
+
+This is a new **conditional no-go** for a naive stable eight-component
+realization, not a no-go for the full constrained/composite UBT theory.
+See [theta_kinetic_spectrum.en.md](../research_tracks/action_selection/theta_kinetic_spectrum.en.md)
+and the executable exact checker
+tools/verify_theta_kinetic_spectrum.py. The fundamental action is
+**still not finalized**: its dynamical constraints must be computed
+before any ghost-free claim is upgraded.
+
+### Omezení kinetiky konexe v holé rodině
+
+When an independent connection appears **only algebraically** through
+the covariant derivative of Theta, the minimal kinetic/potential family
+contains no derivatives of that connection. Its fixed-background
+connection Euler--Lagrange equations are algebraic and its connection
+momenta vanish. Therefore a propagating Yang--Mills curvature kinetic
+term does **not** follow at tree level from this bare family.
+The full composite-metric variation, a derived induced gauge action,
+or a separately justified curvature-dependent single action would
+require additional analysis. See Proposition 6 in
+[canonical_family_hamiltonian_bridge.en.md](../research_tracks/action_selection/canonical_family_hamiltonian_bridge.en.md).
+The fundamental action remains **DEFINED_FAMILY_NOT_FINALIZED**.
+
+**Stronger quadratic check:** when independent nonpropagating phase/boost
+connections are actually varied and eliminated around the nonzero potential
+minimum, they remove four orbit-tangent derivatives but leave the normal
+kinetic signature (1,3) and its infrared instability. This excludes the
+naive auxiliary-gauge repair on that fixed background, not a full constrained
+UBT completion. See Proposition 7 of the Hamiltonian bridge and
+`tools/verify_theta_auxiliary_connection_reduction.py`.
+
+**Timelike Lorentz-real branch:** assuming a consistent positive-Hermitian
+Lorentz-real slice and an independent auxiliary SL(2,C) connection, the
+radial scalar can be stable for positive kinetic normalization.
+But the same exact algebraic connection equation forces its on-shell
+covariant tetrad to have rank at most one on a prescribed metric.
+Thus this naive stable reduction does not generate a nondegenerate
+emergent UBT spacetime. See Proposition 8 of the Hamiltonian bridge
+and tools/verify_theta_timelike_auxiliary_rank.py. Full composite-metric
+variation may evade the restricted no-go and remains OPEN.
+
+**Composite-metric result (stronger restricted no-go):** On the
+Lorentz-real timelike branch with the central metric constructed from
+the same covariant Theta derivative, the invariant kinetic contraction
+is identically -8*N0. The minimal kinetic/potential action therefore
+collapses to a volume term. Varying independent auxiliary boost
+connections forces U(rho)=4*c*N0 at any nondegenerate tetrad;
+for the nonconstant classified quartic this makes rho constant and
+the tetrad degenerate. Proposition 9 proves this exactly for the
+specified branch. It excludes that minimal completion, **not**
+curvature-dependent or other dynamically justified single-Theta actions.
+
 <!-- BILINGUAL-UNIT: single-action.falsification -->
 ## Předem stanovené falzifikační kritérium
 
