@@ -66,6 +66,17 @@ action/Hessian/partition function should an effective potential
 Exit criterion: a derived and stability-certified modulus minimum, or a no-go
 showing the current canonical action leaves the modulus undetermined.
 
+## October 2026 research bridges
+
+Draft bridge digest:
+- `research_tracks/priority_program_2026_10/october_2026_research_bridges.en.md`
+- `research_tracks/priority_program_2026_10/october_2026_research_bridges.cs.md`
+
+These are working notes for the external October 2026 sources named in the issue,
+with explicit no-overclaim wording and a research-bridge matrix. They are not
+canonical proofs, not publication claims, and not a status update for the
+underlying UBT theorems.
+
 ## Execution order
 
 P1 and P2 first.  P3 follows once the statistical null models are frozen.
