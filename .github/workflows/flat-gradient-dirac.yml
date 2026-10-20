@@ -1,0 +1,27 @@
+name: Flat gradient Dirac constraints
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/action_selection/flat_gradient_dirac.*.md'
+      - 'tools/verify_flat_gradient_dirac.py'
+      - 'tests/test_flat_gradient_dirac.py'
+      - '.github/workflows/flat-gradient-dirac.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-jet-constraints:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact algebra dependencies
+        run: python -m pip install sympy pytest
+      - name: Verify exact determinant, cofactor and functional Euler identities
+        run: python tools/verify_flat_gradient_dirac.py
+      - name: Run focused regression
+        run: python -m pytest -q tests/test_flat_gradient_dirac.py
