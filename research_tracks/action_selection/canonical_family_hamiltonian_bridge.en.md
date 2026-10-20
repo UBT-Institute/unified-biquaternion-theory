@@ -411,6 +411,104 @@ Independent symbolic verification:
 tools/verify_theta_timelike_auxiliary_rank.py;
 regression tests: tests/test_theta_timelike_auxiliary_rank.py.
 
+## Proposition 9 — exact composite-metric volume collapse and timelike auxiliary-branch no-go
+
+Proposition 8 prescribed the metric. Here we instead **vary the
+central composite metric consistently**, still within a sharply defined
+minimal subfamily. Assume:
+
+1. The Lorentz-real timelike gauge \(X=i\rho I\), \(\rho>0\), on a connected
+   oriented patch; the local \(SL(2,\mathbb C)\) connection is independent
+   and enters **only** through \(D_\mu X\).
+2. The tetrad and metric are defined by the original UBT central
+   anticommutator,
+   \(E_\mu=N_0^{-1/2}D_\mu X\) and
+   \(\frac12(E_\mu^\sharp E_\nu+E_\nu^\sharp E_\mu)
+     =g_{\mu\nu}I\), with \(N_0>0\).
+3. The complete branch action is **only** the existing Lorentz-pairing
+   kinetic/potential family with real \(c\ne0\), no independent curvature,
+   connection-derivative, boundary-dependent or other dynamical terms:
+   \[
+   S_{\rm min}=\int d^4x\sqrt{-g}
+   \left[-\frac c2g^{\mu\nu}B(D_\mu X,D_\nu X)-U(\rho)\right],
+   \]
+   where \(B\) polarizes \(H\) and the nonconstant classified quartic
+   \(U(\rho)\) is as in Proposition 8.
+
+**Exact kinematic identity.** For any nondegenerate tetrad in this
+Lorentz-real representation,
+
+\[
+\boxed{
+B(D_\mu X,D_\nu X)=-2N_0g_{\mu\nu},\qquad
+g^{\mu\nu}B(D_\mu X,D_\nu X)=-8N_0.
+}
+\]
+
+**Proof:** write \(D_\mu X=i(a_\mu I+\mathbf v_\mu\cdot
+\boldsymbol\sigma)\). The central anticommutator gives
+\(g_{\mu\nu}=N_0^{-1}(-a_\mu a_\nu+
+\mathbf v_\mu\cdot\mathbf v_\nu)\), whereas the polarized
+quadratic invariant is
+\(B(D_\mu X,D_\nu X)=2(a_\mu a_\nu-
+\mathbf v_\mu\cdot\mathbf v_\nu)\).
+The contraction is the trace of the four-dimensional identity.
+
+Thus the kinetic term **collapses exactly to a volume term**,
+
+\[
+\boxed{
+S_{\rm min}=\int d^4x\,\sqrt{-g}\,[4cN_0-U(\rho)].
+}
+\]
+
+With \(A_\mu+A_\mu^\dagger=b_\mu^j\sigma_j\) in the timelike gauge,
+the tetrad columns are
+\[
+E_\mu{}^a=N_0^{-1/2}
+\big(\partial_\mu\rho,\rho b_\mu^1,\rho b_\mu^2,\rho b_\mu^3\big),
+\]
+and on a patch of fixed orientation,
+\[
+\sqrt{-g}=\frac{\rho^3}{N_0^2}
+\left|\det[\partial\rho,b^1,b^2,b^3]\right|.
+\]
+
+**No-go theorem.** There is **no smooth stationary configuration with
+nondegenerate composite tetrad on such a connected patch** if
+\(U(\rho)\) is the nonconstant quartic with
+\(\lambda_1\ge0,\lambda_2>0\).
+
+**Proof:** the twelve independent algebraic connection variations give
+\[
+(4cN_0-U(\rho))\,
+\frac{\partial\sqrt{-g}}{\partial b_\mu^j}=0.
+\]
+At an invertible tetrad the cofactor matrix is invertible, so for
+each boost column at least one cofactor is nonzero. Consequently
+\(U(\rho)=4cN_0\) pointwise. The quartic \(U(\rho)\) is a
+**nonconstant polynomial**; for fixed \(c,N_0\) its level set
+\(U(\rho)=4cN_0\) is finite. A continuous \(\rho\) on a connected
+patch taking values in this finite set must be constant. Therefore
+\(\partial_\mu\rho=0\), the first tetrad column vanishes and
+\(\operatorname{rank}E\le3\), contradicting nondegeneracy. QED.
+
+**Interpretation:** including the metric's chain-rule variation
+does **not** rescue this particular minimal auxiliary branch:
+it changes the connection equation from \(b=0\) to a volume-cofactor
+condition, which forces tetrad degeneracy for a nonconstant potential.
+This is a genuine exact action-level exclusion of the **stated
+subfamily**, not of the complete UBT programme. A curvature term,
+dynamical torsion, differentiated/composite connection, different
+measure, higher-derivative action, or a physically distinct
+non-timelike branch is outside the theorem. A consistent final
+single-Theta action must derive and test whichever of these
+mechanisms it uses, not silently append a sector action.
+
+Exact independent matrix and determinant checker:
+tools/verify_theta_composite_volume_no_go.py;
+regression tests: tests/test_theta_composite_volume_no_go.py.
+
 ## Remaining theorem-critical work
 
 1. Finalize the single Theta action's pairing, measure, potential, composite metric and connection variations.
