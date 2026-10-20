@@ -170,7 +170,7 @@ Repozitář už vyhrazuje přísné rozlišení mezi:
 - algebraickými tvrzeními o stabilitě;
 - analogiemi kódových modelů.
 
-Jazyk kvantových kódů může být sugestivní, ale není odvozením uzávěrky SM nebo kanonického SU(3) sektoru UBT.
+Jazyk kvantových kódů může být sugestivní, ale není odvozením uzávěrky SM nebo kanonického barevného sektoru UBT.
 
 ### Využití / výzva / test pro UBT
 Konkrétní test UBT:
