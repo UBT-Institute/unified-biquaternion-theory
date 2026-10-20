@@ -178,7 +178,7 @@ This calculation **does not** show that a nondegenerate physical
 spacetime vacuum of UBT is unstable: the pointwise minimizer
 \(X_0=irI_2\) has not been shown to generate a nondegenerate tetrad
 satisfying the full composite equations. In fact, the existing
-[minimum note](biquaternionic_potential_vacuum.en.md) proves that a
+[minimum note](biquaternionic_potential_vacuum.en.md) establishes that a
 constant-invariant Lorentz-pairing-preserving branch has tetrad rank
 at most three. Nor does this computation exclude a full theory whose
 dynamical metric, connections, first-class constraints, or different
