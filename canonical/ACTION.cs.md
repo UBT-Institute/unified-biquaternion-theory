@@ -157,6 +157,14 @@ akce musí být skutečně odvozena.
 
 **Status rodiny zůstává DEFINED_FAMILY_NOT_FINALIZED.**
 
+**Silnější kvadratická kontrola:** nezávislé nepropagující konexe fáze
+a boostů lze v okolí nenulového minima skutečně variačně eliminovat.
+Odstraní čtyři tečné derivace, avšak normální sektor má nadále
+signaturu (1,3) a dlouhovlnnou nestabilitu. Jde o podmíněné no-go
+pro tuto pomocnou gauge realizaci na pevném pozadí, nikoli o vyvrácení
+úplné UBT. Viz Tvrzení 7 v kanonickém Hamiltonovském mostu a
+`tools/verify_theta_auxiliary_connection_reduction.py`.
+
 <!-- BILINGUAL-UNIT: single-action.falsification -->
 ## Předem stanovené falzifikační kritérium
 
