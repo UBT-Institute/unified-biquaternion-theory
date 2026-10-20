@@ -341,6 +341,78 @@ L_{\rm kin,red}^{(2)}
 
 Variační rovnice anulují kovariantní tečné rychlosti a jejich kinetický blok zmizí. **Neurčitá kinetická forma normálního prostoru však zůstává i po této konkrétní eliminaci pomocné konexe.** To je silnější výsledek než zmrazení gauge pole, avšak stále nejde o úplnou Diracovu analýzu kompozitní gravitace. Identita je symbolicky ověřena v tools/verify_theta_kinetic_signature.py.
 
+## Tvrzení 8 — stabilní radiální redukce má degenerovanou emergentní tetrádu
+
+Lorentzovsky reálný sektor nabízí možnost odstranit ghostové směry
+z Tvrzení 7, ale ve stejné minimální pomocné větvi vzniká jiná
+**exaktní překážka**.
+
+Předpokládejme \(X=iY\), kde \(Y\) je lokálně kladně definitní
+hermitovská matice. Rozklad \(Y=\rho SS^\dagger\),
+\(\rho=\sqrt{\det Y}>0\), \(S\in SL(2,\mathbb C)\),
+umožňuje lokální Lorentzovou kalibraci \(X=i\rho I\).
+Dynamická konzistence této reality slice je zatím **předpokladem**.
+Fázi fixujeme, ponecháme nezávislou pomocnou konexi
+\(SL(2,\mathbb C)\) a předepíšeme nedegenerovanou metriku
+nezávisle na kompozitní tetrádě.
+
+Potenciál se přesně redukuje na
+
+\[
+U(\rho)=U_0+(4\lambda_1+\lambda_2)(\rho^2-r^2)^2
+-(4\lambda_1+\lambda_2)r^4.
+\]
+
+Pro
+\(D_\mu X=\partial_\mu X+A_\mu X+XA_\mu^\dagger\)
+a \(A_\mu+A_\mu^\dagger=b_\mu^j\sigma_j\) platí
+
+\[
+D_\mu X=i[(\partial_\mu\rho)I+\rho b_\mu^j\sigma_j],
+\quad
+H(D_\mu X)=2[(\partial_\mu\rho)^2-\rho^2\sum_j(b_\mu^j)^2].
+\]
+
+Variační rovnice nepropagující boostové konexe
+na předepsané metrice dávají jednoznačně
+\(b_\mu^j=0\), protože \(\rho>0\).
+Pro \(c>0\) má zbývající radiální skalár kladnou
+kinetickou energii a
+\(U''(r)=8(4\lambda_1+\lambda_2)r^2>0\).
+
+Současně ale dostáváme
+
+\[
+\boxed{
+D_\mu X=i(\partial_\mu\rho)I,\quad
+\operatorname{rank}E_\mu{}^a\le1,\quad
+\det g_{\mu\nu}^{\mathrm{kompozitni}}=0.
+}
+\]
+
+Všechny čtyři sloupce tetrády jsou totiž úměrné
+jedinému vnitřnímu směru \(iI\). Metrika z
+centrálního antikomutátoru je násobkem vnějšího
+součinu \(\partial_\mu\rho\,\partial_\nu\rho\),
+a tedy degenerovaná.
+
+**Závěr:** Stabilní skalární redukce existuje,
+ale v této minimální větvi s předepsanou metrikou
+a čistě pomocnou konexí **nemůže zároveň vytvářet
+nedegenerovaný časoprostor UBT**.
+
+Nejde o obecné no-go pro UBT. Variační rovnice
+se změní, pokud se místo předepsané metriky
+variuje metrika kompozitní, nebo pokud úplná
+akce odvodí další dynamické geometrické členy.
+Také existenci fyzikálního Lorentzovsky reálného
+vakua je třeba teprve prokázat.
+
+Exaktní symbolický výpočet:
+tools/verify_theta_timelike_auxiliary_rank.py.
+Regresní test:
+tests/test_theta_timelike_auxiliary_rank.py.
+
 ## Zbývající kritické kroky důkazu
 
 1. Finalize the single Theta action's pairing, measure, potential, composite metric and connection variations.
