@@ -11,7 +11,7 @@ UBT-AI-PROVENANCE-END -->
 
 # Objemová redukce kinetického členu a hraniční věta pro gradientní tetrád
 
-**Stav: DERIVED_WITH_ASSUMPTIONS.** Samostatné rozšíření užšího výsledku pro časupodobnou kalibraci (tvrzení 9 v draft PR #679). **Nezavádí novou fundamentální akci** ani nemění kanonické pole UBT. Cílem je určit, co může a nemůže generovat stávající kvadratická kinetická rodina.
+**Stav: DERIVED_WITH_ASSUMPTIONS.** Samostatné rozšíření užšího výsledku pro časupodobnou kalibraci (tvrzení 9 v mergnutém PR #679). **Nezavádí novou fundamentální akci** ani nemění kanonické pole UBT. Cílem je určit, co může a nemůže generovat stávající kvadratická kinetická rodina.
 
 ## I. Definice a přesná algebraická věta (libovolný nedegenerovaný Lorentzův tetrád)
 
@@ -95,11 +95,11 @@ Lokální Eulerovy–Lagrangeovy rovnice **takto omezené** akce tedy identicky 
 ## III. Důsledky pro akci a CMB
 
 1. Hamiltonián testovacího oscilátoru v mergnuté dvanáctistěnné větvi je **podmíněná redukce**, nikoli automaticky Hamiltonián kompozitní metriky.
-2. Analýza nestabilit a pomocného spojení v draft PR #679 testuje jiné podmínky. Zde uvedená identita platí pro každý nedegenerovaný Lorentzovsky reálný tetrád, ale neprokazuje fyzikální nestabilitu celé omezené teorie.
+2. Analýza nestabilit a pomocného spojení v mergnutém PR #679 testuje jiné podmínky. Zde uvedená identita platí pro každý nedegenerovaný Lorentzovsky reálný tetrád, ale neprokazuje fyzikální nestabilitu celé omezené teorie.
 3. Při kalibračně triviálním čistě gradientním tetrádu je metrika lokálně Minkowského. Tato větev tedy nemůže vytvořit vlastní GR křivost, kosmologickou perturbaci, odvozené \(\zeta\) ani originální spektrum CMB; souřadnicové deformace \(y^a(x)\) nezpůsobují křivost.
 4. Úspěšná kandidátní jediná akce UBT musí určit, **který člen** vytváří gravitační rovnice (křivost, holonomie, torze, derivace spojení či nový konzistentní omezený invariant), doložit nedegenerované řešení, spočítat fyzikální omezení a energii, poté odvodit \(\zeta[\Theta]\) a jeho spektrum před použitím jádra \(S^3/2I\).
 5. Samostatně vložený člen \(\int\sqrt{-g}\,R[g(\Theta,A,B)]\) **není** odvozen ze stávající kinetické rodiny a mění variační řád; jde pouze o kandidátní ansatz, pokud UBT neurčí jeho původ a koeficient. Při \(g=y^*\eta\) na čistě gradientní větvi je skalární křivost přesně nulová.
 
 **Nezávislé ověření:** \`tools/verify_lorentz_jet_boundary.py\` a \`tests/test_lorentz_jet_boundary.py\` kontrolují přesné identity determinantu metriky a hraničního proudu na nelineárních i afinních souřadnicích. Numerické či symbolické testy jednotlivých konfigurací nejsou důkazem obecné věty; analytický důkaz je uveden výše.
 
-**Návaznost:** \`canonical/fields/theta_field.tex\`, \`research_tracks/action_selection/theta_potential_invariants.en.md\`, \`research_tracks/action_selection/canonical_family_hamiltonian_bridge.en.md\` v **draft PR #679** a \`research_tracks/dodecahedral_action_cmb/DERIVATION.md\`.
+**Návaznost:** \`canonical/fields/theta_field.tex\`, \`research_tracks/action_selection/theta_potential_invariants.en.md\`, \`research_tracks/action_selection/canonical_family_hamiltonian_bridge.en.md\` v **mergnutém PR #679** a \`research_tracks/dodecahedral_action_cmb/DERIVATION.md\`.
