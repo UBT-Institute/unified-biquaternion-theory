@@ -90,6 +90,17 @@ The FLRW minisuperspace itself has a smaller rank, while a separately assumed au
 
 The latter statement is specific to the minimal auxiliary-connection assumptions already examined in merged research; it is not the Cartan equation of an established full Theta action.
 
+## Consequence for a Hamiltonian action
+
+This restricted lapse has another exact consequence **if one substitutes it before varying a gravitational action**. For a local ADM action with lapse multiplier and Hamiltonian constraint density \(\mathcal H(x)\), independent lapse variations give the local Hamiltonian constraint. If one replaces the lapse by a function of time only *before varying*, the variation becomes spatially integrated:
+\[
+\frac{\delta S}{\delta N(t,x)}=0\quad\Rightarrow\quad\mathcal H(t,x)=0,
+\qquad
+\frac{\delta S|_{N=N(t)}}{\delta N(t)}=0
+\quad\Rightarrow\quad\int_\Sigma d^3x\,\mathcal H(t,x)=0.
+\]
+The converse implication is **false**: cancellation among spatially different constraint densities can satisfy the integral while violating the local equations. Thus early radial/temporal restriction can change the constraint algebra and cannot be used to prove full GR recovery. Moreover, full variation before restriction need not equal restriction before variation. This is an ADM comparator statement, **not** an established Hamiltonian of UBT.
+
 ## Dynamical decision gate
 
 The canonical torsion map is algebraically invertible in the specified minimal Palatini setup and its spin source must be derived from the **same composite** Theta action. Free boost variations cannot be counted as physical until the connection, torsion, diffeomorphism and Dirac constraints are imposed. On-shell rank, healthy tensor modes, and the Theta-to-CMB map are open. The existing curved contortion reconstruction proves conditional local geometric realizability, not that its connection satisfies the canonical equations of motion.
