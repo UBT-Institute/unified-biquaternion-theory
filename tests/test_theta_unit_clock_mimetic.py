@@ -11,5 +11,6 @@ def test_unit_clock_mimetic_counterexample():
         "FLRW_curvature_and_Einstein_tensor",
         "dust_current_conservation",
         "Einstein_vacuum_counterexample",
+        "ADM_lapse_constraint_not_imposed",
     ):
         assert result[key] == "PASS"
