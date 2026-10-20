@@ -60,8 +60,8 @@ def _two_loop_archimedean_core(p: int, scheme: str, mu: Optional[float], strict:
     """
     Compute two-loop correction Δ_CT(p) in Thomson limit.
     
-    This implements the rigorous QED→UBT matching calculation:
-    - Two-loop vacuum polarization Π^(2)(q²)
+    This is an exploratory QED/UBT matching scaffold, not a rigorous matching calculation:
+    - Placeholder for two-loop vacuum polarization Π^(2)(q²); not implemented here
     - Thomson limit q²→0 
     - Extract finite part → Δ_CT(p)
     
@@ -69,7 +69,7 @@ def _two_loop_archimedean_core(p: int, scheme: str, mu: Optional[float], strict:
     - Ward identity Z1 = Z2 (proven under UBT assumptions A1-A3)
     - R_UBT = 1 in baseline theory (Theorem in appendix_CT_two_loop_baseline.tex)
     - MSbar renormalization scheme (or specified scheme)
-    - No fitted parameters - all derived from UBT/QED structure
+    - Parameter-free derivation NOT established; placeholders and phenomenological inputs remain
     
     Args:
         p: Prime sector parameter
