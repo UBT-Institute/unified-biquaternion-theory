@@ -13,9 +13,11 @@ UBT-AI-PROVENANCE-END
 
 # Dodecahedral sector: conditional action, Hamiltonian, and CMB covariance
 
-**Status (2026-10-20): DERIVED_WITH_ASSUMPTIONS / OPEN_GAP.** Research only; not canonical UBT.
+**Status (2026-10-20): DERIVED_WITH_ASSUMPTIONS / BLOCKED_OBSERVATIONAL_FIT.** Research only; not canonical UBT.
 **Scope:** A mathematically controlled *test-field* model on a specified background, not the closed fundamental action of UBT.
-**No observational detection is claimed.** No Planck likelihood or full Boltzmann transfer calculation is performed here.
+**No observational detection is claimed.** This track implements an exact quotient spectrum and a synthetic Sachs–Wolfe toy covariance, but it does not claim a real Planck fit. The exact full-sky harmonic projection `xi_{nj,lm}` and any observational likelihood remain blocked.
+
+**Explicit gate:** `NO OBSERVATIONAL FIT` — real TT/TE/EE data, masks, transfer functions, covariance and likelihood handling are not implemented in this research track.
 
 ## 0. Existing UBT and assumptions
 

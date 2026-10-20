@@ -11,7 +11,38 @@ from math import cos, pi, sin, sqrt, fsum
 from typing import Sequence
 
 
+OBSERVATIONAL_FIT_STATUS = "NO OBSERVATIONAL FIT"
+EXACT_PROJECTION_STATUS = "BLOCKED: exact xi_{nj,lm} projection is not implemented"
+
 Quaternion = tuple[float, float, float, float]
+
+
+def observational_fit_status() -> dict[str, str]:
+    """Return the explicit gate status for this research track.
+
+    This is a synthetic, SW-only toy model. It is not a Planck likelihood or
+    cosmological fit and does not claim observational support.
+    """
+    return {
+        "scalar_spectrum": "exact (2I quotient spectrum confirmed independently)",
+        "full_sky_projection": EXACT_PROJECTION_STATUS,
+        "planck_fit": OBSERVATIONAL_FIT_STATUS,
+        "proof_gate": "BLOCKED: the missing theta-to-zeta and transfer-function bridge is not derived here",
+    }
+
+
+def require_exact_projection_gate() -> None:
+    """Fail fast when the exact spherical-harmonic projection is required.
+
+    The quotient spectrum is implemented exactly, but the full-sky 
+    xi_{nj,lm}(x_o, O, chi_*) projection is not available in this research track.
+    This avoids silently substituting the heat-trace or SW kernel proxy.
+    """
+    raise NotImplementedError(
+        "Exact xi_{nj,lm} projection and a real Planck likelihood are blocked for "
+        "this research track. Synthetic SW covariance is not a real CMB fit; "
+        "use the low-l toy kernel only for null/diagnostic checks."
+    )
 
 
 def _even_perm(index_tuple: Sequence[int]) -> bool:
@@ -113,6 +144,10 @@ def sw_sky_covariance(direction_a: Sequence[float], direction_b: Sequence[float]
     E[deltaT/T(a) deltaT/T(b)] = 1/25 * sum_n P_n K_n^Q(x_a,x_b).
     P_n are specified scalar-mode variances and MUST be nonnegative.
     n=0 omitted: homogeneous monopole is not a CMB anisotropy.
+
+    This is an explicit null/diagnostic model. It is not a real CMB fit and does
+    not implement the exact full-sky projected covariance matrix. See the gate in
+    observational_fit_status() and require_exact_projection_gate().
     """
     x = point_on_last_scattering_sphere(direction_a, chi)
     y = point_on_last_scattering_sphere(direction_b, chi)
