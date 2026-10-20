@@ -127,7 +127,7 @@ structure, must determine the physical fluctuations.
 The existing kinetic/potential family admits an exact fixed-background ADM
 Legendre transform when its real kinetic pairing is nondegenerate. A normalized,
 decoupled scalar channel then reduces exactly to the previously derived
-dodecahedral test-field Hamiltonian. The same calculation proves that an
+dodecahedral test-field Hamiltonian. The same calculation establishes that an
 unconstrained indefinite kinetic pairing has a negative-energy momentum
 direction. See `research_tracks/action_selection/canonical_family_hamiltonian_bridge.en.md`
 for hypotheses, equations, proof and remaining Dirac-constraint obligations.
