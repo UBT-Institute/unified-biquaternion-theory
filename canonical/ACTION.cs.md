@@ -174,6 +174,16 @@ nevytvoří nedegenerovaný časoprostor UBT. Viz Tvrzení 8
 Hamiltonovského mostu a tools/verify_theta_timelike_auxiliary_rank.py.
 Úplná variace kompozitní metriky zůstává OTEVŘENÁ.
 
+**Silnější podmíněné no-go pro kompozitní metriku:**
+V Lorentzovsky reálné časové větvi je kontrakce invariantní
+kinetiky s centrální kompozitní metrikou identicky -8*N0.
+Minimální kineticko-potenciálová akce se proto redukuje na
+objemový člen. Variace nezávislých pomocných boostových
+konexí při nedegenerované tetrádě vynutí U(rho)=4*c*N0.
+Nekonstantní kvartický potenciál pak vyžaduje konstantní rho
+a degenerovanou tetrádu. Přesný důkaz je v Tvrzení 9.
+Jde o vyloučení této minimální větve, nikoli celé UBT.
+
 <!-- BILINGUAL-UNIT: single-action.falsification -->
 ## Předem stanovené falzifikační kritérium
 
