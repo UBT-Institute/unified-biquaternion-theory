@@ -14,7 +14,7 @@ for R,target in [(10,0.3207),(100,0.6415),(1000,0.9622)]:
     z=zb_for_ratio(R)
     assert abs(z-target)<5e-4
     recovered=math.exp(8*math.pi**2*z/b0)
-    assert abs(recovered/R)/R < 1e-12
+    assert abs(recovered - R) / R < 1e-12
 
 R=1000.0
 required=12*b0*math.log(R)
