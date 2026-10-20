@@ -120,6 +120,43 @@ Výběr koeficientů a slučitelné nedegenerované časoprostorové pozadí zů
 otevřené. Fyzikální fluktuace musí určit úplná akce včetně její derivační,
 gauge a vazbové struktury.
 
+## Podmíněný most k Hamiltoniánu (nejde o finalizaci)
+
+U dosavadní kineticko-potenciálové rodiny je na předepsaném pozadí
+s nedegenerovaným reálným kinetickým párováním možné přesně provést
+ADM Legendreovu transformaci. Při předpokladu normalizovaného
+neprovázaného skalárního kanálu z ní vychází totožný Hamiltonián
+jako v dřívějším dodekahedrálním testovacím sektoru.
+Úplný důkaz, matematická omezení a kontrolní výpočty jsou v
+research_tracks/action_selection/canonical_family_hamiltonian_bridge.cs.md
+(anglický podrobný protějšek: canonical_family_hamiltonian_bridge.en.md).
+
+### Exaktní překážky výběru kinetického členu
+
+Pro deklarovanou maticovou reprezentaci a Lorentzovo/fázové
+kongruenční působení je jediným reálným kvadratickým invariantem
+až na měřítko H(X)=Tr(X^sharp X^dagger). Na všech osmi reálných
+složkách má signaturu **(2,6)**. V bodě nenulového globálního
+minima X0=irI má čtyřrozměrná normála k orbitě fáze/boostů
+kinetickou signaturu **(1,3)**, ačkoli Hessián potenciálu
+je v normálních směrech kladný. Při pevné nulové konexi
+mají pro c>0 tři normální složky nestabilní exponenciální
+řešení; pro c<0 je nestabilní skalární složka.
+
+Tento výsledek je **podmíněné no-go na pevném pozadí**, nikoli
+důkaz ghostu v plné UBT. Konstantní minimum s nulovou konexí
+má degenerovanou kompozitní tetrádu. Úplné dynamické konexe,
+variace kompozitní metriky a Diracovy vazby mohou změnit
+spektrum fyzikálních módů.
+
+Samotná rodina s konexemi pouze v D_mu Theta navíc
+neobsahuje derivace konexí, tedy ani stromový propagující
+Yangův–Millsův kinetický člen. Rovnice pro takové nezávislé
+konexe jsou algebraické. Případná indukovaná efektivní
+akce musí být skutečně odvozena.
+
+**Status rodiny zůstává DEFINED_FAMILY_NOT_FINALIZED.**
+
 <!-- BILINGUAL-UNIT: single-action.falsification -->
 ## Předem stanovené falzifikační kritérium
 
