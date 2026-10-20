@@ -413,6 +413,102 @@ tools/verify_theta_timelike_auxiliary_rank.py.
 Regresní test:
 tests/test_theta_timelike_auxiliary_rank.py.
 
+## Tvrzení 9 — kompozitní kinetika se přesně redukuje na objem a minimální větev nemá nedegenerované vakuum
+
+V Tvrzení 8 byla metrika předepsána. Nyní uvažujeme **kompozitní
+metriku z původního centrálního antikomutátoru UBT** a její
+řetězovou variaci. Přesně vymezíme minimální podrodinu:
+
+1. Lorentzovsky reálná časová kalibrace \(X=i\rho I\),
+   \(\rho>0\), na souvislé orientované oblasti. Nezávislá
+   konexe \(SL(2,\mathbb C)\) vstupuje pouze přes \(D_\mu X\).
+2. \(E_\mu=N_0^{-1/2}D_\mu X\) a
+   \(\frac12(E_\mu^\sharp E_\nu+E_\nu^\sharp E_\mu)
+   =g_{\mu\nu}I\), \(N_0>0\).
+3. Akce obsahuje **jen** původní Lorentzovsky invariantní
+   kineticko-potenciálovou rodinu, bez křivostních členů,
+   derivací konexe a dalších dynamických členů:
+   \[
+   S_{\rm min}=\int d^4x\sqrt{-g}
+   \left[-\frac c2g^{\mu\nu}B(D_\mu X,D_\nu X)-U(\rho)\right],
+   \]
+   kde \(c\ne0\) a \(U(\rho)\) je nekonstantní již
+   klasifikovaný kvartický potenciál.
+
+**Exaktní identita.** Pro každou nedegenerovanou tetrádu
+v této Lorentzovsky reálné reprezentaci platí
+
+\[
+\boxed{
+B(D_\mu X,D_\nu X)=-2N_0g_{\mu\nu},\qquad
+g^{\mu\nu}B(D_\mu X,D_\nu X)=-8N_0.
+}
+\]
+
+**Důkaz:** Pro \(D_\mu X=i(a_\mu I+\mathbf v_\mu
+\cdot\boldsymbol\sigma)\) dává centrální antikomutátor
+\(g_{\mu\nu}=N_0^{-1}(-a_\mu a_\nu+
+\mathbf v_\mu\cdot\mathbf v_\nu)\), zatímco polarizace
+kvadratického invariantu je
+\(B(D_\mu X,D_\nu X)=2(a_\mu a_\nu-
+\mathbf v_\mu\cdot\mathbf v_\nu)\). Kontrakce
+metrikou je stopa čtyřrozměrné jednotkové matice.
+
+Kinetický člen se tedy **přesně změní na objemový člen**:
+
+\[
+\boxed{
+S_{\rm min}=\int d^4x\sqrt{-g}\,[4cN_0-U(\rho)].
+}
+\]
+
+V časové kalibraci jsou sloupce tetrády
+
+\[
+E_\mu{}^a=N_0^{-1/2}
+(\partial_\mu\rho,\rho b_\mu^1,\rho b_\mu^2,\rho b_\mu^3),
+\quad
+\sqrt{-g}=\frac{\rho^3}{N_0^2}
+|\det[\partial\rho,b^1,b^2,b^3]|.
+\]
+
+**Věta (podmíněné no-go):** V této minimální větvi
+s nekonstantním kvartickým potenciálem
+\(\lambda_1\ge0,\lambda_2>0\) neexistuje hladká
+stacionární konfigurace s nedegenerovanou kompozitní
+tetrádou na souvislé časové oblasti.
+
+**Důkaz:** Dvanáct algebraických variací konexe dává
+
+\[
+(4cN_0-U(\rho))
+\frac{\partial\sqrt{-g}}{\partial b_\mu^j}=0.
+\]
+
+Při invertibilní tetrádě je její kofaktorová matice
+invertibilní, takže musí platit \(U(\rho)=4cN_0\)
+v každém bodě. Protože \(U\) je nekonstantní
+polynom, má tato rovnice konečně mnoho řešení
+pro \(\rho\). Spojitá funkce \(\rho\) na souvislé
+oblasti proto musí být konstantní. Pak
+\(\partial_\mu\rho=0\), první sloupec tetrády
+zmizí a \(\operatorname{rank}E\le3\), což je spor.
+
+**Význam:** Správná variace kompozitní metriky
+tuto přesně vymezenou minimální pomocnou větev
+nezachraňuje. Mění rovnici konexe na kofaktorovou
+podmínku, která vynutí degeneraci tetrády.
+**Nejde o vyvrácení celé UBT:** křivostní členy,
+dynamická torze, derivované konexe, jiná míra,
+vyšší derivace nebo odlišná fyzikální větev
+nejsou zahrnuty. Jejich vznik musí odvodit
+jediná úplná akce, nikoli dodatečný ad hoc člen.
+
+Symbolický verifikátor:
+tools/verify_theta_composite_volume_no_go.py.
+Regresní test:
+tests/test_theta_composite_volume_no_go.py.
+
 ## Zbývající kritické kroky důkazu
 
 1. Finalize the single Theta action's pairing, measure, potential, composite metric and connection variations.
