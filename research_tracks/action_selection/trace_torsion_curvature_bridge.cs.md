@@ -145,6 +145,41 @@ Pro nenulovou radiální větev rovnice připouští pouze izolovanou konstantn�
 \]
 pokud je pravá strana kladná; jinak kladné reálné řešení neexistuje. Na souvislém hladkém řešení se proto rho v kosmickém čase nemůže měnit, pokud platí uvedené předpoklady. Dřívější FLRW tetráda jediného Theta ale potřebuje nenulovou časovou derivaci rho pro nedegenerovanou časovou složku. **Naivní skalárně-Cartanův model s nezávislými proměnnými a tímto kanonickým kvartickým potenciálem tedy nelze beze změny přenést na nedegenerované radiální FLRW řešení Theta.** Jde o *další podmíněnou překážku*, nikoli vyloučení úplné kompozitní variace UBT, jiných kinetických/látkových členů či změněných skalárních vazeb. Musíme variovat skutečnou kompozitní akci, nikoli převzít Einsteinovu skalární rovnici po redukci nezávislých polí.
 
+## Oprava pravidlem řetězové derivace: skutečná rovnice kompozitní UBT
+
+Pro radiální reprezentaci jediného Theta není metrika ani tetráda **nezávislá** na boostové části spinového spojení. Uvažujme nejprve funkcionál s nezávislou tetrádou (S[e,omega,ho]) a dosaďme radiální tetrádu teprve po definici jeho Eulerových derivací:
+\[
+e_\mu{}^0=\frac{\partial_\mu\rho}{\sqrt{\mathcal N_0}},\qquad
+e_\mu{}^i=\frac{\rho\,b_\mu{}^i}{\sqrt{\mathcal N_0}}.
+\]
+Eulerovy hustoty při fixaci dalších nezávislých proměnných označme
+\[
+\mathcal E^\mu{}_a:=\left.\frac{\delta S}{\delta e_\mu{}^a}\right|_{\omega,\rho},
+\quad \mathcal C^\mu{}_i:=\left.\frac{\delta S}{\delta b_\mu{}^i}\right|_{e,\rho},
+\quad \mathcal U_\rho:=\left.\frac{\delta S}{\delta\rho}\right|_{e,\omega}.
+\]
+Přesná funkcionální řetězová derivace, včetně všech změn metriky a míry přes e, dává **skutečnou kompozitní rovnici boostů**:
+\[
+\boxed{
+\frac{\delta S_{\mathrm{comp}}}{\delta b_\mu{}^i}
+=\mathcal C^\mu{}_i+\frac{\rho}{\sqrt{\mathcal N_0}}\mathcal E^\mu{}_i=0.
+}
+\]
+Také skalární rovnice po integraci per partes derivace rho z časové tetrády zní
+\[
+\boxed{
+\frac{\delta S_{\mathrm{comp}}}{\delta\rho}
+=\mathcal U_\rho+
+\frac{b_\mu{}^i}{\sqrt{\mathcal N_0}}\mathcal E^\mu{}_i
+-\frac1{\sqrt{\mathcal N_0}}\partial_\mu\mathcal E^\mu{}_0=0.
+}
+\]
+Výraz (mathcal E^mu{}_a) již obsahuje variaci všech metrických a tetrádových členů výchozí akce; explicitní závislost na (ho) zahrnuje (mathcal U_ho). Obsahuje-li akce derivované členy, jde o **Eulerovy funkcionální derivace** místo obyčejných parciálních, takže identity platí za běžných okrajových podmínek.
+
+**Zásadní oprava předchozího porovnání torze:** Nezávislá Cartanova rovnice (mathcal C^mu{}_i=0) a z ní získaná jednoduchá stopová torze obecně NEJSOU rovnicí po dosazení kompozitní tetrády. Přesná rovnice boostů obsahuje člen (homathcal E^mu{}_i/sqrt{mathcal N_0}). Dřívější vztah (a^2F=C^2V^2) je tedy nutnou podmínkou **jen v modelu s nezávislými proměnnými (nebo ve větvi, kde odpovídající tetrádové Eulerovy členy nezávisle mizí)**. Zatím není dokázán jako nutná podmínka úplné akce UBT s jediným Theta. Dynamický rank a Hamiltonián vyžadují řešení spojených kompozitních rovnic pro Theta a spojení včetně jejich vazeb, nikoli převzetí nezávislých Palatiniho rovnic.
+
+Přesná funkcionální identita se kontroluje v `tools/verify_composite_spin_chain_rule.py` a `tests/test_composite_spin_chain_rule.py`. Jde o strukturální matematiku, nikoli o úplné řešení rovnic pole.
+
 ## Kritéria rozhodnutí a vazba na UBT
 
 Tento skalárně-křivostní model NEODVOZUJE funkci F z bikvaternionové akce, celkovou gravitační konstantu, fyzikální spinový proud ani Diracovu algebru UBT. V konformní Einsteinově reprezentaci bez potenciálu a látky samotná vakuová Einsteinova rovnice nepřipouští expandující uzavřený sférický FLRW vesmír. K pokusu o řešení rovnic je nezbytný konkrétní potenciál nebo látkový sektor. Musíme znovu uložit e=DTheta/sqrt(N0) a **nejprve variovat úplnou kompozitní akci, teprve potom volit kalibraci**. Bodový rank z PR #686 neznamená vyřešenou lokální Hamiltonovu vazbu.
