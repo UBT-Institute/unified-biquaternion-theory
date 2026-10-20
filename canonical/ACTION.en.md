@@ -212,6 +212,17 @@ emergent UBT spacetime. See Proposition 8 of the Hamiltonian bridge
 and tools/verify_theta_timelike_auxiliary_rank.py. Full composite-metric
 variation may evade the restricted no-go and remains OPEN.
 
+**Composite-metric result (stronger restricted no-go):** On the
+Lorentz-real timelike branch with the central metric constructed from
+the same covariant Theta derivative, the invariant kinetic contraction
+is identically -8*N0. The minimal kinetic/potential action therefore
+collapses to a volume term. Varying independent auxiliary boost
+connections forces U(rho)=4*c*N0 at any nondegenerate tetrad;
+for the nonconstant classified quartic this makes rho constant and
+the tetrad degenerate. Proposition 9 proves this exactly for the
+specified branch. It excludes that minimal completion, **not**
+curvature-dependent or other dynamically justified single-Theta actions.
+
 <!-- BILINGUAL-UNIT: single-action.falsification -->
 ## Precommitted falsification criterion
 
