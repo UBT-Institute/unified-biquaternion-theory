@@ -147,6 +147,33 @@ coefficient calibrated from observation is not such a prediction. The first
 accepted prediction must state its numerical value, uncertainty, experimental
 observable, and all inputs before comparison with data.
 
+<!-- BILINGUAL-UNIT: single-action.causal-test -->
+## Einstein-style causal-consistency audit (no new action)
+
+The measured light speed \`c_light\` is an **empirical consistency
+constraint**, not a new microscopic variational or selection principle.
+The final, gauge-reduced UBT equations must have a well-posed causal
+initial-value problem compatible with the observed light cone. Any
+additional cones must follow from the **same** action and be tested
+against observation. Positivity of the physical Hamiltonian and
+linearized stability are **separate** requirements.
+
+An exact fixed-background result for the already studied invariant
+eight-real-component kinetic family is
+
+\[
+\det P=256\kappa^8
+\left(|\mathbf k|^2-\omega^2/c_{\rm light}^2\right)^8.
+\]
+
+Thus that **unconstrained conditional family** has one characteristic
+cone despite its indefinite internal kinetic signature \((2,6)\).
+Neither this determinant nor holomorphy in \(\tau=t+i\psi\)
+establishes physical ghost freedom or the causal cones of the
+full composite UBT action. See
+[Einstein causal principle](../research_tracks/causality/einstein_causal_principle.en.md)
+and the exact checker \`tools/verify_ubt_causal_cone.py\`.
+
 <!-- BILINGUAL-UNIT: single-action.priority -->
 ## Programme priority and scope freeze
 
