@@ -122,6 +122,29 @@ If F0, xi, N0, C and V are positive, differentiation gives
 
 This strictly negative acceleration means that this **minimal positive quadratic curvature coupling** cannot support late-time positive cosmic acceleration on this branch by itself, even before the remaining Einstein and scalar equations are imposed. With F0 equal to zero the scale factor is constant. Other signs or functions can evade the result on limited positive-F domains, but tuning F to any desired a would not count as a prediction.
 
+## Additional decisive test: the existing radial quartic potential
+
+We can go beyond comparing scale factors. In the independent-metric/connection comparator, let the **same existing UBT classified radial quartic** and simplest curvature coupling take the forms
+\[
+F(\rho)=F_0+\xi\rho^2,\quad
+U(\rho)=U_c+\lambda(\rho^2-r^2)^2,
+\qquad F_0>0,\ \lambda>0,\ \xi\ge0,\ \rho>0.
+\]
+The Einstein-frame scalar variation of the *full candidate* including a potential is algebraic, not a propagating scalar wave equation. Its numerator factors **exactly** as
+\[
+\boxed{
+F U'-2UF'
+=4\rho\left[\lambda(\rho^2-r^2)(F_0+\xi r^2)-\xi U_c\right].
+}
+\]
+For the nontrivial radial branch, the equation is solved only at an isolated constant value
+\[
+\boxed{
+\rho^2=r^2+\frac{\xi U_c}{\lambda(F_0+\xi r^2)}
+}
+\]
+when the right side is positive; otherwise no real positive solution exists. On any connected smooth solution, rho therefore cannot vary with cosmic time under these hypotheses. But the earlier single-Theta FLRW coframe needs nonzero time derivative of rho to produce a nondegenerate temporal leg. **Consequently the naive independent-variable scalar–Cartan model with this canonical quartic cannot simply be transported unchanged to the nondegenerate radial-Theta FLRW solution.** This is an *additional conditional obstruction*, not a theorem excluding a fully composite UBT variation, other kinetic or matter terms, or modified scalar couplings. It is essential to vary the actual composite action rather than borrow the Einstein-frame equation after independent-field reduction.
+
 ## Falsification gates and connection to existing UBT
 
 The scalar-curvature comparison does NOT derive the function F from the biquaternion invariant action, the absolute gravitational coupling, the physical trace spin-current, or the UBT Dirac algebra. In the independent-variable Einstein frame with no scalar potential or matter, ordinary vacuum Einstein equations give no expanding closed spherical FLRW solution, so the curvature-only comparator is not a completed cosmology. A specified potential or matter sector is essential to attempt an on-shell solution. Re-impose e=DTheta/sqrt(N0) and **vary the complete composite action before selecting a gauge**. The rank-ten off-shell certificate of PR #686 does not supply the constrained Einstein lapse equation.
