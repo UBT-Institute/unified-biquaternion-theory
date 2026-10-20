@@ -129,3 +129,31 @@ e0). Máme tedy skutečné řešení omezeného Einsteinova–Hilbertova variač
 Pro získání běžných vakuových Einsteinových rovnic z takto omezené variace musí úplná fundamentální dynamika nezávisle vynutit zbylou normální projekci nebo ekvivalentní počáteční podmínku (lambda=0). Při (mathcal J=0) rovnice kontinuity zachovává počáteční (lambda=0) podél regulárního normálového toku, ale sama ji nevybírá. Úplná UBT může díky variaci dalších kompozitních konexí, vazeb reality, torze a sektorů tento závěr změnit; plná Diracova algebra zde odvozena není.
 
 **Konkrétní priorita:** odvodit *normální Einsteinovu vazbu* z úplné, předem nefixované akce Theta dříve, než budeme tvrdit, že pouhé přidání Einsteinova–Hilbertova členu stačí k reprodukci GR. Je to nový explicitní diagnostický test dosavadní gravitační větve, nikoli druhá fundamentální akce.
+
+## 5. Kanonický význam: chybějící Hamiltonova vazba
+
+V kalibraci hodin \(\rho=\sqrt{N_0}t\) identita ze sekce 1 fixuje ADM lapse na \(N=1\). Nezávislý prostorový boostový kofrám stále parametrizuje prostorovou metriku a shift. Pro diagnostický EH funkcionál mají obvyklý ADM Hamiltonián a hybnostní vazby tvar:
+
+\[
+\pi^{ij}=\frac{M^2\sqrt h}{2}(K^{ij}-Kh^{ij}),\qquad
+\mathcal H_\perp=
+\frac{2}{M^2\sqrt h}
+\left(\pi^{ij}\pi_{ij}-\frac{\pi^2}{2}\right)
+-\frac{M^2\sqrt h}{2}\,{}^{(3)}R,\qquad
+\mathcal H_i=-2D_j\pi^j{}_i.
+\]
+
+Běžné Einsteinovy rovnice z nezávislé metriky obsahují variaci lapse \(\delta_N S=0\), která ukládá \(\mathcal H_\perp=0\). Pokud je však \(N\) fixováno **přímo uvnitř akce před variací** kvůli kompozitní parametrizaci jednotkových hodin, tato podmínka mezi nezávislými Eulerovými–Lagrangeovými rovnicemi chybí. Zbytek reprezentuje dřívější proud \(\lambda\); pro explicitní prachovou metriku je nenulový:
+
+\[
+S_{\rm ADM}=\int dt\,d^3x
+\big(\pi^{ij}\dot h_{ij}-N\mathcal H_\perp-N^i\mathcal H_i\big).
+\]
+
+\[
+N=1,\qquad
+\mathcal H_\perp=2\sqrt h\,\lambda,\qquad
+\mathcal H_\perp\big|_{a=t^{2/3}}=-\frac{4M^2}{3}\ne0.
+\]
+
+Jde o exaktní ADM přeformulování projekčního lemmatu, nikoli o novou Diracovu algebru ani o tvrzení, že volba souřadnic *po* odvození všech vazeb ztrácí rovnice. Rozdíl mezi omezením akce a kalibrací již odvozené vázané teorie je zásadní. Úplná UBT musí ukázat, zda ostatní proměnné nebo sekundární Diracovy vazby skutečně vytvářejí chybějící normální rovnici.
