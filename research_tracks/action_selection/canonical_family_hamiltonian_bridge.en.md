@@ -195,6 +195,55 @@ checker was executed independently with SymPy 1.14 and its focused
 pytest passed (1 test). Full repository CI and the Dirac algebra have
 **not** been checked by that local execution.
 
+## Proposition 6 — the bare kinetic/potential family contains no propagating Yang--Mills connection (tree-level)
+
+Treat a connection \(C_\mu^a\) as an independent field entering only the
+covariant derivative \(D_\mu X=\partial_\mu X+C_\mu^aT_aX\),
+in the linear representation defined above, with **no** curvature
+\(F_{\mu\nu}F^{\mu\nu}\) or other connection-derivative term in the
+family action. On a prescribed metric the infinitesimal connection variation
+is exact:
+
+\[
+\delta_{C} S
+=c\int d^4x\,\sqrt{-g}\,g^{\mu\nu}
+B(T_aX,D_\nu X)\,\delta C_\mu^a,
+\]
+
+where \(B(U,V)\) is the polarization of the invariant quadratic form
+\(H\). Therefore
+
+\[
+\frac{\delta S}{\delta C_\mu^a}
+=c\sqrt{-g}\,g^{\mu\nu}B(T_aX,D_\nu X)=0,
+\qquad
+P^\mu_{C_a}=\frac{\partial\mathcal L}
+{\partial(\partial_t C_\mu^a)}=0.
+\]
+
+These are **algebraic connection equations** and vanishing primary
+connection momenta. No Yang--Mills hyperbolic wave equation for
+\(C_\mu^a\) follows from this bare classical action. The same absence
+of \(\partial C\) persists for a metric built *algebraically*
+from \(D_\mu X\), provided no curvature/differentiated metric terms
+are added. Such a composite metric does change the algebraic current
+by the chain rule; the displayed fixed-metric current is **not**
+its full equation of motion.
+
+This is a restricted **tree-level structural no-go** for this
+minimal family, not for quantum induced gauge kinetics, an explicitly
+curvature-dependent single action, or a connection that is a derivative
+composite of another dynamical field. Deriving a finite, positive
+Yang--Mills coefficient by a constrained one-loop effective action
+would constitute an additional physical result and cannot be presumed.
+
+In particular, allowing independent \(C_0^a\) variations can impose
+constraints on \(X\) that were absent in the prescribed-connection
+Legendre transform of Proposition 1. The full Dirac analysis must
+include these algebraic constraints and their Poisson closure *before*
+interpreting any fixed-connection negative normal modes as
+physical instabilities of UBT.
+
 ## Remaining theorem-critical work
 
 1. Finalize the single Theta action's pairing, measure, potential, composite metric and connection variations.
