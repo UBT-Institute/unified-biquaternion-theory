@@ -77,6 +77,23 @@ Vzorec předpokládá nepřítomnost explicitního skalárního zdroje v metrick
 
 **Omezení tvrzení:** věta neurčuje úplnou akci UBT ani nevylučuje další fyzikální sektory, komplexní/nehermitovské konfigurace, skutečně nezávislou rovnici spinového spojení, jiné invariantní zadání metriky či odvozenou podmínku vynucující chybějící normálovou rovnici. Nedokazuje ani prachové řešení pro každou myslitelnou mikroskopickou akci. Ukazuje pouze, že *tento konkrétní způsob odstranění překážky* nefunguje již na geometrické úrovni.
 
+## Proč samotný skalární potenciál neobnoví chybějící normálovou vazbu
+
+V omezeném metricko-skalárním modelu z mergnutého PR #684 má reziduální normálová rovnice s explicitním zdrojem (mathcal J) podobu kontinuity pro budoucí směr hodinového proudu:
+\[
+u^\mu=-g^{\mu\nu}\partial_\nu r/q,\quad u^\mu u_\mu=-1,
+\qquad \nabla_\mu(\lambda u^\mu)=-\frac q2\mathcal J.
+\]
+V homogenním FLRW se libovolný předem určený hladký zdroj (mathcal J(t)), například z nederivačního potenciálu invariantních hodin, přesně integruje na
+\[
+\boxed{
+\lambda(t)=\frac{a(t_i)^3\lambda(t_i)
+-\frac q2\int_{t_i}^{t}a(s)^3\mathcal J(s)\,ds}
+{a(t)^3}.
+}
+\]
+Volně volitelná počáteční hodnota (lambda(t_i)) **zůstává**. Pouhé zvolení algebraického potenciálu tedy v této větvi nevytvoří z chybějící normálové Einsteinovy vazby nezávislou algebraickou rovnici. Potřebujeme další dynamické rovnice nebo výslovně zdůvodněnou počáteční podmínku. Výrok předpokládá stejnou projektovanou čistě metrickou variaci a nevylučuje obecné nemetrické vazby UBT.
+
 ## Ověření a další rozhodující výzkumný krok
 
 Přesná maticová a Pauliho algebra, Minkowského kontrakce, konkrétní regulární neradiální tetráda i explicitní radiální transformace SL(2,C) jsou ověřeny v `tools/verify_timelike_orbit_clock.py` a specializovaném CI. Jde o kinematické kontroly, nikoli důkaz dynamického GR, absence ghostů, CMB či výběru topologie.
