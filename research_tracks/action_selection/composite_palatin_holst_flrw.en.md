@@ -141,6 +141,18 @@ With an **imported** positive cosmological constant but no Holst, the reduced eq
 a(V)=\frac{V}{\sqrt{\Lambda V^2-1}}.
 \]
 
+The clock Euler equation is independently accounted for, not forgotten. In the parity-even branch reparameterization invariance gives the exact Noether identity
+\[
+F(a,V)=a+\frac{a^3}{3V^2}-\frac{\Lambda a^3}{3},\quad
+L_{\alpha=0}/\mathscr C=\dot V\,F(a,V),\quad
+\boxed{
+\mathcal E_V=\dot V\partial_VF-\frac{dF}{dt}
+=-\dot a\,\partial_aF,\qquad
+\mathcal E_a=\dot V\,\partial_aF.
+}
+\]
+Therefore every regular branch satisfying the scale equation also satisfies the clock equation. In particular the stated positive-cosmological-constant algebraic branch is stationary under **both** reduced variations, yet need not obey the independent Einstein normal constraint. This makes the counterexample genuinely dynamical within the restricted ansatz rather than a solution of one arbitrarily selected equation.
+
 This does not generically satisfy the independent-metric Einstein lapse constraint. At a specific unit choice one gets the exact residual
 
 \[
