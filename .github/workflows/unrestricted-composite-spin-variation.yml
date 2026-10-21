@@ -5,6 +5,8 @@ on:
       - 'research_tracks/action_selection/unrestricted_composite_spin_variation.*.md'
       - 'tools/verify_unrestricted_composite_spin_variation.py'
       - 'tests/test_unrestricted_composite_spin_variation.py'
+      - 'tools/verify_palatin_holst_parent_euler.py'
+      - 'tests/test_palatin_holst_parent_euler.py'
       - '.github/workflows/unrestricted-composite-spin-variation.yml'
   workflow_dispatch:
 
@@ -23,5 +25,7 @@ jobs:
         run: python -m pip install sympy pytest
       - name: Verify unrestricted spin and scalar chain-rule identities
         run: python tools/verify_unrestricted_composite_spin_variation.py
+      - name: Independently vary Palatini and Holst exterior four-forms
+        run: python tools/verify_palatin_holst_parent_euler.py
       - name: Focused pytest
-        run: python -m pytest -q tests/test_unrestricted_composite_spin_variation.py
+        run: python -m pytest -q tests/test_unrestricted_composite_spin_variation.py tests/test_palatin_holst_parent_euler.py
