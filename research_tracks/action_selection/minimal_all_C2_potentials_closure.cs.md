@@ -116,6 +116,19 @@ SXS^\dagger=rI.
 
 Jelikož původní minimální akce a U jsou Lorentzovsky invariantní a spinové spojení se transformuje odpovídajícím způsobem, platí stejné dilema v celé lokální kladně hermitovské časupodobné orbitě. **Nevztahuje se** na obecné nehermitovské komplexní Theta, samostatnou spinovou křivost, jinou mikroskopickou míru nebo odvozenou akci vyššího řádu.
 
+## Nezávislá překážka: deklarované symetrie nevybírají jedinou akci
+
+Již před řešením pohybových rovnic připouštějí původní Lorentzova kongruenční a fázová U(1) symetrie nezávislé skalární invarianty bez derivací. Vezměme existující kvadratický invariant H a determinant. Na dvou explicitních hodnotách pole máme
+\[
+X_1=I_2,\quad X_2=I_2+i\sigma_1,\qquad
+(H(X_1)^2,|\det X_1|^2)=(4,1),\quad
+(H(X_2)^2,|\det X_2|^2)=(0,4).
+\]
+\[
+\boxed{\det\begin{pmatrix}4&1\\0&4\end{pmatrix}=16\ne0.}
+\]
+Jejich vyhodnocovací matice má nenulový determinant; tedy H² a |det X|² jsou lineárně nezávislé funkce celého osmireálného prostoru polí. Každá zvlášť respektuje **stejné deklarované symetrie**. Pouhý argument těmito symetriemi proto nemůže určit jejich relativní koeficienty, vybrat dynamické vakuum ani odvodit chybějící koeficient křivosti. Problém výběru akce je **skutečná matematická neurčenost**, nikoli administrativní nedodělek. Dynamický výběrový princip by musel být nezávisle odvozen, jinak je nutné přiznat, že teorie není určena; přidávat členy jen kvůli shodě s GR je dodatečný modelový vstup.
+
 ## Co je uzavřené a co není
 
 **Negativně uzavřeno:** celá původní kineticko-potenciálová minimální akce s libovolným C2 potenciálem, nezávislým algebraickým Lorentzovým spojením a centrální kompozitní metrikou nemůže ve stanovené časupodobné větvi dodat regulární **prediktivní gravitační dynamiku**. Chytřejší skalární, pseudoskalární, vektorový, bivektorový nebo tenzorový *algebraický* potenciál nezruší objemový kolaps, pokud se jeho invariantní kontrakce redukuje na místní radiální U. Může změnit interakce komplexních příčných složek, ale neobnoví nenulový lokální gravitační Hessův operátor v této větvi.
