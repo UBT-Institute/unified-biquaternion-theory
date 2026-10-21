@@ -90,8 +90,13 @@ theorem upper_corner_negative (u a b : ℝ) (hu : 0 < u)
   have ha0 : 0 < a := by linarith
   have hb0 : 0 < b := by linarith
   have hp : 81 / 100 * u ^ 2 < a * b := by
-    have h := mul_lt_mul ha hb (by positivity : 0 < (9 / 10 : ℝ) * u)
-      (le_of_lt ha0)
+    have h : ((9 / 10 : ℝ) * u) ^ 2 < a * b := by
+      calc
+        ((9 / 10 : ℝ) * u) ^ 2 =
+            ((9 / 10 : ℝ) * u) * ((9 / 10 : ℝ) * u) := by ring
+        _ < a * ((9 / 10 : ℝ) * u) :=
+          mul_lt_mul_of_pos_right ha (by positivity)
+        _ ≤ a * b := mul_le_mul_of_nonneg_left (le_of_lt hb) (le_of_lt ha0)
     nlinarith
   have hq : a * b ≤ u ^ 2 := by
     have h := mul_le_mul hau hbu (le_of_lt hb0) (le_of_lt hu)
