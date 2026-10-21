@@ -10,7 +10,7 @@ INDEPENDENTLY; DO NOT set C=-1 before varying.
 
 We use the explicitly defined normalized Palatini + Holst comparator,
 not an action derived from the one fundamental UBT Theta family:
-L/(constant) = (epsilon e e R)/12 + alpha*(e_lower e_lower R_upper)/18
+L/(constant) = (epsilon e e R)/12 + alpha*(e_lower e_lower R_upper)/3
                - Lambda*N*a**3/3.
 The associated normalized cosmological EH sector gives
 L_EH= -a*a_dot**2/N+N*a-(Lambda/3)*N*a**3
@@ -110,7 +110,7 @@ def verify():
     checks["Palatini_fourform_exact"]=(
         simp(EC-12*aa*(nn*(bb**2-cc**2-2*cc)+aa*s.diff(bb,t)))==0)
     checks["Holst_fourform_exact"]=(
-        simp(Holst-18*aa*(2*nn*bb*(cc+1)+aa*s.diff(cc,t)))==0)
+        simp(Holst-3*aa*(2*nn*bb*(cc+1)+aa*s.diff(cc,t)))==0)
     # Independent zero torsion reduction reproduces standard EH/GHY
     eh_on=s.simplify((EC/12).subs({bb:s.diff(aa,t)/nn,cc:-1}))
     eh_expected=-aa*s.diff(aa,t)**2/nn+nn*aa
@@ -125,7 +125,7 @@ def verify():
     lam,alpha=s.symbols("Lambda alpha",real=True)
     B=aa/V
     C=cc
-    L=simp((EC/12+alpha*Holst/18-lam*nn*aa**3/3).subs({
+    L=simp((EC/12+alpha*Holst/3-lam*nn*aa**3/3).subs({
         bb:B,nn:N,s.diff(bb,t):s.diff(B,t)}))
     w=C+1
     Leff=N*(aa+aa**3/(3*V**2)-lam*aa**3/3-aa*w**2
