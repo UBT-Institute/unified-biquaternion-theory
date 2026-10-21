@@ -1,0 +1,26 @@
+name: Closed clock Hamiltonian
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/action_selection/closed_clock_hamiltonian.*.md'
+      - 'tools/verify_closed_clock_hamiltonian.py'
+      - 'tests/test_closed_clock_hamiltonian.py'
+      - '.github/workflows/closed-clock-hamiltonian.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-minisuperspace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install sympy pytest
+      - name: Verify clock constraint, first integral and de Sitter Einstein solution
+        run: python tools/verify_closed_clock_hamiltonian.py
+      - name: Focused Hamiltonian regression
+        run: python -m pytest -q tests/test_closed_clock_hamiltonian.py
