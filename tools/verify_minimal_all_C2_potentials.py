@@ -126,5 +126,5 @@ if __name__=="__main__":
     tests=verify()
     for name,ok in tests.items():
         print(("PASS " if ok else "FAIL ")+name)
-    print(f"Passed {sum(tests.values())}/{len(tests)} exact tests")
+    print(f"Passed {sum(bool(x) for x in tests.values())}/{len(tests)} exact tests")
     if not all(tests.values()):raise SystemExit(1)
