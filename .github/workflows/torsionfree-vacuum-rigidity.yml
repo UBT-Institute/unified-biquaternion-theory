@@ -1,0 +1,27 @@
+name: Torsionfree vacuum rigidity
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/action_selection/torsionfree_vacuum_rigidity.*.md'
+      - 'tools/verify_torsionfree_vacuum_rigidity.py'
+      - 'tests/test_torsionfree_vacuum_rigidity.py'
+      - '.github/workflows/torsionfree-vacuum-rigidity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  vacuum-rigidity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact arithmetic dependencies
+        run: python -m pip install sympy pytest
+      - name: Verify vacuum curvature rigidity and TT exclusion
+        run: python tools/verify_torsionfree_vacuum_rigidity.py
+      - name: Run focused exact regression
+        run: python -m pytest -q tests/test_torsionfree_vacuum_rigidity.py
