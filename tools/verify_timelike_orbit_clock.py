@@ -71,6 +71,25 @@ def verify_timelike_orbit_clock():
     results["radialization_positive_X_to_rI"]=(
         sp.simplify(S*diagX*S.conjugate().T-r*sp.eye(2))==sp.zeros(2)
     )
+
+    # Even an arbitrary explicitly given scalar source leaves one free
+    # initial datum for the normal Einstein residual on homogeneous FLRW.
+    # Use future-directed u=-g^-1(dr)/q, with u^0=+1, and the
+    # known projection equation div(lambda*u)=-q*J/2.
+    t,tzero=sp.symbols("t tzero",real=True)
+    a=sp.Function("a")(t)
+    z=sp.symbols("z",real=True)
+    J=sp.Function("J")
+    constant=sp.symbols("lambda_initial_integral",real=True)
+    q=sp.symbols("q",positive=True)
+    integral=sp.Integral(
+        sp.Function("a")(z)**3*J(z),(z,tzero,t)
+    )
+    lambda_sol=(constant-q*integral/2)/a**3
+    results["potential_source_retains_free_normal_initial_value"]=(
+        sp.simplify(sp.diff(a**3*lambda_sol,t)
+          +q*a**3*J(t)/2)==0
+    )
     return results
 
 
