@@ -66,7 +66,7 @@ dt\wedge\upsilon^1\wedge\upsilon^2\wedge\upsilon^3.
 \]
 
 \[
-\frac1{18}\sum_{a<b}e_a\wedge e_b\wedge R^{ab}
+\frac13\sum_{a<b}e_a\wedge e_b\wedge R^{ab}
 =a\big[2NB(C+1)+a\dot C\big]\,
 dt\wedge\upsilon^1\wedge\upsilon^2\wedge\upsilon^3.
 \]
