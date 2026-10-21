@@ -1,0 +1,26 @@
+name: Fourier composite metric rank
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/action_selection/fourier_composite_metric_rank.*.md'
+      - 'tools/verify_fourier_composite_metric_rank.py'
+      - 'tests/test_fourier_composite_metric_rank.py'
+      - '.github/workflows/fourier-composite-metric-rank.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-fourier-rank:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install sympy pytest
+      - name: Verify Fourier symbol ranks and explicit inverse
+        run: python tools/verify_fourier_composite_metric_rank.py
+      - name: Focused regression
+        run: python -m pytest -q tests/test_fourier_composite_metric_rank.py
