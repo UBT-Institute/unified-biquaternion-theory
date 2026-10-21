@@ -118,6 +118,47 @@ q^{-1}(X_b\mathcal E_a-X_a\mathcal E_b)=0,\quad
 
 Položit D P rovno nule, jako by tetráda byla nezávislá, by znamenalo vynechat nezbytný zdroj. Naopak uložení všech rodičovských metrických Eulerových rovnic rovno nule by znamenalo silnější podmínky, než vyžaduje vlastní kompozitní teorie. Neomezené rovnice jsou nezbytným předpokladem, než můžeme prohlásit zakřivené homogenní pozadí z mergnutého PR #693 za řešení úplných rovnic pole.
 
+## Zcela explicitní rodičovské rovnice křivosti (bez FLRW)
+
+Mimo abstraktní řetězové pravidlo můžeme Palatiniho–Holstovy Eulerovy formy vypočítat bez výběru prostorčasové symetrie. Antisymetrické dvojice spinových indexů sčítáme pouze jednou a definujeme
+\[
+P_{ab}=c_{\rm EC}\epsilon_{abcd}e^c\wedge e^d
++c_{\rm H}e_a\wedge e_b,\qquad
+S_{\rm parent}=\sum_{a<b}\int_M P_{ab}\wedge R^{ab}
+-\Lambda\int_M\mathrm{vol}(e).
+\]
+Přímá **nezávislá variace tetrády** dává křivostní tříformu
+\[
+\boxed{
+\mathcal E_a=
+2c_{\rm EC}\sum_{b<c}\epsilon_{bcad}\,
+e^d\wedge R^{bc}
++c_{\rm H}\sum_{b<c}(\eta_{ba}e_c-\eta_{ca}e_b)
+\wedge R^{bc}
+-\frac{\Lambda}{3!}\epsilon_{abcd}
+e^b\wedge e^c\wedge e^d.
+}
+\]
+zatímco nezávislá variace spinové křivosti, při (D_omega e^a=T^a), dává Cartanovu tříformu
+\[
+\boxed{
+\mathcal C_{ab}=D_\omega P_{ab}
+=2c_{\rm EC}\epsilon_{abcd}\,T^c\wedge e^d
++c_{\rm H}(T_a\wedge e_b-e_a\wedge T_b).
+}
+\]
+Výsledná **skutečně kompozitní** Eulerova rovnice spojení tedy je
+\[
+\boxed{
+2c_{\rm EC}\epsilon_{abcd}T^c\wedge e^d+
+c_{\rm H}(T_a\wedge e_b-e_a\wedge T_b)+
+q^{-1}(X_b\mathcal E_a-X_a\mathcal E_b)=0.
+}
+\]
+Tetrádová Eulerova forma vstupuje do rovnice samotného pole i prostřednictvím (-q^{-1}D_omegamathcal E_a). Dokonce bez přímého látkového spinového proudu obecně **nedostáváme** Cartanovu podmínku nulové torze. Naopak spojené rovnice automaticky nevyžadují rodičovskou (mathcal E_a=0); právě normálová časová složka zůstává zásadní Hamiltonovou otázkou. Paritně lichý koeficient (c_{m H}) musí být zdůvodněn deklarovanými symetriemi.
+
+Samostatný skript vnější algebry přímo vyčísluje variaci původní čtyřformy na obecných regulárních zkušebních tetrádách se symbolickými vazbami a kontroluje **všechny komponenty tetrády**. Odděleně ověřuje kovariantní torzní derivaci (P_{ab}) pro každou dvojici spinových bivektorů. Jde o kontrolu polynomiální identity na konkrétních rámcích, nikoli důkaz existence úplného nedegenerovaného řešení.
+
 ## Hranice výsledku a další krok
 
 Výsledek je přesný na hladké regulární Lorentzovsky reálné oblasti. **Neodvozuje** jedinečnou akci UBT, Holstův koeficient, stabilní fyzikální tenzorové módy, úplné vazby GR ani předpověď CMB. Následuje výpočet rodičovských křivostních Eulerových forem v obecné tetrádě a linearizace **jejich spojených kompozitních rovnic**, bez předčasného uložení homogenity.
