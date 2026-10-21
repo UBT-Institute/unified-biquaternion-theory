@@ -24,10 +24,10 @@ e_\mu{}^a=q^{-1}D_\mu X^a,\qquad q=\sqrt{\mathcal N_0}>0,\qquad
 X^aX_a<0,\qquad T^a=de^a+\omega^a{}_b\wedge e^b=0.
 \]
 
-The tetrad postulate then identifies X with a spacetime vector whose covariant gradient is the identity. Commuting derivatives yields
+The tetrad postulate then identifies X with a spacetime vector whose normalized vector X/q has the identity as its covariant gradient. Commuting derivatives yields
 
 \[
-\nabla_\mu X^\nu=\delta_\mu{}^\nu,\qquad
+\nabla_\mu(X^\nu/q)=\delta_\mu{}^\nu,\qquad
 \boxed{R^\rho{}_{\sigma\mu\nu}X^\sigma=0.}
 \]
 

@@ -24,10 +24,10 @@ e_\mu{}^a=q^{-1}D_\mu X^a,\qquad q=\sqrt{\mathcal N_0}>0,\qquad
 X^aX_a<0,\qquad T^a=de^a+\omega^a{}_b\wedge e^b=0.
 \]
 
-Z tetrádového postulátu potom plyne, že prostoročasová kovariantní derivace X je jednotková matice. Komutátor derivací dává
+Z tetrádového postulátu potom plyne, že kovariantní derivace normalizovaného vektoru X/q je jednotková matice. Komutátor derivací dává
 
 \[
-\nabla_\mu X^\nu=\delta_\mu{}^\nu,\qquad
+\nabla_\mu(X^\nu/q)=\delta_\mu{}^\nu,\qquad
 \boxed{R^\rho{}_{\sigma\mu\nu}X^\sigma=0.}
 \]
 
