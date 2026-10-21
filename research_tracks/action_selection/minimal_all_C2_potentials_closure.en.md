@@ -116,6 +116,19 @@ SXS^\dagger=rI.
 
 Since the original minimal action and U are Lorentz invariant and the spin connection transforms accordingly, the dichotomy holds on the whole local positive-Hermitian timelike orbit under these stated premises. It does **not** cover generic non-Hermitian complex Theta, nonzero independent curvature terms, a different microscopic measure or a derived higher-derivative action.
 
+## Independent obstruction: declared symmetries do not uniquely select an action
+
+Even before testing equations of motion, the original Lorentz-congruence and U(1)-phase symmetries leave independent derivative-free scalar invariants. Take the existing quadratic invariant H and the determinant. At two explicit field values,
+\[
+X_1=I_2,\quad X_2=I_2+i\sigma_1,\qquad
+(H(X_1)^2,|\det X_1|^2)=(4,1),\quad
+(H(X_2)^2,|\det X_2|^2)=(0,4).
+\]
+\[
+\boxed{\det\begin{pmatrix}4&1\\0&4\end{pmatrix}=16\ne0.}
+\]
+Their evaluation matrix has nonzero determinant; hence H² and |det X|² are linearly independent as functions on the full eight-real field space. Each separately respects the **same declared symmetries**. No symmetry argument using only those premises can fix their relative coefficients, choose an on-shell vacuum, or derive the missing curvature coefficient. Therefore the action-selection gap is a **real mathematical underdetermination**, not a bookkeeping issue. A dynamical selection principle must be independently derived or the theory must be acknowledged as underdetermined; selecting terms solely to fit GR is additional model input.
+
 ## What this closes and what it does not
 
 **Closed negatively:** the entire original bare kinetic-plus-arbitrary-C2-potential completion with independent algebraic Lorentz connection and central composite metric cannot give a nondegenerate **predictive timelike gravitational sector**. Choosing a cleverer scalar, pseudoscalar, vector, bivector, or tensor *algebraic* potential does not evade the volume-collapse mechanism if after invariant contraction it is just a local radial U. Such a change can alter complex transverse interactions but not restore a nontrivial restricted local gravitational Hessian.
