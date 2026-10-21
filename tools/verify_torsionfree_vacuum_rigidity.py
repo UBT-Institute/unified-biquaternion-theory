@@ -2,7 +2,7 @@
 """Conditional torsion-free vacuum rigidity for a timelike single-Theta coframe.
 
 If e^a=D_omega X^a/q, omega is torsion-free and X is nonzero timelike,
-the tetrad postulate yields nabla_mu X^nu=delta_mu^nu. Therefore
+the tetrad postulate yields nabla_mu (X^nu/q)=delta_mu^nu. Therefore
 R^rho_(sigma mu nu) X^sigma=0. In the local rest frame of X all
 R_(ab c0) components vanish. Remaining curvature is a symmetric
 3x3 spatial-bivector block (six components); Ricci=0 forces this block
