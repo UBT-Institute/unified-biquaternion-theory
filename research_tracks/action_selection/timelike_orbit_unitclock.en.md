@@ -77,6 +77,23 @@ Here the formula assumes no explicit scalar source in the metric functional and 
 
 **Boundary of the claim:** this theorem neither determines the full UBT action nor rules out additional physical sectors, complex/non-Hermitian configurations, a genuinely independent connection field equation, a different invariant metric prescription, or a derived mechanism that imposes the missing normal equation. It does not independently prove the existence of a nonzero-dust solution for every possible microscopic action. It only shows that *this particular attempt to escape the known clock obstruction* fails at the geometric level.
 
+## Why a scalar potential alone cannot restore the missing normal constraint
+
+In the restricted metric-scalar parent functional of merged PR #684, the residual normal equation with explicit scalar source (mathcal J) is the first-order continuity equation for a future-directed clock congruence:
+\[
+u^\mu=-g^{\mu\nu}\partial_\nu r/q,\quad u^\mu u_\mu=-1,
+\qquad \nabla_\mu(\lambda u^\mu)=-\frac q2\mathcal J.
+\]
+On homogeneous FLRW, any predeclared smooth scalar source (mathcal J(t)) (for instance from a derivative-free potential of the radial invariant clock) integrates exactly to
+\[
+\boxed{
+\lambda(t)=\frac{a(t_i)^3\lambda(t_i)
+-\frac q2\int_{t_i}^{t}a(s)^3\mathcal J(s)\,ds}
+{a(t)^3}.
+}
+\]
+The freely specifiable initial (lambda(t_i)) **survives**. Therefore merely choosing an algebraic potential does not make the missing normal Einstein constraint an independent algebraic equation in this branch. Further dynamical field equations or an explicitly justified initial-value condition would be required. This statement presupposes the same projected metric-only variation and is not a theorem about arbitrary nonmetric UBT couplings.
+
 ## Verification and next discriminating research step
 
 Exact matrix/Pauli algebra, Minkowski contraction, an invertible nonradial numerical-symbolic coframe and an explicit SL(2,C) radialization witness are independently checked by `tools/verify_timelike_orbit_clock.py` and its focused CI test. These are kinematic tests, not a proof of on-shell GR, ghost freedom, CMB predictions or physical topology selection.
