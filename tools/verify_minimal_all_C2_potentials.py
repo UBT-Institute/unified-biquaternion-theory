@@ -119,6 +119,19 @@ def verify():
         sp.solve([sp.diff(poly,s),sp.diff(poly,s,2)],
                  [a1,a2],dict=True)==[{a1:0,a2:0}]
     )
+    # The declared SL(2,C) x U(1) symmetries do not uniquely select
+    # the scalar action: H(X)^2 and |det X|^2 are independent.
+    z=sp.I
+    X1=sp.eye(2)
+    X2=sp.Matrix([[1,z],[z,1]])
+    def invariants(X):
+        sharp=sp.Matrix([[X[1,1],-X[0,1]],[-X[1,0],X[0,0]]])
+        H=sp.expand(sp.trace(sharp*X.conjugate().T))
+        determinant_norm=sp.expand(X.det()*sp.conjugate(X.det()))
+        return H**2,determinant_norm
+    V=sp.Matrix([list(invariants(X1)),list(invariants(X2))])
+    checks["two_symmetry_allowed_quartic_invariants_are_independent"]=V.det()!=0
+    checks["quartic_invariant_witness_matrix"]=V==sp.Matrix([[4,1],[0,4]])
     return checks
 
 
