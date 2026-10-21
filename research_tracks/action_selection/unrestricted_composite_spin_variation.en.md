@@ -118,6 +118,47 @@ q^{-1}(X_b\mathcal E_a-X_a\mathcal E_b)=0,\quad
 
 Setting D P to zero as if the coframe were independent would omit an essential source. Conversely, setting the full parent metric Euler form to zero by hand would impose stronger equations than the actual composite theory supplies. Deriving these unrestricted equations is a prerequisite for checking whether the curved homogeneous configuration of merged PR #693 satisfies full field equations.
 
+## Fully explicit parent curvature equations (no FLRW imposed)
+
+Beyond the abstract chain rule, the parent Palatini–Holst Euler forms can be calculated without choosing any spacetime symmetry. Sum antisymmetric spin pairs only once and define
+\[
+P_{ab}=c_{\rm EC}\epsilon_{abcd}e^c\wedge e^d
++c_{\rm H}e_a\wedge e_b,\qquad
+S_{\rm parent}=\sum_{a<b}\int_M P_{ab}\wedge R^{ab}
+-\Lambda\int_M\mathrm{vol}(e).
+\]
+Direct **independent tetrad variation** produces the curvature-dependent three-form
+\[
+\boxed{
+\mathcal E_a=
+2c_{\rm EC}\sum_{b<c}\epsilon_{bcad}\,
+e^d\wedge R^{bc}
++c_{\rm H}\sum_{b<c}(\eta_{ba}e_c-\eta_{ca}e_b)
+\wedge R^{bc}
+-\frac{\Lambda}{3!}\epsilon_{abcd}
+e^b\wedge e^c\wedge e^d.
+}
+\]
+while independent spin variation of curvature, using (D_omega e^a=T^a), yields the Cartan three-form
+\[
+\boxed{
+\mathcal C_{ab}=D_\omega P_{ab}
+=2c_{\rm EC}\epsilon_{abcd}\,T^c\wedge e^d
++c_{\rm H}(T_a\wedge e_b-e_a\wedge T_b).
+}
+\]
+The resulting **actual composite** spin Euler equation is therefore
+\[
+\boxed{
+2c_{\rm EC}\epsilon_{abcd}T^c\wedge e^d+
+c_{\rm H}(T_a\wedge e_b-e_a\wedge T_b)+
+q^{-1}(X_b\mathcal E_a-X_a\mathcal E_b)=0.
+}
+\]
+The tetrad Euler expression also enters the composite field equation through (-q^{-1}D_omegamathcal E_a). Even for vanishing direct matter spin current, the spin equation is generally **not** the torsion-free Cartan condition. Conversely, these coupled equations do not automatically force the parent (mathcal E_a=0); the time-normal component remains the central Hamiltonian question. The parity-odd coefficient (c_{m H}) must be justified by the declared symmetries.
+
+An independent exterior-algebra script evaluates the original four-form variation directly in arbitrary invertible sample coframes with generic symbolic couplings and verifies **every tetrad component**; it separately checks the covariant torsion derivative of (P_{ab}) for each spin-bivector pair. This is a numerical-coframe polynomial identity audit, not a proof of existence of full nondegenerate solutions.
+
 ## Boundary of result and next step
 
 The result is exact on a smooth invertible Lorentz-real patch. It does **not** derive a unique UBT action, justify the Holst coefficient, establish physical ghost-free tensor modes, recover GR constraints or provide CMB predictions. Next calculate the curvature parent Euler forms in a general tetrad and linearize **their coupled composite equations**, without imposing homogeneity before variation.
