@@ -51,13 +51,15 @@ def verify():
         any(sp.simplify(cof[j,mu])!=0 for mu in range(4))
         for j in (1,2,3)
     )
+    def cofactor_derivative(mu,j):
+        v=sp.symbols("cofactor_probe")
+        probed=C.copy()
+        probed[mu,j]=v
+        result=sp.diff(probed.det(),v).subs(v,C[mu,j])
+        return sp.simplify(result-C.det()*C.inv()[j,mu])==0
     checks["all_twelve_volume_cofactors_follow_inverse"]=all(
-        sp.simplify(
-            sp.diff(C.det(),C[mu,j])-
-            C.det()*C.inv()[j,mu]
-        )==0
+        cofactor_derivative(mu,j)
         for mu in range(4) for j in (1,2,3)
-        if C[mu,j]!=0
     )
     # Cofactor check for an explicit independent boost variable.
     beta=sp.symbols("beta")
