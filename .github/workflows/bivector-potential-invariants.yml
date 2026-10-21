@@ -1,0 +1,27 @@
+name: Bivector potential invariants
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/action_selection/bivector_potential_invariants.*.md'
+      - 'tools/verify_bivector_potential_invariants.py'
+      - 'tests/test_bivector_potential_invariants.py'
+      - '.github/workflows/bivector-potential-invariants.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-invariant-algebra:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install symbolic verification dependencies
+        run: python -m pip install sympy pytest
+      - name: Verify bivector quartic reduction and timelike Hessian
+        run: python tools/verify_bivector_potential_invariants.py
+      - name: Regression tests
+        run: python -m pytest -q tests/test_bivector_potential_invariants.py
