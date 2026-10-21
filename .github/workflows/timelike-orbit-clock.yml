@@ -1,0 +1,27 @@
+name: Timelike orbit clock identity
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/action_selection/timelike_orbit_unitclock.*.md'
+      - 'tools/verify_timelike_orbit_clock.py'
+      - 'tests/test_timelike_orbit_clock.py'
+      - '.github/workflows/timelike-orbit-clock.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  timelike-invariant-clock:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact algebra dependencies
+        run: python -m pip install sympy pytest
+      - name: Check full timelike orbit determinant and Pauli spin algebra
+        run: python tools/verify_timelike_orbit_clock.py
+      - name: Run focused exact unit test
+        run: python -m pytest -q tests/test_timelike_orbit_clock.py
