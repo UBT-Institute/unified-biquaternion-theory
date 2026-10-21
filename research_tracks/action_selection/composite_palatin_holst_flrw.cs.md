@@ -141,6 +141,18 @@ Pokud předpokládáme **externí** kladnou kosmologickou konstantu, ale nulový
 a(V)=\frac{V}{\sqrt{\Lambda V^2-1}}.
 \]
 
+Eulerova rovnice hodin je zohledněna samostatně, nikoli vynechána. V paritně sudé větvi dává reparametrizační invariance přesnou Noetherovu identitu
+\[
+F(a,V)=a+\frac{a^3}{3V^2}-\frac{\Lambda a^3}{3},\quad
+L_{\alpha=0}/\mathscr C=\dot V\,F(a,V),\quad
+\boxed{
+\mathcal E_V=\dot V\partial_VF-\frac{dF}{dt}
+=-\dot a\,\partial_aF,\qquad
+\mathcal E_a=\dot V\,\partial_aF.
+}
+\]
+Každá regulární větev splňující variační rovnici měřítka tedy splňuje také rovnici hodin. Uvedená algebraická větev s kladnou kosmologickou konstantou je proto stacionární vůči **oběma** redukovaným variacím, avšak nemusí splňovat nezávislou Einsteinovu normálovou vazbu. Jde tedy o skutečný dynamický protipříklad uvnitř omezeného ansatzu, nikoli jen řešení jedné libovolně vybrané rovnice.
+
 Ta ale obecně nesplňuje Einsteinovu normálovou vazbu s nezávislou metrikou. Při konkrétní volbě jednotek dostáváme přesné reziduum
 
 \[
