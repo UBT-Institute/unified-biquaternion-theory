@@ -5,3 +5,15 @@ ARCHIVE/archive_legacy/consolidation_project/fig_QA_robustness_s0.png export-ign
 ARCHIVE/archive_legacy/consolidation_project/fig_QA_robustness_s05.png export-ignore
 ARCHIVE/archive_legacy/consolidation_project/doc/fig_QA_unitarity_triangle_v2.png export-ignore
 ARCHIVE/archive_legacy/consolidation_project/fig_QA_unitarity_triangle_v2.png export-ignore
+
+# Additional archival-only generated media and indexing data.
+# Preserve every file in Git; omit redundant historical renderings and the
+# reproducibly generated legacy manifest from release source ZIP archives.
+ARCHIVE/archive_legacy/consolidation_project/fig_QA_unitarity_triangle.png export-ignore
+ARCHIVE/archive_legacy/consolidation_project/fig_QA_UT_top2.png export-ignore
+ARCHIVE/archive_legacy/consolidation_project/fig_QA_UT_top1.png export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/archive_manifest.tsv export-ignore
+
+# Archived raw scan outputs (generated data; unchanged and retained in Git).
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/tt_firstfilter_w256_mc500.csv export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/bb_scan_100_200_fullm_hann.csv export-ignore
