@@ -1,0 +1,26 @@
+name: Clifford axial and pseudoscalar algebra
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/action_selection/clifford_axial_pseudoscalar.*.md'
+      - 'tools/verify_clifford_pseudoscalar_axial_torsion.py'
+      - 'tests/test_clifford_pseudoscalar_axial_torsion.py'
+      - '.github/workflows/clifford-axial-pseudoscalar.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-axial-clifford:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install sympy pytest
+      - name: Verify Clifford grades and Nieh-Yan trace-axial first variation
+        run: python tools/verify_clifford_pseudoscalar_axial_torsion.py
+      - name: Focused regression
+        run: python -m pytest -q tests/test_clifford_pseudoscalar_axial_torsion.py
