@@ -118,7 +118,7 @@ def verify():
     checks["Palatini_torsionfree_EH_up_to_boundary"]=(
         simp(eh_on-eh_expected-boundary)==0)
     checks["Holst_vanishes_on_torsionfree_FLRW"]=(
-        simp(Holst.subs({bb:s.diff(aa,t)/nn,cc:-1}))==0)
+        simp(Holst.subs({s.diff(cc,t):0,bb:s.diff(aa,t)/nn,cc:-1}).doit())==0)
 
     V=s.Function("V")(t)
     N=s.diff(V,t)
