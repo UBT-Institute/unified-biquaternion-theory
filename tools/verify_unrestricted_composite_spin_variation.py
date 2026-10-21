@@ -44,7 +44,7 @@ def verify_unrestricted_composite_spin():
         sp.simplify(
             (dEp*x+Ep*dx) + Om*(Ep*x)
             +(-dEp-Om*Ep+Ep*Om)*x-Ep*(dx+Om*x)
-        )==sp.zeros(4)
+        )==sp.zeros(4,1)
     )
     checks["metric_invariant_under_local_Lorentz"]=(
         sp.simplify(
