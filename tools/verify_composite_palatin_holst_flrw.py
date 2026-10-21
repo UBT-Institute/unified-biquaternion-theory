@@ -164,6 +164,23 @@ def verify():
     checks["Lambda_positive_reduced_stationary_branch"]=(
         s.simplify(ELlambda.subs({
            lam:1,aa:witness,V:vv,N:1}))==0)
+
+    # The clock V Euler equation was not discarded: for alpha=0 it is
+    # a reparameterization Noether consequence of the scale equation.
+    # With F(a,V)=a+a^3/(3V^2)-Lambda*a^3/3 and N=Vdot:
+    # EL_V=N F_V-d_t F=-adot F_a, for arbitrary smooth V,a.
+    Fbare=aa+aa**3/(3*V**2)-lam*aa**3/3
+    ELclock=s.simplify(
+        s.diff(N*Fbare,V)-s.diff(s.diff(N*Fbare,N),t)
+    )
+    Fderiv=s.diff(Fbare,aa)
+    checks["clock_EL_is_Noether_consequence_of_scale_EL"]=(
+        simp(ELclock+s.diff(aa,t)*Fderiv)==0
+    )
+    checks["positive_Lambda_stationary_witness_solves_both_reduced_EL"]=(
+        s.simplify(Fderiv.subs({lam:1,aa:witness,V:vv}))==0
+        and simp(ELclock+s.diff(aa,t)*Fderiv)==0
+    )
     residual=s.simplify(s.diff(witness,vv)**2+1-witness**2/3)
     checks["Lambda_stationary_branch_violates_GR_normal_constraint"]=(
         s.simplify(residual.subs(vv,2)-s.Rational(16,27))==0)
