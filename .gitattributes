@@ -13,3 +13,7 @@ ARCHIVE/archive_legacy/consolidation_project/fig_QA_unitarity_triangle.png expor
 ARCHIVE/archive_legacy/consolidation_project/fig_QA_UT_top2.png export-ignore
 ARCHIVE/archive_legacy/consolidation_project/fig_QA_UT_top1.png export-ignore
 ARCHIVE/archive_legacy/ARCHIVE/archive_manifest.tsv export-ignore
+
+# Archived raw scan outputs (generated data; unchanged and retained in Git).
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/tt_firstfilter_w256_mc500.csv export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/bb_scan_100_200_fullm_hann.csv export-ignore
