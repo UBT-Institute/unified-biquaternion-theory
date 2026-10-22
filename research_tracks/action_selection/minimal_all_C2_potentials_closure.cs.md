@@ -129,6 +129,49 @@ X_1=I_2,\quad X_2=I_2+i\sigma_1,\qquad
 \]
 Jejich vyhodnocovací matice má nenulový determinant; tedy H² a |det X|² jsou lineárně nezávislé funkce celého osmireálného prostoru polí. Každá zvlášť respektuje **stejné deklarované symetrie**. Pouhý argument těmito symetriemi proto nemůže určit jejich relativní koeficienty, vybrat dynamické vakuum ani odvodit chybějící koeficient křivosti. Problém výběru akce je **skutečná matematická neurčenost**, nikoli administrativní nedodělek. Dynamický výběrový princip by musel být nezávisle odvozen, jinak je nutné přiznat, že teorie není určena; přidávat členy jen kvůli shodě s GR je dodatečný modelový vstup.
 
+## Silnější uzavření: každý přirozený algebraický Lagrangián prvního jetu
+
+**Věta o redukci orbity (bez nového axiomu):** Uvažujme libovolnou lokální diferencovatelnou hustotu akce, ne nutně polynom, která je skalární hustotou při prostoročasových difeomorfismech, invariantní při lokální vlastní ortochronní Lorentzově transformaci a je sestavena **pouze algebraicky** z existujícího časupodobného Lorentzova vektoru X, jeho regulární tetrády e=D X/q, invariantních Lorentzových tenzorů eta a epsilon a jejich inverzí či kontrakcí. Nepřipouštíme další tenzory pozadí, explicitní spinovou křivost, nezávislou kinetiku spojení, derivace e ani jiná pole než X a jeho pomocné Lorentzovo spojení. Fixujeme oblast s orientací a časovou orientací.
+
+Za těchto *přesných* podmínek má každá taková hustota tvar
+
+\[
+\boxed{\mathcal L_{\mathrm{alg}}(X,e)=|\det e|\,F(r),\qquad
+r=\sqrt{-\eta_{ab}X^aX^b},\qquad
+e^a=q^{-1}D_\omega X^a.}
+\]
+
+**Důkaz:** V jednom bodě dovoluje regulární e lineární změnu prostoročasových souřadnic, která tetrádovou matici převede na jednotkovou. Po této operaci nemůže zbýt nezávislý invariant s prostoročasovým indexem, protože všechny souřadnicové indexy jsou zkontrahované a žádný další prostoročasový tenzor jsme nepřipustili. Zbývající vnitřní vlastní Lorentzova symetrie působí tranzitivně na každém budoucím časupodobném hyperboloidu s jediným invariantem r. Normalizovaná skalární hustota je proto hladkou funkcí F(r); kontrakce s epsilon mohou změnit pouze konstantní orientační faktor. Důkaz zahrnuje nelineární a nepolynomiální kontrakce libovolného stupně, ovšem jen za přesně vymezeného algebraického obsahu polí prvního jetu.
+
+Metrická kompatibilita spinového spojení dává **kalibračně nezávislou** identitu radiálního gradientu:
+
+\[
+d(X^aX_a)=2X_aD_\omega X^a=2qX_ae^a,\qquad
+\boxed{dr=-\frac{q}{r}X_ae^a,\quad g^{-1}(dr,dr)=-q^2.}
+\]
+
+Regulární časupodobná tetráda proto vynucuje nenulový dr bez nového předpokladu homogenních hodin. V lokální radiální Lorentzově kalibraci každý pomocný boost mění jeden prostorový sloupec nezávisle a stacionarita dává
+
+\[
+\frac{\delta S_{\mathrm{alg}}}{\delta b_\mu{}^i}=
+\frac r q|\det e|\,(e^{-1})_i{}^\mu F(r)=0,
+\qquad
+\boxed{\det e\ne0\Longrightarrow F(r)=0.}
+\]
+
+Protože dr je všude nenulový, jeho lokální obraz obsahuje otevřený interval I, kde redukovaný skalární koeficient identicky mizí:
+
+\[
+\boxed{r(\mathcal U)\supset I,\quad F|_I\equiv0,\quad
+S_{\mathrm{alg}}|_{\mathcal U}=0,\quad
+\delta S_{\mathrm{alg}}|_{\mathcal U}=0,\quad
+\delta^2 S_{\mathrm{alg}}|_{\mathcal U}=0.}
+\]
+
+Všechny přípustné malé kompaktně podepřené variace zůstávající uvnitř tohoto intervalu mají identicky nulovou redukovanou akci i její redukované variační derivace. Výsledek tak vylučuje **prediktivní časupodobnou gravitační dynamiku celé přirozené algebraické třídy prvního jetu**, nikoli pouze konkrétní kvadratické párování nebo přejmenovaný skalární, pseudoskalární či bivektorový potenciál.
+
+**Přesná hranice:** Lokální redukce grupové orbity je geometrický důkaz, nikoli konečná počítačová enumerace; doplňkový symbolický ověřovač zkouší normalizaci rámce, objem epsilon, Lorentzovu kovarianci, identity projektoru a kofaktory boostů na netriviálních příkladech. Věta NEPLATÍ pro kovariantní derivace e, spinovou křivost, torzní členy obsahující de, derivované vazby, nezávislé struktury pozadí, nehermitovské Theta, globální holonomie ani příčné komplexní variace úplného pole. Zejména nedokazuje, že některý takový operátor musí vyplývat z principů UBT. **Bez zdůvodněného operátoru mimo tuto třídu dosavadní předpoklady nedávají dynamickou teorii gravitace.**
+
 ## Co je uzavřené a co není
 
 **Negativně uzavřeno:** celá původní kineticko-potenciálová minimální akce s libovolným C2 potenciálem, nezávislým algebraickým Lorentzovým spojením a centrální kompozitní metrikou nemůže ve stanovené časupodobné větvi dodat regulární **prediktivní gravitační dynamiku**. Chytřejší skalární, pseudoskalární, vektorový, bivektorový nebo tenzorový *algebraický* potenciál nezruší objemový kolaps, pokud se jeho invariantní kontrakce redukuje na místní radiální U. Může změnit interakce komplexních příčných složek, ale neobnoví nenulový lokální gravitační Hessův operátor v této větvi.
