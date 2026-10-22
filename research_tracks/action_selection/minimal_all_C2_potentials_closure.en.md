@@ -172,6 +172,32 @@ All allowed small compactly supported variations remaining within that interval 
 
 **Sharp boundary:** The local group-orbit reduction is a geometric proof, not a finite computational exhaustive enumeration; the supplementary exact checker tests frame normalization, epsilon volume, Lorentz covariance, projector identities and boost cofactors in nontrivial examples. The theorem does NOT cover covariant derivatives of e, spin curvature, torsion terms containing de, derivative-dependent couplings, independent background structures, non-Hermitian Theta, global holonomies, or the transverse complex variation of the full field. In particular it cannot decide whether any such operator must arise from UBT principles. **Without a justified operator outside this class, the current premises do not provide a dynamical theory of gravity.**
 
+## Why the remaining action choice is mathematically underdetermined
+
+The above no-go closes the **algebraic first-jet class**. It does not follow from the existing field definition and Lorentz/diffeomorphism symmetry that a unique curvature or torsion term must replace it.
+
+**Constructive non-uniqueness certificate, not a proposed action:** The earlier explicitly representable closed-FLRW coframe of merged PR #685 has pure trace torsion with
+
+\[
+T^0=0,\quad T^i=\chi\,e^0\wedge e^i,\quad
+\chi=H-\frac1V,\quad
+\boxed{T^a{}_{\mu\nu}T_a{}^{\mu\nu}=-6\chi^2.}
+\]
+
+Thus the parity-even diffeomorphism/Lorentz scalar built from the torsion square is not an identically vanishing function of the existing fields. Even if a curvature term had been selected, the equally symmetry-compatible family
+
+\[
+S_\lambda=S_{\mathrm{curv}}+
+\lambda\int_M\sqrt{-g}\,
+T^a{}_{\mu\nu}T_a{}^{\mu\nu}\,d^4x,\qquad
+\lambda\in\mathbb R.
+\]
+
+contains a free coefficient not fixed by these symmetries. The torsion-square term has a nonzero first variation when (chi
+e0), so it is not merely an irrelevant additive constant. This shows **why the advertised principles alone do not select unique dynamics**: no amount of algebraic rearrangement of the existing Theta pairing determines the independent higher-jet coefficient. The expression is an illustration of underdetermination, **NOT** an adopted UBT extension.
+
+At this point the possible mathematically honest outcomes are: derive an extra selection principle from independently grounded prior physics; restrict the claimed target of UBT to its valid kinematic content; or explicitly acknowledge an **underdetermined dynamical theory**. Arbitrarily choosing a convenient (lambda), a Palatini–Holst coefficient, or a CMB kernel does not complete the original theory.
+
 ## What this closes and what it does not
 
 **Closed negatively:** the entire original bare kinetic-plus-arbitrary-C2-potential completion with independent algebraic Lorentz connection and central composite metric cannot give a nondegenerate **predictive timelike gravitational sector**. Choosing a cleverer scalar, pseudoscalar, vector, bivector, or tensor *algebraic* potential does not evade the volume-collapse mechanism if after invariant contraction it is just a local radial U. Such a change can alter complex transverse interactions but not restore a nontrivial restricted local gravitational Hessian.
