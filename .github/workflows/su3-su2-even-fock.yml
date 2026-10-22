@@ -1,0 +1,27 @@
+name: SU3 SU2 even Fock bridge
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/T2_GAUGE/su3_su2_even_fock.*.md'
+      - 'tools/verify_su3_su2_even_fock.py'
+      - 'tests/test_su3_su2_even_fock.py'
+      - '.github/workflows/su3-su2-even-fock.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  even-fock-algebra:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install symbolic tools
+        run: python -m pip install sympy pytest
+      - name: Exact SU3 SU2 Fock audit
+        run: python tools/verify_su3_su2_even_fock.py
+      - name: Focused test
+        run: python -m pytest -q tests/test_su3_su2_even_fock.py
