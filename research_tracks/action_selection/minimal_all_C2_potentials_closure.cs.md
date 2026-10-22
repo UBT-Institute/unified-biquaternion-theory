@@ -172,6 +172,32 @@ Všechny přípustné malé kompaktně podepřené variace zůstávající uvnit
 
 **Přesná hranice:** Lokální redukce grupové orbity je geometrický důkaz, nikoli konečná počítačová enumerace; doplňkový symbolický ověřovač zkouší normalizaci rámce, objem epsilon, Lorentzovu kovarianci, identity projektoru a kofaktory boostů na netriviálních příkladech. Věta NEPLATÍ pro kovariantní derivace e, spinovou křivost, torzní členy obsahující de, derivované vazby, nezávislé struktury pozadí, nehermitovské Theta, globální holonomie ani příčné komplexní variace úplného pole. Zejména nedokazuje, že některý takový operátor musí vyplývat z principů UBT. **Bez zdůvodněného operátoru mimo tuto třídu dosavadní předpoklady nedávají dynamickou teorii gravitace.**
 
+## Proč je zbývající volba akce matematicky neurčená
+
+Předchozí překážka uzavírá **algebraickou třídu prvního jetu**. Z existující definice pole a Lorentzovy/difeomorfní symetrie však neplyne, že právě jeden určitý člen křivosti či torze musí tuto třídu nahradit.
+
+**Konstruktivní důkaz nejednoznačnosti, nikoli návrh nové akce:** Dříve explicitně reprezentovatelná uzavřená FLRW tetráda z mergnutého PR #685 má čistě stopovou torzi ve tvaru
+
+\[
+T^0=0,\quad T^i=\chi\,e^0\wedge e^i,\quad
+\chi=H-\frac1V,\quad
+\boxed{T^a{}_{\mu\nu}T_a{}^{\mu\nu}=-6\chi^2.}
+\]
+
+Paritně sudý difeomorfně/Lorentzovsky invariantní skalár kvadrátu torze tedy není identicky nulovou funkcí existujících polí. I kdybychom již zvolili křivostní člen, stejně symetricky přípustná rodina
+
+\[
+S_\lambda=S_{\mathrm{curv}}+
+\lambda\int_M\sqrt{-g}\,
+T^a{}_{\mu\nu}T_a{}^{\mu\nu}\,d^4x,\qquad
+\lambda\in\mathbb R.
+\]
+
+obsahuje volný koeficient, který dané symetrie neurčují. Kvadrát torze má při (chi
+e0) nenulovou první variaci; není tedy jen nevýznamnou aditivní konstantou. To přesně ukazuje, **proč samotné dosavadní principy nevybírají jedinou dynamiku**: algebraické přeuspořádání existujícího párování Theta neurčí nezávislý koeficient vyššího jetu. Jde o ilustraci neurčenosti, **NIKOLI** přijetí nového členu UBT.
+
+Matematicky poctivé výsledky jsou nyní tyto: odvodit další princip výběru z nezávisle zdůvodněné fyziky; omezit tvrzení UBT na platný kinematický obsah; nebo výslovně uznat **dynamicky neurčenou teorii**. Libovolné dosazení vhodného (lambda), Palatiniho–Holstova koeficientu nebo CMB jádra nedokončí původní teorii.
+
 ## Co je uzavřené a co není
 
 **Negativně uzavřeno:** celá původní kineticko-potenciálová minimální akce s libovolným C2 potenciálem, nezávislým algebraickým Lorentzovým spojením a centrální kompozitní metrikou nemůže ve stanovené časupodobné větvi dodat regulární **prediktivní gravitační dynamiku**. Chytřejší skalární, pseudoskalární, vektorový, bivektorový nebo tenzorový *algebraický* potenciál nezruší objemový kolaps, pokud se jeho invariantní kontrakce redukuje na místní radiální U. Může změnit interakce komplexních příčných složek, ale neobnoví nenulový lokální gravitační Hessův operátor v této větvi.
