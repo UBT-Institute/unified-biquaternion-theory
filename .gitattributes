@@ -17,3 +17,12 @@ ARCHIVE/archive_legacy/ARCHIVE/archive_manifest.tsv export-ignore
 # Archived raw scan outputs (generated data; unchanged and retained in Git).
 ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/tt_firstfilter_w256_mc500.csv export-ignore
 ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/bb_scan_100_200_fullm_hann.csv export-ignore
+
+# Retain generated historical scan CSVs in Git, not the source ZIP.
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/bb_scan_100_200_fullm_none.csv export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/bb_scan_100_200_window_none.csv export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/bb_scan_200_300.csv export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/bb_scan_70_120.csv export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/bb_scan_100_200.csv export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/edge_check_138_4_139_4.csv export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/bb_mc5000_138_4_139_4.csv export-ignore
