@@ -129,6 +129,49 @@ X_1=I_2,\quad X_2=I_2+i\sigma_1,\qquad
 \]
 Their evaluation matrix has nonzero determinant; hence H² and |det X|² are linearly independent as functions on the full eight-real field space. Each separately respects the **same declared symmetries**. No symmetry argument using only those premises can fix their relative coefficients, choose an on-shell vacuum, or derive the missing curvature coefficient. Therefore the action-selection gap is a **real mathematical underdetermination**, not a bookkeeping issue. A dynamical selection principle must be independently derived or the theory must be acknowledged as underdetermined; selecting terms solely to fit GR is additional model input.
 
+## Stronger closure: every natural algebraic first-jet Lagrangian
+
+**Orbit-reduction theorem (no new axiom):** Consider any local differentiable action density, not necessarily polynomial, which is a scalar density under spacetime diffeomorphisms, invariant under local proper orthochronous Lorentz transformations, and constructed **algebraically only** from the existing timelike Lorentz vector X, its invertible coframe e=D X/q, the invariant Lorentz tensors eta and epsilon, and inverses/contractions. No other background tensors, explicit spin curvature, independent connection kinetic term, derivatives of e, or fields beyond X and its auxiliary Lorentz connection are allowed. Fix an orientation and time-orientation patch.
+
+Under those *precise* conditions every such local density is
+
+\[
+\boxed{\mathcal L_{\mathrm{alg}}(X,e)=|\det e|\,F(r),\qquad
+r=\sqrt{-\eta_{ab}X^aX^b},\qquad
+e^a=q^{-1}D_\omega X^a.}
+\]
+
+**Proof:** At a given point, invertibility of e permits a linear change of spacetime coordinates taking the coframe matrix to the identity. There can be no independent spacetime-index invariant remaining after this operation, because all coordinate indices are contracted and no other spacetime tensors were supplied. The residual internal proper Lorentz symmetry acts transitively on each future-timelike hyperboloid, whose only invariant is r. Therefore the normalized scalar density is a smooth function F(r); epsilon contractions only affect the constant orientation factor. This proof covers nonlinear and nonpolynomial contractions of any degree, as long as they obey the explicitly stated algebraic first-jet field-content restriction.
+
+Metric compatibility of the spin connection yields a **gauge-independent** radial-gradient identity:
+
+\[
+d(X^aX_a)=2X_aD_\omega X^a=2qX_ae^a,\qquad
+\boxed{dr=-\frac{q}{r}X_ae^a,\quad g^{-1}(dr,dr)=-q^2.}
+\]
+
+In particular an invertible timelike coframe forces dr nonzero without any extra assumption of homogeneous clocks. In the local radial Lorentz gauge, each auxiliary boost varies one spatial column independently, so stationarity gives
+
+\[
+\frac{\delta S_{\mathrm{alg}}}{\delta b_\mu{}^i}=
+\frac r q|\det e|\,(e^{-1})_i{}^\mu F(r)=0,
+\qquad
+\boxed{\det e\ne0\Longrightarrow F(r)=0.}
+\]
+
+Since dr is nowhere zero, its local image contains an open interval I, on which the reduced scalar coefficient vanishes identically:
+
+\[
+\boxed{r(\mathcal U)\supset I,\quad F|_I\equiv0,\quad
+S_{\mathrm{alg}}|_{\mathcal U}=0,\quad
+\delta S_{\mathrm{alg}}|_{\mathcal U}=0,\quad
+\delta^2 S_{\mathrm{alg}}|_{\mathcal U}=0.}
+\]
+
+All allowed small compactly supported variations remaining within that interval have identically zero restricted action and all restricted variational derivatives. The result therefore rules out **predictive timelike gravitational dynamics throughout the entire natural algebraic first-jet class**, not merely the quadratic kinetic pairing or scalar/pseudoscalar/bivector potential labels.
+
+**Sharp boundary:** The local group-orbit reduction is a geometric proof, not a finite computational exhaustive enumeration; the supplementary exact checker tests frame normalization, epsilon volume, Lorentz covariance, projector identities and boost cofactors in nontrivial examples. The theorem does NOT cover covariant derivatives of e, spin curvature, torsion terms containing de, derivative-dependent couplings, independent background structures, non-Hermitian Theta, global holonomies, or the transverse complex variation of the full field. In particular it cannot decide whether any such operator must arise from UBT principles. **Without a justified operator outside this class, the current premises do not provide a dynamical theory of gravity.**
+
 ## What this closes and what it does not
 
 **Closed negatively:** the entire original bare kinetic-plus-arbitrary-C2-potential completion with independent algebraic Lorentz connection and central composite metric cannot give a nondegenerate **predictive timelike gravitational sector**. Choosing a cleverer scalar, pseudoscalar, vector, bivector, or tensor *algebraic* potential does not evade the volume-collapse mechanism if after invariant contraction it is just a local radial U. Such a change can alter complex transverse interactions but not restore a nontrivial restricted local gravitational Hessian.
