@@ -66,10 +66,10 @@ def verify():
     # A local time-only phase of a pure imaginary-Hermitian coframe is
     # generically outside the real coframe slice.
     tests["nontrivial_phase_not_on_Lorentz_real_slice"]=(
-        s.simplify(w*E[0]/I-(w*E[0]/I).conjugate()) != s.zeros(2)
+        s.simplify(w*E[0]/I-(w*E[0]/I).conjugate().T) != s.zeros(2)
     )
     tests["phase_minus_one_preserves_real_Lorentz_slice"]=all(
-        -v/I ==(-v/I).conjugate() for v in E
+        -v/I ==(-v/I).conjugate().T for v in E
     )
     # The scalar invariants classified using U(1) can still be neutral:
     X=I*rho*eye
