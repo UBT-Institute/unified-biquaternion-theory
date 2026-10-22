@@ -26,3 +26,5 @@ ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/bb_scan_70_120.csv ex
 ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/bb_scan_100_200.csv export-ignore
 ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/edge_check_138_4_139_4.csv export-ignore
 ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/bb_mc5000_138_4_139_4.csv export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/lock_in_138_96.csv export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/phase_prime_reset_v2_scan_k_holdout_160_178.csv export-ignore
