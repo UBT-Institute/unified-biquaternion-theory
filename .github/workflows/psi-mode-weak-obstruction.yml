@@ -1,0 +1,27 @@
+name: Restricted psi weak mode test
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/T2_GAUGE/psi_weak_multiplicity.*.md'
+      - 'tools/verify_psi_mode_weak_obstruction.py'
+      - 'tests/test_psi_mode_weak_obstruction.py'
+      - '.github/workflows/psi-mode-weak-obstruction.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  psi-mode-symbolic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install SymPy and pytest
+        run: python -m pip install sympy pytest
+      - name: Verify restricted Fourier and Lorentz identities
+        run: python tools/verify_psi_mode_weak_obstruction.py
+      - name: Run focused regression
+        run: python -m pytest -q tests/test_psi_mode_weak_obstruction.py
