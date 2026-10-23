@@ -1,0 +1,31 @@
+name: Minimal single-Theta C2 potential closure
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/action_selection/minimal_all_C2_potentials_closure.*.md'
+      - 'tools/verify_minimal_all_C2_potentials.py'
+      - 'tools/verify_firstjet_natural_invariants.py'
+      - 'tests/test_firstjet_natural_invariants.py'
+      - 'tests/test_minimal_all_C2_potentials.py'
+      - '.github/workflows/minimal-all-C2-potential-closure.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-minimal-action-dichotomy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact algebra dependencies
+        run: python -m pip install sympy pytest
+      - name: Verify the all-potential cofactor and plateau identities
+        run: python tools/verify_minimal_all_C2_potentials.py
+      - name: Verify natural first-jet orbit invariants
+        run: python tools/verify_firstjet_natural_invariants.py
+      - name: Focused regression
+        run: python -m pytest -q tests/test_minimal_all_C2_potentials.py tests/test_firstjet_natural_invariants.py
