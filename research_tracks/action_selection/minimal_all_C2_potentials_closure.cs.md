@@ -198,6 +198,23 @@ e0) nenulovou první variaci; není tedy jen nevýznamnou aditivní konstantou. 
 
 Matematicky poctivé výsledky jsou nyní tyto: odvodit další princip výběru z nezávisle zdůvodněné fyziky; omezit tvrzení UBT na platný kinematický obsah; nebo výslovně uznat **dynamicky neurčenou teorii**. Libovolné dosazení vhodného (lambda), Palatiniho–Holstova koeficientu nebo CMB jádra nedokončí původní teorii.
 
+## Kontrola dalšího původního principu: holomorfnost komplexního času
+
+Dřívější přesný audit `research_tracks/theta_complex_time_classification/holomorphy_lorentz_no_go.md` dává samostatnou překážku konzistence. Pokud je `psi` nezávislý Lorentzův **skalár** a celé mikroskopické pole má být striktně holomorfní v `tau` v každé inerciální soustavě, platí Cauchyovy–Riemannovy rovnice a rovnice pro protilehlé boosty
+\[
+\tau=t+i\psi,\qquad \partial_\psi\Theta=i\partial_t\Theta,\qquad
+\partial_{t'_\pm}=\gamma(\partial_t\pm v\partial_x).
+\]
+\[
+(\gamma-1)\partial_t\Theta\pm\gamma v\partial_x\Theta=0
+\quad\Longrightarrow\quad
+\partial_t\Theta=\partial_x\Theta=\partial_\psi\Theta=0
+\quad (v\ne0).
+\]
+Opakováním pro další prostorové směry zmizí obecná závislost na prostoročase. **Tato kombinace starých předpokladů proto nemůže sama vybrat netriviální gravitační akci.** Nevylučuje to redukované holomorfní theta jádro, vyznačený rámec bez nároku na Lorentzovu invarianci ani plně kovariantní komplexifikaci prostoročasu s transformujícími imaginárními souřadnicemi. Jde však o **jiné formulace**, jejichž dynamiku a obsah polí je nutné zdůvodnit zvlášť.
+
+Důkaz už má samostatné ověření; zde nezavádíme nový axiom holomorfnosti. Spolu s překážkou minimální akce a přesnou nejednoznačností výběru akce pouze doplňuje audit konzistence, nikoli obecnou větu o nemožnosti všech verzí UBT.
+
 ## Co je uzavřené a co není
 
 **Negativně uzavřeno:** celá původní kineticko-potenciálová minimální akce s libovolným C2 potenciálem, nezávislým algebraickým Lorentzovým spojením a centrální kompozitní metrikou nemůže ve stanovené časupodobné větvi dodat regulární **prediktivní gravitační dynamiku**. Chytřejší skalární, pseudoskalární, vektorový, bivektorový nebo tenzorový *algebraický* potenciál nezruší objemový kolaps, pokud se jeho invariantní kontrakce redukuje na místní radiální U. Může změnit interakce komplexních příčných složek, ale neobnoví nenulový lokální gravitační Hessův operátor v této větvi.
