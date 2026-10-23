@@ -1,0 +1,26 @@
+name: Composite Palatini Holst homogeneous gate
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/action_selection/composite_palatin_holst_flrw.*.md'
+      - 'tools/verify_composite_palatin_holst_flrw.py'
+      - 'tests/test_composite_palatin_holst_flrw.py'
+      - '.github/workflows/composite-palatin-holst-flrw.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-composite-geometry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install sympy pytest
+      - name: Exact Cartan curvature, Palatini Holst action and Euler equations
+        run: python tools/verify_composite_palatin_holst_flrw.py
+      - name: Focused mathematical regression
+        run: python -m pytest -q tests/test_composite_palatin_holst_flrw.py

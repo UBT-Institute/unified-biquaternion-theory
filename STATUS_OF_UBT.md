@@ -1,3 +1,55 @@
+## Update 2026-10-10: focused UBT programme and SU(3) audit
+
+The October research cycle is focused on four items: complex-time/theta
+classification, the dynamical colour bridge, full-covariance CMB falsification,
+and torus-modulus selection.  No open dynamical claim is promoted by this
+update.
+
+### SU(3): what is actually established
+
+- The algebraic stabilizer construction on the selected three-dimensional
+  complex carrier is exact.
+- The spin/quadrupole operator identities reproduce the eight Gell-Mann
+  directions exactly.
+- A projected rank-three bundle can carry nonzero traceless curvature, but the
+  simplest projective connection is too constrained to supply the linearized
+  perturbative gluon sector.
+- A global SU(3) stabilizer does not imply local gauge invariance.
+- The raw four-complex-dimensional biquaternion Lorentz carrier has only a
+  scalar complex-linear Lorentz commutant, so it cannot simultaneously carry a
+  faithful internal SU(3) commuting with Lorentz.
+- Repeated Lorentz representations inside a finite jet are not independent
+  colour fields.  The proposed second-jet channel triplet is a rank-four
+  holonomic image of one field, and a generic copy-space SU(3) rotation does
+  not preserve that image.
+
+Therefore the direct "jet multiplicity = physical colour triplet" route is
+closed as a no-go.  The remaining one-field routes are composite/projected
+bundles or an exact collective/auxiliary rewrite whose local SU(3) redundancy
+is a true redundancy of the rewritten theory and whose low-energy gauge modes
+are healthy.
+
+### Complex time
+
+Strict frame-independent Cauchy-Riemann holomorphy in tau=t+i psi is
+incompatible with generic 4D Lorentz-covariant spacetime dependence if psi is
+an independent Lorentz scalar.  The minimal audit therefore treats psi as an
+independent fiber variable and reserves strict holomorphy for declared reduced
+theta sectors.  A fully covariant holomorphic alternative would require a
+larger complexified-spacetime architecture.
+
+### Conditional induced Yang-Mills statement
+
+If a gauge-fixed UBT Hessian is genuinely Laplace type and genuinely carries an
+SU(3) connection, the standard heat-kernel a4 coefficient contains the local
+tr(F_mu_nu F^mu_nu) invariant.  This is conditional on deriving the connection
+from the same microscopic UBT dynamics and does not determine g_s by itself.
+
+See:
+- research_tracks/T2_GAUGE/su3_dynamics_endgame_2026_10.md
+- research_tracks/T2_GAUGE/su3_holonomic_jet_no_go.md
+- research_tracks/priority_program_2026_10/README.md
+
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +61,462 @@ policy: AI_PROVENANCE.md
 notice: The author has read the substance and accepts editorial responsibility.
 UBT-AI-PROVENANCE-END
 -->
+
+### Exact coset collective rewrite — 2026-10-10
+
+On the timelike branch and conditional on the finalized Theta Lorentz
+representation, a normalized Theta direction lies on
+\[
+SU(1,3)/SU(3).
+\]
+Writing \(\Theta=\rho\,g e_0\) introduces a local representative
+\(g\in SU(1,3)\) with the exact redundancy
+\(g\sim g h(x)\), \(h(x)\in SU(3)\).  This is an exact collective-coordinate
+rewrite of the same single Theta field: \(15-8=7\) real normalized-direction
+degrees plus the radial mode reproduce the original eight real components.
+
+The \(su(3)\) component of \(g^{-1}dg\) transforms as a gauge connection and
+can have nonzero projected curvature.  It is nevertheless composite; around a
+constant representative its curvature begins quadratically in coset
+fluctuations, so independent perturbative gluons are not yet derived.
+
+The remaining central colour problem is now the quantum/collective dynamics of
+this exact redundancy, not the existence of an SU(3) frame group.
+
+### Induced colour-coupling stress test — 2026-10-10
+
+The charged part of the conditional \(SU(1,3)/SU(3)\) coset is one complex
+fundamental \(SU(3)\) triplet plus a singlet.  If that triplet has a minimal
+Laplace-type Euclidean Hessian and there is no bare Yang--Mills term, the
+standard one-loop heat-kernel coefficient gives
+\[
+\frac1{g_{\rm ind}^2}
+=
+\frac{I_0}{96\pi^2}
+\]
+for one triplet, with \(I_0\) the logarithmic proper-time threshold integral.
+For \(N_{\rm eff}\) equivalent charged triplets the right-hand side is
+multiplied by \(N_{\rm eff}\).
+
+Thus an order-one induced coupling from a single triplet requires a logarithm
+of order \(96\pi^2\), an extreme hierarchy.  The induced-only route is
+therefore quantitatively viable only if UBT independently derives a sufficiently
+large charged spectral multiplicity/tower, an appropriate threshold structure,
+or another normalization mechanism.  The full QCD running remains open.
+
+### KK tower and colour-coupling underdetermination — 2026-10-10
+
+For the conditional one-triplet \(SU(3)\) induced-coupling branch, the compact
+\(S^1_\psi\) tower contributes
+\[
+\Delta_{\rm KK}(a)
+=
+2\sum_{n\ge1}E_1(n^2/a^2),
+\qquad a=\Lambda R_\psi.
+\]
+At the optional self-dual value \(a=1\),
+\[
+\Delta_{\rm KK}=0.4463514816\ldots,
+\]
+so the nonzero tower gives only a small threshold correction.  For large
+\(a\), \(\Delta_{\rm KK}\sim2\sqrt\pi\,a\); obtaining an order-one induced
+coupling from the tower alone requires \(a=O(10^2)\).
+
+More importantly,
+\[
+\Delta_{\rm KK}'(a)
+=
+\frac4a\sum_{n\ge1}e^{-n^2/a^2}>0.
+\]
+Thus the tower coefficient is a continuous strictly increasing function of
+the presently undetermined ratio \(\Lambda R_\psi\).  Until the finalized
+action independently fixes that ratio (and the zero-mode threshold), matching
+\(g_s\) by choosing it is a fit rather than a prediction.
+
+### Determinant-term colour breaking — 2026-10-10
+
+The classified potential invariant satisfies
+\[
+H(X)=2h_B(\Theta,\Theta).
+\]
+The proven nonzero pointwise minimum is therefore timelike and lies in the
+domain of the moving rank-three colour-carrier construction.
+
+However, the allowed quartic determinant term changes the symmetry of the
+tangent dynamics.  At the timelike reference vacuum its transverse quadratic
+form is proportional to
+\[
+\lambda_2\,\|\operatorname{Im}z\|^2,\qquad z\in\mathbb C^3.
+\]
+The exact stabilizer of this form inside \(SU(3)\) is only \(SO(3)\), generated
+by the three quaternion-adjoint/spin directions
+\(i\lambda_2,i\lambda_5,i\lambda_7\).  The five quadrupole directions are
+explicitly broken.
+
+At \(\lambda_2=0\), the pointwise potential depends only on \(H\), its timelike
+minimum is \(SU(1,3)/SU(3)\), and the Hessian has rank one with seven tangent
+zero modes.  But full microscopic \(SU(1,3)\) cannot simply be imposed on the
+present UBT core: its unique constant invariant Hermitian form is indefinite,
+and generic \(SU(1,3)\) transformations do not preserve the sharp/determinant
+structure used by the canonical tetrad.
+
+Thus full colour \(SU(3)\) now requires an independently derived
+\(\lambda_2\to0\) infrared/enhancement mechanism or a different action-derived
+sector; the generic stable \(\lambda_2>0\) pointwise branch retains only the
+three-direction \(SO(3)\) symmetry.
+
+### Positive timelike kinetic candidate — 2026-10-10
+
+The constant \(SU(1,3)\)-invariant pairing is indefinite and gives a
+fixed-background target-sign obstruction.  A field-dependent alternative is
+nevertheless available on the timelike stratum:
+\[
+K_\Theta^+(u,v)
+=
+-u^\dagger Gv
++
+2\frac{(u^\dagger G\Theta)(\Theta^\dagger Gv)}
+       {\Theta^\dagger G\Theta}.
+\]
+For \(h_B(\Theta,\Theta)>0\) this metric is positive definite,
+\(SU(1,3)\)-covariant, and becomes the identity at the timelike reference
+vacuum.  Combined with the enhanced \(\lambda_2=0\) pointwise potential it
+gives, at fixed background, one positive-kinetic radial massive mode and seven
+positive-kinetic tangent zero modes transforming as a complex triplet plus a
+real singlet under the isotropy \(SU(3)\).
+
+This is a new action-selection candidate, not a canonical status upgrade.  Its
+compatibility with the sharp-based tetrad/metric relation, the full constrained
+Hessian, the null stratum and the single-action GR branch remains open.
+
+### Positive kinetic metric-lock audit — 2026-10-10
+
+The field-dependent positive \(K_\Theta^+\) metric remains a valid
+fixed-background sigma-model candidate, but it does not provide an independent
+colour kinetic sector after the canonical metric is substituted.
+
+On the Lorentz tetrad slice,
+\[
+E_\mu^\dagger GE_\nu=-g_{\mu\nu}.
+\]
+Hence
+\[
+g^{\mu\nu}K_\Theta^+(D_\mu\Theta,D_\nu\Theta)
+=
+4\mathcal N_0+
+\frac{2}{h}g^{\mu\nu}\bar c_\mu c_\nu,
+\qquad
+c_\mu=\Theta^\dagger GD_\mu\Theta.
+\]
+On a constant-\(h\) branch only a real singlet/phase current remains beyond
+the volume term.  At the adapted reference vacuum \(\Theta\parallel1\), the
+full contraction is exactly \(2\mathcal N_0\) for every nondegenerate Lorentz
+tetrad.
+
+Therefore the healthy fixed-background seven tangent zero modes cannot be
+relabelled as seven independent colour excitations of the metric-locked
+single-Theta theory.  A physical gluon sector still requires a separate
+collective/quantum mechanism.
+
+### Raw-carrier colour closure and gluon DOF boundary — 2026-10-10
+
+An exact operator audit now identifies the norm-preserving content of the
+minimal two-sided biquaternion derivative:
+\[
+\operatorname{im}(L-R)\cap u(1,3)
+=
+so(1,3)\oplus u(1)_{\rm phase}.
+\]
+The traceless intersection is exactly the six-dimensional Lorentz algebra.
+Inside the reference colour fibre only its three \(so(3)\) rotation directions
+survive; the five additional Gell--Mann/quadrupole directions are absent.
+
+If those five colour directions are nevertheless added as linear raw-carrier
+generators, Lie closure with the existing three boost directions produces the
+full
+\[
+su(1,3).
+\]
+That larger raw-carrier symmetry is already known not to preserve the
+sharp/determinant GR core.  This rules out a simple linear realization of
+physical Lorentz and full colour on the same raw \(\mathbb C^4\) value carrier
+while keeping the present GR architecture unchanged.
+
+There is also a tree-level degree-of-freedom obstruction.  One biquaternion has
+eight real components, so a healthy local second-order quadratic propagator has
+residue rank at most eight.  Eight massless gluons require sixteen physical
+transverse helicity modes.  Therefore full perturbative QCD cannot be an
+invertible local tree-level rewrite of the ordinary single-Theta Hessian.
+
+The one-field programme now requires genuinely new quantum/composite poles in
+exact correlators; finding algebraic SU(3) generators or an \(F^2\) background
+term is not sufficient.
+
+### Emergent gauge-action benchmark — 2026-10-10
+
+The remaining one-field colour target is explicitly quantum/collective, but the
+previous requirement of a gauge-invariant physical massless adjoint pole has
+been corrected.  Weinberg--Witten forbids massless spin-one states carrying an
+ordinary Lorentz-covariant conserved-current charge under its assumptions, and
+confining QCD does not require positive-norm gauge-invariant asymptotic gluon
+states.
+
+The correct target is therefore an effective set of collective variables with
+a genuine local \(SU(3)\) redundancy and a gauge-fixed 1PI action whose
+two-, three- and four-point vertices obey the corresponding
+BRST/Slavnov--Taylor identities, share one Yang--Mills coupling, and reproduce
+the perturbative non-Abelian ultraviolet limit.  Infrared confinement or
+positivity violation of a gauge-fixed gluon propagator is not by itself a
+failure.
+
+The weak bilinear triplet current remains insufficient: it gives continuum/log
+response rather than a new independent gauge redundancy.  The existing GR
+split-jet auxiliary action is also only a Lagrange-multiplier right-inverse
+constraint and generates no current-current kernel.
+
+Thus algebraic \(SU(3)\), local frame redundancy, induced background
+\(F^2\), and weak charged loops are all insufficient by themselves.  P2 now
+asks for a genuinely emergent Yang--Mills 1PI structure or a revision of
+microscopic field content.
+
+### Theta/complex-time classification — 2026-10-10
+
+The current theta objects are now separated rigorously.
+
+Canonical physical complex time
+\[
+\tau_{\rm UBT}=t+i\psi
+\]
+is dimensionful, with \([t]=[\psi]=\) length, and is not canonically the
+dimensionless Jacobi modular parameter.
+
+The established free compact-circle heat trace is
+\[
+Z_H(s)=\vartheta_3(0|\tau_J),
+\qquad
+\tau_J=\frac{i s}{\pi R_\psi^2},
+\]
+where \(s>0\) is heat/proper time.  This is ordinary Jacobi theta mathematics.
+
+For the convention
+\[
+\vartheta_3(\tau)=\sum_n e^{\pi i n^2\tau},
+\]
+the natural scalar modular subgroup is
+\(\Gamma_\theta=\langle S,T^2\rangle\), of index 3 in \(SL(2,\mathbb Z)\).
+The rescaled \(e^{2\pi i n^2\tau}\) convention is the one usually stated on
+\(\Gamma_0(4)\).
+
+The finite weighted reduced amplitude
+\[
+S_s=\sum_{n=0}^{N-1}a_n^{(s)}e^{\pi i n^2\tau_J}
+\]
+is not generically modular under \(S\) and is not mock-modular without a
+separately derived completion.
+
+Thus P1 is closed for the currently defined objects: ordinary Jacobi heat
+kernel/trace, nonmodular-by-default finite reduced projections, and a physical
+complex-time coordinate whose full modular transformation law is not derived.
+Full interacting UBT modular covariance remains open.
+
+### Full-covariance CMB protocol — 2026-10-10
+
+The new CMB branch is now fail-closed and preregisterable.  In a finite mode
+basis the theory/data interface is
+\[
+C=A P A^T+N,
+\]
+with Gaussian likelihood and KL-divergence comparison implemented for frozen
+covariance templates.
+
+The statistical code is not the current blocker.  A legitimate UBT H3 model
+requires an action-derived primordial covariance
+\[
+P_{\rm UBT}(\mathbf k,\mathbf k')
+\]
+or its compact discrete analogue **before** evaluation data are inspected.
+The new module refuses an H3-labelled run when that frozen template is absent.
+
+The protocol compares H0=LambdaCDM, H1=ordinary compact topology,
+H2=compact topology plus generic oscillatory primordial modifications, and
+H3=pre-specified UBT.  A UBT-specific result must beat H2 out of sample, not
+merely H0.
+
+Historical CMB results remain negative constraints: the TT comb returned
+\(p=0.919\), and the simple primordial cutoff did not reproduce the low-l
+suppression.  They are not evidence for the new H3 branch.
+
+### Zeta-regularized torus-shape audit — 2026-10-10
+
+The older positive-Hessian argument for a square Euclidean torus differentiated
+a divergent mode sum before regularization and is superseded.
+
+For a genuine fixed-area flat \(T^2\), the massless scalar zeta determinant is,
+up to a shape-independent constant,
+\[
+\det{}'\Delta_\tau
+\propto
+\Im\tau\,|\eta(\tau)|^4.
+\]
+The square torus \(\tau=i\) uniquely maximizes this determinant within the
+rectangular family but is a saddle in the full modulus plane.  The hexagonal
+torus is the determinant maximum among all fixed-area flat tori.
+
+For the standard real-boson one-loop effective action
+\[
+\Gamma_1=+\frac12\log\det{}'\Delta,
+\]
+these determinant maxima are not stable minima; the isolated massless
+functional runs toward the cusp and has no finite global modulus minimum.
+
+Thus the massless one-loop determinant does not dynamically select a square or
+hexagonal UBT torus.  A physical P4 result now requires a genuinely
+action-derived compact modulus and a bounded massive/interacting/backreacted
+effective potential calculated after regularization.
+
+### Primordial covariance derivation boundary — 2026-10-10
+
+FRW background recovery does not determine a primordial spectrum.  A valid H3
+requires the constrained second variation of the finalized cosmological UBT
+action, a gauge-invariant map from physical \(\delta\Theta\) perturbations to
+the comoving curvature perturbation \(\mathcal R\), and an action/regularity
+principle selecting the quantum initial state.  None is currently derived.
+
+A further exact correction closes the historical internal-circle cutoff
+mechanism.  On
+\[
+\mathbb R^3\times S^1_\psi
+\]
+the separated spectrum is
+\[
+\lambda_{\mathbf k,n}
+=
+|\mathbf k|^2+n^2/R_\psi^2.
+\]
+Compactification quantizes the internal momentum and gives KK masses, but the
+\(n=0\) sector retains arbitrarily small ordinary spatial momentum.  Therefore
+compact \(S^1_\psi\) alone does not imply
+\(k_{\rm spatial,min}=1/R_\psi\), and the old low-\(\ell\) cutoff ansatz is
+phenomenological rather than derived.
+
+### Stiefel hidden-local SU(3) route — 2026-10-10
+
+The timelike coset now has an exact hidden-local-symmetry formulation.  A
+complex (4\times3) frame (Z) satisfying
+[
+Z^\dagger GZ=-I_3
+]
+has 24 real components, nine orthonormality constraints and a local right
+(SU(3)) redundancy, leaving
+[
+24-9-8=7
+]
+physical normalized modes.  Adding the radial Theta mode restores the original
+eight real one-biquaternion degrees of freedom.  The (4\times3) size is
+minimal and unique by degree count.
+
+The traceless vertical frame current begins at
+[
+C_{\mu,0}
+=
+\tfrac12
+(\beta\,\partial_\mu\beta^\dagger
+-\partial_\mu\beta\,\beta^\dagger)_0,
+]
+so the auxiliary hidden-local connection couples to a derived adjoint
+bilinear current of the physical complex triplet.
+
+A compact-Grassmannian large-N result cannot be copied directly: the naive
+single-trace noncompact target metric has signature ((6,1)).  The healthy
+UBT formulation requires separate positive triplet and singlet metric
+coefficients plus a classically redundant vertical HLS term.
+
+In the weak fixed-frame branch, the triplet loop generates a positive
+transverse gauge kinetic coefficient,
+[
+Z_B
+=
+\frac{(c_V/c_3)^2}{96\pi^2}
+\log\frac{\Lambda^2}{\mu^2},
+]
+but the same branch retains a vector mass,
+[
+m_B^2
+\simeq
+\frac{96\pi^2c_3^2}
+{c_V\log(\Lambda^2/\mu^2)}.
+]
+No finite-(c_V) interacting massless point appears in this leading-log
+semiclassical phase.  The remaining P2 question is therefore sharply
+nonperturbative: whether the finite noncompact constrained (4\times3)
+Stiefel model has a distinct critical/unbroken phase with
+(m_{B,\rm ren}^2=0) and (0<Z_B<\infty), together with the correct local
+(SU(3)) Slavnov--Taylor structure.
+
+### Stiefel critical-origin obstruction — 2026-10-10
+
+The attractive radial scaling (ho	o0) is not a smooth continuation of the
+exact one-Theta Stiefel rewrite.  The positive timelike field metric has cone
+form
+[
+ds^2=dho^2+ho^2ds_7^2,
+]
+so the field-space measure carries
+[
+ho^7,dho,dmu_7.
+]
+The angular/Stiefel change of variables is therefore singular at the raw-field
+origin.
+
+A homogeneous frame (W=ho Z) does not remove the problem:
+[
+W^dagger GW=-ho^2I_3.
+]
+At (ho=0) the three columns would have to span a totally isotropic complex
+subspace of a Hermitian space of signature ((1,3)), whose Witt index is only
+one.  Hence the rank-three colour frame necessarily collapses.
+
+The (ho	o0) critical HLS gauge-emergence scaling remains a useful limiting
+diagnostic, but the preferred P2 target is now a **finite-radius
+quantum-disordered HLS phase** with a well-defined timelike frame,
+(m_{B,m ren}^2=0), (Z_B>0), and gapped charged frame excitations.
+
+### Finite-radius HLS refinement and topology gate — 2026-10-10
+
+After a dynamical (F_B^2) term exists, the zero-locking surface
+(c_V=0) has an enhanced local product redundancy
+[
+SU(3)_Z	imes SU(3)_B.
+]
+The Stiefel locking operator (-(B-C_0)^2) reduces this product to the
+diagonal.  Thus (c_V=0) is technically natural once reached, although the
+relevant locking operator is not generically driven there and additional
+cross-sector locking operators must also be controlled.
+
+Threshold matching provides a quantitative strong-coupling warning.  If the
+charged frame triplet has gap (M_eta) and the low-energy colour sector is
+pure (SU(3)),
+[
+Lambda_{m YM}
+=
+M_eta
+exp[-8pi^2 Z_B(M_eta)/11].
+]
+A hierarchy (M_eta/Lambda_{m YM}=10^3) needs
+(Z_Bsimeq0.96).  The weak frame-loop formula then requires
+(a_H^2log(Lambda_{m UV}^2/M_eta^2)sim9.1	imes10^2), well outside an
+ordinary weak-current regime.  The weak loop establishes the positive kinetic
+sign, not a realistic QCD hierarchy.
+
+The normalized timelike coset has topology
+[
+SU(1,3)/SU(3)cong S^1	imesmathbb C^3.
+]
+Its homogeneous (SU(3)) frame bundle is topologically trivial.  Hence the
+purely composite one-Theta frame connection can have local curvature but no
+independent second-Chern/instanton bundle sector.  A genuine QCD-like phase
+must enlarge the collective (B)-field path integral to autonomous
+Yang--Mills topological sectors after frame matter decouples.
 
 ## Update 2026-07-27: one canonical relation, exact Dirac lift
 

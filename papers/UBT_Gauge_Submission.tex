@@ -59,8 +59,8 @@
 \newcommand{\Lzero}{\textbf{[L0]}}
 \newcommand{\MC}{\textbf{[MC]}}
 
-\title{\textbf{Gauge Structure and Three Generations\\
-               from Unified Biquaternion Theory}}
+\title{\textbf{Candidate Gauge Symmetries and Generation Hypotheses\\
+               in Unified Biquaternion Theory}}
 \author{Ing.\ David Jaroš}
 \date{June 2026}
 
@@ -75,23 +75,20 @@
   arc=3pt,boxrule=1.2pt,
   title={\textbf{\large Main Theorem (Gauge Structure)}}]
 \textbf{Statement.}
-The Standard Model gauge group
-$G_{\mathrm{SM}} = \SU{3}_c\times\SU{2}_L\times\UU{1}_Y$
-is uniquely realised in the biquaternion algebra
-$\mathbb{B} := \Bq\cong\mathrm{Mat}(2,\mathbb{C})$
-with zero free parameters.\\[4pt]
+The manuscript establishes restricted algebraic symmetry constructions associated with
+$\mathbb{B}:=\Bq\cong\mathrm{Mat}(2,\mathbb{C})$.
+It does not derive the full Standard Model gauge dynamics, representations,
+or their uniqueness from a fundamental UBT action.\\[4pt]
 \textbf{Open}: Weinberg angle $\theta_W$, chirality ($L$ vs.\ $R$), Higgs/Yukawa sector —
 stated explicitly in Section~\ref{sec:open}.\\[4pt]
-\textbf{Alpha}: PROVEN [L1] (\texttt{alpha\_l1\_proof.tex}, v95).
+\textbf{Alpha}: NOT DERIVED from first principles; numerical matching and conditional routes remain open.
 \end{tcolorbox}
 
 \begin{abstract}
-We derive the Standard Model gauge structure
-$\mathrm{SU}(3)_c\times\mathrm{SU}(2)_L\times\mathrm{U}(1)_Y$
-from the biquaternion algebra $\mathbb{C}\otimes_{\mathbb{R}}\mathbb{H}$
-without free parameters for the gauge group.
-Three fermion generations follow from winding modes on the compact
-imaginary directions of $\mathbb{H}$.
+We study candidate algebraic symmetry structures motivated by
+$\mathbb{C}\otimes_{\mathbb{R}}\mathbb{H}$. The algebraic stabilizer construction
+does not establish a unique Standard Model gauge theory or its dynamics.
+Three fermion generations from winding modes are a hypothesis, not a derivation.
 Hypercharge assignments $Y_Q=1/6$ are selected uniquely within the
 family $Y_Q = n/6$ by the mixed gravitational anomaly condition
 $\mathcal{A}_{\rm grav}(n) = n-1 = 0$, which holds only for $n=1$
@@ -101,7 +98,8 @@ The U(1)$_{\rm EM}$ charge integrality $Q\in\mathbb{Z}$ follows
 from holonomy consistency on $S^1_\psi$ at the self-dual point
 [L1~conditional], and the Weinberg angle satisfies
 $\sin^2\theta_W = 3/8$ at the GUT scale [L1~conditional] with
-$\sin^2\theta_W(M_Z)\approx 0.231$ from two-loop RG running [STD].
+$\sin^2\theta_W(M_Z)\approx 0.231$ used as a phenomenological benchmark;
+a parameter-free UBT prediction is not established.
 Honest dead ends (Higgs sector, $\alpha$) are
 explicitly bounded.
 \end{abstract}
@@ -130,16 +128,16 @@ structure without introducing the group as external input.
 Unified Biquaternion Theory (UBT) \cite{jaros2026gr} is built on the field
 $\Theta(q,\tau)$ over biquaternion space $\mathbb{B} = \Bq$
 and complex time $\tau = t + i\psi$.
-The same algebra $\mathbb{B}$ that underlies the gravitational sector
-also determines the gauge structure.
-This paper derives:
+The same algebra $\mathbb{B}$ motivates candidate gauge structures,
+but their dynamical selection remains open.
+This paper examines:
 \begin{enumerate}
 \item $\SU{3}_c$ from the $\mathbb{Z}_2^3$ involution structure of $\mathbb{B}$ [\Lzero].
 \item $\SU{2}_L$ from the left norm-preserving action on $\mathbb{B}$ [\Lzero].
 \item $\UU{1}_Y$ from the scalar phase right action on $\mathbb{B}$ [\Lzero].
 \item Hypercharge $Y_Q = 1/6$ is conditional on Gap~C2 Step~1
       (\OPEN\ pending first-principles closure).
-\item Three generations from three $\psi$-winding modes [\Lzero].
+\item The hypothesis of three generations from three $\psi$-winding modes [\OPEN].
 \item $N_{\mathrm{eff}} = 12$ from the SU(2) Scherk--Schwarz twist route [\Lone].
 \end{enumerate}
 
@@ -156,7 +154,7 @@ This paper derives:
 4 & $\UU{1}_Y$ from right phase action & \Lzero & §\ref{sec:u1} \\
 5 & Hypercharge $Y_Q = 1/6$ on $S^1_\psi$ & \Lone\ cond.\ (Gap~C2 Step~1 closed) & §\ref{sec:hypercharge} \\
 6 & $\sin^2\theta_W = 3/8$ at GUT scale & \Lone\ (conditional) & §\ref{sec:hypercharge} \\
-7 & Three generations from winding modes & \Lzero & §\ref{sec:generations} \\
+7 & Three generations from winding modes & \OPEN & §\ref{sec:generations} \\
 8 & $N_{\mathrm{eff}} = 12$ from SU(2) twist & \Lone & §\ref{sec:neff} \\
 \midrule
 O1 & Weinberg angle $\sin^2\theta_W = 0.231$ & \Lone\ (conditional) & §\ref{sec:open} \\

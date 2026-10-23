@@ -1,0 +1,30 @@
+name: Trace torsion curvature bridge
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/action_selection/trace_torsion_curvature_bridge.*.md'
+      - 'tools/verify_trace_torsion_curvature_bridge.py'
+      - 'tests/test_trace_torsion_curvature_bridge.py'
+      - 'tools/verify_composite_spin_chain_rule.py'
+      - 'tests/test_composite_spin_chain_rule.py'
+      - '.github/workflows/trace-torsion-curvature-bridge.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-torsion-curvature:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install sympy pytest
+      - name: Check scalar curvature with independently constructed affine Ricci tensor
+        run: python tools/verify_trace_torsion_curvature_bridge.py
+      - name: Verify full composite tetrad field-variation chain rule
+        run: python tools/verify_composite_spin_chain_rule.py
+      - name: Focused regression suite
+        run: python -m pytest -q tests/test_trace_torsion_curvature_bridge.py tests/test_composite_spin_chain_rule.py

@@ -1,4 +1,17 @@
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0
+
+> **Convention correction — 2026-10-10.**
+> For the convention used in the canonical theta bridge,
+> \[
+> \vartheta_3(\tau)=\sum_{n\in\mathbb Z}e^{\pi i n^2\tau},
+> \]
+> the natural scalar modular subgroup is the theta group
+> \(\Gamma_\theta=\langle S,T^2\rangle\), of index 3 in
+> \(SL(2,\mathbb Z)\), with the usual half-weight multiplier.
+> The frequently quoted \(\Gamma_0(4)\) statement applies to the rescaled
+> convention \(\sum_n e^{2\pi i n^2\tau}=\vartheta_3(2\tau)\).
+> See \`canonical/bridges/theta_parameter_separation.md\`.
+>
      Licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International.
      See LICENSE.md for full license text. -->
 <!--

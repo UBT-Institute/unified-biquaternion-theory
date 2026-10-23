@@ -1,0 +1,67 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+# Poznámky k patchi: gradovaný Möbiův most
+
+**Datum:** 2026-08-25  
+**Rozsah:** aktivní výzkumná větev RH; beze změn kanonických tvrzení.
+
+<a id="patch-summary"></a>
+## Shrnutí
+
+Tento patch přidává spárované anglické/české výzkumné poznámky odvozující klasickou gradovanou prvočíselnou Fockovu identitu
+
+\[
+\operatorname{Str}(e^{-sH_P^-})=\prod_{p\in P}(1-p^{-s})
+=\sum_n\mu_P(n)n^{-s}.
+\]
+
+Propojuje tuto identitu s existující bosonickou prvočíselnou Fockovou větví a s programem racionálních theta revivalů.
+
+Patch také přidává první společný rozhodovací experiment theta–Mellin. Přesná faktorizace ukazuje, že skalární Mellinovy kanály \(\vartheta_2,\vartheta_3,\vartheta_4\) mají pouze jeden stupeň volnosti zeta, a proto uvnitř otevřeného kritického pásu neukládají nulám nezávislou podmínku.
+
+Rozšíření charakteristikami modulo \(5\) poté zvyšuje hodnost koeficientových kanálů na čtyři Dirichletovy \(L\)-kanály. Jejich vazba odvozená z UBT zůstává otevřená.
+
+Fázová a konjugační symetrie klasifikují přípustné hermitovské metriky kanálů jako \(\operatorname{diag}(g_0,g_1,g_2,g_1)\). Dodatečná, dosud neodvozená cyklická symetrie kanálů redukuje tuto rodinu na \(cI\), jehož samotná pozitivita stále neomezuje nuly hlavního kanálu zeta.
+
+Funkcionální rovnice primitivních charakterů modulo \(5\) zaměňují sdružené liché charaktery a ponechávají kvadratický charakter pevný, ale zachovávají stejné nestejné váhy kanálů. Hlavní charakter je imprimitivní a při konduktoru \(5\) nemá konstantní kořenové číslo, takže tyto funkcionální rovnice neposkytují směšování s kanálem zeta.
+
+Pět aditivních reziduálních kanálů poskytuje kanonické Fourierovo směšování. Jejich úplná invariantní metrika má oddělené sudé a liché váhy, zatímco skalární theta konstanty obsazují pouze třírozměrný sudý sektor, kde je metrika určena až na škálu. Mellinova transformace zeta je lineární kombinací tohoto sektoru, ale pozitivita sektorové normy stále neurčuje polohu jejích nul.
+
+První eliptické derivace realizují dva liché reziduální kanály s modulární vahou vyšší o jedna. Jejich invariantní metrika je skalární, avšak prostor konstantních modulárních intertwinerů mezi třemi sudými a dvěma lichými kanály má nulovou dimenzi. Jacobiho kovariance proto sama neztotožňuje obě škály metriky; nadále je nutný operátor měnící váhu a odvozený z UBT.
+
+Periodická Jacobiho derivace \(\mathscr D_z=5(2\pi i)^{-1}\partial_z\) poskytuje paritně lichou samoadjungovanou diferenciální mapu a faktorizuje volný theta Hamiltonián jako \(H_0=(\pi/5)\mathscr D_z^2\). Její celočíselné spektrum není spektrem ordinát netriviálních nul zeta, metrické adjungování stále připouští nestejné škály sudého a lichého sektoru a identifikace \(z\) s kanonickým směrem UBT zůstává otevřená.
+
+Každý konečný diferenciální polynom v tomto Jacobiho operátoru má skalární Mellinův kanál tvořený pouze konečnou kombinací posunutých zeta funkcí, zatímco počet jeho vlastních hodnot roste jako mocnina ořezu, nikoli podle Riemannova--von Mangoldtova zákona (T\log T). Celá třída lokálních Jacobiho operátorů konečného řádu je tedy vyloučena jako realizace Hilbertova--Pólyova programu; nadále je nutná nelokální nebo aritmetická složka.
+
+Skutečně nepolynomiální nekonečný Maclaurinův funkcionální kalkul je na Jacobiho kružnici už nelokální. Celá interpolace může zakódovat libovolné ordináty zeta, ale je kruhová a nekonečně nejednoznačná. Explicitní samoadjungovaný multiplikátor (A_0(n)=2\pi n/W(n/e)) pro kladné módy naproti tomu nepoužívá jednotlivé nuly a přesně invertuje hladkou dvoučlennou Riemannovu--von Mangoldtovu počítací funkci; chybějícím krokem je odvozený fluktuační operátor s prime/(\log p) daty.
+
+Pro každý regulátor \(\sigma>1\) definují normově konvergentní sinusové a kosinusové funkce \(A_0\), vážené pouze mocninami prvočísel, omezené samoadjungované operátory počítací fáze a hustoty. Derivace fáze dává hustotu, zatímco podíl s \(N_0'\) dává posun ordinát v prvním řádu. Kritický limit a původ primitivních fází \(\log p\) v UBT zůstávají otevřené.
+
+<a id="patch-claim-control"></a>
+## Kontrola tvrzení
+
+Konečné identity a identity v \(\Re s>1\) jsou standardní matematikou. Patch neodvozuje prvočíselné módy, energie \(\log p\) ani fermionickou paritu z kanonické UBT a netvrdí RH. Zpřesňuje již otevřenou mezeru GAP-RH-MOEBIUS-UBT.
+
+<a id="patch-verification"></a>
+## Ověření
+
+- Exaktní kontroly podmnožin, rozvoje součinu, faktorizace a Dirichletovy konvoluce jsou v tools/verify_graded_mobius_bridge.py.
+- Regresní pokrytí je v tests/test_graded_mobius_bridge.py.
+- Theta–Mellinův no-go výsledek nezávisle kontrolují tools/verify_theta_mellin_matrix.py a tests/test_theta_mellin_matrix.py.
+- Status Lean je LEAN-PENDING; formální ověření se netvrdí.
+- Dvojjazyčná struktura a zobrazené rovnice se musí před sloučením shodovat.
+
+<a id="patch-provenance"></a>
+## Údržba provenience
+
+Inventář zdrojů a jeho deklarovaný záznam SHA-256 jsou synchronizovány tak, aby zahrnovaly dříve sloučenou dvojici rezidua–Möbius a čtyři nové spravované zdroje Markdown v tomto patchi.

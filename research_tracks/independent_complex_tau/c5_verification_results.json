@@ -1,0 +1,251 @@
+{
+  "scope": "Exact encoded identities; no complete UBT dynamics or string equivalence claim.",
+  "date": "2026-10-08",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "lean_status": "LEAN-PENDING: lean and lake executables were unavailable in this runtime; generic claims have not been formalized.",
+  "passed": true,
+  "checks_count": 51,
+  "checks": [
+    {
+      "name": "Clifford5_0_0",
+      "passed": true
+    },
+    {
+      "name": "Clifford5_0_1",
+      "passed": true
+    },
+    {
+      "name": "Clifford5_0_2",
+      "passed": true
+    },
+    {
+      "name": "Clifford5_0_3",
+      "passed": true
+    },
+    {
+      "name": "Clifford5_0_4",
+      "passed": true
+    },
+    {
+      "name": "Clifford5_1_1",
+      "passed": true
+    },
+    {
+      "name": "Clifford5_1_2",
+      "passed": true
+    },
+    {
+      "name": "Clifford5_1_3",
+      "passed": true
+    },
+    {
+      "name": "Clifford5_1_4",
+      "passed": true
+    },
+    {
+      "name": "Clifford5_2_2",
+      "passed": true
+    },
+    {
+      "name": "Clifford5_2_3",
+      "passed": true
+    },
+    {
+      "name": "Clifford5_2_4",
+      "passed": true
+    },
+    {
+      "name": "Clifford5_3_3",
+      "passed": true
+    },
+    {
+      "name": "Clifford5_3_4",
+      "passed": true
+    },
+    {
+      "name": "Clifford5_4_4",
+      "passed": true
+    },
+    {
+      "name": "five_channel_symbol_square",
+      "passed": true
+    },
+    {
+      "name": "five_channel_symbol_determinant",
+      "passed": true
+    },
+    {
+      "name": "no_sixth_4x4_gamma_rank",
+      "passed": true
+    },
+    {
+      "name": "canonical_5x5_metric_is_degenerate",
+      "passed": true
+    },
+    {
+      "name": "explicit_metric_null_vector",
+      "passed": true
+    },
+    {
+      "name": "rank_one_completion_determinant",
+      "passed": true
+    },
+    {
+      "name": "completed_metric_Clifford_0_0",
+      "passed": true
+    },
+    {
+      "name": "completed_metric_Clifford_0_1",
+      "passed": true
+    },
+    {
+      "name": "completed_metric_Clifford_0_2",
+      "passed": true
+    },
+    {
+      "name": "completed_metric_Clifford_0_3",
+      "passed": true
+    },
+    {
+      "name": "completed_metric_Clifford_0_4",
+      "passed": true
+    },
+    {
+      "name": "completed_metric_Clifford_1_1",
+      "passed": true
+    },
+    {
+      "name": "completed_metric_Clifford_1_2",
+      "passed": true
+    },
+    {
+      "name": "completed_metric_Clifford_1_3",
+      "passed": true
+    },
+    {
+      "name": "completed_metric_Clifford_1_4",
+      "passed": true
+    },
+    {
+      "name": "completed_metric_Clifford_2_2",
+      "passed": true
+    },
+    {
+      "name": "completed_metric_Clifford_2_3",
+      "passed": true
+    },
+    {
+      "name": "completed_metric_Clifford_2_4",
+      "passed": true
+    },
+    {
+      "name": "completed_metric_Clifford_3_3",
+      "passed": true
+    },
+    {
+      "name": "completed_metric_Clifford_3_4",
+      "passed": true
+    },
+    {
+      "name": "completed_metric_Clifford_4_4",
+      "passed": true
+    },
+    {
+      "name": "holomorphic_real_metric_anti_isometry",
+      "passed": true
+    },
+    {
+      "name": "hermitian_real_metric_isometry",
+      "passed": true
+    },
+    {
+      "name": "old_FRW_g00",
+      "passed": true
+    },
+    {
+      "name": "old_FRW_g0x",
+      "passed": true
+    },
+    {
+      "name": "old_FRW_spatial_block",
+      "passed": true
+    },
+    {
+      "name": "FLRW_embedding_all_components",
+      "passed": true
+    },
+    {
+      "name": "Einstein10_00",
+      "passed": true
+    },
+    {
+      "name": "Einstein10_external",
+      "passed": true
+    },
+    {
+      "name": "Einstein10_internal",
+      "passed": true
+    },
+    {
+      "name": "static_internal_pressure_constraint",
+      "passed": true
+    },
+    {
+      "name": "periodic_imaginary_time_only_zero_eigenmode",
+      "passed": true
+    },
+    {
+      "name": "periodic_mode_is_kernel_of_generator",
+      "passed": true
+    },
+    {
+      "name": "string_winding_quadratic_energy",
+      "passed": true
+    },
+    {
+      "name": "string_T_duality_quadratic_energy",
+      "passed": true
+    },
+    {
+      "name": "RNS_central_charge_count",
+      "passed": true
+    }
+  ],
+  "details": {
+    "sixth_gamma_linear_system": {
+      "rows": 80,
+      "columns": 16,
+      "rank": 16
+    },
+    "completion_determinant": "-lambda**2",
+    "real_signatures_negative_positive": {
+      "real_part_complex_symmetric": [
+        5,
+        5
+      ],
+      "real_part_hermitian_1_4": [
+        2,
+        8
+      ]
+    },
+    "ordinary_derivative_FRW_g00": "x**2*Derivative(a(t), t)**2 + y**2*Derivative(a(t), t)**2 + z**2*Derivative(a(t), t)**2 - Derivative(f(t), t)**2",
+    "ordinary_derivative_FRW_g0x": "x*a(t)*Derivative(a(t), t)",
+    "FLRW_embedding_assumptions": [
+      "a(t)>0",
+      "a_dot(t)!=0 locally",
+      "F_dot=1/a_dot",
+      "kinematics only"
+    ],
+    "Einstein10_flat_3_plus_6": {
+      "G00": "3*H**2 + 18*H*S + 15*S**2",
+      "Gii_over_ai_squared": "-3*H**2 - 12*H*S - 2*Hdot - 21*S**2 - 6*Sdot",
+      "Gmm_over_b_squared": "-6*H**2 - 15*H*S - 3*Hdot - 15*S**2 - 5*Sdot"
+    },
+    "static_internal_equation_of_state": {
+      "radiation_pI_over_rho": "0",
+      "dust_pI_over_rho": "-1/2",
+      "four_dimensional_vacuum_pI_over_rho": "-2"
+    }
+  }
+}

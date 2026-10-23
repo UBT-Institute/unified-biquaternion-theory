@@ -1,0 +1,26 @@
+name: Clifford connection FLRW checks
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/action_selection/connection_closed_flrw.*.md'
+      - 'tools/verify_connection_flrw_geometry.py'
+      - 'tests/test_connection_flrw_geometry.py'
+      - '.github/workflows/clifford-connection-flrw.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-geometry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install sympy pytest
+      - name: Derive central metric, connection curvature, Ricci scalar and EH comparator
+        run: python tools/verify_connection_flrw_geometry.py
+      - name: Focused test
+        run: python -m pytest -q tests/test_connection_flrw_geometry.py

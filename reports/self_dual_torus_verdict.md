@@ -1,3 +1,19 @@
+> **2026-10-10 REGULARIZATION OVERRIDE.**
+> The older claim that the positive one-loop spectral log-determinant proves
+> local stability of the square torus is superseded.  The termwise second
+> derivative of the divergent mode sum is not the zeta-regularized Hessian.
+> For the massless fixed-area scalar determinant,
+> \[
+> \det{}'\Delta_\tau\propto \Im\tau\,|\eta(\tau)|^4.
+> \]
+> The square torus is the unique determinant **maximum** within rectangular
+> tori and is a saddle in the full modulus plane; the hexagonal torus is the
+> determinant maximum among all fixed-area flat tori.  For the standard
+> bosonic one-loop effective action \(+\frac12\log\det{}'\Delta\), the isolated
+> massless determinant has no finite global modulus minimum.
+> See
+> \`research_tracks/theta_torus_potential/zeta_regularized_shape_audit.md\`.
+>
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0
      Licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International.
      See LICENSE.md for full license text. -->

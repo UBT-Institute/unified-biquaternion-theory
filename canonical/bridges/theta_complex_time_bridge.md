@@ -1,3 +1,10 @@
+> **2026-10-10 PARAMETER-SEPARATION OVERRIDE.**
+> This file is a reduced local model only.  Its symbol
+> \(\tau=t+i\phi\) is a dimensionless Jacobi-kernel parameter after an
+> implicit rescaling; it is **not** canonically identical to physical
+> \(\tau_{\rm UBT}=t+i\psi\).  The authoritative distinction is in
+> \`canonical/bridges/theta_parameter_separation.md\`.
+
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
 <!--
 UBT-AI-PROVENANCE-BEGIN

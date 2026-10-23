@@ -41,6 +41,17 @@
 \author{Ing.\ David Jaroš}
 \date{March 2026}
 
+
+% CURRENT STATUS OVERRIDE — 2026-10-10:
+% Physical UBT complex time tau_UBT=t+i psi is dimensionful and is not
+% canonically identical to the dimensionless Jacobi modular parameter tau_J.
+% The established free S1 heat trace uses
+% tau_J = i s/(pi R_psi^2).
+% Claims below that physical t+i psi is automatically the torus modulus are
+% superseded by canonical/bridges/theta_parameter_separation.md.
+% In the convention theta_3(tau)=sum exp(pi i n^2 tau), the scalar theta group
+% Gamma_theta=<S,T^2> has index 3 in SL(2,Z), not index 2.
+
 \begin{document}
 \maketitle
 \tableofcontents
@@ -193,7 +204,7 @@ quantity and remains open.
 
 \subsection{Complex Time as Modular Parameter}
 
-In UBT, the complex time $\tau = t + i\psi$ plays the dual role of:
+Historically this appendix assigned the same symbol $\tau$ to physical complex time and a modular parameter. Current status separates $\tau_{\rm UBT}=t+i\psi$ from the Jacobi parameter $\tau_J$. The following dual-role wording is retained only as the historical bridge hypothesis:
 \begin{enumerate}
   \item \textbf{Physical time parameter}: $t$ is real Minkowski time; $\psi$
     is the imaginary part controlling quantum phase evolution.
@@ -218,7 +229,7 @@ The modular group $\mathrm{SL}(2,\mathbb{Z})$ acts on $\tau$ by
   \begin{pmatrix}a&b\\c&d\end{pmatrix} \in \mathrm{SL}(2,\mathbb{Z}).
 \end{equation}
 The UBT partition function $\hat{Z}_{T^3}(\tau) = \vartheta_3(\tau)^3$ transforms
-as a modular form of weight $3/2$ under the index-2 subgroup of
+as a modular form of weight $3/2$ under the index-3 theta subgroup of
 $\mathrm{SL}(2,\mathbb{Z})$ fixing $\vartheta_3$.
 
 \subsection{Spectral Modes and Hecke Operators}

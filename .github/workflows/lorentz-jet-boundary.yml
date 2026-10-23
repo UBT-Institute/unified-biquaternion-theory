@@ -1,0 +1,27 @@
+name: Lorentz-jet boundary theorem
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/action_selection/lorentz_jet_volume_boundary.*.md'
+      - 'tools/verify_lorentz_jet_boundary.py'
+      - 'tests/test_lorentz_jet_boundary.py'
+      - '.github/workflows/lorentz-jet-boundary.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-symbolic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install symbolic checker
+        run: python -m pip install sympy==1.14.0 pytest
+      - name: Execute exact symbolic identities
+        run: python tools/verify_lorentz_jet_boundary.py
+      - name: Execute focused regression tests
+        run: python -m pytest -q tests/test_lorentz_jet_boundary.py

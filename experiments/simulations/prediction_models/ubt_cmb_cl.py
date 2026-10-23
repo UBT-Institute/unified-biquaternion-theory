@@ -2,6 +2,11 @@
 # Licensed under the MIT License
 # See LICENSE file in the repository root for full license text
 """
+2026-10-09 AUDIT: INPUT SPECTRUM IS PHENOMENOLOGICAL.
+The historical internal-psi spatial-cutoff mechanism is closed as a no-go;
+this file is retained to reproduce the old toy-model Sachs-Wolfe calculation.
+It is not a current UBT prediction pipeline.
+
 ubt_cmb_cl.py
 =============
 CMB angular power spectrum C_l from UBT primordial power spectrum.

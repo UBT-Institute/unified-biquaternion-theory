@@ -33,7 +33,8 @@ X=\begin{pmatrix}a&b\\c&d\end{pmatrix}.
 \]
 
 Tato poznámka přesně určuje, kdy je tento polynom zdola omezený na
-`Mat(2,C)` a zda může sám o sobě vybrat izolované vakuum.
+`Mat(2,C)`, a dokazuje jeho nekoercivitu. Samotná nekoercivita nevylučuje
+nenulové minimum ani neurčuje strukturu minimalizujících orbit symetrií.
 
 <!-- BILINGUAL-UNIT: theta-potential-stability.inequality -->
 ## Univerzální nerovnost
@@ -56,8 +57,8 @@ H
 \end{aligned}
 \]
 
-První krok používá `Re(z) <= |z|`, druhý
-`|b|^2+|c|^2 >= 2|b||c|` a poslední obrácenou trojúhelníkovou nerovnost.
+První nerovnost používá současně `Re(z) <= |z|` a
+`|b|^2+|c|^2 >= 2|b||c|`; poslední je obrácená trojúhelníková nerovnost.
 
 <!-- BILINGUAL-UNIT: theta-potential-stability.boundedness -->
 ## Přesná věta o omezenosti [L1]
@@ -130,14 +131,19 @@ V(X_t)=V_0.
 \]
 
 Proto **žádný člen úplné invariantní kvartické rodiny potenciálů pro spojenou
-symetrii není koercivní na generickém prostoru polí a žádný nemůže sám
-bezderivačním potenciálem vybrat izolované vakuum**. Toto tvrzení nezávisí na
-koeficientech.
+symetrii není koercivní na generickém prostoru polí**. Toto tvrzení nezávisí
+na koeficientech. Samotný paprsek nevylučuje izolovaná minima jinde ani
+neurčuje izolovanost po přechodu ke kvocientu podle symetrií.
 
-Nejde o důkaz nestability úplné akce UBT: derivované členy, gauge kvocient,
-omezení nebo menší fyzický konfigurační prostor mohou plochý směr odstranit.
-Je to no-go pro řešení výběru akce pouhým laděním `m^2`, `lambda1` a `lambda2`
-uvnitř již klasifikovaného potenciálu.
+Poznámka `biquaternionic_potential_vacuum.cs.md` skutečně dokazuje nenulové
+globální minimum pro `lambda1>=0`, `lambda2>0` a `m^2<0`. V této oblasti
+paprsek leží přísně nad minimem, jehož Hessián je kladný příčně k uvedenému
+jádru. Předchozí úsudek od tohoto paprsku k nemožnosti jakéhokoli výběru
+vakua byl příliš silný a bere se zpět.
+
+To nedokazuje stabilitu úplné akce UBT ani neurčuje fyzikální gauge směry.
+Tyto otázky vyžadují její derivační a vazbovou strukturu a strukturu
+konfiguračního prostoru.
 
 <!-- BILINGUAL-UNIT: theta-potential-stability.verification -->
 ## Ověření
@@ -147,22 +153,27 @@ svědecké paprsky pomocí racionální aritmetiky a kontroluje logiku případ�
 koeficientů uvedenou výše. `tests/test_theta_potential_stability.py` udržuje
 svědky a plochý směr v CI.
 
-Univerzální nerovnost a důkaz postačitelnosti jsou elementární analytické
-nerovnosti explicitně uvedené výše. Úplná formalizace řetězce nerovností pro
-komplexní absolutní hodnotu v Leanu je `LEAN-PENDING`; formální důkaz této
-části se netvrdí.
+Univerzální nerovnost je formalizována jako `H_le_twice_norm_det` v
+`formal/lean/UBT/Action/PotentialVacuum.lean`; doklad kompilace a auditu axiomů
+je zaznamenán v `reports/lean_volume_hessian_2026_09_09.json`. Úplná
+klasifikace nutných a postačujících podmínek omezenosti v této poznámce zůstává
+`LEAN-PENDING`. Jejím důkazem je explicitní argument výše s nezávislou
+přesnou kontrolou svědků.
 
 <!-- BILINGUAL-UNIT: theta-potential-stability.consequence -->
 ## Důsledek pro program jediné akce
 
-Klasifikace potenciálu dosáhla své přirozené hranice:
+Výpočet potenciálu nyní rozlišuje:
 
 - invariantní báze je přesná;
 - omezenost dává přesné oblasti znamének;
-- celá rodina si zachovává nekompaktní plochý směr nezávislý na koeficientech.
+- celá rodina si zachovává nekompaktní plochý směr nezávislý na koeficientech;
+- v uvedené oblasti se záporným kvadratickým koeficientem existuje nenulové
+  globální minimum.
 
-Další theorem-critical selektor proto není další koeficient potenciálu. Musí
-pocházet z derivační/gauge/constraint struktury téže jediné akce. Navržená
-mikroskopická akce musí zejména ukázat, jak její kvocient konfiguračního
-prostoru a Hessián odstraní nebo učiní gauge plochou orbitu `H=D=0` při
-současném zachování GR sektoru s kovariantní tetrádou.
+Výběr koeficientů, fyzikální kvocient a Hessián úplné akce zůstávají otevřené.
+Platné mikroskopické pozadí musí splňovat úplné rovnice a mít nedegenerovanou
+kovariantní tetrádu. Doprovodná věta o minimu explicitně kontroluje, proč
+potenciálový ansatz s konstantním invariantem nestačí ve větvi zachovávající
+Lorentzovo párování. Není nutné odstraňovat každý paprsek s konstantním
+potenciálem jen proto, že existuje nad minimem.

@@ -1,4 +1,18 @@
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
+> **2026-10-10 MODULAR-CONVENTION OVERRIDE.**
+> This historical note mixes several theta conventions and should not be used
+> as the current parameter/modular-status source.
+>
+> - Physical \(\tau_{\rm UBT}=t+i\psi\) is not canonically the dimensionless
+>   Jacobi parameter.
+> - For \(\vartheta_3(\tau)=\sum_n e^{\pi i n^2\tau}\),
+>   \(\vartheta_3(\tau+1)=\vartheta_4(\tau)\); scalar \(T\)-invariance is false.
+>   The natural scalar group is \(\Gamma_\theta=\langle S,T^2\rangle\).
+> - The \(\Gamma_0(4)\) statement belongs to the rescaled
+>   \(\sum_n e^{2\pi i n^2\tau}=\vartheta_3(2\tau)\) convention.
+> - See \`canonical/bridges/theta_parameter_separation.md\` and
+>   \`research_tracks/theta_torus_potential/zeta_regularized_shape_audit.md\`.
+>
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1

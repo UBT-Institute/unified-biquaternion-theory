@@ -1,0 +1,27 @@
+name: SU3 exterior-Fock anomaly algebra
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/T2_GAUGE/su3_fock_chiral_anomaly.*.md'
+      - 'tools/verify_su3_fock_anomalies.py'
+      - 'tests/test_su3_fock_anomalies.py'
+      - '.github/workflows/su3-fock-anomaly.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-fock-anomaly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact algebra dependencies
+        run: python -m pip install sympy pytest
+      - name: Verify full SU3 anomaly traces
+        run: python tools/verify_su3_fock_anomalies.py
+      - name: Focused pytest
+        run: python -m pytest -q tests/test_su3_fock_anomalies.py

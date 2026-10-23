@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "checks_count": 22,
+  "checks": [
+    {
+      "name": "generic_Lorentz_antisymmetry",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "generic_nonnull_right_inverse",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "self_contracted_kinetic_trace",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "four_column_scale_variation",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "critical_background_quadratic_density",
+      "channel": "SymPy",
+      "passed": true
+    },
+    {
+      "name": "fraction_right_inverse_0",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_right_inverse_1",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_right_inverse_2",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_right_inverse_3",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_right_inverse_4",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_right_inverse_5",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_right_inverse_6",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_right_inverse_7",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_right_inverse_8",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_right_inverse_9",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_right_inverse_10",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_right_inverse_11",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_right_inverse_12",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_right_inverse_13",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_right_inverse_14",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_interpolated_quadratic_density",
+      "channel": "Python Fraction",
+      "passed": true
+    },
+    {
+      "name": "fraction_interpolated_scale_variation",
+      "channel": "Python Fraction",
+      "passed": true
+    }
+  ],
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "scope": "Nonnull split-jet auxiliary candidate with equal kinetic/metric pairing, full composite volume variation, fixed u, smooth algebraic V.",
+  "not_tested": "UBT action origin, all complex field modes, constrained or derivative-dependent jet functionals, physical mode quotient, stability, data.",
+  "lean_status": "LEAN-PENDING: lean and lake executables were unavailable in this runtime; generic differential-geometric claims have not been formalized."
+}
