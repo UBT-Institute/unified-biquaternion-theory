@@ -198,6 +198,23 @@ e0), so it is not merely an irrelevant additive constant. This shows **why the a
 
 At this point the possible mathematically honest outcomes are: derive an extra selection principle from independently grounded prior physics; restrict the claimed target of UBT to its valid kinematic content; or explicitly acknowledge an **underdetermined dynamical theory**. Arbitrarily choosing a convenient (lambda), a Palatini–Holst coefficient, or a CMB kernel does not complete the original theory.
 
+## Test of another existing premise: complex-time holomorphy
+
+The preexisting exact audit `research_tracks/theta_complex_time_classification/holomorphy_lorentz_no_go.md` supplies a separate consistency obstruction. If `psi` is an independent Lorentz **scalar**, and the full microscopic field is strictly holomorphic in `tau` in every inertial frame, then the Cauchy–Riemann and opposite-boost equations are
+\[
+\tau=t+i\psi,\qquad \partial_\psi\Theta=i\partial_t\Theta,\qquad
+\partial_{t'_\pm}=\gamma(\partial_t\pm v\partial_x).
+\]
+\[
+(\gamma-1)\partial_t\Theta\pm\gamma v\partial_x\Theta=0
+\quad\Longrightarrow\quad
+\partial_t\Theta=\partial_x\Theta=\partial_\psi\Theta=0
+\quad (v\ne0).
+\]
+Repeating the same argument for other spatial directions removes generic spacetime dependence. Therefore **that conjunction of old premises cannot independently select a nontrivial gravitational action**. This does NOT exclude a reduced holomorphic theta kernel, a distinguished frame not advertised as Lorentz invariant, or a fully covariant complexification of spacetime with transforming imaginary coordinates. Those are **different formulations**, whose field content and dynamics would need independent justification.
+
+The proof is already separately verified; no new holomorphy axiom has been introduced here. It joins the minimal-action no-go and the explicit symmetry-only action nonuniqueness as a consistency audit, not a universal failure theorem for every possible UBT realization.
+
 ## What this closes and what it does not
 
 **Closed negatively:** the entire original bare kinetic-plus-arbitrary-C2-potential completion with independent algebraic Lorentz connection and central composite metric cannot give a nondegenerate **predictive timelike gravitational sector**. Choosing a cleverer scalar, pseudoscalar, vector, bivector, or tensor *algebraic* potential does not evade the volume-collapse mechanism if after invariant contraction it is just a local radial U. Such a change can alter complex transverse interactions but not restore a nontrivial restricted local gravitational Hessian.
