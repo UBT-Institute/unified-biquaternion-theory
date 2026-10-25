@@ -1,4 +1,11 @@
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
+
+> **SUPERSEDED STATUS NOTICE — 2026-10-10:** The older [L0] wording below
+> overstates the physical SU(3) result.  Current authoritative status is in
+> `CLAIMS.yaml`, `canonical/su3_derivation/su3_stabilizer_exterior_fock.tex`,
+> and `research_tracks/T2_GAUGE/su3_dynamics_endgame_2026_10.md`.
+> The algebraic stabilizer/operator structure is proved; the moving-carrier theorem is conditional on the finalized Theta Lorentz representation; generic local QCD gauge dynamics and g_s remain open. Historical sections are retained for provenance.
+
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -10,13 +17,6 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
-
-
-> **SUPERSEDED STATUS NOTICE — 2026-10-10:** The older [L0] wording below
-> overstates the physical SU(3) result.  Current authoritative status is in
-> `CLAIMS.yaml`, `canonical/su3_derivation/su3_stabilizer_exterior_fock.tex`,
-> and `research_tracks/T2_GAUGE/su3_dynamics_endgame_2026_10.md`.
-> The algebraic stabilizer/operator structure is proved; the moving-carrier theorem is conditional on the finalized Theta Lorentz representation; generic local QCD gauge dynamics and g_s remain open. Historical sections are retained for provenance.
 
 # T2_GAUGE — Exactly Proved vs Open: Complete Proof-Gap Map
 

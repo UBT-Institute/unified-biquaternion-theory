@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Lorentz-equivariant first-order operators on the UBT Lorentz-vector slice
 
 Date: 2026-10-11. Status: RESEARCH / conditional representation-theoretic lemma. AI-assisted, awaiting independent review.

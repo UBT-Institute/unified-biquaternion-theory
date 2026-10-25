@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Full split-jet chain variation of the adopted Einstein–Lambda gravity sector
 
 **2026-10-24 — C-tier derivation/check, not a microscopic selection of the UBT action.** Based on [adopted gravity postulate](../../canonical/gr_closure/gravity_dynamical_postulate.en.md), #635 and [the independent-variable/composite chain-rule warning](trace_torsion_curvature_bridge.en.md). The separate full gauge/matter/quantum action is OPEN.

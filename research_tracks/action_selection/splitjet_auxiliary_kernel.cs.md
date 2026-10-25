@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Přesné jádro pomocné split-jet mapy a redundance posunů
 
 **Pracovní strukturální výsledek C-tier, 24. 10. 2026.** Pouze přijatý klasický gravitační sektor Palatini–HT; Hessian úplné mikroskopické UBT a Diracova algebra zůstávají otevřené.

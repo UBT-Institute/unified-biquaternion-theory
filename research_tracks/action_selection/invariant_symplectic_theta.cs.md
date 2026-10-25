@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # UBT od symplektické struktury: invariantní dvouforma na osmi reálných složkách
 
 **Přesný algebraický výsledek C-tier (24. 10. 2026); nejde o hotový fundamentální Hamiltonián ani úplnou polní symplektickou formu.** Navazuje na Hamiltonovský track #716. Bez dalšího fundamentálního pole či akce.

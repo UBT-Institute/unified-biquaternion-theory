@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Presymplectic null shifts in the adopted split-jet gravity sector
 
 **C-tier structural deduction, not a complete UBT Dirac classification.** Builds on the pointwise kernel calculation in draft PR #713 and the adopted Palatini–HT gravity action. No new action or coupling.

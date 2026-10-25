@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Konstantní kompozitní kinetická energie pouze posouvá integrační konstantu HT
 
 **Přesná algebraická identita C-tier, 24. 10. 2026. NEJDE o výběr ani mikroskopické odvození jediné akce UBT.** Vychází z [objemové identity](lorentz_jet_volume_boundary.en.md), [přijatého gravitačního postulátu](../../canonical/gr_closure/gravity_dynamical_postulate.cs.md) a [registru akce](../../canonical/ACTION.en.md).

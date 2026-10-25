@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Antilineární převod Weylových chiralit přímo v bikvaternionu
 
 **Přesná algebraická identita C-tier, 24. 10. 2026. Není to hotový Hamiltonián UBT.** Zpřesňuje komplexně-lineární překážku boostů #722 a přirozenost pravých projektorů #723.

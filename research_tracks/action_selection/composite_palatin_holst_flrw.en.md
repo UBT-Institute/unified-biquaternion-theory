@@ -8,9 +8,10 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Exact homogeneous parity-curvature comparator, not final fundamental UBT action or full untruncated Euler system.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 # Composite Palatini–Holst action: exact homogeneous trace/axial spin variation
 
 **Status: CONDITIONAL EXACT MINISUPERSPACE RESULT / FULL UBT DYNAMICS OPEN.** Advances beyond the algebraic auxiliary-torsion no-rescue of draft PR #692. An Einstein–Cartan curvature four-form and independent Holst parity-odd coefficient are **supplied comparison operators**, not derived from the current sole unfinished fundamental Theta action. The composite relationship is enforced **before the homogeneous variation**, but the spatially general field equations have not been verified.

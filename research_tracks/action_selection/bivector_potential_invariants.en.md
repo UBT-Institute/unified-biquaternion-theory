@@ -8,9 +8,10 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Exact algebraic degree-four result; no new fundamental UBT action or physical CMB prediction.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 # Vector, tensor and bivector potentials: exact algebraic audit and derivative frontier
 
 **Status: PROVED CONDITIONAL ALGEBRA / FUNDAMENTAL DYNAMICS OPEN.** The prior full polynomial-potential classification in `theta_potential_invariants.en.md` is authoritative: with the declared spin-congruence and U(1) phase symmetry, the single-Theta derivative-free scalar potential at degree at most four is exhausted by H and |det X|². The purpose here is to test alternative *representations* of those invariants and to identify which proposals truly require geometric derivatives or new field content.

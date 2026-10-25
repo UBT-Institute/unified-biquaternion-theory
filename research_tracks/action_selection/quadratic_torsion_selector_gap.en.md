@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Algebraic torsion potential cannot source torsion by itself
 
 **Conditional auxiliary-field variational theorem (2026-10-25). NOT a Theta-only UBT action or Hamiltonian.** Builds on torsion decomposition #744 and canonical composite metric with torsionful curved branch.

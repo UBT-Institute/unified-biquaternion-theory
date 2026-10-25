@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Úplná řetězová variace přijaté split-jet gravitace Einstein–Lambda
 
 **24. 10. 2026 — podmíněné odvození C-tier, nikoli výběr mikroskopické akce UBT.** Zdroje: [přijatý gravitační postulat](../../canonical/gr_closure/gravity_dynamical_postulate.en.md), #635 a [upozornění na kompozitní variaci](trace_torsion_curvature_bridge.cs.md). Úplná sjednocená akce pro hmotu, kalibrační a kvantový sektor zůstává otevřená.

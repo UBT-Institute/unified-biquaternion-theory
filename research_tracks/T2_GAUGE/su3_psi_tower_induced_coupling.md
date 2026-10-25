@@ -1,4 +1,16 @@
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Compact-psi tower stress test for induced SU(3) coupling
 
 **Status:** conditional exact KK heat-trace benchmark.  It tests whether the

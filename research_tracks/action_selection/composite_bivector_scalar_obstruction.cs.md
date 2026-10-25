@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Kompozitní bivektor: překážka pro nový algebraický skalár
 
 **Pracovní výsledek (C-tier), 23. 10. 2026.** Bez nové akce, axiomu nebo předpovědi. Navazuje na [propojení skalární energie](scalar_energy_gravity_bridge.cs.md), mergnuté #700 a podmíněnou Einsteinovu–Lambda větev #635.

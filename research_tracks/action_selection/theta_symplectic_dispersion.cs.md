@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Hamiltonián od základů: disperze z invariantní symplektické struktury Theta
 
 **Podmíněná věta C-tier, 24. 10. 2026.** Využívá kandidátní bodovou dvouformu Ω(X,Y)=B(X,JY) z draftu #717. Není to výběr fyzikálního Hamiltoniánu ani odvození gravitační akce.

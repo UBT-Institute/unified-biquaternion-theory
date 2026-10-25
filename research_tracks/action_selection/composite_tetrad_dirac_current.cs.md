@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Podmíněně zachovávaný Diracův proud na kompozitní tetrádě UBT
 
 **Podmíněná věta C-tier, 25. 10. 2026; nikoli odvozená fundamentální akce či Hamiltonián.**

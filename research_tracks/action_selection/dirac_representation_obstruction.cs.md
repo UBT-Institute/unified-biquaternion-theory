@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Diracův Hamiltonián: kanonické maticové pole Theta není Diracův spinor
 
 **Přesná reprezentační překážka C-tier, 24. 10. 2026.** Navazuje na draft #719. Platí pro dosavadní kongruenční rotace X↦UXU† a standardní spinorovou reprezentaci stejné grupy Spin(3)=SU(2), nikoli pro každou představitelnou emergentní spinorovou excitaci.

@@ -9,6 +9,18 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Exact frozen Fourier first-jet rank, not Euler-Lagrange principal symbol.
 UBT-AI-PROVENANCE-END -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Frequency-sensitive rank of the single-Theta composite metric
 
 **Status: KINEMATIC LINEARIZATION PROVED; ON-SHELL RANK OPEN.** This extends the already merged geometric-rank and composite-spin results, rather than selecting a new fundamental UBT action.

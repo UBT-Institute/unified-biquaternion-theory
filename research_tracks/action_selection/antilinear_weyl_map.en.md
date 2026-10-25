@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Antilinear Weyl-dual map in the native biquaternion carrier
 
 **C-tier exact representation identity; 2026-10-24. This does not derive the fundamental UBT Hamiltonian.** Refines the complex-linear boost obstruction (#722) and natural right-projector obstruction (#723), not their validity in their stated categories.

@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Oprava interpretace spinu: levé kvaternionové násobení versus kongruence
 
 **24. 10. 2026, podmíněný reprezentační rozbor C-tier.** Zamčené axiomy UBT se nemění. Zpřesňuje příliš širokou interpretaci draftu #720.

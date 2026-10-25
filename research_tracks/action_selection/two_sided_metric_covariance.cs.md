@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Dvoustranná kovariantní derivace a zachování metriky UBT
 
 **Přesná kinematická věta, 25. 10. 2026; nikoli odvozený fundamentální Hamiltonián.** Konexe nesmějí být svévolně zavedená nová fundamentální pole.

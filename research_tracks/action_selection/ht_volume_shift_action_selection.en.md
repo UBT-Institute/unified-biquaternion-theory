@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Constant composite kinetic energy is an HT integration-constant shift
 
 **C-tier exact algebraic identity; 2026-10-24. NOT a selection or microscopic derivation of the unique UBT action.** Inputs: [canonical Lorentz-jet volume collapse](lorentz_jet_volume_boundary.en.md), [adopted gravity postulate](../../canonical/gr_closure/gravity_dynamical_postulate.en.md), [action registry](../../canonical/ACTION.en.md). The existing full-action gap remains OPEN.

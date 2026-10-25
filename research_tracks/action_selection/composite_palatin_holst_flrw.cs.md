@@ -8,9 +8,10 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Exact homogeneous parity-curvature comparator, not final fundamental UBT action or full untruncated Euler system.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 # Kompozitní Palatiniho–Holstova akce: přesná homogenní variace spinového spojení
 
 **Stav: CONDITIONAL EXACT MINISUPERSPACE RESULT / FULL UBT DYNAMICS OPEN.** Pokračuje za algebraické vyloučení pomocné axiální torze v draft PR #692. Einsteinova–Cartanova křivostní čtyřforma a nezávislý paritně lichý Holstův koeficient jsou **předpokládané srovnávací operátory**, nikoli odvození z jediné dosud nedokončené fundamentální akce Theta. Kompozitní vazbu ukládáme **před homogenní variací**, ale úplné obecné rovnice pole dosud neověřujeme.

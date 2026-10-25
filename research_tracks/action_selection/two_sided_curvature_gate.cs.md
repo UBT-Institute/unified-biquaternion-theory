@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Dvoustranná křivost a Hamiltonovské vazby: přesná hranice
 
 **Přesná algebraická identita mimo rovnice pohybu, 25. 10. 2026; neodvozuje Hamiltonián.** Navazuje na mergnuté #735.

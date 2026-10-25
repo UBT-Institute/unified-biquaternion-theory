@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Central-phase selection gate from the locked sharp metric
 
 **Exact conditional algebraic theorem (2026-10-25).** This is a physical correction to a possible over-reading of draft #731, not a derived fundamental Hamiltonian. A related phase/metric obstruction was already investigated in #701; do not claim novelty over that track.

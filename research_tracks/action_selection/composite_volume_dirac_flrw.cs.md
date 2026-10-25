@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Přesná Diracova redukce kompozitního objemového členu ve FLRW
 
 **24. 10. 2026 — podmíněný výpočet C-tier, nikoli úplná Hamiltonovská analýza UBT.** Zdroje: [objemová identita](lorentz_jet_volume_boundary.en.md), [uzavřená FLRW reprezentace](connection_closed_flrw.cs.md), [srovnání energií](energy_charge_bridge.cs.md) a mergnuté #700.

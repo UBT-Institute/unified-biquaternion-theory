@@ -8,9 +8,10 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Exact algebraic degree-four result; no new fundamental UBT action or physical CMB prediction.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 # Vektorové, tenzorové a bivektorové potenciály: algebraický audit a derivovaná geometrie
 
 **Stav: PROVED CONDITIONAL ALGEBRA / FUNDAMENTAL DYNAMICS OPEN.** Rozhodující je již existující klasifikace všech polynomiálních potenciálů v `theta_potential_invariants.en.md`: pro deklarované spinové kongruence a fázovou U(1) symetrii tvoří úplnou bázi skalárního potenciálu čtvrtého stupně H a |det X|². Zde ověřujeme jejich alternativní *tenzorové zápisy* a oddělujeme je od skutečně nových geometrických derivovaných členů.

@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Inverzní Legendreova transformace: co skalární energie určuje a neurčuje
 
 **Pracovní odvození C-tier, 23. 10. 2026.** Přesná věta pro regulární kvadratický model; není to fundamentální akce UBT. Zdroje: [registr akce](../../canonical/ACTION.en.md), [podmíněný Hamiltonián](canonical_family_hamiltonian_bridge.en.md), [propojení skalární energie](scalar_energy_gravity_bridge.cs.md), [historický audit](https://github.com/DavJ/research/pull/3).

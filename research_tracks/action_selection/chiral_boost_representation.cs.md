@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Lorentzovy boosty jako test spinorové reprezentace UBT
 
 **Podmíněný reprezentační výsledek C-tier, 24. 10. 2026.** Zpřesňuje #721 a #720. Zamčené axiomy ani kompozitní definice metriky neměníme.
