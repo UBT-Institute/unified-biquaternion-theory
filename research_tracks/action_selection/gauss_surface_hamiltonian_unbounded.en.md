@@ -1,0 +1,11 @@
+# Exact Gauss-surface unboundedness witness for the minimal Theta Hamiltonian
+
+**2026-10-26 — conditional exact Hamiltonian no-go on a fixed background with only Gauss constraints.** Not a statement about the full gravitational Dirac-constrained theory.
+
+Let q be the eight real components of X=z0 I+sum_j zj i sigma_j, with invariant quadratic kinetic matrix G=diag(2,-2,-2,-2,2,-2,-2,-2) in (Re z0..Re z3,Im z0..Im z3). Choose q0 corresponding to X0=i r I (r!=0), so only Im z0=r. Under congruence X->SXS^dagger the three rotations fix q0 and three boosts span the **Re z_j** coordinates (since infinitesimal boost gives i r sigma_j, equivalent to Re zj=r). Therefore p along Im z3 has zero contraction with every T_a q0.
+
+In the fixed-background minimal kinetic model L=(1/2)G_AB (D_t q)^A(D_t q)^B - spatial-gradient energy -V(q), the canonical momentum p=G D_t q and Gauss constraint G_a=p_A (T_a q)^A. Choose constant q=q0, gauge connection and electric fields zero, and p_A=lambda delta_(A,Im z3) with arbitrary real lambda. Then all six Gauss constraints G_a=0 exactly; there are no spatial gradients and V(q0) is fixed. Since (G^-1)^(Im z3,Im z3)=-1/2, the canonical kinetic energy is -lambda²/4. On any finite-volume periodic spatial box the full energy is E(lambda)=Vol*(V(q0)-lambda²/4) -> -infinity. This is an explicit unbounded direction on the **exact** Gauss constraint surface. With the gauge theory made dynamical, zero electric fields also satisfy the gauge-field contribution to Gauss. The gauge orbit cannot remove this instability because the gauge-invariant quadratic momentum norm takes arbitrarily negative values on the family.
+
+Important restriction: if independent dynamical GR gravity is included, one must additionally impose Hamiltonian/momentum constraints and solve the gravitational initial-value problem; the witness at fixed flat g is NOT automatically a point of the complete gravitational constraint surface. Other independent constraints or an accepted consistent truncation could change this answer. The present test falsifies Gauss-only repair of the stated minimal Theta sector, not every completion of UBT.
+
+Verification: tools/verify_theta_gauss_energy_unbounded.py and tests/test_theta_gauss_energy_unbounded.py.
