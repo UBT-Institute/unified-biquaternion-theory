@@ -28,3 +28,11 @@ ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/edge_check_138_4_139_
 ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/bb_mc5000_138_4_139_4.csv export-ignore
 ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/lock_in_138_96.csv export-ignore
 ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/phase_prime_reset_v2_scan_k_holdout_160_178.csv export-ignore
+
+# Generated archival scans remain tracked; omit them only from source exports.
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/phase_prime_reset_v2_scan.csv export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/phase_prime_reset_v2_scan_k.csv export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/alpha_stability_101_199.csv export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/scan_110_162_w16.csv export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/ellprobe_EE_BB_100_200.csv export-ignore
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/shear_scan_137_128_146_phase_shear_scan.csv export-ignore

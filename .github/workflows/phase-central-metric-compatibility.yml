@@ -1,0 +1,26 @@
+name: Scalar phase central metric compatibility
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/action_selection/phase_central_metric_compatibility.*.md'
+      - 'tools/verify_phase_central_metric_compatibility.py'
+      - 'tests/test_phase_central_metric_compatibility.py'
+      - '.github/workflows/phase-central-metric-compatibility.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-phase-metric:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install sympy pytest
+      - name: Verify metric phase weight and neutral polynomial potential
+        run: python tools/verify_phase_central_metric_compatibility.py
+      - name: Focused regression
+        run: python -m pytest -q tests/test_phase_central_metric_compatibility.py

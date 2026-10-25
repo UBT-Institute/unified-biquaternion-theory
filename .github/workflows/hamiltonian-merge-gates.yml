@@ -1,0 +1,33 @@
+name: Hamiltonian charge and torsion gates
+
+on:
+  pull_request:
+    paths:
+      - 'research_tracks/action_selection/**'
+      - 'research_tracks/T2_GAUGE/psi_weak_multiplicity.*.md'
+      - 'tests/test_phase_central_metric_compatibility.py'
+      - 'tests/test_psi_mode_weak_obstruction.py'
+      - 'tools/verify_phase_central_metric_compatibility.py'
+      - 'tools/verify_psi_mode_weak_obstruction.py'
+      - 'tools/verify_hamiltonian_merge_gates.py'
+      - '.github/workflows/hamiltonian-merge-gates.yml'
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  focused-gates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - run: python -m pip install sympy==1.14.0 mpmath==1.3.0
+      - run: python -B tools/verify_hamiltonian_merge_gates.py
