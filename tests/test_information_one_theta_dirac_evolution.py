@@ -21,12 +21,12 @@ def test_antilinear_theta_equation_is_dirac_right_weyl_equation():
     dvs=[s.Matrix(s.symbols(f'dv{k}_0:2',complex=True)) for k in range(3)]
     m=s.symbols('m',real=True)
     # Theta column: i dot(v) = i sigma_i partial_i(v)+ m eps conjugate(u).
-    dotv=sum((pauli()[k]*dvs[k] for k in range(3)),s.zeros(2))-s.I*m*eps*u.conjugate()
+    dotv=sum((pauli()[k]*dvs[k] for k in range(3)),s.zeros(2,1))-s.I*m*eps*u.conjugate()
     # R=eps conjugate(v); the Dirac equation requires
     # i dot(R)=-i sigma_i partial_i(R)+m u.
     i_dot_R=s.I*eps*dotv.conjugate()
     grad_R=[eps*w.conjugate() for w in dvs]
-    wanted=-s.I*sum((pauli()[k]*grad_R[k] for k in range(3)),s.zeros(2))+m*u
+    wanted=-s.I*sum((pauli()[k]*grad_R[k] for k in range(3)),s.zeros(2,1))+m*u
     assert all(s.simplify(z)==0 for z in (i_dot_R-wanted))
 
 def test_dirac_factorization_mass_shell():
