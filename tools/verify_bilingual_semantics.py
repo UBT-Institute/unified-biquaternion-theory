@@ -101,7 +101,18 @@ def document(identifier: str, en: bytes, cs: bytes) -> dict:
 
 
 def load_documents(root: Path, base: str | None) -> list[dict]:
-    changed = set(parity.changed_paths(root, base)) if base else None
+    changed = None
+    if base:
+        comparison_base = subprocess.check_output(
+            ["git", "merge-base", base, "HEAD"], cwd=root, text=True,
+        ).strip()
+        output = subprocess.check_output(
+            ["git", "diff", "--name-only", "-z", "--no-renames", "--diff-filter=AM", comparison_base, "HEAD"],
+            cwd=root, text=True,
+        )
+        # Unlike legacy-prose migration, approval binds RAW bytes. Even whitespace,
+        # generated-header updates and moves of an existing pair need fresh evidence.
+        changed = {root / name for name in output.split("\0") if name}
     documents = []
     for en, cs in sorted(parity.all_pairs(root)):
         if changed is not None and en not in changed and cs not in changed:
@@ -249,7 +260,7 @@ class CopilotReviewer:
             raise ReviewError("GITHUB_TOKEN with copilot-requests:write is required; organization Copilot billing policy must allow CLI use")
         version = subprocess.run([self.binary, "--no-auto-update", "--version"],
                                  capture_output=True, text=True, timeout=30, check=True)
-        if version.stdout.splitlines()[0].rstrip(".") != f"GitHub Copilot CLI {CLI_VERSION}":
+        if not version.stdout.splitlines() or version.stdout.splitlines()[0].rstrip(".") != f"GitHub Copilot CLI {CLI_VERSION}":
             raise ReviewError(f"expected pinned Copilot CLI {CLI_VERSION}")
 
     def __call__(self, batch: list[dict]) -> str:
@@ -279,9 +290,14 @@ class CopilotReviewer:
                 # Keep bounded, credential-redacted diagnostics in JSON, never Markdown.
                 diagnostic = (result.stderr or result.stdout).replace(self.token, "[REDACTED]")
                 diagnostic = re.sub(r"\x1b\[[0-?]*[ -/]*[@-~]", "", diagnostic)[:2000]
+                message = f"Copilot exited {result.returncode}; check organization CLI billing/model access and token permission"
+                if "access denied by policy" in diagnostic.lower():
+                    message = (
+                        "Copilot access denied by policy; an organization administrator must check "
+                        "'Allow use of Copilot CLI billed to the organization' and model access"
+                    )
                 raise ReviewError(
-                    f"Copilot exited {result.returncode}; check organization CLI billing/model access and token permission",
-                    diagnostic,
+                    message, diagnostic,
                 )
             if len(result.stdout) > 1000000:
                 raise ReviewError("review response exceeds output limit")

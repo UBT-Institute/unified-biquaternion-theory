@@ -162,6 +162,35 @@ def test_any_raw_source_change_invalidates_review(tmp_path: Path) -> None:
         GATE.verify_sources(tmp_path, [item])
 
 
+@pytest.mark.parametrize("change", ["header", "whitespace", "rename"])
+def test_selects_fresh_review_after_any_paired_source_byte_or_path_change(tmp_path: Path, change: str) -> None:
+    def git(*args):
+        return subprocess.check_output(["git", *args], cwd=tmp_path, text=True).strip()
+
+    def commit():
+        git("add", ".")
+        git("-c", "user.name=Test", "-c", "user.email=test@example.invalid", "commit", "-qm", "fixture")
+        return git("rev-parse", "HEAD")
+
+    git("init", "-q")
+    en, cs = tmp_path / "note.en.md", tmp_path / "note.cs.md"
+    en.write_text("# Note\n\nNot proved.\n", encoding="utf-8")
+    cs.write_text("# Poznámka\n\nNedokázáno.\n", encoding="utf-8")
+    base = commit()
+    if change == "header":
+        marker = "<!--\nUBT-AI-PROVENANCE-BEGIN\nschema: example\nUBT-AI-PROVENANCE-END\n-->\n\n"
+        en.write_text(marker + en.read_text(), encoding="utf-8")
+    elif change == "whitespace":
+        en.write_text(en.read_text() + "\n", encoding="utf-8")
+    else:
+        en.rename(tmp_path / "moved.en.md")
+        cs.rename(tmp_path / "moved.cs.md")
+    commit()
+    documents = GATE.load_documents(tmp_path, base)
+    assert len(documents) == 1
+    assert documents[0]["id"] == ("moved.en.md" if change == "rename" else "note.en.md")
+
+
 def test_unavailable_provider_cannot_fall_back_to_approval(monkeypatch) -> None:
     monkeypatch.setattr(GATE.shutil, "which", lambda _: "/fake/copilot")
     monkeypatch.delenv("GITHUB_TOKEN", raising=False)
@@ -211,3 +240,16 @@ def test_timeout_produces_no_approval_or_provider_output(monkeypatch) -> None:
     with pytest.raises(GATE.ReviewError, match="timed out") as error:
         reviewer([sample()])
     assert "secret" not in str(error.value)
+
+
+def test_policy_rejection_identifies_required_setting_and_redacts_token(monkeypatch) -> None:
+    reviewer = object.__new__(GATE.CopilotReviewer)
+    reviewer.binary, reviewer.model, reviewer.timeout, reviewer.token = "/fake/copilot", GATE.MODEL, 1, "fixture-secret"
+    monkeypatch.setattr(GATE.subprocess, "run", lambda *args, **kwargs: subprocess.CompletedProcess(
+        args[0], 1, "", "Access denied by policy settings; fixture-secret",
+    ))
+    with pytest.raises(GATE.ReviewError, match="Allow use of Copilot CLI billed to the organization") as error:
+        reviewer([sample()])
+    assert "fixture-secret" not in str(error.value)
+    assert "fixture-secret" not in error.value.diagnostic
+    assert "[REDACTED]" in error.value.diagnostic
