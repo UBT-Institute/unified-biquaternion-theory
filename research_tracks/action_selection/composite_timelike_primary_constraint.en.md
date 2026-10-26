@@ -21,7 +21,7 @@ phi_rho := pi_rho - epsilon F(rho) rho^3 det(b_i^j)/N0^2 ≈ 0.
 
 Because no dot(b_mu^j) is present, all 12 auxiliary-boost momenta also vanish as primary constraints in this *particular* unconstrained-component formulation, before classifying primary/secondary, first/second class or checking boost gauge redundancies. The complete Dirac algorithm is required; counting these constraints as physical removed degrees is premature.
 
-In fact Proposition 9 already proves that varying b_mu^j for nonconstant classified U prevents a nondegenerate stationary tetrad on a connected patch. Thus the conditional momentum-constraint result is a property of an action with no allowed nondegenerate stationary solution under those assumptions; it does NOT rescue the minimal composite branch or establish a viable physical Hamiltonian.
+In fact Proposition 9 establishes that varying b_mu^j for nonconstant classified U prevents a nondegenerate stationary tetrad on a connected patch. Thus the conditional momentum-constraint result is a property of an action with no allowed nondegenerate stationary solution under those assumptions; it does NOT rescue the minimal composite branch or establish a viable physical Hamiltonian.
 
 For the full eight-real Theta carrier, for a composite connection omega[Theta], or with curvature terms, the Hessian must be recomputed with ALL induced velocity and possibly higher-derivative dependence. Neither the zero Hessian rank nor the exact form of phi_rho generalizes without proof.
 
