@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: conditional_axial_torsion_from_dirac_carrier -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Conditional axial torsion source from one-biquaternion Dirac carrier
 

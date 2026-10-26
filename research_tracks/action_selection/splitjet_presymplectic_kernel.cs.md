@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: splitjet_presymplectic_kernel -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -10,18 +11,20 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-# Nulové předsymplektické posuny pomocné split-jet gravitace
 
-**Pracovní výsledek C-tier, nikoli úplná Diracova klasifikace UBT.** Navazuje na draft PR #713 a přijatou Palatiniho–HT akci. Bez nové akce nebo koeficientu.
+# Presymplektické nulové posuny přijatého gravitačního sektoru rozděleného jetu
 
-Pro každý index mu, nenulové nenulové-neutrální X a E_mu^a=q^-1(D_mu X^a+K_J,mu^a_b X^b+w_mu X^a) má pomocná mapa (K_J,w)->E sedm složek, rank čtyři a trojrozměrné jádro. Lorentzovsky antisymetrický posun Z_mu^a_b splňující Z_mu^a_b X^b=0 nechá E, zakřivení omega, objemový element i celou přijatou gravitační akci přesně beze změny.
+**Strukturní důsledek úrovně C, nikoli úplná Diracova klasifikace UBT.** Navazuje na bodový výpočet jádra návrhu PR #713 a přijatou gravitační akci Palatini–HT. Žádná nová akce či vazebná konstanta.
 
-Ve vhodných lokálních souřadnicích lze pomocné proměnné rozdělit na čtyři směry vstupující do tetrády a dvanáct souřadnic jádra z^I. Gravitační Lagrangián nezávisí na z^I ani na dot z^I. Jejich kanonické hybnosti tedy splňují dvanáct primárních vazeb p_z=0; v těchto směrech je předsymplektická forma nulová. Jestliže zbylé vazby a hranice zachovávají posunovou symetrii, podmínka zachování vazeb nevytváří další sekundární podmínky a p_z generují pomocné posuny první třídy **tohoto omezeného sektoru**. Tyto pomocné stupně nelze znovu přičítat k fyzikálnímu ADM počtu.
+Pro každý prostoročasový index mu s X^a nenulové normy a E_mu^a=q^-1(D_mu X^a+K_J,mu^a_b X^b+w_mu X^a) má pomocné zobrazení (K_J,w)->E celkem 7 složek, hodnost 4 a tři směry jádra. Nechť Z_mu^a_b je Lorentzovsky antisymetrické a splňuje Z_mu^a_b X^b=0. Potom konečný posun K_J,mu -> K_J,mu + Z_mu při pevných ostatních proměnných ponechává E, omega, R(omega), objemovou formu i S_G nezměněné. Tvrzení platí mimo pohybové rovnice, bodově a přesně.
 
-**Pozor:** stabilizátor závisí na X. Při přechodu na adaptované souřadnice se mohou měnit také konjugované hybnosti X. Proto jednotlivé původní hybnosti K_J nejsou bez dalšího přesně generátory posunů. Další přímá závislost na K_J v budoucím hmotovém nebo UV členu může tuto redundanci narušit.
+Pro lagrangián bez derivací těchto *souřadnic jádra* z^I (I=1,...,12), závislý na ostatních polích prostřednictvím E a přijaté akce, je L v lokálních adaptovaných souřadnicích nezávislé na z^I i dot z^I. Proto p_{z^I}=0 jsou dvanácti primárními vazbami a kanonická presymplektická dvojforma má dvanáct nulových vektorů souřadnicových posunů před další redukcí. Protože H_c nezávisí na z^I, zachování p_z nedává sekundární podmínku: dot p_z={p_z,H_T}=0. Jejich vzájemné závorky vymizí. **Podmíněně:** pokud jsou tyto adaptované souřadnice platné, zbývající vazby jsou rovněž vůči posunu invariantní a okrajová data jej nenarušují, jsou p_z generátory posunů první třídy *v tomto sektoru*. Jejich počet se nemá přičítat ke konečnému fyzikálnímu počtu GR, protože jde o pomocné souřadnice nepřítomné v redukovaných tetrádových souřadnicích.
 
-Předsymplektický potenciál standardního prvního řádu Palatiniho sektoru je schematicky Theta_pre ~ (1/(4 kappa)) epsilon_abcd E^a wedge E^b wedge delta omega^{cd} (podle okrajových konvencí). Posuny jádra nemění E ani omega, a proto představují nulové směry jeho kovariantní předsymplektické struktury, pokud je správně ošetřena závislost transformace na X a hranice.
+Důležitá jemnost: rámec stabilizátoru závisí na X. Pro vytvoření oprávněných lokálních souřadnic rozdělme K na příčný obraz a stabilizátor pomocí hladké báze závislé na X; výsledná kanonická transformace může míchat hybnosti X. Naivní holé hybnosti původních složek K se tedy nemusejí jednotlivě rovnat p_z. Přesné primární vazby posunů jsou lineárními kombinacemi v adaptovaných kanonických souřadnicích. Nejde o důkaz dvanácti nezávislých kalibračních generátorů úplné UBT v teorii s dalšími zdrojovými či kinetickými členy závislými na K.
 
-**Neprokázáno:** úplná Poissonova algebra s konexí, X, zbylými split-jet souřadnicemi, Lambda a C3; celý počet fyzikálních módů; stabilita imaginárně-časového a hmotového sektoru.
+Palatiniho kinetický presymplektický potenciál prvního řádu již přijatého gravitačního sektoru má tvar Theta_pre ~ (1/(4 kappa)) epsilon_abcd E^a wedge E^b wedge delta omega^{cd} (až na okrajové konvence) plus pomocné členy HT. Protože E je podél Z invariantní, kontrakce tohoto potenciálu s delta_Z vymizí. *Kovariantní* presymplektický proud má tedy nulovou kontrakci podél směrů posunu až na okrajové jemnosti a generátory závislé na poli. To je invariantnější diagnostika než naivní hodnosti Hessovy matice.
 
-**Další úkol:** spočítat úplné smíšené Poissonovy závorky v adaptovaných souřadnicích přijaté gravitační akce před tvrzením úplného počtu vazeb.
+## Co tím není prokázáno
+Žádný zdejší výpočet neurčuje celou matici vazeb zahrnující omega, X, obrazové složky K_J/w, Lambda, C3 či další stupně volnosti komplexního času. Gravitační limita stále podmíněně má dva gravitonové módy ADM. Nevyplývá z toho, že úplná UBT má pouze dva fyzikální stupně volnosti ani že kinetická signatura (2,6) pevného pozadí je neškodná.
+
+**Další rozhodující výpočet:** konstruovat konkrétní kanonické souřadnice prvního řádu *přijatého úplného gravitačního postulátu*, výslovně zachovat adaptovanou transformaci jádra závislou na X a spočítat smíšené závorky s primárními vazbami tetrády a konexe. Teprve pak tvrdit úplný počet vazeb.

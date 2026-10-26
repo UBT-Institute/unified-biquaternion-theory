@@ -1,0 +1,25 @@
+<!-- BILINGUAL-UNIT: linearized_gauss_momentum_rank -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
+# Linearized Gauss constraints on the Theta canonical momenta
+
+**Conditional, 2026-10-26.** Fix a prescribed time slicing and a real eight-dimensional congruence representation. Choose L_kin=(1/2) G_AB (D_t q)^A (D_t q)^B with nondegenerate invariant G of inertia (2,6). This is a finite-dimensional/ultralocal test of the already proposed family; NOT the unfinalized full UBT action, an ADM reduction or a physical no-ghost theorem.
+
+The canonical momentum is p_A=G_AB(D_t q)^B, with invertible velocity-momentum map, so Theta has no primary kinetic constraints. A nondynamical temporal gauge potential a0^a has vanishing canonical momentum and enforces the moment map Gauss_a=p_A (T_a)^A{}_B q^B (with a sign chosen consistently in the Hamiltonian). A propagating Yang-Mills extension adds the standard covariant-divergence electric field term to Gauss_a, and six A0 primaries; it does not change the Theta-momentum rank computed below at fixed zero background electric field.
+
+At the timelike congruence vacuum q0 corresponding to X0=i r I, the six tangent vectors T_a q0 consist of three zero rotations and three linearly independent boosts. Therefore the 6x8 Jacobian of Gauss_a with respect to p_A at (q0,p0=0) has rank **3**. The nonzero linearized Gauss constraints can solve for precisely three linear combinations of the eight momentum fluctuations. Gauge fixing the three corresponding boost-orbit configuration variables removes three negative tangent pairs. The remaining Theta velocity Hessian has inertia **(2,3)** on an appropriate local transverse tangent complement.
+
+The three rotation Gauss constraints have vanishing linearized Theta-momentum gradients at the vacuum because rotations stabilize q0. They can act on gauge-field fluctuations if a dynamical gauge sector is included, but they cannot be counted as additional independent linear Theta momentum eliminations. This computation does not exclude genuinely new independently derived scalar constraints, nor does it justify imposing invariant equalities by hand. Singular nonlinear constraints require a separate constant-rank/constraint-surface analysis. For a conventional full noncompact SL(2,C) Yang-Mills kinetic term, the independently established (3,3) internal gauge kinetic signature supplies another obstruction.
+
+Exact rank certificate and regression: tools/verify_theta_gauss_momentum_rank.py, tests/test_theta_gauss_momentum_rank.py. The pending action ADR must be accepted and its full symplectic/ADM system specified before a physical degree-of-freedom count is asserted.

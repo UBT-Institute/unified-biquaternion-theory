@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: holomorphic_first_jet_nonselection -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -10,24 +11,31 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-# Holomorfnost a první jet neurčují Hamiltonián UBT
 
-**Přesný kinematický test, 25. 10. 2026.** Zamčený komplexní čas a definice metriky z prvních derivací samy nepředepisují další časový vývoj. Netvrdíme existenci dvou fyzikálně rozdílných řešení úplných rovnic UBT.
+# Test nevýběru holomorfním jetem pro program UBT od hamiltoniánu
 
-V lokální ploché větvi D_mu=partial_mu, s kvaternionovými jednotkami e_j²=-1, vezměme τ=t+iψ:
+**Přesný kinematický výsledek, 2026-10-25.** Ověřuje, zda uzamčený komplexní čas a samotná centrální metrika prvního jetu vynucují generátor časové evoluce. **Nevynucují.** *Nedokládá* fyzikálně neekvivalentní gravitační řešení; difeomorfní a kalibrační kvocient i dynamika stále chybějí.
+
+Pracujme v přípustné ploché lokální derivační větvi D_mu=partial_mu, s kvaternionovými jednotkami e_j²=-1 a uzamčeným Lorentzovým řezem W_L={i a⁰1+Σaʲe_j}. Položme τ=t+iψ a zvolme reálné λ:
 \[
-\Theta_0=i\tau 1+\sum_j x^j e_j,\qquad
-\Theta_\lambda=\Theta_0+i\lambda\tau^2 1,\quad\lambda\in\mathbb R.
+\Theta_0=i\tau\,1+\sum_{j=1}^3x^j e_j,\qquad
+\Theta_\lambda=\Theta_0+i\lambda\tau^2\,1.
 \]
-Obě pole jsou holomorfní a splňují ∂ψΘ=i∂tΘ. Na řezu ψ=0 jsou jejich první derivace v kanonickém Lorentzově prostoru W_L. V počátku se shoduje pole, jeho časová i prostorové první derivace, tedy i centrální kompozitní metrika a regulární tetráda. Avšak
+Obě jsou celé holomorfní v τ a splňují Cauchyho–Riemannovu identitu ∂ψΘ=i∂tΘ. Na fyzikálním řezu ψ=0 mají jejich první kovariantní jety hodnoty ve W_L. V (t,ψ,x)=(0,0,0) se pole a jejich první jety shodují:
 \[
-\partial_t^2\Theta_0=0,\qquad
-\partial_t^2\Theta_\lambda=2i\lambda 1.
+\Theta_\lambda=\Theta_0,\quad
+\partial_t\Theta_\lambda=\partial_t\Theta_0=i1,\quad
+\partial_j\Theta_\lambda=\partial_j\Theta_0=e_j,
 \]
-Axiomy vymezující první jet tedy samy neurčují následující časový jet. Pro malé t a 1+2λt≠0 zůstává tetráda na ψ=0 nedegenerovaná.
+centrální antikomutátorová metrika tedy má stejnou nedegenerovanou lokální hodnotu, \(\eta=\operatorname{diag}(-1,1,1,1)\) až na pevné škálování N₀. Jejich druhé jety podle reálného času se však liší:
+\[
+\partial_t^2\Theta_0=0,\quad
+\partial_t^2\Theta_\lambda=2i\lambda\,1.
+\]
+Holomorfnost, zadaný první jet a uzamčená složená metrika **v bodě** tedy neurčují další jet. To zůstává pravda při nedegenerované časové tetrádě na dostatečně malé oblasti reálného času, \(1+2\lambda t\ne0\).
 
-**Omezení:** jde o kinematické konfigurace, ne o dvě řešení neznámé finální UBT dynamiky; změnu druhého jetu může v této ploché větvi absorbovat souřadnicová transformace. Není tím dokázána fyzikální nejednoznačnost po redukci gauge vazeb. Rovněž není odvozena stabilita plného Lorentzova řezu mimo ψ=0.
+**Zásadní rozsah:** jde o kinematicky přípustné konfigurace prvního jetu, **netvrdí se, že řeší společnou dokončenou rovnici pole UBT**. Rozdílná druhá derivace může na ploché podvětvi souviset se souřadnicemi či kalibrací a sama není důkazem fyzikálně odlišných stupňů volnosti ani nejednoznačnosti po hamiltonovských vazbách. Které lokální jety jsou skutečnými řešeními, musí rozhodnout právě dynamická evoluční rovnice a její kalibrační vazby. Kompatibilita úplného reálného Lorentzova řezu závislého na \(\psi\) je samostatná nevyřešená dynamická otázka; příklad se tvrdí pouze na \(\psi=0\).
 
-Dřívější #716 samostatně ukazuje, že pevně zvolený fázový prostor a interní symetrie umožňují rozličné invariantní Hamiltoniány. Dohromady máme přesný závěr: **komplexní čas a kompozitní metrika nejsou samy evolučním principem**.
+Samostatně doložený výsledek nejednoznačnosti z #716 ukazuje, že i volba kanonického fázového prostoru a vnitřních symetrií připouští invariantní hamiltoniány lišící se kvartickým potenciálem. Tento příklad izoluje odlišnou nenaplněnou naději, že komplexně časová holomorfnost a geometrie prvního jetu *samy* působí jako dynamický zákon.
 
-Aby vznikl jediný Hamiltonián a následně akce, potřebujeme skutečné vazby počátečních dat, jejich Poissonovu algebru, torzní/ψ podmínky a výběr generátoru z nezávislého principu. Dosavadní kanonické axiomy tento krok nedokončují.
+**Rozhodovací podmínka:** formulovat fyzikální vazby počátečních dat (včetně torze, reálného řezu a podmínek \(\psi\)), odvodit jejich uzavřené závorky a netriviální generátor \(\mathcal H\) z nezávislého fyzikálně motivovaného principu. Teprve pak rekonstruovat akci; symplektická rekonstrukce prvního řádu z #732 sama \(\mathcal H\) nevybere.

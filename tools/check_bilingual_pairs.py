@@ -57,6 +57,11 @@ STATUS_RE = re.compile(
     r"PROVED|UNPROVED|SPECULATIVE|HISTORICAL|L[0-9])\b"
 )
 UNIT_RE = re.compile(r"BILINGUAL-UNIT:\s*([A-Za-z0-9_.:-]+)")
+PROVENANCE_RE = re.compile(
+    r"^<!--\nUBT-AI-PROVENANCE-BEGIN\n.*?^UBT-AI-PROVENANCE-END\n-->\n?"
+    r"|^% UBT-AI-PROVENANCE-BEGIN\n.*?^% UBT-AI-PROVENANCE-END\n?",
+    re.MULTILINE | re.DOTALL,
+)
 
 
 def compact(value: str) -> str:
@@ -134,10 +139,43 @@ def all_pairs(root: Path) -> set[tuple[Path, Path]]:
     return pairs
 
 
+def governed_content(text: str) -> str:
+    """Ignore generated provenance metadata, not the surrounding source prose.
+
+    Header normalization has its own fail-closed provenance gate. Adding that
+    generated metadata alone does not materially edit a legacy document and
+    must not turn the bilingual migration policy into an unrelated PR blocker.
+    """
+    text = PROVENANCE_RE.sub("", text)
+    # Inserting a marker after an existing copyright comment can add a blank
+    # separator there. Preserve the comment itself, while ignoring that gap.
+    text = re.sub(r"(?m)^(<!-- © [^\n]* -->)\n(?:[ \t]*\n)+", r"\1\n", text)
+    return re.sub(r"\n(?:[ \t]*\n)+", "\n\n", text).strip()
+
+
 def changed_paths(root: Path, base: str) -> list[Path]:
-    command = ["git", "diff", "--name-only", "--diff-filter=AM", f"{base}...HEAD"]
+    comparison_base = subprocess.check_output(
+        ["git", "merge-base", base, "HEAD"], cwd=root, text=True
+    ).strip()
+    command = [
+        "git", "diff", "--name-only", "-z", "--diff-filter=AM",
+        comparison_base, "HEAD",
+    ]
     output = subprocess.check_output(command, cwd=root, text=True)
-    return [root / line for line in output.splitlines() if line]
+    paths: list[Path] = []
+    for relative in filter(None, output.split("\0")):
+        path = root / relative
+        if path.suffix in TEXT_SUFFIXES:
+            previous = subprocess.run(
+                ["git", "show", f"{comparison_base}:{relative}"],
+                cwd=root, text=True, capture_output=True,
+            )
+            if previous.returncode == 0 and governed_content(previous.stdout) == governed_content(
+                path.read_text(encoding="utf-8")
+            ):
+                continue
+        paths.append(path)
+    return paths
 
 
 def check_pair(en: Path, cs: Path) -> list[str]:

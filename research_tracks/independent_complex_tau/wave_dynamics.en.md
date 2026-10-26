@@ -152,7 +152,7 @@ It therefore includes arbitrarily fast exponential modes on unrestricted data. T
 
 `verify_wave_dynamics.py` checks the composite factorization, the volume identity, the normal quadratic density, the complete component Euler equations, the first-order symbol and the conditional dispersion/growth witnesses. A separate Python Fraction implementation checks symbol kernels and volume determinants. `wave_dynamics_results.json` records counts, versions and exclusions. These finite checks support the displayed analytic arguments; they do not formalize the Poincare lemma or prove a physical spectrum.
 
-**LEAN-PENDING:** Lean and Lake executables are unavailable in this runtime; the new local exterior/PDE argument has no checked Lean formalization. The next unresolved calculation requires an explicit connection functional outside the factorized family, its full chain-rule Hessian and a defined physical reality/constraint sector. The already conditional Einstein effective branch remains separate and unaffected. English is the translation source; human semantic review remains required before merge.
+**LEAN-PENDING:** Lean and Lake executables are unavailable in this runtime; the new local exterior/PDE argument has no checked Lean formalization. The next unresolved calculation requires an explicit connection functional outside the factorized family, its full chain-rule Hessian and a defined physical reality/constraint sector. The already conditional Einstein effective branch remains separate and unaffected. English is the translation source; independent semantic review must pass before merge under the current bilingual content policy.
 
 <!-- BILINGUAL-UNIT: c5-wave.sources -->
 ## Sources

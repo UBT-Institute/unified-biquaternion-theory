@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: ultralocal_constraint_closure -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Hamiltonian-first UBT: ultralocal scalar constraint closure obstruction
 

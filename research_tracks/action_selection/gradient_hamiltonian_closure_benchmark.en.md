@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: gradient_hamiltonian_closure_benchmark -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Gradient Hamiltonian benchmark for UBT refoliation search
 

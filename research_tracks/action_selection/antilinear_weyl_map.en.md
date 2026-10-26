@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: antilinear_weyl_map -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Antilinear Weyl-dual map in the native biquaternion carrier
 

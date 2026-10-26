@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: central_phase_metric_gate -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Central-phase selection gate from the locked sharp metric
 

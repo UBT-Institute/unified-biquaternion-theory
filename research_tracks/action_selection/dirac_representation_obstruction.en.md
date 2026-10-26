@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: dirac_representation_obstruction -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Dirac-factorization gate: vector-congruence Theta is not a Dirac spinor
 

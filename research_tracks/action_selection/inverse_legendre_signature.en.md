@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: inverse_legendre_signature -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Inverse Legendre reconstruction: what scalar energy can and cannot select
 

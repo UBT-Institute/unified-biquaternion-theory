@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: adm_gr_hessian_constraint_audit -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # ADM Hessian and constraint audit of the adopted UBT Einstein–Lambda branch
 

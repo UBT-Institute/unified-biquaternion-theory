@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: splitjet_chain_variation -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -10,45 +11,46 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-# Úplná řetězová variace přijaté split-jet gravitace Einstein–Lambda
 
-**24. 10. 2026 — podmíněné odvození C-tier, nikoli výběr mikroskopické akce UBT.** Zdroje: [přijatý gravitační postulat](../../canonical/gr_closure/gravity_dynamical_postulate.en.md), #635 a [upozornění na kompozitní variaci](trace_torsion_curvature_bridge.cs.md). Úplná sjednocená akce pro hmotu, kalibrační a kvantový sektor zůstává otevřená.
+# Úplná řetězová variace rozděleného jetu přijatého Einsteinova–Lambda gravitačního sektoru
 
-## Řetězová variace
+**2026-10-24 — odvození a kontrola úrovně C, nikoli mikroskopický výběr akce UBT.** Vychází z [přijatého gravitačního postulátu](../../canonical/gr_closure/gravity_dynamical_postulate.cs.md), #635 a [upozornění na řetězové pravidlo nezávislých a složených proměnných](trace_torsion_curvature_bridge.cs.md). Samostatná úplná kalibrační, hmotová a kvantová akce je OPEN.
 
-Pro \(q=\sqrt{N_0}>0\) použijeme již existující tetrádu
+## Obecná první variace a složené řetězové pravidlo
+
+Nechť \(q=\sqrt{N_0}>0\) a použijme stávající kofrámeček rozděleného jetu nenulové normy
 \[
-E^a=q^{-1}(dX^a+\omega^a{}_bX^b+K_J{}^a{}_bX^b+wX^a),\quad X^2\ne0.
+E^a=q^{-1}(dX^a+\omega^a{}_bX^b+K_J{}^a{}_bX^b+wX^a).
 \]
-První variaci **již přijaté** Palatiniho–HT akce zapišme (po vypuštění okrajových členů)
+Pro *již přijatý* funkcionál Palatini–HT zapišme první variaci (až na okrajové členy) jako
 \[
 \delta S_G=\int\delta E^a\wedge\mathcal P_a+
 \delta\omega^{ab}\wedge\mathcal Q_{ab}
-+\delta\Lambda\,\mathcal V_\Lambda+\delta C_3\wedge\mathcal V_C.
++\delta\Lambda\,\mathcal V_\Lambda+\delta C_3\wedge\mathcal V_C .
 \]
-\(\mathcal P_a\) je tetrádová Eulerova tříforma, \(\mathcal Q_{ab}\) konexní Eulerova tříforma **při pevném E**. Pomocné variace dávají \(\nu_E=dC_3\), \(d\Lambda=0\). Rovnice \(\mathcal P=0\) jsou Einsteinovy–Lambda rovnice s normalizací již danou gravitačním postulátem, \(\mathcal Q=0\) je příslušná Cartanova rovnice.
+Zde \(\mathcal P_a\) je Eulerova trojforma tetrády, \(\mathcal Q_{ab}\) Eulerova trojforma konexe **při pevném E** a poslední dvě Eulerovy formy reprodukují \(\nu_E=dC_3,\ d\Lambda=0\). \(\mathcal P_a=0\) dává Einsteinovu–Lambda tetrádovou rovnici s normalizací již určenou kanonickým postulátem GR; \(\mathcal Q_{ab}=0\) dává v této větvi Cartanovu rovnici torze. Nenahrazujeme tyto zdrojové rovnice novými postuláty.
 
-Kompozitní změna přesně zahrnuje
+Přesná složená první variace je
 \[
 \delta E^a=q^{-1}\left[D\delta X^a+
-(\delta\omega^a{}_b+\delta K_J{}^a{}_b)X^b+\delta w\,X^a\right].
+(\delta\omega^a{}_b+\delta K_J{}^a{}_b)X^b+\delta w\,X^a\right],
+\quad D\delta X^a=d\delta X^a+(\omega^a{}_b+K_J{}^a{}_b+w\delta^a_b)\delta X^b.
 \]
-Proto jsou Eulerovy rovnice proměnných X, konexe a split-jet proměnných **řetězové projekce** tetrádových a konexních rovnic. Například přímá konexní rovnice dostává člen úměrný \(X_{[b}\mathcal P_{a]}/q\) (konkrétní faktor závisí na konvenci nezávislých antisymetrických komponent). Po odvození \(\mathcal P=0\) tyto příspěvky mizí a zbývá \(\mathcal Q=0\). Rovnice X je zde rovněž odvozena z \(\mathcal P\) integrací po částech.
+Eulerovy rovnice jsou proto **zpětnými přenosy** \(\mathcal P,\mathcal Q\): rovnice rozděleného jetu \((\delta K_J{}^a{}_bX^b)\wedge\mathcal P_a=0,\ (\delta w X^a)\wedge\mathcal P_a=0\); rovnice konexe \(\mathcal Q_{ab}+q^{-1}X_{[b}\mathcal P_{a]}=0\) (s ohledem na přesnou normalizační konvenci antisymetrické variace); a rovnice X daná integrací per partes členu \(D\delta X^a\wedge\mathcal P_a\). Jakmile \(\mathcal P=0\), všechny složené členy řetězového pravidla úměrné \(\mathcal P\) vymizí, takže zbývající rovnice konexe je \(\mathcal Q=0\) a rovnice X nemá v tomto čistě gravitačním sektoru nezávislý zbytek.
 
-## Přesný certifikát ranku
+## Explicitní certifikát hodnosti — co umožňuje argument
 
-Pro nenulové ne-null X pokrývají Lorentzovsky antisymetrické změny \(\delta K_J X\) trojrozměrný prostor kolmý na X a změna \(\delta w X\) pokrývá směr rovnoběžný. V časupodobném klidovém rámci \(X=(r,0,0,0),r\ne0\) vezmeme \(s=\delta w\) a tři boosty \(k_i=(\delta K_J)^i{}_0\):
+V X nenulové normy zobrazuje infinitesimální Lorentzovsky antisymetrické \(\delta K_J^{ab}\) vektor X na jeho 3-rozměrný ortogonální doplněk; \(\delta w X\) generuje zbývající rovnoběžný směr. Jejich součet generuje všechny čtyři tetrádové směry. V časupodobném klidovém rámci \(X^a=(r,0,0,0),r\ne0\) zvolme tři nezávislé boostové složky tak, aby \((\delta K_J)^i{}_0=k_i\). Potom
 \[
-\delta E^a=\frac rq(s,k_1,k_2,k_3),\qquad
-\det\frac{\partial(\delta E^0,\ldots,\delta E^3)}{\partial(s,k_1,k_2,k_3)}
-=\frac{r^4}{q^4}\ne0.
+\delta E^a=\frac r q(s,k_1,k_2,k_3),\quad
+\det\frac{\partial(\delta E^0,\ldots,\delta E^3)}{\partial(s,k_1,k_2,k_3)}=\frac{r^4}{q^4}\ne0.
 \]
-Takže přípustné nezávislé lokální variace split-jetu implikují \(\mathcal P_a=0\). Jde o lokální výsledek v regulární větvi a za předpokladu skutečné nezávislosti uvedených pomocných variačních směrů.
+Z neomezených lokálních variací pomocných polí rozděleného jetu v tomto deklarovaném sektoru tedy plyne \(\mathcal P_a=0\). Argument je lokální a předpokládá, že akce a regularita nenulové normy skutečně připouštějí tyto čtyři variace nezávisle.
 
-## Hranice výsledku
+## Zásadní logická hranice
 
-Dokázali jsme **přenos variačních rovnic pro již přijatou gravitační akci**, nikoli odvození jejího tvaru či koeficientu ze skalární energie. Stále nejsou odvozeny celkový fyzikální Hamiltonián, hmota a její zdroje ze stejné akce ani UV stabilita. Omezení na FLRW **před variací** může ztratit rovnice; výsledek neplyne z PR #710. Stejně tak pevné pozadí z #709 samo neurčuje plné kompozitní zdroje.
+Tím se dokazuje podmíněná **identita přenosu variace** přijatého gravitačního postulátu. Neodvozuje Palatiniho koeficient z energie Theta ani neurčuje fundamentální akci. Sama nepočítá fyzikální hamiltonián, nedokazuje vazbu kalibračních a hmotových zdrojů ani UV stabilitu. Variace ansatzu *před* variací úplného funkcionálu může ztratit rovnice: nevyvozovat tento výsledek z omezeného Diracova modelu FLRW #710. Samostatný Hilbertův tenzor energie a hybnosti z modelu pevného pozadí (#709) rovněž nelze mlčky dosadit za úplný složený zdroj.
 
-**Další brána:** zahrnout z téže principiálně zvolené akce hmotový sektor, spočítat jeho řetězové příspěvky \(\delta E,\delta\omega\), a až pak porovnávat zdroj s Hilbertovým tenzorem. Bez zavedení nové volné akce.
+**Další podmínka:** rozšířit přesně tutéž variaci na *specifikovaný* zdrojový člen hmoty či Theta, sledovat indukované závislosti \(\delta E\) a \(\delta\omega\) a ukázat, zda se jeho Eulerova forma tetrády po redukci vazeb stává Hilbertovým hmotovým tenzorem. Netvrdit to, dokud není vybrána jednoznačná úplná akce.
 
-Test: \`python -m unittest discover -s research_tracks/action_selection/tests -p 'test_splitjet_variation_rank.py' -v\`.
+Symbolická kontrola: \`python -m unittest discover -s research_tracks/action_selection/tests -p 'test_splitjet_variation_rank.py' -v\`.

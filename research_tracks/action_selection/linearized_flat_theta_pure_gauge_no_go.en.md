@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: linearized_flat_theta_pure_gauge_no_go -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Linearized flat Theta geometry: conditional pure-gauge no-go
 

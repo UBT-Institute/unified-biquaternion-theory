@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: invariant_symplectic_theta -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Symplectic-first UBT: a natural invariant eight-real-dimensional 2-form
 

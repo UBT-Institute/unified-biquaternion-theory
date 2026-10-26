@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: spinorial_left_vs_congruence -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Spin(3) left-action versus congruence: corrected interpretation of Dirac obstacle
 

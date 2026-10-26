@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: axial_phase_mass_gate -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -10,18 +11,25 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-# Axiální fáze a hmotnost v Diracově Hamiltoniánu UBT
 
-**Přesný podmíněný algebraický výsledek (25. 10. 2026).** Nejde o odvozený fundamentální Hamiltonián.
+# Podmínka axiální fáze pro Diracovu hmotnost v jediném bikvaternionu
 
-Pro reálně lineární spinorový převod z PR #724, Theta=[psi,chi], Psi=(psi,epsilon chi*), se centrální fáze Theta -> exp(i alpha)Theta přenáší jako Psi -> exp(i alpha Gamma)Psi, kde Gamma=diag(I2,-I2). Na odvozeném spinoru tedy působí axiálně, nikoli jako společná elektrická fáze.
+**Přesná podmíněná věta lineární algebry (2026-10-25).** Netvrdí se, že byl vybrán fyzikální hamiltonián UBT.
 
-Při plochém Diracově testovacím Hamiltoniánu H=[[-sigma.p,mI],[mI,+sigma.p]] dostaneme přesně
+Použijme reálně lineární Weylovu duální mapu F ze sloučeného PR #724: pro Theta=[psi,chi] položme Psi=(psi,epsilon chi*). Centrální transformace Theta -> exp(i alpha) Theta indukuje Psi -> exp(i alpha Gamma) Psi, Gamma=diag(I2,-I2). Fáze tedy na tento odvozený Diracův nosič působí **axiálně**, nikoli jako obvyklá společná elektrická fáze. Tvrzení je specifické pro F a jeho zvolený pravý sloupcový rozklad.
+
+Pro plochý testovací Diracův hamiltonián (c=hbar=1)
 ```
-[H,Gamma]=2m [[0,-I2],[I2,0]].
+H(p)=[[-sigma.p, m I2],[m I2,+sigma.p]].
 ```
-Kinetický člen s Gamma komutuje; běžný konstantní hmotový člen nikoli. **Pouze pokud** je takto indukovaná axiální U(1) přesnou fyzikální symetrií úplné UBT, nemůže standardní holý hmotový člen patřit do jejího Hamiltoniánu.
+Přímé násobení dává
+```
+[H,Gamma]=2m [[0,-I2],[+I2,0]].
+```
+Kinetická část závislá na hybnosti tedy komutuje s Gamma, zatímco běžná reálná konstantní Diracova hmotnost nikoli (pokud m=0 neplatí). Pokud je indukovaná axiální U(1) **skutečnou přesnou spojitou symetrií úplné dynamiky**, je tato kandidátní holá hmotnost zakázána; je-li centrální fáze místo toho narušenou symetrií, redundancí s jiným působením či nepřípustnou transformací fyzikálního stavového prostoru, úsudek neplatí.
 
-V teorii dosud není dokázána ani úplná fyzikální povaha centrální fáze, ani její kompatibilita s kompozitní metrikou, vazbami a symplektikou. Netvrdíme vznik Higgsova mechanismu, odvození hmotností ani neexistenci hmotných stavů. Kvantová axiální anomálie je další samostatná kontrola.
+To **neodvozuje** Higgsovo pole, spontánní narušení, hmotnosti ani vazby v UBT. Nedokládá to invarianci uzamčené složené metriky vůči libovolné lokální či globální centrální fázi: to je nezávislá podmínka kompatibility reprezentace a metriky, srov. návrh #701. Klasická bezhmotná axiální symetrie může po vazbě na kalibrační a gravitační sektory také trpět kvantovou anomálií; každé tvrzení přesné kvantové symetrie vyžaduje výpočty anomálií.
 
-**Další rozhodnutí:** ověřit, zda kanonická centrální fáze opravdu zachovává kompozitní tetrádu/metriku, fyzikální předsymplektiku a vazby. Teprve potom ji použít jako selekční pravidlo pro fundamentální Hamiltonián.
+Další rozhodnutí: určit, zda kanonické působení symetrie Theta skutečně zachovává centrální metriku, vazby, fyzikální presymplektickou formu a složenou konexi; poté klasifikovat invariantní symboly prvního řádu. Nepřidávat hmotový člen, pokud jej výběr symetrie nepodporuje.
+
+Reprodukce: research_tracks/action_selection/tests/test_axial_phase_mass_gate.py.

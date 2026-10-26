@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: composite_bivector_scalar_obstruction -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Composite bivector: algebraic scalar obstruction in the nondegenerate classical branch
 

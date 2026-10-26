@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: composite_metric_1d_bracket_selector -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Composite metric structure function: conditional 1D Hamiltonian selector
 

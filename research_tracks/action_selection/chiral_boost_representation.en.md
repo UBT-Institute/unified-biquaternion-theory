@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: chiral_boost_representation -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Lorentz boost gate for quaternionic spinor carriers
 

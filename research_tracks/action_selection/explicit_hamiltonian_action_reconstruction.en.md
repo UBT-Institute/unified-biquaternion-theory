@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: explicit_hamiltonian_action_reconstruction -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Explicit Hamiltonian-to-action reconstruction on the 8-real Theta carrier
 

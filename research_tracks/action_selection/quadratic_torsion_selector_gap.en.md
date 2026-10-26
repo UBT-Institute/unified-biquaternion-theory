@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: quadratic_torsion_selector_gap -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Algebraic torsion potential cannot source torsion by itself
 

@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: composite_tetrad_dirac_current -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Conditional Dirac current on the composite UBT tetrad
 

@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: ht_volume_shift_action_selection -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Constant composite kinetic energy is an HT integration-constant shift
 

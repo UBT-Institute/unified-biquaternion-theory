@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: de_sitter_torsion_diagnostic -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -10,36 +11,41 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-# Konstantní křivost de Sitter versus proměnná kompozitní stopová torze
 
-**Pracovní diagnostika (C-tier), 23. 10. 2026.** Pouze přesná kinematika, bez nové akce a bez tvrzení o fyzikálním řešení UBT.
+# De Sitter s konstantní křivostí a nekonstantní složená stopová torze
 
-## Předpoklady a zdroje
+**Diagnostika úrovně C (2026-10-23): pouze přesná kinematika.** Netvrdí se nová akce UBT ani fyzikální kosmologie.
 
-Použijeme [kinematickou FLRW konstrukci](connection_closed_flrw.en.md) a [stopovou torzi](trace_torsion_curvature_bridge.en.md) na větvi s kosmickým časem `V>0`, lapse `N=1`, `rho=sqrt(N0)V`, `H=a'/a`, `t_0=3(H-1/V)` a signaturou (-+++). Jde o torzi **zvolené kompozitní metrické konexe**, nikoli beztořní Levi-Civitovy konexe téže metriky.
+## Zdroje a konvence
 
-## Přesný de Sitterův komparátor
+Použijme dříve doložený kinematický reprezentant uzavřené FLRW jediného Theta v [connection_closed_flrw.cs.md](connection_closed_flrw.cs.md) a jeho čistě stopovou složku torze v [trace_torsion_curvature_bridge.cs.md](trace_torsion_curvature_bridge.cs.md): v kosmickém čase V>0 (N=1 a rho=sqrt(N0) V), `t_0=3(H-1/V)`, `H=a'/a`, se signaturou (-+++). Torze patří **vybrané složené metricky kompatibilní konexi**, nikoli Leviho–Civitově konexi téže metriky bez torze.
 
-Pro `h>0` a uzavřený de Sitterův faktor
+## Přesný uzavřený de Sitterův srovnávací model
+
+Zvolme `h>0` a standardní uzavřený de Sitterův škálový faktor
 ```math
-a(V)=\frac{\cosh(hV)}{h},\qquad H=h\tanh(hV),\qquad\Lambda=3h^2
+a(V)=\frac{\cosh(hV)}{h},\qquad H=h\tanh(hV),\qquad \Lambda=3h^2.
 ```
-vychází
+Leviho–Civitova skalární křivost a norma stopové torze jsou přesně
 ```math
 R_{\rm LC}=6\left(\frac{a''}{a}+H^2+\frac1{a^2}\right)=12h^2=4\Lambda,
-\qquad
+\quad
 t_\mu t^\mu=-9\left(h\tanh(hV)-\frac1V\right)^2.
 ```
-Křivost metriky je konstantní, torzní invariant zvolené reprezentace obecně závisí na čase. V `V=1/h` je `t_0=3h(tanh 1-1)\ne0`; pro velké V se normový invariant blíží `-9h²`. To **není** odvozená vakuová energie ani vztah předpovídající Lambda. Reprezentace vyžaduje `rho>0`, takže `V=0` leží mimo oblast platnosti.
+Metrická křivost je proto konstantní, zatímco skalár kvadrátu torze *závislý na reprezentantu* je obecně nekonstantní. Zejména při `V=1/h` je `t_0=3h(tanh 1-1)\ne0`. Pro velké V norma směřuje k `-9h²`; tato asymptotická hodnota **není** výpočtem indukované vakuové energie. Radiální reprezentant předpokládá rho>0, takže V=0 leží mimo zvolenou oblast.
 
-Izometrie metriky nemusí zachovávat vybranou Theta/konexní reprezentaci. Časová změna invariantů není sama o sobě měřitelným efektem, dokud není stanovena skutečná fyzikální konexe, její kalibrační redundance a vazba na hmotu. Tatáž de Sitterova metrika má také beztořní Levi-Civitovu konexi.
+Zdánlivá rovnost `T^2 = const * Lambda` v určitém čase či asymptoticky nesmí být interpretována jako fundamentální vztah. Izometrie metriky nemusí zachovávat zvoleného reprezentanta Theta a konexe; bez fyzikálního zákona konexe či kalibračně invariantní relační charakterizace není časová závislost tohoto invariantu torze automaticky pozorovatelná. Táž de Sitterova metrika má Leviho–Civitovu konexi bez torze s `t=0`.
 
-## Vazby na již provedený výzkum
+## Vztah k předchozím výsledkům
 
-PR #685 dokazuje kinematickou FLRW konstrukci, ne UBT řešení na hmotové slupce. PR #687 analyzuje pomocnou torzi ve srovnávací teorii s nezávislými poli; výslednou Cartanovu rovnici nelze beze změny přenést do plně kompozitní UBT. PR #635 je podmíněné lokální obnovení Einstein–Lambda. PR #696 řeší tuhost přímé beztořní větve, #691 a #692 Holstovy/Nieh–Yanovy a axiální pomocné sektory.
+- #685 konstruuje libovolnou uzavřenou FLRW **kinematicky**; nevytváří řešení pohybových rovnic UBT.
+- #687 již odvozuje eliminaci pomocné stopové torze ve **srovnávacím modelu nezávislých polí**; jeho Cartanovu rovnici nelze uložit úplné složené teorii bez řetězového Eulerova členu tetrády.
+- #635 dodává podmíněnou lokální Einsteinovu–Lambda limitu, ale nevybírá skutečnou fyzikální složenou konexi s torzí.
+- #696 odvozuje rigiditu přímé větve bez torze v zadaném časupodobném sektoru jediného Theta. Tato diagnostika není novou větou vyloučení.
+- #691/#692 již auditují Holstovo a Niehovo–Yanovo míšení a pomocnou axiální torzi; žádná nová vazba torze se zde nepostuluje.
 
-## Další rozhodující otázka
+## Rozlišující otázka pro další větu
 
-Vybere úplný variační princip jediné Theta akce tuto nenulovou torzní reprezentaci jako fyzikální, vybere jinou konexi pro tutéž metriku, nebo jde o pomocná či kalibrační data? Odpověď vyžaduje kompozitní Eulerovy rovnice a redukované vazby, ne účelově doplněný torzní člen. Teprve při přežití torze na fyzikálním fázovém prostoru lze zkoumat vazbu na spin hmoty a perturbace.
+Vybírá úplný variační princip jediného Theta uvedeného reprezentanta s nenulovou torzí jako fyzikální, vybírá jinou konexi téže metriky, nebo jej ponechává pomocný či kalibračně redundantní? Odpovědět odvozením jeho složených Eulerových operátorů konexe a Theta a redukované algebry vazeb z *jediné vybrané akce*, nikoli fitem dalšího členu kvadrátu torze. Přežije-li torze fyzikální redukci, spočítat její vazbu na spin a hmotu i perturbace. Jinak zůstává H0 (žádný nový skalární stupeň volnosti) životaschopné.
 
-Kontrola: `research_tracks/action_selection/tests/test_de_sitter_torsion_diagnostic.py` přesně ověřuje křivost a torzní identitu na pozadí, nikoli dynamiku.
+**Ověření:** soubor testu SymPy `research_tracks/action_selection/tests/test_de_sitter_torsion_diagnostic.py` kontroluje přesné identity křivosti a torze; jde o symbolické kontroly pozadí, nikoli dynamické či experimentální ověření.

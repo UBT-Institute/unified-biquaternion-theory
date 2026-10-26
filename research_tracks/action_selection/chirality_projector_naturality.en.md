@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: chirality_projector_naturality -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Chirality projectors: a naturality obstruction in Mat(2,C)
 

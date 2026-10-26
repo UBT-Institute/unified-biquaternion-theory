@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: energy_charge_bridge -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Hilbert energy versus canonical Theta Hamiltonian on a fixed ADM background
 

@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: splitjet_auxiliary_kernel -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Exact split-jet auxiliary kernel and off-shell shift redundancy
 

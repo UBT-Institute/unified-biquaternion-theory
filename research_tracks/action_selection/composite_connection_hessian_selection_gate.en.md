@@ -1,0 +1,27 @@
+<!-- BILINGUAL-UNIT: composite_connection_hessian_selection_gate -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
+# Connection-selection obstruction to the unrestricted composite Hessian
+
+**2026-10-26; exact algebraic nonuniqueness and derivative-order audit; NOT a universal impossibility theorem for all proposed actions.**
+
+On the canonical non-null Gaussian Lorentz-vector reconstruction, the affine metric-compatible connection is Gamma=Gamma_LC+K0+C, with C_(nu mu rho)=-C_(rho mu nu) and C_(nu mu rho) V^rho=0. The 24-to-12 contraction map has rank 12 and a 12-dimensional kernel. Thus the defining first-jet relation for Theta and its tetrad does not select C[Theta]. The metric and its pure volume Lagrangian are insensitive to transverse C shifts in this representation, while curvature F(omega+C)=F(omega)+D_omega C+C wedge C and torsion can vary. Different choices may therefore change higher-derivative or curvature-dependent Lagrangians.
+
+**Important Hessian qualification.** The result in composite_four_real_zero_hessian.en.md proves a 4x4 zero velocity Hessian for a fixed auxiliary connection in an action F(V)|det(DV)|/N0². Its affine-velocity argument continues to apply whenever the spatial rows D_i V have NO velocity dependence and the temporal row depends affinely on velocities. A fixed auxiliary omega is sufficient, not logically necessary. Conversely, if a genuinely composite omega[Theta,partial Theta] feeds velocities into spatial rows, the Hessian need not vanish and a functional derivative must explicitly include delta omega/dot Theta and the full chain rule. The locked algebra does not supply a *unique* such omega; the particular K0 reconstruction is only one branch of a 12-dimensional family.
+
+**Potential loophole and limits.** Because the simple volume action is exactly C-blind, the existence of the transverse kernel alone does not obstruct writing a Hamiltonian for that chosen minimal branch. The obstruction pertains to a uniquely selected, physically complete Hamiltonian with curvature/spin dynamics and the full eight-real carrier. Nor can the 12-dimensional kernel be directly interpreted as twelve propagating degrees of freedom.
+
+**Decisive next theorem gate.** State a chosen fully specified canonical Theta-only action (or derive an independent selection principle), fix connection dependence and admissible variational class, compute the Hessian before and after eliminating auxiliary C via a legitimate equation of motion, and determine all primary/secondary constraints. If no dynamics selects C, register underdetermination instead of declaring that an arbitrary C=0 reconstruction is canonical. The earlier Proposition 9 no-go for the minimal timelike branch remains intact.
+
+Grounding: canonical/CANONICAL_DEFINITIONS.md §3; research_tracks/action_selection/{composite_contortion_kernel,contortion_stabilizer_invisibility,composite_four_real_zero_hessian}.en.md.

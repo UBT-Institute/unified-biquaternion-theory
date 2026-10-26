@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: composite_tetrad_dirac_current -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -10,30 +11,34 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-# Podmíněně zachovávaný Diracův proud na kompozitní tetrádě UBT
 
-**Podmíněná věta C-tier, 25. 10. 2026; nikoli odvozená fundamentální akce či Hamiltonián.**
+# Podmíněný Diracův proud na složené tetrádě UBT
 
-Předpokládejme regulární reálnou tetrádu E_mu=N0^(-1/2) D_mu Theta podle zamčených axiomů, její inverzi a odpovídající spinorovou konexi splňující ∇_mu gamma^nu=0. Jestliže **navíc** odvozený spinor Psi splňuje Diracovu a adjungovanou rovnici
+**Podmíněná věta úrovně C (2026-10-25). Nikoli odvození fundamentální akce či hamiltoniánu.**
+
+Předpokládejme, že uzamčená tetráda je reálným invertibilním Lorentzovým řezem E_mu=N0^(-1/2) D_mu Theta indukujícím g_mu nu a inverzi e_a^mu. Předpokládejme *specifikovanou kompatibilní spinovou konexi* na přidruženém Diracově nosiči s ∇_mu gamma^nu=0 a Diracovými rovnicemi
 \[
 (i\gamma^\mu\nabla_\mu-m)\Psi=0,\qquad
-i(\nabla_\mu\bar\Psi)\gamma^\mu+m\bar\Psi=0,
+i(\nabla_\mu\bar\Psi)\gamma^\mu+m\bar\Psi=0
 \]
-platí přesně
+v přirozených jednotkách, kde Psi je **odvozený zvolený nosič** z Theta (například F z #724). Potom běžná bilineární forma
 \[
-\boxed{j^\mu=\bar\Psi\gamma^\mu\Psi,\qquad\nabla_\mu j^\mu=0.}
+j^\mu=\bar\Psi\gamma^\mu\Psi,\qquad
+\nabla_\mu j^\mu=0
 \]
-Plynutí je algebraické: po derivaci součinu se hmotové členy odečtou. **Neznamená to, že UBT už odvodila Diracovu rovnici.**
+plyne z derivace součinu a vyrušení opačných hmotových členů. Důkaz nepotřebuje Einsteinovy rovnice, ale **vyžaduje** obě Diracovy rovnice a kompatibilní konexi; negeneruje je z UBT.
 
-Pro společné pevné pozadí a dvě řešení Diracovy rovnice je při nulovém okrajovém toku hypersurfacový skalární součin
+Pro každou Cauchyho nadplochu Sigma je seskvilineární zachovávané párování
 \[
 \langle\Psi_1,\Psi_2\rangle_\Sigma
 =\int_\Sigma d\Sigma_\mu\,\bar\Psi_1\gamma^\mu\Psi_2
 \]
-nezávislý na Cauchyho hypersurfacové řezu. Jeho imaginární část dává kandidátní symplektickou formu na prostoru *řešení této podmíněné Diracovy úlohy*. Nemusí se rovnat Omega_B z PR #717 ani skutečné předsymplektické formě neznámé jediné Theta akce.
+nezávislé na homologických řezech, pokud vymizí tok přes hranici. Pozitivita je obvyklým výsledkem pro kladnou budoucí normálu, podmíněným spinorovým svazkem, orientací a regulárním globálně hyperbolickým Lorentzovým sektorem. Jeho imaginární část je kandidátní symplektickou formou na **prostoru řešení**, nikoli nutně Omega_B fázového prostoru z #717 ani kovariantním presymplektickým proudem neznámé akce pouze pro Theta.
 
-**Podstatné omezení kompozitní geometrie:** metrika a gamma^mu závisejí na Theta a jejích derivacích. Při změně Theta vznikají také δE, δω a δgamma. Nelze proto bez důkazu použít Diracův proud dvou řešení na různých dynamických metrikách jako bilineární symplektický proud celé nelineární UBT. Nutno odvodit tangentní rovnice a vazby.
+**Jemnost složené geometrie:** pokud E=E(Theta,DTheta), pak se gamma^mu a objemová forma mění s Theta. Pouhé dosazení Psi=F(Theta) do standardního Diracova proudu nevytváří úplný *nelineární* presymplektický proud UBT; tečné variace také indukují δE, δomega, δgamma a případné vazby. Zachovávaný Diracův proud je bilineární formou *řešení zadané lineární Diracovy rovnice na společném pozadí*. Pro dvě různá samokonzistentní složená řešení s různými metrikami nelze použít zachování proudu jejich smísením. I na jediném složeném řešení je použití Diracovy rovnice novým podmíněným dynamickým předpokladem, pokud neplyne z jediné rovnice Theta.
 
-**Torze:** při metrické konexi s torzí není obecně ∇_mu j^mu totožné s (1/sqrt(-g))∂_mu(sqrt(-g)j^mu); může zasahovat stopa torze. Je nutné držet přesnou integrační identitu či správně formulovanou Levi-Civitovu divergenci.
+**Podmínka torze:** UBT může připouštět metricky kompatibilní torzi. Přesná divergence relevantní pro integrační míru vyžaduje identitu stopy torze a objemové integrace konexe nebo doprovodnou Leviho–Civitovu konexi bez torze se správně odvozenou spinovou vazbou. Nenahrazovat volně kovariantní divergenci s torzí výrazem ∂_mu(sqrt(-g)j^mu) bez započtení stopy torze.
 
-Další rozhodující krok: získat Diracovu rovnici i zachovávaný proud z jediné Theta dynamiky, vyřešit chirální reprezentaci a předsymplektiku včetně kompozitní tetrády a vazeb. Teprve pak lze určit fyzikální Hamiltonián a odvodit akci.
+**Kritérium přístupu od hamiltoniánu:** odvodit (a) emergentní chirální Diracův nosič a jeho komplexní strukturu z uzamčené reprezentace, (b) evoluční zákon na Theta, jehož indukovaná rovnice je Diracova, (c) zachovávaný kovariantní presymplektický proud úplného systému Theta a (d) redukci vazeb a omezený fyzikální generátor. Teprve pak může kladné párování na nadploše vybírat hamiltonián a podporovat rekonstrukci jednoznačné akce.
+
+Doprovodný algebraický test kontroluje pseudohermitovost gama matic a kladnou hustotu, nikoli nelineární složené zachování.
