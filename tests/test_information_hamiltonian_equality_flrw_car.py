@@ -7,9 +7,10 @@ import sympy as s
 
 
 def test_flrw_gravitational_legendre_transform():
-    a, kappa, lapse, lam, m, n, adot, p = s.symbols(
-        "a kappa lapse lam m n adot p", positive=True, real=True
+    a, kappa, lapse, lam, m, n = s.symbols(
+        "a kappa lapse lam m n", positive=True, real=True
     )
+    adot, p = s.symbols("adot p", real=True)
     lag = -3*a*adot**2/(kappa*lapse) - lapse*(lam*a**3/kappa+m*n)
     momentum = s.diff(lag, adot)
     velocity = s.solve(p-momentum, adot)[0]
