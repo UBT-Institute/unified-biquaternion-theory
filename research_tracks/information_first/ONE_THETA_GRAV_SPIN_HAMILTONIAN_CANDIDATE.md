@@ -29,3 +29,7 @@ The curved-spinor C_D and C_i,D must be computed using a specific orthonormal fr
 (5) Compact psi-time dynamics, gauge triplet and information correlations are not in this candidate. Their sum must not be declared the complete UBT action.
 
 **Status:** flat spinor operator and mass explicitly constructed using one Theta; gravity ADM constraint available conditionally; a single off-shell covariant action compatible with locked UBT geometry/statistics is NOT derived.
+
+## Grassmann ordering correction (essential)
+
+The equality R†u=det Theta in this note and its SymPy regression is an identity for **commuting complex entries**. For independent Grassmann-odd entries, moving v through u changes signs: with the displayed component order, R†u=v₁u₀-v₀u₁ = -(u₀v₁-u₁v₀)=-det Theta. The Hermitian-conjugate companion also needs explicit graded ordering. Thus the mass written as +2m Re detTheta is **not yet established** as the correctly ordered fermionic mass under a graded promotion. One must choose a Grassmann algebra, adjoint/order convention and recompute the invariant bilinear before presenting a fermionic UBT action. This is an additional concrete obstruction; do not use the commuting symbolic identity to prove a fermionic action.
