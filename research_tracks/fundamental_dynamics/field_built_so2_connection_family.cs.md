@@ -57,6 +57,16 @@ T^a(\omega_\lambda)-T^a(\omega)=
 
 Obě kovariantní omezení V a W zůstávají zachována a generovaná tetráda i metrika jsou pro celou rodinu totožné. Metrická kompatibilita, vlastní lokální Lorentzova kovariance, absence nových nezávislých polí a dvouvektorové identity prvního jetu tedy NEVYBÍRAJÍ jednoznačně spinovou konexi.
 
+## Věta o necitlivosti akce prvního jetu
+
+Uvažujme libovolnou diferencovatelnou lokální hustotu L(V,W,DV,DW,g), v níž konexe vstupuje **pouze prostřednictvím obou kovariantních prvních derivací** a metrika g je určena jejich kompozitní tetrádou. Ponecháme V a W pevné a změníme konexi v jejich společném stabilizátoru SO(2): delta omega V=delta omega W=0. Proto delta(DV)=delta(DW)=delta g=0, takže
+
+\[
+\boxed{\delta_C S_{1\rm jet}=0}\quad\text{for every stabilizer-valued }C.
+\]
+
+Identita platí mimo hmotnostní slupku pro uvedenou třídu hustot. Ani matematicky dobře definovaná kinetická, potenciálová či objemová funkcionála prvního jetu nemůže rozlišit omega a omega_lambda; samotná lokální Lorentzova symetrie stabilizátor neurčí. Selektor potřebuje další informaci, která není v těchto prvních jetech, například křivost/torzi nebo druhé kovariantní jety, dodatečnou vazbu či prokázaný fyzikální kvocient ekvivalence. Jde o *podmíněnou překážku výběru akce*, nikoli tvrzení, že všechny možné akce jediného Theta nemohou mít dynamiku.
+
 ## Hladký příklad na plochém pozadí
 
 Uvnitř budoucího časupodobného kužele Minkowského prostoru zvolme
