@@ -18,7 +18,7 @@ Geometric form of the compatibility equation:
 v·e_mu = [partial_mu(v²)]/[2 sqrt(N0)].
 This is an extra integrability/representation constraint on (v,e) within this branch, NOT a new fundamental axiom.
 
-The corresponding torsion is T^a=de^a+omega^a_b ∧ e^b, and changing C preserves v,e,g but shifts T by C∧e exactly. This theorem *constructs* all local Lorentz connections compatible with a given restricted vector carrier and tetrad, completing the interpretation of #759/#763. It neither proves that an arbitrary candidate e with arbitrary v is compatible, nor that all 12 differences survive full Theta dynamics and gauge reduction.
+The corresponding torsion is T^a=de^a+omega^a_b ∧ e^b, and changing C preserves v,e,g but shifts T by C∧e exactly. This theorem *constructs* all local Lorentz connections compatible with a given restricted vector carrier and tetrad, completing the interpretation of #759/#763. This does not establish compatibility for arbitrary candidate pairs (v,e), nor does it show that all 12 differences survive full Theta dynamics and gauge reduction.
 
 **Implication for H and graviton.** There is no unique functional omega[v,e] or T[v,e] from these kinematic equations. An exact torsion selector or a physical equivalence quotient and a genuine action remain indispensable to define the reduced E-L operator, symplectic current, Hamiltonian and TT wave propagation. The general canonical two-sided Theta, psi, and holomorphic constraints are untouched.
 
