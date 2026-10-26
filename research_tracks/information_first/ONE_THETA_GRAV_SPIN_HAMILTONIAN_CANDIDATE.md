@@ -1,3 +1,5 @@
+> **FERMIONIC ORDERING UPDATE (2026-10-26):** The determinant identity below assumes commuting Theta entries. For Grassmann-odd Theta the actual invariant Dirac mass uses the antisymmetric Weyl pairing B=u^T epsilon v, and m Psi† beta Psi=-m(B+B†), not the naively ordered determinant. See [graded Hamiltonian/action gate](GRASSMANN_SPINOR_HAMILTONIAN_ACTION_GATE.md). The one-Theta tetrad-versus-fermionic-parity obstruction also remains open.
+
 # Concrete candidate Hamiltonian: one-biquaternion Dirac sector plus MM/ADM gravity
 
 **2026-10-26. A COMPUTED conditional benchmark, not a uniquely derived UBT action.** This note deliberately stops imposing delta det(Theta)=0: Lorentz scalar invariance does NOT mean field constancy. A determinant term only conflicts with shifts if the shifts are stipulated as exact gauge symmetries of the full action; pure MM gravity has them but unified dynamics may modify them and hence requires new constraints.
