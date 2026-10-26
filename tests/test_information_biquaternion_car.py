@@ -52,3 +52,11 @@ def test_odd_winding_internal_half_shift_is_not_exchange_statistics():
     half_shift=amplitude.subs(x1,x1+sp.pi)
     assert sp.simplify(permuted-amplitude)==0
     assert sp.simplify(half_shift+amplitude)==0
+
+def test_exact_fermionic_oscillator_hamiltonian():
+    w1,w2=sp.symbols('w1 w2',real=True,positive=True)
+    c1=tensor([A,I2]); c2=tensor([Z,A])
+    H=w1*c1.conjugate().T*c1+w2*c2.conjugate().T*c2
+    assert sp.simplify(c1*H-H*c1-w1*c1)==sp.zeros(4)
+    assert sp.simplify(c2*H-H*c2-w2*c2)==sp.zeros(4)
+    assert H.eigenvals()=={0:1,w1:1,w2:1,w1+w2:1}
