@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: bilingual-content-policy -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -10,7 +11,8 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-# Bilingual content policy / Pravidla dvojjazyčného obsahu
+
+# Bilingual content policy
 
 ## Normative rule
 
@@ -67,12 +69,28 @@ Every pull request that changes governed prose must:
 2. state which edition was the translation source;
 3. confirm that formal structure and claim/status labels are identical;
 4. include rendered or built outputs when the normal workflow produces them;
-5. receive explicit human confirmation of semantic equivalence before merge.
+5. pass the independent automatic semantic review before merge.
 
-Automated checks are mandatory where available and must fail closed on a
+Structural checks are mandatory and must fail closed on a
 missing pair, mismatched identifiers, equations, citations, claim/status
-markers, or document structure. Passing automation is necessary but is not
-evidence that natural-language meaning is identical.
+markers, or document structure. The separate semantic module
+`tools/verify_bilingual_semantics.py` compares all paragraphs in both directions
+using an independent model request, including assumptions, negations,
+quantifiers, proof boundaries, caveats, and additions or omissions. It must first
+pass calibration on correct translations and deliberately corrupted examples.
+
+The model report must cover every paragraph and bind the exact source hashes,
+requested model, pinned runtime, verifier, and policy. A source change invalidates
+the previous result. Reports committed by a contributor are not approvals: the
+workflow must obtain fresh reviewer evidence. A mismatch, uncertainty, malformed
+response, missing coverage, failed calibration, or unavailable reviewer blocks
+the gate. No automatic success fallback is allowed.
+
+This machine review replaces mandatory human translation sign-off for a passing
+change. Human review remains available to resolve disputed findings; it is not
+required for every machine-approved translation. Passing the model is evidence
+of translation review, not a mathematical proof of equivalence or scientific
+validity, and does not change claim tiers, provenance tiers, or author attestations.
 
 ## Scope and migration
 
@@ -102,8 +120,8 @@ true:
 
 - both editions exist and build or render successfully;
 - structural checks pass;
-- the pull request contains the semantic-equivalence declaration;
-- a human reviewer explicitly approves semantic equivalence;
+- the workflow produces a passing semantic report for every changed pair;
+- the report matches the current source hashes and passes reviewer calibration;
 - no unresolved bilingual-policy exception remains.
 
 If semantic identity is uncertain, the safe state is to keep the pull request
