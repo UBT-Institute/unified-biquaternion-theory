@@ -21,6 +21,6 @@ def test_only_constant_quadratic_polynomial_is_shift_invariant():
     derivatives=[s.diff(H,v) for v in x]
     constraints=[s.expand(d).coeff(v) for d in derivatives for v in x]
     sol=s.linsolve(constraints,list(A))
-    assert all(s.simplify(v)==0 for v in next(iter(sol)) if not v.free_symbols)
-    # Stronger direct check: symmetric part vanishes; antisymmetric quadratic form is identically zero.
-    assert len(constraints)>0
+    candidate=s.Matrix(4,4,next(iter(sol)))
+    assert s.simplify(candidate+candidate.T)==s.zeros(4)
+    assert s.simplify((s.Matrix(x).T*candidate*s.Matrix(x))[0])==0
