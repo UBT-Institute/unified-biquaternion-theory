@@ -8,9 +8,10 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Verified Clifford and Cartan parity-sector algebra, not an action derivation.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 # Clifford pseudoscalar and pseudovector: existing Theta versus axial torsion
 
 **Status: conditional exact algebra; single-action UBT dynamics open.** This note follows draft PR #690. It introduces neither an independent pseudoscalar field nor a completed gravity action.

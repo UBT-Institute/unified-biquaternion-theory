@@ -9,6 +9,18 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Auxiliary independent-torsion comparator only; full UBT composite dynamics open.
 UBT-AI-PROVENANCE-END -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Pomocná axiální torze: přesná překážka obnovy normálové vazby
 
 **Stav: CONDITIONAL EXACT RESULT.** Výsledek o axiálním míchání z mergnutého PR #691 nyní testujeme proti projekční větě jednotkových hodin z mergnutého PR #684.

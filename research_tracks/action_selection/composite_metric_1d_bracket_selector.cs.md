@@ -1,19 +1,36 @@
-# Kompozitní metrika a selekce gradientního Hamiltoniánu v 1D
+<!-- BILINGUAL-UNIT: composite_metric_1d_bracket_selector -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
 
-**Přesná podmíněná kanonická věta; nikoli finální Hamiltonián UBT.**
 
-Na jednorozměrném úseku s q'≠0 a kanonickými {q(x),p(y)}=δ(x−y) zvolme z derivace q indukovanou metriku h_xx=(q')², h^xx=1/(q')². Jde o zjednodušený analog prvního jetu, nikoli plnou zamčenou Lorentzovu konstrukci z Theta.
+# Strukturní funkce složené metriky: podmíněný 1D selektor hamiltoniánu
 
-Pro H[N]=∫N[a p²/2+U(q')+V(q)]dx, D[ξ]=∫ξ p q'dx vyjde přesně
+**Přesná kanonická modelová věta (2026-10-25). Nikoli fyzikální hamiltonián UBT či uzavřený obecně kovariantní systém vazeb.** Pokračování návrhu #738. Poznámka k nedávnému návrhu #739: kanonická konexe používá D=∂+AΘ−ΘB, zatímco výzkum #735 používá předefinování plus pravé B; zde se nevyužívá nezávislá konexe.
+
+Nechť q je jedno reálné souřadnicové pole na 1D prostorové oblasti s q'(x)≠0, p jeho kanonická hustota a závorka {q(x),p(y)}=δ(x-y). Sestavme *zkušební* indukovanou metriku h_xx=(q')², h^xx=(q')^(−2). Jde o 1D analog uzamčené konstrukce prvního jetu, který však neimplementuje úplnou čtyřrozměrnou Lorentzovu metriku sharp, torzi ani konexi či závislost pole na časových derivacích.
+
+Vezměme H[N]=∫N(x)[a p²/2+U(q')+V(q)] dx s konstantním a≠0 a diferencovatelnými U,V; D[ξ]=∫ξ p q' dx. Funkcionální diferencování dává δH/δp=Nap, δH/δq=−(N U'(q'))'+NV'(q). Antisymetrizovaná závorka je proto přesně
 \[
-\{H[N],H[M]\}=D\left[\frac{a U'(q')}{q'}(NM'-MN')\right].
+\{H[N],H[M]\}=\int dx\,a p U'(q')(N M'-M N')
+=D\!\left[\frac{a U'(q')}{q'}(N M'-M N')\right].
 \]
-Požadavek na strukturní funkci 1/(q')² vynucuje
+Požadavek, aby *formální strukturní funkce H,H* byla přesně h^xx=1/(q')² pro všechna q'≠0, vynucuje
 \[
-\boxed{U(s)=\frac1a\log|s|+C,\quad s=q'\ne0.}
+aU'(s)/s=1/s²,\quad\Rightarrow\quad U(s)=a^{-1}\log|s|+C
 \]
-Potenciál V(q) tento konkrétní komutátor neurčí.
+na každé souvislé znaménkové větvi. Jde o netriviální podmíněný selektor gradientní hustoty; samotná {H,H} potenciál V(q) neomezuje.
 
-**Zásadní problémy:** ansatz není obecně prostorově difeomorfně kovariantní hustota (p je hustota, q skalár), takže nesplňuje automaticky závorku {D,H}. Logaritmus je zdola neomezený při q'→0, kde se metrika degeneruje. V 1D navíc nejde o skutečnou gravitaci ani gravitační vlny. Je třeba analyzovat plnou 4D kompozitní tetrádu, konexi s kanonickým znaménkem pravé části (#739), torzi, fyzikální Diracovy závorky, stabilitu a všechny tři typy závorek vazeb.
+**Nesplňuje dvě nezávislé podmínky úplné teorie:**
+1. Protože q je prostorový skalár a p hustota, p² a log|q'| se při libovolných prostorových difeomorfismech netransformují jako skalární hustoty váhy jedna. Proto {D,H} nemá pro tento ansatz požadovanou kovarianci GR. Volba dx je souřadnicově fixovaným modelovým příkladem. Logaritmický člen je také zdola neomezený při q'→0 a oblast degeneruje.
+2. Prostorová souřadnicová proměnná vnoření y=q v 1D má h_xx=(q')² a žádnou vnitřní 1D gravitaci; fyzikální algebru změn foliace, propagující gravitační módy a křivost nelze z této redukce vyvodit. V UBT má složená tetráda E=N0^-1/2 DΘ 4D Lorentzův řez a složenou torzi, takže její h^ij zahrnuje vazby vyšší dimenze i závislost na časových derivacích.
 
-Výsledek slouží jako přesný filtr konstrukce, nikoli prohlášení o hotové akci UBT.
+**Výsledek:** podmínka {H,H} může omezit gradientní potenciál po dosazení konkrétní složené h, ale věrohodného kandidáta hamiltoniánu může doložit pouze úplná uzávěra (D,D), (D,H) a (H,H) s platnými vahami hustot, fyzikálními Diracovými závorkami a stabilitou. Žádná akce nebyla dokončena a žádné kanonické soubory změněny.

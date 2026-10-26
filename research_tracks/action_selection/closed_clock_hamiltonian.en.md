@@ -9,6 +9,18 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Exact restricted EH comparator, not a fundamental UBT action or a CMB prediction.
 UBT-AI-PROVENANCE-END -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Canonical clock Hamiltonian: closed de Sitter composite-EH comparator
 
 **Status: PROVED UNDER EXTERNAL-ACTION ASSUMPTION; UBT dynamics OPEN.** Complements the mimetic-clock result of merged PR #684 and the closed FLRW connection of PR #685. Unlike the previously excluded minimal kinetic action, this is an explicitly **assumed Einstein–Hilbert plus cosmological constant** functional, not a curvature term derived from the unique Theta action.

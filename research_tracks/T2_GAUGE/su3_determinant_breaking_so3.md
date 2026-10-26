@@ -1,4 +1,16 @@
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Determinant term breaks the candidate colour SU(3) to SO(3)
 
 **Status:** exact tangent-space symmetry theorem at the timelike pointwise

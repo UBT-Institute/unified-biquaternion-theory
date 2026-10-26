@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: right_only_su2_lorentz_slice_stabilizer -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Right-only SU(2) stabilizer of the canonical Lorentz slice
 
 **Exact kinematic theorem (2026-10-25), not a full gauge-group determination or Hamiltonian.** Refines the scope of #747.

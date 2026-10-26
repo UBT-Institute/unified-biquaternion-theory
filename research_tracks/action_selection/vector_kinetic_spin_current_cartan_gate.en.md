@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: vector_kinetic_spin_current_cartan_gate -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Lorentz-vector kinetic spin current and Cartan compatibility gate
 
 **2026-10-26. Exact independent-connection variation, not complete composite-UBT spin dynamics.**

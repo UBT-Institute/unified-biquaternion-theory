@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: cartan_gaussian_anisotropic_no_go -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Anisotropic Gaussian counterexample for the direct-vector Cartan source
 
 **2026-10-26 — conditional structural no-go (not a no-go for all UBT).**

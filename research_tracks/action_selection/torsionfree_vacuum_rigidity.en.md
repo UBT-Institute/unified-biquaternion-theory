@@ -8,9 +8,10 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Conditional local rigidity for the torsion-free parent-Einstein shell; NOT a no-go for the full composite UBT field equations.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 # Rigidity theorem: a torsion-free timelike single-Theta vacuum has no gravitational waves
 
 **Status: EXACT CONDITIONAL MATHEMATICS / FULL UBT DYNAMICS OPEN.** This strengthens the canonical torsion-free Schwarzschild obstruction and follows merged PR #694. The result applies only where the original Lorentz-real single-field tetrad is invertible, the vector X is timelike, the compatible Lorentz connection is torsion-free, and the **independent parent Einstein equation** is imposed. It does not exclude an on-shell torsionful solution of the complete composite field equations.

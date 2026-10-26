@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: stabilizer_curvature_not_gauge -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Stabilizer torsion ambiguity can alter Lorentz curvature and spin transport
 
 **Exact conditional counterexample, 2026-10-25. Not full UBT dynamics or a proof of physical propagating degrees of freedom.** Follows #763.

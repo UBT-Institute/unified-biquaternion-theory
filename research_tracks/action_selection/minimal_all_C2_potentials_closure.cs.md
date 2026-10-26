@@ -9,6 +9,18 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Exact minimal timelike action-family closure; not a no-go for nonminimal or general complex UBT actions.
 UBT-AI-PROVENANCE-END -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Minimální akce jediného Theta: úplné dilema bez dynamiky pro každý C2 potenciál
 
 **Stav: EXACT CONDITIONAL NO-GO / WHOLE UBT STILL UNDERDETERMINED.** Zobecňujeme Propozici 9 z `canonical_family_hamiltonian_bridge.en.md`: negativní výsledek již nepotřebuje kvartický, polynomiální, analytický, koercivní ani neustálený potenciál. Používá přesně deklarovanou minimální kineticko-potenciálovou akci, časupodobnou kladně hermitovskou Lorentzovu orbitu, kompozitní metriku a nezávislé pomocné spinové spojení. **Nepřidáváme žádný nový fundamentální člen.**

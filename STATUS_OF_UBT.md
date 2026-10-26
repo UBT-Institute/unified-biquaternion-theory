@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: A_attested
+ai_assistance: disclosed
+human_review: substantive
+editorial_responsibility: Ing. David Jaroš
+policy: AI_PROVENANCE.md
+notice: The author has read the substance and accepts editorial responsibility.
+UBT-AI-PROVENANCE-END
+-->
+
 ## Update 2026-10-10: focused UBT programme and SU(3) audit
 
 The October research cycle is focused on four items: complex-time/theta
@@ -49,18 +61,6 @@ See:
 - research_tracks/T2_GAUGE/su3_dynamics_endgame_2026_10.md
 - research_tracks/T2_GAUGE/su3_holonomic_jet_no_go.md
 - research_tracks/priority_program_2026_10/README.md
-
-<!--
-UBT-AI-PROVENANCE-BEGIN
-schema: ubt-ai-provenance/v1
-tier: A_attested
-ai_assistance: disclosed
-human_review: substantive
-editorial_responsibility: Ing. David Jaroš
-policy: AI_PROVENANCE.md
-notice: The author has read the substance and accepts editorial responsibility.
-UBT-AI-PROVENANCE-END
--->
 
 ### Exact coset collective rewrite — 2026-10-10
 
@@ -455,31 +455,41 @@ Stiefel model has a distinct critical/unbroken phase with
 
 ### Stiefel critical-origin obstruction — 2026-10-10
 
-The attractive radial scaling (ho	o0) is not a smooth continuation of the
+The attractive radial scaling (
+ho	o0) is not a smooth continuation of the
 exact one-Theta Stiefel rewrite.  The positive timelike field metric has cone
 form
 [
-ds^2=dho^2+ho^2ds_7^2,
+ds^2=d
+ho^2+
+ho^2ds_7^2,
 ]
 so the field-space measure carries
 [
-ho^7,dho,dmu_7.
+
+ho^7,d
+ho,dmu_7.
 ]
 The angular/Stiefel change of variables is therefore singular at the raw-field
 origin.
 
-A homogeneous frame (W=ho Z) does not remove the problem:
+A homogeneous frame (W=
+ho Z) does not remove the problem:
 [
-W^dagger GW=-ho^2I_3.
+W^dagger GW=-
+ho^2I_3.
 ]
-At (ho=0) the three columns would have to span a totally isotropic complex
+At (
+ho=0) the three columns would have to span a totally isotropic complex
 subspace of a Hermitian space of signature ((1,3)), whose Witt index is only
 one.  Hence the rank-three colour frame necessarily collapses.
 
-The (ho	o0) critical HLS gauge-emergence scaling remains a useful limiting
+The (
+ho	o0) critical HLS gauge-emergence scaling remains a useful limiting
 diagnostic, but the preferred P2 target is now a **finite-radius
 quantum-disordered HLS phase** with a well-defined timelike frame,
-(m_{B,m ren}^2=0), (Z_B>0), and gapped charged frame excitations.
+(m_{B,
+m ren}^2=0), (Z_B>0), and gapped charged frame excitations.
 
 ### Finite-radius HLS refinement and topology gate — 2026-10-10
 
@@ -497,14 +507,17 @@ Threshold matching provides a quantitative strong-coupling warning.  If the
 charged frame triplet has gap (M_eta) and the low-energy colour sector is
 pure (SU(3)),
 [
-Lambda_{m YM}
+Lambda_{
+m YM}
 =
 M_eta
 exp[-8pi^2 Z_B(M_eta)/11].
 ]
-A hierarchy (M_eta/Lambda_{m YM}=10^3) needs
+A hierarchy (M_eta/Lambda_{
+m YM}=10^3) needs
 (Z_Bsimeq0.96).  The weak frame-loop formula then requires
-(a_H^2log(Lambda_{m UV}^2/M_eta^2)sim9.1	imes10^2), well outside an
+(a_H^2log(Lambda_{
+m UV}^2/M_eta^2)sim9.1	imes10^2), well outside an
 ordinary weak-current regime.  The weak loop establishes the positive kinetic
 sign, not a realistic QCD hierarchy.
 

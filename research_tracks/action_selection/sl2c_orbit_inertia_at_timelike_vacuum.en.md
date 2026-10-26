@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: sl2c_orbit_inertia_at_timelike_vacuum -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # SL(2,C) vacuum stabilizer: rank three, not six
 
 **2026-10-25 — exact finite-dimensional tangent-orbit computation, C-tier, independently reproducible in SymPy. Not a full Dirac constraint analysis.**

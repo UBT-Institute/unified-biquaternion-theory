@@ -9,6 +9,18 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Auxiliary independent-torsion comparator only; full UBT composite dynamics open.
 UBT-AI-PROVENANCE-END -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Auxiliary axial torsion: exact failure to restore the missing normal constraint
 
 **Status: CONDITIONAL EXACT RESULT.** The previous axial Clifford mixing result in merged PR #691 admits a sharper test against the unit-clock projection lemma of merged PR #684.

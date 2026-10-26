@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: no_positive_invariant_linear_slice -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # No nonzero positive SL(2,C)-invariant linear slice
 
 **2026-10-26, exact conditional linear-algebra theorem.** This strengthens the positive-slice witness test, but it does not analyze nonlinear constraint manifolds or physical ADM phase space.

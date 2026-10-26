@@ -13,6 +13,7 @@
 > - See \`canonical/bridges/theta_parameter_separation.md\` and
 >   \`research_tracks/theta_torus_potential/zeta_regularized_shape_audit.md\`.
 >
+
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -24,7 +25,6 @@ policy: ../../AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
-
 
 # UBT Partition Function — Modular Weight Analysis
 

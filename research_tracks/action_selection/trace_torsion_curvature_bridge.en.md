@@ -8,9 +8,10 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Exact scalar-tensor comparison under independent metric/connection assumptions; NOT finalized fundamental UBT action.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 # Trace torsion from a nonminimal scalar-curvature term: a conditional action test
 
 **Status: DERIVED_WITH_ASSUMPTIONS / UBT FIRST-PRINCIPLES GAP OPEN.** This is a sharp test against the existing `GAP-10T-DYN` and merged FLRW canonical-contortion calculations, NOT a selection of the one final UBT action. Standard scalar-tensor/Einstein–Cartan mathematics is not original to UBT.
@@ -147,7 +148,8 @@ when the right side is positive; otherwise no real positive solution exists. On 
 
 ## Chain-rule correction: the real composite-UBT connection equation
 
-For the actual radial single-Theta representation the metric/tetrad is **not independent** of the boost spin connection. Let the independent-tetrad first-order parent functional be (S[e,omega,ho]), and set the radial coframe only after its Euler derivatives are defined:
+For the actual radial single-Theta representation the metric/tetrad is **not independent** of the boost spin connection. Let the independent-tetrad first-order parent functional be (S[e,omega,
+ho]), and set the radial coframe only after its Euler derivatives are defined:
 \[
 e_\mu{}^0=\frac{\partial_\mu\rho}{\sqrt{\mathcal N_0}},\qquad
 e_\mu{}^i=\frac{\rho\,b_\mu{}^i}{\sqrt{\mathcal N_0}}.
@@ -174,9 +176,12 @@ Likewise integrating by parts the derivative of rho in the temporal coframe give
 -\frac1{\sqrt{\mathcal N_0}}\partial_\mu\mathcal E^\mu{}_0=0.
 }
 \]
-Here (mathcal E^mu{}_a) already includes the contributions of the parent curvature, tetrad and metric variations; explicit (ho) dependence is in (mathcal U_ho). If the parent action contains derivative terms, these are **Euler functional derivatives** rather than partial derivatives, so the identities still hold under regular boundary assumptions.
+Here (mathcal E^mu{}_a) already includes the contributions of the parent curvature, tetrad and metric variations; explicit (
+ho) dependence is in (mathcal U_
+ho). If the parent action contains derivative terms, these are **Euler functional derivatives** rather than partial derivatives, so the identities still hold under regular boundary assumptions.
 
-**Critical correction to the preceding torison-matching argument:** The independent Cartan equation (mathcal C^mu{}_i=0), and hence its simple trace solution, is NOT generally the equation after substituting the composite tetrad. The exact boost equation includes the extra (homathcal E^mu{}_i/sqrt{mathcal N_0}) source. The earlier matching relation (a^2F=C^2V^2) is therefore a necessary condition **only in the independent-variable comparator (or in a branch where the relevant tetrad Euler terms independently vanish)**. It is *not* established as a necessary condition of any full single-Theta UBT action. A genuine dynamical rank/Hamiltonian claim must solve the coupled composite connection and Theta equations and their constraints, not borrow independent Palatini equations.
+**Critical correction to the preceding torison-matching argument:** The independent Cartan equation (mathcal C^mu{}_i=0), and hence its simple trace solution, is NOT generally the equation after substituting the composite tetrad. The exact boost equation includes the extra (
+homathcal E^mu{}_i/sqrt{mathcal N_0}) source. The earlier matching relation (a^2F=C^2V^2) is therefore a necessary condition **only in the independent-variable comparator (or in a branch where the relevant tetrad Euler terms independently vanish)**. It is *not* established as a necessary condition of any full single-Theta UBT action. A genuine dynamical rank/Hamiltonian claim must solve the coupled composite connection and Theta equations and their constraints, not borrow independent Palatini equations.
 
 The exact toy functional identity is checked in `tools/verify_composite_spin_chain_rule.py` and `tests/test_composite_spin_chain_rule.py`. It is a structural calculus result, not a complete field-equation solution.
 

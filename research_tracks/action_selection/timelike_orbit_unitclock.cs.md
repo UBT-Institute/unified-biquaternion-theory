@@ -9,6 +9,18 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Exact timelike-orbit kinematics; no complete UBT field equations established.
 UBT-AI-PROVENANCE-END -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Věta o jednotkových hodinách v celé časupodobné orbitě: neradiální Theta nevrací nezávislou lapse
 
 **Stav: EXACT KINEMATICS UNDER STATED REPRESENTATION / FULL UBT DYNAMICS OPEN.** Zpřesňuje důkaz radiální jednotkové gradientové vazby z mergnutého PR #684. Nezavádíme novou fundamentální akci ani látkové pole.

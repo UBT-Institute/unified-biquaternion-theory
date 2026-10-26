@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: two_sided_cartan_mismatch -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Full two-sided curvature and representation-mismatch identity
 
 **Exact differential-geometric bookkeeping (2026-10-25), not a torsion selector or fundamental action.** Extends #760 beyond its conditional pure Lorentz-lift hypothesis.

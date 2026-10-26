@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: sl2c_noncompact_yang_mills_inertia -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Noncompact SL(2,C) Yang-Mills kinetic signature: exact obstruction
 
 **Status:** exact 6x6 finite-dimensional invariant-form calculation, 2026-10-26. Conditional no-go for conventional propagating real SL(2,C) Yang-Mills with nonzero invariant nondegenerate kinetic form on a Minkowski background. NOT full UBT Dirac/ADM proof.

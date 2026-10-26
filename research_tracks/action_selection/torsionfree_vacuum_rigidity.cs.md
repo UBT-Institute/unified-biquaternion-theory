@@ -8,9 +8,10 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Conditional local rigidity for the torsion-free parent-Einstein shell; NOT a no-go for the full composite UBT field equations.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 # Věta o rigiditě: beztorzní časupodobné vakuum jediného Theta nemá gravitační vlny
 
 **Stav: EXACT CONDITIONAL MATHEMATICS / FULL UBT DYNAMICS OPEN.** Zpřesňuje kanonickou beztorzní překážku Schwarzschildova řešení a navazuje na mergnutý PR #694. Platí jen při regulární Lorentzovsky reálné tetrádě jediného pole, časupodobném X, beztorzním kompatibilním Lorentzově spojení a současně uložené **nezávislé rodičovské Einsteinově rovnici**. Nevylučuje torzní řešení úplných kompozitních pohybových rovnic UBT.

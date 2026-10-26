@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: composite_timelike_primary_constraint -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Composite timelike branch: exact zero velocity Hessian and primary momentum constraint
 
 **2026-10-26, conditional exact Hamiltonian statement.** Applies exclusively to the timelike Lorentz-real minimal composite-metric auxiliary-boost branch in Proposition 9 of research_tracks/action_selection/canonical_family_hamiltonian_bridge.en.md; does NOT claim the full original Theta action is specified.

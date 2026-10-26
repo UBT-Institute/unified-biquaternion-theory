@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: axial_current_right_frame_gap -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Axial Dirac source from Theta is right-column-frame dependent
 
 **Exact algebraic obstruction to an intrinsic current; 2026-10-25.** Refines conditional spin-torsion PR #746. Does not assert unrestricted right SU(2) is an actual gauge symmetry of locked UBT.

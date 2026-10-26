@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: conditional_axial_torsion_from_dirac_carrier -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Conditional axial torsion source from one-biquaternion Dirac carrier
 
 **Conditional derivation; 2026-10-25. NOT the fundamental UBT action, not the derivation of its Hamiltonian.** Following #724 Weyl-dual carrier, #742–#745 torsion and selector work.

@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: spinor_bilinear_soldering_gate -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # A positive spinor-to-vector bilinear, and the locked tetrad gate
 
 **Exact representation theorem, 2026-10-25. NOT a completed spinorial UBT theory, tetrad, Hamiltonian or action.** Follows #751.

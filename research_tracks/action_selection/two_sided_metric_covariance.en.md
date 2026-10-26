@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: two_sided_metric_covariance -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Two-sided covariant derivative: exact gauge covariance and central metric preservation
 
 **Exact kinematic theorem; 2026-10-25. Does not select a fundamental Hamiltonian or an independent connection.** Uses locked Axiom C. The connection coefficients must ultimately be composite/auxiliary rather than additional fundamental propagating fields.

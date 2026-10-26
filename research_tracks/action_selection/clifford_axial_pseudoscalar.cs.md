@@ -8,9 +8,10 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Verified Clifford and Cartan parity-sector algebra, not an action derivation.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 # Cliffordův pseudoskalár a pseudovektor: existující Theta a axiální torze
 
 **Stav: podmíněná přesná algebra; dynamika jediné akce UBT otevřena.** Navazuje na draft PR #690. Nepřidává nové nezávislé pseudoskalární pole ani hotovou gravitační akci.

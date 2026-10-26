@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: fixed_theta_torsion_response_rank -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Exact rank of torsion response at fixed non-null Lorentz-valued Theta
 
 **Conditional pointwise result, 2026-10-25. NOT a count of UBT propagating degrees of freedom or a full action selector.**

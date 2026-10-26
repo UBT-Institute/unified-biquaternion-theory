@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: volume_primary_constraints_nonzero_connection -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Primary constraints from volume Lagrangian with nonzero velocity-independent composite connection
 
 **Exact conditional Legendre analysis, 2026-10-26. Not a final UBT Hamiltonian/action or a zero-connection model.** Extends draft #767.
@@ -6,8 +20,10 @@ Restricted pure Lorentz-vector-lift branch: e_mu^a=(partial_mu v^a+omega_mu^a_b[
 
 Write u^a=dot(v^a), w^a=omega_0^a_b v^b. Spatial e_i^a are independent of u by hypothesis. By determinant multilinearity in its time row,
 \[
-L=\frac{c}{\sqrt{N_0}}(u^a+w^a)C_a,\quad C_a=(-1)^a\det(e_i{}^{b\ne a})\ \text{(with standard time-row Laplace signs)}.
+L=\frac{c}{\sqrt{N_0}}(u^a+w^a)C_a,\quad C_a=(-1)^a\det(e_i{}^{b\ne a}).
 \]
+The cofactor uses the standard time-row Laplace signs.
+
 Hence
 \[
 p_a=\partial L/\partial u^a=\frac{c}{\sqrt{N_0}}C_a,\quad W_{ab}=\partial^2 L/\partial u^a\partial u^b=0,\quad \phi_a=p_a-\frac{c}{\sqrt{N_0}}C_a\approx0.

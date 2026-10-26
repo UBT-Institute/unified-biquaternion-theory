@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: transverse_contortion_bianchi_nonuniqueness -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Algebraic and Bianchi identities do not fix transverse contortion
 
 **2026-10-26. Explicit local counterexample, conditional on canonical Gaussian vector reconstruction.** For nonnull V, metric-compatible contortion has 12-dimensional transverse kernel C_(nu mu rho)=-C_(rho mu nu), C_(nu mu rho)V^rho=0.

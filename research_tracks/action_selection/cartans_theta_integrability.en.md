@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: cartans_theta_integrability -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Exact Cartan integrability constraint for the pure Lorentz-lift Theta branch
 
 **Exact conditional geometric identity, 2026-10-25; not a fundamental torsion dynamics or Hamiltonian.** Refines #758/#759.

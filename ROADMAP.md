@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 ## Active focused programme — 2026-10-10
 
 1. Finalize the theta/complex-time analytic classification without conflating
@@ -12,18 +24,6 @@
    derived from the UBT action/Hessian/partition function.
 
 Status promotions must be mirrored in CLAIMS.yaml and STATUS_OF_UBT.md.
-
-<!--
-UBT-AI-PROVENANCE-BEGIN
-schema: ubt-ai-provenance/v1
-tier: C_working
-ai_assistance: disclosed
-human_review: risk-based
-editorial_responsibility: Ing. David Jaroš
-policy: AI_PROVENANCE.md
-notice: Working material; exhaustive human review is not claimed.
-UBT-AI-PROVENANCE-END
--->
 
 ## Immediate programme update — 2026-07-27
 

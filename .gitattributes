@@ -36,3 +36,10 @@ ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/alpha_stability_101_1
 ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/scan_110_162_w16.csv export-ignore
 ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/ellprobe_EE_BB_100_200.csv export-ignore
 ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/shear_scan_137_128_146_phase_shear_scan.csv export-ignore
+
+# Source archives contain the TeX inputs, not reproducible publication binaries.
+# These four PDFs remain tracked and available through Git and CI artifacts.
+docs/pdfs/UBT_Textbook_CS.pdf export-ignore
+docs/pdfs/UBT_Textbook_EN.pdf export-ignore
+docs/pdfs/UBT_canonical_main.pdf export-ignore
+docs/pdfs/UBT_GR_Submission.pdf export-ignore

@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: torsion_24component_selector_gap -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # The 24-component torsion selection gap in Hamiltonian-first UBT
 
 **Exact pointwise geometric count, 2026-10-25. Not a torsion equation or fundamental Hamiltonian.**

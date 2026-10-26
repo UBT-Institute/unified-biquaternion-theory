@@ -9,6 +9,18 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Exact restricted EH comparator, not a fundamental UBT action or a CMB prediction.
 UBT-AI-PROVENANCE-END -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Hamiltonián s kanonickými hodinami: uzavřený de Sitter ve srovnávací kompozitní EH akci
 
 **Stav: PROVED UNDER EXTERNAL-ACTION ASSUMPTION; dynamika UBT OPEN.** Navazujeme na mimetické hodiny z mergnutého PR #684 a uzavřené spojení FLRW z PR #685. Na rozdíl od vyloučené minimální kinetické akce zde výslovně **předpokládáme Einsteinův–Hilbertův člen s kosmologickou konstantou**; nejde o odvození křivostního členu z jediné akce Theta.

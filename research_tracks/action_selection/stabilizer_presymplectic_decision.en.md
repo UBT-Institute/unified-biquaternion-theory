@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: stabilizer_presymplectic_decision -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Stabilizer-sector presymplectic decision gate
 
 **2026-10-25. Conditional Hamiltonian diagnostics, NOT a derived UBT action.** Follows #763 and #765. Twelve components of the local timelike-little-group stabilizer can change torsion and spin curvature while leaving the restricted pure-Lorentz-lift Theta tetrad unchanged. This does not imply twelve propagating degrees of freedom.

@@ -9,6 +9,18 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Conditional pointwise rank; not a full UBT dynamical derivation.
 UBT-AI-PROVENANCE-END -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Bodový rank tetrády versus omezení funkcí v radiálním poli Theta
 
 **Stav: DERIVED_WITH_ASSUMPTIONS; fyzikální on-shell rank OPEN.** Výsledek zpřesňuje, ale nenahrazuje, kanonickou větu o ranku metriky, lokální konstrukci torze v `canonical/CANONICAL_DEFINITIONS.md` ani mergnuté práce o pomocném spojení a kontorzi FLRW.

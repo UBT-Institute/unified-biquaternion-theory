@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: linearized_connection_curvature_witness -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Curved linearized tetrad witness versus composite-connection dynamics
 
 **Exact conditional kinematic witness (2026-10-25), not a propagating graviton or Hamiltonian.** Complements draft #739 and merged #740. Uses canonical D_mu Theta=partial_mu Theta+A_mu Theta-Theta B_mu (research plus-right notation has reversed B sign).

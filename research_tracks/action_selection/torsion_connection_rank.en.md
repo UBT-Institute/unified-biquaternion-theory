@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: torsion_connection_rank -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Exact 24×24 linear contortion-to-torsion rank check
 
 **Exact pointwise linear algebra at a fixed Minkowski tetrad; 2026-10-25. Not a dynamical torsion selector or a fundamental Hamiltonian.**
