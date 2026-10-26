@@ -31,7 +31,7 @@ Poslední člen je okrajový. Na uzavřeném oboru nebo při fixním příslušn
 - Pro **proměnnou** funkci \(F(\Theta)\) platí po stejném přeznačení navíc \(\int F\,dC_3=\int d(FC_3)-\int dF\wedge C_3\), tedy nejde obecně jen o hranici. Pomocná rovnice pak zahrnuje \(d(\Lambda'+\kappa F)=0\). Je nesprávné vymazat derivativní vazbu.
 - Případná látková definice nuly vakuové energie vyžaduje samostatné párování. Identita se netýká libovolného sektorového zdroje.
 - Algebraické zjednodušení minimální kinetiky na objem bylo již v UBT známé. Nově zde výslovně porovnáváme tento člen s integrační konstantou v přijaté HT akci.
-- Křivostní Palatiniho člen **ani jeho koeficient** se ze samotné konstantní energie neodvozují. Výběr jediné akce, stabilita plného spektra i látkové zdroje zůstávají otevřené.
+- Křivostní Palatiniho člen **ani jeho koeficient** se ze samotné konstantní energie neodvozují. Výběr jediné akce, stabilita plného spektra i látkové zdroje zůstávají otevřené (stav **OPEN**, stejně jako v anglické verzi).
 
 ## Další rozhodující kontrola
 Hledejme principem odvozený invariant \(\Theta\), který vytváří \(\epsilon E E R(\omega)\) a určuje jeho normalizaci, aniž bychom připojili další nezávislou sektorovou akci. Pokud jej nenajdeme, musíme dosavadní gravitační postulat označovat jako přijatý minimální dynamický princip, nikoli jako důsledek pouze kinematických axiomů.
