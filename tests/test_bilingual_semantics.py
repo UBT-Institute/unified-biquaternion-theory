@@ -184,7 +184,9 @@ def test_cli_is_isolated_and_cannot_use_tools_or_repository_configuration(monkey
         calls.append(command)
         cwd = Path(kwargs["cwd"])
         assert cwd != ROOT and not (cwd / "AGENTS.md").exists()
-        assert {"--no-custom-instructions", "--available-tools=", "--deny-tool=*", "--deny-url=*", "--disable-builtin-mcps"} <= set(command)
+        assert {"--no-custom-instructions", "--available-tools=", "--deny-tool=read", "--deny-tool=write",
+                "--deny-tool=shell", "--deny-tool=url", "--deny-tool=memory", "--deny-url=*",
+                "--disable-builtin-mcps"} <= set(command)
         assert "BASH_ENV" not in kwargs["env"]
         assert "COPILOT_PROVIDER_BASE_URL" not in kwargs["env"]
         assert "COPILOT_CUSTOM_INSTRUCTIONS_DIRS" not in kwargs["env"]

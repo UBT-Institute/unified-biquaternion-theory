@@ -267,7 +267,8 @@ class CopilotReviewer:
                 self.binary, "--silent", "--output-format=text", f"--model={self.model}",
                 "--no-ask-user", "--no-auto-update", "--no-custom-instructions",
                 "--disable-builtin-mcps", "--disable-client-telemetry", "--no-color",
-                "--available-tools=", "--deny-tool=*", "--deny-url=*",
+                "--available-tools=", "--deny-tool=read", "--deny-tool=write",
+                "--deny-tool=shell", "--deny-tool=url", "--deny-tool=memory", "--deny-url=*",
             ]
             try:
                 result = subprocess.run(command, input=make_prompt(batch), cwd=directory,
