@@ -9,5 +9,5 @@ J=M.jacobian(w)
 assert J.rank()==3
 assert M[0]==w[1] and M[1]==w[2] and M[2]==w[3]
 assert all(M[j]==0 for j in [3,4,5])
-assert s.BlockDiagMatrix(J,J,J,J).rank()==12
+assert s.diag(J,J,J,J).rank()==12
 print("one Lorentz-index bivector current rank=3; four spacetime components rank=12")
