@@ -23,6 +23,14 @@ For four independent Dirac annihilation modes at one regulated spatial site, CAR
 
 This connects precisely to the existing SU3 exterior-Fock/JW track; it does not independently discover a new SU3 triplet mechanism.
 
+## 2a. Explicit positive fermionic mode Hamiltonian
+
+For two ordered modes in B⊗B, take c₁=a⊗1 and c₂=Γ⊗a. Their number operators N_j=c_j†c_j satisfy N_j²=N_j, and with arbitrary chosen positive frequencies ω_j define the **normal-ordered operator Hamiltonian**
+  H_f=ω₁N₁+ω₂N₂.
+Its eigenvalues are exactly {0,ω₁,ω₂,ω₁+ω₂}, and [c_j,H_f]=ω_j c_j, giving i∂_t c_j=[c_j,H_f] in the Heisenberg picture. This is a bona fide finite-dimensional fermionic Hamiltonian assembled from biquaternionic factors, with no separate fundamental Grassmann-valued coefficient fields. Coherent-state functional integrals for it may use Grassmann integration as a REPRESENTATION of the same quantum operator algebra, without making Grassmann variables a new elementary carrier.
+
+However the frequencies are inputs, not selected by B alone, and H_f is NOT yet the Lorentz-covariant UBT Dirac field Hamiltonian nor its coupling to the locked composite GR tetrad. The full field theory additionally requires infinitely many spatial/momentum modes and covariant locality.
+
 ## 3. Grading and gravity: correction of an overgeneralization
 
 The earlier single-Theta argument that **pure Grassmann-odd classical supercommuting Theta** has no invertible even c-number tetrad from E=DTheta remains valid under those assumptions. It must NOT be extended to an operator CAR-valued odd Theta: an odd self-adjoint Majorana operator Q=a+a† obeys Q²=1, so an even product of odd CAR operators may have an invertible identity component/nonzero expectation. Fermion bilinears can therefore source bosonic, even geometric observables in principle. But this does NOT build an invertible, rank-4, Lorentz-covariant tetrad from the locked E∝DTheta. A derived even soldering/expectation prescription, its symmetries, rank and dynamics are missing.
@@ -41,4 +49,4 @@ The older canonical note `canonical/bridges/fermionic_statistics_bridge.tex` arg
 
 **Unclosed:** derive (a) physical grading and local oscillator polarization from existing Theta/tetrad symmetries, (b) many-mode CAR and locality, (c) Lorentz-covariant Dirac kinetic Hamiltonian/action with its Fock representation, (d) an even rank-four composite tetrad and the gravitational constraints from the SAME underlying dynamics. One cannot yet mark the UBT Hamiltonian or action finalized.
 
-Five focused algebraic/test counterexamples verified locally: `tests/test_information_biquaternion_car.py`.
+Six focused algebraic/test counterexamples verified locally: `tests/test_information_biquaternion_car.py`.
