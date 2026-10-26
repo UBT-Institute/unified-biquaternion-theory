@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: holomorphic_first_jet_nonselection -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Holomorphic jet non-selection test for the Hamiltonian-first UBT programme
 
 **Exact kinematic result, 2026-10-25.** This checks whether locked complex time and the central first-jet metric alone force a time-evolution generator. They do **not**. It does *not* establish physically inequivalent gravitational solutions; diffeomorphism/gauge quotient and dynamics remain to be supplied.

@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: adm_constraint_negative_theta_witness -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # ADM constraint solvability is not positive-energy stability
 
 **Conditional exact initial-data example, 2026-10-26.** Assumes an independently dynamical 4D metric with Einstein-Hilbert ADM kinetic term and the already tested indefinite Theta kinetic term, not the locked composite-metric UBT action. Spatial three-torus, unit flat metric, coordinate volume normalized to one, vanishing spatial gauge fields and homogeneous Theta data.

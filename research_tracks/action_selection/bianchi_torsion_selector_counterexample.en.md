@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: bianchi_torsion_selector_counterexample -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Bianchi identities do not dynamically select torsion
 
 **Exact geometry-only counterexample; 2026-10-25. NOT a verified canonical DTheta solution or fundamental Hamiltonian/action.** Continues merged #757 and #742.

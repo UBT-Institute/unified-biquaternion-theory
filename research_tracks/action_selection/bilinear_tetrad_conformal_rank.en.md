@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: bilinear_tetrad_conformal_rank -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Four bilinear Lorentz vectors produce only a conformal metric
 
 **Exact algebraic limitation (2026-10-25), not the canonical tetrad, physical Hamiltonian or UBT action.** Extends #752.

@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: lorentz_slice_two_sided_connection_classification -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Classification of two-sided connections preserving the locked Lorentz slice
 
 **Exact algebraic connection theorem, 2026-10-25. NOT a torsion-selector theorem, fundamental action, or full implicit Theta solution.** Continuation of merged #761.
@@ -20,6 +34,6 @@ D_\mu X=\partial_\mu X+Ahat_\mu X+X Ahat_\mu^\dagger,
 \]
 with no restriction that Ahat or its torsion be zero.
 
-This is a **classification of possible action on Lorentz-slice matrix values**. It does not say every fundamental Theta must transform as a Lorentz vector or that the composite 2-sided B computed from omega has this form in all allowed gauges. If the Θ carrier representation and tetrad representation differ, the intertwiner/mismatch term from #761 remains to be checked. It also doesn't pick the 24 torsion components, choose a kinetic pairing, imply GR dynamics, or deliver H_UBT. The true remaining action gate is proving that an admissible composite torsion equation fixes Ahat[Theta] and that the resulting reduced variational Hessian and constraints are physically stable.
+This is a **classification of possible action on Lorentz-slice matrix values**. It does not say every fundamental Theta must transform as a Lorentz vector or that the composite two-sided B computed from omega has this form in all allowed gauges. If the Θ carrier representation and tetrad representation differ, the intertwiner/mismatch term from #761 remains to be checked. It also doesn't pick the 24 torsion components, choose a kinetic pairing, imply GR dynamics, or deliver H_UBT. The true remaining action gate is proving that an admissible composite torsion equation fixes Ahat[Theta] and that the resulting reduced variational Hessian and constraints are physically stable.
 
 Symbolic verification uses a generic traceless Ahat and real κ on a general anti-Hermitian X and tests preservation of the Lorentz slice, and shows the determinant scaling of a Hermitian Y.

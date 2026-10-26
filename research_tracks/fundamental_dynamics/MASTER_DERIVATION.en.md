@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: MASTER_DERIVATION -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # UBT Fundamental Dynamics — unified derivation track
 
 **2026-10-26 | DRAFT RESEARCH PROGRAM | no final action selected**
@@ -11,8 +25,10 @@ E_\mu=N_0^{-1/2}D_\mu\Theta\in W_L=i\mathrm{Herm}_2.
 \]
 \[
 (E_\mu^\sharp E_\nu+E_\nu^\sharp E_\mu)/2=g_{\mu\nu}I,\qquad
-\omega=\omega_{LC}(E)+K(T),\quad T\ \text{not selected by axioms}.
+\omega=\omega_{LC}(E)+K(T).
 \]
+The axioms do not select T.
+
 Composite A/B are reconstructed, not independent fundamental fields. Nonzero connection and torsion are allowed and are never set to zero as a default simplification. The real Lorentz sector must preserve reality, nondegeneracy and the full *central* metric identity.
 
 ## 2. The key mathematical obstruction is not a missing algebraic identity

@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: gauss_surface_hamiltonian_unbounded -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Exact Gauss-surface unboundedness witness for the minimal Theta Hamiltonian
 
 **2026-10-26 — conditional exact Hamiltonian no-go on a fixed background with only Gauss constraints.** Not a statement about the full gravitational Dirac-constrained theory.

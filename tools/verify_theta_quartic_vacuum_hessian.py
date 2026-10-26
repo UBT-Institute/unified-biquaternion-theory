@@ -9,7 +9,9 @@ det=sum(t*t for t in z)
 V=m2*H+l1*H**2+l2*s.expand(det*s.conjugate(det))
 q=list(x)+list(y); vacuum={a:0 for a in q};vacuum[y[0]]=r
 grad=[s.factor(s.diff(V,t).subs(vacuum)) for t in q]
-assert grad==[0,0,0,0,4*r*(m2+(4*l1+l2)*r**2),0,0,0]
+expected_grad=[0,0,0,0,4*r*(m2+(4*l1+l2)*r**2),0,0,0]
+# Compare polynomial identities, not SymPy's choice of factored expression tree.
+assert all(s.expand(actual-expected)==0 for actual,expected in zip(grad,expected_grad))
 hess=s.hessian(V,q).subs(vacuum).subs(m2,-(4*l1+l2)*r**2).applyfunc(s.simplify)
 expect=s.diag(0,0,0,0,8*r**2*(4*l1+l2),8*r**2*l2,8*r**2*l2,8*r**2*l2)
 assert hess==expect

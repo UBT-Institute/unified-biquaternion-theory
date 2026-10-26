@@ -9,6 +9,18 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Exact Lorentz-real variational chain rule, not a completed UBT action.
 UBT-AI-PROVENANCE-END -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Neomezená kompozitní spinová variace: přesná normálová projekce a rank spojení
 
 **Stav: EXACT KINEMATIC VARIATION / PHYSICAL UBT ACTION OPEN.** Navazujeme na mergnutý PR #693 bez uložení homogenní FLRW symetrie. Používáme existující kladně hermitovský Lorentzovsky reálný sektor pole a jeho jediné spinové spojení.
@@ -155,7 +167,8 @@ c_{\rm H}(T_a\wedge e_b-e_a\wedge T_b)+
 q^{-1}(X_b\mathcal E_a-X_a\mathcal E_b)=0.
 }
 \]
-Tetrádová Eulerova forma vstupuje do rovnice samotného pole i prostřednictvím (-q^{-1}D_omegamathcal E_a). Dokonce bez přímého látkového spinového proudu obecně **nedostáváme** Cartanovu podmínku nulové torze. Naopak spojené rovnice automaticky nevyžadují rodičovskou (mathcal E_a=0); právě normálová časová složka zůstává zásadní Hamiltonovou otázkou. Paritně lichý koeficient (c_{m H}) musí být zdůvodněn deklarovanými symetriemi.
+Tetrádová Eulerova forma vstupuje do rovnice samotného pole i prostřednictvím (-q^{-1}D_omegamathcal E_a). Dokonce bez přímého látkového spinového proudu obecně **nedostáváme** Cartanovu podmínku nulové torze. Naopak spojené rovnice automaticky nevyžadují rodičovskou (mathcal E_a=0); právě normálová časová složka zůstává zásadní Hamiltonovou otázkou. Paritně lichý koeficient (c_{
+m H}) musí být zdůvodněn deklarovanými symetriemi.
 
 Samostatný skript vnější algebry přímo vyčísluje variaci původní čtyřformy na obecných regulárních zkušebních tetrádách se symbolickými vazbami a kontroluje **všechny komponenty tetrády**. Odděleně ověřuje kovariantní torzní derivaci (P_{ab}) pro každou dvojici spinových bivektorů. Jde o kontrolu polynomiální identity na konkrétních rámcích, nikoli důkaz existence úplného nedegenerovaného řešení.
 

@@ -9,6 +9,18 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Exact Lorentz-real variational chain rule, not a completed UBT action.
 UBT-AI-PROVENANCE-END -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Unrestricted composite spin variation: exact normal-blindness and connection rank
 
 **Status: EXACT KINEMATIC VARIATION / PHYSICAL UBT ACTION OPEN.** Continue merged PR #693 without imposing homogeneous FLRW symmetry. Use the existing positive-Hermitian Lorentz-real field sector and its only Lorentz spin connection.
@@ -155,7 +167,8 @@ c_{\rm H}(T_a\wedge e_b-e_a\wedge T_b)+
 q^{-1}(X_b\mathcal E_a-X_a\mathcal E_b)=0.
 }
 \]
-The tetrad Euler expression also enters the composite field equation through (-q^{-1}D_omegamathcal E_a). Even for vanishing direct matter spin current, the spin equation is generally **not** the torsion-free Cartan condition. Conversely, these coupled equations do not automatically force the parent (mathcal E_a=0); the time-normal component remains the central Hamiltonian question. The parity-odd coefficient (c_{m H}) must be justified by the declared symmetries.
+The tetrad Euler expression also enters the composite field equation through (-q^{-1}D_omegamathcal E_a). Even for vanishing direct matter spin current, the spin equation is generally **not** the torsion-free Cartan condition. Conversely, these coupled equations do not automatically force the parent (mathcal E_a=0); the time-normal component remains the central Hamiltonian question. The parity-odd coefficient (c_{
+m H}) must be justified by the declared symmetries.
 
 An independent exterior-algebra script evaluates the original four-form variation directly in arbitrary invertible sample coframes with generic symbolic couplings and verifies **every tetrad component**; it separately checks the covariant torsion derivative of (P_{ab}) for each spin-bivector pair. This is a numerical-coframe polynomial identity audit, not a proof of existence of full nondegenerate solutions.
 

@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: LORENTZ_CONNECTION_RECONSTRUCTION -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Exact local Lorentz-connection reconstruction: solvability and 12-function ambiguity
 
 2026-10-26. Integrated Fundamental Dynamics track. EXACT algebraic result for restricted real Lorentz-vector lift, NOT a torsion selector or complete two-sided UBT closure.

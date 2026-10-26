@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: composite_metric_1d_bracket_selector -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Composite metric structure function: conditional 1D Hamiltonian selector
 
 **Exact canonical toy theorem (2026-10-25). Not UBT's physical Hamiltonian or a closed generally covariant constraint system.** Follow-on to draft #738. Note recent draft #739: canonical connection uses D=∂+AΘ−ΘB, while research #735 uses a plus-right-B redefinition; no independent connection is invoked here.

@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: exact_flat_connection_no_curvature -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Exact nonlinear no-curvature theorem for the zero-connection Theta branch
 
 **Exact local differential-geometric theorem (2026-10-25); stronger than the linearized frozen-connection observation in draft #739. Not a UBT Hamiltonian.**

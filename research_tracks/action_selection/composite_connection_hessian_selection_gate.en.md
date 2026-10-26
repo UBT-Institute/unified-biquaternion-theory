@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: composite_connection_hessian_selection_gate -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Connection-selection obstruction to the unrestricted composite Hessian
 
 **2026-10-26; exact algebraic nonuniqueness and derivative-order audit; NOT a universal impossibility theorem for all proposed actions.**

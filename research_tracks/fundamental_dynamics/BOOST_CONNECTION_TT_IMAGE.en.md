@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: BOOST_CONNECTION_TT_IMAGE -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Lorentz boost connection: surjective onto spatial TT perturbations at a point
 
 **2026-10-26. Exact local kinematic construction; not a derived UBT graviton or full composite closure.** Continues merged #773 and integrated #770.

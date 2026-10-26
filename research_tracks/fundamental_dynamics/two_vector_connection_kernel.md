@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Two Lorentz vectors reduce the residual composite connection kernel 12 → 4
 
 **26 October 2026 — exact pointwise algebraic theorem, conditional on the pure Lorentz-vector lift. Not an action, a torsion-selection law, or a physical mode-count claim.** Follows integrated PR #776 and the canonical time-qubit projector audit #778.

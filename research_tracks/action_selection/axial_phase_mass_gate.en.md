@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: axial_phase_mass_gate -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Axial phase gate for Dirac mass in a single biquaternion
 
 **Exact conditional linear-algebra theorem (2026-10-25).** No claim that the UBT physical Hamiltonian has been selected.

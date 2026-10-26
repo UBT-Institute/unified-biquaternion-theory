@@ -8,9 +8,10 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Exact scalar-tensor comparison under independent metric/connection assumptions; NOT finalized fundamental UBT action.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 # Stopová torze z neminimální skalárně-křivostní vazby: podmíněný test akce
 
 **Stav: DERIVED_WITH_ASSUMPTIONS / UBT FIRST-PRINCIPLES GAP OPEN.** Jde o přímý test zbývající mezery `GAP-10T-DYN` a mergnuté kanonické FLRW kontorze, NIKOLI o definitivní jednu akci UBT. Standardní výsledky Einsteinovy–Cartanovy a skalárně-tenzorové gravitace nevydáváme za nové.
@@ -147,7 +148,8 @@ pokud je pravá strana kladná; jinak kladné reálné řešení neexistuje. Na 
 
 ## Oprava pravidlem řetězové derivace: skutečná rovnice kompozitní UBT
 
-Pro radiální reprezentaci jediného Theta není metrika ani tetráda **nezávislá** na boostové části spinového spojení. Uvažujme nejprve funkcionál s nezávislou tetrádou (S[e,omega,ho]) a dosaďme radiální tetrádu teprve po definici jeho Eulerových derivací:
+Pro radiální reprezentaci jediného Theta není metrika ani tetráda **nezávislá** na boostové části spinového spojení. Uvažujme nejprve funkcionál s nezávislou tetrádou (S[e,omega,
+ho]) a dosaďme radiální tetrádu teprve po definici jeho Eulerových derivací:
 \[
 e_\mu{}^0=\frac{\partial_\mu\rho}{\sqrt{\mathcal N_0}},\qquad
 e_\mu{}^i=\frac{\rho\,b_\mu{}^i}{\sqrt{\mathcal N_0}}.
@@ -174,9 +176,12 @@ Také skalární rovnice po integraci per partes derivace rho z časové tetrád
 -\frac1{\sqrt{\mathcal N_0}}\partial_\mu\mathcal E^\mu{}_0=0.
 }
 \]
-Výraz (mathcal E^mu{}_a) již obsahuje variaci všech metrických a tetrádových členů výchozí akce; explicitní závislost na (ho) zahrnuje (mathcal U_ho). Obsahuje-li akce derivované členy, jde o **Eulerovy funkcionální derivace** místo obyčejných parciálních, takže identity platí za běžných okrajových podmínek.
+Výraz (mathcal E^mu{}_a) již obsahuje variaci všech metrických a tetrádových členů výchozí akce; explicitní závislost na (
+ho) zahrnuje (mathcal U_
+ho). Obsahuje-li akce derivované členy, jde o **Eulerovy funkcionální derivace** místo obyčejných parciálních, takže identity platí za běžných okrajových podmínek.
 
-**Zásadní oprava předchozího porovnání torze:** Nezávislá Cartanova rovnice (mathcal C^mu{}_i=0) a z ní získaná jednoduchá stopová torze obecně NEJSOU rovnicí po dosazení kompozitní tetrády. Přesná rovnice boostů obsahuje člen (homathcal E^mu{}_i/sqrt{mathcal N_0}). Dřívější vztah (a^2F=C^2V^2) je tedy nutnou podmínkou **jen v modelu s nezávislými proměnnými (nebo ve větvi, kde odpovídající tetrádové Eulerovy členy nezávisle mizí)**. Zatím není dokázán jako nutná podmínka úplné akce UBT s jediným Theta. Dynamický rank a Hamiltonián vyžadují řešení spojených kompozitních rovnic pro Theta a spojení včetně jejich vazeb, nikoli převzetí nezávislých Palatiniho rovnic.
+**Zásadní oprava předchozího porovnání torze:** Nezávislá Cartanova rovnice (mathcal C^mu{}_i=0) a z ní získaná jednoduchá stopová torze obecně NEJSOU rovnicí po dosazení kompozitní tetrády. Přesná rovnice boostů obsahuje člen (
+homathcal E^mu{}_i/sqrt{mathcal N_0}). Dřívější vztah (a^2F=C^2V^2) je tedy nutnou podmínkou **jen v modelu s nezávislými proměnnými (nebo ve větvi, kde odpovídající tetrádové Eulerovy členy nezávisle mizí)**. Zatím není dokázán jako nutná podmínka úplné akce UBT s jediným Theta. Dynamický rank a Hamiltonián vyžadují řešení spojených kompozitních rovnic pro Theta a spojení včetně jejich vazeb, nikoli převzetí nezávislých Palatiniho rovnic.
 
 Přesná funkcionální identita se kontroluje v `tools/verify_composite_spin_chain_rule.py` a `tests/test_composite_spin_chain_rule.py`. Jde o strukturální matematiku, nikoli o úplné řešení rovnic pole.
 

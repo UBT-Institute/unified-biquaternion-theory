@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: explicit_hamiltonian_action_reconstruction -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Explicit Hamiltonian-to-action reconstruction on the 8-real Theta carrier
 
 **Constructive conditional theorem.** This is a family of explicit actions **once** an invariant two-form and a Hamiltonian are chosen; it is not a proof that locked UBT axioms uniquely choose the physical action.

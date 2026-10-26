@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: composite_volume_dirac_flrw -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Exact Dirac reduction of the existing composite-volume FLRW truncation
 
 **2026-10-24 — C-tier conditional calculation; not a full-UBT Dirac analysis.** References: [composite Lorentz-jet volume identity](lorentz_jet_volume_boundary.en.md), [closed FLRW coframe](connection_closed_flrw.en.md), [Hilbert–canonical fixed-background bridge](energy_charge_bridge.en.md), and merged #700.

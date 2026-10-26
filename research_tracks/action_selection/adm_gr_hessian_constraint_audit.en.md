@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: adm_gr_hessian_constraint_audit -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # ADM Hessian and constraint audit of the adopted UBT Einstein–Lambda branch
 
 **Scope: classical local Einstein–Lambda endpoint only (C-tier comparison), 2026-10-24. NOT the Hessian of the microscopic full single-Theta theory.** Based on [gravity dynamical postulate](../../canonical/gr_closure/gravity_dynamical_postulate.en.md) and merged #635/#711. The postulate already recovers the local vacuum Einstein equations on its regular split-jet patch, but its microscopic matter/gauge/quantum completion is open.

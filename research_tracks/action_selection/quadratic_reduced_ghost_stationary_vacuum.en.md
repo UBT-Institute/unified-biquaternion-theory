@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: quadratic_reduced_ghost_stationary_vacuum -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Quadratic reduced ghost witness at a stationary flat vacuum
 
 **2026-10-26: conditional quadratic perturbative result, not a nonperturbative physical-energy theorem or fundamental UBT Hamiltonian.**

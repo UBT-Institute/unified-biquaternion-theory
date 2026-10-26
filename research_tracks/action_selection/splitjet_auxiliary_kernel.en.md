@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: splitjet_auxiliary_kernel -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Exact split-jet auxiliary kernel and off-shell shift redundancy
 
 **C-tier structural result, 2026-10-24.** Adopted classical Palatini–HT gravity sector only; full microscopic UBT Hessian and Dirac algebra remain open.

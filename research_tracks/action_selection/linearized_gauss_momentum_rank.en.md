@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: linearized_gauss_momentum_rank -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Linearized Gauss constraints on the Theta canonical momenta
 
 **Conditional, 2026-10-26.** Fix a prescribed time slicing and a real eight-dimensional congruence representation. Choose L_kin=(1/2) G_AB (D_t q)^A (D_t q)^B with nondegenerate invariant G of inertia (2,6). This is a finite-dimensional/ultralocal test of the already proposed family; NOT the unfinalized full UBT action, an ADM reduction or a physical no-ghost theorem.

@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: spinor_tetrad_intertwiner_gate -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Representation-intertwiner obstruction: spinor Theta versus Lorentz tetrad
 
 **Exact conditional representation result (2026-10-25), not a no-go for all UBT implementations or a derivation of the Hamiltonian.** Builds on merged #748 and draft #749. Do not confuse the spinor action on Theta with Lorentz congruence on E.

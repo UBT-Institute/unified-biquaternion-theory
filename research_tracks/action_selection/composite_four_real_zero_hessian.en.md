@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: composite_four_real_zero_hessian -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Four-real-component composite vector slice: zero velocity Hessian
 
 **Conditional exact theorem (2026-10-26).** Not a calculation for unrestricted eight-real biquaternion Theta or a velocity-dependent reconstructed connection.

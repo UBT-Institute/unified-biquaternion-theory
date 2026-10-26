@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: dirac_representation_obstruction -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Dirac-factorization gate: vector-congruence Theta is not a Dirac spinor
 
 **C-tier exact representation-theoretic obstruction, 2026-10-24.** Follows draft #719's dimension-only factorization. The result applies to the *locked* action of spatial Spin(3)=SU(2) on Theta by congruence X↦UXU†, and to the usual Dirac action under the same spin group. It is not a no-go for emergent spinors or a distinct carrier representation.

@@ -1,36 +1,50 @@
-# UBT od symplektické struktury: invariantní dvouforma na osmi reálných složkách
+<!-- BILINGUAL-UNIT: invariant_symplectic_theta -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
 
-**Přesný algebraický výsledek C-tier (24. 10. 2026); nejde o hotový fundamentální Hamiltonián ani úplnou polní symplektickou formu.** Navazuje na Hamiltonovský track #716. Bez dalšího fundamentálního pole či akce.
 
-## Odvození z existující algebry
+# UBT od symplektiky: přirozená invariantní 2-forma v osmi reálných dimenzích
 
-Zapišme bikvaternion jako X z Mat(2,C). Dosavadní invariantní, reálné, symetrické a nedegenerované párování je
+**Přesný algebraický výsledek úrovně C (2026-10-24), nikoli odvození fundamentálního hamiltoniánu UBT či úplné presymplektické struktury teorie pole.** Doplňuje návrh základů přístupu od hamiltoniánu #716. Žádné nové fundamentální pole či akce.
+
+## Konstrukce ze stávajících invariantních dat
+
+Reprezentujme bikvaternion jako X v Mat(2,C). Na podkladovém reálném osmirozměrném vektorovém prostoru použijme známou nedegenerovanou *reálnou symetrickou* formu invariantní vůči fázi a kongruenci SL(2,C)
 \[
 B(X,Y)=\operatorname{Re}\operatorname{Tr}[\operatorname{adj}(X)Y^\dagger].
 \]
-Jeho signatura na osmi reálných komponentách je (2+,6-). Násobení J:X↦iX splňuje J²=-1, B(JX,JY)=B(X,Y), B(JX,Y)=-B(X,JY). Tím vzniká
+Jde o polarizaci H(X)=Tr(adj(X)X†) (stopa je zde na diagonále reálná). Její reálná setrvačnost je (2+,6-), jak je doloženo v canonical_family_hamiltonian_bridge.en.md. Násobení J:X↦iX splňuje J²=-1, B(JX,JY)=B(X,Y) a B(JX,Y)=-B(X,JY). Proto
 \[
-\boxed{\Omega(X,Y)=B(X,JY).}
+\boxed{\Omega(X,Y)=B(X,JY)}
 \]
-Je reálná, antisymetrická, nedegenerovaná a invariantní při dosavadních fázových a SL(2,C) transformacích. Ve vhodné reálné bázi s K=diag(1,1,-1,-1,-1,-1,-1,-1) a čtyřmi rotačními 2x2 bloky J je matice Ω=KJ, rank 8 a determinant 1.
+je invariantní alternující nedegenerovaná reálná 2-forma. Nedegenerovanost plyne z invertibility J a nedegenerovanosti B. Pro pevnou reálnou bázi s K=diag(1,1,-1,-1,-1,-1,-1,-1) tvoří J čtyři rotační bloky 2x2; matice Ω=KJ má hodnost osm a det 1. To definuje pseudo-Kählerovsky kompatibilní *lineární* symplektický vektorový prostor bez zavedení nezávislých kotečných hybností. Invariance vůči symetrii plyne z kongruenční invariance B a komplexní linearity fáze i reprezentace SL(2,C), tedy komutace s J.
 
-Získáváme tedy přirozený **kandidát** na symplektickou strukturu přímo na osmi reálných souřadnicích Theta, bez povinného zdvojení na nezávislé hybnosti. Výchozí axiomy však neurčují celkové měřítko Ω, polní integrační míru, správné zacházení s kalibracemi ani její fyzikální výběr. Indefinitní B nevadí nedegenerovanosti Ω, ale je problémem pro pozitivitu některých Hamiltoniánů.
+Případná prostorová symplektická forma \(\int_\Sigma \mu\,\Omega(\delta X,\delta X)\) vyžaduje nezávisle zdůvodněnou integrační hustotu \(\mu\), nadplochu, závislost na pozadí a zacházení s kalibračními degeneracemi. Konstrukce je *kandidátem*, nikoli jednoznačnou fyzikální Poissonovou strukturou; její celkové měřítko je libovolné a obecnější invariantní struktury nebyly vyloučeny. Indefinitní signatura B zásadně nevyvrací Ω jako symplektickou formu, ale ovlivňuje omezenost kandidátního hamiltoniánu.
 
-## Nejjednodušší přesný Hamiltonovský tok
+## Přesný nejjednodušší hamiltonovský tok
 
-Vezměme již známý invariant H₂=B(X,X)/2 a konvenci \(\iota_{\dot X}\Omega=dH_2\). Pak
+Na tomto kandidátním symplektickém prostoru vezměme *známý invariant* H₂(X)=B(X,X)/2 a definujme konvenci \(\iota_{\dot X}\Omega=dH_2\). Přesně plyne
 \[
-\boxed{\dot X=iX.}
+\boxed{\dot X=JX=iX.}
 \]
-Jde pouze o vnitřní fázovou rotaci, bez prostorového šíření, křivosti nebo gravitace. Kvadratická energie má navíc indefinitní signaturu (2,6), takže není automaticky fyzikálně kladná. **To není zákaz jiných Hamiltoniánů**, ale přesný důkaz, že pouhá kvadratická invariantní forma sama nestačí.
+Důkaz: Ω(\dot X,Y)=B(\dot X,JY)=-B(J\dot X,Y); ztotožnění s dH₂(Y)=B(X,Y) dává \(-J\dot X=X\), tedy \(\dot X=JX\). Elementární kvadratický generátor je tedy **pouze rovnoměrnou vnitřní fázovou rotací**. Nemá prostorové šíření, křivost ani Einsteinovu dynamiku. Navíc H₂ je indefinitní se setrvačností (2,6), nikoli fyzikálně kladnou energií.
 
-Kanonický kotangentní prostor (Theta,Pi) z #716 je alternativní šestnáctirozměrný kandidát. Osmidimenzionální symplektická realizace z něj zatím nebyla odvozena; obě nelze zaměňovat.
+Jde o užitečný filtr výběru, nikoli vyloučení jiných generátorů. Kanonická kotečná struktura v #716 je odlišným kandidátem dimenze 16 reálných složek; symplektická konstrukce osmi reálných složek **není** její automatickou redukcí a ani jednu nevybírají uzamčené axiomy UBT.
 
-## Další výzkumná brána
+## Rozhodující další podmínky
 
-1. Určit fyzikální roli reálného a imaginárního času a odvodit zachovávaný symplektický proud bez postulování hledané akce.
-2. Nalézt principem vybraný Hamiltonovský generátor obsahující prostorové derivace a gravitační dynamiku; prokázat uzavření vazeb.
-3. Ověřit pozitivitu až na redukovaném fyzikálním prostoru.
-4. Teprve z nalezené \(\Omega\) a H sestavit lokální akci a ověřit její gravitační a látkové redukce.
+1. Odvodit roli komplexního času t+iψ a generátoru reálného fyzikálního času: určit, zda Ω vzniká jako zachovávaný kovariantní proud fázového prostoru **jediné** teorie Theta bez předpokladu hledané akce.
+2. Konstruovat intrinsické hamiltonovské hustoty prostorových derivací a křivosti a ověřit kovarianci a uzávěru vazeb bez vypůjčení přijaté akce GR.
+3. Určit redukci vazeb a pozitivitu fyzikálních módů. Fázový pohyb kvocientovat pouze při prokázání skutečného kalibračního generátoru a vazby.
+4. Vznikne-li fyzikální H, rekonstruovat jednoznačnou akci z této 2-formy a H přes *lokální* symplektický potenciál, zohlednit globální a topologické překážky a testovat její gravitační, hmotové a ψ redukce.
 
-Test: \`python -m unittest discover -s research_tracks/action_selection/tests -p 'test_invariant_ubt_symplectic.py' -v\`.
+Ověření: \`python -m unittest discover -s research_tracks/action_selection/tests -p 'test_invariant_ubt_symplectic.py' -v\`. Osmirozměrná maticová kontrola ověřuje algebru, nikoli teorii pole.

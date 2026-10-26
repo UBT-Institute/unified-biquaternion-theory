@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: chirality_projector_naturality -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Chirality projectors: a naturality obstruction in Mat(2,C)
 
 **2026-10-24. Conditional algebraic theorem, not fundamental Hamiltonian selection.** Follow-up to draft #722. Do not change locked UBT axioms.

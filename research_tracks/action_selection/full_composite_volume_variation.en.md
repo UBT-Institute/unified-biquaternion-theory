@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: full_composite_volume_variation -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Full composite chain-rule variation of the sharp-volume candidate
 
 **Exact off-shell functional identity, 2026-10-25. NOT a determined UBT Euler–Lagrange equation, Hamiltonian or unique action.** Builds on merged #755. The connection is explicitly nonzero and composite, not frozen.

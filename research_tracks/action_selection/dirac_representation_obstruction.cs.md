@@ -1,23 +1,37 @@
-# Diracův Hamiltonián: kanonické maticové pole Theta není Diracův spinor
+<!-- BILINGUAL-UNIT: dirac_representation_obstruction -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
 
-**Přesná reprezentační překážka C-tier, 24. 10. 2026.** Navazuje na draft #719. Platí pro dosavadní kongruenční rotace X↦UXU† a standardní spinorovou reprezentaci stejné grupy Spin(3)=SU(2), nikoli pro každou představitelnou emergentní spinorovou excitaci.
 
-## Rozhodující rotace o 2π
+# Podmínka Diracovy faktorizace: vektorově kongruenční Theta není Diracův spinor
 
-Pro U(θ)=exp(-iθσ3/2) je při θ=2π prvek U=-I2. Matice Theta se transformuje jako X↦UXU†, takže
+**Přesná reprezentační překážka úrovně C, 2026-10-24.** Navazuje na pouze dimenzionální faktorizaci návrhu #719. Výsledek platí pro *uzamčené* působení prostorové Spin(3)=SU(2) na Theta kongruencí X↦UXU† a pro obvyklé Diracovo působení téže spinové grupy. Nevylučuje emergentní spinory ani odlišnou reprezentaci nosiče.
+
+## Test 2π
+
+Nechť U(θ)=exp(-iθσ3/2). Kongruenční reprezentace na čtyřkomplexněrozměrném vektorovém prostoru Mat(2,C), R_C(U):X↦UXU†, je komplexně lineární v X. Při θ=2π je U=-I2, takže
 \[
-(-I_2)X(-I_2)=X.
+R_C(-I_2)X=(-I_2)X(-I_2)=X
 \]
-Kongruenční reprezentace na Mat(2,C) tedy při této rotaci působí +I4. Naproti tomu čtyřkomponentový Diracův spinor transformovaný blokově diag(U,U) získá -I4.
+pro každé X. Tedy R_C(-I2)=+I4. Naproti tomu standardní čtyřsložková Diracova spinorová rotační reprezentace R_D(U)=diag(U,U) dává R_D(-I2)=-I4. Kdyby invertibilní komplexně lineární proplétající operátor T splňoval T R_C(U)=R_D(U)T pro všechna U∈SU2, centrální prvek by vynutil T=-T, a tedy T=0. **Žádný invertibilní proplétající operátor neexistuje.** Mezi těmito dvěma reprezentacemi SU2 ve skutečnosti neexistuje žádný nenulový lineární proplétající operátor.
 
-Pokud by existovalo invertibilní komplexně lineární propletení T mezi oběma reprezentacemi pro všechny rotace, muselo by platit T(+I4)=(-I4)T. Tedy T=0, spor. **Žádné nenulové lineární propletení této dvojice reprezentací neexistuje.**
+To také plyne z rozkladu při rotacích: Mat(2,C)=span(I2) ⊕ span(σ_i) ≅ spin 0 ⊕ spin 1, zatímco Diracův nosič ≅ dvě kopie spinu 1/2. Odlišný centrální charakter a ireducibilní obsah nelze napravit přeuspořádáním položek.
 
-Stejně to vidíme z rozkladu při rotacích: Mat(2,C) pod adjungovaným působením tvoří spin 0 ⊕ spin 1, kdežto Diracův spinor tvoří dvě kopie spinu 1/2.
+## Význam pro UBT vycházející z hamiltoniánu
 
-## Význam
+Cliffordovy matice 4×4 v #719 splňují Diracovu identitu odmocniny jako lineární algebra na C⁴, ale prostá definice Ψ=vec(Theta) NEVYTVÁŘÍ Lorentzovsky kovariantní fyzikální Diracův hamiltonián pro kanonické kongruenční Theta. Stejně tak případný invariantní lineární derivační symbol na kongruenční reprezentaci potřebuje nezávislý důkaz kovariance a symplektické kompatibility. Nezavádět spinorový index či nezávislé pole k obejití této věty bez odvození z původní struktury.
 
-Diracovy 4×4 Cliffordovy matice z #719 sice faktorizují relativistickou disperzi, ale pouhé přeuspořádání čtyř komplexních složek Theta nepřenese správné spinorové transformace. Tento výsledek nevyvrací emergentní spinory, odvozenou spinorovou strukturu ani odlišný tenzorový systém prvního řádu. Neměli bychom však bez odvození doplňovat další fundamentální pole či svévolně měnit zamčené transformační zákony.
+Nevyloučené cesty: (a) Diracovy spinory jako *emergentní* excitace s nelineární či topologickou transformací nebo spinorovými řezy; (b) samostatná **odvozená** reprezentace nosiče stávajícího složeného operátoru založeného na Theta; (c) alternativní systémy prvního řádu transformující se jako tenzory (neoznačovat je nesprávně za Diracovy). Všechny vyžadují plně specifikovaný dynamický generátor, fyzikální symplektickou formu a test kovariance.
 
-**Další úkol:** klasifikovat rotačně kovariantní operátory prvního řádu přímo v reprezentaci Mat(2,C), otestovat jejich symbol a relativistickou disperzi; teprve poté případně testovat plnou Lorentzovu kovarianci a kompatibilitu se symplektickou strukturou.
+**Další ostrý test:** klasifikovat translačně invariantní lineární diferenciální operátory prvního řádu ekvivariantní vůči rotacím indukovaným U X U† na vektorovém nosiči a ověřit, zda se některý dovolený symbol umocní na skalární relativistickou disperzi bez přidání neodvozeného Cliffordova nosiče. I kladná odpověď na tento užší rotační test by vyžadovala Lorentzovy boosty a fyzikální vazbovou a symplektickou analýzu.
 
-Test: \`python -m unittest discover -s research_tracks/action_selection/tests -p 'test_dirac_representation_obstruction.py' -v\`.
+Reprodukce: \`python -m unittest discover -s research_tracks/action_selection/tests -p 'test_dirac_representation_obstruction.py' -v\` (přesná SymPy).

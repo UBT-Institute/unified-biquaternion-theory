@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: positive_slice_lorentz_invariance_gate -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Positive real slice: exact inertia and Lorentz-congruence obstruction
 
 **Status:** conditional finite-dimensional no-go for a *linear* positive-definite restriction of the already classified quadratic invariant H, under the established congruence carrier X->SXS^dagger. 2026-10-26. Not a proof that every constrained or nonlinear completion is impossible.

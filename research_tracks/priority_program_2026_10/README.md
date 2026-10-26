@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # October 2026 focused UBT programme
 
 Status: working programme.  This file changes priorities, not theorem status.
@@ -177,7 +189,9 @@ Key points:
   requires a genuine critical/unbroken phase rather than gauge redundancy
   alone.
 - The positive timelike kinetic gives angular coefficients proportional to
-  (ho^2).  With (c_V=a_Hho^2), the enhanced-potential endpoint
+  (
+ho^2).  With (c_V=a_H
+ho^2), the enhanced-potential endpoint
   (mu	o0^-) provides a candidate scaling in which
   (m_B^2	o0) while (Z_B) and the induced gauge coupling can remain finite.
 - This candidate also requires (lambda_2	o0); otherwise the determinant
@@ -189,7 +203,8 @@ gap/Schwinger--Dyson analysis.
 
 The preferred QCD-like endpoint is
 [
-m_{B,m ren}^2=0,qquad
+m_{B,
+m ren}^2=0,qquad
 Z_B>0,qquad
 M_eta^2>0,
 ]
@@ -200,13 +215,18 @@ so that below the charged-frame gap the colour EFT can approach pure
 ### P2 finite-radius refinement — 2026-10-10
 
 The preferred HLS target has changed from the singular raw-field endpoint
-(ho	o0) to a **finite-radius quantum critical/decoupling surface**.
+(
+ho	o0) to a **finite-radius quantum critical/decoupling surface**.
 
 New exact boundaries:
 - the timelike field space is a cone with measure
-  (ho^7dho,dmu_7); the Stiefel rewrite loses invertibility at
-  (ho=0);
-- a homogeneous frame (W=ho Z) cannot stay rank three at the origin,
+  (
+ho^7d
+ho,dmu_7); the Stiefel rewrite loses invertibility at
+  (
+ho=0);
+- a homogeneous frame (W=
+ho Z) cannot stay rank three at the origin,
   because a Hermitian form of signature ((1,3)) has complex Witt index one;
 - after (F_B^2) exists, (c_V=0) restores independent local
   (SU(3)_Z	imes SU(3)_B), while (c_V
@@ -228,7 +248,8 @@ e0) locks them to the diagonal;
 
 Preferred finite-radius endpoint:
 [
-ho_0>0,qquad
+
+ho_0>0,qquad
 Z_B>0,qquad
 c_V	o0,qquad
 lambda_2	o0,qquad
@@ -244,7 +265,8 @@ that symmetry and can act as a spurion source.
 The next decisive calculation is therefore the mixed GR/colour contribution
 to
 [
-left.eta_{lambda_2}ight|_{lambda_2=0},
+left.eta_{lambda_2}
+ight|_{lambda_2=0},
 ]
 or an equivalent demonstration that the sharp-sector spurions decouple at the
 colour matching scale.

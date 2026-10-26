@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # A parallel second Theta vector is an exact gradient and annihilates torsion
 
 **26 October 2026. Exact conditional geometric corollary of the two-vector Lorentz lift.** Not a dynamical field equation, not a selected unique connection/action, and not evidence of a physical time qubit.

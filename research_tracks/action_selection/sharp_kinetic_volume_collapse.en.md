@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: sharp_kinetic_volume_collapse -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Exact sharp-pairing kinetic collapse on the locked tetrad
 
 **Theorem for a specific kinetic pairing, 2026-10-25. No finalized UBT action or Hamiltonian.**

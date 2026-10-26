@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: quartic_vacuum_full_hessian_and_ghost -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Stationary quartic vacuum and negative-kinetic transverse instability
 
 **2026-10-26 — exact Hessian verification, conditional independent-metric minimally coupled Theta branch.** The model is not the finalized UBT master action.

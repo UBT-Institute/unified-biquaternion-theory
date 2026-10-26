@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: COMPOSITE_EL_CHAIN_RULE -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Mandatory Euler–Lagrange chain rule after eliminating composite geometry
 
 **Integrated continuation of merged UBT Fundamental Dynamics PR #770 (2026-10-26).** An exact inverse-variational step, not a new fundamental UBT action.
@@ -7,9 +21,11 @@ Take the sole dynamical field q=vec_R(Theta), and denote the *non-independent* c
 For arbitrary compactly supported δq, its first variation is
 \[
 \delta S_{\rm red}=\langle E_q,\delta q\rangle+\langle E_z,DZ[q]\,\delta q\rangle
-+\text{boundary}
-=\langle E_q+(DZ[q])^*E_z,\delta q\rangle+\text{boundary}.
++B_{\partial}
+=\langle E_q+(DZ[q])^*E_z,\delta q\rangle+B_{\partial}.
 \]
+Here \(B_{\partial}\) denotes boundary terms.
+
 Consequently the **correct reduced Euler–Lagrange equation** is
 \[
 \boxed{E_q+(DZ[q])^*E_z=0.}

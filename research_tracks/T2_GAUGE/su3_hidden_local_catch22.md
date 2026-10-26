@@ -1,4 +1,16 @@
 <!-- © 2026 Ing. David Jaroš — CC BY-NC-ND 4.0 -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Minimal hidden-local-SU(3) catch-22 on the SU(1,3)/SU(3) coset
 
 **Status:** exact no-go for the minimal two-derivative auxiliary-gauge
@@ -225,11 +237,13 @@ phase diagram.
 
 A viable QCD-like phase must have a renormalized inverse gauge kernel
 [
-Gamma_T(p)=m_{B,m ren}^2+Z_Bp^2+cdots
+Gamma_T(p)=m_{B,
+m ren}^2+Z_Bp^2+cdots
 ]
 with
 [
-m_{B,m ren}^2=0,qquad Z_B>0,
+m_{B,
+m ren}^2=0,qquad Z_B>0,
 ]
 and the induced 3/4-point vertices must obey the same local (SU(3))
 Slavnov--Taylor identities.

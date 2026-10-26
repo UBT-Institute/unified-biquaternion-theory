@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: composite_cartan_spin_compatibility_gate -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Cartan torsion selection versus the UBT composite-concurrency equation
 
 **2026-10-26. Exact compatibility gate, conditional on the Hilbert-Palatini/Einstein-Cartan *effective branch*, not a derivation of its action from the fundamental UBT Theta-only axioms.**
