@@ -57,6 +57,16 @@ T^a(\omega_\lambda)-T^a(\omega)=
 
 Both V and W remain covariantly constrained, and the generated tetrad and metric are identical for the entire family. Thus metric compatibility, proper local Lorentz covariance, no new independent fields, and the two-vector first-jet identities do NOT uniquely pick a spin connection.
 
+## First-jet action blindness theorem
+
+Consider any differentiable local density L(V,W,DV,DW,g) where the connection enters **only through those two covariant first derivatives** and the metric g is determined from their composite tetrad. Keep V and W fixed and vary the connection within the common SO(2) stabilizer: delta omega V=delta omega W=0. Consequently delta(DV)=delta(DW)=delta g=0, so
+
+\[
+\boxed{\delta_C S_{1\rm jet}=0}\quad\text{for every stabilizer-valued }C.
+\]
+
+This identity holds off shell for the declared density class. Even a mathematically well-defined first-jet kinetic, potential or volume functional cannot distinguish omega and omega_lambda; merely imposing local Lorentz symmetry does not fix the stabilizer. A selector would need new information not contained in these first jets, such as curvature/torsion or second covariant jets, an additional constraint, or a proved physical equivalence quotient. This is a *conditional action-selection obstruction*, not a theorem that all possible single-Theta actions lack dynamics.
+
 ## Smooth flat-background witness
 
 On the interior of the future timelike cone in Minkowski space, use
