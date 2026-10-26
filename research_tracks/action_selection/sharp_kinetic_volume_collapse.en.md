@@ -12,7 +12,7 @@ Sharp is quaternion conjugation (2x2 adjugate), not complex conjugation. **If** 
 \boxed{g^{\mu\nu}\langle D_\mu\Theta,D_\nu\Theta\rangle
 =4\mathcal N_0 I.}
 \]
-Its scalarized standard density \( \frac12\sqrt{-g}g^{\mu\nu}\langle D_\mu\Theta,D_\nu\Theta\rangle\) is precisely \(2\mathcal N_0\sqrt{-g}\), a **composite volume functional**, not an independent quadratic kinetic density. The metric variation still matters because g depends on the first jet and composite connection. The identity neither proves that this volume functional has no variation nor forces the complete action to vanish.
+Its scalarized standard density \( \frac12\sqrt{-g}g^{\mu\nu}\langle D_\mu\Theta,D_\nu\Theta\rangle\) is precisely \(2\mathcal N_0\sqrt{-g}\), a **composite volume functional**, not an independent quadratic kinetic density. The metric variation still matters because g depends on the first jet and composite connection. The identity does not establish that this volume functional has no variation, and does not force the complete action to vanish.
 
 For the special zero-connection real-slice case, the tetrad is a Jacobian e_mu^a=∂_mu y^a on nondegenerate oriented patches (see draft #754). Then the volume element is det(∂y/∂x)d4x=dy^0∧dy^1∧dy^2∧dy^3, which is locally an exact 4-form:
 \[
