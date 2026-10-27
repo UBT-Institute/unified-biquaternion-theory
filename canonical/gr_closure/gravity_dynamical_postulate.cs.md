@@ -13,6 +13,11 @@ UBT-AI-PROVENANCE-END
 
 # Dynamický postulát gravitačního sektoru UBT: jednovazbová Einsteinova-Lambda větev
 
+<!-- BILINGUAL-UNIT: gr-dynamical-postulate.epistemic -->
+## Status vědeckého tvrzení
+
+`AXIOMATIC_CANDIDATE` popisuje původ tohoto přijatého efektivního zákona: nebyl jednoznačně odvozen z uzamčené kinematiky UBT ani informačních principů. Jeho lokální fyzikální tvrzení o obnově má status `CONDITIONAL`. Matematická implikace od deklarované akce a předpokladů regularity/surjektivity k Einsteinovým–Lambda rovnicím se zachovává. Omezení na jednu vazbu vybírá podrodinu; nedokazuje, že symetrie zakazuje Holstův člen nebo nezávislé torzní invarianty. Viz [audit fyzikálního uzavření](../../research_tracks/action_selection/physics_closure_2026_10.cs.md). Stávající osvědčení autora zůstávají beze změny.
+
 <!-- BILINGUAL-UNIT: gr-dynamical-postulate.role -->
 ## Role
 
@@ -212,7 +217,9 @@ Lambda_role: INTEGRATION_CONSTANT
 Lambda_allowed_signs: POSITIVE_ZERO_NEGATIVE
 fundamental_physical_field: Theta
 independent_tetrad: false
-local_Einstein_Lambda_recovery: CLOSED
+local_Einstein_Lambda_recovery: CLOSED_CONDITIONALLY
+action_derivation_status: AXIOMATIC_CANDIDATE
+physical_claim_status: CONDITIONAL
 numerical_Lambda_prediction: OPEN_COSMOLOGY
 full_single_ubt_action: NOT_FINALIZED
 ```

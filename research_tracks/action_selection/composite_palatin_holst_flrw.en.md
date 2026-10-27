@@ -120,7 +120,7 @@ a+\frac{a^3}{3V^2}-\frac{\Lambda a^3}{3}
 
 **New structural finding:** the Holst operator generally induces nonzero spatial torsion w, and the homogeneous scale-factor velocity obtains a new quadratic term. At zero parity coupling the rotation equation is w=0, leaving only the temporal trace torsion. This is not the same as putting all Cartan torsion to zero.
 
-## Decisive bare-Palatini result and missing normal constraint
+## Decisive bare-Palatini result and vacuum Einstein comparison
 
 For the bare external Palatini comparator with vanishing Holst and cosmological terms, the exact scale Euler derivative is
 
@@ -154,7 +154,7 @@ L_{\alpha=0}/\mathscr C=\dot V\,F(a,V),\quad
 \]
 Therefore every regular branch satisfying the scale equation also satisfies the clock equation. In particular the stated positive-cosmological-constant algebraic branch is stationary under **both** reduced variations, yet need not obey the independent Einstein normal constraint. This makes the counterexample genuinely dynamical within the restricted ansatz rather than a solution of one arbitrarily selected equation.
 
-This does not generically satisfy the independent-metric Einstein lapse constraint. At a specific unit choice one gets the exact residual
+The reparametrization constraint is present; it is not an independently imposed vacuum Einstein lapse constraint. The zero-coefficient branch does not generically satisfy the latter. At a specific unit choice one gets the exact residual
 
 \[
 \Lambda=1,\quad V=2:\qquad
@@ -173,7 +173,7 @@ The reduced radial velocity Hessian is
 \frac{\partial^2L_{0,\mathrm{red}}}{\partial\dot a^2}=0.
 \]
 
-The Holst coupling makes the homogeneous radial Hessian nonzero but its sign alone is NOT a physical ghost or stability theorem. The lapse remains N=dV/dt and is not independently variable. Reparameterization invariance leaves a primary relation; its full local Dirac algebra and all perturbative modes remain uncomputed.
+The Holst coupling makes the homogeneous radial Hessian nonzero but its sign alone is NOT a physical ghost or stability theorem. The lapse remains N=dV/dt and is not independently variable. The [closure audit](physics_closure_2026_10.en.md) now computes the complete homogeneous primary Poisson matrix, Dirac brackets, clock Hamiltonian and the separate zero-coefficient constraint stratum. The full spatial field constraint algebra and all perturbative modes remain uncomputed.
 
 ## Strict limitations and next discriminating result
 
@@ -182,3 +182,8 @@ The action is a curvature **comparator**, not a completed foundational UBT actio
 The exact next task is to compute the unrestricted composite spin Euler derivative of a parity-even Palatini four-form with the existing no-new-field lift, identify the normal-component rank, and test whether a derived Holst coefficient improves or worsens its constrained principal symbol. A parity-odd interaction is not automatically allowed by the full U(1) and parity rules; any such parameter remains a candidate until justified.
 
 **Verification:** `tools/verify_composite_palatin_holst_flrw.py`, `tests/test_composite_palatin_holst_flrw.py`, isolated CI. All calculations use real symmetric coframes and exterior forms; no Planck data or CMB fit is used.
+
+<!-- BILINGUAL-UNIT: composite-palatin-holst.selfdual -->
+## Verified self-dual matching and its reality obstruction
+
+The [closure audit](physics_closure_2026_10.en.md) verifies the time-dependent canonical transformation and its exact GR FLRW form at the analytically continued coefficient $b=\pm i$. The conserved clock momentum is the transformed one, not generally the original momentum. A dust-like integration constant is allowed but neither required nonzero nor normalized by a microscopic source derivation. Keeping the original Hermitian connection pair changes the generated spatial tetrad under the proposed imaginary rotation, so the formal match is not yet an admissible canonical UBT branch. A consistent action-derived reality prescription is required before computing its physical perturbations. The existing vacuum-constraint residual remains an exact comparison, not evidence of absent reparametrization symmetry.

@@ -11,7 +11,7 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-# Aktuální stav UBT — 10. října 2026
+# Aktuální stav UBT — 28. října 2026
 
 - **Akce:** jediná fundamentální akce není finalizována.
 - **GR:** lokální obnova Einstein--\(\Lambda\) je podmíněná registrovanými mikroskopickými předpoklady.
@@ -23,3 +23,12 @@ UBT-AI-PROVENANCE-END
 Jemnozrnná autorita: CLAIMS.yaml a STATUS_OF_UBT.md.
 
 Srovnávací pozicování: [Vědecké pozicování UBT — říjen 2026](UBT_POSITIONING_2026_10.cs.md).
+
+<!-- BILINGUAL-UNIT: current-status.physics-closure -->
+## Aktualizace fyzikálního uzavření
+
+Obnova Einsteinovy–Lambda gravitace, zahrnutí Schwarzschilda a jeho standardní poruchové redukce mají status `CONDITIONAL` při přijetí gravitační akce. Algebraické a podmíněné matematické výsledky zůstávají platné. Gravitační postulát je `AXIOMATIC_CANDIDATE` a úplná mikroskopická akce a rozlišující predikce zůstávají `OPEN_GAP`. Holstův koeficient se ponechává, nepředepisuje předpokladem.
+
+[Audit uzavření](../research_tracks/action_selection/physics_closure_2026_10.cs.md) odvozuje Hamiltonián s vazbami určeného homogenního srovnávacího modelu a odhaluje jeho singulární limitu koeficientu. Jde o omezený výpočet, nikoli úplnou polní dynamiku UBT. Alfa zůstává `OPEN_GAP`; fitované B poblíž 46.28 není predikce z prvních principů.
+
+Formálně pokračovaný samoduální srovnávací model má přesné kanonické přiřazení GR FLRW. Původní hermitovská dvojice po tomto pokračování nesplňuje obecné vyčítání tetrády, takže přípustná mikroskopická samoduální větev ani povinná predikce prachu nejsou stanoveny.

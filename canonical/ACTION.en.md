@@ -13,6 +13,11 @@ UBT-AI-PROVENANCE-END
 
 # The single-action invariant of UBT
 
+<!-- BILINGUAL-UNIT: single-action.physics-closure -->
+## Physics closure audit
+
+The [action and constrained-Hamiltonian audit](../research_tracks/action_selection/physics_closure_2026_10.en.md) classifies a restricted constant-coefficient geometric family and derives the full constrained Hamiltonian of the existing homogeneous Palatini–Holst comparator. The effective gravity postulate is an `AXIOMATIC_CANDIDATE`; its physical recovery claims are `CONDITIONAL`. The Holst and torsion coefficients remain unselected. Neither the restricted Hamiltonian nor the independent-connection vacuum equivalence finalizes `S_UBT[Theta]` or supplies a distinctive beyond-GR prediction.
+
 <!-- BILINGUAL-UNIT: single-action.rule -->
 ## Binding rule
 

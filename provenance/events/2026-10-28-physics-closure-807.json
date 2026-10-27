@@ -1,0 +1,124 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-10-28",
+  "claim_or_decision_id": "PHYSICS-CLOSURE-807-HOLST-DIRAC",
+  "summary": "Scope correction of postulated GR recovery and constrained Hamiltonian calculation for the existing homogeneous Palatini-Holst comparator.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_proposal",
+      "actor": "human",
+      "description": "The supplied task requires work in PR #807, retention of allowed Holst/torsion terms, explicit assumptions, formal and computational checks, and preservation of author attestations.",
+      "evidence_ids": [
+        "task"
+      ]
+    },
+    {
+      "kind": "human_proposal",
+      "actor": "human",
+      "description": "Supplied an external review and requested verification before continuing PR #807.",
+      "evidence_ids": [
+        "supplied-review"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "The agent reused the prior Clifford, split-jet and homogeneous curvature results; distinguished independent-connection vacuum variation from the one-clock composite reduction.",
+      "evidence_ids": [
+        "prior-repository",
+        "new-report"
+      ]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Computed the homogeneous primary Poisson matrix, second-class reduction, clock Hamiltonian and distinct zero-coefficient constraint branch; implemented general bivector and Legendre identities in Lean. This records this turn execution, not sole origin of the mathematical model.",
+      "evidence_ids": [
+        "new-report",
+        "implementation"
+      ]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Cross-checked the encoded formulas with independent symbolic differentiation, general tetrad four-form variations, numerical finite differences, Lorentz covariance, integrator convergence and arbitrary precision. Formal checking and CI have separately recorded status.",
+      "evidence_ids": [
+        "implementation"
+      ]
+    },
+    {
+      "kind": "ai_critique",
+      "actor": "ai",
+      "description": "Verified the self-dual canonical match, corrected the transformed clock momentum, derived the formal dust-like integration constant, and found that naive complex rotation fails the original Hermitian-pair tetrad readout, including a linearized homogeneous counterexample.",
+      "evidence_ids": [
+        "supplied-review",
+        "new-report",
+        "implementation"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "task",
+      "class": "primary_document",
+      "locator": "User-supplied task attachment in the current private session; original not deposited publicly.",
+      "original_checked": true,
+      "supports": "Current task scope and scientific/provenance constraints.",
+      "limitations": "No raw private prompt is published; this does not establish the earlier origin of information or geometric principles."
+    },
+    {
+      "id": "prior-repository",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/tree/6f73539e875c98695084ba792d0e69578ec61ef3/research_tracks/action_selection",
+      "original_checked": true,
+      "supports": "Existing homogeneous curvature action, Clifford two-channel classification, split-jet and prior negative results used as inputs.",
+      "limitations": "A repository artifact does not identify who first proposed each formula or concept."
+    },
+    {
+      "id": "new-report",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/physics_closure_2026_10.en.md; paired Czech edition in PR #807",
+      "original_checked": true,
+      "supports": "New constrained calculation, status correction and exact remaining obstructions.",
+      "limitations": "The restricted model is not a selected microscopic UBT action and not a new physical prediction."
+    },
+    {
+      "id": "implementation",
+      "class": "repository_artifact",
+      "locator": "formal/lean/UBT/Hamiltonian/PalatiniHolst.lean; tools/verify_physics_closure.py; reports/physics_closure_2026_10_28.json",
+      "original_checked": true,
+      "supports": "Exact formal statements and executable checks of the declared model.",
+      "limitations": "Formal proof scope, computational checks and pending field-theoretic results are separate; see the source-bound verification report."
+    },
+    {
+      "id": "supplied-review",
+      "class": "discussion_context",
+      "locator": "Subsequent user-supplied review attributed by the user to Claude in this research session; private text not deposited publicly.",
+      "original_checked": true,
+      "supports": "User requested independent checking of the stated canonical transformation and self-dual/dust interpretation before continuing the original task.",
+      "limitations": "The underlying external conversation and claimed test file were not supplied; the independent test was reconstructed here. This is not attribution of the earlier model or independent priority."
+    }
+  ],
+  "rejected_alternatives": [
+    "Calling a postulated effective action a uniquely derived microscopic action.",
+    "Suppressing Holst without a selection theorem.",
+    "Promoting a homogeneous constraint count to the full field-theoretic mode count.",
+    "Counting a GR baseline result as a distinctive UBT prediction."
+  ],
+  "verification": {
+    "status": "partial",
+    "artifacts": [
+      "tools/verify_physics_closure.py",
+      "tests/test_physics_closure.py",
+      "formal/lean/UBT/Hamiltonian/PalatiniHolst.lean",
+      "reports/physics_closure_2026_10_28.json",
+      "tests/test_holst_selfdual_canonical_gr.py"
+    ],
+    "limitations": "No finalized microscopic action, full PDE constraint algebra, new observational prediction or author approval is claimed. The verification report records actual formal build/checker status."
+  },
+  "attribution_status": "evidence_linked",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "Earlier information/shared-reality/observer-capacity models were iteratively co-developed; individual earlier equation origins are not reassigned here. Existing provenance tiers and signatures are untouched."
+}
