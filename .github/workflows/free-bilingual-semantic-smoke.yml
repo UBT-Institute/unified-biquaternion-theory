@@ -15,6 +15,8 @@ jobs:
     timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Install Ollama
         run: curl -fsSL https://ollama.com/install.sh | sh
       - name: Start local model
@@ -58,6 +60,7 @@ jobs:
         run: |
           git fetch --no-tags origin master || git fetch --no-tags origin main
           BASE=$(git rev-parse --verify origin/master 2>/dev/null || git rev-parse --verify origin/main)
+          git merge-base "$BASE" HEAD >/dev/null
           python3 tools/verify_bilingual_semantics_qwen.py "$BASE"
       - name: Retain semantic evidence
         if: always()
