@@ -6,12 +6,13 @@ on:
       - research/observer-information-hamiltonian-20261027
     paths:
       - .github/workflows/free-bilingual-semantic-smoke.yml
+      - tools/verify_bilingual_semantics_qwen.py
 permissions:
   contents: read
 jobs:
   qwen-smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
       - name: Install Ollama
@@ -51,3 +52,17 @@ jobs:
           print('Documents available:',len(en),'EN characters;',len(cs),'CS characters')
           if failures: raise SystemExit(f'{failures} semantic smoke tests failed')
           PY
+
+      - name: Review changed EN/CS pairs with strict evidence validation
+        timeout-minutes: 35
+        run: |
+          git fetch --no-tags origin master || git fetch --no-tags origin main
+          BASE=$(git rev-parse --verify origin/master 2>/dev/null || git rev-parse --verify origin/main)
+          python3 tools/verify_bilingual_semantics_qwen.py "$BASE"
+      - name: Retain semantic evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qwen-semantic-evidence
+          path: build/bilingual/qwen-semantic-review.*
+          if-no-files-found: warn
