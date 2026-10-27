@@ -109,3 +109,17 @@ def test_su2_invariant_ferromagnet_has_entangled_polarized_degenerate_ground():
     assert h*target == -J*target
     assert correlation(target) == s.diag(s.sqrt(3)/2, -s.sqrt(3)/2, 1)
     assert expectation(target, s.kronecker_product(Z, I2)) == s.Rational(1, 2)
+
+
+def test_isotropic_pair_collective_quadratures_are_zero_frequency():
+    J = s.symbols("J", real=True, positive=True)
+    h = -J*sum(
+        (s.kronecker_product(sig, sig) for sig in PAULI),
+        s.zeros(4))
+    qpair = (s.kronecker_product(X, I2)+s.kronecker_product(I2, X))/2
+    ppair = (s.kronecker_product(Y, I2)+s.kronecker_product(I2, Y))/2
+    assert h*qpair-qpair*h == s.zeros(4)
+    assert h*ppair-ppair*h == s.zeros(4)
+    total_z = (s.kronecker_product(Z, I2)+s.kronecker_product(I2, Z))/2
+    assert s.simplify(
+        qpair*ppair-ppair*qpair-s.I*total_z) == s.zeros(4)
