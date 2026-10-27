@@ -1,13 +1,15 @@
 <!-- BILINGUAL-UNIT: composite-metric-degeneracy -->
-<!-- UBT-AI-PROVENANCE-BEGIN
+<!--
+UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
 tier: C_working
 ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
-policy: ../../AI_PROVENANCE.md
-notice: Working derivation; independent CAS, Lean and translation-semantic checks pending.
-UBT-AI-PROVENANCE-END -->
+policy: ../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
 
 # Composite-metric contraction: Hamiltonian derivation obstruction
 
