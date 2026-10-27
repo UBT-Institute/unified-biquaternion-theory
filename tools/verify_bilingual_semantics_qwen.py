@@ -44,6 +44,14 @@ class OllamaReviewer:
     def __init__(self, model="qwen2.5:3b", timeout=300):
         self.model, self.timeout = model, timeout
     def __call__(self, batch):
+        # Small local models omit reviews in multi-pair requests. Review each
+        # pair independently, validate it immediately, then combine evidence.
+        if len(batch) > 1:
+            reviews = []
+            for item in batch:
+                raw = self([item])
+                reviews.extend(v.validate_response(raw, [item]))
+            return json.dumps({"schema": v.SCHEMA, "reviews": reviews}, ensure_ascii=False)
         # Constrain source identifiers and hashes to the exact input batch.
         # Never repair or overwrite model-generated evidence after decoding.
         schema=json.loads(json.dumps(REVIEW_SCHEMA))
