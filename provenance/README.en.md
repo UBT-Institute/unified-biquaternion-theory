@@ -27,6 +27,9 @@ This is a **provisional and non-attested** reconstruction. The structured record
 7. **Hamiltonian, action and causal shared reality:** accessible discussion context records the author's algebraic constraints and repeated return to informational/causal principles. PR #804 documents a later mathematics track, not sole intellectual origin or a complete UBT action.
 
 <!-- BILINGUAL-UNIT: origin-ledger.evidence -->
+## Synergistic development as the normal case
+A concept can originate as an informal or incomplete human intuition, be mathematically sharpened quickly by an agent, and change repeatedly through human criticism and agent recalculation. Record this as `iterative_human_ai`, identifying evidenced stages rather than assigning a single inventor to every displayed equation. An earlier appearance in a notebook, publication or conversation establishes only what that earlier source actually contains; later refinements remain separately attributable when possible. Neither agent-produced polish nor an author's original intuition cancels the other's contribution. If origin or sequence is not documented, use `undetermined` without speculative filling.
+
 ## Evidence protocol
 Distinguish original timestamped documents, indexed-but-uninspected originals, inspected Git commit diffs, retrospective repository narratives, personal recollections, and conversation summaries. Link every consequential attribution to its source and describe exactly what the source does **not** prove. A Git author, merge author, or `Co-authored-by` trailer reflects artifact history, not necessarily the originator of an idea. Chronological proximity alone does not prove that a particular prompt caused a commit. Use `undetermined` where attribution cannot be established.
 
