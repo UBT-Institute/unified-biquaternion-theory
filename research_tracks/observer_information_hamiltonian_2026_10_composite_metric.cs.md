@@ -42,4 +42,4 @@ Pro $S=S_{\rm HP}[e(D\Theta),\omega(D\Theta,\ldots)]+S_{\rm kin}+S_V$ je k platn
 5. Odvodit nebo vyloučit informační výběr zbývajících vazeb a porovnat viditelnost dvojštěrbinového experimentu se standardní kvantovou teorií.
 6. **BILINGUAL-SEMANTICS-PENDING:** před mergem je nutná nezávislá kontrola významové shody.
 
-**Stav:** přesná podmíněná algebraická identita; fyzikální interpretace a úplný Hamiltonián **OTEVŘENÉ**.
+**Stav:** přesná podmíněná algebraická identita; fyzikální interpretace a úplný Hamiltonián **OPEN**.
