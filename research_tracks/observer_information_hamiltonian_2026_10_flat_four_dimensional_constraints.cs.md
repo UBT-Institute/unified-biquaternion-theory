@@ -26,7 +26,7 @@ Kanonické hybnosti jsou $p_a=\alpha C_{0a}(M)$; proto máme čtyři primární 
 <!-- BILINGUAL-UNIT: verification -->
 ## verification
 
-Symbolický výpočet determinantu $4\times4$, derivací a Legendreovy identity v SymPy vrátil nulový Hessián i nulovou kanonickou hustotu (lokální výpočet 27. 10. 2026). Výsledek plyne rovněž přímo z multilinearity determinantu. Lean nebyl spuštěn. **CAS ověřil omezený model; LEAN-PENDING**.
+Symbolický výpočet determinantu $4\times4$, derivací a Legendreovy identity v SymPy vrátil nulový Hessián i nulovou kanonickou hustotu (lokální výpočet 2026-10-27). Výsledek plyne rovněž přímo z multilinearity determinantu. Lean nebyl spuštěn. **CAS ověřil omezený model; LEAN-PENDING**.
 
 <!-- BILINGUAL-UNIT: scope -->
 ## scope
