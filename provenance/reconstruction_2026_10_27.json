@@ -179,6 +179,57 @@
       "follow_up": "Trace original author prompts/objections to PR chronology; avoid treating bot Git authorship as idea origin."
     },
     {
+      "id": "ORIGIN-PRIMES-007",
+      "subject": "Prime-number structure as a deliberately introduced UBT research direction",
+      "period_statement": "Author recalls repeatedly insisting on prime-number methods; project and discussion evidence includes work during 2025-2026, exact first conceptual proposal not yet dated",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "research_direction_and_critical_intervention",
+          "description": "The author explicitly recalls repeatedly pressing AI agents to incorporate prime-number structure. Accessible January 2026 conversation summaries also record the author's specific requests for prime-versus-composite CMB multipole tests, phase/shear diagnostics, and stronger null-model checks."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "mathematical_derivation_and_implementation",
+          "description": "Subsequent code, Hecke searches, prime-mode formalizations, and negative results were developed with AI assistance; the author should not automatically be credited with each implementation or proof."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "author_recollection",
+          "locator": "author testimony recorded 2026-10-27",
+          "supports": "Explicit insistence on introducing primes as a research direction, not merely acceptance of an AI proposal"
+        },
+        {
+          "class": "discussion_context",
+          "locator": "conversation summaries, 2026-01-17 and 2026-01-19; original message links/export pending",
+          "supports": "Author-directed prime/composite CMB multipole and phase tests; summaries only"
+        },
+        {
+          "class": "repository_artifact",
+          "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/4230b9598565a489da6e8f4d5c19cbd01ade166c",
+          "supports": "Later sector grid computation for specific primes, not concept origin"
+        },
+        {
+          "class": "repository_artifact",
+          "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/d8b82e23f8a180161eb01dd7421cdaf651442ff0",
+          "supports": "Later Hecke eigenvalue work and negative checks, not evidence of first proposal"
+        },
+        {
+          "class": "repository_artifact",
+          "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/5e1b91bf28d6625bbd08a39691aa3346e6dfc568",
+          "supports": "Later explicit dead end for proposed prime attractor via additive mode coupling"
+        }
+      ],
+      "not_established": [
+        "Exact earliest appearance of prime-based programme or its original detailed math",
+        "Independent proof of any proposed prime-number signal in CMB",
+        "Authorship of every later Hecke, prime-mode or p-adic formula"
+      ],
+      "confidence": "author_recollection_plus_later_artifacts_and_discussion_summaries",
+      "follow_up": "Locate the earliest primary user message or dated note introducing primes, and identify which prompt-to-commit sequences show explicit redirection of agents."
+    },
+    {
       "id": "ORIGIN-TETRAD-005",
       "subject": "Architectural reversal from fiber/projection route back to covariant tetrad",
       "period_statement": "Author recollection 2026-10-27; current canonical architecture recorded July 2026; exact reversal event/date pending",
