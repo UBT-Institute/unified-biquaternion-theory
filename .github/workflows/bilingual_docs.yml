@@ -9,7 +9,6 @@ on:
       - '**.rst'
       - 'tools/check_bilingual_pairs.py'
       - 'tools/verify_bilingual_semantics.py'
-      - 'tools/verify_bilingual_semantics_qwen.py'
       - 'tests/test_bilingual*.py'
       - '.github/workflows/bilingual_docs.yml'
   push:
@@ -20,7 +19,6 @@ on:
       - '**.rst'
       - 'tools/check_bilingual_pairs.py'
       - 'tools/verify_bilingual_semantics.py'
-      - 'tools/verify_bilingual_semantics_qwen.py'
       - 'tests/test_bilingual*.py'
       - '.github/workflows/bilingual_docs.yml'
 
