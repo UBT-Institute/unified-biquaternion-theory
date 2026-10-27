@@ -6,7 +6,7 @@ def test_epsilon_lorentz_conjugate_identity():
     a,b,c=s.symbols("a b c",complex=True, nonzero=True)
     S=s.Matrix([[a,b],[c,(1+b*c)/a]])
     eps=s.Matrix([[0,1],[-1,0]])
-    assert s.simplify(eps*S.conjugate()*eps.inv()-(S.conjugate().T).inv())==s.zeros(2,1)
+    assert s.simplify(eps*S.conjugate()*eps.inv()-(S.conjugate().T).inv())==s.zeros(2)
     assert eps*eps.conjugate()==-s.eye(2)
 
 def test_chiral_phase_is_axial():
