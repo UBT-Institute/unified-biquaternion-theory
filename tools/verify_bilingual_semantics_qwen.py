@@ -9,13 +9,43 @@ from datetime import datetime, timezone
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import verify_bilingual_semantics as v
 
+# Constrain JSON structure at decoding time; semantic checks remain fail-closed.
+REVIEW_SCHEMA = {
+    "type": "object", "additionalProperties": False,
+    "required": ["schema", "reviews"],
+    "properties": {
+        "schema": {"type": "string", "enum": [v.SCHEMA]},
+        "reviews": {"type": "array", "items": {
+            "type": "object", "additionalProperties": False,
+            "required": ["id", "en_sha256", "cs_sha256", "verdict", "checks", "alignments"],
+            "properties": {
+                "id": {"type": "string"},
+                "en_sha256": {"type": "string"},
+                "cs_sha256": {"type": "string"},
+                "verdict": {"type": "string", "enum": ["pass", "fail", "uncertain"]},
+                "checks": {"type": "object", "additionalProperties": False,
+                    "required": list(v.CHECKS),
+                    "properties": {key: {"type": "boolean"} for key in v.CHECKS}},
+                "alignments": {"type": "array", "items": {
+                    "type": "object", "additionalProperties": False,
+                    "required": ["en", "cs", "verdict", "reason"],
+                    "properties": {
+                        "en": {"type": "array", "items": {"type": "string"}},
+                        "cs": {"type": "array", "items": {"type": "string"}},
+                        "verdict": {"type": "string", "enum": ["pass", "fail", "uncertain"]},
+                        "reason": {"type": "string"}
+                    }}}
+            }}}
+    }
+}
+
 class OllamaReviewer:
     last_response = None
     def __init__(self, model="qwen2.5:3b", timeout=300):
         self.model, self.timeout = model, timeout
     def __call__(self, batch):
         payload=json.dumps({"model":self.model,"prompt":v.make_prompt(batch),
-                            "stream":False,"format":"json",
+                            "stream":False,"format":REVIEW_SCHEMA,
                             "options":{"temperature":0,"num_ctx":16384,"num_predict":8192}}).encode()
         req=urllib.request.Request("http://127.0.0.1:11434/api/generate",
                                    payload,{"Content-Type":"application/json"})
