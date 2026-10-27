@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Intrinsic fermionic CAR in the biquaternion algebra: a constructive bridge
 
 **2026-10-26. Exact finite-mode operator-algebra construction; NOT a completed spin-statistics theorem, fermionic field theory, or the fundamental UBT action.** Responds to the observation that biquaternion elements exhibit commuting AND anticommuting sectors. Explicitly distinguishes operator CAR from classical Grassmann-odd fields. Cross-references: `canonical/bridges/fermionic_statistics_bridge.tex`, `research_tracks/THEORY_COMPARISONS/su3_qubit_mapping/fermionic_fock_su3_decomposition.md`, `research_tracks/T2_GAUGE/su3_su2_even_fock.en.md`, `research_tracks/information_first/GRASSMANN_SPINOR_HAMILTONIAN_ACTION_GATE.md`.

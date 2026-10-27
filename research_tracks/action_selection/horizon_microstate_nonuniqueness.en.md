@@ -8,6 +8,18 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Exact finite-dimensional benchmark; not a derived Theta horizon Hilbert space.
 UBT-AI-PROVENANCE-END -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Horizon microstates: SU(3) and shared reality do not fix the area coefficient
 
 **26 October 2026. Exact finite-dimensional counterexample; conditional on a hypothetical discretized boundary Hilbert space.** This does not postulate a new fundamental UBT field and must not be interpreted as a microstate count of the actual Theta theory.

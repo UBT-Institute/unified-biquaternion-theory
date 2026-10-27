@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Radial SU(3) model: spectral boundary conditions and correlation-based mass inference
 
 **2026-10-26; exact conditional calculations. NOT a derivation of the UBT mass or action.** Continues GAUGED_TRIPLET_RADIAL_HAMILTONIAN_GATE.md.

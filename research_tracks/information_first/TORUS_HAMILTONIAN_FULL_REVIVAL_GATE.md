@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Toroidal Hamiltonian and exact recurrence criterion (route B)
 
 **2026-10-26. Conditional spectral theorem, not a derivation of the fundamental UBT Hamiltonian.** Applies to a flat d-torus with positive definite metric G_ab in angular coordinates theta^a ∼ theta^a+2π. It extends `THETA_PERIOD_TWO_HAMILTONIAN_RECURRENCE.md` while respecting `canonical/bridges/theta_parameter_separation.md`.

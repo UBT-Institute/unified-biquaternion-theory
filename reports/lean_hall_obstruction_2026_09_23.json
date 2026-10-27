@@ -1,0 +1,224 @@
+{
+  "schema": "ubt-verification/v1",
+  "date": "2026-09-23",
+  "result": "PASS",
+  "scope": "POINTWISE_EQUIVALENCE_OF_COMPLETE_TWO_SIDED_HALL_BUDGET_AND_ACTUAL_MERTENS_BOUND",
+  "tools": {
+    "lean": "4.33.1",
+    "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+    "mathlib": "v4.33.1",
+    "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "axiom_audit": "v0.1.2",
+    "axiom_audit_commit": "46024e005996495c65ef609368e11ab39c4222e3"
+  },
+  "ci": {
+    "workflow": "Lean theorem verification",
+    "run_id": 35898465289,
+    "job_id": 107308229582,
+    "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/35898465289",
+    "head_commit": "8448a130c8a3690d780cc3baff08f27257816c42",
+    "checked_merge_commit": "4e1f08a02b7b22f7d2eb1125fad129fa7f6d1fc3",
+    "conclusion": "success"
+  },
+  "source_files": [
+    {
+      "path": ".github/workflows/lean.yml",
+      "sha256": "5c86433b1f30c8c5e0e528eb3b3e972b2c679513362995fd0fb623e6eee23dd0",
+      "git_blob_sha": "1ae241d6f37c7292e00e85fbadc1060e60949250"
+    },
+    {
+      "path": "formal/lean/UBT.lean",
+      "sha256": "f7493e245fc81c1fd28e8a9923afc6fc92a3b54811484a5181274a0775a85fff",
+      "git_blob_sha": "518de27e0c16c58210a26ad51e2c268d4b177404"
+    },
+    {
+      "path": "formal/lean/UBT/Action/ChiralInteraction.lean",
+      "sha256": "f6a32f00c39839038353f5d5a44c0933620322b4c73e209c9d17e1e62ae67064",
+      "git_blob_sha": "df9956a14d4ceb3c0c088666aaa4c3fc1ea330ce"
+    },
+    {
+      "path": "formal/lean/UBT/Action/PotentialInvariants.lean",
+      "sha256": "88fb2257d7fd7e61a7c85099dd104c4d8258528dec08c33025fb81d8c17515da",
+      "git_blob_sha": "5e3d9f14f871469446090385394b6c0c343686f2"
+    },
+    {
+      "path": "formal/lean/UBT/Action/PotentialMinimumOrbit.lean",
+      "sha256": "c01db053ab7332668f1d62915dbbfa71e130be0e1447ff970e13520daee422b7",
+      "git_blob_sha": "0654cd2cc555c00469f2495aef839815259baede"
+    },
+    {
+      "path": "formal/lean/UBT/Action/PotentialVacuum.lean",
+      "sha256": "ac4da25fb407fd67c3fcaa5316d8a57e9fe0b858e9db39430c08712e8b94bb33",
+      "git_blob_sha": "8b42fe0a3a34454fce7e9cc75c968294e81d685a"
+    },
+    {
+      "path": "formal/lean/UBT/Action/PsiRestHamiltonian.lean",
+      "sha256": "9886ff10257504ca1ea1591f565d6afe0aa8973b5e9383f7a57766dd13267b63",
+      "git_blob_sha": "e19057fbc8dbbbbffe4ef0ac10f699ff6c745a05"
+    },
+    {
+      "path": "formal/lean/UBT/GR/CompositeActionStationarity.lean",
+      "sha256": "ec7b7138c9d0c0760f990c392ddcf3442c9d89c91b4ea49bd65554884c31023f",
+      "git_blob_sha": "ac727a0b286396a7e5a882aec04c1c43ab397345"
+    },
+    {
+      "path": "formal/lean/UBT/GR/CompositeKinetic.lean",
+      "sha256": "58bff7173c5b68eb81de0a79d53367900f4eddbfdf5fe75fa7cb945ec2bdc859",
+      "git_blob_sha": "a8ca31e2f13e307371bbf4a45f4179dc50becb66"
+    },
+    {
+      "path": "formal/lean/UBT/GR/CompositeSecondVariation.lean",
+      "sha256": "af7cd8750d286890fb57447f6993411d824a05725dff1b60deb84b9b6bf0fef4",
+      "git_blob_sha": "3ff83505046ee347567500f3e3d74b5d4c530abe"
+    },
+    {
+      "path": "formal/lean/UBT/GR/CurvatureUnderdetermination.lean",
+      "sha256": "f73e0a2a93de047c2ca9ce5e5912b75c361e6f13924ecf78690e64eeb2ab80c3",
+      "git_blob_sha": "eb54f55b334850823f17afa4a0d296d866eb3d0d"
+    },
+    {
+      "path": "formal/lean/UBT/GR/LegacyActionObstructions.lean",
+      "sha256": "80c47b2c80ccf10e17ab9a168f3c3b9e670fe83fac91341ecdb70c204584e42b",
+      "git_blob_sha": "ef8ca581ff6e51977b0f098292c994df2036354d"
+    },
+    {
+      "path": "formal/lean/UBT/GR/VolumePrincipalSymbol.lean",
+      "sha256": "a85aac9ecd71dc04f9107f7389a54b8eeb5170d8a008d58912c595fbcea840ab",
+      "git_blob_sha": "e9dcdbb9c8af09772838136eb697a8296d0b3fcb"
+    },
+    {
+      "path": "formal/lean/UBT/GR/VolumeVariation.lean",
+      "sha256": "371e5583bcac9acf0fe87790f863b1f6cdf3409237b7e2828f3850411d656214",
+      "git_blob_sha": "91be5269d7df7300c760ebc44e6ee04f38cae6dc"
+    },
+    {
+      "path": "formal/lean/UBT/RH/AbelLimit.lean",
+      "sha256": "558e8412802d3815a0d2aaaaed62ace4a41612a751640a8f2f39bf5f31a3c59d",
+      "git_blob_sha": "ff79eb6092beeb005c81f7da181f5097b1ff5f1a"
+    },
+    {
+      "path": "formal/lean/UBT/RH/ConcreteExchange.lean",
+      "sha256": "1caf18780479f2d32fa5c3fefc25fb9f1a049b1f0969a4224183be45a2951aad",
+      "git_blob_sha": "36b4dc168d1566a9ecac15d710a8abe2adf51e69"
+    },
+    {
+      "path": "formal/lean/UBT/RH/ConcreteExchange1000.lean",
+      "sha256": "613e3e18b4be115709442c9170eeb8a2f74e57d8f805cb513d30d861299c9343",
+      "git_blob_sha": "6832a144e1dff1cdfcf449adeb8548d62f9c8558"
+    },
+    {
+      "path": "formal/lean/UBT/RH/HallBudget.lean",
+      "sha256": "8e1f5f3578d2c45ff362fa6bf75b441efe96eecc942d0a8e23eca3d9c7702a6c",
+      "git_blob_sha": "9963f3c35946434591727433021fa38d265ef4ba"
+    },
+    {
+      "path": "formal/lean/UBT/RH/HallObstruction.lean",
+      "sha256": "6f8be2893df0452308df5babb1c9cdc0ebcf0bd47cb7af8697b9f9ace2b29d02",
+      "git_blob_sha": "88b527fd892625dac93872b79038404f1cc17bde"
+    },
+    {
+      "path": "formal/lean/UBT/RH/MatchingCertificate.lean",
+      "sha256": "44159ce39c87cd0b4dc95dc5232c3fe2bd45f582f8f02fc6a11d28dcf7759367",
+      "git_blob_sha": "cfa31559ece6f4735c2f38518ee22df1e3d2136d"
+    },
+    {
+      "path": "formal/lean/UBT/RH/MobiusAbel.lean",
+      "sha256": "213be62e2a9b742cd6069048cafdf1e2cfe4d07ff0176feb83b86977e811f829",
+      "git_blob_sha": "7d8204b67481d365bec80537e86a87d8c78d8039"
+    },
+    {
+      "path": "formal/lean/UBT/RH/ParityLayers.lean",
+      "sha256": "baf891446c9b06d18d296c8027b756af8e479923e061a7c12aafb18668c64aa0",
+      "git_blob_sha": "eaf8b97a595e8a34a7c6c47dc1bc9b474545af60"
+    },
+    {
+      "path": "formal/lean/UBT/RH/PowerWeightLimit.lean",
+      "sha256": "7f5b6de91e02a966ec63e41d0e23e2959e1856c1a852004d5ecbb39a81f74150",
+      "git_blob_sha": "9a4850d243c097e75ee14385bece324c13f36513"
+    },
+    {
+      "path": "formal/lean/UBT/RH/PrimeBlockCoarsening.lean",
+      "sha256": "158e2ab8023dfcda011d6a0f4bfbaeb892b4bb4154e740024a4951b35a620ee1",
+      "git_blob_sha": "f6f57b7beeec68c85db1ed5ae55c7471feca3885"
+    },
+    {
+      "path": "formal/lean/UBT/RH/PrimePairing.lean",
+      "sha256": "b1f8eea037e90b239534b1eb2661228c656b95cd14065bd49de60850f80c005a",
+      "git_blob_sha": "845eaf348f17ca47b359cc745bd0b8272315ef76"
+    },
+    {
+      "path": "formal/lean/UBT/RH/SignedEnergy.lean",
+      "sha256": "c3d714c31e6404217513e3bcafd11639385d50aa6df244a74b825989f7e03428",
+      "git_blob_sha": "eea1d4998d9eae7feea796596b4492840868d93a"
+    },
+    {
+      "path": "formal/lean/UBT/RH/SubsetCancellation.lean",
+      "sha256": "5b160bc6433b9343577450c62fd903d824cd9b2f70735374a44051bad98e14ab",
+      "git_blob_sha": "0d445d88ac85c49d3812bc3e46297cf542a2b0dd"
+    },
+    {
+      "path": "formal/lean/lake-manifest.json",
+      "sha256": "b39b3cb24ff476b4054c0033ff89b296b117697d12ff55eef2bcdc127527475e",
+      "git_blob_sha": "de12326c08ca2fe36aef5c94db1c379b740e4848"
+    },
+    {
+      "path": "formal/lean/lakefile.toml",
+      "sha256": "5099e6f10557172813e7e372e3d0b6debbaf20bd4b45bc594553ccccc032fab5",
+      "git_blob_sha": "7b2135efc0066fb5407011a489f7bfb648a5dfd4"
+    },
+    {
+      "path": "formal/lean/lean-toolchain",
+      "sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+      "git_blob_sha": "a8afa7d1b02d96f0671eba854a8dc4b416beb473"
+    }
+  ],
+  "theorems": [
+    "card_bound_of_hall",
+    "complete_hall_iff_card",
+    "actual_mertens_counts",
+    "complete_both_iff_mertens",
+    "restricted_both_imply_mertens"
+  ],
+  "independent_verification": {
+    "result": "PASS",
+    "exhaustive_complete_graph_cases": 343,
+    "actual_mobius_count_cutoffs": 1001,
+    "limitations": [
+      "Finite independent checks; no uniform bound on M(N).",
+      "The full RH analytic bridge is not formalized by this audit."
+    ]
+  },
+  "checks": [
+    {
+      "command": "lake build --wfail",
+      "result": "PASS"
+    },
+    {
+      "command": "leanchecker UBT",
+      "result": "PASS"
+    },
+    {
+      "check": "axiom-audit",
+      "declarations_audited": 340,
+      "allowed_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "unexpected_axioms": [],
+      "result": "PASS"
+    },
+    {
+      "check": "source identity",
+      "files_matched": 30,
+      "result": "PASS"
+    }
+  ],
+  "limitations": [
+    "No unconditional or uniform asymptotic estimate of M(N).",
+    "No analytic RH bridge formalized.",
+    "Restricted graphs satisfy only the implication to the bound, not an asserted equivalence.",
+    "This identifies the unresolved hypothesis; it does not refute RH or all matching-based approaches.",
+    "No change to UBT architecture or physical gap statuses."
+  ]
+}

@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Rotational covariance gate for the information-first UBT Hamiltonian
 
 **2026-10-26. Exact representation-theoretic restriction at a reference timelike carrier; not the complete UBT Hamiltonian.** The four complex coefficient components in the timelike reference chart split under the *chosen ordinary spatial rotation subgroup* SO(3) as C ⊕ C^3 (singlet plus spatial vector). This is not a proof that the full physical Hilbert space equals four complex components, nor an identification of SO(3) with the moving colour SU(3).

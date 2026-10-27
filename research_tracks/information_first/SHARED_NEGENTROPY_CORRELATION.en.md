@@ -1,3 +1,16 @@
+<!-- BILINGUAL-UNIT: shared-negentropy-correlation -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Shared reality: negentropy composition with quantum correlations
 
 **2026-10-26. Mathematical benchmark, not a derived fundamental UBT action.** Units k_B=1; finite-dimensional, disjoint tensor factors only. This extends `SHARED_REALITY_PRINCIPLE.md` and does not conflate independent observers with independent physical subsystems.

@@ -1,0 +1,688 @@
+{
+  "schema": "ubt-open-pr-integration/v1",
+  "status": "prepared_for_owner_requested_merge",
+  "master": "d0f6233ae63a87815d27d6423e71a035c72c0c8c",
+  "heads": {
+    "292": "905a85ac6d1594a753fc48270ff5e03d30eeb4b8",
+    "335": "9a387d960dba99f1e561e1e83bff5785eca72f61",
+    "373": "75aee9ad26ade30a1986958838997fa8be9959c5",
+    "624": "5d64897e22c33637677c10a7ee9523d0ae80de98",
+    "636": "3c8aaa583cc062fce6b4bea1ae0f7a4c32c775a9",
+    "652": "2733bf8ed658964e37e2f8010400d331c801a994",
+    "655": "194a2f84e818d4878be3d678508446f9c14ed9bc",
+    "659": "f6dcf90c4f7c649eea39619477067b2ff5e30b0b",
+    "660": "10c84770f3178a58cc79fb38d29442ab3b52e560",
+    "750": "8b59b05aa95cddcfc9d3dde1c4836abd4d3abdcf",
+    "783": "4b6a525bc85683ef664754cf40460f5c01ae5a10",
+    "786": "4053bee3a08be844009e842a314f4adf213baa41",
+    "796": "71ff7be3cbbce7ff759d9ed19cb58ac7ab430c72",
+    "798": "840fb4fb2dfb31d3f7331793b3374ad3fcc42b15",
+    "799": "58f6dde7c14aa20d319df64238e7ae6ea8e7ffcd",
+    "800": "d17bf0ebe207991a555cc59233170e10cc94b3a3"
+  },
+  "conflicts": [
+    {
+      "path": "PROVENANCE_INVENTORY_2026-08-01.txt",
+      "metadata_only": false,
+      "ours_bytes": 112,
+      "theirs_bytes": 112,
+      "resolution": "keep_current_generated_metadata_pending_regeneration"
+    },
+    {
+      "path": "ROADMAP.md",
+      "metadata_only": false,
+      "ours_bytes": 10925,
+      "theirs_bytes": 4466,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "metadata_only": false,
+      "ours_bytes": 8766,
+      "theirs_bytes": 8766,
+      "resolution": "keep_current_generated_metadata_pending_regeneration"
+    },
+    {
+      "path": "STATUS_OF_UBT.md",
+      "metadata_only": false,
+      "ours_bytes": 75076,
+      "theirs_bytes": 12317,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/adm_gr_hessian_constraint_audit.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 4763,
+      "theirs_bytes": 3427,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/adm_gr_hessian_constraint_audit.en.md",
+      "metadata_only": true,
+      "ours_bytes": 4713,
+      "theirs_bytes": 4655,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/antilinear_weyl_map.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 2677,
+      "theirs_bytes": 1796,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/antilinear_weyl_map.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2753,
+      "theirs_bytes": 2707,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/axial_phase_mass_gate.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 2321,
+      "theirs_bytes": 1594,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/axial_phase_mass_gate.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2355,
+      "theirs_bytes": 2307,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/central_phase_metric_gate.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 2737,
+      "theirs_bytes": 1741,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/central_phase_metric_gate.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2821,
+      "theirs_bytes": 2769,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/chiral_boost_representation.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 3745,
+      "theirs_bytes": 2318,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/chiral_boost_representation.en.md",
+      "metadata_only": true,
+      "ours_bytes": 3784,
+      "theirs_bytes": 3730,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/chirality_projector_naturality.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 2817,
+      "theirs_bytes": 1928,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/chirality_projector_naturality.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2900,
+      "theirs_bytes": 2843,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/composite_bivector_scalar_obstruction.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 4341,
+      "theirs_bytes": 3248,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/composite_bivector_scalar_obstruction.en.md",
+      "metadata_only": true,
+      "ours_bytes": 4347,
+      "theirs_bytes": 4283,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/composite_contortion_kernel.en.md",
+      "metadata_only": true,
+      "ours_bytes": 3863,
+      "theirs_bytes": 4154,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/composite_metric_1d_bracket_selector.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 2810,
+      "theirs_bytes": 1466,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/composite_metric_1d_bracket_selector.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2865,
+      "theirs_bytes": 2802,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/composite_tetrad_dirac_current.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 3396,
+      "theirs_bytes": 2248,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/composite_tetrad_dirac_current.en.md",
+      "metadata_only": true,
+      "ours_bytes": 3544,
+      "theirs_bytes": 3487,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/composite_volume_dirac_flrw.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 4234,
+      "theirs_bytes": 3075,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/composite_volume_dirac_flrw.en.md",
+      "metadata_only": true,
+      "ours_bytes": 4400,
+      "theirs_bytes": 4346,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/conditional_axial_torsion_from_dirac_carrier.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 3005,
+      "theirs_bytes": 1675,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/conditional_axial_torsion_from_dirac_carrier.en.md",
+      "metadata_only": true,
+      "ours_bytes": 3053,
+      "theirs_bytes": 2982,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/contortion_stabilizer_invisibility.en.md",
+      "metadata_only": true,
+      "ours_bytes": 4138,
+      "theirs_bytes": 4429,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/de_sitter_torsion_diagnostic.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 3686,
+      "theirs_bytes": 2755,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/de_sitter_torsion_diagnostic.en.md",
+      "metadata_only": true,
+      "ours_bytes": 3836,
+      "theirs_bytes": 3781,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/dirac_factorization_hamiltonian.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 3304,
+      "theirs_bytes": 2290,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/dirac_factorization_hamiltonian.en.md",
+      "metadata_only": true,
+      "ours_bytes": 3309,
+      "theirs_bytes": 3251,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/dirac_representation_obstruction.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 3206,
+      "theirs_bytes": 2130,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/dirac_representation_obstruction.en.md",
+      "metadata_only": true,
+      "ours_bytes": 3205,
+      "theirs_bytes": 3146,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/energy_charge_bridge.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 3728,
+      "theirs_bytes": 2676,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/energy_charge_bridge.en.md",
+      "metadata_only": true,
+      "ours_bytes": 3903,
+      "theirs_bytes": 3856,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/explicit_hamiltonian_action_reconstruction.en.md",
+      "metadata_only": true,
+      "ours_bytes": 3171,
+      "theirs_bytes": 3102,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/gradient_hamiltonian_closure_benchmark.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 2496,
+      "theirs_bytes": 1578,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/gradient_hamiltonian_closure_benchmark.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2572,
+      "theirs_bytes": 2507,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/hamiltonian_first_foundations.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 4935,
+      "theirs_bytes": 3200,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/hamiltonian_first_foundations.en.md",
+      "metadata_only": true,
+      "ours_bytes": 4987,
+      "theirs_bytes": 4931,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/holomorphic_first_jet_nonselection.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 3108,
+      "theirs_bytes": 1993,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/holomorphic_first_jet_nonselection.en.md",
+      "metadata_only": true,
+      "ours_bytes": 3178,
+      "theirs_bytes": 3117,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/ht_volume_shift_action_selection.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 3812,
+      "theirs_bytes": 3163,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/ht_volume_shift_action_selection.en.md",
+      "metadata_only": true,
+      "ours_bytes": 3979,
+      "theirs_bytes": 3920,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/invariant_symplectic_theta.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 4064,
+      "theirs_bytes": 2797,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/invariant_symplectic_theta.en.md",
+      "metadata_only": true,
+      "ours_bytes": 4180,
+      "theirs_bytes": 4127,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/inverse_legendre_signature.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 4543,
+      "theirs_bytes": 3444,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/inverse_legendre_signature.en.md",
+      "metadata_only": true,
+      "ours_bytes": 4513,
+      "theirs_bytes": 4460,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/irreducible_torsion_selection.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2279,
+      "theirs_bytes": 2223,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/linearized_connection_curvature_witness.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 2905,
+      "theirs_bytes": 1873,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/linearized_connection_curvature_witness.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2952,
+      "theirs_bytes": 2886,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/linearized_flat_theta_pure_gauge_no_go.en.md",
+      "metadata_only": true,
+      "ours_bytes": 3817,
+      "theirs_bytes": 4108,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/quadratic_torsion_selector_gap.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2998,
+      "theirs_bytes": 2941,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/scalar_energy_gravity_bridge.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 8486,
+      "theirs_bytes": 6710,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/scalar_energy_gravity_bridge.en.md",
+      "metadata_only": true,
+      "ours_bytes": 8493,
+      "theirs_bytes": 8438,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/spinorial_left_vs_congruence.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 2456,
+      "theirs_bytes": 1966,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/spinorial_left_vs_congruence.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2508,
+      "theirs_bytes": 2453,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/splitjet_auxiliary_kernel.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 3000,
+      "theirs_bytes": 2319,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/splitjet_auxiliary_kernel.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2948,
+      "theirs_bytes": 2896,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/splitjet_chain_variation.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 4368,
+      "theirs_bytes": 3410,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/splitjet_chain_variation.en.md",
+      "metadata_only": true,
+      "ours_bytes": 4437,
+      "theirs_bytes": 4386,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/splitjet_presymplectic_kernel.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 3635,
+      "theirs_bytes": 2410,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/splitjet_presymplectic_kernel.en.md",
+      "metadata_only": true,
+      "ours_bytes": 3740,
+      "theirs_bytes": 3684,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/theta_symplectic_dispersion.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 3064,
+      "theirs_bytes": 2272,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/theta_symplectic_dispersion.en.md",
+      "metadata_only": false,
+      "ours_bytes": 3050,
+      "theirs_bytes": 2980,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/torsion_24component_selector_gap.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2730,
+      "theirs_bytes": 2671,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/torsion_connection_rank.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 2484,
+      "theirs_bytes": 1389,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/torsion_connection_rank.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2533,
+      "theirs_bytes": 2483,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/transverse_contortion_dual.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2976,
+      "theirs_bytes": 3267,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/two_sided_curvature_gate.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 2460,
+      "theirs_bytes": 1584,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/two_sided_curvature_gate.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2531,
+      "theirs_bytes": 2480,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/two_sided_metric_covariance.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 2844,
+      "theirs_bytes": 1711,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/two_sided_metric_covariance.en.md",
+      "metadata_only": true,
+      "ours_bytes": 2926,
+      "theirs_bytes": 2872,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/ultralocal_constraint_closure.cs.md",
+      "metadata_only": false,
+      "ours_bytes": 3049,
+      "theirs_bytes": 2097,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/action_selection/ultralocal_constraint_closure.en.md",
+      "metadata_only": true,
+      "ours_bytes": 3127,
+      "theirs_bytes": 3071,
+      "resolution": "keep_current_content_and_complete_translation"
+    },
+    {
+      "path": "research_tracks/priority_program_2026_10/README.md",
+      "metadata_only": false,
+      "ours_bytes": 10541,
+      "theirs_bytes": 8572,
+      "resolution": "keep_current_content_and_complete_translation"
+    }
+  ],
+  "preserved_current_unpaired_status_files": [
+    "README.md",
+    "ROADMAP.md",
+    "STATUS_OF_UBT.md",
+    "DERIVATION_INDEX.md",
+    "research_tracks/priority_program_2026_10/README.md"
+  ],
+  "added_czech_editions": [
+    "research_tracks/action_selection/axial_cartan_symmetric_W_no_go.cs.md",
+    "research_tracks/action_selection/commutator_invariant_action_selection_audit.cs.md",
+    "research_tracks/action_selection/composite_contortion_kernel.cs.md",
+    "research_tracks/action_selection/composite_metric_kinetic_volume_identity.cs.md",
+    "research_tracks/action_selection/contortion_stabilizer_invisibility.cs.md",
+    "research_tracks/action_selection/dirac_square_spectral_bridge_gate.cs.md",
+    "research_tracks/action_selection/linearized_flat_theta_pure_gauge_no_go.cs.md",
+    "research_tracks/action_selection/palatini_cartan_compatibility_gate.cs.md",
+    "research_tracks/action_selection/proposition9_volume_overlap_audit.cs.md",
+    "research_tracks/action_selection/transverse_contortion_auxiliary_variation.cs.md",
+    "research_tracks/action_selection/transverse_contortion_dual.cs.md",
+    "research_tracks/action_selection/vector_pair_spin_current_shear_benchmark.cs.md",
+    "research_tracks/action_selection/vector_trace_shear_contortion_gate.cs.md",
+    "research_tracks/fundamental_dynamics/FULL_THETA_CONNECTION_RANK.cs.md",
+    "research_tracks/fundamental_dynamics/LORENTZ_REALITY_CONSTRAINED_RANK.cs.md",
+    "research_tracks/fundamental_dynamics/POSITIVE_HERMITIAN_THETA_RANK_THEOREM.cs.md",
+    "research_tracks/fundamental_dynamics/SHARED_REALITY_INFORMATION_SELECTOR.cs.md",
+    "research_tracks/information_first/BOTTOM_UP_THETA_QUADRATIC_ACTION_SELECTION.cs.md",
+    "research_tracks/information_first/GAUGED_TRIPLET_RADIAL_HAMILTONIAN_GATE.cs.md",
+    "research_tracks/information_first/HAMILTONIAN_CORRELATOR_RECONSTRUCTION.cs.md",
+    "research_tracks/information_first/JOINT_SYMMETRY_COMMUTANT_SELECTION.cs.md",
+    "research_tracks/information_first/LORENTZ_INVOLUTIONS_INFORMATION_HAMILTONIAN_GATE.cs.md",
+    "research_tracks/information_first/RADIAL_SPECTRUM_CORRELATION_MASS_GATE.cs.md",
+    "research_tracks/information_first/ROTATIONAL_HAMILTONIAN_COMMUTANT.cs.md",
+    "research_tracks/information_first/SU3_ROTATIONAL_HAMILTONIAN_GATE.cs.md",
+    "research_tracks/information_first/THETA_PERIOD_TWO_HAMILTONIAN_RECURRENCE.cs.md",
+    "research_tracks/information_first/TORUS_HAMILTONIAN_FULL_REVIVAL_GATE.cs.md",
+    "research_tracks/information_first/TORUS_THETA_CANONICAL_ACTION_BRIDGE_GATE.cs.md"
+  ],
+  "semantic_review": "blocked_by_organization_policy; no approval claimed",
+  "validation": {
+    "record_scope": "Local preparation snapshot; GitHub check results on the uploaded commit remain authoritative for merging",
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "numpy": "2.3.5",
+    "pytest": "9.1.1",
+    "bilingual_structure": {
+      "status": "passed",
+      "pairs": 250,
+      "changed_base": "d0f6233ae63a87815d27d6423e71a035c72c0c8c"
+    },
+    "local_gates": {
+      "provenance": "passed",
+      "checksums": "passed",
+      "documentation_lint": "passed",
+      "lorentz_symbolic": "passed",
+      "quartic_stationarity": "passed",
+      "whitespace": "passed"
+    },
+    "checksums": {
+      "status": "passed",
+      "entries": 83
+    },
+    "all_pinned_heads_are_ancestors": true,
+    "semantic_request_budget": {
+      "changed_pairs": 91,
+      "document_calls": 24,
+      "calls_including_calibration": 25,
+      "document_prompt_chars": 1068702
+    },
+    "full_pytest_before_final_inventory_regeneration": {
+      "passed": 1034,
+      "skipped": 5,
+      "failed": 1,
+      "failure": "stale generated inventory after 11 source renames; regenerated after staging the renames"
+    },
+    "post_fix_inventory_and_symbolic_regressions": {
+      "status": "passed",
+      "tests": 14
+    },
+    "research_rank_regressions": {
+      "status": "passed",
+      "tests": 22
+    },
+    "textbook_local": {
+      "status": "environment_blocked",
+      "missing_package": "physics.sty (texlive-science)",
+      "ci_installs_required_package": true
+    },
+    "lean_local": {
+      "status": "not_available",
+      "claim": "No new Lean certification is inferred; the repository Lean CI must check integrated formal sources"
+    },
+    "semantic_live": {
+      "status": "blocked_by_organization_policy",
+      "prior_run": 40319835092,
+      "approvals": 0
+    },
+    "post_concurrent_master_validation": {
+      "full_pytest": {
+        "passed": 1128,
+        "skipped": 5,
+        "failures": 0,
+        "errors": 0
+      },
+      "bilingual_structure": {
+        "status": "passed",
+        "pairs": 250
+      },
+      "provenance_headers": "passed",
+      "declared_sha256_entries": 83,
+      "unchanged_scoped_bilingual_source_hashes": 91,
+      "root_status_and_author_tier_map": "identical to concurrent master"
+    },
+    "following_master_validation": {
+      "targeted_provenance_and_affected_research_tests": 21,
+      "failures": 0,
+      "bilingual_pairs": 251,
+      "source_checksums": 83,
+      "semantic_approval_issued": false
+    }
+  },
+  "translation_source": "English editions; Czech editions are complete translations, not semantic approvals",
+  "lean_status": "LEAN-PENDING: Lean/Lake is not installed locally; independent CI checks existing formalizations only, not every newly integrated research claim",
+  "reconciled_master_commit": "81c7bba8d259ae1b11c5d2b0ba77e8d572708a66",
+  "semantic_override_register": "reports/bilingual_merge_exceptions_2026_10_27.json"
+}

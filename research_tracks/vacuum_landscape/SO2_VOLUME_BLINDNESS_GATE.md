@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Exact residual-connection blindness of first-jet tetrad volume candidate
 
 **Exact conditional no-selection lemma — 2026-10-26.** Within the already specified two-carrier real Lorentz lift, let v,w be prescribed and E_mu=N0^(-1/2)D_mu v be a nondegenerate tetrad, D_mu w=0. Suppose omega'_mu=omega_mu+alpha_mu J, with Jv=Jw=0. Then

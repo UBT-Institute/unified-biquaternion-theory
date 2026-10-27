@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: FULL_THETA_CONNECTION_RANK -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Full complex biquaternion: fixed-Theta Lorentz-connection response rank
 
 **2026-10-26 | integrated Fundamental Dynamics, local linear algebra; NOT full two-sided composite closure or an action.** Compare restricted vector-carrier #776.

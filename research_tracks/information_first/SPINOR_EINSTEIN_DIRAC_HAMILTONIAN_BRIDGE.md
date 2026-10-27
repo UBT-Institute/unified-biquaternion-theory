@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Missing spinor sector: conditional Einstein–Dirac Hamiltonian and UBT representation gate
 
 **2026-10-26. Reference calculation only: not a single-Theta fundamental action or a completed first-class Dirac analysis of composite MM gravity.** Cross-check against `research_tracks/action_selection/dirac_factorization_hamiltonian.en.md`, `spinor_tetrad_intertwiner_gate.en.md`, and `research_tracks/information_first/MM_ADM_HAMILTONIAN_BRIDGE.md`.

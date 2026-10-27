@@ -1,5 +1,17 @@
 > **CORRIGENDUM / EXISTING-RESEARCH CROSS-REFERENCE (26 Oct 2026):** This note tests only automorphisms of the *entire associative algebra* Mat_2(C). It does **NOT** challenge the already established canonical SU(3) construction on the derived colour carrier V=C-span{I,J,K}, where Stab(h,Omega)=SU(3). The canonical preferred proof is `canonical/su3_derivation/su3_stabilizer_exterior_fock.tex` and its index `canonical/su3_derivation/README.md`. The Lorentz-equivariant moving-carrier refinement E_n=n^perp and the dynamical gap are discussed in `research_tracks/T2_GAUGE/su3_dynamics_endgame_2026_10.md`. The local QCD gauge action, connection kinetic term, and healthy physical Hamiltonian remain **OPEN**. Earlier advice to discover a natural 3-dimensional complex carrier was redundant and should be disregarded. The actual next step is to reconcile the information-first observer algebras with the pre-existing SU(3) carrier and identify derived phase-space charges/constraints, not rediscover SU(3).
 
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # SU(3) selection gate: biquaternion automorphisms versus eight-dimensional adjoint representation
 
 **2026-10-26; exact structural obstruction, not a full no-go for emergent color.**

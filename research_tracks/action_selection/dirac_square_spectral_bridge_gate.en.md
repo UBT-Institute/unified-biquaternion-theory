@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: dirac_square_spectral_bridge_gate -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Dirac-square spectral bridge: what the Clifford identity actually fixes
 
 **Status: conditional mathematical audit (2026-10-25), C-tier. Not a derived fundamental UBT action or physical spinor carrier.**
