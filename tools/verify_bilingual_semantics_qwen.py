@@ -29,7 +29,10 @@ class OllamaReviewer:
 
 def main():
     root=Path(".").resolve()
-    base=sys.argv[1] if len(sys.argv)>1 else None
+    all_pairs='--all-pairs' in sys.argv[1:]
+    base=next((arg for arg in sys.argv[1:] if not arg.startswith('--')),None)
+    if all_pairs and base:
+        raise SystemExit('Choose either --all-pairs or a changed-base SHA')
     report={"schema":v.SCHEMA,"status":"blocked","verification":"experimental-local-machine-review",
             "model":"qwen2.5:3b","cli_version":"none",
             "created_at":datetime.now(timezone.utc).isoformat(),"base":base,
@@ -42,7 +45,7 @@ def main():
         report["commit"]=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip()
         for name in ("BILINGUAL_CONTENT_POLICY.en.md","BILINGUAL_CONTENT_POLICY.cs.md","AGENTS.md"):
             report["policy_sha256"][name]=v.sha256((root/name).read_bytes())
-        docs=v.load_documents(root,base)
+        docs=v.load_documents(root,None if all_pairs else base)
         report["sources"]=[{k:value for k,value in item.items() if k not in ("en","cs")} for item in docs]
         v.run_review(docs,OllamaReviewer(),report,workers=1)
         v.verify_sources(root,docs)
