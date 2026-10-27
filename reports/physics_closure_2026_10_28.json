@@ -162,5 +162,31 @@
     "tests/test_holst_selfdual_canonical_gr.py": "e9f7928a94578d4760be787e084c808be066660c3d0a194008d8f8aed3e7b477",
     "research_tracks/action_selection/physics_closure_2026_10.en.md": "1ce250923d538b4bdd173e2ab4c7de6048443622be6cbdb4662952d797d1e62f",
     "research_tracks/action_selection/physics_closure_2026_10.cs.md": "239895819136e85f3606e7a3439ed7e284484785979bd1be458bfaab8b1f3661"
+  },
+  "github_ci_observation": {
+    "source_commit": "e8aea490f229273227cfb095cbc1eb73b59a615f",
+    "passed": [
+      "Composite Palatini Holst homogeneous gate",
+      "Hamiltonian charge and torsion gates",
+      "UBT Theory Invariants CI",
+      "UBT single-action declaration guard",
+      "Physics Laws CI",
+      "Alpha Two-Loop Active Checks",
+      "Documentation Linting",
+      "Bilingual structural parity",
+      "New constrained Holst Hamiltonian and numerical step in Lean workflow"
+    ],
+    "still_pending": [
+      "Full Lean workflow",
+      "Independent bilingual semantics",
+      "LaTeX workflows",
+      "Full pytest in Lorentz workflow"
+    ],
+    "integrity_gate": {
+      "status": "FAILED_ON_OLD_EVENT_LABELS",
+      "cause": "The original synchronize event had no allow-core-change label. The label is now present for the expressly requested canonical status audit; a fresh synchronize event must validate it. No scientific check is skipped or relaxed."
+    },
+    "semantic_approval": "NOT_CLAIMED",
+    "note": "These observations bind the stated source commit. They do not assert approval of a later commit or replace fresh required checks."
   }
 }
