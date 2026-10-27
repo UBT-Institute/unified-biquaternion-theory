@@ -27,6 +27,9 @@ Jde o **provizorní a osobně neatestovanou** rekonstrukci. Strukturovaným záz
 7. **Hamiltonián, akce a kauzální sdílená realita:** dostupný kontext diskusí zaznamenává autorova algebraická omezení a opakovaný návrat k informačním a kauzálním principům. PR #804 dokládá pozdější matematický směr, nikoliv výlučný intelektuální původ nebo úplnou akci UBT.
 
 <!-- BILINGUAL-UNIT: origin-ledger.evidence -->
+## Synergický vývoj jako běžný případ
+Koncept může vzniknout jako neformální či neúplná lidská intuice, agent jej může rychle matematicky zpřesnit a výsledek se může opakovaně měnit lidskou kritikou a dalšími výpočty agenta. Zaznamenejte to jako `iterative_human_ai` a rozlišujte doložené fáze místo přisuzování každé rovnice jednomu vynálezci. Starší výskyt v zápisníku, publikaci nebo konverzaci dokládá pouze obsah daného staršího zdroje; pozdější zpřesnění lze připsat samostatně, pokud existují podklady. Ani agentní dopracování, ani autorova původní intuice nevymazávají přínos druhé strany. Pokud původ či posloupnost nejsou doloženy, použijte `undetermined` bez domýšlení.
+
 ## Pravidla pro důkazy
 Rozlišujte původní datované dokumenty, indexované, ale neprohlédnuté originály, prověřené rozdíly Git commitů, retrospektivní výklady repozitáře, osobní vzpomínky a souhrny konverzací. Každé podstatné připsání příspěvku propojte se zdrojem a přesně uveďte, co zdroj **neprokazuje**. Autor Git commitu, autor merge nebo značka `Co-authored-by` popisují historii artefaktu, nikoliv nutně původce myšlenky. Pouhá časová blízkost neprokazuje, že určitý prompt způsobil commit. Pokud přínos nelze určit, použijte `undetermined`.
 
