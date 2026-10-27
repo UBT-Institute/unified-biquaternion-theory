@@ -40,3 +40,11 @@ Status: **partial formalization; full single-Theta Hamiltonian OPEN**.
 - The complete Hamiltonian must remain **OPEN** until all required premises and derivations are independently formalized.
 
 This ledger is a roadmap, not a claim of a complete formal proof.
+
+## Reproducible complementary checks
+
+- Lean: `lake build UBT` plus the existing leanchecker and axiom audit.
+- Exact computer algebra: `python3 -m pytest -q tests/test_hamiltonian_restricted_jet.py` checks the cross and pure second derivatives of the specific determinant-jet polynomial with SymPy.
+- Deterministic integer cross-check: the same test verifies 25 reproducible seeded examples with exact integer arithmetic; **these examples are not a proof**.
+- A symbolic zero expression must be checked against independently written identities, not only self-comparison; any symbolic test failure is blocking.
+- Extension to torsionful full Theta dynamics must add separate tests and is not covered by the restricted model.
