@@ -11,7 +11,7 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-# Souhrn 27. 10. 2026: úplná geometrická algebra, torze, gravitace a informace pozorovatele
+# Souhrn 2026-10-27: úplná geometrická algebra, torze, gravitace a informace pozorovatele
 
 <!-- BILINGUAL-UNIT: conclusion -->
 ## Závěr a přesná hranice tvrzení
@@ -33,4 +33,4 @@ Kanonická Cliffordova relace implikuje $(\Gamma^\mu k_\mu)^2=g^{\mu\nu}k_\mu k_
 
 <!-- BILINGUAL-UNIT: next -->
 ## Co chybí k důkazu průlomu
-(1) Určit přesně, která obecná oboustranná/Cliffordova spojení jsou kompozitně určena polem $\Theta$. (2) Variovat kandidátní úplnou akci jediného $\Theta$ s oběma křivostními invarianty a správně rozlišit fyzikální a jet spojení. (3) Dokázat obecné Einsteinovy rovnice na beztočivé fyzikální větvi, nejen algebraickou reprezentovatelnost. (4) Spočítat redukovaný Hamiltonián, fyzikální stupně volnosti a kauzální hlavní symbol. (5) Odvodit kvantitativní torzní předpověď nad rámec GR/Einsteinovy--Cartanovy teorie. **Úroveň C_working; LEAN-PENDING; úplná kompozitní variace OTEVŘENÁ; nezávislá významová kontrola překladů PENDING.**
+(1) Určit přesně, která obecná oboustranná/Cliffordova spojení jsou kompozitně určena polem $\Theta$. (2) Variovat kandidátní úplnou akci jediného $\Theta$ s oběma křivostními invarianty a správně rozlišit fyzikální a jet spojení. (3) Dokázat obecné Einsteinovy rovnice na beztočivé fyzikální větvi, nejen algebraickou reprezentovatelnost. (4) Spočítat redukovaný Hamiltonián, fyzikální stupně volnosti a kauzální hlavní symbol. (5) Odvodit kvantitativní torzní předpověď nad rámec GR/Einsteinovy--Cartanovy teorie. **Úroveň C_working; LEAN-PENDING; úplná kompozitní variace OPEN (otevřená); nezávislá významová kontrola překladů PENDING.**
