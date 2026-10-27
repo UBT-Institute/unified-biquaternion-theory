@@ -25,7 +25,7 @@ Přesná věta `canonical/gr_closure/gap_10t_minimal_one_connection_gr_no_go.tex
 ## Ponechat oba invariantní kanály
 Existující analýza Cliffordových stop obsahuje dva nezávislé invarianty lineární v křivosti (Palatini a Holst). Jejich přípustná kandidátní rodina je
 $$S_{\rm grav}=\frac1{4\kappa}\int\epsilon_{abcd}e^a\wedge e^b\wedge R^{cd}+\frac1{2\kappa\gamma}\int e^a\wedge e^b\wedge R_{ab}+S_\Lambda+S_{\rm other}.$$
-Holstův koeficient **není** fixován ani předpokládán nulový. Niehova--Yanova identita dává $d(e_a\wedge T^a)=T_a\wedge T^a-e_a\wedge e_b\wedge R^{ab}$. Holstova **hustota identicky mizí na Levi-Civitově větvi bez torze**. To neznamená nulovou neomezenou variaci podle nezávislého spojení. Rovněž to NEDOKAZUJE, že úplná beztočivá UBT splňuje obecné Einsteinovy rovnice.
+Holstův koeficient **není** fixován ani předpokládán nulový. Nieh–Yanova identita dává $d(e_a\wedge T^a)=T_a\wedge T^a-e_a\wedge e_b\wedge R^{ab}$. Holstova **hustota identicky mizí na Levi-Civitově větvi bez torze**. To neznamená nulovou neomezenou variaci podle nezávislého spojení. Rovněž to NEDOKAZUJE, že úplná beztorzová UBT splňuje obecné Einsteinovy rovnice.
 
 <!-- BILINGUAL-UNIT: causality -->
 ## Kauzalita a informační omezení
