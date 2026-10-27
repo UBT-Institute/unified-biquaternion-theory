@@ -48,4 +48,4 @@ Pro vektor je úplný geometrický součin $\nabla A=\nabla\cdot A+\nabla\wedge 
 
 <!-- BILINGUAL-UNIT: gate -->
 ## Potřebný následující výpočet
-Odvodit kompatibilní $\mathscr D_\mu$ z již specifikovaného oboustranného spojení, umocnit $\slashed{\mathscr D}$ včetně křivosti a torze a porovnat hlavní symbol a vazby s neměnnou kanonickou akcí. Samostatně sledovat axiální torzi, komutátorové bivektory a případné skalární/pseudoskalární projekce. **Stav: výzkumný kandidát; úplný Hamiltonián OTEVŘENÝ; LEAN-PENDING; CAS-PENDING; významová kontrola překladů PENDING.**
+Odvodit kompatibilní $\mathscr D_\mu$ z již specifikovaného oboustranného spojení, umocnit $\slashed{\mathscr D}$ včetně křivosti a torze a porovnat hlavní symbol a vazby s neměnnou kanonickou akcí. Samostatně sledovat axiální torzi, komutátorové bivektory a případné skalární/pseudoskalární projekce. **Stav: výzkumný kandidát; úplný Hamiltonián OPEN (otevřená); LEAN-PENDING; CAS-PENDING; významová kontrola překladů PENDING.**
