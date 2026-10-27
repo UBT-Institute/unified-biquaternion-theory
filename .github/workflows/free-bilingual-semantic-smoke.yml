@@ -1,0 +1,53 @@
+name: Free bilingual semantic smoke test
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - research/observer-information-hamiltonian-20261027
+    paths:
+      - .github/workflows/free-bilingual-semantic-smoke.yml
+permissions:
+  contents: read
+jobs:
+  qwen-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Ollama
+        run: curl -fsSL https://ollama.com/install.sh | sh
+      - name: Start local model
+        run: |
+          ollama serve > /tmp/ollama.log 2>&1 &
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:11434/api/tags >/dev/null && break; sleep 2; done
+          ollama pull qwen2.5:3b
+      - name: Test bilingual semantic judgment (non-blocking experiment)
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request, pathlib
+          p=pathlib.Path('research_tracks/observer_information_hamiltonian_2026_10_composite_metric')
+          en=p.with_suffix('.en.md').read_text()
+          cs=p.with_suffix('.cs.md').read_text()
+          # Small excerpts keep CPU inference bounded. This is not a complete document audit.
+          def ask(a,b):
+              prompt=('Compare English and Czech scientific statements. Reply ONLY SAME or DIFFERENT. '
+                      'SAME means no contradiction in scientific meaning.\nEnglish: '+a+
+                      '\nCzech: '+b+'\nAnswer:')
+              body=json.dumps({'model':'qwen2.5:3b','prompt':prompt,'stream':False,
+                               'options':{'temperature':0,'num_predict':12,'num_ctx':2048}}).encode()
+              req=urllib.request.Request('http://127.0.0.1:11434/api/generate',body,
+                                         {'Content-Type':'application/json'})
+              with urllib.request.urlopen(req,timeout=180) as resp:
+                  return json.load(resp)['response'].strip()
+          tests=[
+            ('The metric is nondegenerate.','Metrika je nedegenerovaná.','SAME'),
+            ('The metric is nondegenerate.','Metrika je degenerovaná.','DIFFERENT'),
+          ]
+          failures=0
+          for a,b,expected in tests:
+              actual=ask(a,b).upper().split()[0].strip('.,:')
+              print(f'Expected={expected}; actual={actual}')
+              failures += actual != expected
+          print('Documents available:',len(en),'EN characters;',len(cs),'CS characters')
+          if failures: raise SystemExit(f'{failures} semantic smoke tests failed')
+          PY
