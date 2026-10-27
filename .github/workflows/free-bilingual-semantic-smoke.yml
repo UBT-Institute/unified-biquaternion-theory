@@ -12,7 +12,7 @@ permissions:
 jobs:
   qwen-smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
         with:
@@ -23,7 +23,7 @@ jobs:
         run: |
           ollama serve > /tmp/ollama.log 2>&1 &
           for i in $(seq 1 30); do curl -fsS http://127.0.0.1:11434/api/tags >/dev/null && break; sleep 2; done
-          ollama pull qwen2.5:3b
+          ollama pull qwen2.5:7b
       - name: Test bilingual semantic judgment (non-blocking experiment)
         run: |
           python3 - <<'PY'
@@ -36,7 +36,7 @@ jobs:
               prompt=('Compare English and Czech scientific statements. Reply ONLY SAME or DIFFERENT. '
                       'SAME means no contradiction in scientific meaning.\nEnglish: '+a+
                       '\nCzech: '+b+'\nAnswer:')
-              body=json.dumps({'model':'qwen2.5:3b','prompt':prompt,'stream':False,
+              body=json.dumps({'model':'qwen2.5:7b','prompt':prompt,'stream':False,
                                'options':{'temperature':0,'num_predict':12,'num_ctx':2048}}).encode()
               req=urllib.request.Request('http://127.0.0.1:11434/api/generate',body,
                                          {'Content-Type':'application/json'})
@@ -56,7 +56,7 @@ jobs:
           PY
 
       - name: Review changed EN/CS pairs with strict evidence validation
-        timeout-minutes: 35
+        timeout-minutes: 65
         run: |
           git fetch --no-tags origin master || git fetch --no-tags origin main
           BASE=$(git rev-parse --verify origin/master 2>/dev/null || git rev-parse --verify origin/main)
