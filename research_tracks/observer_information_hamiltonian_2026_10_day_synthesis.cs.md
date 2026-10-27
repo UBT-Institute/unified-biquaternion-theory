@@ -1,13 +1,15 @@
 <!-- BILINGUAL-UNIT: day-synthesis -->
-<!-- UBT-AI-PROVENANCE-BEGIN
+<!--
+UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
 tier: C_working
 ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
-policy: ../../AI_PROVENANCE.md
-notice: Research consolidation; independent checks pending.
-UBT-AI-PROVENANCE-END -->
+policy: ../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
 
 # Souhrn 27. 10. 2026: úplná geometrická algebra, torze, gravitace a informace pozorovatele
 
