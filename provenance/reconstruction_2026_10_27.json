@@ -257,7 +257,7 @@
     {
       "id": "ORIGIN-TETRAD-005",
       "subject": "Architectural reversal from fiber/projection route back to covariant tetrad",
-      "period_statement": "Author recollection 2026-10-27; current canonical architecture recorded July 2026; exact reversal event/date pending",
+      "period_statement": "Early July 2026 compact-fiber route; 15–16 July 2026 return to covariant-tetrad architecture according to later project history; exact original author instruction awaits source-level corroboration",
       "roles": [
         {
           "actor": "David Jaroš",
@@ -279,7 +279,7 @@
         {
           "class": "repository_retrospective",
           "path": "docs/HISTORY_OF_UBT.md",
-          "locator": "Author-led decisions in AI-assisted era",
+          "locator": "Early July 2026 — Compact-fiber completion route; 15–16 July 2026 — Return to covariant-tetrad architecture; 16 July 2026 release v10.2.0",
           "supports": "Historical narrative attributes restoration decision to author"
         },
         {
@@ -300,7 +300,7 @@
         "Whether all mathematical consequences were proposed by the author"
       ],
       "confidence": "credible_retrospective_pending_primary_trace",
-      "follow_up": "Search historical PRs for rejection of fiber averaging and return to projection-free covariant tetrad; link the first decisive change and exact author comment.",
+      "follow_up": "Find author's exact instruction in original conversation or PR and compare against earliest July 15–16 tetrad refactor diff; archive original without publishing private chat.",
       "development_mode": "iterative_human_ai",
       "development_mode_status": "provisional"
     },
