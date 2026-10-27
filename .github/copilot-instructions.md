@@ -225,6 +225,3 @@ Never promote a Palatini or Lovelock branch to an unconditional UBT derivation.
 `GAP-10I-PRESCRIBED` closes only the system with prescribed coefficients through the exact augmented-holonomy criterion.
 The full-theory gaps remain narrowed until the canonical UBT action selects the
 required hypotheses and self-consistent fields.
-
-## Research origin and attribution
-Follow `AGENTS.md`'s research-origin logging protocol and `provenance/README.en.md` for every substantive theory PR. Expect many outcomes to be `iterative_human_ai`: an earlier partial or informal author idea may have been rapidly refined by an agent and then repeatedly corrected by the author. Preserve this feedback cycle rather than forcing exclusive origin labels. Log significant author-originated hypotheses, mathematical objections, rejections, reversals and boundary conditions alongside AI-created hypotheses, derivations, tests and editing. Record direct commit/PR evidence and identify retrospective testimonies or unexported chats as provisional. Do not equate final code authorship with idea origin, do not invent provenance from absent chat transcripts, and never assign a human attestation. Group the log per milestone or research PR; do not burden the author with per-prompt reports or expose private discussions. Maintain the A/B/C/D editorial tiers independently.
