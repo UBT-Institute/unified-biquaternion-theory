@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Experimental local Qwen backend for the existing fail-closed bilingual verifier."""
 import json
+import os
 import subprocess
 import sys
 import urllib.request
@@ -41,8 +42,8 @@ REVIEW_SCHEMA = {
 
 class OllamaReviewer:
     last_response = None
-    def __init__(self, model="qwen2.5:3b", timeout=300):
-        self.model, self.timeout = model, timeout
+    def __init__(self, model=None, timeout=600):
+        self.model, self.timeout = model or os.environ.get("OLLAMA_MODEL", "qwen2.5:7b"), timeout
     def __call__(self, batch):
         # Small local models omit reviews in multi-pair requests. Review each
         # pair independently, validate it immediately, then combine evidence.
@@ -80,7 +81,7 @@ def main():
     if all_pairs and base:
         raise SystemExit('Choose either --all-pairs or a changed-base SHA')
     report={"schema":v.SCHEMA,"status":"blocked","verification":"local-machine-review",
-            "model":"qwen2.5:3b","cli_version":"none",
+            "model":os.environ.get("OLLAMA_MODEL", "qwen2.5:7b"),"cli_version":"none",
             "created_at":datetime.now(timezone.utc).isoformat(),"base":base,
             "sources":[],"reviews":[],"calibration":{"status":"not_run"},
             "verifier_sha256":v.sha256(Path(v.__file__).read_bytes()),
