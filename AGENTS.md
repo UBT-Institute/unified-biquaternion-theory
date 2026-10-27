@@ -458,6 +458,8 @@ separate statements.
 
 Read `provenance/README.en.md` (or the Czech edition) and the current structured historical ledger before working on a major concept or proof. Scientific origin is **not** the same as the existing A/B/C/D AI-provenance/review tier. This section records *who contributed which kind of idea or intervention*, not who typed the last LaTeX file.
 
+Most UBT results are produced by iterative human–AI co-development rather than exclusive human or AI invention. Prefer `iterative_human_ai` when supported: record any earlier partial idea or constraint, the agent's rapid mathematical refinement, the author's subsequent corrections, and the agent's further revisions, without turning a mutual process into a winner-take-all origin label. Keep `origin_unknown` when the first proposal is not evidenced. Do not require a uniquely attributable author for every intermediate step.
+
 For each substantive research PR or conceptual milestone, create a compact JSON record in `provenance/events/YYYY-MM-DD-<topic>.json` using the fields documented in `provenance/event_template.json`. The record must include a stable claim/decision ID, date recorded, the new hypothesis/result/failed route, origin/proposed constraints when evidenced, significant human objections or architectural redirects, AI-proposed proof or implementation work, negative results, verification scope, evidence references, uncertainty and attestation status. Group related steps within one PR; do not log routine prompts, spelling edits or every implementation detail.
 
 Specific requirements:
