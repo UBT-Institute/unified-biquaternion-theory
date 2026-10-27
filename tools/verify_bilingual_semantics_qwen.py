@@ -107,6 +107,15 @@ def main():
         report["error"]=str(exc)
         print(f"Qwen semantic gate blocked: {exc}",file=sys.stderr)
     finally:
+        # Keep complete, source-bound calibration verdicts for diagnosing model errors.
+        # A calibration failure remains blocking; never convert it to approval.
+        if report.get("calibration", {}).get("reviews"):
+            expected = v.calibration()[1]
+            report["calibration"]["mismatches"] = [
+                {"id": item["id"], "expected": expected[item["id"]], "observed": item["verdict"]}
+                for item in report["calibration"]["reviews"]
+                if item["verdict"] != expected[item["id"]]
+            ]
         v.write_report(Path("build/bilingual/qwen-semantic-review.json"),report)
     return 0 if report["status"]=="passed" else 1
 
