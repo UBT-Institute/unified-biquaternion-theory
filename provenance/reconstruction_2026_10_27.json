@@ -582,7 +582,7 @@
     "distinction": "Git commit attribution, co-author trailer and AI tool identity describe artifact creation and must not be inferred to prove the origin of the underlying idea.",
     "research_modes": [
       "human_initiated",
-      "agent_initiated",
+      "ai_initiated",
       "iterative_human_ai",
       "independent_rediscovery",
       "undetermined"
