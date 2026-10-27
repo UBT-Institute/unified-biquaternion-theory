@@ -315,9 +315,14 @@
           "description": "In the accessible discussion context the author required considering commutator and anticommutator channels, proposed exploring orthogonal biquaternion components, demanded explicit comparison of Hamiltonian candidates, and redirected work to information principles, shared reality and causal horizons."
         },
         {
+          "actor": "human–AI collaboration",
+          "kind": "iterative_mathematical_codevelopment",
+          "description": "The information, shared-reality, observer-capacity, Hamiltonian and action models were extensively developed through back-and-forth mathematical discussion, including human constraints, corrections and AI computations. No participant is assigned exclusive mathematical authorship without source-level evidence."
+        },
+        {
           "actor": "AI systems",
-          "kind": "candidate_derivations_and_testing",
-          "description": "Agents supplied and developed candidate Hamiltonians, algebraic arguments and conditional information/causality checks."
+          "kind": "drafting_calculation_and_testing",
+          "description": "AI supplied many computations and candidate steps during collaborative work; Git output does not identify independent conception of the mathematical model."
         }
       ],
       "evidence": [
@@ -338,9 +343,14 @@
         "Independent historical timestamp for all discussion fragments"
       ],
       "confidence": "discussion_supported_commit_context",
-      "follow_up": "Preserve message-level evidence privately; create trace from discussion interventions to named claim/test IDs.",
+      "follow_up": "Preserve the actual intervention–response–revision sequence in the original chat, then map to each equation/claim and PR #804 tests; avoid labelling the mathematical model agent-originated by default.",
       "development_mode": "iterative_human_ai",
-      "development_mode_status": "provisional"
+      "development_mode_status": "provisional",
+      "related_conceptual_origin_ids": [
+        "ORIGIN-INFO-009",
+        "ORIGIN-SHARED-010",
+        "ORIGIN-OBSERVER-011"
+      ]
     },
     {
       "id": "ORIGIN-REDISCOVERY-008",
@@ -395,6 +405,168 @@
       ],
       "confidence": "dated_author_discussion_context_plus_real_earlier_publications; primary_UBT_notes_and_detailed_math_comparison_pending",
       "follow_up": "Retrieve original author notebook and archived conversation exports; compare only precisely defined UBT constructions with antecedent publications, without equating related ideas."
+    },
+    {
+      "id": "ORIGIN-INFO-009",
+      "subject": "Information-first principle and its mathematical use in UBT",
+      "period_statement": "Discussed in available 2026 research history; author's explicit origin testimony recorded 2026-10-27. Earliest original formulation remains to be dated.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "conceptual_and_mathematical_codirection",
+          "description": "The author states that he introduced information-first thinking as a UBT research constraint, repeatedly pressed for its real use in deriving the Hamiltonian/action, and actively discussed mathematical models and assumptions with AI rather than merely approving completed agent output."
+        },
+        {
+          "actor": "human–AI collaboration",
+          "kind": "iterative_mathematical_codevelopment",
+          "description": "Candidate information functionals and mathematical models were discussed and revised jointly. Specific equations and proof steps must only be assigned to one participant where an original conversation or other primary source supports it."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "computational_assistance",
+          "description": "AI produced portions of calculations, draft formulations and tests within iterative exchanges; no blanket claim that agents independently authored the mathematical models."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "author_recollection",
+          "locator": "author testimony, 2026-10-27, this research-origin discussion; original private chat not archived in this ledger",
+          "supports": "Human claims introduction of information principle and substantial co-development of mathematical models."
+        },
+        {
+          "class": "discussion_context",
+          "locator": "UBT information-first and Hamiltonian discussions, 2026-10-25 to 2026-10-27; individual message IDs/export pending",
+          "supports": "Author explicitly asked to try deriving Hamiltonian from information principle and shared reality; iterative discussion present in available conversation context."
+        },
+        {
+          "class": "repository_artifact",
+          "path": "research_tracks/fundamental_dynamics/SHARED_REALITY_INFORMATION_SELECTOR.en.md",
+          "supports": "An explicitly conditional information-first mathematical selector was developed; the source does not establish who first proposed every element."
+        }
+      ],
+      "not_established": [
+        "Exact earliest independent dated statement of the information principle",
+        "Who proposed each symbol, operator or intermediate step without primary transcript",
+        "A uniquely derived full fundamental UBT action or Hamiltonian",
+        "Priority over known information-theoretic physics"
+      ],
+      "confidence": "author_testimony_plus_context_and_repository_artifacts; exact_turn_provenance_pending",
+      "follow_up": "Trace source conversations and their critique cycles to each information-selector lemma, assumption and change; annotate original model claims rather than assign the whole derivation to an AI agent."
+    },
+    {
+      "id": "ORIGIN-SHARED-010",
+      "subject": "Principle of shared reality and mathematical observer-consistency modelling",
+      "period_statement": "Explicitly pursued by 2026-10-26 to 2026-10-27; earlier first formulation undetermined.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "conceptual_and_mathematical_codirection",
+          "description": "The author states he introduced the shared-reality principle and repeatedly demanded its substantive use as a constraint, including objections when an alleged derivation failed to use the principle. He also participated in iterative mathematical discussions."
+        },
+        {
+          "actor": "human–AI collaboration",
+          "kind": "iterative_mathematical_codevelopment",
+          "description": "Operational observer consistency, overlap maps, shared-state restrictions and implications for dynamics were progressively negotiated and mathematically explored through human–AI dialogue; particular mathematical contributions remain unattributed unless supported by original turns."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "computational_assistance",
+          "description": "AI drafted some operational formulations, illustrative counterexamples and mathematical checks in the shared research process, without exclusive authorship being inferred."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "author_recollection",
+          "locator": "author testimony, 2026-10-27, this research-origin discussion; original private chat not archived in this ledger",
+          "supports": "Human claims conceptual introduction and joint mathematical model-building."
+        },
+        {
+          "class": "discussion_context",
+          "locator": "User discussion in 'Audit mechanismu UBT' around 2026-10-26 and 2026-10-27; precise message links/export pending",
+          "supports": "The author insisted that an axiom not used in a proof has no evidential function and explicitly requested a first-principles restart with the shared-reality principle."
+        },
+        {
+          "class": "repository_artifact",
+          "path": "research_tracks/information_first/SHARED_REALITY_PRINCIPLE.md",
+          "supports": "Operational shared-reality model and quantum-marginal counterexample recorded as proposal on 2026-10-26."
+        },
+        {
+          "class": "repository_artifact",
+          "path": "research_tracks/fundamental_dynamics/SHARED_REALITY_INFORMATION_SELECTOR.en.md",
+          "supports": "Mathematical candidate selector integrating information and shared reality; stated to remain speculative."
+        },
+        {
+          "class": "repository_artifact",
+          "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/3a773cc25e12b84a0679c68e99c840777f695208",
+          "supports": "PR #804 mathematics and tests on causal shared reality and observer-dependent Hamiltonian identifiability; confirms artifact development, not sole derivational authorship."
+        }
+      ],
+      "not_established": [
+        "Earliest conception date or exact earliest wording",
+        "Which participant originated each detailed equation in absence of full chats",
+        "That shared reality by itself selects a unique dynamics",
+        "That any proposed principle is experimentally verified"
+      ],
+      "confidence": "author_testimony_plus_discussion_context_and_repository_artifacts",
+      "follow_up": "Locate original dialog turns with proposals, objections, derivation corrections and decision to restart, then link to code and PR changes."
+    },
+    {
+      "id": "ORIGIN-OBSERVER-011",
+      "subject": "Observer complexity/capacity limiting accessible information",
+      "period_statement": "Discussed on 2026-10-27; first conception may predate this and is not established.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "conceptual_and_mathematical_codirection",
+          "description": "The author states he introduced observer complexity and insisted that what an observer can infer depends not only on causal/light-cone access but also on information-processing capability; the mathematical modelling was extensively discussed together with AI."
+        },
+        {
+          "actor": "human–AI collaboration",
+          "kind": "iterative_mathematical_codevelopment",
+          "description": "Operational models relating observables, detector protocols, record memory, and Hamiltonian distinguishability were jointly explored and refined; the origin of individual inequalities and constructions must be traced separately."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "computational_assistance",
+          "description": "AI helped express operational models and calculate information bounds and examples; this is not evidence of exclusively autonomous mathematical conception."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "author_recollection",
+          "locator": "author testimony, 2026-10-27, this research-origin discussion; original private chat not archived in this ledger",
+          "supports": "Human claims both the conceptual principle of observer complexity and sustained joint mathematical work."
+        },
+        {
+          "class": "discussion_context",
+          "locator": "User discussion 'Složitost pozorovatele', 2026-10-27; original message permalinks/export pending",
+          "supports": "Author explicitly emphasized observer information capacity and light-cone limitations and asked to incorporate these in Hamiltonian/action work."
+        },
+        {
+          "class": "repository_artifact",
+          "path": "research_tracks/information_first/OBSERVER_CAPACITY_INFORMATION_HAMILTONIAN_GATE.md",
+          "supports": "Operational models of finite observer capability, Fisher/Holevo information and empirical Hamiltonian equivalence; document dated 2026-10-27."
+        },
+        {
+          "class": "repository_artifact",
+          "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/3a773cc25e12b84a0679c68e99c840777f695208",
+          "supports": "PR #804 mathematics and tests on causal shared reality and observer-dependent Hamiltonian identifiability; confirms artifact development, not sole derivational authorship."
+        }
+      ],
+      "not_established": [
+        "Original earliest formulation date",
+        "Which specific bounds were independently proposed by either participant",
+        "A derivation of the physical Hamiltonian from observer complexity",
+        "A uniquely chosen complexity functional, as distinct from operational measurement capacity"
+      ],
+      "confidence": "author_testimony_plus_discussion_context_and_repository_artifacts",
+      "follow_up": "Find first conversation introduction and mapping of observer-resource assumptions and later equations, preserving human correction loops."
     }
   ],
   "process_decisions": {
@@ -416,7 +588,7 @@
       "undetermined"
     ],
     "independent_rediscovery": "Record what the author actually worked out, the earlier literature with precise citations once verified, and when the overlap was recognized; never claim global priority or plagiarism based on independent convergence alone.",
-    "synergy": "Most later research is iterative human-AI co-development. An incomplete human proposal can be rapidly refined by AI, corrected by the human and developed again. Neither the resulting polished text nor the initial intuition alone describes the entire contribution."
+    "synergy": "Most later research is iterative human–AI co-development, including mathematical modelling, not only a human concept handed to an AI derivation service. Reconstruct intervention–response–correction chains from primary dialogue whenever possible. Do not assign exclusive authorship based on who wrote the final proof."
   },
   "evidence_policy": "undefined Earlier historical publications are comparators, not evidence of copying or a source for retroactively dating UBT contributions."
 }
