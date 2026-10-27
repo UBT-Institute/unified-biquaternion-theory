@@ -36,4 +36,4 @@ Existující kanonická akce obsahuje efektivní Hilbertovu--Palatiniho/Einstein
 <!-- BILINGUAL-UNIT: status -->
 ## Stav a ověřovací brány
 
-**DOKÁZANÁ podmíněná identita; CAS ověřený podmodel 1+1; úplný Hamiltonián OTEVŘENÝ.** LEAN-PENDING; úplná kompozitní variace PENDING; nezávislá významová kontrola překladů PENDING. Bez požadovaných kontrol nemergovat.
+**PROVED (dokázaná) podmíněná identita; CAS ověřený podmodel 1+1; úplný Hamiltonián OPEN (otevřený).** LEAN-PENDING; úplná kompozitní variace PENDING; nezávislá významová kontrola překladů PENDING. Bez požadovaných kontrol nemergovat.
