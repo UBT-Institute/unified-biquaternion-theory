@@ -1,13 +1,15 @@
 <!-- BILINGUAL-UNIT: volume-test -->
-<!-- UBT-AI-PROVENANCE-BEGIN
+<!--
+UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
 tier: C_working
 ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
-policy: ../../AI_PROVENANCE.md
-notice: Working research; verification incomplete.
-UBT-AI-PROVENANCE-END -->
+policy: ../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
 
 # Kompozitní objem: test degenerace a cesta překonání
 
