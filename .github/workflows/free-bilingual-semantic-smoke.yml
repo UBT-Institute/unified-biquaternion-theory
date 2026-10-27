@@ -1,12 +1,6 @@
 name: Free bilingual semantic smoke test
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - research/observer-information-hamiltonian-20261027
-    paths:
-      - .github/workflows/free-bilingual-semantic-smoke.yml
-      - tools/verify_bilingual_semantics_qwen.py
 permissions:
   contents: read
 jobs:
