@@ -10,6 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import verify_bilingual_semantics as v
 
 class OllamaReviewer:
+    last_response = None
     def __init__(self, model="qwen2.5:3b", timeout=300):
         self.model, self.timeout = model, timeout
     def __call__(self, batch):
@@ -25,7 +26,8 @@ class OllamaReviewer:
             raise v.ReviewError(f"local Ollama unavailable: {type(exc).__name__}") from exc
         if not result.get("done") or not result.get("response"):
             raise v.ReviewError("incomplete local model response")
-        return result["response"]
+        self.last_response = result["response"]
+        return self.last_response
 
 def main():
     root=Path(".").resolve()
@@ -33,7 +35,7 @@ def main():
     base=next((arg for arg in sys.argv[1:] if not arg.startswith('--')),None)
     if all_pairs and base:
         raise SystemExit('Choose either --all-pairs or a changed-base SHA')
-    report={"schema":v.SCHEMA,"status":"blocked","verification":"experimental-local-machine-review",
+    report={"schema":v.SCHEMA,"status":"blocked","verification":"local-machine-review",
             "model":"qwen2.5:3b","cli_version":"none",
             "created_at":datetime.now(timezone.utc).isoformat(),"base":base,
             "sources":[],"reviews":[],"calibration":{"status":"not_run"},
@@ -47,7 +49,14 @@ def main():
             report["policy_sha256"][name]=v.sha256((root/name).read_bytes())
         docs=v.load_documents(root,None if all_pairs else base)
         report["sources"]=[{k:value for k,value in item.items() if k not in ("en","cs")} for item in docs]
-        v.run_review(docs,OllamaReviewer(),report,workers=1)
+        reviewer=OllamaReviewer()
+        try:
+            v.run_review(docs,reviewer,report,workers=1)
+        except v.ReviewError:
+            # Keep raw model evidence for debugging, never convert invalid output to approval.
+            if reviewer.last_response is not None:
+                report['invalid_model_response']=reviewer.last_response[:16000]
+            raise
         v.verify_sources(root,docs)
         report["status"]="passed"
     except (v.ReviewError,OSError,UnicodeError,subprocess.SubprocessError,ValueError) as exc:
