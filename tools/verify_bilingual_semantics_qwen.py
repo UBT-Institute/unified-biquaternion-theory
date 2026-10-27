@@ -44,8 +44,14 @@ class OllamaReviewer:
     def __init__(self, model="qwen2.5:3b", timeout=300):
         self.model, self.timeout = model, timeout
     def __call__(self, batch):
+        # Constrain source identifiers and hashes to the exact input batch.
+        # Never repair or overwrite model-generated evidence after decoding.
+        schema=json.loads(json.dumps(REVIEW_SCHEMA))
+        schema["properties"]["reviews"]["items"]["properties"]["id"]["enum"]=[item["id"] for item in batch]
+        for lang in ("en", "cs"):
+            schema["properties"]["reviews"]["items"]["properties"][f"{lang}_sha256"]["enum"]=[item[f"{lang}_sha256"] for item in batch]
         payload=json.dumps({"model":self.model,"prompt":v.make_prompt(batch),
-                            "stream":False,"format":REVIEW_SCHEMA,
+                            "stream":False,"format":schema,
                             "options":{"temperature":0,"num_ctx":16384,"num_predict":8192}}).encode()
         req=urllib.request.Request("http://127.0.0.1:11434/api/generate",
                                    payload,{"Content-Type":"application/json"})
