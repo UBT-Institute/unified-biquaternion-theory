@@ -1,13 +1,15 @@
 <!-- BILINGUAL-UNIT: holst-causal-selector -->
-<!-- UBT-AI-PROVENANCE-BEGIN
+<!--
+UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
 tier: C_working
 ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
-policy: ../../AI_PROVENANCE.md
-notice: Conditional restricted-sector proof; independent validation pending.
-UBT-AI-PROVENANCE-END -->
+policy: ../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
 
 # Přesná překážka: kauzální Cliffordovy kužele samy neurčují Holstův koeficient
 
