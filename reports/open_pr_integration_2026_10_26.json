@@ -672,10 +672,17 @@
       "declared_sha256_entries": 83,
       "unchanged_scoped_bilingual_source_hashes": 91,
       "root_status_and_author_tier_map": "identical to concurrent master"
+    },
+    "following_master_validation": {
+      "targeted_provenance_and_affected_research_tests": 21,
+      "failures": 0,
+      "bilingual_pairs": 251,
+      "source_checksums": 83,
+      "semantic_approval_issued": false
     }
   },
   "translation_source": "English editions; Czech editions are complete translations, not semantic approvals",
   "lean_status": "LEAN-PENDING: Lean/Lake is not installed locally; independent CI checks existing formalizations only, not every newly integrated research claim",
-  "reconciled_master_commit": "51d4a695349e85448c76439fcd291e06e7e30e16",
+  "reconciled_master_commit": "81c7bba8d259ae1b11c5d2b0ba77e8d572708a66",
   "semantic_override_register": "reports/bilingual_merge_exceptions_2026_10_27.json"
 }
