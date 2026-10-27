@@ -7,9 +7,10 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Working derivation, not a completed UBT Hamiltonian.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 # MacDowell–Mansouri gravity and observer-dependent horizon entropy: normalization gate
 
 **Status 2026-10-26:** Exact **conditional** bridge to known Einstein–Hilbert/Wald and modular-first-law results, using UBT's existing single-Theta MacDowell–Mansouri candidate. It is NOT a microscopic entropy derivation, action-selection proof, or independent Hamiltonian derivation.

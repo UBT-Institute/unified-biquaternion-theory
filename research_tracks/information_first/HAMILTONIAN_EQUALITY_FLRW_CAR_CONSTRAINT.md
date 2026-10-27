@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Matching gravitational and fermionic Hamiltonians: constraint, not operator identity
 
 **2026-10-27 — EXACT toy minisuperspace equality conditional on standard Einstein/ADM gravity and a selected finite-CAR Fock matter sector. NOT a derivation of the final single-Theta UBT Hamiltonian or a proof of GR/QM unification.**

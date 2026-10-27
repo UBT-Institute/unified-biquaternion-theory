@@ -23,4 +23,13 @@ class TestPositiveHermitianCommutator(unittest.TestCase):
   Q=I*s.diag(1,2)
   response=s.Matrix.hstack(*[flat(b*Q-Q*b) for b in gens[3:]])
   self.assertEqual(response.rank(),2)
+ def test_general_real_cross_product_identity(self):
+  beta=s.Matrix(s.symbols('b1:4',real=True))
+  q=s.Matrix(s.symbols('q1:4',real=True))
+  q0=s.symbols('q0',real=True)
+  b=I*sum((beta[j]*sig[j] for j in range(3)),s.zeros(2))
+  Q=I*(q0*s.eye(2)+sum((q[j]*sig[j] for j in range(3)),s.zeros(2)))
+  cross=beta.cross(q)
+  expected=-2*I*sum((cross[j]*sig[j] for j in range(3)),s.zeros(2))
+  self.assertEqual((b*Q-Q*b-expected).applyfunc(s.expand),s.zeros(2))
 if __name__=='__main__':unittest.main()

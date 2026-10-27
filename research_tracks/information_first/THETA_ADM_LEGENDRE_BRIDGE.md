@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Fixed-background Theta Hamiltonian bridge and kinetic-signature gate
 
 **Complete conditional Legendre calculation, not a unique microscopic Theta action.** ADM spacetime: ds²=-N²dt²+h_ij(dx^i+N^i dt)(dx^j+N^j dt), N>0; sqrt h positive. Write real components X^A of biquaternion Theta and an invertible, constant internal pairing G_AB. Choose a conventional fixed-background candidate kinetic sign (not claimed uniquely selected):

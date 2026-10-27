@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: LORENTZ_REALITY_CONSTRAINED_RANK -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Lorentz-slice reality constraint on full complex-Theta connection response
 
 2026-10-26. Exact pointwise real-linear matrix calculation in tracefree metric-compatible SL(2,C) congruence subbranch. Follows #788 (ambient rank) and #787 (multiple-vector stabilizer).

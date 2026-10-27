@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: composite_metric_kinetic_volume_identity -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Composite metric variation: vector kinetic contraction collapses to volume
 
 **2026-10-25 — exact conditional Lorentz-vector-slice identity, C-tier. Not a derivation of the UBT action.**

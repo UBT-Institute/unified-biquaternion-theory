@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Exact boundary theorem for the zero-connection four-real composite volume branch
 
 **2026-10-26 — proved in the restricted rank-four Lorentz-vector lift, not a full UBT no-go.** This addresses P0 (fundamental action and Hamiltonian) ahead of speculative vacuum counting.

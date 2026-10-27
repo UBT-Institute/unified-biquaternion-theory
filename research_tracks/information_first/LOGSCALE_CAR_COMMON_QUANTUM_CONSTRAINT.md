@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Exact quantum reference constraint: logarithmic FLRW gravity x four CAR modes
 
 **2026-10-27. A joint infinite-dimensional gravitational / finite-dimensional fermionic Hilbert-space CONSTRAINT on a fixed minisuperspace truncation; not a single-Theta derivation or full GR+QM.** Complements `COMPOSITE_TETRAD_FLRW_CAR_SYMPLECTIC_BRIDGE.md` and `HAMILTONIAN_EQUALITY_FLRW_CAR_CONSTRAINT.md`.

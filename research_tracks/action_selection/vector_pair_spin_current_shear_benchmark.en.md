@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: vector_pair_spin_current_shear_benchmark -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Fixed-tetrad pure-pair Lorentz current: vector-source benchmark
 
 **2026-10-25; conditional benchmark, not the complete canonical Theta spin-current derivation.**

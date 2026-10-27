@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Explicit one-biquaternion Dirac evolution and pullback action
 
 **2026-10-26. Closed FLAT-BACKGROUND Dirac subsystem conditional on the left-spinor representation and a specified kinetic term; not a derived unified UBT action.** Follows `ANTILINEAR_BIQUATERNION_DIRAC_BRIDGE.md` and `GRASSMANN_SPINOR_HAMILTONIAN_ACTION_GATE.md`.

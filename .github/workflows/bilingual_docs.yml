@@ -1,12 +1,15 @@
 name: Bilingual document parity
 
 on:
+  workflow_dispatch:
   pull_request:
     paths:
       - '**.md'
       - '**.tex'
       - '**.rst'
       - 'tools/check_bilingual_pairs.py'
+      - 'tools/verify_bilingual_semantics.py'
+      - 'tests/test_bilingual*.py'
       - '.github/workflows/bilingual_docs.yml'
   push:
     branches: [master]
@@ -15,6 +18,8 @@ on:
       - '**.tex'
       - '**.rst'
       - 'tools/check_bilingual_pairs.py'
+      - 'tools/verify_bilingual_semantics.py'
+      - 'tests/test_bilingual*.py'
       - '.github/workflows/bilingual_docs.yml'
 
 permissions:
@@ -27,10 +32,61 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
       - name: Check all registered language pairs
         run: python3 tools/check_bilingual_pairs.py --root .
       - name: Require pairs for changed governed prose
         if: github.event_name == 'pull_request'
-        run: >-
-          python3 tools/check_bilingual_pairs.py --root .
-          --changed-base '${{ github.event.pull_request.base.sha }}'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: python3 tools/check_bilingual_pairs.py --root . --changed-base "$BASE_SHA"
+
+  semantics:
+    needs: parity
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+      copilot-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install pinned independent reviewer runtime
+        run: npm install --global @github/copilot@1.0.103 --no-audit --no-fund
+      - name: Review meaning of changed editions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          EVENT_NAME: ${{ github.event_name }}
+        shell: bash
+        run: |
+          if [[ "$EVENT_NAME" == workflow_dispatch || "$BASE_SHA" =~ ^0+$ ]]; then
+            python3 tools/verify_bilingual_semantics.py --root . --all-pairs
+          elif [[ -n "$BASE_SHA" ]]; then
+            python3 tools/verify_bilingual_semantics.py --root . --changed-base "$BASE_SHA"
+          else
+            echo 'No comparison base supplied; semantic approval withheld.' >&2
+            exit 1
+          fi
+      - name: Publish semantic review summary
+        if: always()
+        shell: bash
+        run: |
+          if [[ -f build/bilingual/semantic-review.md ]]; then
+            cat build/bilingual/semantic-review.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Retain source-bound review evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bilingual-semantic-review-${{ github.run_id }}-${{ github.run_attempt }}
+          path: build/bilingual/semantic-review.*
+          if-no-files-found: warn
+          retention-days: 30

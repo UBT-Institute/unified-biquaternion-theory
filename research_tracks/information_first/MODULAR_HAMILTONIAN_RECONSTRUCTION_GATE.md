@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Information cycles, modular flow and the Hamiltonian reconstruction gate
 
 **26 October 2026. Exact finite-dimensional theorem and conditional thermodynamic identity. Not a UBT Hamiltonian.**

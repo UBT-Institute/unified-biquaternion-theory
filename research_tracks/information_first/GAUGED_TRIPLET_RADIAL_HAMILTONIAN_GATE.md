@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Minimal gauged SU(3) triplet: explicit Dirac-compatible radial Hamiltonian and colour no-go
 
 **2026-10-26. Exact 0+1-dimensional benchmark, NOT the UBT action, a 3+1 Yang–Mills derivation, or the full Dirac algebra.** This deliberately tests what local colour-frame symmetry actually removes.

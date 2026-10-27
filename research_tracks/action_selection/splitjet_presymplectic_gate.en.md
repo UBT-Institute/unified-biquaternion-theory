@@ -8,6 +8,18 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Conditional presymplectic benchmark; no derived Theta Hilbert space.
 UBT-AI-PROVENANCE-END -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # P0: split-jet gravitational solutions do not automatically imply the physical Theta phase space
 
 **26 October 2026.** Directly follows the existing `single_theta_macdowell_mansouri_candidate.en.md` and `adm_gr_hessian_constraint_audit.en.md`.

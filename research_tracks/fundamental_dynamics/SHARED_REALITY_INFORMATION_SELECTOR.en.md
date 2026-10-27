@@ -1,3 +1,16 @@
+<!-- BILINGUAL-UNIT: shared-reality-information-selector -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Information-first dynamics and the principle of shared reality
 
 Status: **research proposal**, 2026-10-26; NOT a locked UBT axiom, established ghost cure, unique action, Hamiltonian or graviton. This integrates the recent information-first research (#792) with the Hamiltonian nonuniqueness theorem and the quantum-emergence program.

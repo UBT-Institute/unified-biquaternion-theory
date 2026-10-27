@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Rindler modular time calibration: exact benchmark, not a fundamental UBT Hamiltonian
 
 **Research gate, 2026-10-26.** Use natural units c=hbar=k_B=1. In flat 1+1 Minkowski spacetime choose right wedge x>|t| and coordinates t=rho sinh(eta), x=rho cosh(eta), rho>0. The induced metric is ds²=-rho² d eta²+d rho². For an observer at constant rho=rho0, proper time is tau=rho0 eta; its proper acceleration is a=1/rho0.

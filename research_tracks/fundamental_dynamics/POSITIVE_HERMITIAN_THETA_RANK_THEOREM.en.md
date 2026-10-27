@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: POSITIVE_HERMITIAN_THETA_RANK_THEOREM -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Exact positive-Hermitian Theta theorem for Lorentz-real connection response
 
 **2026-10-26. Integrated Fundamental Dynamics continuation of merged #788/#793. Algebraic theorem, NOT a selected UBT action or graviton.**
@@ -18,3 +32,5 @@ This proves an *entire open subdomain* rank classification under positive-defini
 **Implication:** exactly two real anti-Hermitian tetrad-response directions per index can exist in this algebraic branch, but they are not the two physical TT graviton helicities; no Theta-field dynamics, nonflat on-shell metric, dispersion, action or Hamiltonian has been derived. Reality-preserving connection rank at fixed Theta does not select a torsion functional T[Theta]. The next actual bottleneck is to derive the full constrained differential response (δTheta,δA[Theta],δB[Theta],δT[Theta]) and a physically justified evolution law.
 
 Test: tests/test_positive_hermitian_commutator.py verifies positive definite nonscalar examples and the central exceptional case with exact SymPy rational entries.
+
+Verification scope: the same script also checks the commutator/cross-product identity for arbitrary real symbolic coefficients. The analytic argument above supplies the rank classification; the checks do not select an action or count physical gravitons. `LEAN-PENDING`: Lean/Lake is unavailable in this local runtime and no checked Lean formalization of this theorem is supplied. The repository's other Lean proofs do not certify this separate result.

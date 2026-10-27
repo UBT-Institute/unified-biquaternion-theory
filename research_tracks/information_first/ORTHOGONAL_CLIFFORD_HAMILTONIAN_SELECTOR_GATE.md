@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Orthogonal-only biquaternion fermion construction: exact scope and Hamiltonian selector
 
 **2026-10-26 — exact finite-dimensional Clifford/CAR algebra, NOT a full UBT quantum field theory.** Builds on [BIQUATERNION_INTRINSIC_CAR_SPIN_STATISTICS_GATE.md](BIQUATERNION_INTRINSIC_CAR_SPIN_STATISTICS_GATE.md) and the preexisting SU(3) exterior-Fock track. Investigates the proposal that orthogonal biquaternion components could replace *fundamental* general Grassmann number coefficients. Does **not** assert fermionic spin-statistics from orthogonality alone.

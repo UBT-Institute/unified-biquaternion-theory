@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Biquaternionic kinetic selector: exact two-parameter obstruction and metric lock
 
 **2026-10-26. Conditional local classification, not a selected fundamental action.** Uses existing `T2_GAUGE/su3_positive_timelike_kinetic_candidate.md` and `su3_positive_kinetic_metric_lock_audit.md`; does not rediscover their one-coefficient result.

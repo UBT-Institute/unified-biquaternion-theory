@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: vector_trace_shear_contortion_gate -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Irreducible-contortion screening: vector trace versus transverse shear
 
 **2026-10-25 — conditional pointwise algebraic result, C-tier.** Uses the non-null Gaussian UBT reconstruction with symmetric W and W_(mu nu) V^nu=0. No fundamental UBT spin-current, action or Hamiltonian is selected.

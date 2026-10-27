@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Dirac gauge-fixing test: constant norm on the split-jet carrier
 
 **2026-10-26; exact local canonical model and Faddeev-Popov rank, not a complete MM/UBT Dirac count.** Based on `action_selection/mm_shift_gauge_dirac.en.md` and `information_first/NORM_PRESERVING_SPLITJET_HAMILTONIAN_GATE.md`.

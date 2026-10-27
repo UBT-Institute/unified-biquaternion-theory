@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: contortion_stabilizer_invisibility -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Stabilizer contortion: tetrad invisibility does not imply connection uniqueness
 
 **2026-10-25; conditional exact local kinematic result.** Applies to the non-null V reconstruction of canonical/CANONICAL_DEFINITIONS.md, not automatically to arbitrary Theta carriers, a selected canonical action, or physical on-shell gauge inequivalence.

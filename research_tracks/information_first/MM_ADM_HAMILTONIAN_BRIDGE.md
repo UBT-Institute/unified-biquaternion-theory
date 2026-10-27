@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Explicit ADM Hamiltonian of the existing split-jet MacDowell–Mansouri gravity sector
 
 **2026-10-26. Standard conditional bulk gravity reduction, NOT the full UBT Hamiltonian.** This is the requested concrete canonical bridge from the *already specified* MM curvature-square action, not a new independent fundamental action. Source: `research_tracks/action_selection/single_theta_macdowell_mansouri_candidate.en.md`.

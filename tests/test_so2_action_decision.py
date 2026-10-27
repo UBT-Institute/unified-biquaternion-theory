@@ -14,4 +14,7 @@ def test_so2_trial_euler_and_auxiliary_limit():
     E1=s.diff(L,A1)-s.diff(s.diff(L,s.diff(A1,t)),t)
     assert s.simplify(E0 + b*(A0-B0)+j0-a*s.diff(F,x))==0
     assert s.simplify(E1 - b*(A1-B1)-j1+a*s.diff(F,t))==0
-    assert s.solve([E0.subs(a,0),E1.subs(a,0)],[A0,A1])=={A0:B0-j0/b,A1:B1-j1/b}
+    solution=s.solve([E0.subs(a,0),E1.subs(a,0)],[A0,A1])
+    expected={A0:B0-j0/b,A1:B1-j1/b}
+    assert solution.keys()==expected.keys()
+    assert all(s.simplify(solution[field]-value)==0 for field,value in expected.items())

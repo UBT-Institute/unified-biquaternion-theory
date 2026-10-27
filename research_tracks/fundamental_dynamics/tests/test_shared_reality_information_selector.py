@@ -18,6 +18,6 @@ class Tests(unittest.TestCase):
  def test_positive_fisher_versus_indefinite_eta(self):
   p=s.symbols('p',real=True)
   fisher=s.simplify(p*(1/p)**2+(1-p)*(-1/(1-p))**2)
-  self.assertEqual(fisher,1/(p*(1-p)))
+  self.assertEqual(s.simplify(fisher-1/(p*(1-p))),0)
   self.assertEqual([eta[i,i] for i in range(4)],[-1,1,1,1])
 if __name__=='__main__':unittest.main()

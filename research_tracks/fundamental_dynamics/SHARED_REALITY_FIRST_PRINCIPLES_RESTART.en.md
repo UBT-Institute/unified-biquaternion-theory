@@ -1,3 +1,16 @@
+<!-- BILINGUAL-UNIT: shared-reality-first-principles-restart -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Shared reality: restart from first principles and test Hamiltonian selection
 
 **2026-10-27 — experimental research track, not a UBT axiom.** Preservation/merge: #798 information/shared-reality proposal and #796 algebraic connection theorem were merged into master before this continuation. #799 (33 changed files, conditional extended-field symplectic split) and #786 (merge conflicts) were intentionally NOT force-merged; all remain accessible in GitHub PR history.
@@ -42,4 +55,6 @@ To promote SR1/SR2 beyond an interpretation, explicitly prove that it excludes H
 
 **Decision as of this calculation:** SR0 nonselection PROVED by counterexample. SR1/SR2 usefulness OPEN. Do not add an axiom or assert a fundamental action.
 
-Reproducer: tests/test_shared_reality_selection_counterexample.py (local SymPy unittest: 3 tests passed 2026-10-27).
+Reproducer: research_tracks/fundamental_dynamics/tests/test_shared_reality_selection_counterexample.py (local SymPy unittest: 3 tests passed 2026-10-27).
+
+Verification scope: the tests check weak operational covariance and the displayed counterexample; they do not select UBT dynamics. LEAN-PENDING: this note is not formalized and Lean/Lake is unavailable locally.
