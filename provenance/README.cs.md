@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: origin-ledger.introduction -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -10,7 +11,6 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-<!-- BILINGUAL-UNIT: origin-ledger.introduction -->
 # Důkazní registr původu výzkumu — první rekonstrukce, 27. října 2026
 
 ## Stav a omezení
