@@ -1,13 +1,15 @@
 <!-- BILINGUAL-UNIT: joint-constraints -->
-<!-- UBT-AI-PROVENANCE-BEGIN
+<!--
+UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
 tier: C_working
 ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
-policy: ../../AI_PROVENANCE.md
-notice: Working research; independent verification pending.
-UBT-AI-PROVENANCE-END -->
+policy: ../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
 
 # Společná omezení pro výběr Hamiltoniánu
 
