@@ -9,7 +9,7 @@
   "scope": "First merge of PR 750 with the exact source hashes below; no standing exemption for later edits or other pull requests",
   "reviewed_source_commit": "a34f38398f2b36544dc3b363047678c7cceb2b6a",
   "reviewed_source_tree": "f71b151438e9e2c7a74a272b84ffeb2bfce381bd",
-  "target_base_commit": "d0f6233ae63a87815d27d6423e71a035c72c0c8c",
+  "target_base_commit": "51d4a695349e85448c76439fcd291e06e7e30e16",
   "reason": "Independent model inference is rejected by organization Copilot policy before calibration. Code, structural, checksum, provenance, documentation, Lean and publication workflows pass.",
   "semantic_review": {
     "status": "not_run_due_to_organization_policy",
@@ -764,5 +764,33 @@
     "AGENTS.md": "70c62eaabedec54cc90b33e0513496b6bf72e65eed50c1182b07add0723758b5",
     "BILINGUAL_CONTENT_POLICY.en.md": "3f0444813e1df258c84ba119c58467bf87bfdb245214c65b4e91cde870949870",
     "BILINGUAL_CONTENT_POLICY.cs.md": "523bdd20bd09491c80c6a037b3c235e7333affc5843140a85b0de6361c444d17"
+  },
+  "concurrent_master_reconciliation": {
+    "previous_base_commit": "d0f6233ae63a87815d27d6423e71a035c72c0c8c",
+    "new_base_commit": "51d4a695349e85448c76439fcd291e06e7e30e16",
+    "reason": "PR 800 was merged concurrently; preserve its newer research additions and tests",
+    "conflicts": [
+      "research_tracks/information_first/SHARED_NEGENTROPY_CORRELATION.en.md",
+      "research_tracks/information_first/SHARED_NEGENTROPY_CORRELATION.cs.md"
+    ],
+    "resolution": "Keep the complete structurally matched editions. English scientific content matches the new master; its shorter Czech edition is retained in source history.",
+    "all_91_scoped_source_hashes_unchanged": true,
+    "legacy_information_first_paths": "Unchanged unpaired paths newly present in master are retained for compatibility with its newer notes; generated provenance alone does not migrate their prose.",
+    "validation": {
+      "full_pytest": {
+        "passed": 1128,
+        "skipped": 5,
+        "failures": 0,
+        "errors": 0
+      },
+      "bilingual_structure": {
+        "status": "passed",
+        "pairs": 250
+      },
+      "provenance_headers": "passed",
+      "declared_sha256_entries": 83,
+      "unchanged_scoped_bilingual_source_hashes": 91,
+      "root_status_and_author_tier_map": "identical to concurrent master"
+    }
   }
 }

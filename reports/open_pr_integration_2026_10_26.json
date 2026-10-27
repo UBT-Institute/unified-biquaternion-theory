@@ -1,6 +1,6 @@
 {
   "schema": "ubt-open-pr-integration/v1",
-  "status": "prepared_not_merged",
+  "status": "prepared_for_owner_requested_merge",
   "master": "d0f6233ae63a87815d27d6423e71a035c72c0c8c",
   "heads": {
     "292": "905a85ac6d1594a753fc48270ff5e03d30eeb4b8",
@@ -656,8 +656,26 @@
       "status": "blocked_by_organization_policy",
       "prior_run": 40319835092,
       "approvals": 0
+    },
+    "post_concurrent_master_validation": {
+      "full_pytest": {
+        "passed": 1128,
+        "skipped": 5,
+        "failures": 0,
+        "errors": 0
+      },
+      "bilingual_structure": {
+        "status": "passed",
+        "pairs": 250
+      },
+      "provenance_headers": "passed",
+      "declared_sha256_entries": 83,
+      "unchanged_scoped_bilingual_source_hashes": 91,
+      "root_status_and_author_tier_map": "identical to concurrent master"
     }
   },
   "translation_source": "English editions; Czech editions are complete translations, not semantic approvals",
-  "lean_status": "LEAN-PENDING: Lean/Lake is not installed locally; independent CI checks existing formalizations only, not every newly integrated research claim"
+  "lean_status": "LEAN-PENDING: Lean/Lake is not installed locally; independent CI checks existing formalizations only, not every newly integrated research claim",
+  "reconciled_master_commit": "51d4a695349e85448c76439fcd291e06e7e30e16",
+  "semantic_override_register": "reports/bilingual_merge_exceptions_2026_10_27.json"
 }
