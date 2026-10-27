@@ -59,6 +59,19 @@ class OllamaReviewer:
         schema["properties"]["reviews"]["items"]["properties"]["id"]["enum"]=[item["id"] for item in batch]
         for lang in ("en", "cs"):
             schema["properties"]["reviews"]["items"]["properties"][f"{lang}_sha256"]["enum"]=[item[f"{lang}_sha256"] for item in batch]
+        # A single-paragraph pair has exactly one valid alignment on each side.
+        # Constrain identifiers at decoding time rather than repairing model output.
+        # Multi-paragraph pairs retain the original strict coverage validator.
+        item = batch[0]
+        if len(item["en"]) == 1 and len(item["cs"]) == 1:
+            alignment = schema["properties"]["reviews"]["items"]["properties"]["alignments"]
+            alignment["minItems"] = 1
+            alignment["maxItems"] = 1
+            for lang in ("en", "cs"):
+                ids = alignment["items"]["properties"][lang]
+                ids["minItems"] = 1
+                ids["maxItems"] = 1
+                ids["items"]["enum"] = [item[lang][0]["id"]]
         payload=json.dumps({"model":self.model,"prompt":v.make_prompt(batch),
                             "stream":False,"format":schema,
                             "options":{"temperature":0,"num_ctx":16384,"num_predict":8192}}).encode()
