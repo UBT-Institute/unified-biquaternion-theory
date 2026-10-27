@@ -33,3 +33,9 @@ def test_rediscovery_needs_antecedent():
       "locator": "https://example.org/paper", "supports": "Antecedent identified",
       "limitations": "Not an authorship determination", "original_checked": False})
     assert module.validate_record(record) == []
+
+def test_all_event_files_follow_contract():
+    event_dir = ROOT / "provenance" / "events"
+    for path in sorted(event_dir.glob("*.json")) if event_dir.exists() else []:
+        record = json.loads(path.read_text(encoding="utf-8"))
+        assert module.validate_record(record) == [], path.as_posix()
