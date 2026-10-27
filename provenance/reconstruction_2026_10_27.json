@@ -262,7 +262,7 @@
         {
           "actor": "David Jaroš",
           "kind": "architecture_decision_and_rejection",
-          "description": "Author reports having instructed AI to revert the fiber construction and return to the tetrad approach; the project history independently recounts author choice to restore the covariant tetrad architecture."
+          "description": "Author reports having instructed AI to revert the fiber construction and return to the tetrad approach; the project history also recounts author choice to restore the covariant tetrad architecture."
         },
         {
           "actor": "AI systems",
@@ -344,20 +344,20 @@
     },
     {
       "id": "ORIGIN-REDISCOVERY-008",
-      "subject": "Possible independent rediscoveries of previously published mathematical or physical constructions",
-      "period_statement": "Event(s) unspecified; author recollection recorded 2026-10-27",
+      "subject": "Independently conceived UBT elements later compared with older biquaternionic, complex-time and Hermitian-gravity literature",
+      "period_statement": "Author's explicit statement 2026-04-27; named prior-art comparison discussed 2026-07-13; earlier originating notes remain to be independently dated",
       "development_mode": "independent_rediscovery_candidate",
       "development_mode_status": "unresolved",
       "roles": [
         {
           "actor": "David Jaroš",
           "kind": "retrospective_testimony",
-          "description": "Author recalls that some independently developed ideas were later recognized as existing in prior literature."
+          "description": "On 2026-04-27 the author distinguished independent conceptual discovery of complex time, Θ and complex-quaternion approaches from a claim to first-ever historical invention. On 2026-07-13 the earlier biquaternionic-electromagnetism origin was compared with older Hermitian/complex-gravity works."
         },
         {
           "actor": "AI systems",
           "kind": "literature_comparison",
-          "description": "AI may have helped identify antecedents and clarify scope; no specific episode is identified by this testimony alone."
+          "description": "In discussion, AI assistants identified possible structural precedents; establishing actual equivalence needs side-by-side mathematics and original-source review."
         }
       ],
       "evidence": [
@@ -365,15 +365,36 @@
           "class": "author_recollection",
           "locator": "author testimony recorded 2026-10-27",
           "supports": "At least one recollected episode of recognizing previously published work after independent investigation"
+        },
+        {
+          "class": "discussion_context",
+          "locator": "user message 2026-04-27T23:05:40Z; original permalink/export pending",
+          "supports": "Author explicitly claimed independent development, not historical firstness, for complex time, Theta and complex quaternions"
+        },
+        {
+          "class": "discussion_context",
+          "locator": "user discussion 2026-07-13T21:38:56Z; original permalink/export pending",
+          "supports": "Prior-art comparison of UBT's independent development from 2013–2015 with historical complex/Hermitian gravity literature"
+        },
+        {
+          "class": "external_publication",
+          "url": "https://arxiv.org/abs/hep-th/0005222",
+          "supports": "Chamseddine, Complexified Gravity in Noncommutative Spaces (2000 preprint; published 2001), is an earlier complex/Hermitian gravity construction; not asserted equivalent to UBT"
+        },
+        {
+          "class": "external_publication",
+          "url": "https://doi.org/10.1103/PhysRevD.69.024015",
+          "supports": "Chamseddine 2004 complex-vierbein gravity establishes earlier related formalism; not a priority comparison of exact UBT mechanisms"
         }
       ],
       "not_established": [
-        "Identity of a specific rediscovered theorem or construction",
-        "Date of independent development or discovery of earlier publication",
-        "Any claim of priority or plagiarism"
+        "Specific identity of any historically rederived equation with an earlier theorem",
+        "First contemporary dates of all independent conceptions",
+        "Unambiguous equality between UBT's current tetrad construction and earlier complex-vierbein frameworks",
+        "Any claim to historical priority in prior-literature mathematics"
       ],
-      "confidence": "author_recollection_only",
-      "follow_up": "Identify the exact earlier publication and UBT concept; compare technical statements and separately date the author's pre-literature working notes."
+      "confidence": "dated_author_discussion_context_plus_real_earlier_publications; primary_UBT_notes_and_detailed_math_comparison_pending",
+      "follow_up": "Retrieve original author notebook and archived conversation exports; compare only precisely defined UBT constructions with antecedent publications, without equating related ideas."
     }
   ],
   "process_decisions": {
@@ -396,5 +417,6 @@
     ],
     "independent_rediscovery": "Record what the author actually worked out, the earlier literature with precise citations once verified, and when the overlap was recognized; never claim global priority or plagiarism based on independent convergence alone.",
     "synergy": "Most later research is iterative human-AI co-development. An incomplete human proposal can be rapidly refined by AI, corrected by the human and developed again. Neither the resulting polished text nor the initial intuition alone describes the entire contribution."
-  }
+  },
+  "evidence_policy": "undefined Earlier historical publications are comparators, not evidence of copying or a source for retroactively dating UBT contributions."
 }
