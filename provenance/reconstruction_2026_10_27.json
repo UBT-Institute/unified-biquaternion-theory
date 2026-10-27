@@ -56,7 +56,9 @@
         "Exact pre-2016 notebook dates"
       ],
       "confidence": "mixed_indexed_and_retrospective",
-      "follow_up": "Inspect dated original notebooks and archived 2016 page content, not just archive index."
+      "follow_up": "Inspect dated original notebooks and archived 2016 page content, not just archive index.",
+      "development_mode": "early_human_work_followed_by_iterative_human_ai",
+      "development_mode_status": "provisional"
     },
     {
       "id": "ORIGIN-TIME-002",
@@ -92,7 +94,9 @@
         "Original authorship of each later branch-selection equation"
       ],
       "confidence": "retrospective_pending_older_original",
-      "follow_up": "Find dated notes and first public source introducing tau and the theta ansatz."
+      "follow_up": "Find dated notes and first public source introducing tau and the theta ansatz.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional"
     },
     {
       "id": "ORIGIN-LAYERS-003",
@@ -129,7 +133,9 @@
         "Physical reality of layers"
       ],
       "confidence": "mixed_retrospective_and_recollection",
-      "follow_up": "Locate original layer/Matrix conversation or notebook; keep ontological hypothesis separate from mathematical research layers."
+      "follow_up": "Locate original layer/Matrix conversation or notebook; keep ontological hypothesis separate from mathematical research layers.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional"
     },
     {
       "id": "ORIGIN-SU3-004",
@@ -176,7 +182,9 @@
         "Which corrections in original conversations led to which commits"
       ],
       "confidence": "partly_correlated_pending_conversation",
-      "follow_up": "Trace original author prompts/objections to PR chronology; avoid treating bot Git authorship as idea origin."
+      "follow_up": "Trace original author prompts/objections to PR chronology; avoid treating bot Git authorship as idea origin.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional"
     },
     {
       "id": "ORIGIN-PRIMES-007",
@@ -227,7 +235,9 @@
         "Authorship of every later Hecke, prime-mode or p-adic formula"
       ],
       "confidence": "author_recollection_plus_later_artifacts_and_discussion_summaries",
-      "follow_up": "Locate the earliest primary user message or dated note introducing primes, and identify which prompt-to-commit sequences show explicit redirection of agents."
+      "follow_up": "Locate the earliest primary user message or dated note introducing primes, and identify which prompt-to-commit sequences show explicit redirection of agents.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional"
     },
     {
       "id": "ORIGIN-TETRAD-005",
@@ -275,7 +285,9 @@
         "Whether all mathematical consequences were proposed by the author"
       ],
       "confidence": "credible_retrospective_pending_primary_trace",
-      "follow_up": "Search historical PRs for rejection of fiber averaging and return to projection-free covariant tetrad; link the first decisive change and exact author comment."
+      "follow_up": "Search historical PRs for rejection of fiber averaging and return to projection-free covariant tetrad; link the first decisive change and exact author comment.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional"
     },
     {
       "id": "ORIGIN-HAM-006",
@@ -311,7 +323,42 @@
         "Independent historical timestamp for all discussion fragments"
       ],
       "confidence": "discussion_supported_commit_context",
-      "follow_up": "Preserve message-level evidence privately; create trace from discussion interventions to named claim/test IDs."
+      "follow_up": "Preserve message-level evidence privately; create trace from discussion interventions to named claim/test IDs.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional"
+    },
+    {
+      "id": "ORIGIN-REDISCOVERY-008",
+      "subject": "Possible independent rediscoveries of previously published mathematical or physical constructions",
+      "period_statement": "Event(s) unspecified; author recollection recorded 2026-10-27",
+      "development_mode": "independent_rediscovery_candidate",
+      "development_mode_status": "unresolved",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "retrospective_testimony",
+          "description": "Author recalls that some independently developed ideas were later recognized as existing in prior literature."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "literature_comparison",
+          "description": "AI may have helped identify antecedents and clarify scope; no specific episode is identified by this testimony alone."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "author_recollection",
+          "locator": "author testimony recorded 2026-10-27",
+          "supports": "At least one recollected episode of recognizing previously published work after independent investigation"
+        }
+      ],
+      "not_established": [
+        "Identity of a specific rediscovered theorem or construction",
+        "Date of independent development or discovery of earlier publication",
+        "Any claim of priority or plagiarism"
+      ],
+      "confidence": "author_recollection_only",
+      "follow_up": "Identify the exact earlier publication and UBT concept; compare technical statements and separately date the author's pre-literature working notes."
     }
   ],
   "process_decisions": {
@@ -324,6 +371,14 @@
       "public_release_of_private_chat",
       "exclusive_priority_claim"
     ],
-    "distinction": "Git commit attribution, co-author trailer and AI tool identity describe artifact creation and must not be inferred to prove the origin of the underlying idea."
+    "distinction": "Git commit attribution, co-author trailer and AI tool identity describe artifact creation and must not be inferred to prove the origin of the underlying idea.",
+    "research_modes": [
+      "human_initiated",
+      "agent_initiated",
+      "iterative_human_ai",
+      "independent_rediscovery",
+      "undetermined"
+    ],
+    "independent_rediscovery": "Record what the author actually worked out, the earlier literature with precise citations once verified, and when the overlap was recognized; never claim global priority or plagiarism based on independent convergence alone."
   }
 }
