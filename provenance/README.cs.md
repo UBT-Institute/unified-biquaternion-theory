@@ -1,0 +1,43 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+<!-- BILINGUAL-UNIT: origin-ledger.introduction -->
+# Důkazní registr původu výzkumu — první rekonstrukce, 27. října 2026
+
+## Stav a omezení
+Jde o **provizorní a osobně neatestovanou** rekonstrukci. Strukturovaným záznamem je [reconstruction_2026_10_27.json](reconstruction_2026_10_27.json). Nejde o prohlášení o právním autorství, výlučné prioritě, lidském schválení, správnosti teorie ani původu každé rovnice. Zdroje mají různou důkazní sílu a originály všech indexovaných archivních položek nebyly znovu prohlédnuty.
+
+<!-- BILINGUAL-UNIT: origin-ledger.reconstruction -->
+## Rekonstruované koncepční milníky
+1. **Bikvaternionové základy:** historie repozitáře popisuje autorovu ruční práci z let 2013–2015. Archivní index identifikuje veřejný bikvaternionový elektroskalární příspěvek s vloženým datem 18. března 2016; samotná původní stránka nebyla při této kontrole znovu otevřena.
+2. **Komplexní čas:** retrospektivní historie klade autorovu koncepci přibližně do roku 2019; samostatně datovaný primární zdroj přesné formulace je ještě třeba dohledat.
+3. **Výzkumné vrstvy a Matrix-like intuice:** historie připisuje program Layer 1/Layer 2 autorovu výzkumnému směřování. Jeho retrospektivní popis oddělené intuice vrstev reality ve stylu Matrixu nelze bez dalšího ztotožnit s tímto technickým programem.
+4. **SU(3) a struktura tří qubitů:** historie repozitáře připisuje raný směr výzkumu vedenému autorem. Autor uvádí vlastní neformální počítání a opakované rozporování konstrukcí AI; tato svědectví zůstávají retrospektivní, dokud nedohledáme původní přepisy. Pozdější commity dokládají formalizaci s pomocí AI, nikoli první koncepční vznik.
+5. **Prvočíselné směry:** autor uvádí, že opakovaně prosazoval prvočíselné struktury v UBT. Souhrny diskusí z ledna 2026 zachycují konkrétní požadavky na testy prvočíselných a složených multipólů i fázové testy. Pozdější commity dokládají výpočty prvočíselných sektorů, Heckeho struktur a negativní výsledky, ale samy neurčují původ myšlenky.
+6. **Návrat od vláknových konstrukcí ke kovariantním tetrádám:** autor uvádí, že výslovně požadoval odmítnutí vláknové formulace a návrat k tetrádám; historie repozitáře mu rovněž toto architektonické rozhodnutí připisuje. Přesnou původní instrukci a rozhodující commit je ještě třeba určit.
+7. **Hamiltonián, akce a kauzální sdílená realita:** dostupný kontext diskusí zaznamenává autorova algebraická omezení a opakovaný návrat k informačním a kauzálním principům. PR #804 dokládá pozdější matematický směr, nikoliv výlučný intelektuální původ nebo úplnou akci UBT.
+
+<!-- BILINGUAL-UNIT: origin-ledger.evidence -->
+## Pravidla pro důkazy
+Rozlišujte původní datované dokumenty, indexované, ale neprohlédnuté originály, prověřené rozdíly Git commitů, retrospektivní výklady repozitáře, osobní vzpomínky a souhrny konverzací. Každé podstatné připsání příspěvku propojte se zdrojem a přesně uveďte, co zdroj **neprokazuje**. Autor Git commitu, autor merge nebo značka `Co-authored-by` popisují historii artefaktu, nikoliv nutně původce myšlenky. Pouhá časová blízkost neprokazuje, že určitý prompt způsobil commit. Pokud přínos nelze určit, použijte `undetermined`.
+
+<!-- BILINGUAL-UNIT: origin-ledger.future -->
+## Evidence nových příspěvků
+Při významném koncepčním milníku nebo výzkumném PR zaznamenejte stručnou událost: datum záznamu; konkrétní identifikátor tvrzení či rozhodnutí; otázku nebo původní návrh; lidská omezení, námitky a opravy; hypotézy, odvození a implementace agentů; zamítnuté alternativy; rozsah verifikace; přímé odkazy na důkazy; nejistotu a informaci, zda autor materiál osobně schválil. Evidujte i podstatné negativní výsledky a architektonické obraty. Rutinní úpravy samostatný záznam nepotřebují. Nikdy nevymýšlejte citaci, procentuální podíl přínosu, lidský souhlas ani starší datum.
+
+<!-- BILINGUAL-UNIT: origin-ledger.privacy -->
+## Soukromí, integrita a vydání
+Do tohoto veřejného repozitáře neukládejte surové soukromé konverzace, nezveřejněné komerčně citlivé nápady, přístupová tajemství ani osobní údaje. Dostupné originální exporty zachovejte odděleně v soukromí; pokud je to přípustné, odkazujte jen neutrálním identifikátorem archivu a hashem obsahu. Starší interpretace opravujte datovanými následnými událostmi, nikoliv tichým přepisováním historie. Důkazy o původu výzkumu jsou oddělené od úrovní AI provenience A/B/C/D a neopravňují ke změně jejich mapy ani k podpisu úrovně A.
+
+<!-- BILINGUAL-UNIT: origin-ledger.next -->
+## Další forenzní práce
+Prohlédnout původní archivní materiály z roku 2016, určit nejstarší nezávisle datované návrhy komplexního času a prvočíselných metod, najít prompt a commit pro rozhodnutí o návratu od vláken k tetrádě a propojit konkrétní zásahy u SU(3) a Hamiltoniánu s jednotlivými změnami důkazů a kódu. Do dokončení musí rekonstrukce zůstat provizorní.
