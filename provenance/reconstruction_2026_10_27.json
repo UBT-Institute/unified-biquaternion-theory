@@ -125,6 +125,11 @@
           "class": "author_recollection",
           "locator": "author testimony recorded 2026-10-27",
           "supports": "Matrix-like layer intuition was a personal conceptual idea; chronology and connection to technical Layer 1/2 not yet established"
+        },
+        {
+          "class": "discussion_context",
+          "locator": "user message 2026-02-13T18:50:25Z; original permanent link/export pending",
+          "supports": "Author's simulation/channel-selection analogy for Layer 2, not the date of earliest conception"
         }
       ],
       "not_established": [
@@ -189,12 +194,12 @@
     {
       "id": "ORIGIN-PRIMES-007",
       "subject": "Prime-number structure as a deliberately introduced UBT research direction",
-      "period_statement": "Author recalls repeatedly insisting on prime-number methods; project and discussion evidence includes work during 2025-2026, exact first conceptual proposal not yet dated",
+      "period_statement": "Direct user instruction is recorded in available discussion context dated 2025-08-08; further corrections 2025-08-09 and 2026-02; exact first-ever proposal remains undetermined.",
       "roles": [
         {
           "actor": "David Jaroš",
           "kind": "research_direction_and_critical_intervention",
-          "description": "The author explicitly recalls repeatedly pressing AI agents to incorporate prime-number structure. Accessible January 2026 conversation summaries also record the author's specific requests for prime-versus-composite CMB multipole tests, phase/shear diagnostics, and stronger null-model checks."
+          "description": "On 2025-08-08 the author explicitly required prime-number and p-adic-based multiverse multiplexing with distinct primes as proposed independent toroidal theta modes. On 2025-08-09 he rejected insufficiently justified p-adic work and required rigorous integration into UBT. In February 2026 he distinguished prime structures at Layer 2 coding/channel selection from assumed Layer 1 stability."
         },
         {
           "actor": "AI systems",
@@ -204,14 +209,14 @@
       ],
       "evidence": [
         {
+          "class": "discussion_context",
+          "locator": "user message 2025-08-08T21:11:50Z; original permanent link/export pending",
+          "supports": "Direct author instruction to ground prime-number/p-adic UBT multiverse multiplexing in distinct-prime toroidal modes, presented as a proposal rather than a physical derivation"
+        },
+        {
           "class": "author_recollection",
           "locator": "author testimony recorded 2026-10-27",
           "supports": "Explicit insistence on introducing primes as a research direction, not merely acceptance of an AI proposal"
-        },
-        {
-          "class": "discussion_context",
-          "locator": "conversation summaries, 2026-01-17 and 2026-01-19; original message links/export pending",
-          "supports": "Author-directed prime/composite CMB multipole and phase tests; summaries only"
         },
         {
           "class": "repository_artifact",
@@ -227,6 +232,16 @@
           "class": "repository_artifact",
           "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/5e1b91bf28d6625bbd08a39691aa3346e6dfc568",
           "supports": "Later explicit dead end for proposed prime attractor via additive mode coupling"
+        },
+        {
+          "class": "discussion_context",
+          "locator": "user message 2025-08-09T02:36:22Z; original permanent link/export pending",
+          "supports": "Author rejection of insufficiently justified p-adic model and request for rigorous UBT/theta integration"
+        },
+        {
+          "class": "discussion_context",
+          "locator": "user messages 2026-02-11 and 2026-02-13; original permanent links/export pending",
+          "supports": "Layer 2 prime coding/channel selection distinguished from unique alpha derivation"
         }
       ],
       "not_established": [
@@ -234,7 +249,7 @@
         "Independent proof of any proposed prime-number signal in CMB",
         "Authorship of every later Hecke, prime-mode or p-adic formula"
       ],
-      "confidence": "author_recollection_plus_later_artifacts_and_discussion_summaries",
+      "confidence": "dated_user_discussion_context_plus_later_artifacts; original_chat_export_pending",
       "follow_up": "Locate the earliest primary user message or dated note introducing primes, and identify which prompt-to-commit sequences show explicit redirection of agents.",
       "development_mode": "iterative_human_ai",
       "development_mode_status": "provisional"
@@ -379,6 +394,7 @@
       "independent_rediscovery",
       "undetermined"
     ],
-    "independent_rediscovery": "Record what the author actually worked out, the earlier literature with precise citations once verified, and when the overlap was recognized; never claim global priority or plagiarism based on independent convergence alone."
+    "independent_rediscovery": "Record what the author actually worked out, the earlier literature with precise citations once verified, and when the overlap was recognized; never claim global priority or plagiarism based on independent convergence alone.",
+    "synergy": "Most later research is iterative human-AI co-development. An incomplete human proposal can be rapidly refined by AI, corrected by the human and developed again. Neither the resulting polished text nor the initial intuition alone describes the entire contribution."
   }
 }
