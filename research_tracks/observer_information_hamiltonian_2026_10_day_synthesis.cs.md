@@ -25,7 +25,7 @@ Přesná věta `canonical/gr_closure/gap_10t_minimal_one_connection_gr_no_go.tex
 ## Ponechat oba invariantní kanály
 Existující analýza Cliffordových stop obsahuje dva nezávislé invarianty lineární v křivosti (Palatini a Holst). Jejich přípustná kandidátní rodina je
 $$S_{\rm grav}=\frac1{4\kappa}\int\epsilon_{abcd}e^a\wedge e^b\wedge R^{cd}+\frac1{2\kappa\gamma}\int e^a\wedge e^b\wedge R_{ab}+S_\Lambda+S_{\rm other}.$$
-Holstův koeficient **není** fixován ani předpokládán nulový. Niehova--Yanova identita dává $d(e_a\wedge T^a)=T_a\wedge T^a-e_a\wedge e_b\wedge R^{ab}$. Holstova **hustota identicky mizí na beztočivé Levi-Civitově větvi**. To neznamená nulovou neomezenou variaci podle nezávislého spojení. Rovněž to NEDOKAZUJE, že úplná beztočivá UBT splňuje obecné Einsteinovy rovnice.
+Holstův koeficient **není** fixován ani předpokládán nulový. Niehova--Yanova identita dává $d(e_a\wedge T^a)=T_a\wedge T^a-e_a\wedge e_b\wedge R^{ab}$. Holstova **hustota identicky mizí na Levi-Civitově větvi bez torze**. To neznamená nulovou neomezenou variaci podle nezávislého spojení. Rovněž to NEDOKAZUJE, že úplná beztočivá UBT splňuje obecné Einsteinovy rovnice.
 
 <!-- BILINGUAL-UNIT: causality -->
 ## Kauzalita a informační omezení
@@ -33,4 +33,4 @@ Kanonická Cliffordova relace implikuje $(\Gamma^\mu k_\mu)^2=g^{\mu\nu}k_\mu k_
 
 <!-- BILINGUAL-UNIT: next -->
 ## Co chybí k důkazu průlomu
-(1) Určit přesně, která obecná oboustranná/Cliffordova spojení jsou kompozitně určena polem $\Theta$. (2) Variovat kandidátní úplnou akci jediného $\Theta$ s oběma křivostními invarianty a správně rozlišit fyzikální a jet spojení. (3) Dokázat obecné Einsteinovy rovnice na beztočivé fyzikální větvi, nejen algebraickou reprezentovatelnost. (4) Spočítat redukovaný Hamiltonián, fyzikální stupně volnosti a kauzální hlavní symbol. (5) Odvodit kvantitativní torzní předpověď nad rámec GR/Einsteinovy--Cartanovy teorie. **Úroveň C_working; LEAN-PENDING; úplná kompozitní variace OPEN (otevřená); nezávislá významová kontrola překladů PENDING.**
+(1) Určit přesně, která obecná oboustranná/Cliffordova spojení jsou kompozitně určena polem $\Theta$. (2) Variovat kandidátní úplnou akci jediného $\Theta$ s oběma křivostními invarianty a správně rozlišit fyzikální a jet spojení. (3) Dokázat obecné Einsteinovy rovnice na fyzikální větvi bez torze, nejen algebraickou reprezentovatelnost. (4) Spočítat redukovaný Hamiltonián, fyzikální stupně volnosti a kauzální hlavní symbol. (5) Odvodit kvantitativní torzní předpověď nad rámec GR/Einsteinovy--Cartanovy teorie. **Úroveň C_working; LEAN-PENDING; úplná kompozitní variace OPEN (otevřená); nezávislá významová kontrola překladů PENDING.**
