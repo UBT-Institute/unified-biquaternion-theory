@@ -93,3 +93,19 @@ def test_positive_oscillator_not_adm_negative_kinetic_unitary_equivalent():
         + kappa*s.cosh(3/s.sqrt(2))/24) == 0
     assert gravity_kinetic.is_hermitian
     assert gravity_kinetic.det() != 0
+
+
+def test_su2_invariant_ferromagnet_has_entangled_polarized_degenerate_ground():
+    J = s.symbols("J", real=True, positive=True)
+    exchange = sum(
+        (s.kronecker_product(sig, sig) for sig in PAULI),
+        s.zeros(4))
+    h = -J*exchange
+    assert h.eigenvals() == {-J: 3, 3*J: 1}
+    for sig in PAULI:
+        total = s.kronecker_product(sig, I2)+s.kronecker_product(I2, sig)
+        assert h*total-total*h == s.zeros(4)
+    target = entangled(s.Rational(3, 4))
+    assert h*target == -J*target
+    assert correlation(target) == s.diag(s.sqrt(3)/2, -s.sqrt(3)/2, 1)
+    assert expectation(target, s.kronecker_product(Z, I2)) == s.Rational(1, 2)
