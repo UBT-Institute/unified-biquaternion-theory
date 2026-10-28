@@ -105,3 +105,30 @@ faktorizací Gramovy metriky, dokázat, že tato operace plyne z UBT
 a nevkládá volnou tetrádu nebo převzaté Einsteinovy rovnice.
 Nepovyšovat G1 bez této brány a nepovažovat informace konečných
 kauzálních diamantů za dokončený výběr dynamiky.
+
+## Oprava: reálná geometrie je složenou veličinou komplexního Theta [PROVED, omezeně]
+
+Prostudovat G1_COMPLEX_REAL_COFRAME.en.md a
+tests/test_theta_phase_real_derived_coframe.py. Nepožadovat
+Hermitovost přímých jetů jako univerzální bránu.
+Jde o negativní kontrolu konkrétní identifikace
+E_mu=i D_mu Theta. V alternativní konstrukci celá
+komplexní projektovaná derivace Theta určuje *reálnou*
+B-Gramovu metriku; na regulární Lorentzově oblasti
+lze její ortonormální tetrádu a maticovou tetrádu
+v i-Herm **vypočítat** bez nezávislého tetrádového pole.
+Fázově kompenzovaný zakřivený příklad má R_txtx(0)=kappa²
+a nehermitovské komplexní jety. Tetráda není volné pole;
+její lokální Lorentzova kalibrační nejednoznačnost je očekávaná.
+
+## Nové podmínky přípustnosti [OPEN]
+
+*Metrika* má být operačně reálnou, fázově kovariantní
+pozorovatelnou; nevyžadovat, aby každý komplexní mezikrok
+byl Hermitovský. Gramův srovnávací model však stále
+není totožný s kanonickou geometrií UBT z centrálního
+antikomutátoru. Dále tuto identifikaci dokázat či vyvrátit
+a odvodit nekruhovou dynamickou akci/hlavní symbol,
+nikoli přebírat Einsteina.
+Informační princip a sdílená realita musí působit na
+kalibračně invariantní **reálné pozorovatelné** komplexního Theta.
