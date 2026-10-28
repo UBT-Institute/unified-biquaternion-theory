@@ -57,6 +57,15 @@ class TestThetaProjectiveSignature(unittest.TestCase):
         E=s.Matrix.hstack(*[I[:,i] for i in (1,2,3,5)])
         self.assertEqual(E.T*P.T*B*P*E,-s.eye(4))
 
+    def test_negative_norm_branch_allows_lorentz_tangent_metric(self):
+        Q=I[:,1]  # sigma1; q and Jq both have negative norm
+        self.assertEqual(dot(Q,Q),-1)
+        P=projector(Q)
+        E=s.Matrix.hstack(*[I[:,i] for i in (0,2,3,6)])
+        self.assertEqual(P*E,E)
+        self.assertEqual(E.T*P.T*B*P*E,
+                         s.diag(1,-1,-1,-1))
+
     def test_phase_only_compensator_preserves_lorentz_metric(self):
         a=s.symbols("a",real=True)
         Q=s.Matrix([1,0,0,0,0,0,0,0])
