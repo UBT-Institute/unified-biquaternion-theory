@@ -132,3 +132,45 @@ a odvodit nekruhovou dynamickou akci/hlavní symbol,
 nikoli přebírat Einsteina.
 Informační princip a sdílená realita musí působit na
 kalibračně invariantní **reálné pozorovatelné** komplexního Theta.
+
+## Výsledek mostu ke kanonickému sharp [PROVED, omezeně; OPEN dynamicky]
+
+Prostudovat G1_CANONICAL_SHARP_BRIDGE.en.md a
+tests/test_theta_canonical_sharp_bridge.py. Kanonická metrika
+je centrálním *komplexně bilineárním* antikomutátorem sharp
+ze **stejných** kovariantních jetů Theta, nikoli reálnou
+Hermitovskou/dagger Gramovou formou. Centralita platí
+algebraicky pro libovolné jety Mat(2,C), ale realitu
+a Lorentzovu signaturu je nutné kontrolovat samostatně.
+V zakřiveném fázově kompenzovaném příkladu pro kappa=1
+má regulární bod C_tt=1, C_xx=-2i, zatímco dagger-Gram
+B_tt=1, B_xx=-2. Společná skalární fáze neudělá
+kanonický tenzor reálným. Faktorizace reálné tetrády
+z dagger-Gramovy metriky je nekanonickým srovnáním,
+**nikoliv** hotovým kanonickým zdvihem.
+
+Při nulové konexi je regulární gradientová větev omezená:
+pro Theta=X+iY s rank(dX)=4 vynucuje
+Im C(dTheta,dTheta)=0 plochou Minkowského Killingovu
+rovnici pro Y v souřadnicích X, takže nedegenerovaná
+kanonická metrika je plochá. Komplexní jety však MOHOU
+dávat reálnou centrální kanonickou metriku, jak ukazuje
+afinní rámec po komplexní Lorentzově transformaci;
+nezaměňovat s požadavkem i-Hermitovské reality jetů.
+
+## Další jediná konstruktivní brána G1 [OPEN]
+
+Začít od **deklarované** dvoustranné kanonické derivace
+DTheta=dTheta+A Theta-Theta B a formulovat jeden
+netautologický, z Theta odvozený a transformačně
+kovariantní uzávěr A/B. Kandidát musí vytvořit
+**reálnou nedegenerovanou zakřivenou kanonickou metriku
+sharp ze svých skutečných kovariantních jetů**.
+Při použití odvozené tetrády dokázat, že nejde jen
+o faktorizaci metriky dosazenou za DTheta.
+Přesně testovat fázový náboj, realitu/centralitu,
+nosič, křivost, nezávislé variace, hlavní symbol
+a fyzikální energii. Dodatečná volba
+A=(target-E)/Theta je pouze algebraický pravý
+inverz a NEVYBÍRÁ dynamiku. Zachovat C_working,
+G1 PARTIAL, původní canonical a drafty #807/#808.
