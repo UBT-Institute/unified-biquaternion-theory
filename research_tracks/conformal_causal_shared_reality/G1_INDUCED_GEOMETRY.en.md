@@ -54,7 +54,7 @@ of the SU(2,2) future tube. On a regular selected branch take
 \]
 
 With the ordinary *pure Lorentz* two-sided covariant derivative,
-\`DTheta=dTheta+Omega Theta+Theta Omega†\`, this expression is
+`DTheta=dTheta+Omega Theta+Theta Omega†`, this expression is
 locally SL(2,C)-invariant if Omega transforms as a connection;
 a constant overall U(1) phase also preserves B. A local phase
 requires its **own** compatible connection and is not generated
@@ -104,7 +104,7 @@ a completely explicit real coframe is
 
 It has det(e)=sqrt(A)≠0 and
 g=eta_ab e^a e^b. Hence the matrix tetrad
-\`E_mu=i sum_a e^a_mu sigma_a\` lies in
+`E_mu=i sum_a e^a_mu sigma_a` lies in
 i·Herm₂ as required by the old Lorentz-real
 readout convention. This is a *gauge choice derived
 from the metric*, not a unique natural SU(2,2)-covariant
@@ -125,8 +125,8 @@ the exact result is
 
 This is genuinely **curved** when kappa≠0.
 At the origin the (t,x)-sector Ricci values are
-\`Ric_tt=-kappa²\`, \`Ric_xx=+kappa²\`,
-but \`Ric_yy=Ric_zz=0\`. It is NOT
+`Ric_tt=-kappa²`, `Ric_xx=+kappa²`,
+but `Ric_yy=Ric_zz=0`. It is NOT
 an Einstein metric for nonzero kappa. Therefore
 one cannot cite this construction as an on-shell GR
 solution or as a gravity action derivation.
@@ -142,11 +142,11 @@ specific pure-gradient tetrad e=d(phi).
 ## 3. Full-rank jet versus physical metric rank
 
 At a flat affine background
-\`Theta_0=x^a sigma_a\`, the four Hermitian
+`Theta_0=x^a sigma_a`, the four Hermitian
 jet directions span a nondegenerate Lorentz
 subspace. Write variation in tangent and normal
-directions as \`delta Theta=u^a sigma_a+n^I N_I\`
-where \`B(sigma_a,N_I)=0\` and \`N_I\` are
+directions as `delta Theta=u^a sigma_a+n^I N_I`
+where `B(sigma_a,N_I)=0` and `N_I` are
 constant target normals. Then exactly
 
 \[
@@ -161,8 +161,8 @@ variation is the Lie derivative of eta, so the
 linearized Riemann tensor vanishes.
 The explicit family above makes the even-order
 behavior transparent:
-\`g(epsilon)=eta−epsilon² d(kappa tx)^2\`.
-Thus \`d g/depsilon|_0=0\`.
+`g(epsilon)=eta−epsilon² d(kappa tx)^2`.
+Thus `d g/depsilon|_0=0`.
 
 **THEOREM G1-LIN [restricted analytic]:** The
 first-jet metric B(dTheta,dTheta) on the affine
@@ -192,10 +192,10 @@ pure diffeomorphism.
 **THEOREM G1-4R [restricted analytic]:**
 For four real scalar fields phi^i with invertible
 Jacobian, any coframe of the form
-\`e^a_mu=E^a_i(phi) partial_mu phi^i\`
+`e^a_mu=E^a_i(phi) partial_mu phi^i`
 with a *fixed* target coframe E defines
-\`g=phi^*(gamma)\`,
-\`gamma_ij=eta_ab E^a_i E^b_j\`.
+`g=phi^*(gamma)`,
+`gamma_ij=eta_ab E^a_i E^b_j`.
 The inverse-function theorem makes phi a local
 diffeomorphism; hence every such g is locally
 diffeomorphic to the **same** prescribed target
@@ -267,9 +267,9 @@ entanglement equilibrium.
 
 Run
 
-\`\`\`bash
+```bash
 python -m unittest discover -s tests -p 'test_theta_induced_geometry.py' -v
-\`\`\`
+```
 
 Six exact SymPy checks locally passed for:
 the invariant pairing, SL(2,C) congruence and
@@ -281,3 +281,22 @@ argument is not a Lean proof. These checks
 do NOT certify a field-theoretic action,
 constraint algebra, physical ghosts, quantum
 dynamics, or observational predictions.
+
+## 7. Causal / shared-reality scale limitation [STD + conditional inference]
+
+If g is Lorentzian and f(x)>0, then g'=f(x)^2 g has exactly the
+same pointwise timelike, null and spacelike cones and the same
+causal-order relations (with fixed time orientation). Therefore
+finite signal speed and any [SR] rule based *only* on causal
+accessibility, overlap of diamonds and consistency of their
+locally shared records cannot determine the conformal scale
+f(x). This is not a failure of [SR]: it identifies the minimum
+additional quantitative datum needed for a gravity law.
+
+An entropy/area density or an energy calibration may introduce
+such a scale, but its absolute coefficient (e.g. Newton's G
+or a Planck area) must then be derived or declared and measured,
+not inferred from cone preservation. A Jacobson-type first-law
+condition must carry these explicit normalizations. This is
+a scoped underdetermination theorem, **not** a no-go for a richer
+quantitative shared-reality principle.
