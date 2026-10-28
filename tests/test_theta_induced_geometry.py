@@ -94,6 +94,19 @@ class TestThetaInducedGeometry(unittest.TestCase):
             R-k**2*(1+k**2*t**2)/(1+k**2*(t**2-x**2))**2), 0)
         self.assertEqual(R.subs({t:0, x:0}), k**2)
 
+    def test_jet_to_metric_rank_ten_not_tetrad_rank_sixteen(self):
+        # 32 free first-jet numbers: 8 target directions x 4 spacetime.
+        # On affine flat embedding only the first four target
+        # directions affect g at first order.
+        target_signs = [1, -1, -1, -1, 1, -1, -1, -1]
+        pairs = [(a, b) for a in range(4) for b in range(a, 4)]
+        linear_map = s.zeros(len(pairs), 32)
+        for row, (mu, nu) in enumerate(pairs):
+            linear_map[row, mu*4+nu] += target_signs[mu]
+            linear_map[row, nu*4+mu] += target_signs[nu]
+        self.assertEqual(linear_map.rank(), 10)
+        self.assertEqual(linear_map[:, 16:], s.zeros(10, 16))
+
     def test_no_linearized_metric_graviton_on_affine_background(self):
         eps = s.symbols("eps", real=True)
         normal_metric = eta - eps**2*df*df.T
