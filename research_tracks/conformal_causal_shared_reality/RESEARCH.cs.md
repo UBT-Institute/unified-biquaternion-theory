@@ -7,7 +7,7 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Nezávislý výzkumný track; přesná algebra a výslovně podmíněné grupové argumenty, nikoli přijatá fyzika.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
