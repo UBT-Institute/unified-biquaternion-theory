@@ -46,7 +46,7 @@ Polarizace normalizovaná na Minkowského jednotky:
 \]
 
 Reálná signatura B je (2,6), nikoliv kladná
-(8,0) signatura přirozené metriky future tube.
+(8,0) signatura přirozené metriky SU(2,2) future tube.
 Na zvolené regulární větvi definujeme
 
 \[
@@ -218,7 +218,7 @@ metrice gamma. Nemohou obsahovat
 libovolné nezávislé gravitační
 perturbace modulo difeomorfismy.
 Zvláštní případ E^a_i=delta^a_i
-je přesně plochý, jak ověřuje
+má Riemann=0, jak ověřuje
 G1_NEGATIVE_CONTROL.
 
 Pro netriviální E může být cílová
@@ -233,7 +233,7 @@ osmireálném maticovém testu umožňují
 nenulovou *normálovou křivost vnoření*,
 viz oddíl 2. Není dokázáno, že osm
 složek stačí k reprezentaci všech
-Einsteinových geometrií nebo dvou
+4D Einsteinových geometrií nebo dvou
 propagujících spin-2 módů.
 
 ## 5. Hranice plně konformní Cartanovy cesty
@@ -242,7 +242,7 @@ Kandidát A (projekce Re DTheta do
 Lorentzovy tetrády) po zvolení
 Lorentzova řezu vede buď k
 čtyřreálnému pullbacku, nebo k
-výše uvedené osmireálné indefinitní
+výše uvedené 8-real indefinitní
 metrice. **Nevytváří** přirozenou
 plně SU(2,2)-ekvivariantní projekci:
 stabilizátor K prostoru G/K
