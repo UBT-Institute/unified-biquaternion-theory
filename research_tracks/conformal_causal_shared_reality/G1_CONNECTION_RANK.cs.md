@@ -13,17 +13,17 @@ UBT-AI-PROVENANCE-END
 
 # G1: reálná dilatace opravuje hodnost metrické variace, nikoliv dynamiku
 
-**28. 10. 2026 · PR #809 · C_working.** Omezené srovnání
+**2026-10-28 · PR #809 · C_working.** Omezené srovnání
 s Lorentzovsky reálným jetem z PR #807. Jeho no-go věty se nemění.
 
-## Lemma o hodnosti [DOKÁZÁNO, bodově]
+## Lemma o hodnosti [PROVED / DOKÁZÁNO, bodově]
 
 V časupodobném Hermitovském bodě X=rI (r>0)
 uvažujme dvoustrannou derivaci
 D X=dX+Omega X+X Omega†. Při pevném X,dX měňme konexi:
 
 \[
- \delta\Omega_\mu=\tfrac12\beta_\mu^i\sigma_i+
+ \delta\Omega_\mu=\tfrac12\beta^i_\mu\sigma_i+
        \tfrac i2\vartheta_\mu^i\sigma_i+
        \tfrac12u_\mu I.
 \]
@@ -61,7 +61,7 @@ boostové a dilatační konexe. Hodnost 10 NENÍ
 počet fyzikálních módů ani důkaz SU(2,2).
 Test: tests/test_theta_connection_metric_rank.py.
 
-## Lemma o exaktní dilataci [DOKÁZÁNO, omezeně]
+## Lemma o exaktní dilataci [PROVED / DOKÁZÁNO, omezeně]
 
 Pro Omega=Omega_L+(u/2)I s reálnou jedničkovou
 formou u a Lorentzovou Omega_L platí
@@ -118,7 +118,7 @@ a připouští konkrétní neeinsteinovské
 stacionární řešení; viz
 G1_RT_EXTRA_SOLUTION.cs.md.
 
-## Další nekruhová brána G1 [OTEVŘENO]
+## Další nekruhová brána G1 [OPEN / OTEVŘENO]
 
 Musíme odvodit kalibračně kompatibilní
 uzavření konexe nebo omezený variační
