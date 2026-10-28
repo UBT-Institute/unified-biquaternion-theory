@@ -144,6 +144,6 @@ scale before using [SR] as a dynamical selector.
 
 G1 remains PARTIAL. **Do not proceed to G2–G4** or merge
 on the strength of a curved example. First independently
-audit the 6 exact tests, exhibit a genuinely covariant
+audit the 7 exact tests, exhibit a genuinely covariant
 jet/Cartan realization with nontrivial *linear* spin-2,
 and respect the stop-for-review criterion.
