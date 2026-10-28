@@ -35,3 +35,22 @@ python -m pytest -q tests/test_theta_conformal_gate.py tests/test_theta_gradient
 ```
 
 Uveď předpoklady, přesnou algebru, protipříklady, zbývající mezery a stav nezávislého CI. Udrž česko-anglické párové poznámky, C_working a zastavení k recenzi na G1. G2/G3/G4 zůstávají PARKED.
+
+## Kontrola sdílené reality na konečném diamantu [PROVED jako modelová algebra, OPEN jako fyzika]
+
+Viz G1_FINITE_DIAMOND_INFORMATION.en.md a tests/test_theta_finite_diamond_info.py.
+Explicitně zadané kauzální uspořádání a libovolná skalární mapa výsledků
+z invariantu B(Theta,Theta) vytvářejí konečné stavy konzistentní na překryvu.
+Informační Hessian při shodě s referenčním stavem má hodnost jedna na
+regulárním osmireálném testovacím nosiči; dva pozorovatelé nerozpoznají
+korelaci krajních událostí, kterou neobsahují ani jejich úplné lokální
+marginály. Kladné redukované skalární Hamiltoniány i Markovovy modely
+s kontrakcí entropie zůstávají při stejné informační rovnováze nejednoznačné.
+**Nepovažovat** to za odvození lokální algebry pozorovatelných, kauzálních
+kuželů, vybraného Hamiltoniánu, redukce fázového prostoru ani fyzikální akce.
+
+Další informační úkol musí sestavit kauzální diamant, skutečné
+kalibračně invariantní pozorovatelné a referenční stav z téže
+dynamicky uzavřené geometrie Theta a získat kvantitativní
+predikci schopnou vyloučit jinak přípustný generátor.
+Nejde o oprávnění povýšit G2 před recenzí G1.
