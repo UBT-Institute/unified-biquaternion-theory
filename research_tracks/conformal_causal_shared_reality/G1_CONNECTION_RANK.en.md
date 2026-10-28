@@ -7,7 +7,7 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Exact pointwise rank and exact-dilation lemmas. No dynamical UBT closure.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
