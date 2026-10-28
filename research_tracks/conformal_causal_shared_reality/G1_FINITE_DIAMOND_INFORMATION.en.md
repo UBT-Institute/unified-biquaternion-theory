@@ -86,7 +86,7 @@ D(P_{aob}^{(c)}\Vert P_{aob}^{(0)})
 =\frac16\log\frac32+\frac13\log\frac34+\frac12\log\frac98>0.
 \]
 
-This proves that overlap agreement and these finite local measurements leave at least one global correlation undetermined. It does not prove nonexistence of a global state: both explicit extensions exist. A larger accessible region or additional operational correlations could distinguish them.
+This finite counterexample establishes that overlap agreement and the specified local measurements leave at least one global correlation undetermined. It does not prove nonexistence of a global state: both explicit extensions exist. A larger accessible region or additional operational correlations could distinguish them.
 
 ## First variation and Fisher rank [PROVED, conditional]
 
