@@ -129,3 +129,40 @@ prove or refute that identification, and derive a noncircular
 dynamical action/principal symbol rather than importing Einstein.
 The information and shared-reality axiom must act on
 gauge-invariant **real observables** of complex Theta.
+
+## Canonical sharp bridge outcome [PROVED, restricted; OPEN dynamically]
+
+Read G1_CANONICAL_SHARP_BRIDGE.en.md and
+tests/test_theta_canonical_sharp_bridge.py. The canonical metric is
+the central *complex bilinear* sharp anticommutator of the **same**
+covariant Theta jets, not the real Hermitian/dagger Gram pairing.
+Centrality holds algebraically for arbitrary Mat(2,C) jets, but
+reality and Lorentz signature require separate checks. In the
+curved phase-compensated trial at kappa=1 a regular point has
+C_tt=1, C_xx=-2i versus dagger-Gram B_tt=1, B_xx=-2.
+No common scalar phase can make that canonical tensor real.
+The real coframe factorization of the dagger-Gram metric is
+a noncanonical comparator, **not** a completed canonical lift.
+
+The full-rank real-gradient zero-connection branch is sharply
+limited: when Theta=X+iY with rank(dX)=4, Im C(dTheta,dTheta)=0
+forces Y to obey the flat Minkowski Killing equation in X
+coordinates, so the regular canonical metric is flat.
+Complex first jets still CAN have a real central canonical metric,
+as shown by a complex-Lorentz rotated affine frame; do not
+conflate this with strict i-Hermitian jet reality.
+
+## Next single constructive G1 gate [OPEN]
+
+Starting from the **declared** two-sided canonical derivative
+DTheta=dTheta+A Theta-Theta B, formulate one non-tautological
+Theta-derived and transformation-covariant A/B closure. The
+candidate must produce a **real nondegenerate curved canonical
+sharp metric from its actual covariant jets**. If a derived
+tetrad is used, prove it is not merely a coframe factorization
+substituted for DTheta. Explicitly test phase charge,
+reality/centrality, carrier, curvature, independent
+variations, principal symbol and physical energy. Choosing
+A=(target-E)/Theta post hoc is only an algebraic right inverse
+and does NOT select dynamics. Preserve C_working, G1 PARTIAL,
+original canonical files, and the #807/#808 drafts.
