@@ -296,12 +296,12 @@ entropickou rovnováhu.
 python -m unittest discover -s tests -p 'test_theta_induced_geometry.py' -v
 ```
 
-Lokálně prošlo šest přesných kontrol
+Lokálně prošlo sedm přesných kontrol
 v SymPy: invariantní bilineární forma,
 kongruence SL(2,C) a globální fáze,
 metrika a determinant, odvozená
 tetráda, nenulová křivost a
-lineární tečné/normálové perturbace.
+lineární tečné/normálové perturbace a hodnost 10 mapy jetu na metriku.
 Analytický důkaz G1-4R pomocí
 věty o inverzní funkci není
 formalizován v Leanu. Testy
