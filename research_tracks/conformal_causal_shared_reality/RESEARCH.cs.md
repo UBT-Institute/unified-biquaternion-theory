@@ -265,3 +265,31 @@ původní bikvaternionový projekt nebo mazat historii.
   https://doi.org/10.1103/PhysRevLett.116.201101
 
 **Machine-readable claim statuses:** OPEN (kinematical jet bridge), OPEN (dynamics/Dirac spectrum).
+
+## Kanonické srovnání sharp-vs-dagger [PROVED, omezeně; OPEN jako dynamika]
+
+Dvojjazyčná poznámka G1_CANONICAL_SHARP_BRIDGE.en.md / .cs.md
+kontroluje skutečný kanonický antikomutátor vůči dřívějšímu
+Hermitovskému Gramovu srovnávacímu předpisu s dagger.
+Kanonická forma sharp je komplexně bilineární a centrální
+pro libovolné jety Mat(2,C), ale není automaticky reálná;
+srovnávací forma dagger je reálná a fázově invariantní,
+avšak **není** uzamčenou metrikou.
+V regulárním bodě dříve uvedeného zakřiveného příkladu
+je C_tt=1, C_xx=-2i, zatímco B_tt=1, B_xx=-2, pro kappa=1.
+Společná jednotková fáze nesoulad neodstraní.
+Algebraická faktorizace B na reálnou tetrádu není totéž
+co získání kanonické metriky z DTheta.
+
+Nová přesná věta pro čistý gradient: pro Theta=X+iY,
+rank(dX)=4 a Im C(dTheta,dTheta)=0 při nulové konexi
+splňuje Y v souřadnicích X Minkowského Killingovu rovnici;
+výsledná nedegenerovaná centrální metrika je plochá.
+To **není** no-go pro komplexní Theta: existuje explicitní
+afinní komplexní tetráda mimo i-Herm s přesně reálnou
+kanonickou Minkowského metrikou.
+Chybějící konstruktivní složkou je netautologická
+**dvoustranná** kovariantní konexe odvozená z Theta,
+která vytvoří zakřivenou reálnou kanonickou centrální
+metriku ze svých vlastních jetů.
+G1 PARTIAL; fyzikální akce nebyla vybrána.
