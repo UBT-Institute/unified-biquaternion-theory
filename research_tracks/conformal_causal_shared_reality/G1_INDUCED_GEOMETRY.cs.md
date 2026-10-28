@@ -242,7 +242,7 @@ Kandidát A (projekce Re DTheta do
 Lorentzovy tetrády) po zvolení
 Lorentzova řezu vede buď k
 čtyřreálnému pullbacku, nebo k
-výše uvedené 8-real indefinitní
+výše uvedené SU(2,2) srovnávané 8-real indefinitní
 metrice. **Nevytváří** přirozenou
 plně SU(2,2)-ekvivariantní projekci:
 stabilizátor K prostoru G/K
