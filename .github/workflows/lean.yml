@@ -8,9 +8,11 @@ on:
       - 'tests/test_physics_closure.py'
       - 'tests/test_holst_selfdual_canonical_gr.py'
       - 'tests/test_holst_carrier_assumptions.py'
+      - 'tests/test_bare_splitjet_selection.py'
+      - 'tools/verify_bare_splitjet_selection.py'
       - 'tools/verify_physics_closure.py'
       - 'tools/requirements_physics_closure.txt'
-      - 'research_tracks/action_selection/physics_closure_2026_10.*.md'
+      - 'research_tracks/action_selection/physics_closure*.md'
       - '.github/workflows/lean.yml'
   push:
     branches: [master]
@@ -20,9 +22,11 @@ on:
       - 'tests/test_physics_closure.py'
       - 'tests/test_holst_selfdual_canonical_gr.py'
       - 'tests/test_holst_carrier_assumptions.py'
+      - 'tests/test_bare_splitjet_selection.py'
+      - 'tools/verify_bare_splitjet_selection.py'
       - 'tools/verify_physics_closure.py'
       - 'tools/requirements_physics_closure.txt'
-      - 'research_tracks/action_selection/physics_closure_2026_10.*.md'
+      - 'research_tracks/action_selection/physics_closure*.md'
       - '.github/workflows/lean.yml'
 
 permissions:
@@ -38,11 +42,12 @@ jobs:
       - name: Restricted Hamiltonian jet symbolic and exact-number checks
         run: python3 -m pytest -q tests/test_hamiltonian_restricted_jet.py
       - name: Constrained Holst Hamiltonian and independent numerical checks
-        run: python3 -m pytest -q tests/test_physics_closure.py tests/test_holst_selfdual_canonical_gr.py tests/test_holst_carrier_assumptions.py tests/test_composite_palatin_holst_flrw.py
+        run: python3 -m pytest -q tests/test_physics_closure.py tests/test_holst_selfdual_canonical_gr.py tests/test_holst_carrier_assumptions.py tests/test_composite_palatin_holst_flrw.py tests/test_bare_splitjet_selection.py
       - name: Record scoped computational evidence
         run: |
           mkdir -p build/physics-closure
           python3 tools/verify_physics_closure.py > build/physics-closure/report.json
+          python3 tools/verify_bare_splitjet_selection.py > build/physics-closure/bare-splitjet.json
       - uses: leanprover/lean-action@v1
         # leanchecker loads a full import environment per worker.  Mathlib's
         # environment exceeds hosted-runner memory when checked in parallel.
@@ -61,5 +66,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: physics-closure-${{ github.run_id }}-${{ github.run_attempt }}
-          path: build/physics-closure/report.json
+          path: build/physics-closure/
           if-no-files-found: error

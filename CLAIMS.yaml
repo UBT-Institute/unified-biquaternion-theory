@@ -329,6 +329,10 @@ claims:
     temporal_U1_phase_lapse_rescue: REFUTED
     specified_sphere_texture_pure_pair_admissibility: REFUTED
     real_relative_dilation_comparator: CONDITIONAL
+    fundamental_Theta_component_count_selection: OPEN_GAP
+    bare_matched_pairing_free_jet_GR_derivation: REFUTED
+    bare_weighted_volume_stationarity: PROVED_UNDER_DECLARED_ASSUMPTIONS
+    bare_action_scope: Same kinetic Gram pairing as the central metric, derivative-free potential and freely varied algebraic jet auxiliaries only. The real field variation space is arbitrary; no preferred component count or replacement carrier is selected.
     carrier_audit_scope: The canonical core is one full biquaternion; scalar reduction, fixed carrier action, Lorentz slice, physical connection and auxiliary jet assumptions are distinguished explicitly. No matrix extension or new canonical action is adopted.
     evidence:
     - research_tracks/action_selection/physics_closure_2026_10.en.md
@@ -337,6 +341,9 @@ claims:
     - tools/verify_physics_closure.py
     - tests/test_physics_closure.py
     - tests/test_holst_carrier_assumptions.py
+    - formal/lean/UBT/GR/BareSplitJet.lean
+    - tools/verify_bare_splitjet_selection.py
+    - tests/test_bare_splitjet_selection.py
     assumptions:
     - Independent-connection vacuum equivalence and the one-clock homogeneous composite reduction are distinct variational problems.
     - The restricted operator classification assumes constant coefficients and geometric derivative order at most two; it is not the full UBT action space.

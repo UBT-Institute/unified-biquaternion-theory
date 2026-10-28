@@ -1,0 +1,89 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-10-28",
+  "claim_or_decision_id": "PHYSICS-CLOSURE-807-BARE-ACTION-PROOF",
+  "summary": "Dimension-independent bare-action stationarity proof and a regular non-Einstein stationary witness under explicit matched-pairing/free-jet assumptions.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_proposal",
+      "actor": "human",
+      "description": "The author requested proceeding to proof and clarified that the proposed Theta component count was provisional. No replacement carrier or action was selected.",
+      "evidence_ids": [
+        "direction"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Formulated the main variation theorem on an arbitrary real variation space and separated the explicit metric-Gram kinetic premise from the unfinalized abstract pairing. Reused existing volume collapse and auxiliary right-inverse results.",
+      "evidence_ids": [
+        "core",
+        "verification"
+      ]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Proved the critical-zero covector criterion and derivative cancellations, checked every real direction of an illustrative matrix potential, and constructed a regular closed metric a(T)=1+T^2 with original tetrad readout whose Ricci components cannot satisfy the Einstein condition for any Lambda.",
+      "evidence_ids": [
+        "verification"
+      ]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "After a runtime renewal, restored the proof sources, reran exact/numerical tests, and reran formal verification. Organized one overview and paired technical appendices; existing concurrent bilingual-verifier changes were preserved.",
+      "evidence_ids": [
+        "verification"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "direction",
+      "class": "discussion_context",
+      "locator": "Current private author directions in this research session; raw correspondence is not deposited.",
+      "original_checked": true,
+      "supports": "Author requested proof and explicitly treated the component count as provisional.",
+      "limitations": "No final replacement carrier, physical component count, microscopic action or attestation was supplied."
+    },
+    {
+      "id": "core",
+      "class": "repository_artifact",
+      "locator": "Prior head ae2e306fb377341a9b13a7c3132a4635b366caca and preserved proof commit 995aaae59abba377ed6b463cfb19c81d0a99a4f1; prior sharp-collapse, split-jet and PotentialVacuum sources.",
+      "original_checked": true,
+      "supports": "Existing carrier definition, pure-pair obstruction, and distinguished split-jet comparison prevent extrapolating a scalar minisuperspace obstruction to all UBT.",
+      "limitations": "The microscopic action and its selected composite connection remain open; no new historical origin claim is made."
+    },
+    {
+      "id": "verification",
+      "class": "repository_artifact",
+      "locator": "formal/lean/UBT/GR/BareSplitJet.lean; formal/lean/UBT/Action/PotentialVacuum.lean:firstVariation_at_vacuum; tools/verify_bare_splitjet_selection.py; tests/test_bare_splitjet_selection.py; paired physics_closure_bare_action_2026_10 appendix and audit overview",
+      "original_checked": true,
+      "supports": "Dimension-independent local algebra/calculus, full illustrative matrix gradient, existing-jet tetrad readout, coordinate curvature witness and independent convergent finite variations.",
+      "limitations": "No unrestricted symmetry lift, bundle/PDE classification, selected UBT action, or physical perturbation theorem is supplied."
+    }
+  ],
+  "rejected_alternatives": [
+    "Treating the proposed component count as physically derived or finalized.",
+    "Assuming the unfinalized kinetic pairing is necessarily the metric Gram pairing.",
+    "Calling a Palatini pullback a derivation of its curvature action.",
+    "Extending the free-jet volume obstruction to every UBT or quantum completion.",
+    "Counting written field entries as physical Laplace-type modes before deriving constraints and the measure."
+  ],
+  "verification": {
+    "status": "partial",
+    "artifacts": [
+      "formal/lean/UBT/GR/BareSplitJet.lean",
+      "formal/lean/UBT/Action/PotentialVacuum.lean",
+      "tools/verify_bare_splitjet_selection.py",
+      "tests/test_bare_splitjet_selection.py"
+    ],
+    "limitations": "Exact encoded local algebra/calculus; smooth functional transmission and spacetime interpretation are analytic/CAS, not a full unrestricted Lean PDE proof. No microscopic GR action selection is claimed."
+  },
+  "attribution_status": "evidence_linked",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "Current dimension-independent extension and explicit counterexample in a specified comparison family. Historical events and signed attestations are preserved."
+}
