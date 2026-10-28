@@ -40,6 +40,7 @@ Toto je jediný přehled auditu; párové přílohy zachovávají podrobné rovn
 - [Kontroly fáze, textury a kvocientu](physics_closure_phase_texture_2026_10.cs.md)
 - [Reálná dilatace a úplná řetězová variace](physics_closure_dilation_2026_10.cs.md)
 - [Důkaz holé akce nezávislý na rozměru](physics_closure_bare_action_2026_10.cs.md)
+- [Odezva spinového zdroje a objemová identifikovatelnost koeficientů](physics_closure_spin_source_2026_10.cs.md)
 
 <!-- BILINGUAL-UNIT: physics-closure.prediction -->
 ## Nejednoznačnost, informační principy a hranice predikce

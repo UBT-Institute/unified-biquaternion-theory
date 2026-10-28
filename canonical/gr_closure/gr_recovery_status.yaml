@@ -132,3 +132,11 @@ audit_2026_10_28:
   holst_coefficient_selection: OPEN_GAP
   torsion_square_coefficient_selection: OPEN_GAP
   scientific_boundary: Adopting the one-coupling law is not a derivation excluding the other symmetry-allowed operators. The conditional Einstein and local solution-lift implications are preserved.
+  sourced_followup_2026_10_29:
+    status: CONDITIONAL_DIAGNOSTIC
+    report: research_tracks/action_selection/physics_closure_spin_source_2026_10.en.md
+    evidence: reports/holst_spin_source_2026_10_29.json
+    source_normalization: DECLARED_NOT_DERIVED
+    result: With fixed boundary data the imported Holst plus torsion-square comparator depends on beta=b+zeta; the full 24-component algebraic connection equation has a unique sourced solution for every real beta. Bulk source records cannot identify b and zeta separately.
+    fundamental_action_selection_status: OPEN_GAP
+    formal_status: LEAN-PENDING

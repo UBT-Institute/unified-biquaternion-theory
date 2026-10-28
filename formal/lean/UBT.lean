@@ -1,5 +1,6 @@
 import UBT.Hamiltonian.VerificationBoundary
 import UBT.Hamiltonian.PalatiniHolst
+import UBT.Hamiltonian.HolstSpinSource
 import UBT.GR.CompositeKinetic
 import UBT.GR.BareSplitJet
 import UBT.GR.CompositeActionStationarity

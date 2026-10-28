@@ -40,6 +40,7 @@ This is the single audit overview; paired appendices preserve the detailed equat
 - [Phase, texture and quotient checks](physics_closure_phase_texture_2026_10.en.md)
 - [Real dilation and full chain variation](physics_closure_dilation_2026_10.en.md)
 - [Dimension-independent bare-action proof](physics_closure_bare_action_2026_10.en.md)
+- [Spin-source response and bulk coefficient identifiability](physics_closure_spin_source_2026_10.en.md)
 
 <!-- BILINGUAL-UNIT: physics-closure.prediction -->
 ## Nonuniqueness, information principles and prediction boundary

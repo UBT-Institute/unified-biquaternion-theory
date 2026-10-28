@@ -1,0 +1,141 @@
+{
+  "scope": "Imported Palatini--Holst plus constant torsion-square comparator; fixed tetrad, full 24-component pointwise contortion, external normalized axial source, fixed boundary",
+  "versions": {
+    "sympy": "1.14.0",
+    "numpy": "2.3.5"
+  },
+  "symbolic": {
+    "axial_readout_matches_declared_normalization": true,
+    "trace_readout_matches_declared_normalization": true,
+    "full_quadratic_restricts_to_axial_trace_form": true,
+    "full_24_hessian_determinant": true,
+    "complex_selfdual_hessian_is_singular": true,
+    "torsion_square_matches_Holst_bulk_quadratic": true,
+    "full_connection_Euler_equation_00": true,
+    "full_connection_Euler_equation_01": true,
+    "full_connection_Euler_equation_02": true,
+    "full_connection_Euler_equation_03": true,
+    "full_connection_Euler_equation_04": true,
+    "full_connection_Euler_equation_05": true,
+    "full_connection_Euler_equation_06": true,
+    "full_connection_Euler_equation_07": true,
+    "full_connection_Euler_equation_08": true,
+    "full_connection_Euler_equation_09": true,
+    "full_connection_Euler_equation_10": true,
+    "full_connection_Euler_equation_11": true,
+    "full_connection_Euler_equation_12": true,
+    "full_connection_Euler_equation_13": true,
+    "full_connection_Euler_equation_14": true,
+    "full_connection_Euler_equation_15": true,
+    "full_connection_Euler_equation_16": true,
+    "full_connection_Euler_equation_17": true,
+    "full_connection_Euler_equation_18": true,
+    "full_connection_Euler_equation_19": true,
+    "full_connection_Euler_equation_20": true,
+    "full_connection_Euler_equation_21": true,
+    "full_connection_Euler_equation_22": true,
+    "full_connection_Euler_equation_23": true,
+    "on_shell_contact_in_full_24_model": true,
+    "unique_solution_axial_component_0": true,
+    "unique_solution_trace_component_0": true,
+    "unique_solution_axial_component_1": true,
+    "unique_solution_trace_component_1": true,
+    "unique_solution_axial_component_2": true,
+    "unique_solution_trace_component_2": true,
+    "unique_solution_axial_component_3": true,
+    "unique_solution_trace_component_3": true,
+    "coefficient_shift_preserves_connection_00": true,
+    "coefficient_shift_preserves_connection_01": true,
+    "coefficient_shift_preserves_connection_02": true,
+    "coefficient_shift_preserves_connection_03": true,
+    "coefficient_shift_preserves_connection_04": true,
+    "coefficient_shift_preserves_connection_05": true,
+    "coefficient_shift_preserves_connection_06": true,
+    "coefficient_shift_preserves_connection_07": true,
+    "coefficient_shift_preserves_connection_08": true,
+    "coefficient_shift_preserves_connection_09": true,
+    "coefficient_shift_preserves_connection_10": true,
+    "coefficient_shift_preserves_connection_11": true,
+    "coefficient_shift_preserves_connection_12": true,
+    "coefficient_shift_preserves_connection_13": true,
+    "coefficient_shift_preserves_connection_14": true,
+    "coefficient_shift_preserves_connection_15": true,
+    "coefficient_shift_preserves_connection_16": true,
+    "coefficient_shift_preserves_connection_17": true,
+    "coefficient_shift_preserves_connection_18": true,
+    "coefficient_shift_preserves_connection_19": true,
+    "coefficient_shift_preserves_connection_20": true,
+    "coefficient_shift_preserves_connection_21": true,
+    "coefficient_shift_preserves_connection_22": true,
+    "coefficient_shift_preserves_connection_23": true,
+    "contact_information_has_exact_null_direction": true,
+    "contact_information_determinant_zero": true,
+    "contact_loses_sign_of_effective_coefficient": true,
+    "trace_axial_ratio_retains_effective_sign": true
+  },
+  "numerical": {
+    "seed": 20261029,
+    "samples": 12,
+    "max_connection_error": 1.1102230246251565e-16,
+    "max_contact_error": 1.6653345369377348e-16,
+    "max_full_Euler_residual": 1.1102230246251565e-16,
+    "max_coefficient_shift_error": 0.0,
+    "checks": {
+      "full_connection_solve": true,
+      "effective_contact": true,
+      "full_stationarity": true,
+      "unidentifiable_shift": true
+    }
+  },
+  "passed": true,
+  "not_proved": [
+    "microscopic UBT action or spin-current normalization",
+    "unrestricted composite-Theta field variation and physical Dirac reduction",
+    "physical stability or a new propagating torsion mode",
+    "quantum or boundary-sensitive equivalence",
+    "selection of either independent parity-odd coefficient"
+  ],
+  "recorded_on": "2026-10-29",
+  "parent_commit": "95ab194f28bf28a925eb5fc2634435e43b2cd6f7",
+  "claim_status": "CONDITIONAL_DIAGNOSTIC",
+  "source_normalization": "DECLARED_NOT_DERIVED",
+  "formal": {
+    "status": "LEAN-PENDING",
+    "module": "UBT.Hamiltonian.HolstSpinSource",
+    "reason": "No local Lean runtime installed; fresh CI compilation and axiom audit required.",
+    "scope": "Finite algebraic response, contact and coefficient-shift identities; not the full exterior-form functional or statistical argument."
+  },
+  "pytest": {
+    "new_cases_passed": 68
+  },
+  "independent_bilingual_semantics": "PENDING_FRESH_CI",
+  "source_sha256": {
+    "tools/verify_holst_spin_source.py": "0867b7c654aae4ed60e9ec06d698ea0c52dfe5ff2bb36304daf920fb6f371540",
+    "tests/test_holst_spin_source.py": "268a682000d882ef504464b426dab9d9610c862ead0a3b10a2b3dce81313ad3f",
+    "formal/lean/UBT/Hamiltonian/HolstSpinSource.lean": "94505cf54b5a037c74ba7e43bbcca00e04a3a1cc685a115a318c2402f5383157",
+    "formal/lean/UBT.lean": "fd4e988908182b9489179fc4fa4a3b8d62c56d1d363cbfc668ffa69f15e5b4c7",
+    ".github/workflows/lean.yml": "e0829cc34effd19ec4add93ad851a41eb00b928f8ea45010da9e3646a17694c4",
+    "research_tracks/action_selection/physics_closure_spin_source_2026_10.en.md": "8bd30246aaf5e6ea953c5a222a232e1a9ddeb59bf18136202677672aa00fcf4e",
+    "research_tracks/action_selection/physics_closure_spin_source_2026_10.cs.md": "935f1018aa078d04f09568640a53d827efbccfde4dfe05d8e2fe69e8df1f4d27"
+  },
+  "regressions": {
+    "status": "PASS",
+    "scope": "Existing physics closure, self-dual/readout, full carrier, composite FLRW, bare-action, bilingual verifier/parity and provenance/origin regression suites",
+    "exit_code": 0
+  },
+  "bilingual_structure": {
+    "status": "PASS",
+    "pairs": 272
+  },
+  "provenance_inventory": {
+    "A_attested": 7,
+    "B_machine_verified": 226,
+    "C_working": 1749,
+    "D_historical": 420,
+    "excluded": 8
+  },
+  "release_checksums": {
+    "status": "PASS",
+    "entries": 83
+  }
+}

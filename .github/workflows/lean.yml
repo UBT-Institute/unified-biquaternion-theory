@@ -8,6 +8,8 @@ on:
       - 'tests/test_physics_closure.py'
       - 'tests/test_holst_selfdual_canonical_gr.py'
       - 'tests/test_holst_carrier_assumptions.py'
+      - 'tests/test_holst_spin_source.py'
+      - 'tools/verify_holst_spin_source.py'
       - 'tests/test_bare_splitjet_selection.py'
       - 'tools/verify_bare_splitjet_selection.py'
       - 'tools/verify_physics_closure.py'
@@ -22,6 +24,8 @@ on:
       - 'tests/test_physics_closure.py'
       - 'tests/test_holst_selfdual_canonical_gr.py'
       - 'tests/test_holst_carrier_assumptions.py'
+      - 'tests/test_holst_spin_source.py'
+      - 'tools/verify_holst_spin_source.py'
       - 'tests/test_bare_splitjet_selection.py'
       - 'tools/verify_bare_splitjet_selection.py'
       - 'tools/verify_physics_closure.py'
@@ -42,12 +46,13 @@ jobs:
       - name: Restricted Hamiltonian jet symbolic and exact-number checks
         run: python3 -m pytest -q tests/test_hamiltonian_restricted_jet.py
       - name: Constrained Holst Hamiltonian and independent numerical checks
-        run: python3 -m pytest -q tests/test_physics_closure.py tests/test_holst_selfdual_canonical_gr.py tests/test_holst_carrier_assumptions.py tests/test_composite_palatin_holst_flrw.py tests/test_bare_splitjet_selection.py
+        run: python3 -m pytest -q tests/test_physics_closure.py tests/test_holst_selfdual_canonical_gr.py tests/test_holst_carrier_assumptions.py tests/test_composite_palatin_holst_flrw.py tests/test_bare_splitjet_selection.py tests/test_holst_spin_source.py
       - name: Record scoped computational evidence
         run: |
           mkdir -p build/physics-closure
           python3 tools/verify_physics_closure.py > build/physics-closure/report.json
           python3 tools/verify_bare_splitjet_selection.py > build/physics-closure/bare-splitjet.json
+          python3 tools/verify_holst_spin_source.py > build/physics-closure/holst-spin-source.json
       - uses: leanprover/lean-action@v1
         # leanchecker loads a full import environment per worker.  Mathlib's
         # environment exceeds hosted-runner memory when checked in parallel.
