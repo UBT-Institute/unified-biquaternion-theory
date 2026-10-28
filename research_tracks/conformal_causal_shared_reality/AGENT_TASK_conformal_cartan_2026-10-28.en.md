@@ -35,3 +35,22 @@ python -m pytest -q tests/test_theta_conformal_gate.py tests/test_theta_gradient
 ```
 
 Report assumptions, exact algebra, failure witnesses, remaining gaps and independent CI state. Maintain paired Czech and English notes, C_working, and a scientific stop-for-review at G1. G2/G3/G4 remain PARKED.
+
+## Finite-diamond shared-reality control [PROVED as toy algebra, OPEN as physics]
+
+See G1_FINITE_DIAMOND_INFORMATION.en.md and tests/test_theta_finite_diamond_info.py.
+An explicitly specified causal poset and an arbitrary scalar outcome map from
+the invariant B(Theta,Theta) generate overlap-consistent finite states.
+The reference-matching information Hessian has rank one on the regular
+eight-real-component test carrier; two observers cannot detect an endpoint
+correlation invisible to both full local diamond marginals. Positive
+reduced scalar Hamiltonians and entropy-contracting Markov comparators
+remain nonunique at the same information equilibrium. **Do not treat**
+this as the derivation of the local observable algebra, causal cones,
+a selected Hamiltonian, a phase-space reduction or a physical action.
+
+The next information task must build the causal diamond, actual
+gauge-invariant observables, and reference state from the same
+dynamically closed Theta geometry, then produce a quantitative
+prediction capable of rejecting an independently admissible generator.
+It is not permission to promote G2 before G1 review.
