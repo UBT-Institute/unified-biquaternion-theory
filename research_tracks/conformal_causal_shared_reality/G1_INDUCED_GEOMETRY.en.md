@@ -13,7 +13,7 @@ UBT-AI-PROVENANCE-END
 
 # G1: an explicitly curved Lorentzian metric from a biquaternion, and its linear-mode obstruction
 
-**28 October 2026 · C_working · PR #809 only · NO CANONICAL PROMOTION.**
+**2026-10-28 · C_working · PR #809 only · NO CANONICAL PROMOTION.**
 This is the next gate of the conformal/causal/shared-reality track.
 It tests whether Theta's *existing complex matrix degrees of freedom*
 can contain geometric curvature without introducing an independent
