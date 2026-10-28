@@ -36,7 +36,7 @@ Přímo dostáváme
  \delta(D_\mu X)=r(\beta_\mu^i\sigma_i+u_\mu I).
 \]
 
-Boosty vytvářejí tři reálné složky jetu pro každý
+Boosty vytvářejí 3 reálné složky jetu pro každý
 prostoročasový index, rotace v bodě X=rI nepřispívají
 a reálná dilatace přidává čtvrtou. V regulárním
 bodě e^a_mu=delta^a_mu, eta=diag(1,-1,-1,-1)
@@ -63,8 +63,7 @@ Test: tests/test_theta_connection_metric_rank.py.
 
 ## Lemma o exaktní dilataci [PROVED / DOKÁZÁNO, omezeně]
 
-Pro Omega=Omega_L+(u/2)I s reálnou jedničkovou
-formou u a Lorentzovou Omega_L platí
+Pro Omega=Omega_L+(u/2)I s reálnou 1-formou u a Lorentzovou Omega_L platí
 
 \[
  D^\Omega\Theta=D^{\Omega_L}\Theta+u\Theta.
