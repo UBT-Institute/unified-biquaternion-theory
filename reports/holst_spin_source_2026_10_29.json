@@ -100,10 +100,25 @@
   "claim_status": "CONDITIONAL_DIAGNOSTIC",
   "source_normalization": "DECLARED_NOT_DERIVED",
   "formal": {
-    "status": "LEAN-PENDING",
+    "status": "PROVED_FINITE_IDENTITIES",
+    "overall_formalization": "PARTIAL",
     "module": "UBT.Hamiltonian.HolstSpinSource",
-    "reason": "No local Lean runtime installed; fresh CI compilation and axiom audit required.",
-    "scope": "Finite algebraic response, contact and coefficient-shift identities; not the full exterior-form functional or statistical argument."
+    "new_lemma_count": 7,
+    "source_commit": "4f436e100d3fe0ea2f287178aee240dccc3ed482",
+    "ci_job": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40789689907/job/123171519601",
+    "root_build": "PASS, configured full-root lake build with --wfail",
+    "leanchecker": "PASS, UBT",
+    "axiom_audit": {
+      "status": "PASS",
+      "root_declarations": 469,
+      "allowed": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "local_runtime": "UNAVAILABLE; formal checks ran in observed GitHub CI",
+    "scope": "Finite algebraic response, contact and coefficient-shift identities; not the full exterior-form functional, boundary or statistical argument."
   },
   "pytest": {
     "new_cases_passed": 68
@@ -115,8 +130,8 @@
     "formal/lean/UBT/Hamiltonian/HolstSpinSource.lean": "94505cf54b5a037c74ba7e43bbcca00e04a3a1cc685a115a318c2402f5383157",
     "formal/lean/UBT.lean": "fd4e988908182b9489179fc4fa4a3b8d62c56d1d363cbfc668ffa69f15e5b4c7",
     ".github/workflows/lean.yml": "e0829cc34effd19ec4add93ad851a41eb00b928f8ea45010da9e3646a17694c4",
-    "research_tracks/action_selection/physics_closure_spin_source_2026_10.en.md": "8bd30246aaf5e6ea953c5a222a232e1a9ddeb59bf18136202677672aa00fcf4e",
-    "research_tracks/action_selection/physics_closure_spin_source_2026_10.cs.md": "935f1018aa078d04f09568640a53d827efbccfde4dfe05d8e2fe69e8df1f4d27"
+    "research_tracks/action_selection/physics_closure_spin_source_2026_10.en.md": "db17414de32d9b46ccb8543b7dc3faed7f74f7c76973753321fe314170853cfe",
+    "research_tracks/action_selection/physics_closure_spin_source_2026_10.cs.md": "5d10d709f6295966e7c8c0c33866101fc58b29cc8b3530dba6b6c5b4912501cc"
   },
   "regressions": {
     "status": "PASS",

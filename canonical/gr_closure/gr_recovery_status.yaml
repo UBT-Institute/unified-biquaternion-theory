@@ -139,4 +139,6 @@ audit_2026_10_28:
     source_normalization: DECLARED_NOT_DERIVED
     result: With fixed boundary data the imported Holst plus torsion-square comparator depends on beta=b+zeta; the full 24-component algebraic connection equation has a unique sourced solution for every real beta. Bulk source records cannot identify b and zeta separately.
     fundamental_action_selection_status: OPEN_GAP
-    formal_status: LEAN-PENDING
+    formal_status: PARTIAL_FINITE_IDENTITIES_PROVED
+    formal_source_commit: 4f436e100d3fe0ea2f287178aee240dccc3ed482
+    formal_ci: https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40789689907/job/123171519601
