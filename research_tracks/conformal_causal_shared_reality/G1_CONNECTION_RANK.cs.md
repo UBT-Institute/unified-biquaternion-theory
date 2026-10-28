@@ -7,7 +7,7 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Přesné lemmata o bodové hodnosti a exaktní dilataci; nikoli dynamické uzavření UBT.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
