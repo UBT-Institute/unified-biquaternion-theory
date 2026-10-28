@@ -79,3 +79,29 @@ větev N<0. Nevyvozovat ze sdílené reality, že reálné
 přeškálování musí být kalibrací, ani nepřidávat bez přiznání
 nezávislé soldering pole. Zachovat C_working, G1 PARTIAL a stop
 před nezávislou recenzí.
+
+## Hranice reality přímé tetrády [PROVED, omezeně]
+
+Prostudovat G1_PHASE_STRICT_REALITY.en.md a tests/test_theta_phase_strict_reality.py.
+Pro Theta=X+iY má čistě fázová kompozitní derivace kolmá k iTheta,
+pokud navíc musí ležet v Herm, reálnou hodnost nejvýše tři při
+nenulovém Y. Se společnou projekcí fáze a měřítka má přímá
+Hermitovská tetráda hodnost nejvýše tři pro jakékoli nenulové Theta
+a nejvýše dvě pro nezávislá X,Y. Záporně normovaný čtyřnohý Gramův
+příklad vyžaduje nehermitovský jet a neprochází tímto **přímým**
+čtením. Explicitně zakřivená čistě fázová Gramova metrika zůstává
+Lorentzova, ale její bezestopou imaginární prostorovou derivaci
+nelze v kontrolním bodě opravit libovolnou dvoustrannou Lorentzovou
+konexí, reálnou centrální dilatací ani centrální fází. Nejde
+o univerzální no-go pro jiné tetrádové mapy ani jiné nosiče Theta.
+
+## Další rozhodnutí o přísné realitě [OPEN]
+
+Sestrojit explicitní *nepřímou* tetrádu nebo skutečně kompozitní
+necentrální konexi a ukázat přesný lokální transformační zákon,
+Lorentzovu realitu, nedegenerovanou tetrádu, zakřivené řešení,
+vázané variace a fyzikální hlavní symbol. Pokud tetráda vzniká
+faktorizací Gramovy metriky, dokázat, že tato operace plyne z UBT
+a nevkládá volnou tetrádu nebo převzaté Einsteinovy rovnice.
+Nepovyšovat G1 bez této brány a nepovažovat informace konečných
+kauzálních diamantů za dokončený výběr dynamiky.
