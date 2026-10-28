@@ -54,3 +54,28 @@ kalibračně invariantní pozorovatelné a referenční stav z téže
 dynamicky uzavřené geometrie Theta a získat kvantitativní
 predikci schopnou vyloučit jinak přípustný generátor.
 Nejde o oprávnění povýšit G2 před recenzí G1.
+
+## Kontrola invariantních pozorovatelných a projektivní signatury G1 [PROVED / OPEN]
+
+Prostudovat G1_INVARIANT_CAUSAL_BRIDGE.en.md a G1_PROJECTIVE_SIGNATURE.en.md
+a testy tests/test_theta_invariant_causal_bridge.py a
+tests/test_theta_projective_signature.py. Bodová klasická
+podalgebra pozorovatelných generovaná H(Theta) a |det Theta|²
+má generickou Fisherovu/Jacobiho hodnost 2 na 8-reálném
+testovacím nosiči, ale nevybírá fázově citlivou kauzální metriku
+ani při znalosti všech jetů těchto invariantů. Kompozitní
+konexe pouze pro fázi tento drift v omezené gradientové
+metrice kompenzuje. Pokud **současně** odstraníme fázi i reálné
+přeškálování přirozeným B-ortogonálním projektorem na větvi N>0,
+šestirozměrný cílový doplněk má inertii (0,6), takže indukovaná
+metrika nemůže mít Lorentzovu signaturu. Pro N<0 má doplněk
+inercii (2,4) a bodový Lorentzův jet existuje, nikoli fyzikální řešení.
+
+**Další omezená nekruhová kontrola [OPEN]:** na neplochém
+regulárním pozadí testovat kalibrační kovarianci čistě fázové
+konexe společně s přísnou realitou tetrády i·Herm a vázanou
+akcí/hlavním symbolem; alternativně zkoumat, zda UBT připouští
+větev N<0. Nevyvozovat ze sdílené reality, že reálné
+přeškálování musí být kalibrací, ani nepřidávat bez přiznání
+nezávislé soldering pole. Zachovat C_working, G1 PARTIAL a stop
+před nezávislou recenzí.
