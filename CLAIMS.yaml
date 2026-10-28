@@ -322,6 +322,8 @@ claims:
     self_dual_canonical_match_algebra: PROVED
     self_dual_canonical_admissibility: OPEN_GAP
     naive_self_dual_Hermitian_readout_compatibility: REFUTED
+    naive_self_dual_closed_real_trajectory: REFUTED
+    real_trajectory_scope: Unchanged positive-clock closed-FLRW ansatz with the original Hermitian readout and constant Lambda only.
     evidence:
     - research_tracks/action_selection/physics_closure_2026_10.en.md
     - research_tracks/action_selection/physics_closure_2026_10.cs.md

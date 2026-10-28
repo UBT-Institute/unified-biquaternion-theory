@@ -187,6 +187,27 @@ Thus the same continued connection no longer generates the assumed tetrad for ge
 
 Even the linearized homogeneous readout on a compatible background requires $V\delta a'-\delta a=0$ in the clock gauge. The perturbation $\delta a=\varepsilon V^2$ violates it at first order. Consequently a general inhomogeneous perturbation spectrum cannot yet be assigned to this continuation as a canonical UBT branch. The next required gate is an action-derived chiral/two-sided connection with reality conditions that preserves the original tetrad identity, followed by its unreduced variation and perturbations. This changes neither the real-family causal no-selection result nor the established one-connection no-go assumptions.
 
+<!-- BILINGUAL-UNIT: physics-closure.real-subset -->
+## Real subsets and the biquaternionic representation
+
+Real numbers embed in complex numbers, and complex scalars embed centrally in the biquaternions. The spin connection is already biquaternion-valued in its traceless complex matrix representation; complex matrix entries do not by themselves imply a complex physical metric. The standard correspondence between complex spin matrices and real Lorentz transformations is reviewed by [Larsson–Larsson](https://arxiv.org/abs/2110.15118). The obstruction above concerns the action of the Hermitian pair on the specified tetrad, not a prohibition on using complex or biquaternionic variables. A quaternion unit also squares to minus one, but unlike the scalar imaginary unit it need not commute with the other generators: $[\mathbf e_1,\mathbf e_2]=2\mathbf e_3$. Substituting it for a commuting coupling changes the operator/ordering problem and requires a separately defined invariant action.
+
+There are nonempty real sectors of the declared comparator. The real-coefficient case $b=1,\mathscr C=1,\Lambda=0$ with initial data $V=2,a=1,p=-1$ has $a'=0,p_V=4/3,w=1/2$. Its Hamiltonian vector field is smooth for positive scale and clock, so it has a real local trajectory; this is the same trajectory already checked by independent integrators above. Its rotation stays real and the original Hermitian tetrad readout applies. This establishes a real restricted model trajectory, not vacuum Einstein equivalence, microscopic selection, or stability of the full theory.
+
+The proposed simultaneous real subset of the **self-dual continuation** can be tested exactly. In the unchanged closed homogeneous ansatz take a connected positive-clock interval, $a,V>0$, constant real $\Lambda$, and a twice differentiable scale factor. The original Hermitian readout and the continued GR-clock scale equation require
+$$
+a=Va',\qquad
+\left(\frac aV\right)'=0,\qquad a=cV,\quad c\in\mathbb R,
+$$
+$$
+\mathcal E_a/\mathscr C=(a')^2+2aa''+1-\Lambda a^2=0
+\quad\Longrightarrow\quad
+1+c^2-\Lambda c^2V^2=0.
+$$
+This residual cannot vanish throughout any nonempty open positive-clock interval. In fact it cannot vanish at two distinct positive clock values: subtracting the equations forces $\Lambda c^2=0$, while either equation would then require $1+c^2=0$. The theorem `no_closed_real_constant_ratio_trajectory` proves this incompatibility for arbitrary real coefficients and any two distinct positive times. CAS independently differentiates the action and verifies the constant-ratio substitution. The calculus implication from a differentiable constant ratio to its constant representative is stated analytically; Lean formalizes the resulting finite algebraic obstruction.
+
+Consequently the naive continuation has no regular real trajectory satisfying both requirements within these unchanged assumptions. This is a corollary in the present ansatz of the existing pure-pair/concurrent-vector obstruction, not a new no-go for all UBT real slices. Flat real Minkowski representers and the separately postulated split-jet GR branch are not excluded. A real subset must be nonempty and preserved by the actual dynamics; inclusion of number systems alone does not establish those properties.
+
 <!-- BILINGUAL-UNIT: physics-closure.prediction -->
 ## Nonuniqueness, information principles and prediction boundary
 

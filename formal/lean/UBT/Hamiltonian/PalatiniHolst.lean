@@ -176,4 +176,24 @@ theorem original_scale_requires_zero_defect (V d : ℝ) (hV : V ≠ 0) :
     V * d = 0 ↔ d = 0 := by
   exact mul_eq_zero.trans (or_iff_right hV)
 
+/-- After the original Hermitian readout has restricted the closed-FLRW
+clock ansatz to a(V)=c*V, its GR-clock scale Euler residual cannot vanish at
+two distinct positive clock values. This is a restricted ansatz obstruction,
+not a no-go for real slices of biquaternionic geometry in general. -/
+theorem no_closed_real_constant_ratio_trajectory (c lam V W : ℝ)
+    (hV : 0 < V) (hW : 0 < W) (hVW : V ≠ W)
+    (hELV : c ^ 2 + 1 - lam * c ^ 2 * V ^ 2 = 0)
+    (hELW : c ^ 2 + 1 - lam * c ^ 2 * W ^ 2 = 0) : False := by
+  have hpositive : 0 < c ^ 2 + 1 := by positivity
+  have hcoefficient : lam * c ^ 2 ≠ 0 := by
+    intro hz
+    have hzero : lam * c ^ 2 * V ^ 2 = 0 := by rw [hz]; simp
+    rw [hzero] at hELV
+    linarith
+  have hdifference : (lam * c ^ 2) * (V ^ 2 - W ^ 2) = 0 := by
+    nlinarith [hELV, hELW]
+  have hsquares : V ^ 2 = W ^ 2 :=
+    sub_eq_zero.mp ((mul_eq_zero.mp hdifference).resolve_left hcoefficient)
+  exact hVW ((sq_eq_sq₀ (le_of_lt hV) (le_of_lt hW)).mp hsquares)
+
 end UBT.Hamiltonian.PalatiniHolst

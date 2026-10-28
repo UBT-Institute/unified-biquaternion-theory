@@ -112,6 +112,9 @@ def selfdual_checks():
     # Matrix/Hermitian check does NOT use the continued reduced action.
     B, defect, rotation = s.symbols("B defect rotation", real=True)
     pauli = [s.Matrix([[0, 1], [1, 0]]), s.Matrix([[0, -s.I], [s.I, 0]]), s.diag(1, -1)]
+    e1, e2, e3 = [-s.I*m for m in pauli]
+    checks["quaternion_unit_has_square_minus_one"] = e1*e1 == -s.eye(2)
+    checks["quaternion_unit_is_not_commuting_scalar"] = (e1*e2-e2*e1 == 2*e3 and 2*e3 != s.zeros(2))
     for i, sigma in enumerate(pauli):
         omega = (B+s.I*rotation)*sigma/2
         checks[f"original_real_rotation_cancels_{i}"] = s.simplify(omega+omega.conjugate().T-B*sigma) == s.zeros(2)
@@ -128,6 +131,28 @@ def selfdual_checks():
     # At b=i the general six-dimensional connection operator is singular.
     J = s.BlockMatrix([[s.zeros(3), s.eye(3)], [-s.eye(3), s.zeros(3)]]).as_explicit()
     checks["selfdual_connection_operator_rank_three"] = (J+s.I*s.eye(6)).rank() == 3
+    # Test the proposed invariant real subset, rather than rejecting complex
+    # notation. With the ORIGINAL readout a=V*a', the ratio a/V is constant.
+    A = s.Function("a")(V)
+    checks["readout_implies_constant_scale_clock_ratio"] = simple(
+        s.diff(A/V, V)-(V*s.diff(A, V)-A)/V**2)
+    Lclock = C*(-A*s.diff(A, V)**2+A-lam*A**3/3)
+    Eclock = s.diff(Lclock, A)-s.diff(s.diff(Lclock, s.diff(A, V)), V)
+    checks["selfdual_clock_scale_Euler_equation"] = simple(
+        Eclock/C-(s.diff(A, V)**2+2*A*s.diff(A, V, 2)+1-lam*A**2))
+    slope = s.symbols("slope", real=True)
+    residual = s.expand((Eclock/C).subs(A, slope*V).doit())
+    checks["closed_real_readout_Euler_residual"] = simple(
+        residual-(1+slope**2-lam*slope**2*V**2))
+    checks["closed_real_readout_constant_coefficient"] = (
+        s.Poly(residual, V).coeff_monomial(1) == 1+slope**2)
+    # Reuse the REAL-coefficient trajectory already integrated independently
+    # below. Its existence is different from self-dual GR matching.
+    real_h = h.subs(k, 1)
+    real_point = {C: 1, a: 1, V: 2, p: -1, lam: 0}
+    checks["real_comparator_initial_scale_velocity"] = s.diff(real_h, p).subs(real_point) == 0
+    checks["real_comparator_initial_clock_momentum"] = -real_h.subs(real_point) == s.Rational(4, 3)
+    checks["real_comparator_initial_rotation"] = (-p/(2*C*a)).subs(real_point) == s.Rational(1, 2)
     return checks
 
 

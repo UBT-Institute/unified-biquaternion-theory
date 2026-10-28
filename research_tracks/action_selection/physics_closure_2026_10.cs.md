@@ -187,6 +187,27 @@ Tatáž pokračovaná konexe tedy pro obecné trajektorie již negeneruje předp
 
 I linearizované homogenní vyčítání na kompatibilním pozadí vyžaduje $V\delta a'-\delta a=0$ v kalibraci hodin. Porucha $\delta a=\varepsilon V^2$ jej porušuje v prvním řádu. Obecné nehomogenní poruchové spektrum proto tomuto pokračování zatím nelze přiřadit jako kanonické větvi UBT. Další nutnou podmínkou je chirální/dvoustranná konexe odvozená z akce s podmínkami reality, která zachovává původní tetrádovou identitu, následovaná její neredukovanou variací a poruchami. To nemění výsledek kauzálního nevýběru v reálné rodině ani předpoklady zavedeného no-go pro jedinou konexi.
 
+<!-- BILINGUAL-UNIT: physics-closure.real-subset -->
+## Reálné podmnožiny a bikvaternionová reprezentace
+
+Reálná čísla se vkládají do komplexních a komplexní skaláry se centrálně vkládají do bikvaternionů. Spinová konexe již má bikvaternionové hodnoty ve své bezstopé komplexní maticové reprezentaci; komplexní prvky matice samy o sobě neznamenají komplexní fyzikální metriku. Standardní vztah mezi komplexními spinovými maticemi a reálnými Lorentzovými transformacemi shrnují [Larsson–Larsson](https://arxiv.org/abs/2110.15118). Výše uvedená překážka se týká působení hermitovské dvojice na určenou tetrádu, nikoli zákazu komplexních nebo bikvaternionových proměnných. Také kvaternionová jednotka má druhou mocninu minus jedna, ale na rozdíl od skalární imaginární jednotky nemusí komutovat s ostatními generátory: $[\mathbf e_1,\mathbf e_2]=2\mathbf e_3$. Její dosazení místo komutující vazby mění problém operátoru/pořadí a vyžaduje samostatně definovanou invariantní akci.
+
+Deklarovaný srovnávací model má neprázdné reálné sektory. Případ s reálným koeficientem $b=1,\mathscr C=1,\Lambda=0$ a počátečními daty $V=2,a=1,p=-1$ má $a'=0,p_V=4/3,w=1/2$. Jeho Hamiltonovo vektorové pole je hladké pro kladnou škálu a hodiny, takže má reálnou lokální trajektorii; jde o tutéž trajektorii již výše kontrolovanou nezávislými integrátory. Její rotace zůstává reálná a platí původní hermitovské vyčítání tetrády. Tím je stanovena reálná trajektorie omezeného modelu, nikoli ekvivalence s vakuovými Einsteinovými rovnicemi, mikroskopický výběr nebo stabilita úplné teorie.
+
+Navrženou současnou reálnou podmnožinu **samoduálního pokračování** lze otestovat přesně. V nezměněném uzavřeném homogenním ansatzu vezměme souvislý interval kladných hodin, $a,V>0$, konstantní reálnou $\Lambda$ a dvakrát diferencovatelný škálový faktor. Původní hermitovské vyčítání a pokračovaná rovnice měřítka s hodinami GR vyžadují
+$$
+a=Va',\qquad
+\left(\frac aV\right)'=0,\qquad a=cV,\quad c\in\mathbb R,
+$$
+$$
+\mathcal E_a/\mathscr C=(a')^2+2aa''+1-\Lambda a^2=0
+\quad\Longrightarrow\quad
+1+c^2-\Lambda c^2V^2=0.
+$$
+Toto reziduum nemůže vymizet na celém neprázdném otevřeném intervalu kladných hodin. Dokonce nemůže vymizet ve dvou různých kladných hodnotách hodin: odečtení rovnic vynutí $\Lambda c^2=0$, zatímco každá z rovnic by pak vyžadovala $1+c^2=0$. Věta `no_closed_real_constant_ratio_trajectory` dokazuje tuto neslučitelnost pro libovolné reálné koeficienty a jakékoli dva různé kladné časy. CAS nezávisle diferencuje akci a ověřuje dosazení konstantního poměru. Důsledek z diferenciálního počtu od diferencovatelného konstantního poměru k jeho konstantnímu reprezentantu je uveden analyticky; Lean formalizuje výslednou konečnou algebraickou překážku.
+
+Naivní pokračování tedy v těchto nezměněných předpokladech nemá regulární reálnou trajektorii splňující oba požadavky. Jde o důsledek stávající překážky čisté dvojice/souběžného vektoru v nynějším ansatzu, nikoli nový no-go pro všechny reálné řezy UBT. Ploché reálné Minkowského reprezentanty a samostatně postulovaná split-jet větev GR tím vyloučeny nejsou. Reálná podmnožina musí být neprázdná a zachovaná skutečnou dynamikou; samotná inkluze číselných systémů tyto vlastnosti nezajišťuje.
+
 <!-- BILINGUAL-UNIT: physics-closure.prediction -->
 ## Nejednoznačnost, informační principy a hranice predikce
 

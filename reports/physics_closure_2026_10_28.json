@@ -60,6 +60,8 @@
     "original_clock_momentum_not_generically_conserved": true,
     "continued_Lagrangian_GR_clock_plus_boundary": true,
     "homogeneous_dust_integration_constant": true,
+    "quaternion_unit_has_square_minus_one": true,
+    "quaternion_unit_is_not_commuting_scalar": true,
     "original_real_rotation_cancels_0": true,
     "continued_pair_changes_boost_0": true,
     "continued_tetrad_readout_is_Vr_0": true,
@@ -71,7 +73,14 @@
     "continued_tetrad_readout_is_Vr_2": true,
     "selfdual_readout_counterexample": true,
     "linearized_readout_counterexample": true,
-    "selfdual_connection_operator_rank_three": true
+    "selfdual_connection_operator_rank_three": true,
+    "readout_implies_constant_scale_clock_ratio": true,
+    "selfdual_clock_scale_Euler_equation": true,
+    "closed_real_readout_Euler_residual": true,
+    "closed_real_readout_constant_coefficient": true,
+    "real_comparator_initial_scale_velocity": true,
+    "real_comparator_initial_clock_momentum": true,
+    "real_comparator_initial_rotation": true
   },
   "numerical": {
     "seed": 20261028,
@@ -119,8 +128,8 @@
     "lean_release_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
     "mathlib_revision": "0df444a360eaa60ab8c11dca51a86af692955474",
     "lake_build_UBT_wfail": "PASS",
-    "leanchecker_UBT": "PENDING",
-    "new_theorem_axiom_audit": "PASS",
+    "leanchecker_UBT": "PASS at the earlier 16-theorem revision; the current changed module has been separately replayed successfully",
+    "new_theorem_axiom_audit": "PASS, all 17 theorem declarations use only the listed standard axioms",
     "allowed_axioms": [
       "propext",
       "Classical.choice",
@@ -142,26 +151,18 @@
       "no_real_self_dual_square",
       "hermitian_pair_after_continuation",
       "generated_scale_after_continuation",
-      "original_scale_requires_zero_defect"
+      "original_scale_requires_zero_defect",
+      "no_closed_real_constant_ratio_trajectory"
     ],
     "scope": "Only the formal statements and declared assumptions; full field variation, physical Dirac algebra and microscopic branch admissibility remain pending.",
     "environment_note": "Unmodified release kernel; local host compatibility redirected only the process own executable-path lookup to /proc/self/exe. Standard GitHub runner needs no such compatibility shim.",
-    "leanchecker_new_module": "PASS, exit 0"
+    "leanchecker_new_module": "PASS, exit 0, current 17-theorem module"
   },
   "tests": {
     "full_existing_suite_after_initial_closure_changes": "PASS, exit 0; additional self-dual tests verified separately after user steering",
     "targeted_closure_selfdual_provenance_tests": "PASS, exit 0",
     "bilingual_structure": "PASS, 265 pairs",
     "independent_bilingual_semantics": "PENDING_GITHUB_CI"
-  },
-  "source_sha256": {
-    "formal/lean/UBT/Hamiltonian/PalatiniHolst.lean": "29781283788bc7589b4422139048e3809719263c0d9a33a7e2374a03b72ea438",
-    "tools/verify_physics_closure.py": "a38a9364585ae3a7bbe11b4c2b2933d3cac6461b40ff9c9c42bed6e3b6f6d30c",
-    "tools/requirements_physics_closure.txt": "5b44555a476c15c6387c67985f3dbe52ba56994324cdf3bd755128d1566f7e9f",
-    "tests/test_physics_closure.py": "34607e47b470588088366c826532009696d9a1a511615529b5abd611fd0a858d",
-    "tests/test_holst_selfdual_canonical_gr.py": "e9f7928a94578d4760be787e084c808be066660c3d0a194008d8f8aed3e7b477",
-    "research_tracks/action_selection/physics_closure_2026_10.en.md": "1ce250923d538b4bdd173e2ab4c7de6048443622be6cbdb4662952d797d1e62f",
-    "research_tracks/action_selection/physics_closure_2026_10.cs.md": "239895819136e85f3606e7a3439ed7e284484785979bd1be458bfaab8b1f3661"
   },
   "github_ci_observation": {
     "source_commit": "e8aea490f229273227cfb095cbc1eb73b59a615f",
@@ -188,5 +189,21 @@
     },
     "semantic_approval": "NOT_CLAIMED",
     "note": "These observations bind the stated source commit. They do not assert approval of a later commit or replace fresh required checks."
+  },
+  "source_sha256": {
+    "formal/lean/UBT/Hamiltonian/PalatiniHolst.lean": "07ee6dbd590fd4dda54efdeae2456c8ea0a52bb7ab67426a142b68961b5e8da8",
+    "tools/verify_physics_closure.py": "bee285d3c2290d8a60596a584bb5963aca4ee99610c5b7df31f7527b7ad85c82",
+    "tools/requirements_physics_closure.txt": "5b44555a476c15c6387c67985f3dbe52ba56994324cdf3bd755128d1566f7e9f",
+    "tests/test_physics_closure.py": "34607e47b470588088366c826532009696d9a1a511615529b5abd611fd0a858d",
+    "tests/test_holst_selfdual_canonical_gr.py": "e9f7928a94578d4760be787e084c808be066660c3d0a194008d8f8aed3e7b477",
+    "research_tracks/action_selection/physics_closure_2026_10.en.md": "71a9e0697d5fb3ac3ea80706923c4dd7150c8a8ed2fa286f317c6d92821175d5",
+    "research_tracks/action_selection/physics_closure_2026_10.cs.md": "e7ddb1397968560df75196149f9cb8c1b2f1201f3afe468463fce22982fc5ce0"
+  },
+  "real_subset_followup": {
+    "status": "PROVED_RESTRICTED_ALGEBRA",
+    "assumptions": "Unchanged self-dual continuation, original Hermitian readout, closed FLRW, positive monotone clock, constant real Lambda",
+    "theorem": "no_closed_real_constant_ratio_trajectory",
+    "scope": "Once readout gives a=cV, the scale Euler residual cannot vanish at two distinct positive clocks. Other real sectors are not excluded.",
+    "real_comparator_trajectory": "The existing real b=1 integrator example is retained as a nonempty real local comparator sector."
   }
 }
