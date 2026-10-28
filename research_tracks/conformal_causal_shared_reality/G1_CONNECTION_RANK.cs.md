@@ -24,7 +24,7 @@ D X=dX+Omega X+X Omega†. Při pevném X,dX měňme konexi:
 
 \[
  \delta\Omega_\mu=\tfrac12\beta^i_\mu\sigma_i+
-       \tfrac i2\vartheta_\mu^i\sigma_i+
+       \tfrac i2\vartheta^i_\mu\sigma_i+
        \tfrac12u_\mu I.
 \]
 
@@ -76,7 +76,7 @@ Pokud na lokální oblasti u=dσ, pak přesně
        =e^{-σ}D^{\Omega_L}(e^σ\Theta).}
 \]
 
-Centrální křivost (du/2)I je nulová. Exaktní
+Centrální křivost (du/2)I=0 je nulová. Exaktní
 dilatace je tedy lokálně ekvivalentní reálnému
 přeškálování pole. Pokud je Weylova transformace
 symetrií CELÉ akce, jde o kalibrační redundanci.
