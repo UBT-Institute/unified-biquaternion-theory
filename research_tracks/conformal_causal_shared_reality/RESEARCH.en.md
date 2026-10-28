@@ -230,3 +230,28 @@ fundamental bikvaternionic project or erase earlier tracks.
 - T. Jacobson, *Entanglement Equilibrium and the Einstein
   Equation*, PRL **116** (2016) 201101,
   https://doi.org/10.1103/PhysRevLett.116.201101
+
+## Canonical sharp-vs-dagger comparison [PROVED, restricted; OPEN as dynamics]
+
+The paired G1_CANONICAL_SHARP_BRIDGE.en.md / .cs.md note audits
+the actual canonical anticommutator against the earlier
+Hermitian-dagger Gram comparator. The canonical sharp pairing
+is complex bilinear and central for arbitrary Mat(2,C) jets,
+but it is not automatically real; the dagger comparator is
+real and phase invariant but **not** the locked metric.
+At a regular point of the previously displayed curved example,
+C_tt=1, C_xx=-2i whereas B_tt=1, B_xx=-2, for kappa=1.
+No common unit phase fixes that mismatch. Algebraic
+factorization of B into a real coframe is not the same
+thing as obtaining the canonical metric from DTheta.
+
+A new exact pure-gradient theorem: for Theta=X+iY,
+rank(dX)=4 and Im C(dTheta,dTheta)=0 with zero connection,
+Y satisfies the Minkowski Killing equation in X coordinates;
+the resulting regular central metric is flat. This is **not**
+a no-go for complex Theta: an explicit non-i-Hermitian affine
+complex frame has an exactly real Minkowski canonical metric.
+The missing constructive ingredient is a non-tautological
+Theta-derived **two-sided** covariant connection giving
+a curved, real canonical central metric from its own jets.
+G1 PARTIAL; no physical action has been selected.
