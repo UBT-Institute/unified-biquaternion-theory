@@ -2,26 +2,26 @@
 # AGENT TASK — Conformal Cartan bridge from UBT geometry, causality and shared reality
 
 **Date:** 2026-10-28
-**Track:** \`research_tracks/conformal_causal_shared_reality/\`
-**Branch:** \`research/conformal-causal-shared-reality-20261028\`
+**Track:** `research_tracks/conformal_causal_shared_reality/`
+**Branch:** `research/conformal-causal-shared-reality-20261028`
 **Tier:** C_working / exploratory
-**Do not edit:** PR #807, PR #808, \`canonical/\`, \`CLAIMS*\`,
-\`provenance/\`, existing author attestations.
+**Do not edit:** PR #807, PR #808, `canonical/`, `CLAIMS*`,
+`provenance/`, existing author attestations.
 **STOP after Gate G1.** Do not select an action, claim GR recovery,
 or merge this draft without an independent adversarial check.
 
 ## Starting evidence — reuse, do not rerun a one-week selector search
 
-Read \`RESEARCH.en.md\` and \`G1_NEGATIVE_CONTROL.en.md\` first;
+Read `RESEARCH.en.md` and `G1_NEGATIVE_CONTROL.en.md` first;
 replay exact checks:
 
-\`\`\`bash
+```bash
 python -m unittest discover -s tests -p 'test_theta_conformal_gate.py' -v
 python -m unittest discover -s tests -p 'test_theta_gradient_solder.py' -v
-\`\`\`
+```
 
 If repository pytest uses its own test harness, also execute
-\`python -m pytest -q tests/test_theta_conformal_gate.py tests/test_theta_gradient_solder.py\`.
+`python -m pytest -q tests/test_theta_conformal_gate.py tests/test_theta_gradient_solder.py`.
 
 Current results: locally seven checks passed (6 chart checks + one
 gradient-curvature test). This is NOT an external CI or Lean certificate.
@@ -59,7 +59,7 @@ Do NOT change fundamental Theta's component count by assumption.
 Compare at least two **explicit** candidates, maintaining the same
 declared field representation throughout:
 
-A. \`e_mu^a = P^a(Re D_mu Theta)\`, with physical Lorentz slice and
+A. `e_mu^a = P^a(Re D_mu Theta)`, with physical Lorentz slice and
    an explicitly represented **independent conformal Cartan**
    connection A_mu. Show exact under-gauge transformation, whether
    P^a is well defined under the FULL group, whether an independent
@@ -77,7 +77,7 @@ If A and B both fail, exhibit restricted counterexamples or a theorem
 with explicit assumptions. Do not write a third ad hoc potential.
 
 For a surviving candidate supply:
-- \`e\` and \`g=e^T eta e\` with stated Lorentz reality.
+- `e` and `g=e^T eta e` with stated Lorentz reality.
 - 16-rank variation map on a regular patch, including *constraints*.
 - Nonzero, explicitly computed Riemann tensor, NOT mere nonconstant g.
 - Full first variation, including e(Theta,A) chain rule and independent
@@ -85,7 +85,7 @@ For a surviving candidate supply:
 - A table identifying its dependence on PR #807 no-go assumptions.
 - Distinguish exact symbolic algebra, numeric samples, formal proof,
   and unproved analytic physics claims.
-- EN and CZ paired notes preserving \`C_working\` status.
+- EN and CZ paired notes preserving `C_working` status.
 
 ## After G1 — parking lot ONLY, not immediate implementation
 
@@ -97,7 +97,7 @@ Jacobson's fixed-volume, conformal-matter hypotheses.
 
 G3: Only after a successful geometric and information bridge,
 write a sharply bounded (max polynomial degree) invariant-action family.
-\`Weyl^2\` alone has known fourth-order/ghost concerns. No claims of
+`Weyl^2` alone has known fourth-order/ghost concerns. No claims of
 unique action without a class and proof.
 
 G4: Full spatial Dirac constraints, physical Hessian, helicity
@@ -116,3 +116,34 @@ do not overwrite historical provenance.
 **STOP CONDITION:** G1 is proved or cleanly obstructed for both
 declared candidates. Produce a short recommendation that preserves
 rather than silently revises #807/#808.
+
+## G1 interim result (2026-10-28) — read before extending
+
+See G1_INDUCED_GEOMETRY.en.md / .cs.md and
+tests/test_theta_induced_geometry.py. An explicit trial
+Theta = t I + x sigma_1 + y sigma_2 + z sigma_3
+        + i kappa t x sigma_1
+has a Lorentz-signature, genuinely curved induced metric
+g=B(dTheta,dTheta), with R_{txtx}(0)=kappa²,
+and a derived local i·Herm tetrad. It is only SL(2,C)
+congruence/global-phase covariant in the declared representation;
+full SU(2,2) covariance, the exact canonical UBT metric
+identity, a viable action and a graviton spectrum are **OPEN**.
+
+Critical obstruction: about an affine flat background
+the metric has no gauge-invariant **linear** graviton:
+tangent Theta perturbations are diffeomorphisms,
+normal perturbations enter at quadratic order.
+Also, a coframe E(phi)dphi with only four invertible
+real coordinate scalars is locally a pullback of
+one fixed target geometry (no independent metric DOF).
+Causal diamonds and overlap alone cannot select
+a positive Weyl factor because g and f²g share
+all causal cones. Require a quantitative state/entropy
+scale before using [SR] as a dynamical selector.
+
+G1 remains PARTIAL. **Do not proceed to G2–G4** or merge
+on the strength of a curved example. First independently
+audit the 6 exact tests, exhibit a genuinely covariant
+jet/Cartan realization with nontrivial *linear* spin-2,
+and respect the stop-for-review criterion.
