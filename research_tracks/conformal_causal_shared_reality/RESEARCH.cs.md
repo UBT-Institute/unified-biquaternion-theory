@@ -13,7 +13,7 @@ UBT-AI-PROVENANCE-END
 
 # Konformní kauzalita a sdílená realita: most UBT postavený na větách
 
-**28. 10. 2026 · C_working · nezávislé na PR #807 a PR #808.**
+**2026-10-28 · C_working · nezávislé na PR #807 a PR #808.**
 Studujeme podmíněně **jeden** maticový chart X∈Mat₂(C)
 možného většího či jinak realizovaného nosiče UBT. Neurčujeme
 fundamentální počet složek Theta ani neztotožňujeme komplexní
@@ -263,3 +263,5 @@ původní bikvaternionový projekt nebo mazat historii.
 - T. Jacobson, *Entanglement Equilibrium and the
   Einstein Equation*, PRL **116** (2016) 201101,
   https://doi.org/10.1103/PhysRevLett.116.201101
+
+**Machine-readable claim statuses:** OPEN (kinematical jet bridge), OPEN (dynamics/Dirac spectrum).
