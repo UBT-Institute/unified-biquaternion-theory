@@ -150,6 +150,24 @@ def test_large_document_is_not_silently_truncated_or_sent(tmp_path: Path) -> Non
     assert calls == []
 
 
+def test_oversized_multi_paragraph_pair_is_split_without_losing_coverage() -> None:
+    paragraphs = [f"Paragraph {index}: " + ("x" * 1500) for index in range(1, 70)]
+    text = "\n\n".join(paragraphs).encode()
+    item = GATE.document("split.en.md", text, text)
+    assert len(GATE.make_prompt([item])) > GATE.MAX_BATCH_CHARS
+
+    grouped = GATE.batches([item])
+    flat = [entry for batch in grouped for entry in batch]
+    assert len(flat) > 1
+    assert all("#part-" in entry["id"] for entry in flat)
+    assert all(len(GATE.make_prompt([entry])) <= GATE.MAX_BATCH_CHARS for entry in flat)
+
+    en_ids = [paragraph_id for entry in flat for paragraph_id in (p["id"] for p in entry["en"])]
+    cs_ids = [paragraph_id for entry in flat for paragraph_id in (p["id"] for p in entry["cs"])]
+    assert en_ids == [p["id"] for p in item["en"]]
+    assert cs_ids == [p["id"] for p in item["cs"]]
+
+
 def test_any_raw_source_change_invalidates_review(tmp_path: Path) -> None:
     item = sample()
     item["paths"] = {"en": "note.en.md", "cs": "note.cs.md"}

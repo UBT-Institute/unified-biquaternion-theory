@@ -136,17 +136,53 @@ def make_prompt(batch: list[dict]) -> str:
     return PROMPT + json.dumps([public_input(item) for item in batch], ensure_ascii=False)
 
 
+def split_oversized_pair(item: dict) -> list[dict]:
+    if len(make_prompt([item])) <= MAX_BATCH_CHARS:
+        return [item]
+    if len(item["en"]) != len(item["cs"]):
+        raise ReviewError(f"pair exceeds review size limit; split into paired sources: {item['id']}")
+
+    chunks: list[dict] = []
+    start = 0
+    count = len(item["en"])
+    while start < count:
+        best: dict | None = None
+        end = start
+        while end < count:
+            candidate = {
+                **item,
+                "id": item["id"],
+                "en": item["en"][start:end + 1],
+                "cs": item["cs"][start:end + 1],
+            }
+            if len(make_prompt([candidate])) <= MAX_BATCH_CHARS:
+                best = candidate
+                end += 1
+                continue
+            break
+        if best is None:
+            raise ReviewError(f"pair exceeds review size limit; split into paired sources: {item['id']}")
+        chunks.append(best)
+        start = end
+
+    if len(chunks) == 1:
+        return chunks
+    total = len(chunks)
+    for index, chunk in enumerate(chunks, 1):
+        chunk["id"] = f"{item['id']}#part-{index:02d}-of-{total:02d}"
+    return chunks
+
+
 def batches(documents: list[dict]) -> list[list[dict]]:
     result: list[list[dict]] = []
     current: list[dict] = []
     for item in documents:
-        if len(make_prompt([item])) > MAX_BATCH_CHARS:
-            raise ReviewError(f"pair exceeds review size limit; split into paired sources: {item['id']}")
-        candidate = current + [item]
-        if current and (len(candidate) > 4 or len(make_prompt(candidate)) > MAX_BATCH_CHARS):
-            result.append(current)
-            current = []
-        current.append(item)
+        for part in split_oversized_pair(item):
+            candidate = current + [part]
+            if current and (len(candidate) > 4 or len(make_prompt(candidate)) > MAX_BATCH_CHARS):
+                result.append(current)
+                current = []
+            current.append(part)
     if current:
         result.append(current)
     if len(result) + 1 > MAX_CALLS or sum(len(make_prompt(batch)) for batch in result) > MAX_TOTAL_CHARS:
