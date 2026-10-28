@@ -1,0 +1,81 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-10-28",
+  "claim_or_decision_id": "PHYSICS-CLOSURE-807-CARRIER-AUDIT",
+  "summary": "Recheck the field carrier, symmetry lift, phase/texture proposals and complete composite variation before cosmological Hamiltonian reduction.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_critique",
+      "actor": "human",
+      "description": "The author rejected attribution of a scalar fundamental Theta to his theory, raised the possibility of a matrix of biquaternions, and requested rechecking the derivation from its starting assumptions. No matrix extension was adopted as an architectural decision.",
+      "evidence_ids": [
+        "direction"
+      ]
+    },
+    {
+      "kind": "ai_critique",
+      "actor": "ai",
+      "description": "Separated the canonical full biquaternion from its complex matrix representation and from a larger matrix carrier. Corrected unconditional use of Schur invariance, free phase as complex time, and a central U(1) lapse rescue.",
+      "evidence_ids": [
+        "core",
+        "verification"
+      ]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Reused the existing common torsion-free connection obstruction for the full carrier; checked involution covariance, texture reality and determinant obstruction, connection-transformed texture cancellation, all composite variation components, and a conditional real-dilation comparator including its full reduced Euler equations.",
+      "evidence_ids": [
+        "core",
+        "verification"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "direction",
+      "class": "discussion_context",
+      "locator": "Current private author directions in this research session; raw correspondence is not deposited.",
+      "original_checked": true,
+      "supports": "Author rejected a scalar-only starting field and requested a complete assumption audit.",
+      "limitations": "The tentative larger matrix suggestion does not specify a carrier representation, adopt a new action, or provide an author attestation."
+    },
+    {
+      "id": "core",
+      "class": "repository_artifact",
+      "locator": "canonical/fields/theta_field.tex; canonical/geometry/biquaternion_connection.tex; canonical/gr_closure/gap_10t_minimal_one_connection_gr_no_go.tex; canonical/gr_closure/gap_10t_split_jet_auxiliary_completion.tex at prior head 245c51a1b772b8d5132743eecf085d2c82d58deb",
+      "original_checked": true,
+      "supports": "Existing carrier definition, pure-pair obstruction, and distinguished split-jet comparison prevent extrapolating a scalar minisuperspace obstruction to all UBT.",
+      "limitations": "The microscopic action and its selected composite connection remain open; no new historical origin claim is made."
+    },
+    {
+      "id": "verification",
+      "class": "repository_artifact",
+      "locator": "formal/lean/UBT/Hamiltonian/PalatiniHolst.lean; tools/verify_physics_closure.py; tests/test_holst_carrier_assumptions.py; paired physics_closure_2026_10 report",
+      "original_checked": true,
+      "supports": "Finite algebraic proofs, exact matrix counterexamples, reality and full reduced chain-rule checks.",
+      "limitations": "No unrestricted symmetry lift, bundle/PDE classification, selected UBT action, or physical perturbation theorem is supplied."
+    }
+  ],
+  "rejected_alternatives": [
+    "Treating the scalar comparison ansatz as the author definition of Theta.",
+    "Inferring literal invariance of all fields from isotropy of the metric alone.",
+    "Replacing the canonical carrier by an unconstrained larger matrix without specifying the metric identity and action.",
+    "Calling a real jet dilation a temporal U(1) phase.",
+    "Claiming that extra Theta components automatically bypass the existing covariant common-connection obstruction."
+  ],
+  "verification": {
+    "status": "partial",
+    "artifacts": [
+      "formal/lean/UBT/Hamiltonian/PalatiniHolst.lean",
+      "tools/verify_physics_closure.py",
+      "tests/test_holst_carrier_assumptions.py"
+    ],
+    "limitations": "Exact finite algebra and specified comparator only. Full UBT action selection and unrestricted PDE/Dirac analysis remain open."
+  },
+  "attribution_status": "evidence_linked",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "Current correction and agent calculations are recorded separately; the canonical field and existing author attestations are unchanged."
+}

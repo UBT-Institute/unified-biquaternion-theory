@@ -208,6 +208,122 @@ This residual cannot vanish throughout any nonempty open positive-clock interval
 
 Consequently the naive continuation has no regular real trajectory satisfying both requirements within these unchanged assumptions. This is a corollary in the present ansatz of the existing pure-pair/concurrent-vector obstruction, not a new no-go for all UBT real slices. Flat real Minkowski representers and the separately postulated split-jet GR branch are not excluded. A real subset must be nonempty and preserved by the actual dynamics; inclusion of number systems alone does not establish those properties.
 
+<!-- BILINGUAL-UNIT: physics-closure.carrier-audit -->
+## Rechecking the field type before any cosmological reduction
+
+The author did not impose a scalar fundamental field. The choice $\Theta=iqV I$ belongs to the homogeneous comparison calculation. It discards three complex components and fixes the phase of the remaining one; no argument above derives that restriction from the full UBT equations. The canonical core in `canonical/fields/theta_field.tex` is
+\[
+\Theta=\theta^0\mathbf1+\theta^j\mathbf e_j\in\mathbb B,
+\qquad \theta^a\in\mathbb C,\qquad \mathbb B\simeq\operatorname{Mat}_2(\mathbb C).
+\]
+This is a noncommutative algebra-valued field, not a complex scalar times the identity. The four basis matrices span all complex $2\times2$ matrices. A larger faithful representation of the same algebra still has only four independent complex coefficients. The older $4\times4$/$8\times8$ ambient-size wording in `canonical/CANONICAL_DEFINITIONS.md` must not be interpreted as an independent-component count; `canonical/fields/theta_field.tex` already states the corrected distinction. This audit records the remaining documentation inconsistency without silently rewriting the unpaired legacy reference.
+
+| Carrier | Independent real components per value | Meaning |
+|---|---|---|
+| $\mathbb B$ | $8$ | Canonical core field |
+| $\operatorname{Mat}_2(\mathbb C)$ | $8$ | Equivalent faithful representation |
+| $\operatorname{Mat}_n(\mathbb B)$ | $8n^2$ | A larger matrix carrier for $n>1$, requiring explicit indices and action |
+
+A matrix of biquaternions can be studied, but it cannot be substituted for a representation of one biquaternion by counting matrix entries. Its involution, Lorentz/gauge actions, admissible real tetrad sector and central metric identity must be specified. For example, the natural diagonal block candidate $E_0=i\operatorname{diag}(1,2)\otimes I_2$ has $E_0^\sharp E_0=-\operatorname{diag}(1,4)\otimes I_2$, which is not a scalar multiple of $I_4$. This is a counterexample to automatic inheritance of the locked central identity, not a no-go for constrained matrix extensions. No such extension is adopted here.
+
+<!-- BILINGUAL-UNIT: physics-closure.symmetry-audit -->
+## What isotropy does and does not imply for Theta
+
+For the explicitly specified irreducible conjugation action $X\mapsto UXU^{-1}$ of $SU(2)$ on $\operatorname{Mat}_2(\mathbb C)$, invariance under every rotation indeed implies $X\in\mathbb C I_2$. Under uniform one-sided multiplication, invariance under $-I_2$ already forces $X=0$. These are statements about the chosen action and literal invariance of field values. Metric isotropy alone does not establish either hypothesis. Cosmological equivariance must specify the spatial symmetry action, its compensating left/right gauge action, the connections and the tetrad together. Consistency of varying a reduced action also needs its own symmetry-reduction argument; the general criterion is discussed by [Fels–Torre](https://arxiv.org/abs/gr-qc/0108033).
+
+Even in the existing carrier, a complete Lorentz frame change can make the components noncentral: $S=\operatorname{diag}(2,1/2)$ maps $iVI_2$ to $S(iVI_2)S^\dagger=iV\operatorname{diag}(4,1/4)$ while preserving the central tetrad metric, provided the connection is transformed too. This is a gauge-equivalent representative, so it does not remove a covariant obstruction. On a multiplicity carrier, $F\otimes I_2$ commutes with every $I_n\otimes U$ for any $F\in\operatorname{Mat}_n(\mathbb C)$; Schur's conclusion then applies to the irreducible rotation factor, not to the whole matrix. Consequently neither literal scalar Theta nor a list of only three possible cosmological completions follows from isotropy without a carrier and symmetry specification.
+
+<!-- BILINGUAL-UNIT: physics-closure.full-carrier-pair -->
+## The genuine common-connection obstruction survives a general biquaternion
+
+Correcting the scalar overrestriction does not erase the established pure-pair theorem. For the same Lorentz connection on the whole carrier, $D_\Omega\Theta=d\Theta+\Omega\Theta+\Theta\Omega^\dagger$ commutes with Hermitian conjugation. Decompose the full field, without changing the metric readout, as
+\[
+X=\frac{\Theta-\Theta^\dagger}{2},\qquad
+H_\Theta=\frac{\Theta+\Theta^\dagger}{2},\qquad r=\sqrt{N_0}.
+\]
+If $D_\Omega\Theta=rE$ with $E\in i\operatorname{Herm}_2$, then $D_\Omega X=rE$ and $D_\Omega H_\Theta=0$. Thus the extra Hermitian components are covariantly constant in this particular branch. Writing $X=rY^a\mathbf u_a$ and identifying this same connection with the torsion-free physical Lorentz connection gives
+\[
+\mathring\nabla_\mu Y^\nu=\delta_\mu{}^\nu,
+\qquad R^\rho{}_{\sigma\mu\nu}Y^\sigma=0,
+\qquad R_{\mu\nu}Y^\nu=0.
+\]
+This is the existing theorem in `canonical/gr_closure/gap_10t_minimal_one_connection_gr_no_go.tex`, applied before scalar reduction. In particular an Einstein vacuum with constant $\Lambda\ne0$ would force $Y=0$ throughout the patch and hence contradict the first equation. Changing the components or Lorentz gauge of Theta cannot bypass that theorem while retaining its hypotheses. Lean verifies the involution identity on an arbitrary ring with involution; the spacetime/concurrent-vector implication is reused from the canonical proof and remains `LEAN-PENDING` in this verification module.
+
+The restrictions matter: a general two-sided carrier action, the existing composite-torsion representer and the separately postulated split-jet GR branch do not all satisfy these hypotheses. The obstruction concerns the identification of the defining jet connection with the same torsion-free physical connection. It is not a theorem excluding UBT, every matrix extension or every homogeneous geometry.
+
+<!-- BILINGUAL-UNIT: physics-closure.phase-audit -->
+## Phase and temporal-center proposals checked against the full tetrad
+
+Use the original pure pair, real spatial boost $B$, real rotation and $\Theta=Ve^{i\varphi}I_2$. Its time derivative has coefficients
+\[
+\operatorname{Re}\dot\Theta=(\dot V\cos\varphi-V\dot\varphi\sin\varphi)I_2,
+\qquad
+\operatorname{Im}\dot\Theta=(\dot V\sin\varphi+V\dot\varphi\cos\varphi)I_2.
+\]
+The spatial derivative is $VB e^{i\varphi}\sigma_j\upsilon^j$. Membership of the complete tetrad in the fixed slice $i\operatorname{Herm}_2$ requires $VB\cos\varphi=0$. On a nondegenerate patch with $VB\ne0$, a smooth phase therefore has $\cos\varphi=0$ and $\dot\varphi=0$, so $N=\pm\dot V$. Reading only the imaginary time coefficient and discarding the spatial or temporal real part would change the locked readout. The field phase is also not by definition the complex-time coordinate $\psi$: for the holomorphic example $\Theta(\tau)=e^{i\tau}$, one has $\Theta(t+i\psi)=e^{-\psi}e^{it}$.
+
+A genuine temporal $u(1)$ generator is anti-Hermitian. For real $\chi$ and any Theta, centrality gives
+\[
+\Omega_t=i\chi I_2
+\quad\Longrightarrow\quad
+\Omega_t\Theta+\Theta\Omega_t^\dagger=0.
+\]
+It does not release the lapse. A real central coefficient instead gives a dilation: $\Omega_t=(u/2)I_2$ produces $u\Theta$ and, for $\Theta=iVI_2$, $N=\dot V+uV$. Such a term is not a phase or a metric-compatible physical Lorentz generator. It can only be compared as an explicitly distinguished relative jet component with its composite/auxiliary origin and variation stated. The existing split-jet architecture already makes this distinction. Lean and independent matrix calculations verify the phase cancellation and real-dilation coefficient.
+
+<!-- BILINGUAL-UNIT: physics-closure.texture-audit -->
+## The proposed sphere texture is not yet an admissible replacement
+
+Take exactly the suggested $\Theta=Ve^{i\varphi}g$, $g=x_0I_2+i\mathbf x\cdot\boldsymbol\sigma\in SU(2)$, with $x_0^2+|\mathbf x|^2=1$, the fixed Lorentz slice and the same traceless pure pair. At the old phase $\varphi=\pi/2$ and $g=I_2$, $dg=i\sigma_j\upsilon^j$ contributes $-V\sigma_j\upsilon^j$ to $d\Theta$. The real-parameter connection contributes $iVB\sigma_j\upsilon^j$. The resulting Hermitian part is nonzero, so this suggested substitution already fails the original tetrad reality condition.
+
+Freeing the phase does not cure this particular texture under any traceless pure pair. Its Hermitian part has
+\[
+H_\Theta=V(\cos\varphi\,x_0I_2-\sin\varphi\,\mathbf x\cdot\boldsymbol\sigma),
+\qquad
+\det H_\Theta=V^2(x_0^2-\sin^2\varphi).
+\]
+The preceding full-carrier identity requires $D_\Omega H_\Theta=0$. A traceless Lorentz pure pair preserves the determinant of a parallel Hermitian matrix, but this determinant varies spatially on every open sphere patch for $V\ne0$. CAS verifies the determinant and its infinitesimal connection invariance independently. This excludes the specified texture with this derivative and fixed real slice; it does not classify other equivariant textures or carrier actions. The general bundle/PDE classification is `LEAN-PENDING` because the representation and symmetry lift have not been selected.
+
+A consistent change of carrier trivialization must transform the connection as well. In the general two-sided notation, the right change $\Theta'=\Theta g$, $\mathcal A'=\mathcal A$, $\mathcal B'=g^{-1}\mathcal B g+g^{-1}dg$ gives $D'\Theta'=(D\Theta)g$. The apparent extra $dg$ term cancels. Lean verifies the noncommutative cancellation; whether this right action is an admissible gauge transformation preserving the real structure needs a separate intertwiner. The geometric $+1$ in $w=C+1$ was already produced by the Maurer–Cartan coframe; it cannot be counted as new dynamics from a gauge twist.
+
+On the left quotient $(2I)\backslash SU(2)$, $g$ is not an ordinary globally defined matrix-valued function: already $\Theta(-g)=-\Theta(g)$ because $-I_2\in2I$. An equivariant section of an associated bundle is a possible different specification, but its transition representation, connection and Lorentz-real tetrad must all descend together. The quotient supplies a locally round FLRW geometry; full global rotational isotropy must not be assumed from the covering sphere. No valid reduced texture action or Dirac count is claimed before these kinematic gates.
+
+<!-- BILINGUAL-UNIT: physics-closure.dilation-comparison -->
+## Conditional check of a real relative dilation, without a new UBT postulate
+
+To test the proposed lapse mechanism concretely, temporarily allow the real relative jet coefficient $u$ and retain the imported gravitational comparator with physical Lorentz boost $B$ and $w=C+1$. Before the composite substitution, a boundary-adjusted action is
+\[
+L_0=\mathscr C\left\{Na(B^2-w^2+1+2bBw)
+-2a\dot a(B+bw)-\frac\Lambda3Na^3\right\}.
+\]
+Its independent boost and rotation equations are
+\[
+B+bw=\dot a/N,\qquad -w+b(B-\dot a/N)=0.
+\]
+For every real $b$, they imply $w=0$ and $B=\dot a/N$, and $L_0$ reduces to the usual GR FLRW action. No self-dual coefficient is selected. Now put $B=a/V$, $N=\dot V+uV$ on $aV\ne0$. Writing $\mathcal E_q=\delta L_0/\delta q$ before substitution and a tilde after substitution, the full bulk chain rule gives
+\[
+\widetilde{\mathcal E}_u=V\mathcal E_N,\qquad
+\widetilde{\mathcal E}_V=-\frac a{V^2}\mathcal E_B+u\mathcal E_N-\frac d{dt}\mathcal E_N,
+\qquad
+\widetilde{\mathcal E}_a=\mathcal E_a+\frac1V\mathcal E_B,
+\qquad \widetilde{\mathcal E}_w=\mathcal E_w.
+\]
+All right-hand sides are evaluated after substitution. Hence stationary smooth trajectories recover both lapse and boost equations in this conditional comparison. Dropping $u$ beforehand removes precisely this variation. The statement is checked from both forms of the action, not by assuming the torsion-free answer.
+
+For a concrete closed vacuum example in units $\Lambda=3$, proper time $T>0$ admits
+\[
+a=\cosh T,\quad V=\coth T,\quad u=\coth T,\quad w=0,\quad N=1.
+\]
+All four substituted Euler equations vanish for every real $b$. Here $V=1/H$ follows from $B=a/V=\dot a/N$ on the patch $H\ne0$; it is a kinematic relation in the chosen representative, not a new cosmological prediction. This representative is singular at the de Sitter turning point $H=0$. Its defining jet has a real dilation, while the curvature action uses the physical Lorentz connection. Identifying both as one metric-compatible Lorentz connection would invalidate the construction. This is a conditional test inside the existing split-jet comparison space, not a selected UBT action, a proof of nonpropagation of a new field, or a repair by a temporal phase. Lean verifies the real algebraic Cartan solution; CAS verifies the boundary, all chain rules and the example. The functional equivalence and full constraint analysis of this proposed realization remain `LEAN-PENDING` pending its admissible auxiliary action.
+
+<!-- BILINGUAL-UNIT: physics-closure.rederivation-gate -->
+## Boundary of the rechecked derivation
+
+The original one-clock Hamiltonian calculation and its scoped self-dual obstruction survive rechecking. They are not a Hamiltonian of an unrestricted matrix-valued Theta theory. The unreduced composite variation must start with
+\[
+\delta(D_\mu\Theta)=D_\mu\delta\Theta+(\delta\mathcal A_\mu)\Theta-\Theta(\delta\mathcal B_\mu),
+\]
+including the induced tetrad, metric and reconstructed-connection variations. Every matrix component of this identity is independently checked. The remaining action-level gate is a specified carrier representation and permissible composite/auxiliary connection closure, a common action with boundary data, and a proof that the cosmological reduction retains its equations and constraints. A change of field type or unverified phase/texture substitution cannot supply those data. The current canonical core, central metric and adopted conditional GR branch are preserved; no unrestricted UBT Hamiltonian or new no-go for the full theory is inferred.
+
 <!-- BILINGUAL-UNIT: physics-closure.prediction -->
 ## Nonuniqueness, information principles and prediction boundary
 
@@ -225,9 +341,11 @@ The precise remaining obstruction is that neither the complete single-Theta acti
 | Real bivector inverse, square and zero kernel | PROVED | `formal/lean/UBT/Hamiltonian/PalatiniHolst.lean`; independent SymPy matrix | No derivation of the field Cartan equation |
 | Comparator momentum/constraint, zero canonical energy, velocity inversion, completed square | PROVED | Same Lean module; direct CAS differentiation | Finite algebraic identities only |
 | Continued canonical GR match and Hermitian-pair readout obstruction | PROVED | Same Lean module; `tests/test_holst_selfdual_canonical_gr.py` | Matching is algebraic; no admissible microscopic self-dual branch established |
+| Carrier, phase, gauge-cancellation and real Cartan algebra | PARTIAL | Same Lean module; `tests/test_holst_carrier_assumptions.py` | Six new Lean lemmas; exact matrix witnesses are checked in CAS; general equivariant bundle/PDE classification is LEAN-PENDING |
+| Conditional real-dilation variation and closed de Sitter example | CONDITIONAL | `tools/verify_physics_closure.py`; same carrier test | Imported action and distinguished relative jet; no new UBT postulate or unrestricted Dirac theorem |
 | Full homogeneous Poisson matrix, Dirac brackets and constraint strata | CONDITIONAL | `tools/verify_physics_closure.py`; `tests/test_physics_closure.py` | LEAN-PENDING: Poisson/Dirac definitions and geometric reduction |
 | Finite differences, covariance, trajectory convergence and precision | NUMERICALLY_TESTED | Same executable verifier, fixed seed and tolerances | Selected regular samples, not proofs |
 | Generic torsionful single-Theta dynamics and new physical prediction | OPEN_GAP | Exact missing inputs stated above | LEAN-PENDING: full action, variational spaces and PDE constraints |
 | Claim that the one-clock Palatini reduction automatically enforces all Einstein equations | REFUTED | Preserved exact normal-constraint counterexample | Only the stated homogeneous ansatz is excluded |
 
-Run `python tools/verify_physics_closure.py` and `python -m pytest -q tests/test_physics_closure.py tests/test_composite_palatin_holst_flrw.py`. The verifier emits package versions, every exact check, the seed, finite-difference errors, independent integrator convergence and precision residuals. Run `lake build UBT --wfail`, the existing Lean checker and the axiom audit separately. No unchecked theorem source or successful numerical comparison is formal verification. Independent bilingual semantic approval is required before merge; a structurally matched translation alone does not close that gate.
+Run `python tools/verify_physics_closure.py` and `python -m pytest -q tests/test_physics_closure.py tests/test_holst_selfdual_canonical_gr.py tests/test_holst_carrier_assumptions.py tests/test_composite_palatin_holst_flrw.py`. The verifier emits package versions, every exact check, the seed, finite-difference errors, independent integrator convergence and precision residuals. Run `lake build UBT --wfail`, the existing Lean checker and the axiom audit separately. No unchecked theorem source or successful numerical comparison is formal verification. Independent bilingual semantic approval is required before merge; a structurally matched translation alone does not close that gate.

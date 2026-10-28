@@ -208,6 +208,122 @@ Toto reziduum nemůže vymizet na celém neprázdném otevřeném intervalu klad
 
 Naivní pokračování tedy v těchto nezměněných předpokladech nemá regulární reálnou trajektorii splňující oba požadavky. Jde o důsledek stávající překážky čisté dvojice/souběžného vektoru v nynějším ansatzu, nikoli nový no-go pro všechny reálné řezy UBT. Ploché reálné Minkowského reprezentanty a samostatně postulovaná split-jet větev GR tím vyloučeny nejsou. Reálná podmnožina musí být neprázdná a zachovaná skutečnou dynamikou; samotná inkluze číselných systémů tyto vlastnosti nezajišťuje.
 
+<!-- BILINGUAL-UNIT: physics-closure.carrier-audit -->
+## Opětovná kontrola typu pole před kosmologickou redukcí
+
+Autor nepředpokládal skalární fundamentální pole. Volba $\Theta=iqV I$ patří k homogennímu srovnávacímu výpočtu. Vynechává tři komplexní složky a fixuje fázi zbývající složky; žádný výše uvedený argument toto omezení neodvozuje z úplných rovnic UBT. Kanonické jádro v `canonical/fields/theta_field.tex` je
+\[
+\Theta=\theta^0\mathbf1+\theta^j\mathbf e_j\in\mathbb B,
+\qquad \theta^a\in\mathbb C,\qquad \mathbb B\simeq\operatorname{Mat}_2(\mathbb C).
+\]
+Jde o pole s hodnotami v nekomutativní algebře, nikoli o komplexní skalár násobený identitou. Čtyři bázové matice generují všechny komplexní matice $2\times2$. Větší věrná reprezentace téže algebry má stále jen čtyři nezávislé komplexní koeficienty. Starší formulace o okolním rozměru $4\times4$/$8\times8$ v `canonical/CANONICAL_DEFINITIONS.md` se nesmí vykládat jako počet nezávislých složek; `canonical/fields/theta_field.tex` již obsahuje opravené rozlišení. Tento audit zaznamenává zbývající dokumentační nesoulad, aniž by potají přepisoval nepárovaný starší referenční dokument.
+
+| Prostor hodnot | Nezávislé reálné složky jedné hodnoty | Význam |
+|---|---|---|
+| $\mathbb B$ | $8$ | Kanonické jádro pole |
+| $\operatorname{Mat}_2(\mathbb C)$ | $8$ | Ekvivalentní věrná reprezentace |
+| $\operatorname{Mat}_n(\mathbb B)$ | $8n^2$ | Větší maticový prostor hodnot pro $n>1$, vyžadující explicitní indexy a působení |
+
+Matici bikvaternionů lze zkoumat, nelze ji však zaměnit za reprezentaci jednoho bikvaternionu pouhým počítáním maticových prvků. Musí být určena její involuce, Lorentzovo/kalibrační působení, přípustný reálný sektor tetrády a centrální metrická identita. Například přirozený diagonální blokový kandidát $E_0=i\operatorname{diag}(1,2)\otimes I_2$ dává $E_0^\sharp E_0=-\operatorname{diag}(1,4)\otimes I_2$, což není skalární násobek $I_4$. Jde o protipříklad automatického přenosu uzamčené centrální identity, nikoli o zákaz omezených maticových rozšíření. Žádné takové rozšíření zde nepřijímáme.
+
+<!-- BILINGUAL-UNIT: physics-closure.symmetry-audit -->
+## Co izotropie o Theta říká a co z ní neplyne
+
+Pro výslovně určené ireducibilní konjugační působení $X\mapsto UXU^{-1}$ grupy $SU(2)$ na $\operatorname{Mat}_2(\mathbb C)$ skutečně plyne z invariance vůči všem rotacím $X\in\mathbb C I_2$. Při jednotném jednostranném násobení již invariance vůči $-I_2$ vynucuje $X=0$. Jde o tvrzení o zvoleném působení a doslovné invarianci hodnot pole. Samotná izotropie metriky nedokazuje ani jeden předpoklad. Kosmologická ekvivariance musí společně určit působení prostorových symetrií, kompenzující levé/pravé kalibrační působení, konexe a tetrádu. Konzistence variace redukované akce rovněž potřebuje vlastní argument pro redukci symetrií; obecné kritérium rozebírají [Fels–Torre](https://arxiv.org/abs/gr-qc/0108033).
+
+I ve stávajícím prostoru hodnot může úplná změna Lorentzova reperu převést složky mimo centrum: $S=\operatorname{diag}(2,1/2)$ převádí $iVI_2$ na $S(iVI_2)S^\dagger=iV\operatorname{diag}(4,1/4)$ a zachovává centrální metriku tetrády, pokud se současně transformuje konexe. Jde o kalibračně ekvivalentního reprezentanta, který tedy neodstraňuje kovariantní překážku. V prostoru s násobností komutuje $F\otimes I_2$ s každým $I_n\otimes U$ pro libovolné $F\in\operatorname{Mat}_n(\mathbb C)$; Schurův závěr se pak vztahuje na ireducibilní rotační faktor, nikoli na celou matici. Z izotropie bez určení prostoru hodnot a symetrie proto neplyne ani doslova skalární Theta, ani seznam pouhých tří možných kosmologických doplnění.
+
+<!-- BILINGUAL-UNIT: physics-closure.full-carrier-pair -->
+## Skutečná překážka společné konexe platí i pro obecný bikvaternion
+
+Oprava příliš silného skalárního omezení neruší zavedenou větu o čisté dvojici. Pro tutéž Lorentzovu konexi na celém prostoru hodnot komutuje $D_\Omega\Theta=d\Theta+\Omega\Theta+\Theta\Omega^\dagger$ s hermitovským sdružením. Bez změny metrického vyčítání rozložme úplné pole jako
+\[
+X=\frac{\Theta-\Theta^\dagger}{2},\qquad
+H_\Theta=\frac{\Theta+\Theta^\dagger}{2},\qquad r=\sqrt{N_0}.
+\]
+Jestliže $D_\Omega\Theta=rE$ a $E\in i\operatorname{Herm}_2$, pak $D_\Omega X=rE$ a $D_\Omega H_\Theta=0$. Dodatečné hermitovské složky jsou tedy v této konkrétní větvi kovariantně konstantní. Zápis $X=rY^a\mathbf u_a$ a ztotožnění této konexe s fyzikální Lorentzovou konexí bez torze dávají
+\[
+\mathring\nabla_\mu Y^\nu=\delta_\mu{}^\nu,
+\qquad R^\rho{}_{\sigma\mu\nu}Y^\sigma=0,
+\qquad R_{\mu\nu}Y^\nu=0.
+\]
+Jde o existující větu v `canonical/gr_closure/gap_10t_minimal_one_connection_gr_no_go.tex`, použitou před skalární redukcí. Konkrétně Einsteinovo vakuum s konstantním $\Lambda\ne0$ by vynutilo $Y=0$ na celé oblasti, a tím odporovalo první rovnici. Změna složek nebo Lorentzovy kalibrace Theta tuto větu při zachování jejích předpokladů neobchází. Lean ověřuje identitu s involucí v libovolném okruhu s involucí; prostoročasový důsledek pro souběžný vektor přebíráme z kanonického důkazu a v tomto ověřovacím modulu zůstává `LEAN-PENDING`.
+
+Na omezeních záleží: obecné dvoustranné působení na prostoru hodnot, existující reprezentant s kompozitní torzí a samostatně postulovaná větev GR s rozděleným jetem nesplňují všechny tyto předpoklady. Překážka se týká ztotožnění konexe definujícího jetu s toutéž fyzikální konexí bez torze. Nejde o větu vylučující UBT, každé maticové rozšíření ani každou homogenní geometrii.
+
+<!-- BILINGUAL-UNIT: physics-closure.phase-audit -->
+## Návrhy fáze a časového centra ověřené vůči celé tetrádě
+
+Použijme původní čistou dvojici, reálný prostorový boost $B$, reálnou rotaci a $\Theta=Ve^{i\varphi}I_2$. Časová derivace má koeficienty
+\[
+\operatorname{Re}\dot\Theta=(\dot V\cos\varphi-V\dot\varphi\sin\varphi)I_2,
+\qquad
+\operatorname{Im}\dot\Theta=(\dot V\sin\varphi+V\dot\varphi\cos\varphi)I_2.
+\]
+Prostorová derivace je $VB e^{i\varphi}\sigma_j\upsilon^j$. Příslušnost celé tetrády k pevnému řezu $i\operatorname{Herm}_2$ vyžaduje $VB\cos\varphi=0$. Na nedegenerované oblasti s $VB\ne0$ proto hladká fáze splňuje $\cos\varphi=0$ a $\dot\varphi=0$, takže $N=\pm\dot V$. Vyčtení pouze imaginárního časového koeficientu a zahození prostorové nebo časové reálné části by změnilo uzamčené vyčítání. Fáze pole rovněž není z definice souřadnice komplexního času $\psi$: pro holomorfní příklad $\Theta(\tau)=e^{i\tau}$ platí $\Theta(t+i\psi)=e^{-\psi}e^{it}$.
+
+Skutečný časový generátor $u(1)$ je antihermitovský. Pro reálné $\chi$ a libovolné Theta dává centralita
+\[
+\Omega_t=i\chi I_2
+\quad\Longrightarrow\quad
+\Omega_t\Theta+\Theta\Omega_t^\dagger=0.
+\]
+Lapse tedy neuvolňuje. Reálný centrální koeficient naopak dává dilataci: $\Omega_t=(u/2)I_2$ vytváří $u\Theta$ a pro $\Theta=iVI_2$ vztah $N=\dot V+uV$. Tento člen není fází ani metrikově kompatibilním fyzikálním Lorentzovým generátorem. Lze jej srovnávat jen jako výslovně odlišenou relativní složku jetu s uvedeným kompozitním/pomocným původem a variací. Existující architektura rozděleného jetu toto rozlišení již zavádí. Lean a nezávislé maticové výpočty ověřují vyrušení fáze i koeficient reálné dilatace.
+
+<!-- BILINGUAL-UNIT: physics-closure.texture-audit -->
+## Navržená textura na sféře zatím není přípustnou náhradou
+
+Vezměme přesně navržené $\Theta=Ve^{i\varphi}g$, $g=x_0I_2+i\mathbf x\cdot\boldsymbol\sigma\in SU(2)$, kde $x_0^2+|\mathbf x|^2=1$, pevný Lorentzův řez a tutéž bezestopou čistou dvojici. Při původní fázi $\varphi=\pi/2$ a $g=I_2$ přispívá $dg=i\sigma_j\upsilon^j$ do $d\Theta$ členem $-V\sigma_j\upsilon^j$. Konexe s reálnými parametry přispívá $iVB\sigma_j\upsilon^j$. Výsledná hermitovská část je nenulová, takže tato navržená substituce již porušuje původní podmínku reality tetrády.
+
+Uvolnění fáze tuto konkrétní texturu při žádné bezestopé čisté dvojici nenapravuje. Její hermitovská část splňuje
+\[
+H_\Theta=V(\cos\varphi\,x_0I_2-\sin\varphi\,\mathbf x\cdot\boldsymbol\sigma),
+\qquad
+\det H_\Theta=V^2(x_0^2-\sin^2\varphi).
+\]
+Předchozí identita na úplném prostoru hodnot vyžaduje $D_\Omega H_\Theta=0$. Bezestopá Lorentzova čistá dvojice zachovává determinant paralelní hermitovské matice, tento determinant se však pro $V\ne0$ prostorově mění na každé otevřené oblasti sféry. CAS nezávisle ověřuje determinant a jeho infinitezimální invarianci vůči konexi. Tím je vyloučena uvedená textura s touto derivací a pevným reálným řezem; nejde o klasifikaci jiných ekvivariantních textur ani působení na prostoru hodnot. Obecná klasifikace bandlů/PDE zůstává `LEAN-PENDING`, protože reprezentace a zdvih symetrie nebyly vybrány.
+
+Konzistentní změna trivializace prostoru hodnot musí současně transformovat konexi. V obecném dvoustranném značení dává pravá změna $\Theta'=\Theta g$, $\mathcal A'=\mathcal A$, $\mathcal B'=g^{-1}\mathcal B g+g^{-1}dg$ vztah $D'\Theta'=(D\Theta)g$. Zdánlivý dodatečný člen $dg$ se vyruší. Lean ověřuje nekomutativní vyrušení; zda je toto pravé působení přípustnou kalibrační transformací zachovávající reálnou strukturu, potřebuje samostatné proplétající zobrazení. Geometrické $+1$ ve $w=C+1$ již vzniklo z Maurerovy–Cartanovy kofrámy; nelze je započítat jako novou dynamiku z kalibračního stočení.
+
+Na levém kvocientu $(2I)\backslash SU(2)$ není $g$ obyčejnou globálně definovanou maticovou funkcí: již $\Theta(-g)=-\Theta(g)$, protože $-I_2\in2I$. Ekvivariantní řez asociovaného bandlu je možnou odlišnou specifikací, ale jeho přechodová reprezentace, konexe a Lorentzovsky reálná tetráda musí sestoupit společně. Kvocient poskytuje lokálně kulovou geometrii FLRW; úplná globální rotační izotropie se nesmí předpokládat jen z pokrývající sféry. Před splněním těchto kinematických podmínek netvrdíme platnost redukované akce pro texturu ani počtu Diracových vazeb.
+
+<!-- BILINGUAL-UNIT: physics-closure.dilation-comparison -->
+## Podmíněná kontrola reálné relativní dilatace bez nového postulátu UBT
+
+Pro konkrétní test navrženého mechanismu lapse dočasně připusťme reálný relativní koeficient jetu $u$ a zachovejme importovaný gravitační srovnávací model s fyzikálním Lorentzovým boostem $B$ a $w=C+1$. Před kompozitní substitucí je akce po úpravě hraničního členu
+\[
+L_0=\mathscr C\left\{Na(B^2-w^2+1+2bBw)
+-2a\dot a(B+bw)-\frac\Lambda3Na^3\right\}.
+\]
+Její nezávislé rovnice boostu a rotace jsou
+\[
+B+bw=\dot a/N,\qquad -w+b(B-\dot a/N)=0.
+\]
+Pro každé reálné $b$ z nich plyne $w=0$ a $B=\dot a/N$ a $L_0$ se redukuje na obvyklou akci GR FLRW. Žádný samoduální koeficient se nevybírá. Nyní položme $B=a/V$, $N=\dot V+uV$ na $aV\ne0$. Označíme-li $\mathcal E_q=\delta L_0/\delta q$ před substitucí a vlnovkou výraz po substituci, úplné řetězové pravidlo v objemu dává
+\[
+\widetilde{\mathcal E}_u=V\mathcal E_N,\qquad
+\widetilde{\mathcal E}_V=-\frac a{V^2}\mathcal E_B+u\mathcal E_N-\frac d{dt}\mathcal E_N,
+\qquad
+\widetilde{\mathcal E}_a=\mathcal E_a+\frac1V\mathcal E_B,
+\qquad \widetilde{\mathcal E}_w=\mathcal E_w.
+\]
+Všechny pravé strany se vyhodnocují po substituci. Stacionární hladké trajektorie tedy v tomto podmíněném srovnání obnovují rovnici lapse i boostu. Vynechání $u$ předem odstraňuje právě tuto variaci. Tvrzení je ověřeno z obou tvarů akce, nikoli předpokládáním výsledku bez torze.
+
+Konkrétní příklad uzavřeného vakua v jednotkách $\Lambda=3$ připouští pro vlastní čas $T>0$
+\[
+a=\cosh T,\quad V=\coth T,\quad u=\coth T,\quad w=0,\quad N=1.
+\]
+Všechny čtyři Eulerovy rovnice po substituci vymizí pro každé reálné $b$. Zde plyne $V=1/H$ ze vztahu $B=a/V=\dot a/N$ na oblasti $H\ne0$; jde o kinematický vztah zvoleného reprezentanta, nikoli o novou kosmologickou predikci. Tento reprezentant je singulární v de Sitterově bodě obratu $H=0$. Jeho definující jet obsahuje reálnou dilataci, zatímco akce křivosti používá fyzikální Lorentzovu konexi. Ztotožnění obou s jedinou metrikově kompatibilní Lorentzovou konexí by konstrukci zneplatnilo. Jde o podmíněný test ve stávajícím srovnávacím prostoru rozděleného jetu, nikoli o vybranou akci UBT, důkaz nepropagování nového pole ani opravu časovou fází. Lean ověřuje reálné algebraické řešení Cartanových rovnic; CAS ověřuje hraniční člen, všechna řetězová pravidla a příklad. Funkcionální ekvivalence a úplná analýza vazeb tohoto navrženého uskutečnění zůstávají `LEAN-PENDING` do určení přípustné pomocné akce.
+
+<!-- BILINGUAL-UNIT: physics-closure.rederivation-gate -->
+## Hranice překontrolovaného odvození
+
+Původní výpočet hamiltoniánu s jedinými hodinami a jeho vymezená samoduální překážka obstály při opětovné kontrole. Nejde však o hamiltonián teorie s neomezeným maticovým Theta. Neredukovaná kompozitní variace musí začínat vztahem
+\[
+\delta(D_\mu\Theta)=D_\mu\delta\Theta+(\delta\mathcal A_\mu)\Theta-\Theta(\delta\mathcal B_\mu),
+\]
+včetně indukovaných variací tetrády, metriky a rekonstruované konexe. Každá maticová složka této identity je nezávisle ověřena. Zbývající podmínkou na úrovni akce je určená reprezentace prostoru hodnot a přípustné kompozitní/pomocné uzavření konexe, společná akce s hraničními daty a důkaz, že kosmologická redukce zachovává její rovnice a vazby. Změna typu pole ani neověřená substituce fáze/textury tato data neposkytuje. Stávající kanonické jádro, centrální metrika a přijatá podmíněná větev GR zůstávají zachovány; nevyvozujeme žádný neomezený hamiltonián UBT ani nový zákaz úplné teorie.
+
 <!-- BILINGUAL-UNIT: physics-closure.prediction -->
 ## Nejednoznačnost, informační principy a hranice predikce
 
@@ -225,9 +341,11 @@ Přesnou zbývající překážkou je, že nebyla vybrána úplná akce jedinéh
 | Reálná bivektorová inverze, druhá mocnina a nulové jádro | PROVED | `formal/lean/UBT/Hamiltonian/PalatiniHolst.lean`; nezávislá matice v SymPy | Bez odvození polní Cartanovy rovnice |
 | Momenty/vazba srovnávacího modelu, nulová kanonická energie, inverze rychlosti, doplnění na čtverec | PROVED | Tentýž modul Lean; přímé diferencování v CAS | Pouze konečné algebraické identity |
 | Pokračované kanonické přiřazení GR a překážka vyčítání hermitovskou dvojicí | PROVED | Tentýž modul Lean; `tests/test_holst_selfdual_canonical_gr.py` | Přiřazení je algebraické; přípustná mikroskopická samoduální větev není stanovena |
+| Algebra prostoru hodnot, fáze, kalibračního vyrušení a reálných Cartanových rovnic | PARTIAL | Tentýž modul Lean; `tests/test_holst_carrier_assumptions.py` | Šest nových lemmat Lean; přesné maticové příklady ověřuje CAS; obecná klasifikace ekvivariantních bandlů/PDE je LEAN-PENDING |
+| Podmíněná variace reálné dilatace a uzavřený de Sitterův příklad | CONDITIONAL | `tools/verify_physics_closure.py`; tentýž test prostoru hodnot | Importovaná akce a odlišený relativní jet; žádný nový postulát UBT ani neomezená Diracova věta |
 | Úplná homogenní Poissonova matice, Diracovy závorky a vrstvy vazeb | CONDITIONAL | `tools/verify_physics_closure.py`; `tests/test_physics_closure.py` | LEAN-PENDING: definice Poissonových/Diracových závorek a geometrická redukce |
 | Konečné diference, kovariance, konvergence trajektorie a přesnost | NUMERICALLY_TESTED | Tentýž spustitelný ověřovač, pevný seed a tolerance | Vybrané regulární vzorky, nikoli důkazy |
 | Obecná torzní dynamika jediného Theta a nová fyzikální predikce | OPEN_GAP | Přesné chybějící vstupy jsou uvedeny výše | LEAN-PENDING: úplná akce, variační prostory a vazby PDE |
 | Tvrzení, že Palatiniho redukce s jedinými hodinami automaticky ukládá všechny Einsteinovy rovnice | REFUTED | Zachovaný přesný protipříklad normálové vazby | Vyloučen je pouze uvedený homogenní ansatz |
 
-Spusťte `python tools/verify_physics_closure.py` a `python -m pytest -q tests/test_physics_closure.py tests/test_composite_palatin_holst_flrw.py`. Ověřovač vypisuje verze balíčků, každou přesnou kontrolu, seed, chyby konečných diferencí, konvergenci nezávislého integrátoru a rezidua přesnosti. Samostatně spusťte `lake build UBT --wfail`, stávající Lean checker a audit axiomů. Nezkontrolovaný zdroj věty ani úspěšné numerické srovnání nejsou formální ověření. Před sloučením je vyžadováno nezávislé schválení významové shody jazykových verzí; samotná strukturálně shodná translace tuto podmínku neuzavírá.
+Spusťte `python tools/verify_physics_closure.py` a `python -m pytest -q tests/test_physics_closure.py tests/test_holst_selfdual_canonical_gr.py tests/test_holst_carrier_assumptions.py tests/test_composite_palatin_holst_flrw.py`. Ověřovač vypisuje verze balíčků, každou přesnou kontrolu, seed, chyby konečných diferencí, konvergenci nezávislého integrátoru a rezidua přesnosti. Samostatně spusťte `lake build UBT --wfail`, stávající Lean checker a audit axiomů. Nezkontrolovaný zdroj věty ani úspěšné numerické srovnání nejsou formální ověření. Před sloučením je vyžadováno nezávislé schválení významové shody jazykových verzí; samotná strukturálně shodná translace tuto podmínku neuzavírá.

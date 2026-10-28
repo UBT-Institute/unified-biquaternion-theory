@@ -8,6 +8,7 @@ import Mathlib.Tactic.NormNum
 import Mathlib.Tactic.Positivity
 import Mathlib.Tactic.Ring
 import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.Abel
 
 /-!
 # Restricted Palatini--Holst closure
@@ -195,5 +196,62 @@ theorem no_closed_real_constant_ratio_trajectory (c lam V W : ℝ)
   have hsquares : V ^ 2 = W ^ 2 :=
     sub_eq_zero.mp ((mul_eq_zero.mp hdifference).resolve_left hcoefficient)
   exact hVW ((sq_eq_sq₀ (le_of_lt hV) (le_of_lt hW)).mp hsquares)
+
+/-- A central anti-Hermitian U(1) generator cancels in the pure pair. -/
+theorem temporal_center_phase_cancels (u : ℝ) :
+    Complex.I * (u : ℂ) + starRingEnd ℂ (Complex.I * (u : ℂ)) = 0 := by
+  apply Complex.ext <;> simp
+
+/-- A real central generator instead gives a dilation, not a phase. -/
+theorem temporal_center_real_is_dilation (u : ℝ) :
+    (u : ℂ) + starRingEnd ℂ (u : ℂ) = ((2 * u : ℝ) : ℂ) := by
+  simp
+  ring
+
+/-- For a nonzero real boost, membership of the spatial derivative in
+i Herm_2 forces the scalar coefficient to have zero real part. -/
+theorem scalar_phase_spatial_reality (z : ℂ) (B : ℝ) (hB : B ≠ 0)
+    (h : (z * (B : ℂ)).re = 0) : z.re = 0 := by
+  have hz : z.re * B = 0 := by simpa using h
+  exact (mul_eq_zero.mp hz).resolve_right hB
+
+/-- Cancellation of the apparent extra d g term under a simultaneous
+right-carrier connection transformation. No reality-preserving gauge group
+is inferred from this algebraic identity. -/
+theorem right_texture_covariance {R : Type*} [Ring R]
+    (x dx A B g dg ginv : R) (hginv : g * ginv = 1) :
+    (dx * g + x * dg) + A * (x * g) -
+      (x * g) * (ginv * B * g + ginv * dg) =
+      (dx + A * x - x * B) * g := by
+  have hcancel : (x * g) * ginv = x := by
+    rw [mul_assoc, hginv, mul_one]
+  simp only [mul_add, add_mul, sub_mul]
+  simp only [← mul_assoc, hcancel]
+  abel
+
+/-- The two independent homogeneous Cartan equations have the ordinary
+torsion-free solution for every real coefficient. This applies only when
+the lapse and boost variations are both actually available. -/
+theorem independent_real_Cartan_solution (b B w x : ℝ)
+    (hB : B + b * w - x = 0) (hw : -w + b * (B - x) = 0) :
+    w = 0 ∧ B = x := by
+  have hp : b * (B + b * w - x) = 0 := by rw [hB]; ring
+  have hproduct : (1 + b ^ 2) * w = 0 := by nlinarith [hp, hw]
+  have hwzero : w = 0 :=
+    (mul_eq_zero.mp hproduct).resolve_left (ne_of_gt (real_holst_denominator_pos b))
+  constructor
+  · exact hwzero
+  · apply sub_eq_zero.mp
+    simpa [hwzero] using hB
+
+/-- The pure pair commutes with the involution on the WHOLE carrier, not
+only on scalar matrices. Thus an anti-Hermitian generated tetrad receives
+no derivative contribution from the Hermitian part of Theta. -/
+theorem pure_pair_star_covariance {R : Type*} [Ring R] [StarRing R]
+    (x dx A : R) :
+    Star.star (dx + A * x + x * Star.star A) =
+      Star.star dx + A * Star.star x + Star.star x * Star.star A := by
+  simp only [star_add, star_mul, star_star]
+  abel
 
 end UBT.Hamiltonian.PalatiniHolst

@@ -157,6 +157,165 @@ def selfdual_checks():
 
 
 @lru_cache(maxsize=1)
+def carrier_checks():
+    """Audit the carrier, reality and gauge assumptions BEFORE reduction.
+
+    Matrix examples refer to the specified pure Hermitian pair and fixed
+    W_L=i Herm_2. They do not classify every possible Theta representation.
+    Hermitian decomposition below tests membership; it is not a metric readout.
+    """
+    I, zero = s.eye(2), s.zeros(2)
+    pauli = [s.Matrix([[0, 1], [1, 0]]), s.Matrix([[0, -s.I], [s.I, 0]]), s.diag(1, -1)]
+    sharp = lambda m: s.trace(m)*I-m  # quaternion, NOT Hermitian, conjugation
+    clean = lambda m: m.applyfunc(s.simplify)
+    equal = lambda x, y: clean(x-y) == s.zeros(*x.shape)
+    checks = {}
+    z = s.symbols("z:4")
+    units = [I]+[-s.I*p for p in pauli]
+    theta = sum((z[j]*units[j] for j in range(4)), zero)
+    checks["four_complex_components_span_all_two_by_two_matrices"] = (
+        s.Matrix.hstack(*(m.reshape(4, 1) for m in units)).rank() == 4)
+    checks["quaternion_sharp_is_matrix_adjugate"] = equal(sharp(theta)*theta, theta.det()*I)
+    # A larger matrix of biquaternions is a different carrier. Even its scalar
+    # block subalgebra need not have a central geometric square.
+    enlarged_time = s.kronecker_product(s.diag(s.I, 2*s.I), I)
+    checks["larger_block_carrier_does_not_automatically_have_central_metric"] = (
+        enlarged_time*enlarged_time == -s.diag(1, 1, 4, 4) and
+        enlarged_time*enlarged_time != -s.eye(4))
+
+    # Schur's conclusion is conditional on this exact conjugation action.
+    entries = s.symbols("m:4")
+    M = s.Matrix(2, 2, entries)
+    equations = list(M*pauli[0]-pauli[0]*M)+list(M*pauli[2]-pauli[2]*M)
+    checks["irreducible_conjugation_fixed_matrices_are_central"] = (
+        s.linsolve(equations, entries) == s.FiniteSet((entries[3], 0, 0, entries[3])))
+    checks["one_sided_rotation_fixed_matrix_is_zero"] = s.linsolve(
+        list((-I)*M-M), entries) == s.FiniteSet((0, 0, 0, 0))
+    flavour = s.kronecker_product(s.diag(1, 2), I)
+    checks["multiplicity_carrier_has_noncentral_rotation_invariants"] = (
+        all(flavour*s.kronecker_product(I, p) == s.kronecker_product(I, p)*flavour for p in pauli)
+        and flavour != s.eye(4))
+    # A Lorentz change of frame of a central representative need not remain
+    # central. Transform the complete connection and tetrad as well.
+    S = s.diag(2, s.Rational(1, 2))
+    transformed = S*(s.I*I)*S.conjugate().T
+    checks["Lorentz_gauge_equivalent_Theta_can_be_noncentral"] = (
+        transformed+transformed.conjugate().T == zero and
+        transformed*pauli[0]-pauli[0]*transformed != zero)
+    e = s.symbols("e:4", real=True)
+    E = s.I*(e[0]*I+sum((e[j+1]*pauli[j] for j in range(3)), zero))
+    ES = S*E*S.conjugate().T
+    checks["Lorentz_frame_change_preserves_full_central_metric"] = equal(
+        sharp(ES)*ES, (-e[0]**2+sum(x*x for x in e[1:]))*I)
+
+    # General composite variation: no spatial or internal component discarded.
+    X, dX, A, B, deltaX, deltaDX, deltaA, deltaB = [
+        s.Matrix(2, 2, s.symbols(f"{name}:4"))
+        for name in ("X", "dX", "A", "B", "deltaX", "deltaDX", "deltaA", "deltaB")]
+    eps = s.Symbol("epsilon")
+    varied = dX+eps*deltaDX+(A+eps*deltaA)*(X+eps*deltaX)-(X+eps*deltaX)*(B+eps*deltaB)
+    predicted = deltaDX+A*deltaX-deltaX*B+deltaA*X-X*deltaB
+    checks["all_matrix_components_of_composite_first_variation"] = equal(s.diff(varied, eps).subs(eps, 0), predicted)
+    pair = dX+A*X+X*A.conjugate().T
+    checks["pure_pair_commutes_with_Hermitian_involution_on_full_carrier"] = equal(
+        pair.conjugate().T, dX.conjugate().T+A*X.conjugate().T+X.conjugate().T*A.conjugate().T)
+
+    time, psi = s.symbols("time psi", real=True)
+    checks["field_phase_is_not_complex_time_coordinate"] = s.simplify(
+        s.exp(s.I*(time+s.I*psi))-s.exp(-psi)*(s.cos(time)+s.I*s.sin(time))) == 0
+
+    V, vd, phase, phase_d, boost, rot, u, chi = s.symbols(
+        "V vd phase phase_d boost rot u chi", real=True)
+    checks["central_phase_connection_cancels_in_pure_pair"] = equal(
+        (s.I*chi*I)*(s.I*V*I)+(s.I*V*I)*(s.I*chi*I).conjugate().T, zero)
+    checks["real_central_connection_is_dilation"] = equal(
+        (u*I/2)*(s.I*V*I)+(s.I*V*I)*(u*I/2).conjugate().T, s.I*u*V*I)
+    phasor = s.cos(phase)+s.I*s.sin(phase)
+    temporal = phasor*(vd+s.I*V*phase_d)
+    checks["scalar_phase_temporal_real_part"] = s.simplify(s.re(temporal)-(vd*s.cos(phase)-V*phase_d*s.sin(phase))) == 0
+    checks["scalar_phase_temporal_lapse_before_reality"] = s.simplify(s.im(temporal)-(vd*s.sin(phase)+V*phase_d*s.cos(phase))) == 0
+    for j, sigma in enumerate(pauli):
+        omega = (boost+s.I*rot)*sigma/2
+        spatial = omega*(V*phasor*I)+(V*phasor*I)*omega.conjugate().T
+        checks[f"scalar_phase_spatial_reality_condition_{j}"] = equal(
+            spatial+spatial.conjugate().T, 2*V*boost*s.cos(phase)*sigma)
+        # At the identity of SU(2), g^-1 dg=i sigma_j upsilon^j.
+        texture_derivative = V*s.I*(s.I*sigma)
+        proposed_texture = texture_derivative+omega*(s.I*V*I)+(s.I*V*I)*omega.conjugate().T
+        checks[f"proposed_texture_at_fixed_phase_violates_slice_{j}"] = equal(
+            proposed_texture+proposed_texture.conjugate().T, -2*V*sigma)
+
+    # For an arbitrary phase, DTheta in i Herm implies D(Herm Theta)=0.
+    # Any sl2(C) pure pair preserves determinant of a parallel Hermitian value.
+    h0, h1, h2, h3 = s.symbols("h:4", real=True)
+    H = h0*I+sum((h*sig for h, sig in zip((h1, h2, h3), pauli)), zero)
+    q = s.symbols("q:6", real=True)
+    Omega = sum(((q[j]+s.I*q[j+3])*pauli[j]/2 for j in range(3)), zero)
+    response = Omega*H+H*Omega.conjugate().T
+    checks["sl2_pure_pair_preserves_Hermitian_determinant_infinitesimally"] = (
+        s.expand((H+eps*response).det()).coeff(eps, 1) == 0)
+    # Exact one-parameter curve g=diag(cos x+i sin x, cos x-i sin x).
+    x = s.Symbol("x", real=True)
+    g = s.diag(s.cos(x)+s.I*s.sin(x), s.cos(x)-s.I*s.sin(x))
+    textured = V*phasor*g
+    Htexture = clean((textured+textured.conjugate().T)/2)
+    checks["texture_Hermitian_determinant_is_spatially_nonconstant"] = (
+        s.trigsimp(Htexture.det()-V**2*(s.cos(x)**2-s.sin(phase)**2)) == 0
+        and s.simplify(s.diff(Htexture.det(), x).subs(x, s.pi/4)) == -V**2)
+    # Exact noncommuting matrices independently witness right-trivialization
+    # covariance and cancellation of the apparent extra d g term.
+    g = s.Matrix([[1, 1], [0, 1]])
+    dg = s.Matrix([[2, 3], [4, 5]])
+    transformed_B = g.inv()*B*g+g.inv()*dg
+    checks["right_texture_covariance_requires_connection_transform"] = equal(
+        dX*g+X*dg+A*X*g-X*g*transformed_B, (dX+A*X-X*B)*g)
+    checks["texture_does_not_descend_as_ordinary_quotient_function"] = (
+        (-I)*(s.I*V*I) != s.I*V*I)
+    return checks
+
+
+@lru_cache(maxsize=1)
+def dilation_comparator_checks():
+    """Conditional lapse/boost variation audit, not a proposed UBT repair.
+
+    u is a REAL relative jet dilation, not a U(1) phase or metric-compatible
+    physical spin connection. Admitting it requires its own auxiliary origin.
+    """
+    t = s.Symbol("t", real=True)
+    a, V, w, u, N, B = [s.Function(n)(t) for n in ("a", "V", "w", "u", "N", "B")]
+    b, lam, C = s.symbols("b Lambda C", real=True)
+    av = s.diff(a, t)
+    L = C*(N*a*(B**2-w**2+1+2*b*B*w)-2*a*av*(B+b*w)-lam*N*a**3/3)
+    original = C*(a*(N*(B**2-w**2+1)+a*s.diff(B, t))+
+                  b*a*(2*N*B*w+a*s.diff(w, t))-lam*N*a**3/3)
+    EL = lambda lag, q: s.diff(lag, q)-s.diff(s.diff(lag, s.diff(q, t)), t)
+    simple = lambda x: s.factor(x.doit()) == 0
+    EN, EB, EW, EA = [EL(L, q) for q in (N, B, w, a)]
+    replacement = {B: a/V, N: s.diff(V, t)+u*V}
+    replace = lambda f: f.subs(replacement, simultaneous=True).doit()
+    comp = replace(L)
+    checks = {
+        "independent_lapse_boost_action_boundary": simple(original-L-s.diff(C*a**2*(B+b*w), t)),
+        "full_independent_boost_Euler_equation": simple(EB-2*C*a*N*(B+b*w-av/N)),
+        "full_independent_rotation_Euler_equation": simple(EW-2*C*a*N*(-w+b*(B-av/N))),
+        "dilation_lapse_chain_rule": simple(EL(comp, u)-V*replace(EN)),
+        "dilation_amplitude_chain_rule": simple(EL(comp, V)-(-a*replace(EB)/V**2+u*replace(EN)-s.diff(replace(EN), t))),
+        "dilation_scale_chain_rule": simple(EL(comp, a)-replace(EA)-replace(EB)/V),
+        "dilation_rotation_chain_rule": simple(EL(comp, w)-replace(EW)),
+        "regular_lapse_boost_response_minor": simple(s.det(s.Matrix([[-a/V**2, 0], [u, V]]))+a/V),
+        "ordinary_real_Cartan_solution": simple(L.subs({B: av/N, w: 0})-C*(-a*av**2/N+N*a-lam*N*a**3/3)),
+    }
+    # A concrete closed de Sitter patch, not an arbitrary matter derivation.
+    point = {a: s.cosh(t), V: s.coth(t), u: s.coth(t), w: 0, lam: 3, C: 1}
+    for q, name in ((a, "scale"), (V, "amplitude"), (u, "dilation"), (w, "rotation")):
+        checks[f"conditional_dilation_deSitter_{name}_Euler_equation"] = s.simplify(EL(comp, q).subs(point).doit()) == 0
+    checks["conditional_dilation_deSitter_unit_lapse"] = s.simplify(replace(N).subs(point).doit()-1) == 0
+    checks["conditional_dilation_deSitter_Hubble_relation"] = s.simplify(
+        (V*av/(a*replace(N))).subs(point).doit()-1) == 0
+    return checks
+
+
+@lru_cache(maxsize=1)
 def symbolic_checks():
     C, b, a, V, N = s.symbols("C b a V N", nonzero=True, real=True)
     lam, av, w, pa, pV, pw = s.symbols("lam av w pa pV pw", real=True)
@@ -329,10 +488,11 @@ def numerical_checks():
 
 
 def verify():
-    exact = dict(symbolic_checks(), **fourform_variation_checks(), **selfdual_checks())
+    exact = dict(symbolic_checks(), **fourform_variation_checks(), **selfdual_checks(),
+                 **carrier_checks(), **dilation_comparator_checks())
     numeric = numerical_checks()
     return {
-        "scope": "real bivector algebra and specified one-clock homogeneous comparator only",
+        "scope": "real bivector algebra, specified one-clock comparator, and explicitly scoped carrier/reality/variation audits",
         "versions": {"sympy": s.__version__, "numpy": np.__version__, "scipy": scipy.__version__, "mpmath": mp.__version__},
         "symbolic": exact, "numerical": numeric,
         "passed": all(exact.values()) and all(numeric["checks"].values()),

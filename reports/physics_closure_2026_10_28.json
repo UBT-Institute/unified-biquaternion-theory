@@ -1,5 +1,5 @@
 {
-  "scope": "real bivector algebra and specified one-clock homogeneous comparator only",
+  "scope": "real bivector algebra, specified one-clock comparator, and explicitly scoped carrier/reality/variation audits",
   "versions": {
     "sympy": "1.14.0",
     "numpy": "2.3.5",
@@ -80,7 +80,47 @@
     "closed_real_readout_constant_coefficient": true,
     "real_comparator_initial_scale_velocity": true,
     "real_comparator_initial_clock_momentum": true,
-    "real_comparator_initial_rotation": true
+    "real_comparator_initial_rotation": true,
+    "four_complex_components_span_all_two_by_two_matrices": true,
+    "quaternion_sharp_is_matrix_adjugate": true,
+    "larger_block_carrier_does_not_automatically_have_central_metric": true,
+    "irreducible_conjugation_fixed_matrices_are_central": true,
+    "one_sided_rotation_fixed_matrix_is_zero": true,
+    "multiplicity_carrier_has_noncentral_rotation_invariants": true,
+    "Lorentz_gauge_equivalent_Theta_can_be_noncentral": true,
+    "Lorentz_frame_change_preserves_full_central_metric": true,
+    "all_matrix_components_of_composite_first_variation": true,
+    "pure_pair_commutes_with_Hermitian_involution_on_full_carrier": true,
+    "field_phase_is_not_complex_time_coordinate": true,
+    "central_phase_connection_cancels_in_pure_pair": true,
+    "real_central_connection_is_dilation": true,
+    "scalar_phase_temporal_real_part": true,
+    "scalar_phase_temporal_lapse_before_reality": true,
+    "scalar_phase_spatial_reality_condition_0": true,
+    "proposed_texture_at_fixed_phase_violates_slice_0": true,
+    "scalar_phase_spatial_reality_condition_1": true,
+    "proposed_texture_at_fixed_phase_violates_slice_1": true,
+    "scalar_phase_spatial_reality_condition_2": true,
+    "proposed_texture_at_fixed_phase_violates_slice_2": true,
+    "sl2_pure_pair_preserves_Hermitian_determinant_infinitesimally": true,
+    "texture_Hermitian_determinant_is_spatially_nonconstant": true,
+    "right_texture_covariance_requires_connection_transform": true,
+    "texture_does_not_descend_as_ordinary_quotient_function": true,
+    "independent_lapse_boost_action_boundary": true,
+    "full_independent_boost_Euler_equation": true,
+    "full_independent_rotation_Euler_equation": true,
+    "dilation_lapse_chain_rule": true,
+    "dilation_amplitude_chain_rule": true,
+    "dilation_scale_chain_rule": true,
+    "dilation_rotation_chain_rule": true,
+    "regular_lapse_boost_response_minor": true,
+    "ordinary_real_Cartan_solution": true,
+    "conditional_dilation_deSitter_scale_Euler_equation": true,
+    "conditional_dilation_deSitter_amplitude_Euler_equation": true,
+    "conditional_dilation_deSitter_dilation_Euler_equation": true,
+    "conditional_dilation_deSitter_rotation_Euler_equation": true,
+    "conditional_dilation_deSitter_unit_lapse": true,
+    "conditional_dilation_deSitter_Hubble_relation": true
   },
   "numerical": {
     "seed": 20261028,
@@ -127,9 +167,9 @@
     "lean_version": "4.33.1",
     "lean_release_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
     "mathlib_revision": "0df444a360eaa60ab8c11dca51a86af692955474",
-    "lake_build_UBT_wfail": "PASS",
-    "leanchecker_UBT": "PASS at the earlier 16-theorem revision; the current changed module has been separately replayed successfully",
-    "new_theorem_axiom_audit": "PASS, all 17 theorem declarations use only the listed standard axioms",
+    "lake_build_UBT_wfail": "PASS, current 23-theorem source",
+    "leanchecker_UBT": "PASS at the earlier 16-theorem revision locally and at the 17-theorem prior head in GitHub CI; current 23-theorem changed module replay passed separately",
+    "new_theorem_axiom_audit": "PASS, all 23 declarations use only the listed standard axioms",
     "allowed_axioms": [
       "propext",
       "Classical.choice",
@@ -152,17 +192,25 @@
       "hermitian_pair_after_continuation",
       "generated_scale_after_continuation",
       "original_scale_requires_zero_defect",
-      "no_closed_real_constant_ratio_trajectory"
+      "no_closed_real_constant_ratio_trajectory",
+      "temporal_center_phase_cancels",
+      "temporal_center_real_is_dilation",
+      "scalar_phase_spatial_reality",
+      "right_texture_covariance",
+      "independent_real_Cartan_solution",
+      "pure_pair_star_covariance"
     ],
     "scope": "Only the formal statements and declared assumptions; full field variation, physical Dirac algebra and microscopic branch admissibility remain pending.",
     "environment_note": "Unmodified release kernel; local host compatibility redirected only the process own executable-path lookup to /proc/self/exe. Standard GitHub runner needs no such compatibility shim.",
-    "leanchecker_new_module": "PASS, exit 0, current 17-theorem module"
+    "leanchecker_new_module": "PASS, exit 0, current 23-theorem module"
   },
   "tests": {
     "full_existing_suite_after_initial_closure_changes": "PASS, exit 0; additional self-dual tests verified separately after user steering",
     "targeted_closure_selfdual_provenance_tests": "PASS, exit 0",
     "bilingual_structure": "PASS, 265 pairs",
-    "independent_bilingual_semantics": "PENDING_GITHUB_CI"
+    "independent_bilingual_semantics": "PENDING_GITHUB_CI",
+    "carrier_reality_and_variation_regressions": "PASS, 120 targeted tests across closure, full-carrier, real dilation, existing one-connection/split-jet, curvature signs and Lorentz-slice checks",
+    "provenance_regressions": "PASS, provenance header/review and research-origin event tests; 3 public event records validated"
   },
   "github_ci_observation": {
     "source_commit": "e8aea490f229273227cfb095cbc1eb73b59a615f",
@@ -191,13 +239,14 @@
     "note": "These observations bind the stated source commit. They do not assert approval of a later commit or replace fresh required checks."
   },
   "source_sha256": {
-    "formal/lean/UBT/Hamiltonian/PalatiniHolst.lean": "07ee6dbd590fd4dda54efdeae2456c8ea0a52bb7ab67426a142b68961b5e8da8",
-    "tools/verify_physics_closure.py": "bee285d3c2290d8a60596a584bb5963aca4ee99610c5b7df31f7527b7ad85c82",
+    "formal/lean/UBT/Hamiltonian/PalatiniHolst.lean": "4f6c6c50dee649ab6af19a1cd0f8eb3e557de8f86ec29a3b43f7015a9be82b15",
+    "tools/verify_physics_closure.py": "e220702de90fde4022a2d3a441eb097ef0ce56c8687756126b835fc845fbcc0f",
     "tools/requirements_physics_closure.txt": "5b44555a476c15c6387c67985f3dbe52ba56994324cdf3bd755128d1566f7e9f",
     "tests/test_physics_closure.py": "34607e47b470588088366c826532009696d9a1a511615529b5abd611fd0a858d",
     "tests/test_holst_selfdual_canonical_gr.py": "e9f7928a94578d4760be787e084c808be066660c3d0a194008d8f8aed3e7b477",
-    "research_tracks/action_selection/physics_closure_2026_10.en.md": "71a9e0697d5fb3ac3ea80706923c4dd7150c8a8ed2fa286f317c6d92821175d5",
-    "research_tracks/action_selection/physics_closure_2026_10.cs.md": "e7ddb1397968560df75196149f9cb8c1b2f1201f3afe468463fce22982fc5ce0"
+    "research_tracks/action_selection/physics_closure_2026_10.en.md": "1562ba98f3cd5029d99fc844b8c8584c76d99da8511cc5f941dd1683d1d86f31",
+    "research_tracks/action_selection/physics_closure_2026_10.cs.md": "b46cc728abac4da3e5bb3224a396c84381a4dd0e684f503a64892d872e2396a2",
+    "tests/test_holst_carrier_assumptions.py": "7c19d01a892a5416a43ae811eb91c8d7c33d029a82d0e1c99b7e798a7052e022"
   },
   "real_subset_followup": {
     "status": "PROVED_RESTRICTED_ALGEBRA",
@@ -205,5 +254,35 @@
     "theorem": "no_closed_real_constant_ratio_trajectory",
     "scope": "Once readout gives a=cV, the scale Euler residual cannot vanish at two distinct positive clocks. Other real sectors are not excluded.",
     "real_comparator_trajectory": "The existing real b=1 integrator example is retained as a nonempty real local comparator sector."
+  },
+  "carrier_audit_followup": {
+    "status": "PARTIAL",
+    "prior_head_sha": "245c51a1b772b8d5132743eecf085d2c82d58deb",
+    "scope": "Canonical full biquaternion versus matrix representation/extension, specified symmetry actions and fixed Lorentz slice; no new field carrier or canonical action adopted.",
+    "findings": [
+      "Scalar Theta is an ansatz, not the author definition.",
+      "Pure-pair involution covariance extends the existing common torsion-free connection obstruction to the full carrier.",
+      "A genuine central U(1) phase cancels; a real dilation has different assumptions.",
+      "The proposed Ve^(i phase)*g texture violates the fixed-slice pure-pair requirements; other symmetry lifts are not classified.",
+      "The admitted relative real-dilation comparator recovers independent lapse and boost equations and the explicit closed de Sitter example for every real Holst coefficient."
+    ],
+    "new_Lean_theorems": [
+      "temporal_center_phase_cancels",
+      "temporal_center_real_is_dilation",
+      "scalar_phase_spatial_reality",
+      "right_texture_covariance",
+      "independent_real_Cartan_solution",
+      "pure_pair_star_covariance"
+    ],
+    "exact_check_count": 114,
+    "new_check_count": 40,
+    "not_proved": [
+      "microscopic action selection",
+      "arbitrary matrix-carrier metric/reality structure",
+      "unrestricted equivariant symmetry reduction",
+      "global bundle/PDE classification",
+      "full auxiliary-action Dirac algebra",
+      "new cosmological prediction"
+    ]
   }
 }

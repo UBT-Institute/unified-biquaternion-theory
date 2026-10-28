@@ -324,16 +324,25 @@ claims:
     naive_self_dual_Hermitian_readout_compatibility: REFUTED
     naive_self_dual_closed_real_trajectory: REFUTED
     real_trajectory_scope: Unchanged positive-clock closed-FLRW ansatz with the original Hermitian readout and constant Lambda only.
+    scalar_Theta_as_full_UBT_definition: REFUTED
+    full_carrier_pure_pair_obstruction: CONDITIONAL
+    temporal_U1_phase_lapse_rescue: REFUTED
+    specified_sphere_texture_pure_pair_admissibility: REFUTED
+    real_relative_dilation_comparator: CONDITIONAL
+    carrier_audit_scope: The canonical core is one full biquaternion; scalar reduction, fixed carrier action, Lorentz slice, physical connection and auxiliary jet assumptions are distinguished explicitly. No matrix extension or new canonical action is adopted.
     evidence:
     - research_tracks/action_selection/physics_closure_2026_10.en.md
     - research_tracks/action_selection/physics_closure_2026_10.cs.md
     - formal/lean/UBT/Hamiltonian/PalatiniHolst.lean
     - tools/verify_physics_closure.py
     - tests/test_physics_closure.py
+    - tests/test_holst_carrier_assumptions.py
     assumptions:
     - Independent-connection vacuum equivalence and the one-clock homogeneous composite reduction are distinct variational problems.
     - The restricted operator classification assumes constant coefficients and geometric derivative order at most two; it is not the full UBT action space.
     - The homogeneous Dirac count does not establish the local field-theoretic spectrum.
+    - Metric isotropy alone does not establish literal invariance of Theta under a specified irreducible conjugation action.
+    - The common torsion-free physical pure-pair connection has an existing concurrent-vector obstruction even before a scalar reduction; split-jet and torsionful branches have different hypotheses.
     - Holst and other torsion coefficients are not selected by the tested information, shared-record or causal-cone conditions.
     forbidden_wording:
     - a unique microscopic UBT action has been selected by this audit
