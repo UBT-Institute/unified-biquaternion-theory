@@ -13,7 +13,7 @@ UBT-AI-PROVENANCE-END
 
 # G1: explicitně zakřivená Lorentzova metrika z bikvaternionu a překážka lineárních módů
 
-**28. 10. 2026 · C_working · pouze PR #809 · BEZ POVÝŠENÍ DO CANONICAL.**
+**2026-10-28 · C_working · pouze PR #809 · BEZ POVÝŠENÍ DO CANONICAL.**
 Navazujeme na konformní track kauzality a sdílené reality.
 Testujeme, zda *komplexní složky* pole Theta umožňují
 nenulovou křivost bez nezávislé tetrády. Důsledně oddělujeme
@@ -87,7 +87,7 @@ směrům přibývá právě jeden *imaginární*
 maticový směr. Polarizací dTheta vyjde
 
 \[
- \boxed{g=\eta-d(\kappa tx)\otimes d(\kappa tx),}
+ \boxed{g=\eta-\mathrm d(\kappa tx)\otimes\mathrm d(\kappa tx),}
 \]
 \[
  ds^2=dt^2-dx^2-dy^2-dz^2
@@ -254,7 +254,7 @@ Kandidát B (nulový směr / traktorový
 kompenzátor) je jako *bodové*
 plně G-ekvivariantní zobrazení G/K→G/P
 vyloučen větou T2. Jetově závislá
-redukce je stále **OTEVŘENÁ**.
+redukce je stále **OPEN / OTEVŘENÁ**.
 Volná soldering komponenta e^a
 Cartanovy konexe je sice legitimním
 gravitačním polem, ale sama nedokazuje,
