@@ -107,6 +107,17 @@ class TestThetaCentralMetricBridge(unittest.TestCase):
             for i in range(4)])
         self.assertEqual(R.rank(),3)
 
+    def test_rank_four_real_part_forces_null_imaginary_jet_to_zero(self):
+        # In Lorentz (1,3) a totally isotropic real subspace has dim<=1.
+        # A Lorentz basis change puts the nonzero generator along I+S1.
+        lm=s.symbols('l0:4',real=True)
+        n=I+S1
+        constraints=[
+            s.expand(c(SIGMA[i],lm[j]*n)+c(lm[i]*n,SIGMA[j]))
+            for i in range(4) for j in range(i,4)]
+        self.assertEqual(s.linsolve(
+            constraints,lm),s.FiniteSet((0,0,0,0)))
+
     def test_killing_equations_imply_affine_imaginary_field(self):
         xx=s.symbols('X0:4',real=True)
         ya=[s.Function('Y'+str(i))(*xx) for i in range(4)]
