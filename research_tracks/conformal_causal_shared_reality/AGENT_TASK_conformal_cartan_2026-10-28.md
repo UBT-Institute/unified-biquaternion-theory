@@ -147,3 +147,28 @@ on the strength of a curved example. First independently
 audit the 7 exact tests, exhibit a genuinely covariant
 jet/Cartan realization with nontrivial *linear* spin-2,
 and respect the stop-for-review criterion.
+
+## G1 continuation result — real dilation and projected EH equations (2026-10-28)
+
+Read the paired notes G1_RT_EXTRA_SOLUTION.en.md/.cs.md and
+G1_CONNECTION_RANK.en.md/.cs.md before proposing another action.
+Supporting tests:
+- tests/test_theta_rt_extra_solution.py: exact restricted Regge–Teitelboim non-Einstein stationary solution
+- tests/test_theta_connection_metric_rank.py: 9→10 metric Jacobian rank when real dilation joins Lorentz boosts (fixed timelike Theta)
+- tests/test_theta_exact_dilation.py: u=dσ is locally removable by a real Theta rescaling and cannot itself supply a full tetrad
+
+**Decision:** Pure-Lorentz rank deficiency can be repaired pointwise, but
+free boost+dilation variables make the composite tetrad effectively
+independently variable (not derived from Theta). Exact dilation has
+du=0; a nonexact u carries new curvature and requires its own
+constraints and dynamical justification. Neither fixes the
+missing two healthy propagating graviton modes.
+
+**Next admissible single task:** classify one explicit, noncircular
+local connection closure u[Theta], Omega[Theta] or a constrained
+connection first-order system, and compute its linear principal
+symbol after gauge reduction on one regular curved solution.
+If it fails, write a scoped counterexample and stop. Do not
+guess a new fundamental potential, import a freely varying
+Cartan solder form, or claim that causal cones alone set
+the conformal scale or Newton coupling.
