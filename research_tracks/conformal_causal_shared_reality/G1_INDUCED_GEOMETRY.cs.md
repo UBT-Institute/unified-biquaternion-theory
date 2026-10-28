@@ -308,3 +308,23 @@ formalizován v Leanu. Testy
 necertifikují dynamickou akci,
 vazby, ghosty, kvantový model
 ani fyzikální predikce.
+
+## 7. Kauzální omezení měřítka a sdílené reality [STD + podmíněný důsledek]
+
+Pro Lorentzovu metriku g a kladnou hladkou funkci f(x)>0
+má g'=f(x)^2 g úplně stejné časupodobné, nulové i prostorupodobné
+kužely a stejné kauzální uspořádání (při téže orientaci času).
+Konečná rychlost šíření signálu a každé pravidlo [SR],
+které používá *pouze* kauzální dostupnost, překryvy
+diamantů a konzistenci sdílených záznamů, tedy nemohou
+určit konformní měřítko f(x). Není to vyvrácení [SR],
+ale přesná identifikace chybějící kvantitativní informace.
+
+Hustota entropie na plochu nebo energetická normalizace
+mohou měřítko dodat, jejich absolutní koeficient
+(např. Newtonovo G či Planckova plocha) však musí
+být odvozen, nebo přiznán jako měřený vstup.
+Jacobsonovská podmínka musí tato normalizační data
+obsahovat. Jde o omezenou větu o neurčenosti,
+**nikoliv** o no-go kvantitativně bohatšího
+principu sdílené reality.
