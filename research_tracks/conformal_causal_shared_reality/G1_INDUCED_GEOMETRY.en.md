@@ -271,11 +271,11 @@ Run
 python -m unittest discover -s tests -p 'test_theta_induced_geometry.py' -v
 ```
 
-Six exact SymPy checks locally passed for:
+Seven exact SymPy checks locally passed for:
 the invariant pairing, SL(2,C) congruence and
 global phase, induced metric and determinant,
 derived coframe, nonzero Riemann tensor,
-and linearized normal/tangent response.
+linearized normal/tangent response, and rank-10 jet map.
 The analytic G1-4R inverse-function theorem
 argument is not a Lean proof. These checks
 do NOT certify a field-theoretic action,
