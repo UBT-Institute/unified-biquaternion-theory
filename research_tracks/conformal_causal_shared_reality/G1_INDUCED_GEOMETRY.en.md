@@ -194,8 +194,10 @@ For four real scalar fields phi^i with invertible
 Jacobian, any coframe of the form
 `e^a_mu=E^a_i(phi) partial_mu phi^i`
 with a *fixed* target coframe E defines
-`g=phi^*(gamma)`,
-`gamma_ij=eta_ab E^a_i E^b_j`.
+\[
+ g=\phi^*(\gamma),\qquad
+ \gamma_{ij}=\eta_{ab}E^a_i E^b_j.
+\]
 The inverse-function theorem makes phi a local
 diffeomorphism; hence every such g is locally
 diffeomorphic to the **same** prescribed target
