@@ -104,3 +104,28 @@ by factoring a Gram metric, prove that operation follows from UBT
 rather than inserting a free tetrad or borrowed Einstein equations.
 Do not elevate G1 without this gate, and do not treat finite causal
 diamond information as a completed dynamical selection.
+
+## Correction: the real geometry is a composite of complex Theta [PROVED, restricted]
+
+Read G1_COMPLEX_REAL_COFRAME.en.md and
+tests/test_theta_phase_real_derived_coframe.py. Do not impose
+the direct-jet Hermiticity condition as a universal gate.
+It is a negative control for the specific E_mu=i D_mu Theta
+identification. In the alternative, the full complex projected
+Theta derivative defines the *real* B-Gram metric; on a
+regular Lorentzian patch its orthonormal coframe and i-Hermitian
+matrix tetrad can be **calculated** without an independent tetrad.
+The phase-compensated curved trial has R_txtx(0)=kappa² and
+non-Hermitian complex jets. The coframe is not a free field;
+its local Lorentz gauge nonuniqueness is expected.
+
+## New admissibility conditions [OPEN]
+
+The *metric* must be an operational real, phase-covariant
+observable; do not demand every intermediate complex jet be
+Hermitian. Conversely, the Gram comparator remains distinct
+from the canonical central-antocommutator UBT metric. Next
+prove or refute that identification, and derive a noncircular
+dynamical action/principal symbol rather than importing Einstein.
+The information and shared-reality axiom must act on
+gauge-invariant **real observables** of complex Theta.
