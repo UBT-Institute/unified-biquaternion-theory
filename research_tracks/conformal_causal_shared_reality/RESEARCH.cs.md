@@ -23,7 +23,7 @@ fundamentální počet složek Theta ani neztotožňujeme komplexní
 ## Tři principy zůstávají oddělené
 
 **[G] Bikvaternionová geometrie:** C⊗H≅Mat₂(C) je známá
-algebraická realizace. Matice W slouží jen jako testovací sektor;
+algebraická realizace. Matice W rozměru 2×2 slouží jen jako testovací sektor;
 počet dimenzí chartu neurčuje počet fundamentálních složek.
 
 **[C] Konečná rychlost signálu a kauzální uspořádání:**
@@ -116,7 +116,7 @@ podmíněný modelem G/K]:** Neexistuje
 G-ekvivariantní mapa f:G/K→G/P.
 Důkaz: Ekvivariance by pro f(eK)=gP znamenala,
 že každý k∈K fixuje gP, tj. g^{-1}Kg⊂P.
-Levá grupa je kompaktní a sedmirozměrná.
+Levá grupa je kompaktní a sedmirozměrná (dimenze 7).
 Každá kompaktní podgrupa P leží až na konjugaci
 v maximální kompaktní podgrupě dimenze 3.
 Spor. QED.
