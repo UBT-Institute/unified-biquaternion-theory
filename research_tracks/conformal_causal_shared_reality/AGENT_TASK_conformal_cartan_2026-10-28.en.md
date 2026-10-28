@@ -78,3 +78,29 @@ evaluate whether the N<0 branch is allowed by UBT's reality
 conditions. Do NOT infer from shared reality that real scale must
 be gauge, and do not introduce independent soldering without
 disclosure. Preserve C_working, G1 PARTIAL and the review stop.
+
+## Strict direct-tetrad reality boundary [PROVED, restricted]
+
+Read G1_PHASE_STRICT_REALITY.en.md and tests/test_theta_phase_strict_reality.py.
+For Theta=X+iY, a phase-only composite derivative orthogonal to iTheta,
+if additionally required to lie in Herm, has real rank at most three
+where Y is nonzero. With both phase and scale projection, a direct
+Hermitian coframe has rank at most three for any nonzero Theta, and
+at most two where X,Y are independent. The negative-norm four-leg Gram
+witness requires a non-Hermitian jet and fails this **direct** readout.
+The explicitly curved phase-only Gram metric remains Lorentzian, but
+its traceless imaginary spatial derivative cannot be repaired at the
+witness point using an arbitrary two-sided Lorentz connection plus
+real central dilation or central phase. These are not universal
+no-go theorems for different tetrad maps or different Theta carriers.
+
+## Next strict reality decision [OPEN]
+
+Construct an explicit *non-direct* tetrad or a genuinely composite
+noncentral connection and show its exact local transformation law,
+Lorentz reality, nondegenerate coframe, curved solution, constrained
+variations, and physical principal symbol. If the coframe is obtained
+by factoring a Gram metric, prove that operation follows from UBT
+rather than inserting a free tetrad or borrowed Einstein equations.
+Do not elevate G1 without this gate, and do not treat finite causal
+diamond information as a completed dynamical selection.
