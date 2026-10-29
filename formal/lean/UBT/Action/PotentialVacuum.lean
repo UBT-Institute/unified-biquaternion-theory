@@ -189,6 +189,19 @@ theorem secondDeriv_quartic (a b c d : ℝ) :
     (((hasDerivAt_id (0 : ℝ)).pow 3).const_mul (4 * d))
   simpa [Pi.add_def] using hd.deriv
 
+/-- Actual first derivative in every real matrix direction. The component
+count belongs only to this written model, not to a minimality theorem. -/
+theorem firstVariation_at_vacuum (r l₁ l₂ V₀ : ℝ) (v : Direction) :
+    HasDerivAt (fun t : ℝ =>
+      potential (massCoefficient r l₁ l₂) l₁ l₂ V₀ (variation r t v)) 0 0 := by
+  simp_rw [variation_polynomial]
+  have hd := (((hasDerivAt_const (0 : ℝ) (V₀ - (4 * l₁ + l₂) * r ^ 4)).add
+    (((hasDerivAt_id (0 : ℝ)).pow 2).const_mul (quadratic r l₁ l₂ v))).add
+    (((hasDerivAt_id (0 : ℝ)).pow 3).const_mul (cubic r l₁ l₂ v))).add
+    (((hasDerivAt_id (0 : ℝ)).pow 4).const_mul (quartic l₁ l₂ v))
+  simpa only [Pi.add_def, Pi.pow_apply, id_eq, pow_succ, pow_zero,
+    mul_zero, zero_mul, add_zero] using hd
+
 /-- The actual second derivative in every real field direction. -/
 theorem secondVariation_at_vacuum (r l₁ l₂ V₀ : ℝ) (v : Direction) :
     deriv (fun t : ℝ => deriv (fun s : ℝ =>

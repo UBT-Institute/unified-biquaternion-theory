@@ -1,0 +1,49 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-10-29",
+  "claim_or_decision_id": "PHYSICS-CLOSURE-807-SOURCED-HOLST-FORMAL-CI",
+  "summary": "Fresh CI compiled the seven finite sourced-Holst lemmas and passed independent kernel replay and the existing axiom audit; the broader field-theoretic scope remains unchanged.",
+  "development_mode": "ai_initiated",
+  "stage_events": [
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Observed successful full-root Lean build, leanchecker and axiom audit for the exact delivered formal sources. This updates the pending state recorded when the original source diagnostic was prepared, without rewriting its historical record.",
+      "evidence_ids": ["ci", "earlier_record"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ci",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40789689907/job/123171519601; source commit 4f436e100d3fe0ea2f287178aee240dccc3ed482",
+      "original_checked": true,
+      "supports": "The job log explicitly reports the new HolstSpinSource module built, successful root build and independent leanchecker, and 469 root declarations within propext, Classical.choice and Quot.sound.",
+      "limitations": "Only encoded finite identities are formally proved. The exterior-form functional, boundary interpretation and statistical model are not formalized by the new lemmas. No independent bilingual semantic approval or human attestation follows."
+    },
+    {
+      "id": "earlier_record",
+      "class": "repository_artifact",
+      "locator": "provenance/events/2026-10-29-holst-spin-source-807.json at commit 4f436e100d3fe0ea2f287178aee240dccc3ed482",
+      "original_checked": true,
+      "supports": "The preparation record correctly reported that local Lean was unavailable and fresh formal CI was pending.",
+      "limitations": "This observation changes only the finite formal-verification state, not historical conceptual attribution or the full UBT proof boundaries."
+    }
+  ],
+  "rejected_alternatives": [
+    "Calling the full contortion field variation or a microscopic UBT action formally proved by these finite identities.",
+    "Rewriting the original preparation record to pretend formal CI had already passed at that time."
+  ],
+  "verification": {
+    "status": "verified_with_scope",
+    "artifacts": [
+      "formal/lean/UBT/Hamiltonian/HolstSpinSource.lean",
+      "reports/holst_spin_source_2026_10_29.json"
+    ],
+    "limitations": "Finite algebraic lemmas only; the full composite field theory, microscopic action and physical reduction remain open."
+  },
+  "attribution_status": "evidence_linked",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "Append-only verification observation; no provenance tier or author attestation is changed."
+}

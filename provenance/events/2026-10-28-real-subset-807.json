@@ -1,0 +1,80 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-10-28",
+  "claim_or_decision_id": "PHYSICS-CLOSURE-807-REAL-SUBSET",
+  "summary": "Test the proposed real subset of the continued homogeneous model; distinguish biquaternionic representation from dynamical admissibility.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_proposal",
+      "actor": "human",
+      "description": "The author questioned the complex-versus-biquaternion distinction and proposed seeking a compatible real subset using the inclusion of real numbers in complex numbers.",
+      "evidence_ids": [
+        "current-direction"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Clarified that the spin connection already has a biquaternionic complex-matrix representation. Substitution of a noncentral quaternion unit for a commuting coefficient is a different operator problem.",
+      "evidence_ids": [
+        "current-direction",
+        "prior-boundary",
+        "verification"
+      ]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Within the unchanged positive-clock closed-FLRW ansatz, original readout gives a=cV, and the scale Euler residual is 1+c^2-Lambda*c^2*V^2. Proved that it cannot vanish at two distinct positive times; this is a scoped corollary of the existing concurrent-vector obstruction.",
+      "evidence_ids": [
+        "prior-boundary",
+        "verification"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "current-direction",
+      "class": "discussion_context",
+      "locator": "Current private user messages in this research session; original not deposited publicly.",
+      "original_checked": true,
+      "supports": "Author proposed checking a real compatible subset and questioned whether the existing variables should be treated as biquaternionic.",
+      "limitations": "No raw private dialogue or historical first-conception claim is published."
+    },
+    {
+      "id": "prior-boundary",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/tree/4c500624b05d1a70b33db026a25dae5a34ff9d75; canonical/gr_closure/gap_10t_minimal_one_connection_gr_no_go.tex",
+      "original_checked": true,
+      "supports": "Existing Hermitian-pair obstruction and earlier concurrent-vector no-go, used without changing their hypotheses.",
+      "limitations": "The new scoped corollary is not a new general impossibility theorem for UBT."
+    },
+    {
+      "id": "verification",
+      "class": "repository_artifact",
+      "locator": "formal/lean/UBT/Hamiltonian/PalatiniHolst.lean; tools/verify_physics_closure.py; research_tracks/action_selection/physics_closure_2026_10.en.md and paired Czech edition",
+      "original_checked": true,
+      "supports": "Exact algebraic incompatibility theorem and independent differentiation of the reduced action.",
+      "limitations": "No unrestricted PDE theorem, selected microscopic action, or no-go for other real forms is claimed."
+    }
+  ],
+  "rejected_alternatives": [
+    "Inferring a nonempty invariant solution subset from number-system inclusion alone.",
+    "Treating complex matrix notation as a prohibition on real geometry.",
+    "Extrapolating the closed one-clock ansatz obstruction to all biquaternionic theories."
+  ],
+  "verification": {
+    "status": "partial",
+    "artifacts": [
+      "formal/lean/UBT/Hamiltonian/PalatiniHolst.lean",
+      "tools/verify_physics_closure.py",
+      "tests/test_holst_selfdual_canonical_gr.py"
+    ],
+    "limitations": "Lean checks the finite algebraic two-time incompatibility; the constant-ratio calculus step is analytic and checked by CAS. Full microscopic UBT remains open."
+  },
+  "attribution_status": "evidence_linked",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "This records a current human proposal and agent-executed check within iterative co-development, not exclusive origin of the underlying geometric model."
+}

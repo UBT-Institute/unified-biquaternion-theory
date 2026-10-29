@@ -13,6 +13,11 @@ UBT-AI-PROVENANCE-END
 
 # UBT gravity-sector dynamical postulate: one-coupling Einstein-Lambda branch
 
+<!-- BILINGUAL-UNIT: gr-dynamical-postulate.epistemic -->
+## Scientific claim status
+
+`AXIOMATIC_CANDIDATE` describes the origin of this adopted effective law: it has not been derived uniquely from the locked UBT kinematics or information principles. Its local physical recovery claim has status `CONDITIONAL`. The mathematical implication from the declared action and regularity/surjectivity assumptions to the Einstein–Lambda equations is preserved. The one-coupling restriction chooses a subfamily; it does not prove that symmetry forbids a Holst term or independent torsion invariants. See the [physics closure audit](../../research_tracks/action_selection/physics_closure_2026_10.en.md). Existing author attestations are unchanged.
+
 <!-- BILINGUAL-UNIT: gr-dynamical-postulate.role -->
 ## Role
 
@@ -219,7 +224,9 @@ Lambda_role: INTEGRATION_CONSTANT
 Lambda_allowed_signs: POSITIVE_ZERO_NEGATIVE
 fundamental_physical_field: Theta
 independent_tetrad: false
-local_Einstein_Lambda_recovery: CLOSED
+local_Einstein_Lambda_recovery: CLOSED_CONDITIONALLY
+action_derivation_status: AXIOMATIC_CANDIDATE
+physical_claim_status: CONDITIONAL
 numerical_Lambda_prediction: OPEN_COSMOLOGY
 full_single_ubt_action: NOT_FINALIZED
 ```

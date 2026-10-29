@@ -1,0 +1,38 @@
+# UBT Hamiltonian: formal verification ledger
+
+Status: **partial formalization; full single-Theta Hamiltonian OPEN**.
+
+## Already connected to Lean
+
+- `UBT.GR.VolumeVariation`: four-dimensional determinant and affine rank-one first-jet identities.
+- `UBT.GR.VolumePrincipalSymbol`: vanishing common-covector second Fréchet variation for the **specified determinant-density model**, including a field-dependent additive shift.
+- `UBT.GR.CompositeActionStationarity`: metric Euler–Lagrange equation follows from composite stationarity **provided** the field-to-metric differential is surjective.
+- `UBT.Action.PsiRestHamiltonian`: algebra of the **declared free psi-sector candidate**; not an action selected by UBT.
+- `UBT.Hamiltonian.VerificationBoundary`: named bridge theorems for the October 2026 Hamiltonian track.
+
+## Open proof obligations (do not silently promote to theorems)
+
+1. Define the complete biquaternionic/Clifford field Theta, admissible connections, grading and reality conditions in Lean.
+2. Specify a *principle-selected* complete single-Theta action, including torsion and both curvature channels; document every free coefficient.
+3. Prove the actual composite functional variation, boundary terms and regularity assumptions, without treating metric and Theta as independent.
+4. Compute the complete Legendre transform, primary/secondary constraints and Dirac–Bergmann closure for the selected action.
+5. Prove hyperbolicity, degree-of-freedom count, positivity and the precise torsion-free GR limit, stating nondegeneracy/surjectivity hypotheses.
+6. Formalize any quantitative prediction and distinguish theorem, conditional theorem and empirical test.
+
+## Verification rules
+
+- Every theorem must compile in `formal/lean` under `lake build UBT` and the existing GitHub Lean checker.
+- No `sorry`, `admit`, unreviewed `axiom`, or circular restatement of the target as a hypothesis.
+- Maintain explicit theorem-to-document traceability and use `#print axioms` for important declarations.
+- A green CI verifies the *formalized statements*, not unformalized physics or the truth of a physical model.
+- The complete Hamiltonian must remain **OPEN** until all required premises and derivations are independently formalized.
+
+This ledger is a roadmap, not a claim of a complete formal proof.
+
+## Reproducible complementary checks
+
+- Lean: `lake build UBT` plus the existing leanchecker and axiom audit.
+- Exact computer algebra: `python3 -m pytest -q tests/test_hamiltonian_restricted_jet.py` checks the cross and pure second derivatives of the specific determinant-jet polynomial with SymPy.
+- Deterministic integer cross-check: the same test verifies 25 reproducible seeded examples with exact integer arithmetic; **these examples are not a proof**.
+- A symbolic zero expression must be checked against independently written identities, not only self-comparison; any symbolic test failure is blocking.
+- Extension to torsionful full Theta dynamics must add separate tests and is not covered by the restricted model.

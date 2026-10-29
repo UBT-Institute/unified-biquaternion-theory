@@ -13,6 +13,18 @@ UBT-AI-PROVENANCE-END
 
 # The single-action invariant of UBT
 
+<!-- BILINGUAL-UNIT: single-action.physics-closure -->
+## Physics closure audit
+
+The [action and constrained-Hamiltonian audit](../research_tracks/action_selection/physics_closure_2026_10.en.md) classifies a restricted constant-coefficient geometric family and derives the full constrained Hamiltonian of the existing homogeneous Palatini–Holst comparator. The effective gravity postulate is an `AXIOMATIC_CANDIDATE`; its physical recovery claims are `CONDITIONAL`. The Holst and torsion coefficients remain unselected. Neither the restricted Hamiltonian nor the independent-connection vacuum equivalence finalizes `S_UBT[Theta]` or supplies a distinctive beyond-GR prediction.
+
+<!-- BILINGUAL-UNIT: single-action.bare-splitjet-proof -->
+## Bare-action proof boundary independent of the component count
+
+The [dimension-independent proof](../research_tracks/action_selection/physics_closure_bare_action_2026_10.en.md) establishes the local variational core for any real Theta variation space. If the kinetic pairing is the same one defining the composite metric, the potential has no derivatives and algebraic jet variations freely span the tetrad, the bare action is `int nu_E F(Theta)`. With independent field variations stationarity transmits `F=0` and `dF=0`. At a critical zero every locally representable tetrad is stationary; an explicit regular closed-FLRW witness violates the Einstein condition for every cosmological constant. Its critical Hessian has no metric kinetic block. This excludes a GR derivation from that specified family, not all UBT actions or quantum completions. Lean proves the encoded algebra/calculus; the functional and curvature interpretations have independent analytic/CAS checks and explicit formal limits.
+
+The author clarified that the proposed component count is provisional. Dimensions of the currently written core describe that model, not a derived physical minimality theorem. This proof assumes no fixed field dimension and selects no replacement carrier. Other pairings, derivative interactions or composite connection laws require their own consistent action and variation.
+
 <!-- BILINGUAL-UNIT: single-action.rule -->
 ## Binding rule
 

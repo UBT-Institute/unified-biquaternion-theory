@@ -31,3 +31,8 @@ This statement is **not** the assertion that the full Palatini--Holst theory is 
 <!-- BILINGUAL-UNIT: next -->
 ## Concrete next proof gate
 Compute the exact canonical paired-connection curvature representation in the Clifford carrier; calculate its torsionful graded/ungraded trace actions and full composite variations; constrain the $\psi$ grading by an independently derived phase/chirality rule; test whether any physically measurable torsion observable or shared-record consistency genuinely distinguishes the two invariant channels. **STATUS: conditional exact no-selection theorem; full-$\Theta$ Hamiltonian OPEN; LEAN-PENDING; bilingual semantic review PENDING.**
+
+<!-- BILINGUAL-UNIT: selfdual-domain -->
+## Standard identity and the separate complex matching question
+
+The torsion-free Holst/Nieh–Yan identity is a standard result, not new UBT physics. The restricted causal no-selection deduction concerns protocols on the same torsion-free metric branch. The [closure audit](action_selection/physics_closure_2026_10.en.md) separately verifies a GR FLRW canonical match at $b=\pm i$ after complex continuation and an added GR-matching requirement. This does not refute the restricted deduction: it changes both the hypotheses and the coefficient domain. Moreover the original Hermitian paired derivative no longer generates the assumed tetrad under the naive continued rotation. The complex branch requires its own action-derived reality conditions and full variation. No claim that all possible stronger principles can never select a coefficient is made here.
