@@ -83,3 +83,8 @@ The [local spatial Dirac reduction](splitjet_spatial_dirac_2026_10.en.md) constr
 ## Flat-jet quadratic torsion action test
 
 The [flat-jet torsion calculation](flat_jet_torsion_action_2026_10.en.md) varies the declared flat-Lorentz/closed-real-dilation configuration space fully. Every constant-coefficient parity-even quadratic torsion action reduces there to a conformal scalar action. The positive Einstein-sign combination has a negative reduced scalar kinetic direction; the opposite sign gives a positive scalar energy but no tensor sector. A regular curved on-shell witness fails the Einstein vacuum equation for every cosmological constant. This excludes this precise branch as a generic GR origin, while nonflat jets, other relative actions and microscopic selection remain open.
+
+<!-- BILINGUAL-UNIT: physics-closure.free-jet-tensor -->
+## Free-jet tensor principal test
+
+The [free-jet tensor calculation](free_jet_torsion_principal_2026_10.en.md) allows curved Lorentz jets and unrestricted real dilation on a timelike isotropic branch. The supplied quadratic torsion family regains a tensor time kinetic term with positive Einstein-sign normalization, but algebraic variation of all rotational jet auxiliaries removes the spatial TT gradient for every coefficient choice, including singular choices. This is a necessary principal-block obstruction, not a complete mode count. A regular exact original-field stationary background is non-Einstein for every cosmological constant. An additional derived connection law or functional is needed before this family can recover the GR tensor wave operator; microscopic selection remains open.

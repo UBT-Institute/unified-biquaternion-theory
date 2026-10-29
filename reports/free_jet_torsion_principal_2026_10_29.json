@@ -1,0 +1,171 @@
+{
+  "scope": "Principal TT block of a declared timelike isotropic free Lorentz-jet quadratic torsion family",
+  "versions": {
+    "sympy": "1.14.0",
+    "numpy": "2.3.5"
+  },
+  "symbolic": {
+    "full_contractions_give_frozen_TT_wave_form": true,
+    "stationary_invariant_1_has_no_spatial_gradient": true,
+    "stationary_invariant_2_has_no_spatial_gradient": true,
+    "stationary_invariant_3_has_no_spatial_gradient": true,
+    "all_auxiliary_Euler_equations_at_solution_0": true,
+    "all_auxiliary_Euler_equations_at_solution_1": true,
+    "all_auxiliary_Euler_equations_at_solution_2": true,
+    "all_auxiliary_Euler_equations_at_solution_3": true,
+    "all_auxiliary_Euler_equations_at_solution_4": true,
+    "all_auxiliary_Euler_equations_at_solution_5": true,
+    "all_auxiliary_Euler_equations_at_solution_6": true,
+    "all_auxiliary_Euler_equations_at_solution_7": true,
+    "all_auxiliary_Euler_equations_at_solution_8": true,
+    "all_auxiliary_Euler_equations_at_solution_9": true,
+    "all_auxiliary_Euler_equations_at_solution_10": true,
+    "all_auxiliary_Euler_equations_at_solution_11": true,
+    "all_spatial_torsion_components_are_cancelled": true,
+    "spatial_Cartan_map_is_square_and_invertible": true,
+    "entire_constant_coefficient_family_has_same_gradient_obstruction": true,
+    "exact_auxiliary_translation_removes_all_spatial_sources": true,
+    "temporal_auxiliaries_do_not_mix_with_TT_velocity": true,
+    "temporal_auxiliary_block_has_declared_coefficient": true,
+    "Einstein_sign_full_auxiliary_Hessian_has_rank_nine": true,
+    "Einstein_sign_spatial_auxiliary_Hessian_is_invertible": true,
+    "Einstein_sign_temporal_auxiliaries_are_undetermined_in_this_block": true,
+    "Einstein_sign_tensor_time_coefficient_is_positive": true,
+    "explicit_nine_variable_Einstein_auxiliary_polynomial": true,
+    "nine_Euler_equations_match_finite_formal_core": true,
+    "translated_auxiliary_action_is_homogeneous_quadratic": true,
+    "singular_stationarity_cannot_restore_gradient_energy": true,
+    "tensor_canonical_momentum": true,
+    "tensor_reduced_Hamiltonian_has_no_gradient_term": true,
+    "tensor_principal_polynomial_has_no_wave_number": true,
+    "exact_FLRW_original_composite_tetrad": true,
+    "all_64_exact_FLRW_jet_torsion_components_vanish": true,
+    "exact_FLRW_original_carrier_is_timelike_nonnull": true,
+    "exact_FLRW_jet_is_curved": true,
+    "exact_FLRW_coordinate_Ricci_time": true,
+    "exact_FLRW_coordinate_Ricci_space": true,
+    "exact_FLRW_fails_Einstein_equation_for_every_Lambda": true,
+    "zero_torsion_full_quadratic_first_variation_core": true
+  },
+  "numerical": {
+    "samples": 32,
+    "seed": 20261029,
+    "maximum_errors": {
+      "coframe": 2.220446049250313e-16,
+      "differentiated_coframe": 5.551115123125783e-17,
+      "metric_compatibility": 0,
+      "stationary_density": 2.9976021664879227e-14,
+      "frozen_density": 7.355227538141662e-14,
+      "independent_auxiliary_solution": 2.9976021664879227e-14,
+      "auxiliary_stationarity": 7.277919416664116e-15
+    },
+    "minimum_original_jet_curvature_norm": 0.6909761323883822,
+    "tolerance": 1e-9,
+    "checks": {
+      "all_original_jet_and_stationary_action_errors_below_tolerance": true,
+      "every_original_jet_is_nonflat": true,
+      "random_wave_directions_and_both_polarizations": true,
+      "degenerate_auxiliary_coefficients_included": true
+    }
+  },
+  "passed": true,
+  "not_proved": [
+    "a full constrained mode count or stability theorem",
+    "classification of all on-shell backgrounds",
+    "a selected microscopic UBT action",
+    "null, spacelike or anisotropic branches",
+    "a no-go for flat-connection teleparallel gravity or other connection functionals"
+  ],
+  "recorded_on": "2026-10-29",
+  "base_commit": "b24894b461a19f17a3c1f90c028e44859ff1067d",
+  "scientific_status": "CONDITIONAL_PRINCIPAL_OBSTRUCTION_AND_EXACT_STATIONARY_WITNESS",
+  "source_sha256": {
+    "tools/verify_free_jet_torsion_principal.py": "704da5dc7e698593e95dc6893301bdf216f2f2c4383c2c9ea096c55073003e3e",
+    "tests/test_free_jet_torsion_principal.py": "3acb41fb71ebfd2af452fa0380d0a1c8fa0744ed9c18054da1c3b128011c3885",
+    "formal/lean/UBT/GR/FreeJetTensor.lean": "f618021230d1a03496f7c49a2002ddd29c6f2bfe1246943b0d49e251fd3724d5",
+    "formal/lean/UBT.lean": "585de093dc3378ed93be0b2e8ab79bde8e844c6418eae24b4a5883f96b01cb46",
+    ".github/workflows/lean.yml": "6263bd6bb5425b7beb9b6065c368be48df76e43421247f2275751d323836d0d0",
+    "research_tracks/action_selection/free_jet_torsion_principal_2026_10.en.md": "faa8daad409eeada2e4b553257ee0303db77748bfe0453beace8ee6dc2001fe1",
+    "research_tracks/action_selection/free_jet_torsion_principal_2026_10.cs.md": "447d54fee49b765a730e8b69edd6e7b68c687fedbe691751ab4b740ca11a6039"
+  },
+  "local_validation": {
+    "symbolic_checks": 41,
+    "new_pytest_cases": 42,
+    "related_existing_pytest_cases": 47,
+    "targeted_cases_total": 89,
+    "bilingual_structural_pairs": 296,
+    "research_origin_events": 11,
+    "release_checksums": 83,
+    "provenance_headers": "PASS"
+  },
+  "formal_verification": {
+    "status": "LEAN-COMPILED-FINITE-CORES",
+    "finite_cores": 7,
+    "not_formalized": [
+      "continuum adapted chart and principal derivative-order reduction",
+      "full differential geometry and helicity separation",
+      "complete constrained mode count and stability",
+      "unrestricted microscopic Theta action"
+    ],
+    "earlier_attempts": [
+      {
+        "source_commit": "23a9909cb1b8c3252f24e7cdad6a052466eff77a",
+        "job_id": 123702969192,
+        "status": "BUILD_ERROR",
+        "reason": "Lean could not infer the double-sum index type in zero_torsion_first_variation; index domains and summand parentheses made explicit. Fresh strict build required."
+      }
+    ],
+    "source_commit": "ba7a80dfb7c2527aa06a8e9e30fd3bb900cd18c9",
+    "lean_version": "4.33.1",
+    "strict_root_build": "PASS (--wfail)",
+    "independent_leanchecker": "PASS (UBT root)",
+    "axiom_audit": {
+      "status": "PASS",
+      "declarations": 512,
+      "allowlist": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40947162006/job/123705445814"
+  },
+  "bilingual_semantics": {
+    "status": "PENDING",
+    "source_commit": "ba7a80dfb7c2527aa06a8e9e30fd3bb900cd18c9",
+    "job_id": 123705622513,
+    "job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40947162023/job/123705622513",
+    "reason": "Independent review is still in progress at the evidence snapshot; structural parity is not semantic approval.",
+    "approval": "WITHHELD; author-directed C-tier working integration is not independent semantic approval."
+  },
+  "predecessor_ci_observation": {
+    "pr": 813,
+    "source_commit": "afb3b9fc8ec6b0a6e9378e587d5a7668ad7ade43",
+    "finite_Lean_cores": 7,
+    "axiom_audit_declarations": 503,
+    "mathematical_checks_and_latex": "PASS",
+    "bilingual_semantics": "FAILED_UNAVAILABLE",
+    "reason": "local Ollama unavailable: TimeoutError",
+    "semantic_job_id": 123687688447
+  },
+  "interpretation": {
+    "positive_result": "Tensor time kinetic coefficient equals +1/(4 kappa) for the positive Einstein-sign comparison.",
+    "GR_principal_gate": "FAIL in this timelike isotropic branch: algebraic rotational stationarity removes all spatial TT stiffness for every coefficient choice, including singular choices.",
+    "Einstein_vacuum_selection_gate": "FAIL for the entire supplied torsion-only family: an explicit regular zero-torsion original-field stationary FLRW metric is not Einstein for any Lambda.",
+    "mode_count": "NOT_DERIVED; no claim of two physical propagating modes.",
+    "microscopic_action_status": "DEFINED_FAMILY_NOT_FINALIZED",
+    "outside_scope": "Flat inertial-connection teleparallel gravity, other jet functionals and full complex/matter sectors are not excluded."
+  },
+  "ci_validation": {
+    "source_commit": "ba7a80dfb7c2527aa06a8e9e30fd3bb900cd18c9",
+    "mathematical_test_checks": "PASS",
+    "full_pytest_suite": "PASS",
+    "latex_compile_all": {
+      "status": "IN_PROGRESS_AT_EVIDENCE_SNAPSHOT",
+      "job_id": 123705630669,
+      "job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40947162000/job/123705630669",
+      "scope": "No TeX source changed in this patch; no success is claimed for this still-running global compilation."
+    },
+    "integration_scope": "Author-directed C-tier working research. Missing independent bilingual semantic approval remains explicit; no microscopic closure or canonical claim upgrade."
+  }
+}

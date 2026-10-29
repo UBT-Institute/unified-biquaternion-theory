@@ -18,6 +18,8 @@ on:
       - 'tools/verify_splitjet_spatial_dirac.py'
       - 'tests/test_flat_jet_torsion_action.py'
       - 'tools/verify_flat_jet_torsion_action.py'
+      - 'tests/test_free_jet_torsion_principal.py'
+      - 'tools/verify_free_jet_torsion_principal.py'
       - 'tests/test_bare_splitjet_selection.py'
       - 'tools/verify_bare_splitjet_selection.py'
       - 'tools/verify_physics_closure.py'
@@ -42,6 +44,8 @@ on:
       - 'tools/verify_splitjet_spatial_dirac.py'
       - 'tests/test_flat_jet_torsion_action.py'
       - 'tools/verify_flat_jet_torsion_action.py'
+      - 'tests/test_free_jet_torsion_principal.py'
+      - 'tools/verify_free_jet_torsion_principal.py'
       - 'tests/test_bare_splitjet_selection.py'
       - 'tools/verify_bare_splitjet_selection.py'
       - 'tools/verify_physics_closure.py'
@@ -73,6 +77,7 @@ jobs:
           python3 tools/verify_spatial_constraint_closure.py > build/physics-closure/spatial-constraint-closure.json
           python3 tools/verify_splitjet_spatial_dirac.py > build/physics-closure/splitjet-spatial-dirac.json
           python3 tools/verify_flat_jet_torsion_action.py > build/physics-closure/flat-jet-torsion-action.json
+          python3 tools/verify_free_jet_torsion_principal.py > build/physics-closure/free-jet-torsion-principal.json
       - name: Nonlinear Cartan chart and independent phase obstruction
         run: python3 -m pytest -q tests/test_nonlinear_cartan_chart.py
       - name: Full spatial constraint closure and independent functional bracket
@@ -81,6 +86,8 @@ jobs:
         run: python3 -m pytest -q tests/test_splitjet_spatial_dirac.py
       - name: Flat jet torsion action and complete branch variation
         run: python3 -m pytest -q tests/test_flat_jet_torsion_action.py
+      - name: Free jet tensor principal form and original nonflat auxiliaries
+        run: python3 -m pytest -q tests/test_free_jet_torsion_principal.py
       - uses: leanprover/lean-action@v1
         # leanchecker loads a full import environment per worker.  Mathlib's
         # environment exceeds hosted-runner memory when checked in parallel.

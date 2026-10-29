@@ -83,3 +83,8 @@ Výpočet [úplné prostorové dynamiky](full_spatial_dynamics_2026_10.cs.md) od
 ## Test kvadratické torzní akce plochého jetu
 
 [Výpočet torzní akce plochého jetu](flat_jet_torsion_action_2026_10.cs.md) plně variuje deklarovaný konfigurační prostor plochého Lorentzova spojení a uzavřené reálné dilatace. Každá paritně sudá kvadratická torzní akce s konstantními koeficienty se zde redukuje na konformní skalární akci. Kombinace s kladným Einsteinovým znaménkem má záporný redukovaný skalární kinetický směr; opačné znaménko dává kladnou skalární energii, ale žádný tenzorový sektor. Regulární zakřivený příklad na slupce nesplňuje Einsteinovu vakuovou rovnici pro žádnou kosmologickou konstantu. To vylučuje tuto přesnou větev jako původ obecné GR, zatímco neploché jety, jiná relativní působení a mikroskopický výběr zůstávají otevřené.
+
+<!-- BILINGUAL-UNIT: physics-closure.free-jet-tensor -->
+## Test hlavní tensorové části volného jetu
+
+[Tensorový výpočet volného jetu](free_jet_torsion_principal_2026_10.cs.md) dovoluje zakřivené Lorentzovy jety a neomezenou reálnou dilataci na časupodobné izotropní větvi. Zadaná rodina kvadratické torze znovu získá časový tensorový kinetický člen s kladnou normalizací Einsteinova znaménka, ale algebraická variace všech pomocných rotačních složek jetu odstraní prostorový TT gradient pro každou volbu koeficientů včetně singulárních. Jde o nutnou překážku v hlavním bloku, nikoli úplný počet módů. Regulární přesné stacionární pozadí v původních polích není Einsteinovo pro žádnou kosmologickou konstantu. Než tato rodina obnoví tensorový vlnový operátor GR, potřebuje další odvozený zákon konexe nebo funkcionál; mikroskopický výběr zůstává otevřený.
