@@ -1,0 +1,97 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-10-29",
+  "claim_or_decision_id": "REDUCED-METRIC-FULL-SPATIAL-DYNAMICS-20261029",
+  "summary": "Conditional full-spatial canonical-metric Hamiltonian selector, explicit vacuum evolution and tensor dynamics; microscopic Theta selection remains open.",
+  "development_mode": "ai_initiated",
+  "stage_events": [
+    {
+      "kind": "publication_decision",
+      "actor": "human",
+      "description": "Requested integration of remaining working research and prioritization of unresolved dynamics. This direction does not approve the newly proposed reduced Hamiltonian ansatz or attest its derivation.",
+      "evidence_ids": [
+        "direction"
+      ]
+    },
+    {
+      "kind": "ai_proposal",
+      "actor": "ai",
+      "description": "Chose to test normalized off-shell refoliation in an explicit reduced metric Hamiltonian family before any homogeneous truncation, rather than claim dynamics from the nonlinear Cartan coordinate lift.",
+      "evidence_ids": [
+        "prior",
+        "calculation"
+      ]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Derived the general spatial bracket including the independent momentum-trace gradient, coefficient conditions, full vacuum evolution, Legendre form and flat tensor waves. These are restricted reproductions of standard geometrodynamical structures, not a new general-relativity theorem.",
+      "evidence_ids": [
+        "calculation",
+        "primary_comparison"
+      ]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Added exact symmetric-tensor checks, finite Lean cores and a separate Fourier/finite-difference evaluation of the curvature-functional bracket on genuinely three-dimensional periodic data.",
+      "evidence_ids": [
+        "calculation"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "direction",
+      "class": "discussion_context",
+      "locator": "Current author discussion, 2026-10-29; private transcript not deposited.",
+      "original_checked": true,
+      "supports": "Integration and dynamical-work direction only.",
+      "limitations": "No raw private text is published; this does not establish historical equation-level origin, ansatz acceptance or human review."
+    },
+    {
+      "id": "prior",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/eaca483e994f251ad9d88e77f4c9f62ad87c5816; research_tracks/action_selection/adm_gr_hessian_constraint_audit.en.md; research_tracks/action_selection/physics_closure_2026_10.en.md",
+      "original_checked": true,
+      "supports": "Existing conditional GR endpoint and unresolved full-spatial and microscopic dynamical obligations.",
+      "limitations": "The existing kinematic right inverse does not derive the canonical metric symplectic structure."
+    },
+    {
+      "id": "calculation",
+      "class": "repository_artifact",
+      "locator": "tools/verify_spatial_constraint_closure.py; tests/test_spatial_constraint_closure.py; formal/lean/UBT/Hamiltonian/SpatialClosure.lean; paired full_spatial_dynamics_2026_10 notes; reports/full_spatial_dynamics_2026_10_29.json",
+      "original_checked": true,
+      "supports": "The stated conditional bracket and finite dynamical checks, with scope recorded in the source-bound report.",
+      "limitations": "Does not select a microscopic Theta action, physical reduction or constants; exact compilation is separate from writing formal source."
+    },
+    {
+      "id": "primary_comparison",
+      "class": "external_publication",
+      "locator": "https://arxiv.org/pdf/1004.0055, equations 8-18; https://doi.org/10.1016/0003-4916(76)90112-3",
+      "original_checked": false,
+      "supports": "Bellorin-Restuccia primary PDF was inspected for the trace-gradient and alternative second-class branch; Hojman-Kuchar-Teitelboim is a bibliographic reference.",
+      "limitations": "The HKT full paper was not accessible. Standard canonical gravity structures are not attributed to this new implementation; no priority claim."
+    }
+  ],
+  "rejected_alternatives": [
+    "Treating homogeneous bracket closure as full spatial refoliation.",
+    "Calling every non-Einstein trace coefficient inconsistent despite different possible second-class branches.",
+    "Treating a kinematic right inverse as a proof of the reduced canonical symplectic form.",
+    "Claiming microscopic action selection or a numerical Newton prediction from the metric coefficient relations."
+  ],
+  "verification": {
+    "status": "partial",
+    "artifacts": [
+      "tools/verify_spatial_constraint_closure.py",
+      "tests/test_spatial_constraint_closure.py",
+      "formal/lean/UBT/Hamiltonian/SpatialClosure.lean",
+      "reports/full_spatial_dynamics_2026_10_29.json"
+    ],
+    "limitations": "The full functional bracket has an analytic derivation with CAS and independent numerical cross-checks; Lean scope is finite algebra only. Microscopic and global statements remain open."
+  },
+  "attribution_status": "evidence_linked",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "New AI-proposed calculation within the author-directed programme; historical human/AI contributions and provenance tiers are unchanged."
+}
