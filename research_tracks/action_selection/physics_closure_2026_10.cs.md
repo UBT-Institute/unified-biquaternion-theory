@@ -73,3 +73,8 @@ Spusťte `python tools/verify_physics_closure.py` a `python -m pytest -q tests/t
 ## Úplná prostorová dynamika po metrické redukci
 
 Výpočet [úplné prostorové dynamiky](full_spatial_dynamics_2026_10.cs.md) odvozuje lokální závorku změn časových řezů v deklarované rodině redukované kanonické metriky, vybírá Einsteinův poměr stopy a relativní koeficient křivosti a dává úplnou vakuovou evoluci metriky a dva ploché tenzorové módy. Kanonický fázový prostor a požadavek změn řezů mimo řešení jsou explicitní dodatečné předpoklady. Výpočet nevybírá mikroskopickou akci Theta, velikost Newtonovy konstanty, Holstův koeficient ani dynamiku dalších sektorů.
+
+<!-- BILINGUAL-UNIT: physics-closure.spatial-jet-dirac -->
+## Kanonická jetová redukce zvolené gravitační větve
+
+[Lokální prostorová Diracova redukce](splitjet_spatial_dirac_2026_10.cs.md) sestavuje ekvivalentní čistě gravitační rodičovskou akci, zachovává posun hybnosti nosiče závislý na poli a eliminuje smíšené bloky pomocných vazeb beze změny základních závorek. Dodatečné jetové proměnné nepřispívají lokálním fyzikálním módem v regulárním souřadnicovém okolí s nenulovou normou. Tím se řeší jetová část mostu k metrickému fázovému prostoru pro zvolenou akci, zatímco původ a kladná normalizace této akce i všechny další komplexní/hmotové sektory zůstávají otevřené.

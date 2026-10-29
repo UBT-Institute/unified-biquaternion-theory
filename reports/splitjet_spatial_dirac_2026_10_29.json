@@ -1,0 +1,117 @@
+{
+  "scope": "Local gravity-only split-jet parent of a supplied Palatini/GR base; extra constraints and physical bracket equivalence, not microscopic action selection",
+  "versions": {
+    "sympy": "1.14.0",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "symbolic": {
+    "graph_block_inverse_left": true,
+    "graph_block_inverse_right": true,
+    "graph_block_determinant_one_with_mixed_brackets": true,
+    "physical_Dirac_correction_zero_without_freezing_F": true,
+    "all_56_second_class_constraints_invertible": true,
+    "temporal_spatial_mixed_constraints_nonzero": true,
+    "full_second_class_determinant_one": true,
+    "full_mixed_reduction_preserves_base_and_X_brackets": true,
+    "temporal_primary_preservation_0": true,
+    "temporal_secondary_closure_0": true,
+    "temporal_primary_preservation_1": true,
+    "temporal_secondary_closure_1": true,
+    "temporal_primary_preservation_2": true,
+    "temporal_secondary_closure_2": true,
+    "temporal_primary_preservation_3": true,
+    "temporal_secondary_closure_3": true,
+    "vertical_generator_X_0": true,
+    "vertical_generator_Q0_0": true,
+    "vertical_generator_X_1": true,
+    "vertical_generator_Q0_1": true,
+    "vertical_generator_X_2": true,
+    "vertical_generator_Q0_2": true,
+    "vertical_generator_X_3": true,
+    "vertical_generator_Q0_3": true,
+    "parent_extra_phase_dimension_zero": true,
+    "adapted_boost_preserves_Lorentz_metric": true,
+    "adapted_K_is_Lorentz_antisymmetric": true,
+    "adapted_chart_recovers_all_Q_components": true,
+    "seven_auxiliary_coordinates_invertible": true,
+    "all_X_dependent_position_derivatives_retained": true,
+    "dropping_the_X_momentum_shift_fails": true,
+    "field_dependent_cotangent_map_is_symplectic": true,
+    "phase_space_Jacobian_one": true,
+    "shared_X_momentum_sums_all_four_columns": true
+  },
+  "numerical": {
+    "grid_points_per_direction": 3,
+    "spatial_cells": 27,
+    "internal_real_dimension": 4,
+    "graph_constraints": 648,
+    "seed": 20261029,
+    "finite_difference_step": 1e-05,
+    "maximum_gradient_error": 3.198635800671923e-11,
+    "maximum_inverse_error": 0.0,
+    "maximum_physical_Dirac_correction": 0.0,
+    "minimum_spatial_metric_eigenvalue": 0.5767622532493365,
+    "mixed_bracket_norm": 175.06654159511535,
+    "checks": {
+      "three_nonzero_spatial_derivatives": true,
+      "independent_graph_derivative": true,
+      "full_constraint_matrix_invertible": true,
+      "physical_bracket_unchanged": true,
+      "regular_spacelike_coframe": true,
+      "future_timelike_carrier": true,
+      "mixed_brackets_are_not_frozen": true
+    }
+  },
+  "passed": true,
+  "not_proved": [
+    "microscopic Theta action or its positive Newton coefficient",
+    "full complex-time/matter/colour constraints",
+    "null/global/horizon reduction",
+    "formal continuum Dirac field theory",
+    "microscopic quantum measure"
+  ],
+  "recorded_on": "2026-10-29",
+  "base_commit": "d9a8246832bf25d01a1a1d97ecff8c49efd34fe0",
+  "scientific_status": "CONDITIONAL",
+  "source_sha256": {
+    "tools/verify_splitjet_spatial_dirac.py": "d3c97f8f0dbbcd311372fcaaa9f967ba637ce04e4cbc3869a0391ada07660347",
+    "tests/test_splitjet_spatial_dirac.py": "b2701e7d3295d14df8123992a18735a50c3d551af1ce8cb686414df68422f47f",
+    "formal/lean/UBT/Hamiltonian/SplitJetDirac.lean": "a28a978fdae073c9de9a6711ff8b4533c9834a5a3831bcfa8bf7f732840f9b7d",
+    "formal/lean/UBT.lean": "d18c5c01198876f14dd0ae8889ebfa6d50c9439ecc2807ff197cc07090fb665b",
+    ".github/workflows/lean.yml": "ae320d164f4060bdc1749ed78aa3398432c9075ee8affccf738bfcc8a5da84d4",
+    "research_tracks/action_selection/splitjet_spatial_dirac_2026_10.en.md": "0280dd8f19b9a3e369bc4c45cff07b3999c3413c0966ef0b13f30fde00389619",
+    "research_tracks/action_selection/splitjet_spatial_dirac_2026_10.cs.md": "154bfbbcbd1e694564acb6fc68e5a3f5936109379c9659384b46b583baefc901"
+  },
+  "local_validation": {
+    "symbolic_checks": 34,
+    "new_pytest_cases": 35,
+    "related_existing_pytest_cases": 43,
+    "targeted_cases_total": 78,
+    "bilingual_structural_pairs": 294,
+    "research_origin_events": 9,
+    "release_checksums": 83,
+    "provenance_headers": "PASS"
+  },
+  "formal_verification": {
+    "status": "LEAN-PENDING",
+    "finite_cores": 6,
+    "reason": "No local Lean runtime; strict root build, independent leanchecker and axiom audit submitted via CI.",
+    "not_formalized": [
+      "continuum Dirac constraint theorem and smeared operator domains",
+      "Palatini/HT base reduction",
+      "full microscopic Theta/matter/complex-time dynamics and measure"
+    ]
+  },
+  "bilingual_semantics": {
+    "status": "PENDING",
+    "reason": "Independent CI review required; structural parity is not semantic approval."
+  },
+  "predecessor_ci_observation": {
+    "pr": 811,
+    "all_mathematical_checks_and_latex": "PASS",
+    "bilingual_semantics": "FAILED_UNAVAILABLE",
+    "reason": "local Ollama unavailable: TimeoutError",
+    "semantic_job_id": 123380120343
+  }
+}
