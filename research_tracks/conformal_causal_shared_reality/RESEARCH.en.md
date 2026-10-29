@@ -256,6 +256,36 @@ Theta-derived **two-sided** covariant connection giving
 a curved, real canonical central metric from its own jets.
 G1 PARTIAL; no physical action has been selected.
 
+<!-- BILINGUAL-UNIT: conformal-causal.full-complex-gradient-update -->
+## G1 stronger full-complex sharp-gradient theorem [PROVED, restricted]
+
+See G1_COMPLEX_FLAT_CONNECTION_GATE.en.md and
+tests/test_theta_canonical_flatness_gate.py.
+The earlier pure-gradient Killing flatness result assumed
+rank(d Re Theta)=4. The stronger, general theorem does not:
+nondegenerate canonical sharp metric implies rank_C(dTheta)=4
+and the induced complex affine Levi-Civita connection is flat.
+A real Lorentzian complex-gradient metric with rank(d Re Theta)=2
+is exhibited explicitly. This establishes that zero defining
+connection cannot create nonflat canonical geometry on the
+declared 4-complex-component Mat(2,C) carrier.
+
+In the determinant-preserving SL(2,C)xSL(2,C) comparator,
+a pair of *flat* left/right connections can both be gauged
+away, so at least one nonflat connection is necessary for
+nonflat canonical geometry in that gauge class. It is
+NOT sufficient: an explicit anti-Hermitian Lorentz spin
+connection has nonzero F but acts trivially on a selected
+Theta, leaving g flat. The naive traceless Maurer–Cartan
+composite A=-(dTheta Theta^-1)_0 also gives a rank<=1
+tetrad/metric and cannot close the missing dynamics.
+
+The remaining task is an actual Theta-derived covariant
+two-sided closure with a real, curved canonical sharp metric,
+a nontrivial coupling of curvature to the field and the
+metric/torsion compatibility and dynamics; no free action
+or GR endpoint is imported. G1 PARTIAL, C_working.
+
 <!-- BILINGUAL-UNIT: conformal-causal.integration-verification -->
 ## Integrated verification scope
 
