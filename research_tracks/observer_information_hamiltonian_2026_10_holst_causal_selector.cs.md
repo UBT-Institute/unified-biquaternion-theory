@@ -31,3 +31,8 @@ Toto tvrzení **neznamená**, že úplná Palatiniho--Holstova teorie je totožn
 <!-- BILINGUAL-UNIT: next -->
 ## Konkrétní další důkazní krok
 Spočítat přesnou reprezentaci křivosti kanonického párového spojení na Cliffordově nosiči; vyčíslit její gradované i negradované stopy s torzí a úplné kompozitní variace; omezit gradaci $\psi$ pomocí nezávisle odvozeného pravidla fáze/chirality; testovat, zda nějaká fyzikálně měřitelná torzní observabla nebo konzistence sdílených záznamů skutečně rozlišují oba invariantní kanály. **STAV: přesný podmíněný důkaz nemožnosti výběru; úplný Hamiltonián $\Theta$ OPEN (otevřená); LEAN-PENDING; kontrola významové shody překladů PENDING.**
+
+<!-- BILINGUAL-UNIT: selfdual-domain -->
+## Standardní identita a samostatná otázka komplexního přiřazení
+
+Identita Holstova/Niehova–Yanova členu při nulové torzi je standardní výsledek, nikoli nová fyzika UBT. Omezená dedukce kauzálního nevýběru se týká protokolů na téže metrické větvi s nulovou torzí. [Audit uzavření](action_selection/physics_closure_2026_10.cs.md) samostatně ověřuje kanonické přiřazení GR FLRW při $b=\pm i$ po komplexním pokračování a přidání požadavku shody s GR. To omezenou dedukci nevyvrací: mění to předpoklady i definiční obor koeficientu. Původní hermitovská párová derivace navíc při naivně pokračované rotaci již negeneruje předpokládanou tetrádu. Komplexní větev vyžaduje vlastní podmínky reality odvozené z akce a úplnou variaci. Netvrdí se zde, že žádné možné silnější principy nikdy nemohou koeficient vybrat.

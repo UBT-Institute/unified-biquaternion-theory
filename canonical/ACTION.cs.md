@@ -13,6 +13,18 @@ UBT-AI-PROVENANCE-END
 
 # Invariant jediné akce UBT
 
+<!-- BILINGUAL-UNIT: single-action.physics-closure -->
+## Audit fyzikálního uzavření
+
+[Audit akce a Hamiltoniánu s vazbami](../research_tracks/action_selection/physics_closure_2026_10.cs.md) klasifikuje omezenou geometrickou rodinu s konstantními koeficienty a odvozuje úplný Hamiltonián s vazbami stávajícího homogenního Palatiniho–Holstova srovnávacího modelu. Efektivní gravitační postulát je `AXIOMATIC_CANDIDATE`; jeho fyzikální tvrzení o obnově mají status `CONDITIONAL`. Holstovy a torzní koeficienty zůstávají nevybrané. Omezený Hamiltonián ani vakuová ekvivalence s nezávislou konexí nefinalizují `S_UBT[Theta]` ani neposkytují rozlišující predikci nad rámec GR.
+
+<!-- BILINGUAL-UNIT: single-action.bare-splitjet-proof -->
+## Hranice důkazu holé akce nezávislá na počtu složek
+
+[Důkaz nezávislý na rozměru](../research_tracks/action_selection/physics_closure_bare_action_2026_10.cs.md) stanovuje lokální variační jádro pro libovolný reálný prostor variací Theta. Pokud je kinetická dvojice totožná s dvojicí definující kompozitní metriku, potenciál neobsahuje derivace a algebraické variace jetu volně pokrývají tetrádu, je holá akce `int nu_E F(Theta)`. Při nezávislých variacích pole přenáší stacionarita `F=0` a `dF=0`. V kritické nule je stacionární každá lokálně reprezentovatelná tetráda; explicitní regulární uzavřený příklad FLRW porušuje Einsteinovu podmínku pro každou kosmologickou konstantu. Jeho kritický hessián nemá metrický kinetický blok. Tím je vyloučeno odvození GR z této konkrétní rodiny, nikoli všechny akce UBT nebo kvantová doplnění. Lean dokazuje zapsanou algebru a derivace; funkcionální interpretace a interpretace křivosti mají nezávislé analytické kontroly/CAS a explicitní hranice formalizace.
+
+Autor upřesnil, že navržený počet složek je předběžný. Rozměry aktuálně zapsaného jádra popisují tento model, nikoli odvozenou větu o fyzikální minimalitě. Důkaz nepředpokládá pevný rozměr pole a nevybírá náhradní prostor hodnot. Jiné dvojice, derivativní interakce nebo zákony kompozitních konexí vyžadují vlastní konzistentní akci a variaci.
+
 <!-- BILINGUAL-UNIT: single-action.rule -->
 ## Závazné pravidlo
 

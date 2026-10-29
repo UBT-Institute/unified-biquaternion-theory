@@ -1,0 +1,80 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-10-29",
+  "claim_or_decision_id": "PHYSICS-CLOSURE-807-SOURCED-HOLST-IDENTIFIABILITY",
+  "summary": "A full 24-component source diagnostic for the existing effective gravity comparator and a constant-coefficient bulk identifiability boundary.",
+  "development_mode": "ai_initiated",
+  "stage_events": [
+    {
+      "kind": "ai_proposal",
+      "actor": "ai",
+      "description": "During authorized continuation of the existing audit, proposed testing its vacuum coefficient degeneracy with a declared external axial source while retaining an already allowed torsion-square invariant. The particular diagnostic is not attributed to the author.",
+      "evidence_ids": ["prior_audit", "current_artifacts"]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Computed the full contortion Hessian and every sourced Euler component from exterior forms. Used the standard Nieh-Yan identity to distinguish an effective bulk coefficient from the two unidentifiable original coefficients, and stated the corresponding Fisher null direction.",
+      "evidence_ids": ["current_artifacts", "antecedent"]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Checked exact symbolic identities, a separately assembled NumPy tensor contraction and full connection solve, and local pytest regressions. Added finite Lean sources with compilation pending in fresh CI because no local Lean runtime is installed.",
+      "evidence_ids": ["current_artifacts"]
+    },
+    {
+      "kind": "literature_comparison",
+      "actor": "ai",
+      "description": "Identified established antecedents for sourced Holst interactions. No claim of a new physical interaction, first discovery, or source normalization derived from UBT is made.",
+      "evidence_ids": ["antecedent"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "prior_audit",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/95ab194f28bf28a925eb5fc2634435e43b2cd6f7; paired physics_closure_2026_10 and action-family appendices",
+      "original_checked": true,
+      "supports": "Existing vacuum Holst degeneracy, the allowed torsion operators, and explicit open source-normalization and microscopic-action gaps.",
+      "limitations": "Repository content establishes prior artifact scope, not conceptual origin of every equation."
+    },
+    {
+      "id": "current_artifacts",
+      "class": "repository_artifact",
+      "locator": "tools/verify_holst_spin_source.py; tests/test_holst_spin_source.py; formal/lean/UBT/Hamiltonian/HolstSpinSource.lean; paired physics_closure_spin_source_2026_10 appendix; reports/holst_spin_source_2026_10_29.json",
+      "original_checked": true,
+      "supports": "Full-component effective-comparator calculation, independent numerical solve, finite formal sources and explicitly scoped coefficient degeneracy.",
+      "limitations": "No microscopic action, intrinsic spin source, physical Dirac reduction, quantum measure or boundary-sensitive equivalence is derived. Formal sources require successful fresh compilation before formal verification is claimed."
+    },
+    {
+      "id": "antecedent",
+      "class": "external_publication",
+      "locator": "https://arxiv.org/abs/hep-th/0507253",
+      "original_checked": true,
+      "supports": "The primary publication's abstract describes established sourced Holst effective interactions and dependence on gravitational and matter-coupling choices.",
+      "limitations": "The source normalization and every coefficient in the present diagnostic are defined and independently calculated here; exact agreement with the publication's conventions is not claimed."
+    }
+  ],
+  "rejected_alternatives": [
+    "Claiming that spin automatically selects the separate Holst coefficient when other allowed torsion coefficients remain free.",
+    "Dropping tensor contortion components before testing the full connection equation.",
+    "Identifying a declared external axial source with an already derived microscopic UBT current.",
+    "Calling a nonzero algebraic auxiliary Hessian determinant a proof of physical ghost freedom.",
+    "Extending a constant-coefficient fixed-boundary equivalence to quantum measures or boundary observables."
+  ],
+  "verification": {
+    "status": "partial",
+    "artifacts": [
+      "tools/verify_holst_spin_source.py",
+      "tests/test_holst_spin_source.py",
+      "formal/lean/UBT/Hamiltonian/HolstSpinSource.lean",
+      "reports/holst_spin_source_2026_10_29.json"
+    ],
+    "limitations": "Symbolic and independently assembled numerical effective-comparator checks; local Lean unavailable and fresh CI compilation pending. The full composite, boundary and statistical interpretations exceed the finite formal statements."
+  },
+  "attribution_status": "evidence_linked",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "Current AI-proposed diagnostic within the ongoing human-AI research programme. No private correspondence is deposited and no historical author contribution or prior attestation is rewritten."
+}

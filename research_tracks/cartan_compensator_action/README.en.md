@@ -8,7 +8,7 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: New parallel, falsifiable research hypothesis; not an adopted UBT action or a theorem of GR emergence.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
@@ -253,3 +253,8 @@ This is a **parallel research track only**. No changes to PR #807,
 canonical action, claim matrix or effective GR postulate are licensed
 by its existence. Keep a new PR in draft and do not merge as a
 physical theorem without the gate evidence above.
+
+<!-- BILINGUAL-UNIT: cartan-compensator.verification -->
+## Verification
+
+The exact rational checks in `tests/test_cartan_compensator_seed.py` pass all 4 cases. LEAN-PENDING: the finite rank calculation has no compiled Lean proof in this track. These tests do not establish the embedding, parent field variation, physical constraint reduction or spectrum. Independent bilingual semantic review remains pending.

@@ -8,13 +8,13 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Samostatná testovatelná výzkumná hypotéza, nikoli přijatá akce UBT ani důkaz emergence GR.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
 # Paralelní Cartanův kompenzátor / program akce Stelle–West
 
-**28. 10. 2026 · C_working · mimo PR #807 · BEZ POVÝŠENÍ DO CANONICAL**
+**2026-10-28 · C_working · mimo PR #807 · BEZ POVÝŠENÍ DO CANONICAL**
 
 Jde o **novou srovnávací teorii a otevřený problém jejího vložení
 do UBT**, nikoliv o přejmenování minimální jednospojkové konstrukce.
@@ -52,13 +52,13 @@ Netvrdíme, že máme kompletní akci, počet fyzikálních módů či predikci.
 <!-- BILINGUAL-UNIT: cartan-compensator.axioms -->
 ## [AX-C] Explicitní axiomy srovnávací teorie, nikoliv axiomy UBT
 
-C1. Orientovaná hladká čtyřvarieta M. Zvolíme G=SO(1,4) jako
+C1. Orientovaná hladká 4-varieta M. Zvolíme G=SO(1,4) jako
 **srovnávací model**, s vnitřní metrikou
 eta=diag(-1,+1,+1,+1,+1). Tím rozšiřujeme kalibrační grupu
 oproti fyzikální Lorentzově konexi; nejde jen o jinou značku.
 
 C2. Nezávislé proměnné: reálná G-konexe, 1-forma
-A^{AB}=-A^{BA}, a reálný kompenzátor V^A v pětirozměrné
+A^{AB}=-A^{BA}, a reálný kompenzátor, 0-forma V^A v pětirozměrné
 vektorové reprezentaci. Definujme E^A:=D_A V^A,
 F^{AB}:=dA^{AB}+A^A{}_C∧A^{CB}.
 Kontrakce používají eta a epsilon_{ABCDE}; v tomto modelu
@@ -266,3 +266,8 @@ PR #807, kanonická akce, claim matrix a
 efektivní gravitační postulát se nemění.
 Nové PR má zůstat draft; do canonical nevstupuje
 žádná fyzikální věta bez výše uvedených důkazů.
+
+<!-- BILINGUAL-UNIT: cartan-compensator.verification -->
+## Ověření
+
+Přesné racionální kontroly v `tests/test_cartan_compensator_seed.py` procházejí ve všech 4 případech. LEAN-PENDING: konečný výpočet hodnosti v této větvi nemá zkompilovaný důkaz v Leanu. Tyto testy nedokazují vložení, variaci rodičovských polních rovnic, fyzikální redukci vazbami ani spektrum. Nezávislá kontrola významové shody obou jazyků zůstává nedokončená.
