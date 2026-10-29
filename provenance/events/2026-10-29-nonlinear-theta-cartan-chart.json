@@ -1,0 +1,66 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-10-29",
+  "claim_or_decision_id": "CARTAN-THETA-NONLINEAR-LOCAL-CHART-20261029",
+  "summary": "Local nonlinear compensator/tangent lift retaining the written complex Theta data, exact constant-linear extension obstruction, and a failed independent standard field-phase test.",
+  "development_mode": "ai_initiated",
+  "stage_events": [
+    {
+      "kind": "ai_proposal",
+      "actor": "ai",
+      "description": "After integrating the open research branches, proposed testing the Cartan embedding obligation by transporting a group action through a derived fixed-norm tangent chart instead of identifying Theta with a five-vector or deleting its imaginary coordinates.",
+      "evidence_ids": ["existing_tracks", "new_work"]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Computed the exact covariance matrix for a constant-linear extension, constructed the nonlinear chart and all broken/mixed generator brackets, and identified its noncommutation with the independently declared standard phase at an invertible Theta value.",
+      "evidence_ids": ["new_work"]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Verified exact symbolic identities and independently implemented finite group transport/inversion using NumPy/SciPy. Encoded finite Lean algebraic/data-injectivity cores; their current compilation status is recorded in the source-bound report.",
+      "evidence_ids": ["new_work"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "existing_tracks",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/d158a9d174496e2226abf78a2ff58835a169a26f; research_tracks/cartan_compensator_action/README.en.md; research_tracks/conformal_causal_shared_reality/G1_CANONICAL_SHARP_BRIDGE.en.md",
+      "original_checked": true,
+      "supports": "The existing comparator explicitly leaves the Theta representation/embedding open, and the sharp audit preserves full complex field data while forbidding replacement of the canonical metric by a different Gram readout.",
+      "limitations": "These sources do not select the new nonlinear action on field coordinates, its phase compatibility, a connection or a microscopic UBT action."
+    },
+    {
+      "id": "new_work",
+      "class": "repository_artifact",
+      "locator": "tools/verify_nonlinear_cartan_chart.py; tests/test_nonlinear_cartan_chart.py; formal/lean/UBT/GR/NonlinearCartanChart.lean; paired theta_nonlinear_lift notes; reports/theta_nonlinear_cartan_chart_2026_10_29.json",
+      "original_checked": true,
+      "supports": "Exact covariance-rank obstruction for the specified linear representation, a local nonlinear lift retaining both coordinate vectors, exact phase incompatibility and independently tested finite-group reconstruction.",
+      "limitations": "This is a local comparison construction with a supplied scale, not a new fundamental field, selected symmetry, canonical sharp bridge, derived action or physical spectrum. No claim of scientific priority for nonlinear realizations is made."
+    }
+  ],
+  "rejected_alternatives": [
+    "Identifying an eight-real matrix field with a five-vector representation without an explicit action or map.",
+    "Interpreting a no-go for constant-linear extensions as a no-go for every nonlinear realization.",
+    "Discarding the imaginary coordinates or counting derived lift coordinates as independent new fields.",
+    "Claiming the full embedding closes when the standard independent phase does not commute with the new action.",
+    "Using this internal compensator geometry to replace the frozen canonical spacetime metric or claim Einstein dynamics."
+  ],
+  "verification": {
+    "status": "partial",
+    "artifacts": [
+      "tools/verify_nonlinear_cartan_chart.py",
+      "tests/test_nonlinear_cartan_chart.py",
+      "formal/lean/UBT/GR/NonlinearCartanChart.lean",
+      "reports/theta_nonlinear_cartan_chart_2026_10_29.json"
+    ],
+    "limitations": "Finite symbolic/numerical comparison and scoped formal cores; the full local group construction, covariance rank, canonical/phase embedding and physical dynamics are separate obligations."
+  },
+  "attribution_status": "evidence_linked",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "AI-proposed follow-up within the ongoing research programme; existing historical human/AI contributions and author attestations are unchanged."
+}

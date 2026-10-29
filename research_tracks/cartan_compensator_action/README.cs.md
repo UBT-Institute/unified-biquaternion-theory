@@ -271,3 +271,8 @@ Nové PR má zůstat draft; do canonical nevstupuje
 ## Ověření
 
 Přesné racionální kontroly v `tests/test_cartan_compensator_seed.py` procházejí ve všech 4 případech. LEAN-PENDING: konečný výpočet hodnosti v této větvi nemá zkompilovaný důkaz v Leanu. Tyto testy nedokazují vložení, variaci rodičovských polních rovnic, fyzikální redukci vazbami ani spektrum. Nezávislá kontrola významové shody obou jazyků zůstává nedokončená.
+
+<!-- BILINGUAL-UNIT: cartan-compensator.nonlinear-followup -->
+## Lokální nelineární pokračování
+
+[Nelineární zdvižení Theta](theta_nonlinear_lift.cs.md) poskytuje explicitní lokální Lorentzovsky slučitelnou souřadnicovou mapu kompenzátoru a tečného vektoru, která zachovává zapsaný komplexní nosič. Test standardní nezávislé fáze pole selhává. Jde o PARTIAL posun ve srovnání reprezentací, nikoli vybraný kalibrační zákon či akci UBT; úplné kontroly vložení a dynamiky zůstávají OPEN.

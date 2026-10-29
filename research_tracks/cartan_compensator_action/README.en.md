@@ -258,3 +258,8 @@ physical theorem without the gate evidence above.
 ## Verification
 
 The exact rational checks in `tests/test_cartan_compensator_seed.py` pass all 4 cases. LEAN-PENDING: the finite rank calculation has no compiled Lean proof in this track. These tests do not establish the embedding, parent field variation, physical constraint reduction or spectrum. Independent bilingual semantic review remains pending.
+
+<!-- BILINGUAL-UNIT: cartan-compensator.nonlinear-followup -->
+## Local nonlinear follow-up
+
+The [nonlinear Theta lift](theta_nonlinear_lift.en.md) gives an explicit local Lorentz-compatible compensator/tangent chart retaining the written complex carrier. Its standard independent field-phase test fails. This is PARTIAL progress on the representation comparison, not a selected UBT gauge law or action; the full embedding and dynamical gates remain OPEN.
