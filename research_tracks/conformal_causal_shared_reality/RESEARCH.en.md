@@ -255,16 +255,28 @@ The missing constructive ingredient is a non-tautological
 Theta-derived **two-sided** covariant connection giving
 a curved, real canonical central metric from its own jets.
 G1 PARTIAL; no physical action has been selected.
+**Resume the existing full geometric algebra programme** in
+`canonical/geometry/biquaternion_dirac_lift.tex` and
+`research_tracks/observer_information_hamiltonian_2026_10_full_clifford_operator.en.md`:
+the compatible Clifford module connection, its squared Dirac
+operator including bivector/curvature/torsion grades, and its
+derivation from the single Theta action are the actual open gates.
+The operator lift introduces no second tetrad; gradient-only
+no-gos must not be represented as novel Clifford results.
 
 <!-- BILINGUAL-UNIT: conformal-causal.full-complex-gradient-update -->
-## G1 stronger full-complex sharp-gradient theorem [PROVED, restricted]
+## G1 historical full-complex sharp-gradient regression [HISTORICAL / PROVED]
 
 See G1_COMPLEX_FLAT_CONNECTION_GATE.en.md and
 tests/test_theta_canonical_flatness_gate.py.
-The earlier pure-gradient Killing flatness result assumed
-rank(d Re Theta)=4. The stronger, general theorem does not:
-nondegenerate canonical sharp metric implies rank_C(dTheta)=4
-and the induced complex affine Levi-Civita connection is flat.
+The exact-gradient flatness no-go was closed in the
+July 2026 GAP-10T-GRADIENT-FLATNESS patch; the complex
+Jacobian here is a regression and modest algebraic
+restatement, not a newly found physical theorem.
+The previous October Killing calculation assumed
+rank(d Re Theta)=4. The current complex calculation
+uses only nondegeneracy to infer rank_C(dTheta)=4;
+the induced complex affine Levi-Civita connection is flat.
 A real Lorentzian complex-gradient metric with rank(d Re Theta)=2
 is exhibited explicitly. This establishes that zero defining
 connection cannot create nonflat canonical geometry on the
