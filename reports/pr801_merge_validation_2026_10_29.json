@@ -1,0 +1,23 @@
+{
+  "recorded_on": "2026-10-29",
+  "scope": "PR801 with merged PR803; complete four CAR language pairs and normalized provenance metadata",
+  "mathematical_claim_changes": false,
+  "canonical_action_status": "DEFINED_FAMILY_NOT_FINALIZED",
+  "verification": {
+    "CAR_suites": "PASS",
+    "provenance_and_release_checksums": "PASS",
+    "bilingual_structure_pairs": 276
+  },
+  "independent_bilingual_semantics": "PENDING; no approval inferred from the merge instruction",
+  "human_attestation": "not_attested",
+  "source_sha256": {
+    "research_tracks/information_first/CAR_CORRELATION_AXIS_ADM_SIGN_GATE.en.md": "b563f492a9ea2801ed88fe15dc1e2018a7c6c7a7ab336391f31b621cd9a166e7",
+    "research_tracks/information_first/COLLECTIVE_CAR_EMERGENT_GRAVITY_CCR.en.md": "9cd228c81ce58bde861246881efb9fd7151538dc01a5fd82264b573dbff7e115",
+    "research_tracks/information_first/ENTANGLED_EVEN_CAR_GEOMETRY_CCR_GATE.en.md": "c901ec63738052f7f5206a557e4bc46582cef43a2c2aa50d817616a5deecc825",
+    "research_tracks/information_first/EVEN_CAR_PAIR_LOW_ENERGY_OSCILLATOR.en.md": "19b135b10281269141ef142ed120f5aeee733209d4f78d82f2cd220077816c17",
+    "research_tracks/information_first/CAR_CORRELATION_AXIS_ADM_SIGN_GATE.cs.md": "3bb440eb9c4fd8ad4b44432e1959bbdf98d7565e135559153c6b375ae634898c",
+    "research_tracks/information_first/COLLECTIVE_CAR_EMERGENT_GRAVITY_CCR.cs.md": "77d39f6eb7ed4d0ab2533d4a36f0c0e92f0e2497e4ab60040e2f8d0186fca187",
+    "research_tracks/information_first/ENTANGLED_EVEN_CAR_GEOMETRY_CCR_GATE.cs.md": "3b8cd5b09a84d521626219dd6cd562217ecef60abcf6f55594f08bf96ebb99ac",
+    "research_tracks/information_first/EVEN_CAR_PAIR_LOW_ENERGY_OSCILLATOR.cs.md": "5eaef0e251297b585c6117442238e429a3385fc526e74f3381558992d6f6b9bd"
+  }
+}
