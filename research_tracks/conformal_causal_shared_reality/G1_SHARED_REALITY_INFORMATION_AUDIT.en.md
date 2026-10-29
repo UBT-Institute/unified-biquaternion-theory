@@ -116,4 +116,3 @@ A real selector must additionally determine a positive constrained phase space, 
 Seven exact tests in tests/test_shared_reality_information_gate.py were executed locally. Next bounded scientific task: choose one finite causal diamond with an explicitly Theta-derived reference state and local observable algebra, derive the constrained information variation, and verify it changes the dynamical selector without importing a metric or energy sign. G1 remains PARTIAL; do not modify PR #807/#808 or canonical theories and do not merge this draft.
 
 Context: https://doi.org/10.1103/PhysRevLett.116.201101 and https://doi.org/10.1103/PhysRevD.95.046003 . Microcausality and operations: https://doi.org/10.1103/sxkx-sy9g .
-

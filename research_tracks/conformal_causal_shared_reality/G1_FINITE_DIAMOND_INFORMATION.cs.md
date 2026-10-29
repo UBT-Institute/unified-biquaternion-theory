@@ -146,4 +146,3 @@ Výpočet **částečně realizuje** dříve navržený operační test sdílen�
 Další nekruhovou branou je odvodit skutečnou mapu lokálních pozorovatelných a stavů i kužel konečné rychlosti šíření ze stejné vázané geometrie Theta a následně prokázat **nový vyvratitelný informační vztah**, který vyloučí jinak přípustný generátor. Mohou pomoci invarianty vyššího řádu/jetu či korelace oblastí, ale je nutno je nezávisle normalizovat a nevkládat předem cílovou dynamiku. G1 ponechat PARTIAL a další G2 PARKED až do nezávislé kontroly mostu. Bez změn PR #807 ani PR #808.
 
 Ověření: `python -m unittest discover -s tests -p 'test_theta_finite_diamond_info.py' -v` — všech sedm symbolických testů prošlo lokálně. Kontroly GitHub workflow jsou nezávislé.
-

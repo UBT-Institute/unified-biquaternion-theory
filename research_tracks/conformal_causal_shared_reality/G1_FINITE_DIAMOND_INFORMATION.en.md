@@ -146,4 +146,3 @@ This calculation **partially realizes** the previously proposed shared-reality o
 The next noncircular gate is to derive an actual local observable/state map and finite-c propagation cone from the same constrained Theta geometry, then show a **new falsifiable information relation** that excludes an otherwise viable generator. Higher-order/jet invariants or inter-region correlations may help, but must be independently normalized and should not import the target dynamics. Keep G1 PARTIAL and later G2 PARKED until that bridge is independently audited. No changes to PR #807 or PR #808.
 
 Verification: `python -m unittest discover -s tests -p 'test_theta_finite_diamond_info.py' -v` — all seven symbolic tests passed locally. GitHub workflow checks are independent.
-

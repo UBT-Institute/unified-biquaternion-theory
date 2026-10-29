@@ -1,7 +1,11 @@
 schema: ubt-gr-recovery-status/v3
 recorded: 2026-08-24
 scope: four-dimensional local classical gravity-sector Einstein-Lambda recovery on regular non-null split-jet patches
-overall_status: CLOSED
+overall_status: CONDITIONAL
+mathematical_implication_status: PROVED_UNDER_DECLARED_POSTULATE
+fundamental_action_selection_status: OPEN_GAP
+action_derivation_status: AXIOMATIC_CANDIDATE
+status_scope: Physical UBT recovery is conditional; closure below is internal to the adopted gravity-sector model.
 activation: This status becomes canonical when the paired gravity_dynamical_postulate EN/CZ documents are merged.
 independent_continuous_action_couplings: 1
 gravity_constant: kappa
@@ -24,6 +28,8 @@ primary_sources:
 postulate:
   id: ONE_COUPLING_UNIMODULAR_SPLIT_JET_PALATINI
   status: CANONICAL_ON_MERGE
+  derivation_status: AXIOMATIC_CANDIDATE
+  physical_consequence_status: CONDITIONAL
   action: S_G=(1/(4*kappa))*int epsilon_abcd E^a wedge E^b wedge R^cd(omega) -(1/kappa)*int Lambda*(nu_E-dC3)
   parameter_rule: kappa is the sole independent continuous action coupling; N0 is unit-setting only; Lambda is an on-shell integration constant rather than a Lagrangian coupling
   cosmological_equation: dLambda=0
@@ -120,3 +126,19 @@ forbidden_wording:
   - the full Standard Model and quantum UBT action are already closed
 allowed_summary:
   - After adoption of the one-coupling unimodular split-jet Palatini dynamical postulate, local classical single-Theta Einstein-Lambda recovery is CLOSED on regular non-null patches with kappa as the sole independent continuous action coupling and Lambda0 as an integration constant; the HT auxiliary completion is unique only within the explicitly declared minimal affine background-free first-order class.
+
+audit_2026_10_28:
+  report: research_tracks/action_selection/physics_closure_2026_10.en.md
+  holst_coefficient_selection: OPEN_GAP
+  torsion_square_coefficient_selection: OPEN_GAP
+  scientific_boundary: Adopting the one-coupling law is not a derivation excluding the other symmetry-allowed operators. The conditional Einstein and local solution-lift implications are preserved.
+  sourced_followup_2026_10_29:
+    status: CONDITIONAL_DIAGNOSTIC
+    report: research_tracks/action_selection/physics_closure_spin_source_2026_10.en.md
+    evidence: reports/holst_spin_source_2026_10_29.json
+    source_normalization: DECLARED_NOT_DERIVED
+    result: With fixed boundary data the imported Holst plus torsion-square comparator depends on beta=b+zeta; the full 24-component algebraic connection equation has a unique sourced solution for every real beta. Bulk source records cannot identify b and zeta separately.
+    fundamental_action_selection_status: OPEN_GAP
+    formal_status: PARTIAL_FINITE_IDENTITIES_PROVED
+    formal_source_commit: 4f436e100d3fe0ea2f287178aee240dccc3ed482
+    formal_ci: https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40789689907/job/123171519601

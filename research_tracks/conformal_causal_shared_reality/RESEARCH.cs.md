@@ -293,3 +293,8 @@ Chybějící konstruktivní složkou je netautologická
 která vytvoří zakřivenou reálnou kanonickou centrální
 metriku ze svých vlastních jetů.
 G1 PARTIAL; fyzikální akce nebyla vybrána.
+
+<!-- BILINGUAL-UNIT: conformal-causal.integration-verification -->
+## Společný rozsah ověření
+
+Párové poznámky G1 v tomto adresáři jsou výzkumná srovnání s analytickými argumenty a konečnými přesnými regresními testy v SymPy. Jejich značky PROVED popisují uvedený analytický nebo algebraický výsledek za jeho předpokladů, nikoli úplnou polní teorii UBT. LEAN-PENDING: tyto nové argumenty konformní větve nemají zkompilovaný důkaz v Leanu. Konečné souřadnicové příklady, vzorkované kauzální intervaly a výpočty hodnosti nedokazují fyzikální spektrum, globální existenci PDE ani vybranou mikroskopickou akci. G1 zůstává PARTIAL.

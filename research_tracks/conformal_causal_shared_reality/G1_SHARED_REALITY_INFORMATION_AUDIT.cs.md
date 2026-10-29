@@ -116,4 +116,3 @@ Skutečný selektor musí navíc určit kladný vázaný fázový prostor, sympl
 Sedm přesných testů v tests/test_shared_reality_information_gate.py proběhlo lokálně. Další omezený vědecký úkol: vybrat jeden konečný kauzální diamant s referenčním stavem a algebrou lokálních pozorovatelných skutečně odvozených z Theta, spočítat vázanou informační variaci a ověřit, že mění selektor dynamiky bez dodání metriky či znaménka energie. G1 zůstává PARTIAL; neměnit PR #807/#808 ani kanonické dokumenty a draft nemergovat.
 
 Kontext: https://doi.org/10.1103/PhysRevLett.116.201101 a https://doi.org/10.1103/PhysRevD.95.046003 . Mikrokausalita a operace: https://doi.org/10.1103/sxkx-sy9g .
-

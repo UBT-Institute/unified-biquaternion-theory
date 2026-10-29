@@ -1,0 +1,43 @@
+{
+  "recorded_on": "2026-10-29",
+  "scope": "PR809 G1 conformal/causal/shared-reality comparisons integrated with current master",
+  "claim_status": "C_working; G1 PARTIAL; microscopic action and physical spectrum OPEN",
+  "verification": {
+    "new_test_files": 14,
+    "targeted_pytest_cases_passed": 100,
+    "bilingual_structure_pairs": 291,
+    "provenance_and_release_checksums": "PASS"
+  },
+  "formal_status": "LEAN-PENDING for the new conformal-track arguments",
+  "independent_semantics": "PENDING; no semantic approval or human attestation is inferred",
+  "source_sha256": {
+    "research_tracks/conformal_causal_shared_reality/AGENT_TASK_conformal_cartan_2026-10-28.cs.md": "69b7af9b4db27545c33b99206dbf697d978752a8be5db8ad35bcd4232d31f41d",
+    "research_tracks/conformal_causal_shared_reality/AGENT_TASK_conformal_cartan_2026-10-28.en.md": "637b8ed20ad6b7e8dbdab30f308abcf00dc0daa321b99077b0f463b77ccdc364",
+    "research_tracks/conformal_causal_shared_reality/G1_CANONICAL_SHARP_BRIDGE.cs.md": "863d4e828549907bfed4d4ef187fa9889044280add8fcca2312a434837fb457d",
+    "research_tracks/conformal_causal_shared_reality/G1_CANONICAL_SHARP_BRIDGE.en.md": "08bd6a2db31f26e5b07982f089c4f39c29405735c9f255b87bed0c6451a7a8f8",
+    "research_tracks/conformal_causal_shared_reality/G1_COMPLEX_REAL_COFRAME.cs.md": "89781d5f57b8d70623edc225dcdaaf6def86d2eac112f66201b3ea44500de42e",
+    "research_tracks/conformal_causal_shared_reality/G1_COMPLEX_REAL_COFRAME.en.md": "386dd02f3f04ac67074089fbed56276886793b5d541b73dd5ddfe0d5c1b897ac",
+    "research_tracks/conformal_causal_shared_reality/G1_COMPOSITE_WEYL.cs.md": "752f4a0e13d277a33aef53ea97064ec4c78ca4302b4360a6d05c8f60fc8cb705",
+    "research_tracks/conformal_causal_shared_reality/G1_COMPOSITE_WEYL.en.md": "120a333229460a6d24221bea4dbb24d1b5722ed403c14ec651ba607c6678e24d",
+    "research_tracks/conformal_causal_shared_reality/G1_CONNECTION_RANK.cs.md": "57eeb655f1247c86dbb9332d348b53a66aa50f2aba02d86aa13719df3658045d",
+    "research_tracks/conformal_causal_shared_reality/G1_CONNECTION_RANK.en.md": "47202931afd2c92a6d0592ac387a2cd168b8c4e38cf89ea104e822da09404325",
+    "research_tracks/conformal_causal_shared_reality/G1_FINITE_DIAMOND_INFORMATION.cs.md": "c80314287983898946f4b8c87b740deb142bc62967cbf66d5c237bd9b6517045",
+    "research_tracks/conformal_causal_shared_reality/G1_FINITE_DIAMOND_INFORMATION.en.md": "d956b9e33ff67ec6a969d1fef76d58164d500d9b1bd1801000b89dcf6ffbedc0",
+    "research_tracks/conformal_causal_shared_reality/G1_INDUCED_GEOMETRY.cs.md": "1db233d0a36a6ca6a5e045d297470c5f91bd31112c3384a290b936f440e485da",
+    "research_tracks/conformal_causal_shared_reality/G1_INDUCED_GEOMETRY.en.md": "76dbfa74a40c6d77d575fd277abdb6588ccb1acd922e35ba0c700a9e31878c88",
+    "research_tracks/conformal_causal_shared_reality/G1_INVARIANT_CAUSAL_BRIDGE.cs.md": "8c7783e249dd1edb741d3a0de2c1abfeb60d15a4ed44db384dc220c942a4574b",
+    "research_tracks/conformal_causal_shared_reality/G1_INVARIANT_CAUSAL_BRIDGE.en.md": "0ace6377e509c1bcd822a581ebf7ce50593a966b2cf00bdca9285ee75cd40e56",
+    "research_tracks/conformal_causal_shared_reality/G1_NEGATIVE_CONTROL.cs.md": "b482ef51cebaa47384778018213b7eb7f76f6380a2df3c4faabef5b97e0b44bb",
+    "research_tracks/conformal_causal_shared_reality/G1_NEGATIVE_CONTROL.en.md": "31296bd92536503fdb2c65efdd9ed1951b9aa74832d5684d3a08fcafb1705812",
+    "research_tracks/conformal_causal_shared_reality/G1_PHASE_STRICT_REALITY.cs.md": "d2b21ac1689374a4ee6d4ccb3e23f2a6e316ec3f97a0dea4b21524702f61f5fc",
+    "research_tracks/conformal_causal_shared_reality/G1_PHASE_STRICT_REALITY.en.md": "88526d98f96106dea2986205492a9af3f5f1ff72aab659a1b0f6ddcf9f6fa05c",
+    "research_tracks/conformal_causal_shared_reality/G1_PROJECTIVE_SIGNATURE.cs.md": "8cb554b62ae8fdef8c887cc78399fd2f7b42acf5c1ee779c9ef9cdececfe68f9",
+    "research_tracks/conformal_causal_shared_reality/G1_PROJECTIVE_SIGNATURE.en.md": "0f162950b17e0cf27e421486b7f1859c7697d990230fb74202cf2cf62543ed03",
+    "research_tracks/conformal_causal_shared_reality/G1_RT_EXTRA_SOLUTION.cs.md": "fe87ef64809735836023f62732b27a65271266f5e73ff70cb64f8d04168252b2",
+    "research_tracks/conformal_causal_shared_reality/G1_RT_EXTRA_SOLUTION.en.md": "4b55ee42867c4a9b55394425d727f542da87a23db6d79beb8a322a4d14f501ad",
+    "research_tracks/conformal_causal_shared_reality/G1_SHARED_REALITY_INFORMATION_AUDIT.cs.md": "ea8555a16de6fcf2d1787b6a999f75230a0bc790e5bb859cbf7b3b74c96d5d17",
+    "research_tracks/conformal_causal_shared_reality/G1_SHARED_REALITY_INFORMATION_AUDIT.en.md": "7903dab355b1a951b100ba57e4874c7a695c6f4bff098bb690a3413db606a128",
+    "research_tracks/conformal_causal_shared_reality/RESEARCH.cs.md": "278d6c2e07435668dbb0f90afbbaece9f2d567812c9a0b322d01483021f8c809",
+    "research_tracks/conformal_causal_shared_reality/RESEARCH.en.md": "ab4717f098e95c31b898c1a9190f37e6e0b65135f088d7445a2a96f6051a61fa"
+  }
+}

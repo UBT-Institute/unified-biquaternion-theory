@@ -255,3 +255,8 @@ The missing constructive ingredient is a non-tautological
 Theta-derived **two-sided** covariant connection giving
 a curved, real canonical central metric from its own jets.
 G1 PARTIAL; no physical action has been selected.
+
+<!-- BILINGUAL-UNIT: conformal-causal.integration-verification -->
+## Integrated verification scope
+
+The paired G1 notes in this directory are research comparisons, with analytic arguments and finite exact SymPy regression tests. Their PROVED labels describe the stated analytic or algebraic result under its assumptions, not a complete UBT field theory. LEAN-PENDING: these new conformal-track arguments have no compiled Lean proof. Finite coordinate examples, sampled causal intervals and rank calculations do not prove a physical spectrum, global PDE existence or a selected microscopic action. G1 remains PARTIAL.
