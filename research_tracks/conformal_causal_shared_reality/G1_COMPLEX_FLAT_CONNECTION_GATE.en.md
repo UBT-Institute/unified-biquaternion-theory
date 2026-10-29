@@ -144,8 +144,41 @@ F^\Omega_{tx}=i Z\not\equiv0.
 
 This explicitly distinguishes **gauge curvature** from **Riemann curvature of the observable metric**. In a genuine UBT gravity solution, the relation between those curvatures requires derived tetrad compatibility, torsion/contortion constraints and actual field equations; nonzero F alone does not establish the desired spacetime dynamics. The example even has nonzero F while the curvature operator acts trivially on this particular Theta field.
 
+## Shared Reality extension: metric-invisible holonomy [PROVED as a gauge control]
+
+For the preceding flat-metric but curved-connection witness,
+restrict to a rectangular loop in the t-x plane with y=z=0.
+All connection matrices commute along this loop, so its
+path-ordered holonomy and trace are exactly:
+
+\[
+\Omega_x=i\lambda t\,x\sigma_1\quad(y=z=0),\qquad
+\Phi=\lambda\,\delta t\,\left(x_0\ell+\tfrac12\ell^2\right),
+\quad W_\square=\exp(-i\Phi\sigma_1),\quad
+\operatorname{tr}W_\square=2\cos\Phi.
+\]
+
+\[
+(\lambda,\delta t,\ell,x_0)=(1,1/3,1/2,1)
+\Longrightarrow \Phi=5/24,\qquad
+g_{\mu\nu}=\eta_{\mu\nu},\quad
+\operatorname{tr}W_\square=2\cos(5/24)\ne2.
+\]
+
+This trace is invariant under conjugation by local SU(2) spin
+frame changes (with a shared loop base point). It distinguishes
+the lambda family although every member has exactly the same
+real canonical metric. The example does NOT establish that
+a particular matter field or observer in UBT can measure this
+holonomy: that requires a derived coupling and measurement
+protocol. It does establish that local metric agreement
+alone is too weak to select a gauge connection. A physically
+grounded Shared Reality condition may have to compare accessible
+holonomies in overlapping causal regions, alongside metric
+observations; this remains an explicit operational research gate.
+
 ## Next falsifiable G1 task [OPEN]
 
 The next single candidate must genuinely derive the *curved* left/right closure and its physical admissibility from Theta and the as-yet-unfinalized single action; show a nonzero effective curvature on the relevant field, real nondegenerate central sharp metric, connection/tetrad compatibility, torsion and independent variations, plus a healthy reduced linear principal symbol. Phase/projective Gram metrics remain separate exploratory comparators. **Shared Reality** should test cross-observer agreement of these *canonical real gauge-invariant* observables, not choose the connection by fiat. Preserve G1 PARTIAL and original canonical status.
 
-**Reproduction:** `python -m unittest discover -s tests -p 'test_theta_canonical_flatness_gate.py' -v`. All 10 exact symbolic tests passed locally; GitHub Actions checks are independent. Baseline: `canonical/CANONICAL_DEFINITIONS.md:164-190`; `canonical/fields/theta_field.tex:101-160`; `G1_CANONICAL_SHARP_BRIDGE.en.md`; master action status `DEFINED_FAMILY_NOT_FINALIZED`. Do not reinterpret this as a physical metric prediction or quantum effective action.
+**Reproduction:** `python -m unittest discover -s tests -p 'test_theta_canonical_flatness_gate.py' -v`. All 11 exact symbolic tests passed locally; GitHub Actions checks are independent. Baseline: `canonical/CANONICAL_DEFINITIONS.md:164-190`; `canonical/fields/theta_field.tex:101-160`; `G1_CANONICAL_SHARP_BRIDGE.en.md`; master action status `DEFINED_FAMILY_NOT_FINALIZED`. Do not reinterpret this as a physical metric prediction or quantum effective action.
