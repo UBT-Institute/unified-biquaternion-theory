@@ -120,7 +120,7 @@ a+\frac{a^3}{3V^2}-\frac{\Lambda a^3}{3}
 
 **Nové strukturální zjištění:** Holstův operátor obecně generuje nenulovou prostorovou torzi w a kvadratický rychlostní člen měřítka. Při nulové paritní vazbě je w=0, zůstává však časová stopová torze. Nejde o vynucení nulové veškeré Cartanovy torze.
 
-## Rozhodující výsledek holého Palatiniho členu a normálová vazba
+## Rozhodující výsledek holého Palatiniho členu a srovnání s vakuovými Einsteinovými rovnicemi
 
 Pro externí Palatiniho komparátor s nulovou Holstovou i kosmologickou vazbou má Eulerova derivace měřítka přesný tvar
 
@@ -154,7 +154,7 @@ L_{\alpha=0}/\mathscr C=\dot V\,F(a,V),\quad
 \]
 Každá regulární větev splňující variační rovnici měřítka tedy splňuje také rovnici hodin. Uvedená algebraická větev s kladnou kosmologickou konstantou je proto stacionární vůči **oběma** redukovaným variacím, avšak nemusí splňovat nezávislou Einsteinovu normálovou vazbu. Jde tedy o skutečný dynamický protipříklad uvnitř omezeného ansatzu, nikoli jen řešení jedné libovolně vybrané rovnice.
 
-Ta ale obecně nesplňuje Einsteinovu normálovou vazbu s nezávislou metrikou. Při konkrétní volbě jednotek dostáváme přesné reziduum
+Reparametrizační vazba je přítomna; nejde o nezávisle uloženou vakuovou Einsteinovu normálovou vazbu. Větev s nulovým koeficientem tuto druhou vazbu obecně nesplňuje. Při konkrétní volbě jednotek dostáváme přesné reziduum
 
 \[
 \Lambda=1,\quad V=2:\qquad
@@ -173,7 +173,7 @@ Hessova matice podle radiální rychlosti v redukci je
 \frac{\partial^2L_{0,\mathrm{red}}}{\partial\dot a^2}=0.
 \]
 
-Holstova vazba vytváří nenulovou homogenní rychlostní Hessovu matici; její znaménko samo o sobě ale NENÍ důkazem fyzikálního ghostu ani stability. Lapse zůstává N=dV/dt a není nezávisle variovatelná. Reparametrizační invariance zachovává primární vazbu, ale úplná lokální Diracova algebra a perturbace dosud spočítány nejsou.
+Holstova vazba vytváří nenulovou homogenní rychlostní Hessovu matici; její znaménko samo o sobě ale NENÍ důkazem fyzikálního ghostu ani stability. Lapse zůstává N=dV/dt a není nezávisle variovatelná. [Audit uzavření](physics_closure_2026_10.cs.md) nyní počítá úplnou homogenní primární Poissonovu matici, Diracovy závorky, Hamiltonián hodin a samostatnou vrstvu vazeb s nulovým koeficientem. Úplná prostorová algebra polních vazeb a všechny poruchové módy zůstávají nespočítané.
 
 ## Přísná omezení a následující fyzikální test
 
@@ -182,3 +182,8 @@ Jde o křivostní **komparátor**, nikoli dokončenou fundamentální akci UBT. 
 Další přesný úkol je úplná kompozitní variace spinového spojení v neomezené Palatiniho čtyřformě s existujícím zdvihem bez nových polí, určení ranku normálové rovnice a kontrola, zda odvozený Holstův koeficient zlepšuje či zhoršuje fyzikální hlavní symbol. Paritně lichá interakce není automaticky slučitelná s úplnými pravidly U(1) a parity; koeficient zůstává kandidátem, dokud nebude zdůvodněn.
 
 **Ověření:** `tools/verify_composite_palatin_holst_flrw.py`, `tests/test_composite_palatin_holst_flrw.py`, samostatné CI. Výpočty používají reálné tetrády a vnější formy; bez dat Planck nebo CMB.
+
+<!-- BILINGUAL-UNIT: composite-palatin-holst.selfdual -->
+## Ověřené samoduální přiřazení a jeho překážka reality
+
+[Audit uzavření](physics_closure_2026_10.cs.md) ověřuje časově závislou kanonickou transformaci a její přesný tvar GR FLRW při analyticky pokračovaném koeficientu $b=\pm i$. Zachovávaným momentem hodin je transformovaný moment, nikoli obecně původní moment. Integrační konstanta s chováním prachu je přípustná, ale nemusí být nenulová a není normalizována mikroskopickým odvozením zdroje. Ponechání původní hermitovské dvojice konexí mění generovanou prostorovou tetrádu při navržené imaginární rotaci, takže formální přiřazení ještě není přípustnou kanonickou větví UBT. Před výpočtem jejích fyzikálních poruch je nutný konzistentní předpis reality odvozený z akce. Stávající reziduum vakuové vazby zůstává přesným srovnáním, nikoli dokladem chybějící reparametrizační symetrie.

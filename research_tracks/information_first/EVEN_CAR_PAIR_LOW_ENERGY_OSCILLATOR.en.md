@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: even-car-pair-low-energy-oscillator -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -6,13 +7,13 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Exact finite-model spectral projection, not a derived UBT graviton.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
 # Dynamic low-energy bosonic oscillator from an even-CAR pair Hamiltonian
 
-**2026-10-27. Exact finite-matrix diagonalization plus controlled low-excitation pair limit.** Builds on `ENTANGLED_EVEN_CAR_GEOMETRY_CCR_GATE.md` and `COLLECTIVE_CAR_EMERGENT_GRAVITY_CCR.md`. No fundamental Grassmann coefficient algebra or independent microscopic bosonic oscillator is required to REPRESENT the finite model.
+**2026-10-27. Exact finite-matrix diagonalization plus controlled low-excitation pair limit.** Builds on `ENTANGLED_EVEN_CAR_GEOMETRY_CCR_GATE.en.md` and `COLLECTIVE_CAR_EMERGENT_GRAVITY_CCR.en.md`. No fundamental Grassmann coefficient algebra or independent microscopic bosonic oscillator is required to REPRESENT the finite model.
 
 ## 1. The pair Hamiltonian has a genuine excitation gap
 
@@ -82,3 +83,5 @@ This is a CONTROLLED reference emergent oscillator with a dynamically selected e
 ## Verification
 
 `tests/test_information_even_car_pair_oscillator.py` contains five tests, locally passed via pytest, checking exact spectral projection, projected quadratures and signs, failure of multiplicative compression, the low-energy many-pair Hamiltonian, and finite-size low-occupation commutator bounds.
+
+Verification scope: exact finite matrices in the stated reference model. LEAN-PENDING: no formal proof of the many-body limit, physical continuum or UBT dynamics is supplied.

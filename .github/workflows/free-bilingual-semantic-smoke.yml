@@ -1,0 +1,71 @@
+name: Free bilingual semantic smoke test
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - .github/workflows/free-bilingual-semantic-smoke.yml
+      - tools/verify_bilingual_semantics_qwen.py
+      - research_tracks/**
+permissions:
+  contents: read
+jobs:
+  qwen-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install Ollama
+        run: curl -fsSL https://ollama.com/install.sh | sh
+      - name: Start local model
+        run: |
+          ollama serve > /tmp/ollama.log 2>&1 &
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:11434/api/tags >/dev/null && break; sleep 2; done
+          ollama pull qwen2.5:7b
+      - name: Test bilingual semantic judgment (non-blocking experiment)
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request, pathlib
+          p=pathlib.Path('research_tracks/observer_information_hamiltonian_2026_10_composite_metric')
+          en=p.with_suffix('.en.md').read_text()
+          cs=p.with_suffix('.cs.md').read_text()
+          # Small excerpts keep CPU inference bounded. This is not a complete document audit.
+          def ask(a,b):
+              prompt=('Compare English and Czech scientific statements. Reply ONLY SAME or DIFFERENT. '
+                      'SAME means no contradiction in scientific meaning.\nEnglish: '+a+
+                      '\nCzech: '+b+'\nAnswer:')
+              body=json.dumps({'model':'qwen2.5:7b','prompt':prompt,'stream':False,
+                               'options':{'temperature':0,'num_predict':12,'num_ctx':2048}}).encode()
+              req=urllib.request.Request('http://127.0.0.1:11434/api/generate',body,
+                                         {'Content-Type':'application/json'})
+              with urllib.request.urlopen(req,timeout=180) as resp:
+                  return json.load(resp)['response'].strip()
+          tests=[
+            ('The metric is nondegenerate.','Metrika je nedegenerovaná.','SAME'),
+            ('The metric is nondegenerate.','Metrika je degenerovaná.','DIFFERENT'),
+          ]
+          failures=0
+          for a,b,expected in tests:
+              actual=ask(a,b).upper().split()[0].strip('.,:')
+              print(f'Expected={expected}; actual={actual}')
+              failures += actual != expected
+          print('Documents available:',len(en),'EN characters;',len(cs),'CS characters')
+          if failures: raise SystemExit(f'{failures} semantic smoke tests failed')
+          PY
+
+      - name: Review changed EN/CS pairs with strict evidence validation
+        timeout-minutes: 65
+        run: |
+          git fetch --no-tags origin master || git fetch --no-tags origin main
+          BASE=$(git rev-parse --verify origin/master 2>/dev/null || git rev-parse --verify origin/main)
+          git merge-base "$BASE" HEAD >/dev/null
+          python3 tools/verify_bilingual_semantics_qwen.py "$BASE"
+      - name: Retain semantic evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qwen-semantic-evidence
+          path: build/bilingual/qwen-semantic-review.*
+          if-no-files-found: warn

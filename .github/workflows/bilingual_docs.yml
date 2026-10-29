@@ -9,6 +9,7 @@ on:
       - '**.rst'
       - 'tools/check_bilingual_pairs.py'
       - 'tools/verify_bilingual_semantics.py'
+      - 'tools/verify_bilingual_semantics_qwen.py'
       - 'tests/test_bilingual*.py'
       - '.github/workflows/bilingual_docs.yml'
   push:
@@ -19,6 +20,7 @@ on:
       - '**.rst'
       - 'tools/check_bilingual_pairs.py'
       - 'tools/verify_bilingual_semantics.py'
+      - 'tools/verify_bilingual_semantics_qwen.py'
       - 'tests/test_bilingual*.py'
       - '.github/workflows/bilingual_docs.yml'
 
@@ -45,32 +47,38 @@ jobs:
   semantics:
     needs: parity
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
     permissions:
       contents: read
-      copilot-requests: write
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-      - name: Install pinned independent reviewer runtime
-        run: npm install --global @github/copilot@1.0.103 --no-audit --no-fund
+      - name: Install Ollama
+        shell: bash
+        run: curl -fsSL https://ollama.com/install.sh | sh
+      - name: Start Qwen 2.5 7B locally
+        shell: bash
+        run: |
+          ollama serve > /tmp/ollama.log 2>&1 &
+          for i in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:11434/api/tags >/dev/null; then break; fi
+            sleep 2
+          done
+          curl -fsS http://127.0.0.1:11434/api/tags >/dev/null
+          ollama pull qwen2.5:7b
       - name: Review meaning of changed editions
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
           EVENT_NAME: ${{ github.event_name }}
         shell: bash
         run: |
           if [[ "$EVENT_NAME" == workflow_dispatch || "$BASE_SHA" =~ ^0+$ ]]; then
-            python3 tools/verify_bilingual_semantics.py --root . --all-pairs
+            python3 tools/verify_bilingual_semantics_qwen.py --all-pairs
           elif [[ -n "$BASE_SHA" ]]; then
-            python3 tools/verify_bilingual_semantics.py --root . --changed-base "$BASE_SHA"
+            python3 tools/verify_bilingual_semantics_qwen.py "$BASE_SHA"
           else
             echo 'No comparison base supplied; semantic approval withheld.' >&2
             exit 1
@@ -79,14 +87,14 @@ jobs:
         if: always()
         shell: bash
         run: |
-          if [[ -f build/bilingual/semantic-review.md ]]; then
-            cat build/bilingual/semantic-review.md >> "$GITHUB_STEP_SUMMARY"
+          if [[ -f build/bilingual/qwen-semantic-review.md ]]; then
+            cat build/bilingual/qwen-semantic-review.md >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Retain source-bound review evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: bilingual-semantic-review-${{ github.run_id }}-${{ github.run_attempt }}
-          path: build/bilingual/semantic-review.*
+          path: build/bilingual/qwen-semantic-review.*
           if-no-files-found: warn
           retention-days: 30

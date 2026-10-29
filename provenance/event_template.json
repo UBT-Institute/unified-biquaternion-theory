@@ -1,0 +1,61 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-10-27",
+  "claim_or_decision_id": "EXAMPLE-REPLACE-ME",
+  "summary": "Replace this explanatory template with a specific research milestone.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_proposal",
+      "actor": "human",
+      "description": "An earlier partial idea, hypothesis or research constraint, if evidenced.",
+      "evidence_ids": [
+        "example-source-1"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Mathematical elaboration, calculations or implementation by an agent.",
+      "evidence_ids": [
+        "example-source-2"
+      ]
+    },
+    {
+      "kind": "human_critique",
+      "actor": "human",
+      "description": "Objection, correction, rejection or changed assumption.",
+      "evidence_ids": [
+        "example-source-1"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "example-source-1",
+      "class": "discussion_context",
+      "locator": "Replace with message permalink, consented archive ID or undated testimony reference",
+      "original_checked": false,
+      "supports": "State only what the source actually supports",
+      "limitations": "Original transcript must be verified before treating this as a direct quote."
+    },
+    {
+      "id": "example-source-2",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/REPLACE",
+      "original_checked": false,
+      "supports": "Specific artifact change, not underlying idea origin",
+      "limitations": "Commit authorship does not establish idea origin."
+    }
+  ],
+  "rejected_alternatives": [],
+  "verification": {
+    "status": "not_checked",
+    "artifacts": [],
+    "limitations": "No scientific or mathematical verification claimed."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "Template only; do not commit this as a factual event."
+}

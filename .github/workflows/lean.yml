@@ -4,11 +4,33 @@ on:
   pull_request:
     paths:
       - 'formal/lean/**'
+      - 'tests/test_hamiltonian_restricted_jet.py'
+      - 'tests/test_physics_closure.py'
+      - 'tests/test_holst_selfdual_canonical_gr.py'
+      - 'tests/test_holst_carrier_assumptions.py'
+      - 'tests/test_holst_spin_source.py'
+      - 'tools/verify_holst_spin_source.py'
+      - 'tests/test_bare_splitjet_selection.py'
+      - 'tools/verify_bare_splitjet_selection.py'
+      - 'tools/verify_physics_closure.py'
+      - 'tools/requirements_physics_closure.txt'
+      - 'research_tracks/action_selection/physics_closure*.md'
       - '.github/workflows/lean.yml'
   push:
     branches: [master]
     paths:
       - 'formal/lean/**'
+      - 'tests/test_hamiltonian_restricted_jet.py'
+      - 'tests/test_physics_closure.py'
+      - 'tests/test_holst_selfdual_canonical_gr.py'
+      - 'tests/test_holst_carrier_assumptions.py'
+      - 'tests/test_holst_spin_source.py'
+      - 'tools/verify_holst_spin_source.py'
+      - 'tests/test_bare_splitjet_selection.py'
+      - 'tools/verify_bare_splitjet_selection.py'
+      - 'tools/verify_physics_closure.py'
+      - 'tools/requirements_physics_closure.txt'
+      - 'research_tracks/action_selection/physics_closure*.md'
       - '.github/workflows/lean.yml'
 
 permissions:
@@ -19,6 +41,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install symbolic validation dependencies
+        run: python3 -m pip install --user -r tools/requirements_physics_closure.txt
+      - name: Restricted Hamiltonian jet symbolic and exact-number checks
+        run: python3 -m pytest -q tests/test_hamiltonian_restricted_jet.py
+      - name: Constrained Holst Hamiltonian and independent numerical checks
+        run: python3 -m pytest -q tests/test_physics_closure.py tests/test_holst_selfdual_canonical_gr.py tests/test_holst_carrier_assumptions.py tests/test_composite_palatin_holst_flrw.py tests/test_bare_splitjet_selection.py tests/test_holst_spin_source.py
+      - name: Record scoped computational evidence
+        run: |
+          mkdir -p build/physics-closure
+          python3 tools/verify_physics_closure.py > build/physics-closure/report.json
+          python3 tools/verify_bare_splitjet_selection.py > build/physics-closure/bare-splitjet.json
+          python3 tools/verify_holst_spin_source.py > build/physics-closure/holst-spin-source.json
       - uses: leanprover/lean-action@v1
         # leanchecker loads a full import environment per worker.  Mathlib's
         # environment exceeds hosted-runner memory when checked in parallel.
@@ -32,3 +66,10 @@ jobs:
           leanchecker-args: UBT
           axiom-audit: true
           axiom-audit-root: UBT
+      - name: Retain computational evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: physics-closure-${{ github.run_id }}-${{ github.run_attempt }}
+          path: build/physics-closure/
+          if-no-files-found: error

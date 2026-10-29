@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: car-correlation-axis-adm-sign -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -6,13 +7,13 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Exact conditional finite-CAR spin-correlation algebra; no unique UBT action is claimed.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
 # Correlation-selected polarization and the gravitation-sign compatibility gate
 
-**2026-10-27. Six exact finite-matrix tests; conditional physical identification.** Continues the `COLLECTIVE_CAR_EMERGENT_GRAVITY_CCR.md`, `ENTANGLED_EVEN_CAR_GEOMETRY_CCR_GATE.md`, `EVEN_CAR_PAIR_LOW_ENERGY_OSCILLATOR.md` results from PR #801. All CAR degrees of freedom are realized by orthogonal biquaternion factors; no additional fundamental Grassmann variables are invoked.
+**2026-10-27. Eight exact finite-matrix tests; conditional physical identification.** Continues the `COLLECTIVE_CAR_EMERGENT_GRAVITY_CCR.en.md`, `ENTANGLED_EVEN_CAR_GEOMETRY_CCR_GATE.en.md`, `EVEN_CAR_PAIR_LOW_ENERGY_OSCILLATOR.en.md` results from PR #801. All CAR degrees of freedom are realized by orthogonal biquaternion factors; no additional fundamental Grassmann variables are invoked.
 
 ## 1. A pair's connected quantum correlations can provide a geometric axis
 
@@ -45,7 +46,9 @@ The previously studied exactly gapped interaction
   H_pair=-J sigma_x⊗sigma_x-h(sigma_z⊗I+I⊗sigma_z)
 HAS a unique polarized entangled ground state when h,J>0, precisely because its Zeeman-like h term explicitly chooses a direction and breaks SU(2). That selection is not a derivation from a rotation-invariant bare biquaternionic action.
 
-**Important degenerate-ground exception:** the SU(2)-invariant ferromagnetic two-cell Hamiltonian H_FM=-J(sigma_x⊗sigma_x+sigma_y⊗sigma_y+sigma_z⊗sigma_z), J>0, has a THREE-FOLD-degenerate triplet ground energy -J and singlet energy +3J. Every |chi_p> used above lies exactly in that ground eigenspace. Hence a rotationally invariant Hamiltonian CAN admit an entangled, polarized, timelike reference state without an explicitly symmetry-breaking Zeeman term — but it does NOT uniquely select p or an axis; that requires state/boundary selection or a controlled thermodynamic phase. The nondegenerate-ground no-go is essential and must not be strengthened. **Dynamical price of this exception:** the pair total-spin quadratures Q_pair=(sigma_x⊗I+I⊗sigma_x)/2 and P_pair=(sigma_y⊗I+I⊗sigma_y)/2 commute EXACTLY with H_FM. Consequently their collective fluctuations carry no oscillator frequency from this isotropic pair Hamiltonian, despite the gap 4J from triplet to singlet. The anisotropic reference H_pair yields the nonzero low-energy oscillator frequency Omega=R-J precisely by lifting the triplet degeneracy. Thus SU(2)-invariant ground-state availability is not yet a derived *dynamical* bosonic Hamiltonian. See regression tests.\n\n**Conditional routes:** a gauge-covariant orientation supplied by an independently derived geometric/bivector datum; a spontaneously symmetry-broken phase at infinite N (where a unique finite-volume SU(2)-invariant ground premise no longer applies); or a theory with a physically justified SU(2)-breaking coupling. None has yet been derived within locked UBT. In particular a timelike Lorentz vector alone has an SU(2) little group and cannot choose an additional spatial axis without further data; a standard Lorentz boost is NOT a naive unitary CAR transformation on a fixed finite set of annihilation operators.
+**Important degenerate-ground exception:** the SU(2)-invariant ferromagnetic two-cell Hamiltonian H_FM=-J(sigma_x⊗sigma_x+sigma_y⊗sigma_y+sigma_z⊗sigma_z), J>0, has a THREE-FOLD-degenerate triplet ground energy -J and singlet energy +3J. Every |chi_p> used above lies exactly in that ground eigenspace. Hence a rotationally invariant Hamiltonian CAN admit an entangled, polarized, timelike reference state without an explicitly symmetry-breaking Zeeman term — but it does NOT uniquely select p or an axis; that requires state/boundary selection or a controlled thermodynamic phase. The nondegenerate-ground no-go is essential and must not be strengthened. **Dynamical price of this exception:** the pair total-spin quadratures Q_pair=(sigma_x⊗I+I⊗sigma_x)/2 and P_pair=(sigma_y⊗I+I⊗sigma_y)/2 commute EXACTLY with H_FM. Consequently their collective fluctuations carry no oscillator frequency from this isotropic pair Hamiltonian, despite the gap 4J from triplet to singlet. The anisotropic reference H_pair yields the nonzero low-energy oscillator frequency Omega=R-J precisely by lifting the triplet degeneracy. Thus SU(2)-invariant ground-state availability is not yet a derived *dynamical* bosonic Hamiltonian. See regression tests.
+
+**Conditional routes:** a gauge-covariant orientation supplied by an independently derived geometric/bivector datum; a spontaneously symmetry-broken phase at infinite N (where a unique finite-volume SU(2)-invariant ground premise no longer applies); or a theory with a physically justified SU(2)-breaking coupling. None has yet been derived within locked UBT. In particular a timelike Lorentz vector alone has an SU(2) little group and cannot choose an additional spatial axis without further data; a standard Lorentz boost is NOT a naive unitary CAR transformation on a fixed finite set of annihilation operators.
 
 ## 3. Why the positive collective oscillator is not yet the ADM gravity constraint
 
@@ -70,3 +73,5 @@ Consequently the **same positive Hamiltonian H_low cannot simply be unitarily re
 ## Verification
 
 `tests/test_information_entangled_polarization_covariance.py`: eight SymPy tests passed locally, including the entangled T tensor, rotation covariance, SU(2)-invariant singlet counterexample, no invariant polarized vector, Bloch determinant/CCR tradeoff, and negative-ADM/positive-oscillator mismatch.
+
+Verification scope: exact finite matrices in the stated reference model. LEAN-PENDING: no formal proof of the many-body limit, physical continuum or UBT dynamics is supplied.

@@ -1,0 +1,594 @@
+{
+  "schema": "ubt-research-origin-ledger/v1",
+  "created_utc": "2026-10-27",
+  "status": "provisional_historical_reconstruction",
+  "disclaimer": "This is not a legal authorship finding, claim of exclusive scientific priority, human sign-off or proof of physical truth. Private chat originals have not been archived or independently reviewed for this reconstruction.",
+  "categories": [
+    "conceptual_origin",
+    "research_direction",
+    "architecture_decision",
+    "critical_intervention",
+    "mathematical_derivation",
+    "verification",
+    "publication_approval"
+  ],
+  "source_classes": {
+    "indexed_primary": "A repository index identifies an older original and checksum, but this reconstruction did not reopen the original.",
+    "repository_artifact": "Directly inspected current file or commit diff; proves artifact content/evolution, not who originated the idea.",
+    "repository_retrospective": "A later project-history narrative; not independent contemporary dating.",
+    "author_recollection": "Current first-person recollection; remains uncorroborated unless matched to earlier originals.",
+    "discussion_context": "Available conversation context; exact message permalink/full export not archived."
+  },
+  "entries": [
+    {
+      "id": "ORIGIN-BIQUAT-001",
+      "subject": "Biquaternionic algebra and electroscalar foundations",
+      "period_statement": "2013-2015 handwritten work (retrospective); March 18 2016 indexed public post",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "conceptual_origin",
+          "description": "The project history attributes handwritten biquaternionic electromagnetic and candidate metric formulations to the author before modern generative AI."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "later_mathematical_formalization",
+          "description": "Systematic AI-assisted work began later; attribution of individual subsequent results requires per-result evidence."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "indexed_primary",
+          "path": "docs/priority_evidence/OCTONION_MULTIVERSE_EVIDENCE.json",
+          "locator": "timestamped_pages:biquaternion_field_post",
+          "supports": "Indexed embedded public-post date 2016-03-18 and named biquaternionic gradient, vector potential, eight-intensity and G; originals not independently re-opened"
+        },
+        {
+          "class": "repository_retrospective",
+          "path": "docs/HISTORY_OF_UBT.md",
+          "locator": "2013-2015 — Handwritten metric and electromagnetic foundations",
+          "supports": "Historical account of early handwritten work"
+        }
+      ],
+      "not_established": [
+        "Novelty of biquaternionic electromagnetism in general",
+        "2026 tetrad theorem already present in 2016",
+        "Exact pre-2016 notebook dates"
+      ],
+      "confidence": "mixed_indexed_and_retrospective",
+      "follow_up": "Inspect dated original notebooks and archived 2016 page content, not just archive index.",
+      "development_mode": "early_human_work_followed_by_iterative_human_ai",
+      "development_mode_status": "provisional"
+    },
+    {
+      "id": "ORIGIN-TIME-002",
+      "subject": "Complex time and theta-function research direction",
+      "period_statement": "Approximately 2019 according to later project history; precise first record undetermined",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "conceptual_origin",
+          "description": "Project history attributes the choice to center complex time and Jacobi theta functions in UBT to human-led work."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "mathematical_derivation",
+          "description": "Later AI-assisted mathematical development and testing must be attributed separately from initial conceptual choice."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "repository_retrospective",
+          "path": "docs/HISTORY_OF_UBT.md",
+          "locator": "c. 2019 — Complex time and Jacobi-theta structure",
+          "supports": "Retrospective conceptual history"
+        },
+        {
+          "class": "repository_artifact",
+          "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/daae1e5dffb055b8536105d81cf119a5655110eb",
+          "supports": "Later complex-time branch-selection formalization, not origin"
+        }
+      ],
+      "not_established": [
+        "Exact earliest dated formulation of tau=t+i psi",
+        "Original authorship of each later branch-selection equation"
+      ],
+      "confidence": "retrospective_pending_older_original",
+      "follow_up": "Find dated notes and first public source introducing tau and the theta ansatz.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional"
+    },
+    {
+      "id": "ORIGIN-LAYERS-003",
+      "subject": "Layer 1 / Layer 2 and separate Matrix-like reality-layer intuition",
+      "period_statement": "Before June 2025 Layer programme per repository history; Matrix-like intuition date undetermined",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "conceptual_origin",
+          "description": "Repository history attributes the Layer 1/2 programme to author-led work. Author currently identifies a separate earlier Matrix-like intuition behind reality layers."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "formalization",
+          "description": "Later modelling and documentation may not be treated as first conception."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "repository_retrospective",
+          "path": "docs/HISTORY_OF_UBT.md",
+          "locator": "Before June 2025; Author-led decisions",
+          "supports": "Human-directed Layer 1/2 programme"
+        },
+        {
+          "class": "author_recollection",
+          "locator": "author testimony recorded 2026-10-27",
+          "supports": "Matrix-like layer intuition was a personal conceptual idea; chronology and connection to technical Layer 1/2 not yet established"
+        },
+        {
+          "class": "discussion_context",
+          "locator": "user message 2026-02-13T18:50:25Z; original permanent link/export pending",
+          "supports": "Author's simulation/channel-selection analogy for Layer 2, not the date of earliest conception"
+        }
+      ],
+      "not_established": [
+        "Identity of the metaphysical reality-layer hypothesis with research-programme Layer 1/2",
+        "Independent pre-AI timestamp for Matrix-like intuition",
+        "Physical reality of layers"
+      ],
+      "confidence": "mixed_retrospective_and_recollection",
+      "follow_up": "Locate original layer/Matrix conversation or notebook; keep ontological hypothesis separate from mathematical research layers.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional"
+    },
+    {
+      "id": "ORIGIN-SU3-004",
+      "subject": "SU(3) and 3-qubit programme; critical revision of AI candidates",
+      "period_statement": "Author-led direction before June 2025 (retrospective); later formal candidate revisions during 2026",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "conceptual_origin_and_critical_intervention",
+          "description": "Repository history assigns initial SU(3)/3-qubit research direction to the author. In 2026-10-27 testimony he recalls personally exploring elementary SU(3) counting and repeatedly challenging agent proposals and suggesting alternatives."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "mathematical_derivation_and_verification",
+          "description": "AI-assisted 2026 work includes conditional SU(1,3)/SU(3) collective rewrite and verifier; this does not prove the origin of the author's earlier ideas."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "repository_retrospective",
+          "path": "docs/HISTORY_OF_UBT.md",
+          "locator": "Before June 2025; Author-led decisions",
+          "supports": "Author-led SU(3) / 3-qubit research programme"
+        },
+        {
+          "class": "author_recollection",
+          "locator": "author testimony recorded 2026-10-27",
+          "supports": "Personal informal counting and critical interventions in later AI-assisted development; no transcript archive or independent timestamp yet"
+        },
+        {
+          "class": "repository_artifact",
+          "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/3b014b3d6c48aa4d203945e42804d689d8ca4221",
+          "supports": "Conditional SU(1,3)/SU(3) collective construction exists in repository"
+        },
+        {
+          "class": "repository_artifact",
+          "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/a7a6253955e16423a51bb08b45835ab7e59150ab",
+          "supports": "Associated exact algebraic verifier added"
+        }
+      ],
+      "not_established": [
+        "Author first discovered the SU(3) group itself",
+        "Author originated the exact 2026 coset proof",
+        "Which corrections in original conversations led to which commits"
+      ],
+      "confidence": "partly_correlated_pending_conversation",
+      "follow_up": "Trace original author prompts/objections to PR chronology; avoid treating bot Git authorship as idea origin.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional"
+    },
+    {
+      "id": "ORIGIN-PRIMES-007",
+      "subject": "Prime-number structure as a deliberately introduced UBT research direction",
+      "period_statement": "Direct user instruction is recorded in available discussion context dated 2025-08-08; further corrections 2025-08-09 and 2026-02; exact first-ever proposal remains undetermined.",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "research_direction_and_critical_intervention",
+          "description": "On 2025-08-08 the author explicitly required prime-number and p-adic-based multiverse multiplexing with distinct primes as proposed independent toroidal theta modes. On 2025-08-09 he rejected insufficiently justified p-adic work and required rigorous integration into UBT. In February 2026 he distinguished prime structures at Layer 2 coding/channel selection from assumed Layer 1 stability."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "mathematical_derivation_and_implementation",
+          "description": "Subsequent code, Hecke searches, prime-mode formalizations, and negative results were developed with AI assistance; the author should not automatically be credited with each implementation or proof."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "discussion_context",
+          "locator": "user message 2025-08-08T21:11:50Z; original permanent link/export pending",
+          "supports": "Direct author instruction to ground prime-number/p-adic UBT multiverse multiplexing in distinct-prime toroidal modes, presented as a proposal rather than a physical derivation"
+        },
+        {
+          "class": "author_recollection",
+          "locator": "author testimony recorded 2026-10-27",
+          "supports": "Explicit insistence on introducing primes as a research direction, not merely acceptance of an AI proposal"
+        },
+        {
+          "class": "repository_artifact",
+          "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/4230b9598565a489da6e8f4d5c19cbd01ade166c",
+          "supports": "Later sector grid computation for specific primes, not concept origin"
+        },
+        {
+          "class": "repository_artifact",
+          "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/d8b82e23f8a180161eb01dd7421cdaf651442ff0",
+          "supports": "Later Hecke eigenvalue work and negative checks, not evidence of first proposal"
+        },
+        {
+          "class": "repository_artifact",
+          "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/5e1b91bf28d6625bbd08a39691aa3346e6dfc568",
+          "supports": "Later explicit dead end for proposed prime attractor via additive mode coupling"
+        },
+        {
+          "class": "discussion_context",
+          "locator": "user message 2025-08-09T02:36:22Z; original permanent link/export pending",
+          "supports": "Author rejection of insufficiently justified p-adic model and request for rigorous UBT/theta integration"
+        },
+        {
+          "class": "discussion_context",
+          "locator": "user messages 2026-02-11 and 2026-02-13; original permanent links/export pending",
+          "supports": "Layer 2 prime coding/channel selection distinguished from unique alpha derivation"
+        }
+      ],
+      "not_established": [
+        "Exact earliest appearance of prime-based programme or its original detailed math",
+        "Independent proof of any proposed prime-number signal in CMB",
+        "Authorship of every later Hecke, prime-mode or p-adic formula"
+      ],
+      "confidence": "dated_user_discussion_context_plus_later_artifacts; original_chat_export_pending",
+      "follow_up": "Locate the earliest primary user message or dated note introducing primes, and identify which prompt-to-commit sequences show explicit redirection of agents.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional"
+    },
+    {
+      "id": "ORIGIN-TETRAD-005",
+      "subject": "Architectural reversal from fiber/projection route back to covariant tetrad",
+      "period_statement": "Early July 2026 compact-fiber route; 15–16 July 2026 return to covariant-tetrad architecture according to later project history; exact original author instruction awaits source-level corroboration",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "architecture_decision_and_rejection",
+          "description": "Author reports having instructed AI to revert the fiber construction and return to the tetrad approach; the project history also recounts author choice to restore the covariant tetrad architecture."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "formalization_and_audit",
+          "description": "Agents developed rank, connection and local representability proofs subject to selected architecture."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "author_recollection",
+          "locator": "author testimony recorded 2026-10-27",
+          "supports": "Explicit direction to reject/revert the fiber route and return to tetrad"
+        },
+        {
+          "class": "repository_retrospective",
+          "path": "docs/HISTORY_OF_UBT.md",
+          "locator": "Early July 2026 — Compact-fiber completion route; 15–16 July 2026 — Return to covariant-tetrad architecture; 16 July 2026 release v10.2.0",
+          "supports": "Historical narrative attributes restoration decision to author"
+        },
+        {
+          "class": "repository_artifact",
+          "path": "AGENTS.md",
+          "locator": "Locked canonical GR route",
+          "supports": "Current architecture prohibits fiber-averaging/projection route; does not identify origin of decision"
+        },
+        {
+          "class": "repository_artifact",
+          "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/89f225951444760e60e12ee0d8afc604605eb077",
+          "supports": "July 16 2026 biquaternion connection wording update; contextual evidence only, not proof of the reversal"
+        }
+      ],
+      "not_established": [
+        "Exact initial message requesting reversal",
+        "Exact corresponding architectural change commit",
+        "Whether all mathematical consequences were proposed by the author"
+      ],
+      "confidence": "credible_retrospective_pending_primary_trace",
+      "follow_up": "Find author's exact instruction in original conversation or PR and compare against earliest July 15–16 tetrad refactor diff; archive original without publishing private chat.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional"
+    },
+    {
+      "id": "ORIGIN-HAM-006",
+      "subject": "Hamiltonian and action: algebraic, informational and causal constraints",
+      "period_statement": "October 25-27 2026",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "research_direction_and_critical_intervention",
+          "description": "In the accessible discussion context the author required considering commutator and anticommutator channels, proposed exploring orthogonal biquaternion components, demanded explicit comparison of Hamiltonian candidates, and redirected work to information principles, shared reality and causal horizons."
+        },
+        {
+          "actor": "human–AI collaboration",
+          "kind": "iterative_mathematical_codevelopment",
+          "description": "The information, shared-reality, observer-capacity, Hamiltonian and action models were extensively developed through back-and-forth mathematical discussion, including human constraints, corrections and AI computations. No participant is assigned exclusive mathematical authorship without source-level evidence."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "drafting_calculation_and_testing",
+          "description": "AI supplied many computations and candidate steps during collaborative work; Git output does not identify independent conception of the mathematical model."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "discussion_context",
+          "locator": "UBT Hamiltonian discussions 2026-10-25 to 2026-10-27; export/message IDs not preserved in this manifest",
+          "supports": "Author's repeated conceptual interventions and AI-assisted derivations"
+        },
+        {
+          "class": "repository_artifact",
+          "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/3a773cc25e12b84a0679c68e99c840777f695208",
+          "supports": "Causal shared reality, observer capacity and Hamiltonian identifiability track recorded in PR #804"
+        }
+      ],
+      "not_established": [
+        "Complete fundamental UBT Hamiltonian or action",
+        "Precise mapping of each author prompt to each proof step",
+        "Independent historical timestamp for all discussion fragments"
+      ],
+      "confidence": "discussion_supported_commit_context",
+      "follow_up": "Preserve the actual intervention–response–revision sequence in the original chat, then map to each equation/claim and PR #804 tests; avoid labelling the mathematical model agent-originated by default.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional",
+      "related_conceptual_origin_ids": [
+        "ORIGIN-INFO-009",
+        "ORIGIN-SHARED-010",
+        "ORIGIN-OBSERVER-011"
+      ]
+    },
+    {
+      "id": "ORIGIN-REDISCOVERY-008",
+      "subject": "Independently conceived UBT elements later compared with older biquaternionic, complex-time and Hermitian-gravity literature",
+      "period_statement": "Author's explicit statement 2026-04-27; named prior-art comparison discussed 2026-07-13; earlier originating notes remain to be independently dated",
+      "development_mode": "independent_rediscovery_candidate",
+      "development_mode_status": "unresolved",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "retrospective_testimony",
+          "description": "On 2026-04-27 the author distinguished independent conceptual discovery of complex time, Θ and complex-quaternion approaches from a claim to first-ever historical invention. On 2026-07-13 the earlier biquaternionic-electromagnetism origin was compared with older Hermitian/complex-gravity works."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "literature_comparison",
+          "description": "In discussion, AI assistants identified possible structural precedents; establishing actual equivalence needs side-by-side mathematics and original-source review."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "author_recollection",
+          "locator": "author testimony recorded 2026-10-27",
+          "supports": "At least one recollected episode of recognizing previously published work after independent investigation"
+        },
+        {
+          "class": "discussion_context",
+          "locator": "user message 2026-04-27T23:05:40Z; original permalink/export pending",
+          "supports": "Author explicitly claimed independent development, not historical firstness, for complex time, Theta and complex quaternions"
+        },
+        {
+          "class": "discussion_context",
+          "locator": "user discussion 2026-07-13T21:38:56Z; original permalink/export pending",
+          "supports": "Prior-art comparison of UBT's independent development from 2013–2015 with historical complex/Hermitian gravity literature"
+        },
+        {
+          "class": "external_publication",
+          "url": "https://arxiv.org/abs/hep-th/0005222",
+          "supports": "Chamseddine, Complexified Gravity in Noncommutative Spaces (2000 preprint; published 2001), is an earlier complex/Hermitian gravity construction; not asserted equivalent to UBT"
+        },
+        {
+          "class": "external_publication",
+          "url": "https://doi.org/10.1103/PhysRevD.69.024015",
+          "supports": "Chamseddine 2004 complex-vierbein gravity establishes earlier related formalism; not a priority comparison of exact UBT mechanisms"
+        }
+      ],
+      "not_established": [
+        "Specific identity of any historically rederived equation with an earlier theorem",
+        "First contemporary dates of all independent conceptions",
+        "Unambiguous equality between UBT's current tetrad construction and earlier complex-vierbein frameworks",
+        "Any claim to historical priority in prior-literature mathematics"
+      ],
+      "confidence": "dated_author_discussion_context_plus_real_earlier_publications; primary_UBT_notes_and_detailed_math_comparison_pending",
+      "follow_up": "Retrieve original author notebook and archived conversation exports; compare only precisely defined UBT constructions with antecedent publications, without equating related ideas."
+    },
+    {
+      "id": "ORIGIN-INFO-009",
+      "subject": "Information-first principle and its mathematical use in UBT",
+      "period_statement": "Discussed in available 2026 research history; author's explicit origin testimony recorded 2026-10-27. Earliest original formulation remains to be dated.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "conceptual_and_mathematical_codirection",
+          "description": "The author states that he introduced information-first thinking as a UBT research constraint, repeatedly pressed for its real use in deriving the Hamiltonian/action, and actively discussed mathematical models and assumptions with AI rather than merely approving completed agent output."
+        },
+        {
+          "actor": "human–AI collaboration",
+          "kind": "iterative_mathematical_codevelopment",
+          "description": "Candidate information functionals and mathematical models were discussed and revised jointly. Specific equations and proof steps must only be assigned to one participant where an original conversation or other primary source supports it."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "computational_assistance",
+          "description": "AI produced portions of calculations, draft formulations and tests within iterative exchanges; no blanket claim that agents independently authored the mathematical models."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "author_recollection",
+          "locator": "author testimony, 2026-10-27, this research-origin discussion; original private chat not archived in this ledger",
+          "supports": "Human claims introduction of information principle and substantial co-development of mathematical models."
+        },
+        {
+          "class": "discussion_context",
+          "locator": "UBT information-first and Hamiltonian discussions, 2026-10-25 to 2026-10-27; individual message IDs/export pending",
+          "supports": "Author explicitly asked to try deriving Hamiltonian from information principle and shared reality; iterative discussion present in available conversation context."
+        },
+        {
+          "class": "repository_artifact",
+          "path": "research_tracks/fundamental_dynamics/SHARED_REALITY_INFORMATION_SELECTOR.en.md",
+          "supports": "An explicitly conditional information-first mathematical selector was developed; the source does not establish who first proposed every element."
+        }
+      ],
+      "not_established": [
+        "Exact earliest independent dated statement of the information principle",
+        "Who proposed each symbol, operator or intermediate step without primary transcript",
+        "A uniquely derived full fundamental UBT action or Hamiltonian",
+        "Priority over known information-theoretic physics"
+      ],
+      "confidence": "author_testimony_plus_context_and_repository_artifacts; exact_turn_provenance_pending",
+      "follow_up": "Trace source conversations and their critique cycles to each information-selector lemma, assumption and change; annotate original model claims rather than assign the whole derivation to an AI agent."
+    },
+    {
+      "id": "ORIGIN-SHARED-010",
+      "subject": "Principle of shared reality and mathematical observer-consistency modelling",
+      "period_statement": "Explicitly pursued by 2026-10-26 to 2026-10-27; earlier first formulation undetermined.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "conceptual_and_mathematical_codirection",
+          "description": "The author states he introduced the shared-reality principle and repeatedly demanded its substantive use as a constraint, including objections when an alleged derivation failed to use the principle. He also participated in iterative mathematical discussions."
+        },
+        {
+          "actor": "human–AI collaboration",
+          "kind": "iterative_mathematical_codevelopment",
+          "description": "Operational observer consistency, overlap maps, shared-state restrictions and implications for dynamics were progressively negotiated and mathematically explored through human–AI dialogue; particular mathematical contributions remain unattributed unless supported by original turns."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "computational_assistance",
+          "description": "AI drafted some operational formulations, illustrative counterexamples and mathematical checks in the shared research process, without exclusive authorship being inferred."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "author_recollection",
+          "locator": "author testimony, 2026-10-27, this research-origin discussion; original private chat not archived in this ledger",
+          "supports": "Human claims conceptual introduction and joint mathematical model-building."
+        },
+        {
+          "class": "discussion_context",
+          "locator": "User discussion in 'Audit mechanismu UBT' around 2026-10-26 and 2026-10-27; precise message links/export pending",
+          "supports": "The author insisted that an axiom not used in a proof has no evidential function and explicitly requested a first-principles restart with the shared-reality principle."
+        },
+        {
+          "class": "repository_artifact",
+          "path": "research_tracks/information_first/SHARED_REALITY_PRINCIPLE.md",
+          "supports": "Operational shared-reality model and quantum-marginal counterexample recorded as proposal on 2026-10-26."
+        },
+        {
+          "class": "repository_artifact",
+          "path": "research_tracks/fundamental_dynamics/SHARED_REALITY_INFORMATION_SELECTOR.en.md",
+          "supports": "Mathematical candidate selector integrating information and shared reality; stated to remain speculative."
+        },
+        {
+          "class": "repository_artifact",
+          "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/3a773cc25e12b84a0679c68e99c840777f695208",
+          "supports": "PR #804 mathematics and tests on causal shared reality and observer-dependent Hamiltonian identifiability; confirms artifact development, not sole derivational authorship."
+        }
+      ],
+      "not_established": [
+        "Earliest conception date or exact earliest wording",
+        "Which participant originated each detailed equation in absence of full chats",
+        "That shared reality by itself selects a unique dynamics",
+        "That any proposed principle is experimentally verified"
+      ],
+      "confidence": "author_testimony_plus_discussion_context_and_repository_artifacts",
+      "follow_up": "Locate original dialog turns with proposals, objections, derivation corrections and decision to restart, then link to code and PR changes."
+    },
+    {
+      "id": "ORIGIN-OBSERVER-011",
+      "subject": "Observer complexity/capacity limiting accessible information",
+      "period_statement": "Discussed on 2026-10-27; first conception may predate this and is not established.",
+      "development_mode": "iterative_human_ai",
+      "development_mode_status": "provisional",
+      "roles": [
+        {
+          "actor": "David Jaroš",
+          "kind": "conceptual_and_mathematical_codirection",
+          "description": "The author states he introduced observer complexity and insisted that what an observer can infer depends not only on causal/light-cone access but also on information-processing capability; the mathematical modelling was extensively discussed together with AI."
+        },
+        {
+          "actor": "human–AI collaboration",
+          "kind": "iterative_mathematical_codevelopment",
+          "description": "Operational models relating observables, detector protocols, record memory, and Hamiltonian distinguishability were jointly explored and refined; the origin of individual inequalities and constructions must be traced separately."
+        },
+        {
+          "actor": "AI systems",
+          "kind": "computational_assistance",
+          "description": "AI helped express operational models and calculate information bounds and examples; this is not evidence of exclusively autonomous mathematical conception."
+        }
+      ],
+      "evidence": [
+        {
+          "class": "author_recollection",
+          "locator": "author testimony, 2026-10-27, this research-origin discussion; original private chat not archived in this ledger",
+          "supports": "Human claims both the conceptual principle of observer complexity and sustained joint mathematical work."
+        },
+        {
+          "class": "discussion_context",
+          "locator": "User discussion 'Složitost pozorovatele', 2026-10-27; original message permalinks/export pending",
+          "supports": "Author explicitly emphasized observer information capacity and light-cone limitations and asked to incorporate these in Hamiltonian/action work."
+        },
+        {
+          "class": "repository_artifact",
+          "path": "research_tracks/information_first/OBSERVER_CAPACITY_INFORMATION_HAMILTONIAN_GATE.md",
+          "supports": "Operational models of finite observer capability, Fisher/Holevo information and empirical Hamiltonian equivalence; document dated 2026-10-27."
+        },
+        {
+          "class": "repository_artifact",
+          "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/3a773cc25e12b84a0679c68e99c840777f695208",
+          "supports": "PR #804 mathematics and tests on causal shared reality and observer-dependent Hamiltonian identifiability; confirms artifact development, not sole derivational authorship."
+        }
+      ],
+      "not_established": [
+        "Original earliest formulation date",
+        "Which specific bounds were independently proposed by either participant",
+        "A derivation of the physical Hamiltonian from observer complexity",
+        "A uniquely chosen complexity functional, as distinct from operational measurement capacity"
+      ],
+      "confidence": "author_testimony_plus_discussion_context_and_repository_artifacts",
+      "follow_up": "Find first conversation introduction and mapping of observer-resource assumptions and later equations, preserving human correction loops."
+    }
+  ],
+  "process_decisions": {
+    "original_records_immutable": true,
+    "correction_strategy": "Append a dated superseding or contesting event; never silently erase the earlier claim.",
+    "default_for_unknown": "undetermined",
+    "protected_actions": [
+      "human_attestation",
+      "tier_A_promotion",
+      "public_release_of_private_chat",
+      "exclusive_priority_claim"
+    ],
+    "distinction": "Git commit attribution, co-author trailer and AI tool identity describe artifact creation and must not be inferred to prove the origin of the underlying idea.",
+    "research_modes": [
+      "human_initiated",
+      "ai_initiated",
+      "iterative_human_ai",
+      "independent_rediscovery",
+      "undetermined"
+    ],
+    "independent_rediscovery": "Record what the author actually worked out, the earlier literature with precise citations once verified, and when the overlap was recognized; never claim global priority or plagiarism based on independent convergence alone.",
+    "synergy": "Most later research is iterative human–AI co-development, including mathematical modelling, not only a human concept handed to an AI derivation service. Reconstruct intervention–response–correction chains from primary dialogue whenever possible. Do not assign exclusive authorship based on who wrote the final proof."
+  },
+  "evidence_policy": "Historical published antecedents are comparators, not proof of copying or a source for retroactively dating UBT contributions. Preserve authors' original dated work, independent development and later recognition of overlap as separate statements."
+}

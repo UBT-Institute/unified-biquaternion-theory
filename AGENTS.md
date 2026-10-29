@@ -453,3 +453,24 @@ separate statements.
   and not evidence that an open mathematical or physical gap has been closed.
 - Regenerate `SHA256SUMS.txt` only after all banners, wiki pages, TeX sources,
   PDFs, and release metadata have reached their final state.
+
+## Research-origin logging — mandatory for substantive research changes
+
+Read `provenance/README.en.md` (or the Czech edition) and the current structured historical ledger before working on a major concept or proof. Scientific origin is **not** the same as the existing A/B/C/D AI-provenance/review tier. This section records *who contributed which kind of idea or intervention*, not who typed the last LaTeX file.
+
+Most UBT results are produced by iterative human–AI co-development, often including the **mathematical modelling itself**, not just an initial human concept followed by autonomous AI derivation. Prefer `iterative_human_ai` when supported: log the original partial insight, jointly debated assumptions, human-proposed mathematical constraints and objections, AI-proposed computations, mutually revised equations, discarded routes and verified consequences as distinct evidenced stages. Never infer that the agent alone developed the mathematical model from the fact that it typed the final formula or proof. Likewise, do not infer human derivation of undocumented AI-only steps. Keep origin `undetermined` where primary evidence is missing; do not require exclusive attribution of every intermediate step.
+
+For each substantive research PR or conceptual milestone, create a compact JSON record in `provenance/events/YYYY-MM-DD-<topic>.json` using the fields documented in `provenance/event_template.json`. The record must include a stable claim/decision ID, date recorded, the new hypothesis/result/failed route, origin/proposed constraints when evidenced, significant human objections or architectural redirects, AI-proposed proof or implementation work, negative results, verification scope, evidence references, uncertainty and attestation status. Group related steps within one PR; do not log routine prompts, spelling edits or every implementation detail.
+
+Specific requirements:
+- Treat the author's substantive mathematical constraints, criticisms, corrections, rejections and requests to revert an architecture as **research contributions**, not administrative approval. Log causal links only when the source supports them.
+- Never infer that an AI agent invented a mathematical concept merely because it authored the final commit, TeX or proof. Conversely, do not credit the human with an autonomous AI derivation without evidence.
+- Link to exact Git commits/PRs and primary dated records where available. A Git author, bot trailer, merge date, source filename, retrospective narrative or inferred prompt alone does not prove idea origin. If only a memory/summary exists, label it as such, with original evidence `pending`.
+- Never fabricate quotations, timestamps, message IDs, session IDs, model names, percentages, prior dates or legal/scientific priority. Use `undetermined` if not established.
+- Keep private chat exports and commercially sensitive application details out of public Git. Store only consented, nonrevealing source references or hashes and state explicitly if originals are unavailable. Do not publish raw prompts by default.
+- Record what a source does **not** establish. Do not equate conceptual origin with technical execution, mathematical correctness, physical discovery, legal authorship or publication approval.
+- Keep previous records visible; corrections use new dated superseding entries instead of silent rewriting.
+- No agent may fill a human signature, attest a substantive review, change a Tier-A decision or classify its own work as human-approved. Human direction to *implement* this logging is not author attestation of historical assertions.
+- A missing evidence trail is reported honestly as `not_recorded` / `undetermined`; it must not be invented to satisfy CI. Routine commits that do not touch theory may state `not_applicable`.
+
+Research provenance records are evidence summaries and should not block exploratory drafts merely because complete chat archives are unavailable. However, a PR must not claim verified historical origin or human approval without supporting records.
