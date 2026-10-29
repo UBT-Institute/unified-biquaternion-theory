@@ -12,6 +12,8 @@ on:
       - 'tools/verify_holst_spin_source.py'
       - 'tests/test_nonlinear_cartan_chart.py'
       - 'tools/verify_nonlinear_cartan_chart.py'
+      - 'tests/test_spatial_constraint_closure.py'
+      - 'tools/verify_spatial_constraint_closure.py'
       - 'tests/test_bare_splitjet_selection.py'
       - 'tools/verify_bare_splitjet_selection.py'
       - 'tools/verify_physics_closure.py'
@@ -30,6 +32,8 @@ on:
       - 'tools/verify_holst_spin_source.py'
       - 'tests/test_nonlinear_cartan_chart.py'
       - 'tools/verify_nonlinear_cartan_chart.py'
+      - 'tests/test_spatial_constraint_closure.py'
+      - 'tools/verify_spatial_constraint_closure.py'
       - 'tests/test_bare_splitjet_selection.py'
       - 'tools/verify_bare_splitjet_selection.py'
       - 'tools/verify_physics_closure.py'
@@ -58,8 +62,11 @@ jobs:
           python3 tools/verify_bare_splitjet_selection.py > build/physics-closure/bare-splitjet.json
           python3 tools/verify_holst_spin_source.py > build/physics-closure/holst-spin-source.json
           python3 tools/verify_nonlinear_cartan_chart.py > build/physics-closure/nonlinear-cartan-chart.json
+          python3 tools/verify_spatial_constraint_closure.py > build/physics-closure/spatial-constraint-closure.json
       - name: Nonlinear Cartan chart and independent phase obstruction
         run: python3 -m pytest -q tests/test_nonlinear_cartan_chart.py
+      - name: Full spatial constraint closure and independent functional bracket
+        run: python3 -m pytest -q tests/test_spatial_constraint_closure.py
       - uses: leanprover/lean-action@v1
         # leanchecker loads a full import environment per worker.  Mathlib's
         # environment exceeds hosted-runner memory when checked in parallel.

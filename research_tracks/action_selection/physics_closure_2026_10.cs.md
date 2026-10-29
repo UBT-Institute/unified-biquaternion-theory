@@ -68,3 +68,8 @@ Přesnou zbývající překážkou je, že nebyla vybrána úplná akce jedinéh
 | Tvrzení, že Palatiniho redukce s jedinými hodinami automaticky ukládá všechny Einsteinovy rovnice | REFUTED | Zachovaný přesný protipříklad normálové vazby | Vyloučen je pouze uvedený homogenní ansatz |
 
 Spusťte `python tools/verify_physics_closure.py` a `python -m pytest -q tests/test_physics_closure.py tests/test_holst_selfdual_canonical_gr.py tests/test_holst_carrier_assumptions.py tests/test_composite_palatin_holst_flrw.py`. Ověřovač vypisuje verze balíčků, každou přesnou kontrolu, seed, chyby konečných diferencí, konvergenci nezávislého integrátoru a rezidua přesnosti. Samostatně spusťte `lake build UBT --wfail`, stávající Lean checker a audit axiomů. Nezkontrolovaný zdroj věty ani úspěšné numerické srovnání nejsou formální ověření. Před sloučením je vyžadováno nezávislé schválení významové shody jazykových verzí; samotná strukturálně shodná translace tuto podmínku neuzavírá.
+
+<!-- BILINGUAL-UNIT: physics-closure.full-spatial -->
+## Úplná prostorová dynamika po metrické redukci
+
+Výpočet [úplné prostorové dynamiky](full_spatial_dynamics_2026_10.cs.md) odvozuje lokální závorku změn časových řezů v deklarované rodině redukované kanonické metriky, vybírá Einsteinův poměr stopy a relativní koeficient křivosti a dává úplnou vakuovou evoluci metriky a dva ploché tenzorové módy. Kanonický fázový prostor a požadavek změn řezů mimo řešení jsou explicitní dodatečné předpoklady. Výpočet nevybírá mikroskopickou akci Theta, velikost Newtonovy konstanty, Holstův koeficient ani dynamiku dalších sektorů.

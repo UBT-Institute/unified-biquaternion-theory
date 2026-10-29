@@ -68,3 +68,8 @@ The precise remaining obstruction is that neither the complete single-Theta acti
 | Claim that the one-clock Palatini reduction automatically enforces all Einstein equations | REFUTED | Preserved exact normal-constraint counterexample | Only the stated homogeneous ansatz is excluded |
 
 Run `python tools/verify_physics_closure.py` and `python -m pytest -q tests/test_physics_closure.py tests/test_holst_selfdual_canonical_gr.py tests/test_holst_carrier_assumptions.py tests/test_composite_palatin_holst_flrw.py`. The verifier emits package versions, every exact check, the seed, finite-difference errors, independent integrator convergence and precision residuals. Run `lake build UBT --wfail`, the existing Lean checker and the axiom audit separately. No unchecked theorem source or successful numerical comparison is formal verification. Independent bilingual semantic approval is required before merge; a structurally matched translation alone does not close that gate.
+
+<!-- BILINGUAL-UNIT: physics-closure.full-spatial -->
+## Full spatial dynamics after metric reduction
+
+The [full spatial calculation](full_spatial_dynamics_2026_10.en.md) derives the local refoliation bracket within a declared reduced canonical metric family, selects the Einstein trace ratio and relative curvature coefficient, and gives the complete vacuum metric evolution and two flat tensor modes. Its canonical phase space and off-shell refoliation requirement are explicit additional assumptions. It does not select the microscopic Theta action, the Newton magnitude, the Holst coefficient or the extra-sector dynamics.

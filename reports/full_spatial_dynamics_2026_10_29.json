@@ -1,0 +1,253 @@
+{
+  "scope": "Conditional reduced canonical metric family; full spatial refoliation bracket, coefficient selection, GR evolution and flat TT benchmark",
+  "versions": {
+    "sympy": "1.14.0",
+    "numpy": "2.3.5"
+  },
+  "symbolic": {
+    "full_symmetric_curvature_contraction": true,
+    "kinetic_metric_variation_00": true,
+    "kinetic_momentum_variation_00": true,
+    "volume_variation_00": true,
+    "kinetic_metric_variation_11": true,
+    "kinetic_momentum_variation_11": true,
+    "volume_variation_11": true,
+    "kinetic_metric_variation_22": true,
+    "kinetic_momentum_variation_22": true,
+    "volume_variation_22": true,
+    "kinetic_metric_variation_01": true,
+    "kinetic_momentum_variation_01": true,
+    "volume_variation_01": true,
+    "kinetic_metric_variation_02": true,
+    "kinetic_momentum_variation_02": true,
+    "volume_variation_02": true,
+    "kinetic_metric_variation_12": true,
+    "kinetic_momentum_variation_12": true,
+    "volume_variation_12": true,
+    "symmetric_gradient_products_cancel_in_IBP": true,
+    "selected_coefficients_give_required_offshell_bracket": true,
+    "independent_divergence_coefficient": true,
+    "independent_trace_gradient_coefficient": true,
+    "cosmological_coefficient_cancels_from_antisymmetrization": true,
+    "ultralocal_bracket_cannot_match_structure_function": true,
+    "torus_witness_momentum_constraint_identically_zero": true,
+    "torus_witness_trace_anomaly_nonzero": true,
+    "legendre_inverse_all_six_components": true,
+    "legendre_kinetic_density": true,
+    "trace_kinetic_eigenvalue": true,
+    "GR_trace_eigenvalue_is_not_an_extra_TT_mode": true,
+    "TT_subspace_dimension_two_at_nonzero_wavevector": true,
+    "TT_wave_speed_squared_is_ab": true,
+    "two_polarization_wave_solves_TT_equation": true,
+    "two_polarization_wave_satisfies_linear_constraints": true,
+    "TT_curvature_quadratic_density_from_Christoffels": true,
+    "TT_gradient_energy_after_periodic_IBP": true
+  },
+  "numerical": {
+    "method": "Fourier differentiation in all 3 spatial directions and central finite differences of the curvature functional",
+    "cases": [
+      {
+        "grid": 12,
+        "epsilon": 0.0002,
+        "a": 2.0,
+        "b": 0.5,
+        "chi": 0.5,
+        "direct_functional_bracket": -0.518856202983975,
+        "momentum_generator": -0.5188562231946258,
+        "trace_anomaly": -0.0,
+        "predicted_bracket": -0.5188562231946258,
+        "absolute_error": 2.0210650819585396e-08,
+        "minimum_metric_eigenvalue": 0.8806813787478589
+      },
+      {
+        "grid": 12,
+        "epsilon": 0.0001,
+        "a": 2.0,
+        "b": 0.5,
+        "chi": 0.5,
+        "direct_functional_bracket": -0.5188562181257517,
+        "momentum_generator": -0.5188562231946258,
+        "trace_anomaly": -0.0,
+        "predicted_bracket": -0.5188562231946258,
+        "absolute_error": 5.068874098235199e-09,
+        "minimum_metric_eigenvalue": 0.8806813787478589
+      },
+      {
+        "grid": 20,
+        "epsilon": 0.0002,
+        "a": 2.0,
+        "b": 0.5,
+        "chi": 0.5,
+        "direct_functional_bracket": -0.5188562029662114,
+        "momentum_generator": -0.5188562231947892,
+        "trace_anomaly": -0.0,
+        "predicted_bracket": -0.5188562231947892,
+        "absolute_error": 2.0228577812808624e-08,
+        "minimum_metric_eigenvalue": 0.8767426389940176
+      },
+      {
+        "grid": 20,
+        "epsilon": 0.0001,
+        "a": 2.0,
+        "b": 0.5,
+        "chi": 0.5,
+        "direct_functional_bracket": -0.5188562180902245,
+        "momentum_generator": -0.5188562231947892,
+        "trace_anomaly": -0.0,
+        "predicted_bracket": -0.5188562231947892,
+        "absolute_error": 5.1045646598524286e-09,
+        "minimum_metric_eigenvalue": 0.8767426389940176
+      },
+      {
+        "grid": 12,
+        "epsilon": 0.0002,
+        "a": 2.0,
+        "b": 0.5,
+        "chi": 0.2,
+        "direct_functional_bracket": -0.6184845792589488,
+        "momentum_generator": -0.5188562231946258,
+        "trace_anomaly": -0.09962836028996339,
+        "predicted_bracket": -0.6184845834845891,
+        "absolute_error": 4.225640282129461e-09,
+        "minimum_metric_eigenvalue": 0.8806813787478589
+      },
+      {
+        "grid": 12,
+        "epsilon": 0.0001,
+        "a": 2.0,
+        "b": 0.5,
+        "chi": 0.2,
+        "direct_functional_bracket": -0.6184845824541707,
+        "momentum_generator": -0.5188562231946258,
+        "trace_anomaly": -0.09962836028996339,
+        "predicted_bracket": -0.6184845834845891,
+        "absolute_error": 1.0304184172582609e-09,
+        "minimum_metric_eigenvalue": 0.8806813787478589
+      },
+      {
+        "grid": 20,
+        "epsilon": 0.0002,
+        "a": 2.0,
+        "b": 0.5,
+        "chi": 0.2,
+        "direct_functional_bracket": -0.6184845792756022,
+        "momentum_generator": -0.5188562231947892,
+        "trace_anomaly": -0.09962836028982962,
+        "predicted_bracket": -0.6184845834846188,
+        "absolute_error": 4.2090165797148416e-09,
+        "minimum_metric_eigenvalue": 0.8767426389940176
+      },
+      {
+        "grid": 20,
+        "epsilon": 0.0001,
+        "a": 2.0,
+        "b": 0.5,
+        "chi": 0.2,
+        "direct_functional_bracket": -0.6184845824164231,
+        "momentum_generator": -0.5188562231947892,
+        "trace_anomaly": -0.09962836028982962,
+        "predicted_bracket": -0.6184845834846188,
+        "absolute_error": 1.0681956430502737e-09,
+        "minimum_metric_eigenvalue": 0.8767426389940176
+      },
+      {
+        "grid": 12,
+        "epsilon": 0.0002,
+        "a": 1.3,
+        "b": 0.4,
+        "chi": 0.5,
+        "direct_functional_bracket": -0.26980523164965575,
+        "momentum_generator": -0.5188562231946258,
+        "trace_anomaly": -0.0,
+        "predicted_bracket": -0.26980523606120543,
+        "absolute_error": 4.4115496811159005e-09,
+        "minimum_metric_eigenvalue": 0.8806813787478589
+      },
+      {
+        "grid": 12,
+        "epsilon": 0.0001,
+        "a": 1.3,
+        "b": 0.4,
+        "chi": 0.5,
+        "direct_functional_bracket": -0.2698052349797697,
+        "momentum_generator": -0.5188562231946258,
+        "trace_anomaly": -0.0,
+        "predicted_bracket": -0.26980523606120543,
+        "absolute_error": 1.0814357187527435e-09,
+        "minimum_metric_eigenvalue": 0.8806813787478589
+      },
+      {
+        "grid": 20,
+        "epsilon": 0.0002,
+        "a": 1.3,
+        "b": 0.4,
+        "chi": 0.5,
+        "direct_functional_bracket": -0.26980523166714176,
+        "momentum_generator": -0.5188562231947892,
+        "trace_anomaly": -0.0,
+        "predicted_bracket": -0.26980523606129037,
+        "absolute_error": 4.394148600539438e-09,
+        "minimum_metric_eigenvalue": 0.8767426389940176
+      },
+      {
+        "grid": 20,
+        "epsilon": 0.0001,
+        "a": 1.3,
+        "b": 0.4,
+        "chi": 0.5,
+        "direct_functional_bracket": -0.26980523501474174,
+        "momentum_generator": -0.5188562231947892,
+        "trace_anomaly": -0.0,
+        "predicted_bracket": -0.26980523606129037,
+        "absolute_error": 1.0465486255384349e-09,
+        "minimum_metric_eigenvalue": 0.8767426389940176
+      }
+    ],
+    "tolerance": 2e-06,
+    "checks": {
+      "fine_grid_full_bracket": true,
+      "non_GR_trace_anomaly_is_resolved": true,
+      "all_metrics_positive": true,
+      "finite_difference_converges": true
+    }
+  },
+  "passed": true,
+  "not_proved": [
+    "Theta-only action selection or reduced canonical symplectic form",
+    "full complex-time, matter, Holst-source or split-jet Dirac algebra",
+    "global boundaries or positivity on every background",
+    "values of Newton or cosmological constants"
+  ],
+  "recorded_on": "2026-10-29",
+  "base_commit": "eaca483e994f251ad9d88e77f4c9f62ad87c5816",
+  "status": "CONDITIONAL",
+  "source_sha256": {
+    "tools/verify_spatial_constraint_closure.py": "6388e58627b817ca5fcfc50d8da08e80e8958bcc8dda06cf11bd1f29f20814e9",
+    "tests/test_spatial_constraint_closure.py": "3c95976ced8784aa6aae03306b7e02a6058a28b90c2c32d1551659cedec4c0b7",
+    "formal/lean/UBT/Hamiltonian/SpatialClosure.lean": "4d91baf342f5e56be837025f8c2eed1b4a0bfb2ee8cb5728a562a6bdb0455199",
+    "research_tracks/action_selection/full_spatial_dynamics_2026_10.en.md": "a324f4d042a5f71d3cf246391e53963fbc5f5983a5a5e03ad1a047cd3a621048",
+    "research_tracks/action_selection/full_spatial_dynamics_2026_10.cs.md": "d6570d84bcd681ad2fc69eba73f355b0eb183a2bb2d44a91a0af8b8a03b97ef1"
+  },
+  "local_validation": {
+    "new_pytest_cases": 39,
+    "targeted_existing_cases": 12,
+    "bilingual_structural_pairs": 293,
+    "research_origin_events": 8,
+    "release_checksums": 83,
+    "command": "python -m pytest -q tests/test_spatial_constraint_closure.py tests/test_mm_composite_variation_identity.py tests/test_mm_finite_splitjet_lift.py research_tracks/action_selection/tests/test_implicit_composite_legendre_gate.py research_tracks/action_selection/tests/test_adm_gr_hessian.py"
+  },
+  "formal_verification": {
+    "status": "LEAN-PENDING",
+    "reason": "No local Lean runtime. Six finite cores submitted to strict root build, independent leanchecker and axiom audit in CI.",
+    "finite_lemmas": 6,
+    "not_formalized": [
+      "continuum functional Poisson brackets and spatial integrations by parts",
+      "reduction of full Theta/jet/matter/psi phase space to canonical metric variables",
+      "global physical positivity and microscopic action selection"
+    ]
+  },
+  "bilingual_semantics": {
+    "status": "PENDING",
+    "reason": "Independent model review must be obtained by CI; structural parity is not semantic approval."
+  }
+}
