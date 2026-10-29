@@ -94,18 +94,32 @@
     "provenance_headers": "PASS"
   },
   "formal_verification": {
-    "status": "LEAN-PENDING",
+    "status": "PROVED_FINITE_CORES",
     "finite_cores": 6,
-    "reason": "No local Lean runtime; strict root build, independent leanchecker and axiom audit submitted via CI.",
+    "reason": "Strict root build, independent leanchecker and axiom audit passed on the exact scientific source commit. No local runtime.",
     "not_formalized": [
       "continuum Dirac constraint theorem and smeared operator domains",
       "Palatini/HT base reduction",
       "full microscopic Theta/matter/complex-time dynamics and measure"
-    ]
+    ],
+    "source_commit": "be985c5a1140a272ea007698900b3b6248b304f8",
+    "lean_version": "4.33.1",
+    "strict_root_build": "PASS --wfail",
+    "independent_leanchecker": "PASS UBT",
+    "axiom_audit": "PASS",
+    "audited_declarations": 496,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40933238150/job/123656915722"
   },
   "bilingual_semantics": {
-    "status": "PENDING",
-    "reason": "Independent CI review required; structural parity is not semantic approval."
+    "status": "NOT_COMPLETED",
+    "source_commit": "be985c5a1140a272ea007698900b3b6248b304f8",
+    "job_id": 123657021300,
+    "reason": "Independent model job still running at evidence recording. Structural parity and author-directed integration are not semantic approval."
   },
   "predecessor_ci_observation": {
     "pr": 811,
@@ -113,5 +127,21 @@
     "bilingual_semantics": "FAILED_UNAVAILABLE",
     "reason": "local Ollama unavailable: TimeoutError",
     "semantic_job_id": 123380120343
+  },
+  "ci_validation": {
+    "source_commit": "be985c5a1140a272ea007698900b3b6248b304f8",
+    "configured_full_pytest_suite": "PASS",
+    "full_pytest_job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40933238210/job/123656915947",
+    "completed_mathematical_jobs": "All passed",
+    "repository_latex_status_at_evidence_record": "IN_PROGRESS",
+    "repository_latex_job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40933238259/job/123656917073",
+    "latex_scope": "No TeX source changed; the repository-wide rebuild is not represented as passed."
+  },
+  "integration_scope": {
+    "author_direction": "Prior instruction requests all working research merged and dynamics prioritized; continued in the current turn.",
+    "scientific_status": "CONDITIONAL",
+    "microscopic_action": "DEFINED_FAMILY_NOT_FINALIZED",
+    "human_attestation": "not_attested",
+    "semantic_approval": "not_granted"
   }
 }
