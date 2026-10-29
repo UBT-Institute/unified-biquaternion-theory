@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Three independent Lorentz vectors: conditional removal of the connection stabilizer
 
 **Research-only theorem, 2026-10-26.** Extends the merged conditional two-vector results #780 and #781. Does not alter the single-field carrier or declare an extra physical field or selected canonical action.

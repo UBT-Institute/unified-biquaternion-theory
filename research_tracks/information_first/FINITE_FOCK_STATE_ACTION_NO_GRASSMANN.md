@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Finite-mode CAR Hamiltonian to ordinary quantum-state action (without Grassmann variables)
 
 **26 October 2026. Exact finite-dimensional variational construction; a conditional quantum STATE action, not the fundamental UBT field action.** Uses `FINITE_CAR_EVEN_LORENTZ_DIRAC_BENCHMARK.md`.

@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Algebraic two-carrier obstruction to a third Lorentz vector
 
 **2026-10-26. Exact conditional equivariance theorem.** Let v be timelike and w linearly independent in a real Lorentz four-vector representation. Consider a Lorentz-equivariant map F(v,w) yielding another Lorentz four-vector, using only v,w, eta, epsilon and scalar algebraic operations (including invariant scalar functions), and no derivatives, external frames, extra fields or spontaneous branch choices that break the stabilizer.

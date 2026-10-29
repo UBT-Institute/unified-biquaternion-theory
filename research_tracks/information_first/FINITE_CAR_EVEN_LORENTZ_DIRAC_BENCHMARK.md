@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Two-mode even Lorentz bilinears and a four-mode finite Dirac Hamiltonian
 
 **26 October 2026 — exact FINITE-MODE operator-algebra benchmark. NOT a canonical UBT tetrad, full Lorentz-covariant CAR field, or a derived unified action.** This follows the orthogonal-only Clifford/CAR program in `ORTHOGONAL_CLIFFORD_HAMILTONIAN_SELECTOR_GATE.md` and `BIQUATERNION_INTRINSIC_CAR_SPIN_STATISTICS_GATE.md`. No independent fundamental Grassmann coefficient variables appear.

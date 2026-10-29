@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Composite-tetrad FLRW/CAR Hamiltonian: exact symplectic bridge and single-Theta gate
 
 **2026-10-27 — exact homogeneous GR/CAR reference computation and exact split-jet non-injectivity. NOT the derived fundamental one-Theta UBT Hamiltonian/action.** Sources: `research_tracks/action_selection/single_theta_macdowell_mansouri_candidate.en.md`, `research_tracks/action_selection/splitjet_presymplectic_gate.en.md`, `research_tracks/information_first/HAMILTONIAN_EQUALITY_FLRW_CAR_CONSTRAINT.md`, and `canonical/ACTION.en.md`.

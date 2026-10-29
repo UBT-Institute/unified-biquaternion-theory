@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Joint symmetry commutant: SO(3), SU(3), U(1), and the momentum gate
 
 **2026-10-26. Exact finite-representation classification, not a derivation of the full UBT Hamiltonian.** Extends `ROTATIONAL_HAMILTONIAN_COMMUTANT.md` and `SU3_ROTATIONAL_HAMILTONIAN_GATE.md`.

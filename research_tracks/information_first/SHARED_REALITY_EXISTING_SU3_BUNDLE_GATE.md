@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Shared reality and the existing UBT SU(3) colour bundle: gluing does not select curvature
 
 **2026-10-26 — integrative exact geometric theorem and action-selection gate.** This is a cross-reference to, NOT a replacement for, the canonical results.

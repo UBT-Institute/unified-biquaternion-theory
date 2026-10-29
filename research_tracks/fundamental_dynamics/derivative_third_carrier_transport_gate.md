@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Derivative third carrier: construction does not supply transport law
 
 **Conditional exact geometric distinction (2026-10-26).** Let v be nonnull timelike, w linearly independent, and e a nondegenerate Lorentz tetrad. Their plane has a nondegenerate Gram matrix G_IJ=eta(a_I,a_J) (a_0=v,a_1=w), and the orthogonal projector is P=1-a_I (G^{-1})^{IJ} a_J_flat. For a metric scalar I(g), define q^a=e^{a mu} partial_mu I and u=Pq. This is a covariant local composite constructed without an independent fundamental field, assuming g and its Levi-Civita curvature are already defined. If u!=0, the three vectors v,w,u are independent, so specifying consistent connection images for all three gives a unique Lorentz connection by the rank-six theorem.

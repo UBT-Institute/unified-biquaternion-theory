@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Dirac ghost-removal criterion: a worked constrained benchmark, not UBT closure
 
 **2026-10-26.** The ADM kinetic pairing has negative directions on the unrestricted phase space. A healthy Hamiltonian requires actual action-generated constraints, not just calling these directions gauge.

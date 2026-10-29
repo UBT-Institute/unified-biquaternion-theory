@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: axial_cartan_symmetric_W_no_go -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Purely axial Cartan torsion versus symmetric Theta reconstruction defect
 
 **2026-10-25 — conditional exact algebraic no-go, not an identification of the UBT spin current with the minimally coupled Dirac current.**

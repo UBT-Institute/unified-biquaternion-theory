@@ -140,7 +140,7 @@ The next useful test is an explicitly specified derivative-dependent composite j
 
 `verify_auxiliary_action.py` records 22 exact checks in `auxiliary_action_results.json`: a generic SymPy right inverse, a coframe kinetic contraction, volume scaling and a quadratic coefficient, plus independently implemented rational right inverses, determinants and polynomial interpolation using Python Fraction. The rational channel is finite witness evidence; the generic analytic argument is given above. Tool versions, assumptions and exclusions are recorded in the JSON and `status.json`.
 
-**LEAN-PENDING:** Lean and Lake executables were unavailable in the execution runtime. The local variational theorem has not been formalized in Lean. The checks do not verify a microscopic UBT action, all complex modes, a physical gauge quotient, stability or observations. English was the translation source; matching structure does not replace the human semantic-equivalence review required before merge.
+**LEAN-PENDING:** Lean and Lake executables were unavailable in the execution runtime. The local variational theorem has not been formalized in Lean. The checks do not verify a microscopic UBT action, all complex modes, a physical gauge quotient, stability or observations. English was the translation source; matching structure does not replace the independent semantic review required before merge under the current bilingual content policy.
 
 <!-- BILINGUAL-UNIT: c5-aux.sources -->
 ## Sources within the repository

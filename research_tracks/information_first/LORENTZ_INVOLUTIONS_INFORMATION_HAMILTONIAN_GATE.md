@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Lorentz, biquaternion involutions, CPT and information: Hamiltonian selection gate
 
 **2026-10-26. Exact restricted-representation results, not a full UBT Hamiltonian.** Continues `JOINT_SYMMETRY_COMMUTANT_SELECTION.md`. Uses canonical/algebra/involutions_Z2xZ2xZ2.tex and canonical/symmetry/step1_CPT_definitions.tex; their transformations on field arguments and complex time must not be conflated with purely internal matrices.

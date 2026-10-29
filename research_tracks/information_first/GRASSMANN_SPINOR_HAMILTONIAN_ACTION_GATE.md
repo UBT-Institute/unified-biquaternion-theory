@@ -1,5 +1,17 @@
 > **Operator-algebra clarification (2026-10-26):** The pure-odd obstruction in Section IV applies to *classical supercommutative Grassmann* Theta and the currently locked linear E∝DTheta. It does **not** apply to arbitrary *operator-valued CAR* elements of the complex quaternion algebra. Exact local one-mode CAR, graded tensor/Jordan–Wigner extension, an even nonzero odd-operator bilinear and a positive finite-mode Hamiltonian are proved in [BIQUATERNION_INTRINSIC_CAR_SPIN_STATISTICS_GATE.md](BIQUATERNION_INTRINSIC_CAR_SPIN_STATISTICS_GATE.md). This does not yet produce an invertible Lorentz tetrad or a complete UBT action.
 
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Hamiltonian → action gate: correct fermionic mass and the single-Theta parity obstruction
 
 **2026-10-26. Verified algebra, conditional benchmark dynamics. NOT the completed single-fundamental-field UBT action.** Supersedes the *fermionic* reading of `SPINOR_MASS_DETERMINANT_U1_GATE.md` and `ONE_THETA_GRAV_SPIN_HAMILTONIAN_CANDIDATE.md`. Their determinant identity remains correct for commuting entries. This note distinguishes the ordinary Dirac/Einstein–Dirac reference theory from a derived UBT model, following `canonical/ACTION.en.md` (single-action rule).

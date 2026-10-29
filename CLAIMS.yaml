@@ -152,6 +152,10 @@ claims:
     - verification/su3_stabilizer_fock_check.py
     - papers/UBT_Gauge_Submission.tex
     - reviews/gauge_qm_honest_status_audit_2026-07-17.md
+    - research_tracks/T2_GAUGE/su3_dynamics_update_2026-10.en.md
+    - research_tracks/T2_GAUGE/su3_dynamics_update_2026-10.cs.md
+    - verification/su3_spin_quadrupole_check.py
+    - verification/su3_projector_connection_check.py
     assumptions:
     - 'The involution structure selects a complex rank-three carrier V_c congruent to C^3'
     - 'GAP-SU3-STABILIZER: PROVED [L1] — canonical h and Omega on V=C-span{I,J,K} derived from biquaternionic adjoint and quaternion multiplication; Stab_{GL(V)}(h,Omega)=SU(3); machine verified by exact SymPy checks'
@@ -238,6 +242,10 @@ claims:
     - 'GAP-SU3-COMPOSITE-POLE-CRITERION: SUPERSEDED AS NECESSARY QCD CONDITION — a positive gauge-invariant massless adjoint pole is only a diagnostic for a deconfined physical vector channel; exact QCD may confine coloured gluons, so the required benchmark is instead a consistent local SU(3) gauge 1PI action with Yang-Mills ultraviolet behaviour and correct BRST/Slavnov-Taylor structure'
     - 'GAP-SU3-SPLIT-JET-AUX-COLOUR: CLOSED AS NO-GO [L1] — the existing GR split-jet action S_aux=int lambda.C is a pure Lagrange-multiplier right-inverse constraint; K^J and w variation force lambda=0 on non-null patches, so eliminating this sector generates no J_mu J^mu interaction, no vector inverse propagator, and no composite-colour pole mechanism'
     - 'GAP-SU3-FIXED-BACKGROUND-7MODES: DOWNGRADED — the one-radial-plus-seven-tangent healthy spectrum is valid only with the spacetime metric held external; it must not be interpreted as seven independent internal colour modes after the canonical metric g[D Theta] is substituted'
+    - 'GAP-SU3-SPIN-QUAD: PROVED [L1] — quaternion adjoints give the spin-1 triple lambda7,-lambda5,lambda2 and symmetric traceless quadrupoles give the other five Gell-Mann directions; exact SymPy verifier'
+    - 'GAP-SU3-MC: CLOSED AS NO-GO — a candidate colour connection of pure Maurer-Cartan form U^-1 dU is locally flat and cannot represent generic gluon curvature'
+    - 'GAP-SU3-PROJECTOR-KIN: PROVED [L1] — on an H(Theta)>0 patch the transverse rank-three bundle defined by P=1-n n^flat carries the projected U(3) connection P d with curvature P(dP wedge dP)P; an exact witness has nonzero traceless curvature -i lambda2'
+    - 'GAP-SU3-PROJECTOR-YM: CLOSED AS NO-GO — the universal projector connection P d is fixed by P and is not surjective onto arbitrary SU(3) Yang-Mills connections; for constant P it is flat while non-flat SU(3) connections exist on the same bundle'
     forbidden_wording:
     - SU(3) derived from automorphisms
     - gauge group follows from automorphisms alone

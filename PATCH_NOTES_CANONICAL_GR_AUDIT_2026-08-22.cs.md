@@ -18,7 +18,8 @@ UBT-AI-PROVENANCE-END
 Tato změna audituje algebraické kroky důležité pro věty v kanonické vrstvě a
 `papers/UBT_GR_Submission.tex`. Zdrojovým jazykem této párové poznámky a párové
 opravy článku je angličtina. Automatická shoda struktury a statusů musí projít;
-před merge je povinná lidská kontrola sémantické ekvivalence.
+před sloučením je podle aktuálních pravidel dvojjazyčného obsahu povinná
+nezávislá významová kontrola.
 
 <!-- BILINGUAL-UNIT: audit.result -->
 ## Výsledek

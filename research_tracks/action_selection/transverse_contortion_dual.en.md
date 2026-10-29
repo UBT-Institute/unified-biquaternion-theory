@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: transverse_contortion_dual -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Transverse contortion kernel as a spatial dual
 
 **Status:** exact pointwise algebraic parametrization, conditional on an oriented nondegenerate Lorentzian four-space and a non-null vector V. C-tier research note (2026-10-25). Not a dynamical torsion-selection rule.

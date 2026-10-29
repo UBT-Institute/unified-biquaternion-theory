@@ -57,9 +57,15 @@ Keep each edition monolingual.  Do not mix English prose into a Czech edition
 or Czech prose into an English edition.  Shared language-neutral sources are
 preferred for equations and other formal material so that they cannot drift.
 
-Machine checks establish pairing and structural identity; they do not prove
-translation equivalence.  Every bilingual content change therefore also needs
-an explicit human semantic-equivalence review before merge.  Existing
+Every bilingual content change must pass both structural checks and the
+independent semantic review in `tools/verify_bilingual_semantics.py` before
+merge. A calibrated model may replace mandatory human translation sign-off;
+its report must cover every paragraph and bind both source hashes, the model,
+the verifier, and this policy. Missing evidence, changed sources, uncertainty,
+or reviewer unavailability blocks approval. Human review remains available for
+disputed findings; it is not required for every machine-approved translation.
+Machine translation review is not proof of scientific validity, a human
+attestation, or permission to change a provenance tier. Existing
 single-language documents are migration debt, not precedent.  They may remain
 unchanged temporarily, but any material edit must either migrate the document
 or record a narrowly scoped exception according to the policy.  Generated

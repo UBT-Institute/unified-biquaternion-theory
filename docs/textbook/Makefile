@@ -2,12 +2,15 @@ REPO_ROOT := $(abspath ../..)
 BUILD_ROOT := $(REPO_ROOT)/build/textbook
 WORK_ROOT := $(BUILD_ROOT)/work
 PUBLIC_ROOT := $(BUILD_ROOT)/public
+EDITION_ROOT := $(BUILD_ROOT)/editions
 PUBLISH_ROOT := $(REPO_ROOT)/docs/pdfs
 TEXINPUTS_ENV := TEXINPUTS=$(REPO_ROOT)/tex//:
 
-TEXTBOOK_CS_PDF := $(PUBLIC_ROOT)/UBT_Textbook_CS.pdf
-TEXTBOOK_EN_PDF := $(PUBLIC_ROOT)/UBT_Textbook_EN.pdf
-TEXTBOOK_PDFS := $(TEXTBOOK_CS_PDF) $(TEXTBOOK_EN_PDF)
+TEXTBOOK_CS_PDF := $(EDITION_ROOT)/UBT_Textbook_CS.pdf
+TEXTBOOK_EN_PDF := $(EDITION_ROOT)/UBT_Textbook_EN.pdf
+TEXTBOOK_EDITIONS := $(TEXTBOOK_CS_PDF) $(TEXTBOOK_EN_PDF)
+TEXTBOOK_PDF := $(PUBLIC_ROOT)/UBT_Textbook.pdf
+TEXTBOOK_PDFS := $(TEXTBOOK_EDITIONS) $(TEXTBOOK_PDF)
 
 .PHONY: all build publish verify clean list
 
@@ -16,16 +19,20 @@ all: build
 build: $(TEXTBOOK_PDFS)
 
 $(TEXTBOOK_CS_PDF): main.tex main.cs.tex chapters/*.cs.tex appendices/*.cs.tex frontmatter/*.cs.tex
-	mkdir -p $(WORK_ROOT)/cs $(PUBLIC_ROOT)
+	mkdir -p $(WORK_ROOT)/cs $(EDITION_ROOT)
 	$(TEXINPUTS_ENV) latexmk -pdf -halt-on-error -interaction=nonstopmode \
 		-file-line-error -outdir=$(WORK_ROOT)/cs main.cs.tex
 	cp $(WORK_ROOT)/cs/main.cs.pdf $@
 
 $(TEXTBOOK_EN_PDF): main.tex main.en.tex chapters/*.en.tex appendices/*.en.tex frontmatter/*.en.tex
-	mkdir -p $(WORK_ROOT)/en $(PUBLIC_ROOT)
+	mkdir -p $(WORK_ROOT)/en $(EDITION_ROOT)
 	$(TEXINPUTS_ENV) latexmk -pdf -halt-on-error -interaction=nonstopmode \
 		-file-line-error -outdir=$(WORK_ROOT)/en main.en.tex
 	cp $(WORK_ROOT)/en/main.en.pdf $@
+
+$(TEXTBOOK_PDF): $(TEXTBOOK_EDITIONS)
+	mkdir -p $(PUBLIC_ROOT)
+	pdfunite $(TEXTBOOK_CS_PDF) $(TEXTBOOK_EN_PDF) $@
 
 publish: build
 	mkdir -p $(PUBLISH_ROOT)
@@ -35,8 +42,9 @@ publish: build
 verify: build
 	@test -s $(TEXTBOOK_CS_PDF)
 	@test -s $(TEXTBOOK_EN_PDF)
-	@test "$$(find $(PUBLIC_ROOT) -maxdepth 1 -type f -name 'UBT_Textbook_*.pdf' | wc -l | tr -d ' ')" = 2
-	@printf '%s\n' 'Official bilingual textbook PDFs are present:'
+	@test -s $(TEXTBOOK_PDF)
+	@test "$$(find $(PUBLIC_ROOT) -maxdepth 1 -type f -name 'UBT_Textbook*.pdf' | wc -l | tr -d ' ')" = 1
+	@printf '%s\n' 'Official combined textbook and both language editions are present:'
 	@ls -lh $(TEXTBOOK_PDFS)
 
 list:

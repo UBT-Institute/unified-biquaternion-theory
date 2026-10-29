@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: bilingual-content-policy -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -9,6 +10,7 @@ policy: AI_PROVENANCE.md
 notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
+
 
 # Pravidla dvojjazyčného obsahu
 
@@ -67,12 +69,28 @@ Každý pull request měnící text v rozsahu těchto pravidel musí:
 2. uvést, která verze byla zdrojem překladu;
 3. potvrdit shodu formální struktury a označení statusu tvrzení;
 4. přiložit vykreslené nebo sestavené výstupy, pokud je vytváří běžný workflow;
-5. před sloučením získat výslovné lidské potvrzení významové shody.
+5. před sloučením projít nezávislou automatickou kontrolou významové shody.
 
-Automatické kontroly jsou povinné tam, kde jsou dostupné, a musí selhat při
+Strukturální kontroly jsou povinné a musí selhat při
 chybějící dvojici nebo neshodě identifikátorů, rovnic, citací, značek
-tvrzení/statusu či struktury dokumentu. Úspěch automatických kontrol je nutný,
-ale nedokazuje totožnost významu přirozeného jazyka.
+tvrzení/statusu či struktury dokumentu. Samostatný významový modul
+`tools/verify_bilingual_semantics.py` porovnává všechny odstavce v obou směrech
+pomocí nezávislého požadavku na model, včetně předpokladů, negací,
+kvantifikátorů, hranic důkazů, výhrad a přidaného či vynechaného obsahu. Nejprve
+musí projít kalibrací na správných překladech a záměrně poškozených příkladech.
+
+Zpráva modelu musí pokrýt každý odstavec a vázat přesné hashe zdrojů,
+požadovaný model, připnutou verzi běhového prostředí, ověřovač a pravidla. Změna zdroje
+zneplatňuje předchozí výsledek. Zprávy vložené přispěvatelem do commitu nejsou
+schválením: workflow musí získat nové podklady od posuzovatele. Neshoda, nejistota,
+chybný formát odpovědi, chybějící pokrytí, neúspěšná kalibrace nebo nedostupný
+posuzovatel kontrolu zablokují. Náhradní automatické schválení není dovoleno.
+
+Tato strojová kontrola nahrazuje povinné lidské schválení překladu u úspěšné
+změny. Lidská revize zůstává dostupná pro řešení sporných nálezů; není
+vyžadována pro každý strojově schválený překlad. Úspěch modelu je dokladem
+kontroly překladu, nikoli matematickým důkazem ekvivalence nebo vědecké
+platnosti, a nemění úrovně tvrzení, úrovně provenience ani osvědčení autora.
 
 ## Rozsah a migrace
 
@@ -102,8 +120,8 @@ následující:
 
 - obě verze existují a úspěšně se sestaví nebo vykreslí;
 - strukturální kontroly projdou;
-- pull request obsahuje prohlášení o významové shodě;
-- lidský posuzovatel významovou shodu výslovně schválí;
+- workflow vytvoří úspěšnou významovou zprávu pro každou změněnou dvojici;
+- zpráva odpovídá aktuálním hashům zdrojů a projde kalibrací posuzovatele;
 - nezůstává žádná nevyřešená výjimka z dvojjazyčných pravidel.
 
 Pokud je totožnost významu nejistá, bezpečným stavem je ponechat pull request

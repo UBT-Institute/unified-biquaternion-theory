@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: commutator_invariant_action_selection_audit -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Commutator-built invariant candidates do not select a unique Theta action
 
 **2026-10-25 — structural selection audit, C-tier. Not a fundamental UBT action or a uniqueness theorem across all possible axioms.**
@@ -20,7 +34,7 @@ An arbitrary linear combination a I_R + b I_C is not uniquely selected by the co
 
 The previous canonical Proposition 9 rules out the specified minimal timelike auxiliary-connection kinetic/potential subfamily with a nonconstant quartic and nondegenerate tetrad. It does NOT derive I_R or I_C as its replacement. Appending one to bypass the no-go would be a new theory choice unless derived from additional premises.
 
-The kinematic relation between full curvature and contortion, F(omega0+C)-F(omega0)=D_omega0 C+C wedge C, proves that the 12-dimensional tetrad-invisible stabilizer can affect curvature, and therefore an I_R/I_C candidate may distinguish it. It does NOT guarantee a nonsingular auxiliary Hessian, physical positive energy, or closed constraints.
+The kinematic relation between full curvature and contortion, F(omega0+C)-F(omega0)=D_omega0 C+C wedge C, establishes that the 12-dimensional tetrad-invisible stabilizer can affect curvature, and therefore an I_R/I_C candidate may distinguish it. It does NOT guarantee a nonsingular auxiliary Hessian, physical positive energy, or closed constraints.
 
 ## Selection gate
 

@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Antilinear chiral reconstruction from one biquaternion: exact representation bridge
 
 **2026-10-26. Algebraic spin representation only; does not establish a fundamental Dirac action, Grassmann statistics or composite-tetrad compatibility.**

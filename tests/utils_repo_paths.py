@@ -61,7 +61,7 @@ def forensic_target_root() -> Path:
     Returns:
         Path to ubt_with_chronofactor/forensic_fingerprint/
     """
-    return repo_root() / 'ubt_with_chronofactor' / 'forensic_fingerprint'
+    return forensic_root()
 
 
 def ubt_with_chronofactor_root() -> Path:
@@ -71,7 +71,7 @@ def ubt_with_chronofactor_root() -> Path:
     Returns:
         Path to ubt_with_chronofactor/
     """
-    return repo_root() / 'ubt_with_chronofactor'
+    return repo_root() / 'ARCHIVE' / 'archive_legacy' / 'ARCHIVE' / 'legacy_variants' / 'ubt_with_chronofactor'
 
 
 def ubt_no_chronofactor_root() -> Path:
@@ -81,7 +81,7 @@ def ubt_no_chronofactor_root() -> Path:
     Returns:
         Path to ubt_no_chronofactor/
     """
-    return repo_root() / 'ubt_no_chronofactor'
+    return repo_root() / 'ARCHIVE' / 'archive_legacy' / 'ARCHIVE' / 'legacy_variants' / 'ubt_no_chronofactor'
 
 
 def ensure_forensic_importable() -> None:

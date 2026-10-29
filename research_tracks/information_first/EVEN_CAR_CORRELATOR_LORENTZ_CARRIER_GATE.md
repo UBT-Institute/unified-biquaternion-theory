@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Even CAR correlator as a conditional Lorentz carrier: exact rank test
 
 **2026-10-27. Exact two-mode operator-algebra result and an obstruction to the naive identification X(Theta)=<c†c>. NOT a unique UBT geometry, tetrad, quantum-gravity coupling or completed action.** Companion to `COMPOSITE_TETRAD_FLRW_CAR_SYMPLECTIC_BRIDGE.md`, `FINITE_CAR_EVEN_LORENTZ_DIRAC_BENCHMARK.md` and the existing Lorentz bilinear rank/fiber analysis.

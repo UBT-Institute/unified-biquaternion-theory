@@ -41,4 +41,4 @@ Samotná údržba generovaných hlaviček nemění věcně starší text. Detekt
 
 Nebyla změněna žádná úroveň vědeckého tvrzení, redakční přiřazení ani osvědčení autora. Zdrojem překladů byly anglické verze. Rovnice, symboly, předpoklady, hranice důkazů, stavové značky a výhrady mají v českých verzích zůstat totožné; strukturní kontroly neprokazují významovou shodu.
 
-Lidské schválení významové shody podle `BILINGUAL_CONTENT_POLICY.en.md` a `AGENTS.md` zůstává otevřené. PR zůstává návrhem pro tuto revizi. Výsledky GitHub Actions je nutné vyhodnotit na konečném commitu PR odděleně od těchto lokálních kontrol.
+Vlastník repozitáře schválil nahrazení povinného lidského schválení překladu nezávislou automatickou kontrolou významu. Podle aktualizovaných `BILINGUAL_CONTENT_POLICY.en.md` a `AGENTS.md` zůstává tento PR návrhem, dokud významový modul nevytvoří úspěšnou, kalibrovanou zprávu vázanou na aktuální hashe zdrojů. Výsledky GitHub Actions je nutné vyhodnotit na konečném commitu PR odděleně od těchto lokálních kontrol.

@@ -1,5 +1,17 @@
 > **FERMIONIC ORDERING UPDATE (2026-10-26):** The determinant identity below assumes commuting Theta entries. For Grassmann-odd Theta the actual invariant Dirac mass uses the antisymmetric Weyl pairing B=u^T epsilon v, and m Psi† beta Psi=-m(B+B†), not the naively ordered determinant. See [graded Hamiltonian/action gate](GRASSMANN_SPINOR_HAMILTONIAN_ACTION_GATE.md). The one-Theta tetrad-versus-fermionic-parity obstruction also remains open.
 
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Dirac mass as a native biquaternion determinant: U(1) selection
 
 **2026-10-26. Exact algebraic equivalence conditional on the real-linear chiral map, NOT a derived UBT action or fermion statistics.**

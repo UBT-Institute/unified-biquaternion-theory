@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Exact SO(2) residual connection reconstruction and compatibility projector
 
 **2026-10-26: conditional algebraic theorem, not a derived UBT transport law.** Assume the established two-carrier hypotheses of PR #780, a particular metric-compatible connection omega0 transporting v and w as prescribed, and a normalized residual spacelike-plane SO(2) generator J with Jv=Jw=0 and J²=-P_perp. All solutions are omega_mu=omega0_mu+alpha_mu J. Let u be a third vector with nonzero transverse projection; then Ju !=0.

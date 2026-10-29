@@ -18,7 +18,8 @@ UBT-AI-PROVENANCE-END
 This patch audits the theorem-critical algebra used by the canonical layer and
 `papers/UBT_GR_Submission.tex`. The source language of this paired note and the
 paired paper correction is English. Automated structural and status parity
-must pass; human semantic-equivalence review is required before merge.
+must pass; independent semantic review is required before merge under the current
+bilingual content policy.
 
 <!-- BILINGUAL-UNIT: audit.result -->
 ## Result

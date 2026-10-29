@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: entangled-even-car-geometry-ccr-gate -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -6,13 +7,13 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Exact finite-CAR toy construction; no derivation of the canonical UBT action.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
 # Entangled even-CAR ground state: timelike correlation and collective bosonic CCR
 
-**2026-10-27. Exact reference construction in two CAR modes per cell and N even cells.** This addresses the polarized-versus-timelike tension noted in merged PR #800 and in `COLLECTIVE_CAR_EMERGENT_GRAVITY_CCR.md`. The microscopic couplings, foliation, and identification of the correlator with geometry are **not selected by UBT**.
+**2026-10-27. Exact reference construction in two CAR modes per cell and N even cells.** This addresses the polarized-versus-timelike tension noted in merged PR #800 and in `COLLECTIVE_CAR_EMERGENT_GRAVITY_CCR.en.md`. The microscopic couplings, foliation, and identification of the correlator with geometry are **not selected by UBT**.
 
 ## 1. A rigorous single-cell parity obstruction, and its limits
 
@@ -82,3 +83,5 @@ This reference sector has (a) a positive local C, (b) nonzero normalized bosonic
 ## Verification
 
 `tests/test_information_entangled_car_geometry_ccr.py` contains eight independently locally executed SymPy tests: pure-cell parity gate, timelike two-cell correlations, exact CCR and mean-square error for N=2,4, squeezed minimum uncertainty, boost/axis obstruction, SU(2) commutant, gapped even-CAR ground state, and independent pair Hamiltonian spectrum. All eight passed locally.
+
+Verification environment: SymPy 1.14.0. LEAN-PENDING: this reference construction is not formalized in Lean and Lean/Lake is unavailable locally. Finite-cutoff checks do not prove the full Weyl-CCR limit or the gravitational action.

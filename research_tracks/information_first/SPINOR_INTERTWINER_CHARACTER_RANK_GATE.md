@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Spinor bridge: character obstruction and composite-bilinear rank audit
 
 **2026-10-26 — exact restricted representation theorem. NOT a proof that all nonlinear single-Theta solderings fail.** Builds directly on action_selection/spinorial_left_vs_congruence.en.md and spinor_bilinear_soldering_gate.en.md.

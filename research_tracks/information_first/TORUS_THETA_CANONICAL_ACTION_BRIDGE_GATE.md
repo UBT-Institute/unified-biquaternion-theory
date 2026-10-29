@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Does the canonical Theta action actually produce the torus Laplacian?
 
 **2026-10-26. Exact conditional selection obstruction; not a new fundamental action.** Compare `canonical/ACTION.en.md`, `canonical/bridges/theta_parameter_separation.md`, `INDUCED_METRIC_KINETIC_COLLAPSE.md`, `TORUS_HAMILTONIAN_FULL_REVIVAL_GATE.md`.

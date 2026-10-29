@@ -140,7 +140,7 @@ Dalším užitečným testem je výslovně specifikovaný složený jet závisl�
 
 `verify_auxiliary_action.py` zaznamenává 22 přesných kontrol do `auxiliary_action_results.json`: obecnou pravou inverzi v SymPy, kinetickou kontrakci korámce, škálování objemu a kvadratický koeficient a dále nezávisle implementované racionální pravé inverze, determinanty a polynomiální interpolaci pomocí Python Fraction. Racionální kanál je konečný soubor ověřených příkladů; obecný analytický argument je uveden výše. Verze nástrojů, předpoklady a vyloučené oblasti jsou zaznamenány v JSON a `status.json`.
 
-**LEAN-PENDING:** V použitém prostředí nebyly dostupné spustitelné programy Lean a Lake. Lokální variační věta nebyla formalizována v Lean. Kontroly neověřují mikroskopickou akci UBT, všechny komplexní módy, fyzikální kalibrační kvocient, stabilitu ani pozorování. Zdrojem překladu byla angličtina; shodná struktura nenahrazuje lidskou revizi významové ekvivalence požadovanou před sloučením.
+**LEAN-PENDING:** V použitém prostředí nebyly dostupné spustitelné programy Lean a Lake. Lokální variační věta nebyla formalizována v Lean. Kontroly neověřují mikroskopickou akci UBT, všechny komplexní módy, fyzikální kalibrační kvocient, stabilitu ani pozorování. Zdrojem překladu byla angličtina; shodná struktura nenahrazuje nezávislou významovou kontrolu požadovanou před sloučením podle aktuálních pravidel dvojjazyčného obsahu.
 
 <!-- BILINGUAL-UNIT: c5-aux.sources -->
 ## Zdroje v repozitáři

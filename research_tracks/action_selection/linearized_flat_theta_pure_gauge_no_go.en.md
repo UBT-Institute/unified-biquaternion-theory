@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: linearized_flat_theta_pure_gauge_no_go -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Linearized flat Theta geometry: conditional pure-gauge no-go
 
 **Status: conditional kinematic theorem, C-tier working note, 2026-10-25. NOT a no-go for full UBT and NOT a dynamical action/constraint derivation.**

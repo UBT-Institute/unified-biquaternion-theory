@@ -1,3 +1,4 @@
+<!-- BILINGUAL-UNIT: collective-car-emergent-gravity-ccr -->
 <!--
 UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
@@ -6,7 +7,7 @@ ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
-notice: Conditional working research, not a derived UBT action.
+notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
@@ -79,3 +80,5 @@ The full CAR algebra already admits a standard continuum construction and Dirac 
 ## Verification
 
 `tests/test_information_collective_car_emergent_ccr.py` tests the two-mode CAR to spin-bilinear compression, exact finite-N commutators, Dicke amplitudes, low-excitation error, positivity and Heisenberg evolution, and the finite-dimensional trace obstruction. Six tests passed locally for cutoffs N≤5.
+
+Verification environment: SymPy 1.14.0. These finite-cutoff checks do not formally verify the infinite-N limit or derive the gravitational constraint. LEAN-PENDING: no Lean formalization is provided, and Lean/Lake is unavailable locally.

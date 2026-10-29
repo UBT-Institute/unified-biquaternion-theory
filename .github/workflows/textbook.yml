@@ -2,6 +2,12 @@ name: Build textbook PDF
 
 on:
   workflow_dispatch:
+    inputs:
+      send_email:
+        description: "Explicitly email the combined textbook PDF"
+        type: boolean
+        required: false
+        default: false
   push:
     branches: [master]
     paths:
@@ -45,7 +51,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y --no-install-recommends \
-            latexmk biber python3-pygments \
+            latexmk biber python3-pygments poppler-utils \
             texlive-latex-base texlive-latex-recommended texlive-latex-extra \
             texlive-fonts-recommended texlive-science texlive-lang-czechslovak \
             texlive-xetex texlive-luatex texlive-bibtex-extra
@@ -59,7 +65,7 @@ jobs:
         run: python3 tools/apply_provenance_headers.py --check
 
       - name: Check bilingual document parity
-        run: python3 tools/check_bilingual_pairs.py --root .
+        run: python3 tools/check_bilingual_pairs.py --root docs/textbook
 
       - name: Audit standalone textbook roots
         env:
@@ -82,22 +88,16 @@ jobs:
 
       - name: Verify official textbook PDFs
         run: |
-          test -s build/textbook/public/UBT_Textbook_CS.pdf
-          test -s build/textbook/public/UBT_Textbook_EN.pdf
-          test "$(find build/textbook/public -maxdepth 1 -type f -name 'UBT_Textbook_*.pdf' | wc -l)" -eq 2
+          test -s build/textbook/editions/UBT_Textbook_CS.pdf
+          test -s build/textbook/editions/UBT_Textbook_EN.pdf
+          test -s build/textbook/public/UBT_Textbook.pdf
+          test "$(find build/textbook/public -maxdepth 1 -type f -name 'UBT_Textbook*.pdf' | wc -l)" -eq 1
 
-      - name: Upload official Czech textbook PDF
+      - name: Upload combined bilingual textbook PDF
         uses: actions/upload-artifact@v4
         with:
-          name: UBT_Textbook_CS
-          path: build/textbook/public/UBT_Textbook_CS.pdf
-          if-no-files-found: error
-
-      - name: Upload official English textbook PDF
-        uses: actions/upload-artifact@v4
-        with:
-          name: UBT_Textbook_EN
-          path: build/textbook/public/UBT_Textbook_EN.pdf
+          name: UBT_Textbook
+          path: build/textbook/public/UBT_Textbook.pdf
           if-no-files-found: error
       - name: Commit refreshed textbook PDF
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
@@ -113,7 +113,7 @@ jobs:
           git push origin HEAD:master
 
       - name: Validate textbook email secrets
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: github.event_name == 'workflow_dispatch' && inputs.send_email == true && github.ref == 'refs/heads/master'
         env:
           TEXTBOOK_EMAIL_TO: ${{ secrets.TEXTBOOK_EMAIL_TO }}
           TEXTBOOK_SMTP_USERNAME: ${{ secrets.TEXTBOOK_SMTP_USERNAME }}
@@ -124,7 +124,7 @@ jobs:
           test -n "$TEXTBOOK_SMTP_APP_PASSWORD"
 
       - name: Email official textbook PDFs
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: github.event_name == 'workflow_dispatch' && inputs.send_email == true && github.ref == 'refs/heads/master'
         env:
           TEXTBOOK_EMAIL_TO: ${{ secrets.TEXTBOOK_EMAIL_TO }}
           TEXTBOOK_SMTP_USERNAME: ${{ secrets.TEXTBOOK_SMTP_USERNAME }}
@@ -136,7 +136,7 @@ jobs:
           from email.message import EmailMessage
           from pathlib import Path
 
-          pdfs = [Path('build/textbook/public/UBT_Textbook_CS.pdf'), Path('build/textbook/public/UBT_Textbook_EN.pdf')]
+          pdfs = [Path('build/textbook/public/UBT_Textbook.pdf')]
           if any(not pdf.is_file() or pdf.stat().st_size == 0 for pdf in pdfs):
               raise SystemExit('One or more bilingual textbook PDFs are missing or empty')
 

@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Bottom-up quadratic Theta action and Hamiltonian: symmetry classification without importing a higher-dimensional action
 
 **2026-10-26; restricted flat-background construction, NOT the fundamental S_UBT.** This is an independent inverse route; compare only afterward with canonical/ACTION.en.md and canonical/bridges/theta_quantum_structure.tex. Assumptions explicitly added here: complex coefficient field Phi=(s,z) in 1⊕3 of **global** SU(3), global U(1) common phase, ordinary 3+1 Lorentz covariance, flat torus T^d with constant positive metric G_ab, translation invariance, locality, Hermiticity, at most two derivatives, parity-even terms, and a standard second-order-in-time regular Lagrangian. SU(3) on this carrier need not be an independently realized local physical colour gauge group of UBT.

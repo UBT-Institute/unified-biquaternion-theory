@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Infinite free Dirac field from biquaternionic CAR factors: spectral, causal and action gates
 
 **27 October 2026 — conditional free quantum field construction on fixed Minkowski background.** The infinite CAR algebra is mathematically available from the nested biquaternion factors in `INFINITE_BIQUATERNION_CAR_LIMIT.md`. Here we check the physical particle/antiparticle polarization and the continuum locality gate. This is a reference *free Dirac QFT* realization, NOT a uniquely derived one-Theta Hamiltonian, matter/gravity coupling, or finalized UBT action.

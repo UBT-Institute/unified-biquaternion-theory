@@ -1,3 +1,17 @@
+<!-- BILINGUAL-UNIT: proposition9_volume_overlap_audit -->
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
+
 # Action-selection cross-check: Proposition 9 already subsumes vector volume collapse
 
 **2026-10-25 — source reconciliation, not a new theorem. C-tier working note.**
@@ -20,7 +34,7 @@ It also proves the nondegenerate tetrad no-go for the specified nonconstant quar
 
 On the canonical Gaussian reconstruction, shifts C with C^a_(mu b) V^b=0 leave the vector carrier D V, tetrad and central composite metric invariant. Thus any action depending only on their metric/volume does not distinguish such shifts. This is compatible with Proposition 9, which independently shows that the minimal timelike branch with a nonconstant polynomial potential and freely varied auxiliary boosts cannot admit a nondegenerate stationary tetrad.
 
-Neither result proves that adding an *arbitrary* curvature term is permitted by the locked axioms. An acceptable new dynamical sector must be selected from the one-Theta programme, not appended to evade a no-go after the fact.
+Neither result establishes permission to add an *arbitrary* curvature term under the locked axioms. An acceptable new dynamical sector must be selected from the one-Theta programme, not appended to evade a no-go after the fact.
 
 ## Actual next research target
 

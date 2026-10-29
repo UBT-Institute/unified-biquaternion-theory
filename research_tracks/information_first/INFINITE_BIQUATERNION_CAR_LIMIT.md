@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Infinite CAR extension from orthogonal biquaternion factors
 
 **2026-10-26. Exact algebraic inductive-limit construction and conditional free dynamics; NOT the full infinite-volume UBT or GR/QM Hamiltonian.** Extends `FINITE_CAR_EVEN_LORENTZ_DIRAC_BENCHMARK.md` and `ORTHOGONAL_CLIFFORD_HAMILTONIAN_SELECTOR_GATE.md`; canonical one-action status remains unchanged.

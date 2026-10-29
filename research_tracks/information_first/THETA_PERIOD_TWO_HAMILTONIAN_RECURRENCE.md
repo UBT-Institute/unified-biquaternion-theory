@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Jacobi T² periodicity and an exact conditional Hamiltonian recurrence
 
 **2026-10-26.** This is the explicit check requested for Jacobi period two. Canonical source: `canonical/bridges/theta_parameter_separation.md`. Do NOT identify dimensionful UBT complex time tau_UBT=t+i psi with the dimensionless Jacobi parameter tau_J.

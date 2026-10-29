@@ -41,4 +41,4 @@ Generated-header maintenance alone does not materially edit legacy prose. The ch
 
 No scientific claim tier, editorial assignment, or author attestation was changed. The English editions were the translation sources. Equations, symbols, assumptions, proof boundaries, status labels, and caveats are intended to remain identical in the Czech editions; structural checks do not establish semantic equivalence.
 
-Human semantic-equivalence approval is pending under `BILINGUAL_CONTENT_POLICY.en.md` and `AGENTS.md`. The PR remains draft for that review. GitHub Actions results must be assessed on the final PR commit separately from these local checks.
+The repository owner authorized replacing mandatory human translation sign-off with independent automatic semantic review. Under the updated `BILINGUAL_CONTENT_POLICY.en.md` and `AGENTS.md`, this PR remains draft until the semantic module produces a passing, calibrated report bound to the current source hashes. GitHub Actions results must be assessed on the final PR commit separately from these local checks.

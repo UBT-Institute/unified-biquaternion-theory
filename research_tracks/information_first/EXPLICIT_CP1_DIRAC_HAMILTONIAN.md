@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Explicit Dirac Hamiltonian from a CP1 information state: worked endpoint and UBT obstruction
 
 **26 Oct 2026 — complete finite-dimensional conditional derivation, NOT the fundamental Theta Hamiltonian.** Natural units hbar=1; work on local coordinate chart 0<theta<pi.

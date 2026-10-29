@@ -1,0 +1,823 @@
+{
+  "schema": "ubt-owner-merge-exception/v1",
+  "pull_request": 750,
+  "owner": "Ing. David Jaroš",
+  "owner_instruction": "mergni a pokracuj",
+  "decision_context": "The owner repeated the merge instruction after being told that organization Copilot policy blocks the independent semantic check. This records a one-time merge override, not translation approval.",
+  "created_on": "2026-10-27",
+  "expires_at": "2026-10-28T00:00:00+01:00",
+  "scope": "First merge of PR 750 with the exact source hashes below; no standing exemption for later edits or other pull requests",
+  "reviewed_source_commit": "a34f38398f2b36544dc3b363047678c7cceb2b6a",
+  "reviewed_source_tree": "f71b151438e9e2c7a74a272b84ffeb2bfce381bd",
+  "target_base_commit": "81c7bba8d259ae1b11c5d2b0ba77e8d572708a66",
+  "reason": "Independent model inference is rejected by organization Copilot policy before calibration. Code, structural, checksum, provenance, documentation, Lean and publication workflows pass.",
+  "semantic_review": {
+    "status": "not_run_due_to_organization_policy",
+    "approval_issued": false,
+    "human_translation_signoff_claimed": false,
+    "workflow_run": 40399960428,
+    "failed_attempt": 2,
+    "failed_job": 121938755758
+  },
+  "unwaived_requirements": [
+    "English/Czech structural parity",
+    "source checksums",
+    "source provenance",
+    "scientific claim/provenance tiers",
+    "regression and symbolic tests",
+    "Lean check of existing formal sources",
+    "required publication builds"
+  ],
+  "future_gate": "The fail-closed semantic workflow is retained unchanged. This machine-readable audit is not read as passing review evidence by the verifier.",
+  "source_pairs": [
+    {
+      "paths": {
+        "en": "BILINGUAL_CONTENT_POLICY.en.md",
+        "cs": "BILINGUAL_CONTENT_POLICY.cs.md"
+      },
+      "en_sha256": "3f0444813e1df258c84ba119c58467bf87bfdb245214c65b4e91cde870949870",
+      "cs_sha256": "523bdd20bd09491c80c6a037b3c235e7333affc5843140a85b0de6361c444d17"
+    },
+    {
+      "paths": {
+        "en": "CLAIMS_MATRIX.en.md",
+        "cs": "CLAIMS_MATRIX.cs.md"
+      },
+      "en_sha256": "133c0dca901c386a2d5b43e5d103ef628497fd93f9894e622590f108f8e78515",
+      "cs_sha256": "ee5346d87b39594bc622812d99b5c44e6441bda393e4b4fe24c40d7e2b1b082e"
+    },
+    {
+      "paths": {
+        "en": "PATCH_NOTES_CANONICAL_GR_AUDIT_2026-08-22.en.md",
+        "cs": "PATCH_NOTES_CANONICAL_GR_AUDIT_2026-08-22.cs.md"
+      },
+      "en_sha256": "61e8ae0c7107d1a55abc9de4c43002c083bb9ad6e5a76b0886a47c4249d4dcc3",
+      "cs_sha256": "1a2afdb7bcaa01704408d219a6025ad86dab80f02065010d1cae398047649ef1"
+    },
+    {
+      "paths": {
+        "en": "RESEARCH_PRIORITIES_2026-10-09.en.md",
+        "cs": "RESEARCH_PRIORITIES_2026-10-09.cs.md"
+      },
+      "en_sha256": "8b347ce231c03e87920440cda1c979474880f91f44389d9c1914d557e709d490",
+      "cs_sha256": "b73e192c1468716fe0c80abe06ea1deaed9bc4f0c097b2124441c19837fb4a62"
+    },
+    {
+      "paths": {
+        "en": "docs/CURRENT_STATUS.en.md",
+        "cs": "docs/CURRENT_STATUS.cs.md"
+      },
+      "en_sha256": "128c4b2156ee89916b97e278ba558143e753c9a63846abf59ffa56387d9faa85",
+      "cs_sha256": "18ca69a358b62ac2682532dcdd511c355937c05f04dc028afbe2857c0b5f8df6"
+    },
+    {
+      "paths": {
+        "en": "docs/UBT_POSITIONING_2026_10.en.md",
+        "cs": "docs/UBT_POSITIONING_2026_10.cs.md"
+      },
+      "en_sha256": "3727c332eca6627f45c27725aa7cf2f3a1886a735eb68285e903dfde80d05248",
+      "cs_sha256": "707a10d1ca413deaaa3eb62c64169954941178f688db22237d25fdaac6b6066f"
+    },
+    {
+      "paths": {
+        "en": "docs/ci/bilingual_semantic_review.en.md",
+        "cs": "docs/ci/bilingual_semantic_review.cs.md"
+      },
+      "en_sha256": "101e5647c4b2c1bb0a9c45019556b052b71ed1b82b08914f9203a7690e17f4bb",
+      "cs_sha256": "66a0a646d30a9a71bc44ef764176067c75e39e96eaa1618a7ed586cd86473190"
+    },
+    {
+      "paths": {
+        "en": "docs/ci/open_pr_integration_2026_10_26.en.md",
+        "cs": "docs/ci/open_pr_integration_2026_10_26.cs.md"
+      },
+      "en_sha256": "d63d3ceab376a54654dd31b6289f5d413a0d95029ff56184f3234273ef7300ee",
+      "cs_sha256": "65aec8b46209d59266703c8ed8791270668a18afc5e03709da0efe0ab2b6150c"
+    },
+    {
+      "paths": {
+        "en": "docs/ci/workflow_repair_2026_10_26.en.md",
+        "cs": "docs/ci/workflow_repair_2026_10_26.cs.md"
+      },
+      "en_sha256": "4ee814174f3828cf0688faa7a0313643536fec43497a0faa0c3e7d1082ab0ec1",
+      "cs_sha256": "fbcad27bca368e870592b261b165ece3ed47896c52be87b91873d7a676d71e95"
+    },
+    {
+      "paths": {
+        "en": "docs/repository_layout_resolution.en.md",
+        "cs": "docs/repository_layout_resolution.cs.md"
+      },
+      "en_sha256": "cc54fd4ca72747c6b742c5afd37bbb50193cf832799a43a0ef8f974a71fec8a4",
+      "cs_sha256": "8e5fbd2f87a70d7bd42e7279934c53c90f7694b6c447875b2e74fe8578d3be54"
+    },
+    {
+      "paths": {
+        "en": "docs/textbook/appendices/A_proofs.en.tex",
+        "cs": "docs/textbook/appendices/A_proofs.cs.tex"
+      },
+      "en_sha256": "18b01b7a795ced124b8b412b2eb1c0595c979244a43095a5aefa24f5dee0bd5d",
+      "cs_sha256": "9d401ed46f2e06c136b83ab6a67d6203d8eb5d8c69b3085ebcfe5e3a9df05c55"
+    },
+    {
+      "paths": {
+        "en": "docs/textbook/appendices/B_faq.en.tex",
+        "cs": "docs/textbook/appendices/B_faq.cs.tex"
+      },
+      "en_sha256": "f7de219a3a48cea6c574ce3267157c1378448872c83176116cce113ec0b4127c",
+      "cs_sha256": "10dd968c25ae0ca1f21f3a01660abe5926b0226caa67043e5f9cc9aebdfc664e"
+    },
+    {
+      "paths": {
+        "en": "docs/textbook/appendices/C_speculative_extensions.en.tex",
+        "cs": "docs/textbook/appendices/C_speculative_extensions.cs.tex"
+      },
+      "en_sha256": "9f526f9804959829613e580fdb92b079df43a1d2dcd27782d4642310b5748763",
+      "cs_sha256": "5cddc8af2d90f930f9f7ced6ca3a2a6ea93292561b4cd93b59e4dfb5f2b21e2a"
+    },
+    {
+      "paths": {
+        "en": "docs/textbook/chapters/01_overview.en.tex",
+        "cs": "docs/textbook/chapters/01_overview.cs.tex"
+      },
+      "en_sha256": "14a6f11194fa8ade494215b4ced12d36b951137de3e5ba61c8b1355e6e3f8284",
+      "cs_sha256": "1d549e13cb6b2471b731298b59e9783931e8fa1489f045e7f25fbc0d6c056732"
+    },
+    {
+      "paths": {
+        "en": "docs/textbook/chapters/03_lorentz_in_HC.en.tex",
+        "cs": "docs/textbook/chapters/03_lorentz_in_HC.cs.tex"
+      },
+      "en_sha256": "9fe83bc2a2c137eea01a8a5be49ff6e2ce48289cf4b1e743f5591771e1036ba2",
+      "cs_sha256": "94c127c578d74e1ecef860d6821ff1ff6e47522b3b29f8d0bcfc7ec425a244b3"
+    },
+    {
+      "paths": {
+        "en": "docs/textbook/chapters/04_covariant_tetrad_geometry.en.tex",
+        "cs": "docs/textbook/chapters/04_covariant_tetrad_geometry.cs.tex"
+      },
+      "en_sha256": "46db35882af6eda7af30f09b29ca74075004ffe6e24f0afbc7ae3d21b2262976",
+      "cs_sha256": "d615e40e11cbbaf9d9be39b7b99d19dc2bf6abcfbded928e2a18e5577a9bb6d5"
+    },
+    {
+      "paths": {
+        "en": "docs/textbook/chapters/04_ct_scheme.en.tex",
+        "cs": "docs/textbook/chapters/04_ct_scheme.cs.tex"
+      },
+      "en_sha256": "e482445f65395894c1ddd0b69891b1ff15229e0bd503d6e4ead441f1df0012da",
+      "cs_sha256": "5804c68733bd8a4ec83c02464dcdd7f10b42711982e442e5ff89fff97f2f01d9"
+    },
+    {
+      "paths": {
+        "en": "docs/textbook/chapters/05_alpha_derivation.en.tex",
+        "cs": "docs/textbook/chapters/05_alpha_derivation.cs.tex"
+      },
+      "en_sha256": "9c692ecd6f67f2aed1ffb75fccd61508bfd80aab84dce6bae690353eede00017",
+      "cs_sha256": "822bde21e5a9e1bf9228876e0ba054a3921d71ccf4dc09546eae3ddb3c329805"
+    },
+    {
+      "paths": {
+        "en": "docs/textbook/chapters/05_theta_mellin_feynman_big_picture.en.tex",
+        "cs": "docs/textbook/chapters/05_theta_mellin_feynman_big_picture.cs.tex"
+      },
+      "en_sha256": "7478fda83385b7b34aab54eb2079a5985be3816ecd53e3eb1b338d2d280c6550",
+      "cs_sha256": "7901dd044f9e185cab59d9562aa1d95838a603ed4e6356c7bf4c1e3a3d436923"
+    },
+    {
+      "paths": {
+        "en": "docs/textbook/chapters/06_tests_and_repro.en.tex",
+        "cs": "docs/textbook/chapters/06_tests_and_repro.cs.tex"
+      },
+      "en_sha256": "577ffea96cde56c146e2ea24ae4439cd29a1c58dccfb8b504a4c1b630c3e8fad",
+      "cs_sha256": "219d9c66c166dd190defbe20576e96401c731f6d7a9123d5e743187067486300"
+    },
+    {
+      "paths": {
+        "en": "docs/textbook/frontmatter/preface.en.tex",
+        "cs": "docs/textbook/frontmatter/preface.cs.tex"
+      },
+      "en_sha256": "15d201ddfd79e65b94ee30ae09d512cf718264a7310ef64adb29010a393c76a0",
+      "cs_sha256": "01b9e8fec6d269dfdc40911d7b3755623b9ebef2cc30d0a186a673b34b0e8ecf"
+    },
+    {
+      "paths": {
+        "en": "experiments/falsification/CMB_FULL_COVARIANCE_PROTOCOL.en.md",
+        "cs": "experiments/falsification/CMB_FULL_COVARIANCE_PROTOCOL.cs.md"
+      },
+      "en_sha256": "55e393a829dadd4b3a1b47d6768ef0c6be89548c8ff47288b1095b0fc5a0abc6",
+      "cs_sha256": "0aad5f3569fb90101082abe451ea4788d475b99991b92e118c1657e83ab5177c"
+    },
+    {
+      "paths": {
+        "en": "forensic_fingerprint/README.en.md",
+        "cs": "forensic_fingerprint/README.cs.md"
+      },
+      "en_sha256": "c1fa30f900349ab604e39d347a8a45798b4c3635be48183e47eabe3b46f0bd63",
+      "cs_sha256": "30914faf325bfc18b93e16f5d0df700c92adebbeaa87ecb3f60cd318bc3e2c12"
+    },
+    {
+      "paths": {
+        "en": "reports/pr750_rebase_gate_2026_10_26.en.md",
+        "cs": "reports/pr750_rebase_gate_2026_10_26.cs.md"
+      },
+      "en_sha256": "33ce05c8f60ccdfe89acd78bda7554b3961ede479e1b829be1de27fbdf598e7c",
+      "cs_sha256": "c99829ca8b5f2ca8945bfe8302eb6a67f39110cb43a195ed5365082e4a567564"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/T2_GAUGE/su3_dynamics_update_2026-10.en.md",
+        "cs": "research_tracks/T2_GAUGE/su3_dynamics_update_2026-10.cs.md"
+      },
+      "en_sha256": "d13c8dcef40e2a247366a34ae28ef1ab8aec336d1ccb5ee5f6e61b220e7201c3",
+      "cs_sha256": "b1ab8ab4f7724f6c5b4d0445ea6f816cca3e3eb53d93a90d7bb22200a1690c50"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/T3_ALPHA/legacy_mode_and_level_resolution.en.md",
+        "cs": "research_tracks/T3_ALPHA/legacy_mode_and_level_resolution.cs.md"
+      },
+      "en_sha256": "654a847b36e3c026eb300aad2574c8c45d2f028506412dae8043ac66f495138c",
+      "cs_sha256": "da6f5c7e1ffcb7127e1af1e5723527af8dcb573f90cb4cae0fa8a4467be17779"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/axial_cartan_symmetric_W_no_go.en.md",
+        "cs": "research_tracks/action_selection/axial_cartan_symmetric_W_no_go.cs.md"
+      },
+      "en_sha256": "88582bf9e6a9b8c00e318423a96fb6c7d963e63d3b7ed509cf4d75b9a8932f32",
+      "cs_sha256": "97bb81c4eee7417a41e72f45fb21d9fc04535e8084188720e9590a4127eddb04"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/colour_projector_shift_rank.en.md",
+        "cs": "research_tracks/action_selection/colour_projector_shift_rank.cs.md"
+      },
+      "en_sha256": "2164865c1de4cc8785c4b73889d4064ce290ef88b884aab699c84e215acf78f2",
+      "cs_sha256": "33b14a7c08f7a3d3bc8585a006076a07d262a3ceb30654ad27b65bb286c3f896"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/commutator_invariant_action_selection_audit.en.md",
+        "cs": "research_tracks/action_selection/commutator_invariant_action_selection_audit.cs.md"
+      },
+      "en_sha256": "54de43432067d62d912872022ace0123957adbd0e0941fc26f176717fffbbe84",
+      "cs_sha256": "84ac91f5d50a4184a873f31e725500b454eaa0ac2751cb62d7cea70874f1d252"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/composite_contortion_kernel.en.md",
+        "cs": "research_tracks/action_selection/composite_contortion_kernel.cs.md"
+      },
+      "en_sha256": "42d6e082578f4c9ce2e298f8f23977e5e99e363b6753812898c1c2a9cf016e87",
+      "cs_sha256": "bc66350b140faf782518431d5d1ab03bc7fc9613204b6245560c52c0ae538476"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/composite_metric_kinetic_volume_identity.en.md",
+        "cs": "research_tracks/action_selection/composite_metric_kinetic_volume_identity.cs.md"
+      },
+      "en_sha256": "e505a21b88167bd1cbe2198e9aa37c65df8b38279b6ed9f7c931c6eee02aae86",
+      "cs_sha256": "8e1f331e49d5400e33527962bb41633e412dc2b3357136195f14ac18bdb87168"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/contortion_stabilizer_invisibility.en.md",
+        "cs": "research_tracks/action_selection/contortion_stabilizer_invisibility.cs.md"
+      },
+      "en_sha256": "cea6980ff4a0d70f5e45ca872587004a995cc66193cf12f3e6f467700e00713a",
+      "cs_sha256": "12de5612dd98cb7dc4c3017480d383fe78da154e1bcbafc2e8edd71b5fd6eb25"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/curvature_colour_vacuum_gate.en.md",
+        "cs": "research_tracks/action_selection/curvature_colour_vacuum_gate.cs.md"
+      },
+      "en_sha256": "844498143fef2c5e0dd4fe6fcff91d21eae3e48392f8989179c0bb5e4db984df",
+      "cs_sha256": "a8316916c4983b70a1030956bce885fa888b5214bd97984938f00b15e508fc11"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/dirac_square_spectral_bridge_gate.en.md",
+        "cs": "research_tracks/action_selection/dirac_square_spectral_bridge_gate.cs.md"
+      },
+      "en_sha256": "842408d93811ee4cc2ac9d109de1aedf25c8e17e36dff4eed25481303c612123",
+      "cs_sha256": "8e23be16b76290fc373d1e10f9b247d941267219a3db4b8afdc7c5be73404aa1"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/geometric_su3_lorentz_stabilizer.en.md",
+        "cs": "research_tracks/action_selection/geometric_su3_lorentz_stabilizer.cs.md"
+      },
+      "en_sha256": "cd0b66455d818a8744ad10299d910102b1c458e61f47105cca46d04c00cc399f",
+      "cs_sha256": "769e288a4cef7b2b9600fab692451fc7c02377378406dc6db566d72f2b4d84b6"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/horizon_microstate_nonuniqueness.en.md",
+        "cs": "research_tracks/action_selection/horizon_microstate_nonuniqueness.cs.md"
+      },
+      "en_sha256": "458fd1675f859d7fb0b89be7670185c8d3c0da195d5d7d34aa7d81ad0765656c",
+      "cs_sha256": "ddc00b7ad8b02ec1b20db159e32822f6bcb4eac111e021915eea9cd44d185b37"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/linearized_flat_theta_pure_gauge_no_go.en.md",
+        "cs": "research_tracks/action_selection/linearized_flat_theta_pure_gauge_no_go.cs.md"
+      },
+      "en_sha256": "8e44cb0d04922ed42fc3606cb5477ab886130720823b66a0cb1446ffddcf79f5",
+      "cs_sha256": "49bad87e7b5b6c9ddf93b713039588cfd89279d48218fe1242860c50ed060921"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/mm_complex_spectator_rank.en.md",
+        "cs": "research_tracks/action_selection/mm_complex_spectator_rank.cs.md"
+      },
+      "en_sha256": "760ce371a90d582c415ff893bd7bd2102cf940cbdfd4c2d2539c90cd6dc698b8",
+      "cs_sha256": "1dd6474c1c1dd087aedfeb94440d209b59c1579b5928585b62648bbb834198f3"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/mm_composite_presymplectic_variation.en.md",
+        "cs": "research_tracks/action_selection/mm_composite_presymplectic_variation.cs.md"
+      },
+      "en_sha256": "4a2c8181da9fe4ec617d71d89809943cd91986c046a3bcf9f14fdac7dcc5745d",
+      "cs_sha256": "577d637d9ad835b5c78bdb5b1e335d774e7bd71199547525686531307f9e272f"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/mm_finite_splitjet_lift.en.md",
+        "cs": "research_tracks/action_selection/mm_finite_splitjet_lift.cs.md"
+      },
+      "en_sha256": "83ddc4b57cc588299047289c4c97e31d0401332e6d135f979faf978a5df03dfc",
+      "cs_sha256": "6aa9cf2226f7c7bdff44bfe57d4b5cf1b96c89a663d540a3dcb46425c25ce4fa"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/mm_geometry_colour_selection.en.md",
+        "cs": "research_tracks/action_selection/mm_geometry_colour_selection.cs.md"
+      },
+      "en_sha256": "19645481f16ed345957fbec3962571bb301245c933eeb7f6988d1ee91a808ba0",
+      "cs_sha256": "cb7774f0a6688b92a9dd4f052baa6af73d2c05a4065752fbb8f997cdb746bcf2"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/mm_horizon_information_bridge.en.md",
+        "cs": "research_tracks/action_selection/mm_horizon_information_bridge.cs.md"
+      },
+      "en_sha256": "290716b1daa9c0a4e262648d2caa520b3849a2a4299f1d34453aae4f252422c9",
+      "cs_sha256": "b0c515ca84bf1b6a1f650b97424a3803b66b97850e8faf5e2b66fc52e2444890"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/mm_mixed_hessian_gauge_gate.en.md",
+        "cs": "research_tracks/action_selection/mm_mixed_hessian_gauge_gate.cs.md"
+      },
+      "en_sha256": "898c395fd01c1045cc58daa9a640bcb81a55bfc42ce4c32752f0036b489d7feb",
+      "cs_sha256": "dc7d9f5662dc06bc38cee3b1aa258adf95e1012a59a3a2f18607eb079a069217"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/mm_projector_kinetic_shift.en.md",
+        "cs": "research_tracks/action_selection/mm_projector_kinetic_shift.cs.md"
+      },
+      "en_sha256": "7654d7423577fcd86171888e7fc45775fe0355c44fdca572641a9ae8038de307",
+      "cs_sha256": "a7d48f3b7f4059320f38f5c6d285965f6571b77a1abad83e5b32fcc46873600f"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/mm_shift_gauge_dirac.en.md",
+        "cs": "research_tracks/action_selection/mm_shift_gauge_dirac.cs.md"
+      },
+      "en_sha256": "c8a061b33ef808897ad63fab9a608db7b9a4ff521e784fa1c5f6b8ca49970214",
+      "cs_sha256": "4f8340848a161b06b1eb1751de091720add274bc4f0c4fc4353b7ca8dee7623e"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/mm_shift_potential_obstruction.en.md",
+        "cs": "research_tracks/action_selection/mm_shift_potential_obstruction.cs.md"
+      },
+      "en_sha256": "c0401a59ac67251bd705493979dc47de4cea86cfc8cded45db353bdda24597a9",
+      "cs_sha256": "8a6ea519b3dc27958447cf1e9e905660c4ca6ebec8192bf5feeedaf96eee265c"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/palatini_cartan_compatibility_gate.en.md",
+        "cs": "research_tracks/action_selection/palatini_cartan_compatibility_gate.cs.md"
+      },
+      "en_sha256": "e47e5c28298ec37fb26be85a3c2b66547015d31969f38dbf5089dd03fcac65af",
+      "cs_sha256": "aa3d18f12a7c70d66f89cfda4793c319a7ec1e3fea0d54946753d989e7a25349"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/proposition9_volume_overlap_audit.en.md",
+        "cs": "research_tracks/action_selection/proposition9_volume_overlap_audit.cs.md"
+      },
+      "en_sha256": "55e6395f344e6387868283d5a8a90b9dc6f92887773032c897a3711ac17c96fe",
+      "cs_sha256": "40acfc7f5d9b5e03350ef558889ae02d61a210cd9116a132e4f47832a9432f8e"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/splitjet_presymplectic_gate.en.md",
+        "cs": "research_tracks/action_selection/splitjet_presymplectic_gate.cs.md"
+      },
+      "en_sha256": "e7f604d2f566448558877549cd6a818166d99f96ee32561fd9dd9c2b18111a0c",
+      "cs_sha256": "804efa251030c97f298824aa9a1eb0ed329cb1469850c9f55c2ab8a8cb68e011"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/transverse_contortion_auxiliary_variation.en.md",
+        "cs": "research_tracks/action_selection/transverse_contortion_auxiliary_variation.cs.md"
+      },
+      "en_sha256": "a86abee6fcc9734b306d9a5cc17d9e9d8506a18df456271d3dd4862affb8e668",
+      "cs_sha256": "69e65de51fe85560c4a91f6c4c8d56701b992a9101ea3065e832a1daa21aa4ff"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/transverse_contortion_dual.en.md",
+        "cs": "research_tracks/action_selection/transverse_contortion_dual.cs.md"
+      },
+      "en_sha256": "490e8dd47973a76fbced92250dd9fd38723595c9d9bf41eb314505cf182ec78b",
+      "cs_sha256": "aaae3bd928eb26c36ef042067a203160bf5f4dc2049c7a08f53cb009cdaff827"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/vector_pair_spin_current_shear_benchmark.en.md",
+        "cs": "research_tracks/action_selection/vector_pair_spin_current_shear_benchmark.cs.md"
+      },
+      "en_sha256": "8a2409a141a9a96de6c1533f2e63db4c67e5fec0e311988345ffd49a42cab128",
+      "cs_sha256": "c73ea9b13f6014dd4d3ba58e27bd08012595eab462ff7b23114d9b2a5617c3c2"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/action_selection/vector_trace_shear_contortion_gate.en.md",
+        "cs": "research_tracks/action_selection/vector_trace_shear_contortion_gate.cs.md"
+      },
+      "en_sha256": "ddf7b846f6a0c6e32af40286623e27ca20e45ac40668f07f34687cf9808a94e6",
+      "cs_sha256": "406a5a22c6bcf3455db803c9a258f15264834799df8e2446b82dcceb72148c83"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/complex_time_branch_selection/chiral_current_interaction_audit.en.md",
+        "cs": "research_tracks/complex_time_branch_selection/chiral_current_interaction_audit.cs.md"
+      },
+      "en_sha256": "5b2907ac855da9ecb3792ccc07a551278f86a926f2c8a1e41b15679f7f6d2bb1",
+      "cs_sha256": "4f194a326848bf40f33e74b6515e5d07cc5f3fc8fed6100bb8e77ea9292d3d75"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/complex_time_branch_selection/psi_branch_selection.en.md",
+        "cs": "research_tracks/complex_time_branch_selection/psi_branch_selection.cs.md"
+      },
+      "en_sha256": "a5c7d6c16046eca7d8d9a75cf2d0c23af294e84ff5c92ea20ba2cb8adb31c803",
+      "cs_sha256": "539f179ced3ca03b0bef923d0c448d5526f974060541b8b2bf6466727177f631"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/complex_time_branch_selection/psi_fock_quantization_chirality_link.en.md",
+        "cs": "research_tracks/complex_time_branch_selection/psi_fock_quantization_chirality_link.cs.md"
+      },
+      "en_sha256": "a7e92f3966fb36720210e831b57845578c4aa918f50375919aada4660d5e5889",
+      "cs_sha256": "2dae49348ae548fee064ac10599fc71718a4e291a957989576bba2dcd13dfcaa"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/complex_time_branch_selection/theta_modular_resurgent_audit_2026-10.en.md",
+        "cs": "research_tracks/complex_time_branch_selection/theta_modular_resurgent_audit_2026-10.cs.md"
+      },
+      "en_sha256": "d30747010a66a01e1de179a49757321b2e023b92bf479da74494649a9435742c",
+      "cs_sha256": "fa04c93a8b96dfcf5b987910cdfbd6d40948bcc81dec331e235ec8be63ec26a3"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/complex_time_branch_selection/theta_parameter_role_result_2026-10.en.md",
+        "cs": "research_tracks/complex_time_branch_selection/theta_parameter_role_result_2026-10.cs.md"
+      },
+      "en_sha256": "16faf67a9aa8be57dc1c2d0d202f5a011953e86925abcd2757480a3aa5077d0e",
+      "cs_sha256": "23ce82f4c092cec476f04d70dd23bb61aebb1968255ae0fd8310da32b890579d"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/fundamental_dynamics/FULL_THETA_CONNECTION_RANK.en.md",
+        "cs": "research_tracks/fundamental_dynamics/FULL_THETA_CONNECTION_RANK.cs.md"
+      },
+      "en_sha256": "01ad40f6ba7a717661049fe8a7aa42fe5be36dfe58f9cb49be4a271f77bbce19",
+      "cs_sha256": "a3e221f29c7d9d9a83e23d48a1293fc165d2bda742a6caa78898d256195cabd4"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/fundamental_dynamics/LORENTZ_REALITY_CONSTRAINED_RANK.en.md",
+        "cs": "research_tracks/fundamental_dynamics/LORENTZ_REALITY_CONSTRAINED_RANK.cs.md"
+      },
+      "en_sha256": "4122ccf88b5f7017c59205cb7d64db6799959319808093b7069623c4840cdaaf",
+      "cs_sha256": "a7daad01cde53394434aa2ac76f2bd8be301ee3bee178dc0172d8b60b3323b3e"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/fundamental_dynamics/POSITIVE_HERMITIAN_THETA_RANK_THEOREM.en.md",
+        "cs": "research_tracks/fundamental_dynamics/POSITIVE_HERMITIAN_THETA_RANK_THEOREM.cs.md"
+      },
+      "en_sha256": "413baba762aebce0a218b3a227b934f77e8e98bdeac71d43aabebecd1b91acf6",
+      "cs_sha256": "d7c123d05fb87dac74417435ac8e8ffb050c6be75f1cb765a5cdff691e6da9b7"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/fundamental_dynamics/SHARED_REALITY_FIRST_PRINCIPLES_RESTART.en.md",
+        "cs": "research_tracks/fundamental_dynamics/SHARED_REALITY_FIRST_PRINCIPLES_RESTART.cs.md"
+      },
+      "en_sha256": "8c7504078164a7fd2c7453a9db2effc310c824693529d416d06ae085c4e02269",
+      "cs_sha256": "b8ed0a29c8f5dc73b23322730744def92e393ac81286caba7eb5633b3e41a150"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/fundamental_dynamics/SHARED_REALITY_INFORMATION_SELECTOR.en.md",
+        "cs": "research_tracks/fundamental_dynamics/SHARED_REALITY_INFORMATION_SELECTOR.cs.md"
+      },
+      "en_sha256": "4fcb31ef7598b0b0bcdbb8dca918c3dcf13bde58d04198295e5f6cbbd0757e2e",
+      "cs_sha256": "f142a4f0892df3d53da6f0659ea444713349c8d1f6898ece468cd2e4e8c9ca5b"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/independent_complex_tau/README.en.md",
+        "cs": "research_tracks/independent_complex_tau/README.cs.md"
+      },
+      "en_sha256": "10f534d933a3798b15b029045cb8c0c866d7e1eb444d1f6d3c8ae976487903b7",
+      "cs_sha256": "63d7fb59e86a75355a20da9be87ee552bb65c5b7761bd80c5d25a016528e2219"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/independent_complex_tau/auxiliary_action.en.md",
+        "cs": "research_tracks/independent_complex_tau/auxiliary_action.cs.md"
+      },
+      "en_sha256": "5381654357df4883b1bdfe054d56d457ef440a99b477992779f8354054eea982",
+      "cs_sha256": "71ea8af4d6eb85f145b0b0919fd86dd7fa122a3defc4b6eed91f1aeb270690ee"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/independent_complex_tau/wave_dynamics.en.md",
+        "cs": "research_tracks/independent_complex_tau/wave_dynamics.cs.md"
+      },
+      "en_sha256": "ffa1afbe917d460946a8fe47ff9aec0cd77cb05baae268cf7328a2d69f9d11a0",
+      "cs_sha256": "43bc040b9de51c687231ad22e446d92cd86cdae6f22179da35c5df22347ac458"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/information_first/BOTTOM_UP_THETA_QUADRATIC_ACTION_SELECTION.en.md",
+        "cs": "research_tracks/information_first/BOTTOM_UP_THETA_QUADRATIC_ACTION_SELECTION.cs.md"
+      },
+      "en_sha256": "cb5e66501f229097886779692f6abf3d5266f8749d9ff7d41f4c5e342a91dea2",
+      "cs_sha256": "17115fe3b025805752b5b3bae94000e596344675ef60059e0794df737ccea459"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/information_first/GAUGED_TRIPLET_RADIAL_HAMILTONIAN_GATE.en.md",
+        "cs": "research_tracks/information_first/GAUGED_TRIPLET_RADIAL_HAMILTONIAN_GATE.cs.md"
+      },
+      "en_sha256": "52f72b4bb4fa87c3e1cd18f5f561ce67f1525afe89785f32ccdfd195ae908860",
+      "cs_sha256": "77cebb06991ee7311e1eb7ebd69a44ba2576a9cb562b759c36d7dbc8a84d0bad"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/information_first/HAMILTONIAN_CORRELATOR_RECONSTRUCTION.en.md",
+        "cs": "research_tracks/information_first/HAMILTONIAN_CORRELATOR_RECONSTRUCTION.cs.md"
+      },
+      "en_sha256": "00f0b30ec51345e4d48bb815363d3736a13a63480a4d5e942e25a5e8a1115ebf",
+      "cs_sha256": "5c6a4199ab3317201f9af0ee529585f627766602563c8b929d8e7c1d090d8530"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/information_first/JOINT_SYMMETRY_COMMUTANT_SELECTION.en.md",
+        "cs": "research_tracks/information_first/JOINT_SYMMETRY_COMMUTANT_SELECTION.cs.md"
+      },
+      "en_sha256": "1902d3a45728f6cb213bd5a1d429ad9ec1678ccdc1c389690dd8375f594cd224",
+      "cs_sha256": "50dd413ae7518b0e5e4552fb71f41e77d40a121d3cce9651118b589bfbb8d197"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/information_first/LORENTZ_INVOLUTIONS_INFORMATION_HAMILTONIAN_GATE.en.md",
+        "cs": "research_tracks/information_first/LORENTZ_INVOLUTIONS_INFORMATION_HAMILTONIAN_GATE.cs.md"
+      },
+      "en_sha256": "8f0141a23f53bd6240891da75bfb2c8cf23b8f2c2399b6dcbdca3cc5f38fcbac",
+      "cs_sha256": "2c091fc0d9388d8ee533bd6120914c9db3cb0b49f95c747a497dbc7ce78d4ef3"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/information_first/RADIAL_SPECTRUM_CORRELATION_MASS_GATE.en.md",
+        "cs": "research_tracks/information_first/RADIAL_SPECTRUM_CORRELATION_MASS_GATE.cs.md"
+      },
+      "en_sha256": "3e3c30ee6a050db1c9c57a1ff439bfd2681e1667d2b3d5cae0d01c523261d533",
+      "cs_sha256": "7ea2fbad4ff43907f64e4dda287f3799345fac1f9690b07749b82c6613e10bff"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/information_first/ROTATIONAL_HAMILTONIAN_COMMUTANT.en.md",
+        "cs": "research_tracks/information_first/ROTATIONAL_HAMILTONIAN_COMMUTANT.cs.md"
+      },
+      "en_sha256": "9707474f01af06da1ccecf4288dd03945b4fb0c73f88e32f7440e7df7c060bd2",
+      "cs_sha256": "4c716fafd08bd90fe4739f86bf491674aaec9c98f70a94848b950038fd033e8c"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/information_first/SHARED_NEGENTROPY_CORRELATION.en.md",
+        "cs": "research_tracks/information_first/SHARED_NEGENTROPY_CORRELATION.cs.md"
+      },
+      "en_sha256": "25b74362a33ed6bbb522e0f31f9adc3aa49cdbdd6177d877cbab94aa968877d2",
+      "cs_sha256": "faf4957d28bba060c62b1505f0f9c7e4e803e7732fcedfb0ac4d7af68a81899a"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/information_first/SU3_ROTATIONAL_HAMILTONIAN_GATE.en.md",
+        "cs": "research_tracks/information_first/SU3_ROTATIONAL_HAMILTONIAN_GATE.cs.md"
+      },
+      "en_sha256": "6f9404913c675208145d42d182f17fed0a8f62d4121df8ea3b38cc192c7be7c6",
+      "cs_sha256": "603e091fa35a080dca4249ae5a6587eb79f6354c1f8f30c2d0d18275fecdcdee"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/information_first/THETA_PERIOD_TWO_HAMILTONIAN_RECURRENCE.en.md",
+        "cs": "research_tracks/information_first/THETA_PERIOD_TWO_HAMILTONIAN_RECURRENCE.cs.md"
+      },
+      "en_sha256": "5f09ab170de37f22cb5816f99684d42a71a3acdca5268283ea4ee95f13d866be",
+      "cs_sha256": "2986e7ddfa40b8bde36b13d8349c5efcfa9c921038340d0e18b11cb0640a509f"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/information_first/TORUS_HAMILTONIAN_FULL_REVIVAL_GATE.en.md",
+        "cs": "research_tracks/information_first/TORUS_HAMILTONIAN_FULL_REVIVAL_GATE.cs.md"
+      },
+      "en_sha256": "cffe244654ea63adbb886c8c0ad6bd41248c5bcfb764b28a7e2756720aa93942",
+      "cs_sha256": "78b2a44c6821ae0e0cd5b0963cc1cd3e2c4ee818fa9c5c67b55cab5c679f76f5"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/information_first/TORUS_THETA_CANONICAL_ACTION_BRIDGE_GATE.en.md",
+        "cs": "research_tracks/information_first/TORUS_THETA_CANONICAL_ACTION_BRIDGE_GATE.cs.md"
+      },
+      "en_sha256": "00ffb70101f7c13a296b78314282c4fdc1aee6ecb26f1c6eff000299f1e58556",
+      "cs_sha256": "a488c41da70b34c7359801ace295449994d46da7056469cc181f521a3090a552"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/rh_trace_formula/RESIDUE_MOEBIUS_AND_ARGUMENT_PRINCIPLE_NOTES.en.md",
+        "cs": "research_tracks/rh_trace_formula/RESIDUE_MOEBIUS_AND_ARGUMENT_PRINCIPLE_NOTES.cs.md"
+      },
+      "en_sha256": "06f5ac0f8c24323fe9f67301f23925090d283b4f8b4f113b69067ad05d83c8de",
+      "cs_sha256": "efc7e92f817e49c3045fbc0b6adf1b27a929e384c5c4f96c2b4fc3d9ce9c26aa"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/rh_trace_formula/abel_limit_and_cancellation.en.md",
+        "cs": "research_tracks/rh_trace_formula/abel_limit_and_cancellation.cs.md"
+      },
+      "en_sha256": "f8d29b1f96f24b538d11eff338b91997c31fae598034253b031e5dc9b5a99ca7",
+      "cs_sha256": "46e4e4e613367d6853c46be3cd0914a26bde32f65236676819087a6a0688756d"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/rh_trace_formula/hall_budget.en.md",
+        "cs": "research_tracks/rh_trace_formula/hall_budget.cs.md"
+      },
+      "en_sha256": "ad9e82d074dc0ce428a4ad43aaa9ac89a6409a88a09707c2d082560988630526",
+      "cs_sha256": "acdeb0fb077bdf25a355d5bf2440b2373bcf02d5b1381d987173060a155d27f5"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/rh_trace_formula/hall_obstruction.en.md",
+        "cs": "research_tracks/rh_trace_formula/hall_obstruction.cs.md"
+      },
+      "en_sha256": "c12f07ded1ca96572ee2d147201ec1fade3e77175349cf70ab7221643e379812",
+      "cs_sha256": "6db0a2d93b4b6d89ca2084d4088b1f9544d49cc6091bcb99e18409daf009f1d2"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/rh_trace_formula/mobius_abel_lean.en.md",
+        "cs": "research_tracks/rh_trace_formula/mobius_abel_lean.cs.md"
+      },
+      "en_sha256": "aecb8bcae60928840136d06e3daa5266db8e2133c055e492b36e88665703ad06",
+      "cs_sha256": "323238b6624b5477474d94f29433be0d531122e503c804b14daa53b3cf8546be"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/rh_trace_formula/multi_prime_pairing.en.md",
+        "cs": "research_tracks/rh_trace_formula/multi_prime_pairing.cs.md"
+      },
+      "en_sha256": "1bbc643b2897a6473821d54d026725b9c43b861cb81585daa4d9e5ec2b213a1a",
+      "cs_sha256": "0051ef1f206a40d7bf68ee14500c18150cf26bd290b357c35f7895047dca9e66"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/rh_trace_formula/parity_layers.en.md",
+        "cs": "research_tracks/rh_trace_formula/parity_layers.cs.md"
+      },
+      "en_sha256": "3da8950ec38c049175c46af6fd6779f9a053ea2ac59b23bfc9e4a342a13ec0ec",
+      "cs_sha256": "783887a6a13a73e249022997715b9724c1453a35b2698b934e83eae49b24f5cb"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/rh_trace_formula/power_weight_limit.en.md",
+        "cs": "research_tracks/rh_trace_formula/power_weight_limit.cs.md"
+      },
+      "en_sha256": "fb6a6587d6e34598dd368cca8f0dabe9b35043e8b9bd3c47759a273db1f90595",
+      "cs_sha256": "8b91ce0c14b4e396dc548675cbd26857246c7fef8e7151ae219e8e4f92eb4968"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/rh_trace_formula/prime_block_coarsening.en.md",
+        "cs": "research_tracks/rh_trace_formula/prime_block_coarsening.cs.md"
+      },
+      "en_sha256": "af495d3fc7faa3336fde9ba4a383ca2e858e96b1eb12790b58f4660016ba88c3",
+      "cs_sha256": "632ca3b53a4201fdecb3770cb9bdd707d85f560779d5f7cfca6be692bae1f368"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/rh_trace_formula/prime_exchange_lean.en.md",
+        "cs": "research_tracks/rh_trace_formula/prime_exchange_lean.cs.md"
+      },
+      "en_sha256": "c762b5e90b12a6aa1a6391182edc0463cb62a4179722a0290ca0440f448d8587",
+      "cs_sha256": "45d22f0c8e1c4a328705cd4e3f750eb91ea6841b8d2196b3113214372eb308d5"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/rh_trace_formula/prime_exchange_matching.en.md",
+        "cs": "research_tracks/rh_trace_formula/prime_exchange_matching.cs.md"
+      },
+      "en_sha256": "385ccf8e194663f99faa80cf013697d925fb65086d5f31b6b686a49ca60fac3c",
+      "cs_sha256": "10af702d16d1e82dc018f9f6a6059806cd485b7047f6301d2178849b987191e9"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/rh_trace_formula/prime_pairing_cancellation.en.md",
+        "cs": "research_tracks/rh_trace_formula/prime_pairing_cancellation.cs.md"
+      },
+      "en_sha256": "c26075f033b179753ba1f46ba2d34618e92e778f9a6dd7a83d54f2b9343a7278",
+      "cs_sha256": "22a03c05b5eefe82047efa6c9a0b46c655f3a41e7ebca07d25790fbfb5c20bce"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/rh_trace_formula/signed_energy.en.md",
+        "cs": "research_tracks/rh_trace_formula/signed_energy.cs.md"
+      },
+      "en_sha256": "d07e7e298263b617d90f00efbd8ea76231a9757179638e183653b54f1324fca3",
+      "cs_sha256": "a33cf53caad2d55458c1c892ce86ceabd0ee31aac7a63416ea2b4b69d7850876"
+    },
+    {
+      "paths": {
+        "en": "research_tracks/rh_trace_formula/subset_cutoff_cancellation.en.md",
+        "cs": "research_tracks/rh_trace_formula/subset_cutoff_cancellation.cs.md"
+      },
+      "en_sha256": "4bf463d2b1731bdb3780c9e1080c05be33e423f3f8abc7f5f61d70d04abd1a87",
+      "cs_sha256": "aed2acb42ec8d938c1dfcc3804a002e83d45a19271fef8b2ce9c0f4e7f901b97"
+    }
+  ],
+  "verifier_sha256": "c40a584acffbb4f83f65b8a1c540fad5c6a431105db71270616634986075b68a",
+  "policy_sha256": {
+    "AGENTS.md": "70c62eaabedec54cc90b33e0513496b6bf72e65eed50c1182b07add0723758b5",
+    "BILINGUAL_CONTENT_POLICY.en.md": "3f0444813e1df258c84ba119c58467bf87bfdb245214c65b4e91cde870949870",
+    "BILINGUAL_CONTENT_POLICY.cs.md": "523bdd20bd09491c80c6a037b3c235e7333affc5843140a85b0de6361c444d17"
+  },
+  "concurrent_master_reconciliation": {
+    "previous_base_commit": "d0f6233ae63a87815d27d6423e71a035c72c0c8c",
+    "new_base_commit": "51d4a695349e85448c76439fcd291e06e7e30e16",
+    "reason": "PR 800 was merged concurrently; preserve its newer research additions and tests",
+    "conflicts": [
+      "research_tracks/information_first/SHARED_NEGENTROPY_CORRELATION.en.md",
+      "research_tracks/information_first/SHARED_NEGENTROPY_CORRELATION.cs.md"
+    ],
+    "resolution": "Keep the complete structurally matched editions. English scientific content matches the new master; its shorter Czech edition is retained in source history.",
+    "all_91_scoped_source_hashes_unchanged": true,
+    "legacy_information_first_paths": "Unchanged unpaired paths newly present in master are retained for compatibility with its newer notes; generated provenance alone does not migrate their prose.",
+    "validation": {
+      "full_pytest": {
+        "passed": 1128,
+        "skipped": 5,
+        "failures": 0,
+        "errors": 0
+      },
+      "bilingual_structure": {
+        "status": "passed",
+        "pairs": 250
+      },
+      "provenance_headers": "passed",
+      "declared_sha256_entries": 83,
+      "unchanged_scoped_bilingual_source_hashes": 91,
+      "root_status_and_author_tier_map": "identical to concurrent master"
+    }
+  },
+  "additional_concurrent_master_reconciliation": {
+    "previous_base_commit": "51d4a695349e85448c76439fcd291e06e7e30e16",
+    "new_base_commit": "81c7bba8d259ae1b11c5d2b0ba77e8d572708a66",
+    "merged_requests": [
+      796,
+      798,
+      802
+    ],
+    "resolution": "Preserve complete existing theorem/selector editions and algebraic comparison fixes; add the missing Czech edition for the new shared-reality restart, correct its reproducer path, and record verification limits without selecting new physics.",
+    "original_91_source_pairs_unchanged": true,
+    "new_source_pairs": 1,
+    "validation": {
+      "targeted_provenance_and_affected_research_tests": 21,
+      "failures": 0,
+      "bilingual_pairs": 251,
+      "source_checksums": 83,
+      "semantic_approval_issued": false
+    }
+  }
+}
