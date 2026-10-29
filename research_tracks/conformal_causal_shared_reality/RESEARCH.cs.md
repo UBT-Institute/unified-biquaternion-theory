@@ -318,7 +318,7 @@ antihermitovská Lorentzova spinová konexe má nenulové F,
 ale na zvoleném Theta působí triviálně a g zůstává plochá.
 Naivní bezestopá Maurerova–Cartanova kompozitní konexe
 A=-(dTheta Theta^-1)_0 navíc poskytne tetrádu/metriku
-s hodností nejvýše jedna a chybějící dynamiku neuzavírá.
+s hodností nejvýše 1 a chybějící dynamiku neuzavírá.
 
 Následujícím úkolem je skutečný kovariantní dvoustranný
 uzávěr odvozený z Theta s reálnou zakřivenou kanonickou
