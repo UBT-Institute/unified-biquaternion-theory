@@ -78,3 +78,8 @@ Výpočet [úplné prostorové dynamiky](full_spatial_dynamics_2026_10.cs.md) od
 ## Kanonická jetová redukce zvolené gravitační větve
 
 [Lokální prostorová Diracova redukce](splitjet_spatial_dirac_2026_10.cs.md) sestavuje ekvivalentní čistě gravitační rodičovskou akci, zachovává posun hybnosti nosiče závislý na poli a eliminuje smíšené bloky pomocných vazeb beze změny základních závorek. Dodatečné jetové proměnné nepřispívají lokálním fyzikálním módem v regulárním souřadnicovém okolí s nenulovou normou. Tím se řeší jetová část mostu k metrickému fázovému prostoru pro zvolenou akci, zatímco původ a kladná normalizace této akce i všechny další komplexní/hmotové sektory zůstávají otevřené.
+
+<!-- BILINGUAL-UNIT: physics-closure.flat-jet-torsion -->
+## Test kvadratické torzní akce plochého jetu
+
+[Výpočet torzní akce plochého jetu](flat_jet_torsion_action_2026_10.cs.md) plně variuje deklarovaný konfigurační prostor plochého Lorentzova spojení a uzavřené reálné dilatace. Každá paritně sudá kvadratická torzní akce s konstantními koeficienty se zde redukuje na konformní skalární akci. Kombinace s kladným Einsteinovým znaménkem má záporný redukovaný skalární kinetický směr; opačné znaménko dává kladnou skalární energii, ale žádný tenzorový sektor. Regulární zakřivený příklad na slupce nesplňuje Einsteinovu vakuovou rovnici pro žádnou kosmologickou konstantu. To vylučuje tuto přesnou větev jako původ obecné GR, zatímco neploché jety, jiná relativní působení a mikroskopický výběr zůstávají otevřené.

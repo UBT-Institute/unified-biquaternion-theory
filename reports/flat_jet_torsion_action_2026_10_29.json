@@ -1,0 +1,152 @@
+{
+  "scope": "Conditional quadratic jet-torsion family with flat Lorentz jet and closed real dilation; full branch variation, conformal scalar Hamiltonian and absent tensor sector",
+  "versions": {
+    "sympy": "1.14.0",
+    "numpy": "2.3.5"
+  },
+  "symbolic": {
+    "torsion_trace_is_minus_three_w": true,
+    "first_torsion_invariant_is_six_w_squared": true,
+    "second_torsion_invariant_is_three_w_squared": true,
+    "trace_square_is_nine_w_squared": true,
+    "all_quadratic_coefficients_reduce_to_one_combination": true,
+    "positive_EH_torsion_combination_has_coefficient_six": true,
+    "Ricci_scalar_from_full_coordinate_Riemann": true,
+    "all_256_Weyl_components_vanish_identically": true,
+    "Ricci_torsion_boundary_identity": true,
+    "coordinate_momentum_variation_0_0": true,
+    "coordinate_momentum_variation_0_1": true,
+    "coordinate_momentum_variation_0_2": true,
+    "coordinate_momentum_variation_0_3": true,
+    "coordinate_momentum_variation_1_0": true,
+    "coordinate_momentum_variation_1_1": true,
+    "coordinate_momentum_variation_1_2": true,
+    "coordinate_momentum_variation_1_3": true,
+    "coordinate_momentum_variation_2_0": true,
+    "coordinate_momentum_variation_2_1": true,
+    "coordinate_momentum_variation_2_2": true,
+    "coordinate_momentum_variation_2_3": true,
+    "coordinate_momentum_variation_3_0": true,
+    "coordinate_momentum_variation_3_1": true,
+    "coordinate_momentum_variation_3_2": true,
+    "coordinate_momentum_variation_3_3": true,
+    "full_coordinate_Euler_Noether_identity_0": true,
+    "full_coordinate_Euler_Noether_identity_1": true,
+    "full_coordinate_Euler_Noether_identity_2": true,
+    "full_coordinate_Euler_Noether_identity_3": true,
+    "composite_field_value_chain_recovers_scalar_equation": true,
+    "scalar_canonical_momentum": true,
+    "full_scalar_Legendre_Hamiltonian": true,
+    "regular_scalar_velocity_Hessian": true,
+    "Einstein_sign_reduced_energy_is_negative": true,
+    "reduced_energy_scales_quadratically": true,
+    "no_TT_mode_in_composite_metric_tangent": true,
+    "linear_chi_is_on_shell_for_scalar_equation": true,
+    "curved_witness_has_R00": true,
+    "curved_witness_has_R11": true,
+    "curved_witness_has_zero_scalar_R": true,
+    "exact_non_Einstein_witness_at_chi_two": true
+  },
+  "numerical": {
+    "samples": 24,
+    "seed": 20261029,
+    "finite_difference_step": 1e-05,
+    "maximum_errors": {
+      "coframe_error": 4.683753385137379e-16,
+      "curvature_error": 1.1275702593849246e-17,
+      "density_error": 1.6653345369377348e-16,
+      "first_variation_error": 1.2490009027033011e-11
+    },
+    "maximum_noncommuting_connection_norm": 0.040985737189058444,
+    "checks": {
+      "original_tetrad_covariance": true,
+      "nonzero_Lorentz_connection_is_flat": true,
+      "noncommuting_connection_components_present": true,
+      "original_torsion_action_matches_reduced_action": true,
+      "full_branch_jet_first_variation_matches": true,
+      "all_points_regular": true
+    }
+  },
+  "passed": true,
+  "not_proved": [
+    "a selected microscopic Theta action or Newton coefficient",
+    "unrestricted-connection torsion equations",
+    "full complex-time or matter spectrum",
+    "global/null continuation",
+    "a no-go for nonflat jets or all teleparallel formulations"
+  ],
+  "recorded_on": "2026-10-29",
+  "base_commit": "dda1be82d873c0a7c47931ef618c3de87892e578",
+  "scientific_status": "CONDITIONAL_OBSTRUCTION_FOR_DECLARED_BRANCH",
+  "source_sha256": {
+    "tools/verify_flat_jet_torsion_action.py": "4ce86d8e2f3b3794186db363989456c11825c761f9c6e4ec070f45740a9f05f7",
+    "tests/test_flat_jet_torsion_action.py": "936b4ae975103e617b14d9cf767fdbb7bfae0b875366012cd93ff88354c62e19",
+    "formal/lean/UBT/GR/FlatJetTorsion.lean": "5154684f2508ca0161062c8d7643c9c9b1f9cf55eab5501d8258d03d6d53e334",
+    "formal/lean/UBT.lean": "e49561b8b538ed482bd91a8507ce790c7acd76530d14fdc42e964afb9cbe428e",
+    ".github/workflows/lean.yml": "c0331a5d7f2d9fc9bafd3f8d82e39bcd0453a2b512e42c6b8927f6585d46e166",
+    "research_tracks/action_selection/flat_jet_torsion_action_2026_10.en.md": "80433a51a7d115ea3224d4bb55bda78ef0fe4a86bee171170327257ca1041f38",
+    "research_tracks/action_selection/flat_jet_torsion_action_2026_10.cs.md": "65c51039447345d112d5ffd60ef16892aa3e76a0a2298dc6e9c1138b81d8c948"
+  },
+  "local_validation": {
+    "symbolic_checks": 41,
+    "new_pytest_cases": 42,
+    "related_existing_pytest_cases": 5,
+    "targeted_cases_total": 47,
+    "bilingual_structural_pairs": 295,
+    "research_origin_events": 10,
+    "release_checksums": 83,
+    "provenance_headers": "PASS"
+  },
+  "formal_verification": {
+    "status": "LEAN-COMPILED-FINITE-CORES",
+    "finite_cores": 7,
+    "not_formalized": [
+      "local conformal classification and differential geometry",
+      "continuum functional variation and Noether identity",
+      "regular gauge reduction and global dynamics",
+      "unrestricted microscopic Theta action"
+    ],
+    "source_commit": "afb3b9fc8ec6b0a6e9378e587d5a7668ad7ade43",
+    "lean_version": "4.33.1",
+    "strict_root_build": "PASS (--wfail)",
+    "independent_leanchecker": "PASS (UBT root)",
+    "axiom_audit": {
+      "status": "PASS",
+      "declarations": 503,
+      "allowlist": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40942023286/job/123687583267"
+  },
+  "bilingual_semantics": {
+    "status": "FAILED_UNAVAILABLE",
+    "source_commit": "afb3b9fc8ec6b0a6e9378e587d5a7668ad7ade43",
+    "job_id": 123687688447,
+    "job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40942023517/job/123687688447",
+    "reason": "Qwen semantic gate blocked: local Ollama unavailable: TimeoutError",
+    "approval": "WITHHELD; structural parity is not semantic approval."
+  },
+  "predecessor_ci_observation": {
+    "pr": 812,
+    "all_mathematical_checks_and_latex": "PASS",
+    "bilingual_semantics": "FAILED_UNAVAILABLE",
+    "reason": "local Ollama unavailable: TimeoutError",
+    "semantic_job_id": 123661089439
+  },
+  "interpretation": {
+    "positive_result": "Explicit non-volume scalar dynamics and full branch chain rule, without reducing the original carrier to a central scalar.",
+    "GR_gate": "FAIL on this branch for every constant quadratic coefficient choice: no tensor metric sector.",
+    "Einstein_sign_energy_gate": "FAIL: negative reduced scalar kinetic direction.",
+    "outside_scope": "Other connection branches and the unrestricted teleparallel/Theta theories are not excluded.",
+    "microscopic_action_status": "DEFINED_FAMILY_NOT_FINALIZED"
+  },
+  "ci_validation": {
+    "source_commit": "afb3b9fc8ec6b0a6e9378e587d5a7668ad7ade43",
+    "mathematical_and_repository_checks": "PASS",
+    "latex_compile_all": "PASS",
+    "integration_scope": "Author-directed C-tier working research; no claim of independent bilingual semantic approval or finalized microscopic dynamics."
+  }
+}

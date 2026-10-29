@@ -1,0 +1,99 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-10-29",
+  "claim_or_decision_id": "FLAT-JET-CLOSED-DILATION-TORSION-ACTION-20261029",
+  "summary": "Full composite variation of a restricted quadratic jet-torsion family yields a conformal scalar, no tensor sector, and negative reduced scalar energy for the positive Einstein-sign combination.",
+  "development_mode": "ai_initiated",
+  "stage_events": [
+    {
+      "kind": "ai_proposal",
+      "actor": "ai",
+      "description": "Chose a concrete non-volume derivative-action test after the gravity-only parent reduction: constant quadratic jet torsion with flat Lorentz jet and closed real relative dilation, retaining the canonical tetrad and sharp metric. These restrictions are comparison assumptions, not author-selected microscopic dynamics.",
+      "evidence_ids": [
+        "prior",
+        "new"
+      ]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Derived the exact conformal geometry from the field-valued Lorentz carrier, reduced the full quadratic torsion family, applied the composite field-value chain rule and pre-gauge Noether identity, and found the scalar Hamiltonian and regular curved non-Einstein stationary witness.",
+      "evidence_ids": [
+        "new"
+      ]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Checked all Weyl components and coordinate Euler identities symbolically, independently reconstructed nonconstant noncommuting flat connection jets and their simultaneous density variations, and encoded finite Lean cores.",
+      "evidence_ids": [
+        "new"
+      ]
+    },
+    {
+      "kind": "literature_comparison",
+      "actor": "ai",
+      "description": "Compared the standard teleparallel curvature/torsion boundary identity and the known Einstein-Fokker/Nordstrom conformal scalar structure. No priority for teleparallel or scalar gravity is claimed.",
+      "evidence_ids": [
+        "teleparallel",
+        "scalar"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "prior",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/dda1be82d873c0a7c47931ef618c3de87892e578; research_tracks/action_selection/physics_closure_dilation_2026_10.en.md; theta_first_jet_gravity_no_go.en.md; cartans_theta_integrability.en.md; splitjet_spatial_dirac_2026_10.en.md",
+      "original_checked": true,
+      "supports": "Existing real relative-dilation candidate, first-jet limitation, scoped integrability and gravity-only auxiliary reduction.",
+      "limitations": "Does not select the current flat/closed restriction or torsion coefficients, derive a microscopic action or fix a fundamental Theta component count."
+    },
+    {
+      "id": "new",
+      "class": "repository_artifact",
+      "locator": "tools/verify_flat_jet_torsion_action.py; tests/test_flat_jet_torsion_action.py; formal/lean/UBT/GR/FlatJetTorsion.lean; paired flat_jet_torsion_action_2026_10 notes; reports/flat_jet_torsion_action_2026_10_29.json",
+      "original_checked": true,
+      "supports": "The stated branch calculation, complete variation within that branch, reduced scalar sign and absent tensor sector.",
+      "limitations": "Does not solve unrestricted connection variations, full Theta/matter/complex-time dynamics or all teleparallel representations. Formal writing alone is not compiled proof; report gives actual status."
+    },
+    {
+      "id": "teleparallel",
+      "class": "external_publication",
+      "locator": "https://arxiv.org/pdf/1810.12932, sections IV and IX",
+      "original_checked": true,
+      "supports": "Standard quadratic torsion/curvature boundary structure and the need to specify tetrad and inertial-connection variations.",
+      "limitations": "Its unrestricted equivalence to GR is not an equivalence for the constrained composite branch tested here."
+    },
+    {
+      "id": "scalar",
+      "class": "external_publication",
+      "locator": "https://arxiv.org/pdf/1104.4608, sections II and VII",
+      "original_checked": true,
+      "supports": "Established conformal scalar-gravity context and its sign/coupling conventions.",
+      "limitations": "The present vacuum comparison does not derive that paper's matter coupling or transfer observational claims to unrestricted UBT."
+    }
+  ],
+  "rejected_alternatives": [
+    "Treating Theta as a central scalar rather than retaining its vector-valued gravity representative.",
+    "Equating a flat jet connection with the physical Levi-Civita connection.",
+    "Importing unrestricted TEGR field equations after restricting the composite configuration space.",
+    "Dropping coordinate equations by fixing gauge before deriving their Noether identity.",
+    "Calling a common causal cone a proof of positive physical energy.",
+    "Extrapolating this branch obstruction to all UBT or all teleparallel gravity."
+  ],
+  "verification": {
+    "status": "partial",
+    "artifacts": [
+      "tools/verify_flat_jet_torsion_action.py",
+      "tests/test_flat_jet_torsion_action.py",
+      "formal/lean/UBT/GR/FlatJetTorsion.lean",
+      "reports/flat_jet_torsion_action_2026_10_29.json"
+    ],
+    "limitations": "Finite algebraic cores and independent exact/numerical checks support the analytic branch theorem; full continuum geometry, field reduction and microscopic physics are outside that formal scope."
+  },
+  "attribution_status": "evidence_linked",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "AI-proposed restricted action audit within the existing author-directed human-AI programme. Earlier joint modelling, human architectural constraints and provenance tiers are preserved. No new scalar-gravity theory or priority is claimed."
+}

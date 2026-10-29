@@ -78,3 +78,8 @@ The [full spatial calculation](full_spatial_dynamics_2026_10.en.md) derives the 
 ## Canonical jet reduction of the chosen gravity branch
 
 The [local spatial Dirac reduction](splitjet_spatial_dirac_2026_10.en.md) constructs an equivalent gravity-only parent, retains the field-dependent carrier-momentum shift, and eliminates the mixed auxiliary constraint blocks without changing the base brackets. The additional jet variables contribute no local physical mode on a regular non-null chart. This resolves the jet part of the metric phase-space bridge for the chosen action, while the origin and positive normalization of that action and all additional complex/matter sectors remain open.
+
+<!-- BILINGUAL-UNIT: physics-closure.flat-jet-torsion -->
+## Flat-jet quadratic torsion action test
+
+The [flat-jet torsion calculation](flat_jet_torsion_action_2026_10.en.md) varies the declared flat-Lorentz/closed-real-dilation configuration space fully. Every constant-coefficient parity-even quadratic torsion action reduces there to a conformal scalar action. The positive Einstein-sign combination has a negative reduced scalar kinetic direction; the opposite sign gives a positive scalar energy but no tensor sector. A regular curved on-shell witness fails the Einstein vacuum equation for every cosmological constant. This excludes this precise branch as a generic GR origin, while nonflat jets, other relative actions and microscopic selection remain open.
