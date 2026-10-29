@@ -53,14 +53,14 @@
     "maximum_errors": {
       "coframe": 2.220446049250313e-16,
       "differentiated_coframe": 5.551115123125783e-17,
-      "metric_compatibility": 0.0,
+      "metric_compatibility": 0,
       "stationary_density": 2.9976021664879227e-14,
       "frozen_density": 7.355227538141662e-14,
       "independent_auxiliary_solution": 2.9976021664879227e-14,
       "auxiliary_stationarity": 7.277919416664116e-15
     },
     "minimum_original_jet_curvature_norm": 0.6909761323883822,
-    "tolerance": 1e-09,
+    "tolerance": 1e-9,
     "checks": {
       "all_original_jet_and_stationary_action_errors_below_tolerance": true,
       "every_original_jet_is_nonflat": true,
@@ -99,9 +99,8 @@
     "provenance_headers": "PASS"
   },
   "formal_verification": {
-    "status": "LEAN-PENDING",
+    "status": "LEAN-COMPILED-FINITE-CORES",
     "finite_cores": 7,
-    "reason": "No local Lean runtime; strict root build, independent leanchecker and axiom audit submitted to CI.",
     "not_formalized": [
       "continuum adapted chart and principal derivative-order reduction",
       "full differential geometry and helicity separation",
@@ -115,11 +114,29 @@
         "status": "BUILD_ERROR",
         "reason": "Lean could not infer the double-sum index type in zero_torsion_first_variation; index domains and summand parentheses made explicit. Fresh strict build required."
       }
-    ]
+    ],
+    "source_commit": "ba7a80dfb7c2527aa06a8e9e30fd3bb900cd18c9",
+    "lean_version": "4.33.1",
+    "strict_root_build": "PASS (--wfail)",
+    "independent_leanchecker": "PASS (UBT root)",
+    "axiom_audit": {
+      "status": "PASS",
+      "declarations": 512,
+      "allowlist": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40947162006/job/123705445814"
   },
   "bilingual_semantics": {
     "status": "PENDING",
-    "reason": "Independent review required; structural parity is not semantic approval."
+    "source_commit": "ba7a80dfb7c2527aa06a8e9e30fd3bb900cd18c9",
+    "job_id": 123705622513,
+    "job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40947162023/job/123705622513",
+    "reason": "Independent review is still in progress at the evidence snapshot; structural parity is not semantic approval.",
+    "approval": "WITHHELD; author-directed C-tier working integration is not independent semantic approval."
   },
   "predecessor_ci_observation": {
     "pr": 813,
@@ -138,5 +155,17 @@
     "mode_count": "NOT_DERIVED; no claim of two physical propagating modes.",
     "microscopic_action_status": "DEFINED_FAMILY_NOT_FINALIZED",
     "outside_scope": "Flat inertial-connection teleparallel gravity, other jet functionals and full complex/matter sectors are not excluded."
+  },
+  "ci_validation": {
+    "source_commit": "ba7a80dfb7c2527aa06a8e9e30fd3bb900cd18c9",
+    "mathematical_test_checks": "PASS",
+    "full_pytest_suite": "PASS",
+    "latex_compile_all": {
+      "status": "IN_PROGRESS_AT_EVIDENCE_SNAPSHOT",
+      "job_id": 123705630669,
+      "job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40947162000/job/123705630669",
+      "scope": "No TeX source changed in this patch; no success is claimed for this still-running global compilation."
+    },
+    "integration_scope": "Author-directed C-tier working research. Missing independent bilingual semantic approval remains explicit; no microscopic closure or canonical claim upgrade."
   }
 }
