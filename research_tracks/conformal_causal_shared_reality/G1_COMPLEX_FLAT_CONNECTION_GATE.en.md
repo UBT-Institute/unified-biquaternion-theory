@@ -12,9 +12,52 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-# G1: full complex-gradient flatness and the necessary/non-sufficient connection-curvature gate
+# G1: historical gradient-flatness regression and scoped connection/holonomy controls
 
 **2026-10-29 · C_working · new research PR.** Strengthens G1_CANONICAL_SHARP_BRIDGE, now in master. Uses the locked **sharp** anticommutator and no derivative projection, independent tetrad, Einstein–Hilbert term or assumption that Theta itself is Hermitian. Mathematical statements refer to one standard Mat(2,C) carrier; a larger biquaternion-matrix carrier is NOT automatically covered.
+
+## Historical correction: no new gradient-flatness theorem [HISTORICAL / PROVED]
+
+**26 July 2026:** `PATCH_NOTES_GAP10T_GRADIENT_FLATNESS_CORRECTION_2026-07-26.md`
+already closed `GAP-10T-GRADIENT-FLATNESS` as an exact-gradient no-go;
+`tools/verify_gradient_composite_flatness.py` independently checks the
+determinant identity and the nonlinear flat-coordinate pullback.
+The complex Jacobian form below is an algebraic continuation of that
+existing geometric fact, NOT a newly discovered physical mechanism or
+an independently closed UBT proof gap.
+
+**27 July 2026:** the canonical full-Clifford lift was already
+introduced in `canonical/geometry/biquaternion_dirac_lift.tex`,
+with the active route documented in
+`research_tracks/canonical_relation_generalized_dirac/README.md`.
+The October document
+`research_tracks/observer_information_hamiltonian_2026_10_full_clifford_operator.en.md`
+explicitly says that a fixed-connection scalar-gradient no-go must
+not be generalized to the full geometric algebra.
+
+The established grade decomposition and operator lift are:
+```text
+Cl(1,3) grades: (1,4,6,4,1); Cl+(1,3) = C tensor H
+Theta -> E = D Theta / sqrt(N0) -> Gamma = C(E).
+```
+There is **no second tetrad** and no new fundamental field in this
+operator lift. Clifford bivectors, pseudoscalars, axial torsion, spin
+curvature and the complete geometric product must be kept. The
+current regression tests below are useful only as **negative controls**
+against returning to a gradient-only theory. They must not be
+advertised as the main advance of this PR.
+
+The already stated real work is to take the **existing**
+compatible Clifford-module/two-sided connection and calculate
+the full squared Dirac-type operator including its
+curvature, torsion and grade projections, then confront the
+unfinalized single-Theta action. The active research track
+`research_tracks/canonical_relation_generalized_dirac/README.md`
+also already records the second-order action-versus-first-order
+operator obstruction, so merely postulating a Dirac factor
+would repeat a different solved boundary. The physical action,
+factor selection, Dirac constraint reduction and stability
+remain OPEN.
 
 ## Setup: the original complex bilinear metric [PROVED, conditional]
 
