@@ -12,9 +12,55 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-# G1: plochost úplného komplexního gradientu a nutná, nikoli dostačující podmínka křivosti konexe
+# G1: historická regrese plochosti gradientu a omezené kontroly konexe/holonomie
 
 **2026-10-29 · C_working · nový výzkumný PR.** Zesiluje G1_CANONICAL_SHARP_BRIDGE, který je nyní v master. Používá uzamčený antikomutátor **sharp** bez derivované projekce, nezávislé tetrády, Einsteinova–Hilbertova členu či předpokladu Hermitovosti samotného Theta. Matematická tvrzení se týkají jediného standardního nosiče Mat(2,C); větší bikvaternionový maticový nosič NENÍ automaticky pokryt.
+
+## Historická oprava: nejde o nový důkaz plochosti gradientu [HISTORICAL / PROVED]
+
+**26. července 2026:** Soubor `PATCH_NOTES_GAP10T_GRADIENT_FLATNESS_CORRECTION_2026-07-26.md`
+již uzavřel `GAP-10T-GRADIENT-FLATNESS` jako no-go pro přesný
+gradient; `tools/verify_gradient_composite_flatness.py` nezávisle
+kontroluje determinantovou identitu a nelineární plochý
+souřadnicový přenos. Následující komplexní Jacobiho výpočet
+je algebraickým pokračováním tohoto známého geometrického
+faktu, NIKOLI nově objeveným fyzikálním mechanismem ani
+nově uzavřenou důkazovou mezerou UBT.
+
+**27. července 2026:** Kanonické pozvednutí do celé Cliffordovy
+algebry už bylo zavedeno v
+`canonical/geometry/biquaternion_dirac_lift.tex`,
+s aktivním směrem v
+`research_tracks/canonical_relation_generalized_dirac/README.md`.
+Říjnový dokument
+`research_tracks/observer_information_hamiltonian_2026_10_full_clifford_operator.en.md`
+výslovně říká, že no-go skalárního gradientu při pevné
+konexi nelze zobecňovat na celou geometrickou algebru.
+
+Zavedený rozklad na stupně a operátorové pozvednutí jsou:
+```text
+Cl(1,3) grades: (1,4,6,4,1); Cl+(1,3) = C tensor H
+Theta -> E = D Theta / sqrt(N0) -> Gamma = C(E).
+```
+Operátorové pozvednutí nepřidává **druhou tetrádu**
+ani nové fundamentální pole. Je třeba zachovat Cliffordovy
+bivektory, pseudoskaláry, axiální torzi, spinovou křivost
+a celý geometrický součin. Níže uvedené regresní testy
+slouží pouze jako **negativní kontroly** proti návratu
+k teorii čistého gradientu. Nemají být prezentovány
+jako hlavní nový výsledek tohoto PR.
+
+Skutečným úkolem už je vzít **existující** kompatibilní
+konexi Cliffordova modulu/dvoustrannou konexi a spočítat
+celý kvadrát operátoru Diracova typu včetně křivosti,
+torze a projekcí na stupně, následně jej konfrontovat
+s nedokončenou jedinou akcí Theta. Aktivní výzkumný
+směr `research_tracks/canonical_relation_generalized_dirac/README.md`
+už zaznamenává také překážku druhého řádu akce
+vůči operátoru prvního řádu, takže prosté postulování
+Diracova faktoru by opakovalo jinou uzavřenou hranici.
+Fyzikální akce, výběr faktoru, redukce Diracových vazeb
+a stabilita zůstávají OPEN.
 
 ## Předpoklady: původní komplexně bilineární metrika [PROVED, podmíněně]
 
