@@ -294,6 +294,38 @@ která vytvoří zakřivenou reálnou kanonickou centrální
 metriku ze svých vlastních jetů.
 G1 PARTIAL; fyzikální akce nebyla vybrána.
 
+<!-- BILINGUAL-UNIT: conformal-causal.full-complex-gradient-update -->
+## G1 silnější věta pro úplný komplexní gradient sharp [PROVED, omezeně]
+
+Viz G1_COMPLEX_FLAT_CONNECTION_GATE.en.md a
+tests/test_theta_canonical_flatness_gate.py.
+Dřívější věta o plochosti čistého gradientu předpokládala
+rank(d Re Theta)=4. Silnější obecná věta to nepotřebuje:
+nedegenerovaná kanonická metrika sharp vynucuje
+rank_C(dTheta)=4 a indukovaná komplexní afinní
+Levi-Civitova konexe je plochá.
+Explicitně je uvedena reálná Lorentzova metrika komplexního
+gradientu s rank(d Re Theta)=2. Nulová definiční konexe
+tedy nedokáže vytvořit zakřivenou kanonickou geometrii
+na deklarovaném 4-komplexně-složkovém nosiči Mat(2,C).
+
+V determinant zachovávajícím srovnávacím modelu
+SL(2,C)xSL(2,C) lze obě *ploché* levé/pravé konexe
+kalibračně odstranit, takže nejméně jedna neplochá
+konexe je pro neplochou kanonickou geometrii v této
+kalibrační třídě nutná. NENÍ dostačující: explicitní
+antihermitovská Lorentzova spinová konexe má nenulové F,
+ale na zvoleném Theta působí triviálně a g zůstává plochá.
+Naivní bezestopá Maurerova–Cartanova kompozitní konexe
+A=-(dTheta Theta^-1)_0 navíc poskytne tetrádu/metriku
+s hodností nejvýše jedna a chybějící dynamiku neuzavírá.
+
+Následujícím úkolem je skutečný kovariantní dvoustranný
+uzávěr odvozený z Theta s reálnou zakřivenou kanonickou
+metrikou sharp, netriviální vazbou křivosti na pole,
+kompatibilitou metriky/torze a dynamikou; bez vložení
+volné akce či cílového GR. G1 PARTIAL, C_working.
+
 <!-- BILINGUAL-UNIT: conformal-causal.integration-verification -->
 ## Společný rozsah ověření
 
