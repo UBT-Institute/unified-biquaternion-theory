@@ -116,6 +116,7 @@ class TestCanonicalFlatnessGate(unittest.TestCase):
         self.assertEqual(s.Matrix(4,4,lambda i,j:C(jets[i],jets[j])),ETA)
         Ft_x=s.diff(Omega[1],t)
         self.assertEqual(Ft_x,s.I*Z)
+        self.assertEqual(s.simplify(Ft_x*Q-Q*Ft_x),s.zeros(2))
         self.assertNotEqual(Ft_x.subs({t:0,x:1,y:0,z:0}),s.zeros(2))
 
     def test_metric_blind_to_nontrivial_spin_holonomy(self):
