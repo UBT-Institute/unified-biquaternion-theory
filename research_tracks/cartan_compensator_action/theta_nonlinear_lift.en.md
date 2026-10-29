@@ -49,6 +49,8 @@ X=n^{0:3},\quad Y=v^{0:3}.
 
 The joint lift has an identity coordinate minor and rank **8**. Its image is exactly the stated fixed-norm tangent chart with positive last compensator coordinate; the inverse is the displayed projection. Both lifted objects are functions of the original field data, not independent new fields. Using only the compensator in an action would leave the tangent data's dynamics unspecified. The length and action are not predicted.
 
+The construction establishes a real smooth coordinate lift and retention of data. It does not establish complex-linearity, holomorphy or preservation of the biquaternion product.
+
 <!-- BILINGUAL-UNIT: nonlinear-cartan.action -->
 ## Local group action and exact Lie brackets
 

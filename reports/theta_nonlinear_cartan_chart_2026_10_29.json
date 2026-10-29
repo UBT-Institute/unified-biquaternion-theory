@@ -75,7 +75,8 @@
     "compatible independent standard field phase",
     "normalization relating the field-coordinate scale to a gravity length",
     "microscopic action, physical Dirac reduction or stability",
-    "global chart or fundamental Theta component count"
+    "global chart or fundamental Theta component count",
+    "complex-linearity, holomorphy or preservation of the biquaternion product"
   ],
   "recorded_on": "2026-10-29",
   "parent_commit": "d158a9d174496e2226abf78a2ff58835a169a26f",
@@ -83,19 +84,24 @@
   "formal": {
     "module": "UBT.GR.NonlinearCartanChart",
     "finite_core_lemma_count": 4,
-    "status": "LEAN-PENDING",
+    "status": "LEAN-PENDING_FRESH_CI",
     "reason": "No local Lean runtime; fresh CI compilation and axiom audit required.",
-    "scope": "Finite norm, tangency, quotient and coordinate-retention cores; full covariance rank, group action and physical claims not formalized."
+    "scope": "Finite norm, tangency, quotient and coordinate-retention cores; full covariance rank, group action and physical claims not formalized.",
+    "first_ci_attempt": {
+      "source_commit": "e098066a0d2740e3abcbcd3937ba77ba14777f26",
+      "job": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40796010367/job/123192540544",
+      "result": "Strict build blocked by two unnecessarySeqFocus linter warnings; sequential tactic syntax corrected without disabling the linter."
+    }
   },
   "pytest_new_cases_passed": 52,
   "independent_bilingual_semantics": "PENDING; no approval or attestation claimed",
   "source_sha256": {
     "tools/verify_nonlinear_cartan_chart.py": "838082fb4b73518e278f48600128ebc64957ea76f0b50265a3be0e53e177c270",
     "tests/test_nonlinear_cartan_chart.py": "fe26010760426ef3d68f81332757577ad5d21f36861080cd5f3b1bda19a44ae9",
-    "formal/lean/UBT/GR/NonlinearCartanChart.lean": "f71fbfd4444b42f34a5635b16977e8a3e78c9f650b0cc1c27ea13270a187f842",
+    "formal/lean/UBT/GR/NonlinearCartanChart.lean": "581f8ef5a04a937c2f8fcf65a8f66b5546788a181b7db1272a550e4b09d8eaa9",
     "formal/lean/UBT.lean": "9f99d52afdf6956b2352d2d3348969da78b251e45357693b3c3b06cdb864e49c",
     ".github/workflows/lean.yml": "0d502a201c9fd47e1ef8bb33df7b44fe3892b422477941408e482044f5ea7e66",
-    "research_tracks/cartan_compensator_action/theta_nonlinear_lift.en.md": "2a09b08c66dbf18a821370798f2d72c38b165f88802e540a68e6e450fe654c00",
-    "research_tracks/cartan_compensator_action/theta_nonlinear_lift.cs.md": "4662332f61a311c66e3921100957bf88fd3174ab02ca114290e26fdbda9a2573"
+    "research_tracks/cartan_compensator_action/theta_nonlinear_lift.en.md": "24520f83475e88553f7f8ecddedf0375ad1147ece6982f414e7f239a3429a1d6",
+    "research_tracks/cartan_compensator_action/theta_nonlinear_lift.cs.md": "5332424ee25d88953ec3b73bc7d3a4f822e2fb29917b0da8cb7128c66da53eb5"
   }
 }

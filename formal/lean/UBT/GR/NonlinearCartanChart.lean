@@ -18,13 +18,15 @@ theorem derived_norm (q phi ell : ℝ) (h : phi ^ 2 = ell ^ 2 - q) :
 
 theorem tangent_lift (h phi : ℝ) (hp : phi ≠ 0) :
     h + phi * (-h / phi) = 0 := by
-  field_simp [hp] <;> ring
+  field_simp [hp]
+  ring
 
 /-- Quotient-rule cancellation after the stated vector-field derivatives
 have been computed. It is not a formalization of that differential step. -/
 theorem quotient_derivative_core (phi h u v : ℝ) (hp : phi ≠ 0) :
     (-phi * v + h * u / phi) / phi - h * u / phi ^ 2 = -v := by
-  field_simp [hp] <;> ring
+  field_simp [hp]
+  ring
 
 def coordinatePack {X Y U V : Type*} (f : X → U) (g : X → Y → V)
     (p : X × Y) : (X × U) × (Y × V) :=

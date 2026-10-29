@@ -49,6 +49,8 @@ X=n^{0:3},\quad Y=v^{0:3}.
 
 Společné zdvižení má jednotkový souřadnicový minor a hodnost **8**. Jeho obrazem je přesně uvedená tečná souřadnicová oblast s pevnou normou a kladnou poslední souřadnicí kompenzátoru; inverzí je zobrazená projekce. Oba zdvižené objekty jsou funkcemi původních dat pole, nikoli nezávislými novými poli. Použití samotného kompenzátoru v akci by ponechalo dynamiku tečných dat neurčenou. Délka ani akce nejsou předpovězeny.
 
+Konstrukce dokazuje reálné hladké souřadnicové zdvižení a zachování dat. Nedokazuje komplexní linearitu, holomorfii ani zachování bikvaternionového součinu.
+
 <!-- BILINGUAL-UNIT: nonlinear-cartan.action -->
 ## Lokální grupové působení a přesné Lieovy závorky
 
