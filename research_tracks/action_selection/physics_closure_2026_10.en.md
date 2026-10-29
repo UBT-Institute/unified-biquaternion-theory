@@ -73,3 +73,8 @@ Run `python tools/verify_physics_closure.py` and `python -m pytest -q tests/test
 ## Full spatial dynamics after metric reduction
 
 The [full spatial calculation](full_spatial_dynamics_2026_10.en.md) derives the local refoliation bracket within a declared reduced canonical metric family, selects the Einstein trace ratio and relative curvature coefficient, and gives the complete vacuum metric evolution and two flat tensor modes. Its canonical phase space and off-shell refoliation requirement are explicit additional assumptions. It does not select the microscopic Theta action, the Newton magnitude, the Holst coefficient or the extra-sector dynamics.
+
+<!-- BILINGUAL-UNIT: physics-closure.spatial-jet-dirac -->
+## Canonical jet reduction of the chosen gravity branch
+
+The [local spatial Dirac reduction](splitjet_spatial_dirac_2026_10.en.md) constructs an equivalent gravity-only parent, retains the field-dependent carrier-momentum shift, and eliminates the mixed auxiliary constraint blocks without changing the base brackets. The additional jet variables contribute no local physical mode on a regular non-null chart. This resolves the jet part of the metric phase-space bridge for the chosen action, while the origin and positive normalization of that action and all additional complex/matter sectors remain open.

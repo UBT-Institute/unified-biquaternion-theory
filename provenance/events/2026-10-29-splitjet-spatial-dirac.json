@@ -1,0 +1,89 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-10-29",
+  "claim_or_decision_id": "GRAVITY-SPLITJET-PARENT-DIRAC-20261029",
+  "summary": "Local gravity-only split-jet parent reduction with unchanged base Dirac bracket, field-dependent cotangent momentum correction and no additional local phase-space dimension.",
+  "development_mode": "ai_initiated",
+  "stage_events": [
+    {
+      "kind": "ai_proposal",
+      "actor": "ai",
+      "description": "Proposed resolving the auxiliary jet part of the reduced metric phase-space assumption using a first-order parent of the already supplied gravity action, without claiming microscopic action selection.",
+      "evidence_ids": [
+        "prior",
+        "new"
+      ]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Derived the mixed second-class graph reduction, temporal first-class chain, stabilizer constraints and field-dependent carrier momentum transformation. The graph inverse and cotangent construction are standard structures; this record claims no priority for them.",
+      "evidence_ids": [
+        "new"
+      ]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Checked the unreordered finite constraint matrix, exact Lorentz-adapted cotangent chart and independent three-dimensional periodic spatial graph brackets with variable physical-connection coordinates; encoded finite Lean cores.",
+      "evidence_ids": [
+        "new"
+      ]
+    },
+    {
+      "kind": "literature_comparison",
+      "actor": "ai",
+      "description": "Inspected the primary paper on general invertible derivative-dependent transformations to delimit why a derivative rewrite needs a proof. The present constrained redundant parent is justified by its explicit constraints, rather than assumed covered by that paper.",
+      "evidence_ids": [
+        "literature"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "prior",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/d9a8246832bf25d01a1a1d97ecff8c49efd34fe0; research_tracks/action_selection/full_spatial_dynamics_2026_10.en.md; mm_finite_splitjet_lift.en.md; splitjet_presymplectic_kernel.en.md",
+      "original_checked": true,
+      "supports": "Existing conditional gravity action, configuration quotient and explicitly unresolved canonical mixed-constraint calculation.",
+      "limitations": "Prior program contributions remain as recorded; the sources do not derive the microscopic action, the full Theta quotient or a Newton coefficient."
+    },
+    {
+      "id": "new",
+      "class": "repository_artifact",
+      "locator": "tools/verify_splitjet_spatial_dirac.py; tests/test_splitjet_spatial_dirac.py; formal/lean/UBT/Hamiltonian/SplitJetDirac.lean; paired splitjet_spatial_dirac_2026_10 notes; reports/splitjet_spatial_dirac_2026_10_29.json",
+      "original_checked": true,
+      "supports": "The explicitly scoped gravity-only parent and its algebraic, cotangent and spatial graph checks.",
+      "limitations": "Lean writing is not compilation; exact compiled status is in the source-bound report. Continuum and base Palatini reduction are separate formalization obligations."
+    },
+    {
+      "id": "literature",
+      "class": "external_publication",
+      "locator": "https://arxiv.org/pdf/1702.01849, introduction and sections II-III",
+      "original_checked": true,
+      "supports": "Derivative dependence by itself does not settle dynamical equivalence; invertibility and complete variational/constraint arguments matter.",
+      "limitations": "The paper is contextual precedent, not a proof that all UBT derivative rewrites or the full Theta action are equivalent to GR."
+    }
+  ],
+  "rejected_alternatives": [
+    "Assuming the original auxiliary constraint matrix is block diagonal.",
+    "Dropping the carrier momentum correction from an X-dependent stabilizer frame.",
+    "Freezing the physical-connection response while computing mixed brackets.",
+    "Interpreting a gravity-only quotient as removing every complex Theta or matter mode.",
+    "Calling an explicit parent rewrite a microscopic selection of the Einstein action."
+  ],
+  "verification": {
+    "status": "partial",
+    "artifacts": [
+      "tools/verify_splitjet_spatial_dirac.py",
+      "tests/test_splitjet_spatial_dirac.py",
+      "formal/lean/UBT/Hamiltonian/SplitJetDirac.lean",
+      "reports/splitjet_spatial_dirac_2026_10_29.json"
+    ],
+    "limitations": "Finite and discretized checks support the analytic local field argument. Full continuum Dirac theory, global sectors, microscopic dynamics and measure are outside the finite formal cores."
+  },
+  "attribution_status": "evidence_linked",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "Specific AI-proposed follow-up within the existing author-directed iterative human-AI programme. Earlier historical contributions, attribution records and provenance tiers are unchanged."
+}
