@@ -82,7 +82,7 @@
   "source_sha256": {
     "tools/verify_free_jet_torsion_principal.py": "704da5dc7e698593e95dc6893301bdf216f2f2c4383c2c9ea096c55073003e3e",
     "tests/test_free_jet_torsion_principal.py": "3acb41fb71ebfd2af452fa0380d0a1c8fa0744ed9c18054da1c3b128011c3885",
-    "formal/lean/UBT/GR/FreeJetTensor.lean": "89e60e030c2b724565e4373e1dd826a58bae02f6836e7328157b7e2860f21ac5",
+    "formal/lean/UBT/GR/FreeJetTensor.lean": "f618021230d1a03496f7c49a2002ddd29c6f2bfe1246943b0d49e251fd3724d5",
     "formal/lean/UBT.lean": "585de093dc3378ed93be0b2e8ab79bde8e844c6418eae24b4a5883f96b01cb46",
     ".github/workflows/lean.yml": "6263bd6bb5425b7beb9b6065c368be48df76e43421247f2275751d323836d0d0",
     "research_tracks/action_selection/free_jet_torsion_principal_2026_10.en.md": "faa8daad409eeada2e4b553257ee0303db77748bfe0453beace8ee6dc2001fe1",
@@ -107,6 +107,14 @@
       "full differential geometry and helicity separation",
       "complete constrained mode count and stability",
       "unrestricted microscopic Theta action"
+    ],
+    "earlier_attempts": [
+      {
+        "source_commit": "23a9909cb1b8c3252f24e7cdad6a052466eff77a",
+        "job_id": 123702969192,
+        "status": "BUILD_ERROR",
+        "reason": "Lean could not infer the double-sum index type in zero_torsion_first_variation; index domains and summand parentheses made explicit. Fresh strict build required."
+      }
     ]
   },
   "bilingual_semantics": {

@@ -53,8 +53,8 @@ vanishes, including changes of the metric/volume contraction matrix. -/
 theorem zero_torsion_first_variation {I : Type*} [Fintype I]
     (matrix deltaMatrix : I → I → ℝ) (t deltaT : I → ℝ)
     (ht : ∀ i, t i = 0) :
-    (∑ i, ∑ j, deltaMatrix i j * t i * t j
-      + matrix i j * (deltaT i * t j + t i * deltaT j)) = 0 := by
+    (∑ i : I, ∑ j : I, (deltaMatrix i j * t i * t j
+      + matrix i j * (deltaT i * t j + t i * deltaT j))) = 0 := by
   simp [ht]
 
 theorem tensor_legendre (a v p : ℝ) (hp : p = 2 * a * v) :
