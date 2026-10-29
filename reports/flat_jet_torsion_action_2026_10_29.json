@@ -98,19 +98,36 @@
     "provenance_headers": "PASS"
   },
   "formal_verification": {
-    "status": "LEAN-PENDING",
+    "status": "LEAN-COMPILED-FINITE-CORES",
     "finite_cores": 7,
-    "reason": "No local Lean runtime; strict root build, independent leanchecker and axiom audit submitted to CI.",
     "not_formalized": [
       "local conformal classification and differential geometry",
       "continuum functional variation and Noether identity",
       "regular gauge reduction and global dynamics",
       "unrestricted microscopic Theta action"
-    ]
+    ],
+    "source_commit": "afb3b9fc8ec6b0a6e9378e587d5a7668ad7ade43",
+    "lean_version": "4.33.1",
+    "strict_root_build": "PASS (--wfail)",
+    "independent_leanchecker": "PASS (UBT root)",
+    "axiom_audit": {
+      "status": "PASS",
+      "declarations": 503,
+      "allowlist": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40942023286/job/123687583267"
   },
   "bilingual_semantics": {
-    "status": "PENDING",
-    "reason": "Independent CI review required; structural parity is not semantic approval."
+    "status": "FAILED_UNAVAILABLE",
+    "source_commit": "afb3b9fc8ec6b0a6e9378e587d5a7668ad7ade43",
+    "job_id": 123687688447,
+    "job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40942023517/job/123687688447",
+    "reason": "Qwen semantic gate blocked: local Ollama unavailable: TimeoutError",
+    "approval": "WITHHELD; structural parity is not semantic approval."
   },
   "predecessor_ci_observation": {
     "pr": 812,
@@ -125,5 +142,11 @@
     "Einstein_sign_energy_gate": "FAIL: negative reduced scalar kinetic direction.",
     "outside_scope": "Other connection branches and the unrestricted teleparallel/Theta theories are not excluded.",
     "microscopic_action_status": "DEFINED_FAMILY_NOT_FINALIZED"
+  },
+  "ci_validation": {
+    "source_commit": "afb3b9fc8ec6b0a6e9378e587d5a7668ad7ade43",
+    "mathematical_and_repository_checks": "PASS",
+    "latex_compile_all": "PASS",
+    "integration_scope": "Author-directed C-tier working research; no claim of independent bilingual semantic approval or finalized microscopic dynamics."
   }
 }
