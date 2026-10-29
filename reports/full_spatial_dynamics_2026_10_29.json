@@ -226,7 +226,9 @@
     "tests/test_spatial_constraint_closure.py": "3c95976ced8784aa6aae03306b7e02a6058a28b90c2c32d1551659cedec4c0b7",
     "formal/lean/UBT/Hamiltonian/SpatialClosure.lean": "4d91baf342f5e56be837025f8c2eed1b4a0bfb2ee8cb5728a562a6bdb0455199",
     "research_tracks/action_selection/full_spatial_dynamics_2026_10.en.md": "a324f4d042a5f71d3cf246391e53963fbc5f5983a5a5e03ad1a047cd3a621048",
-    "research_tracks/action_selection/full_spatial_dynamics_2026_10.cs.md": "d6570d84bcd681ad2fc69eba73f355b0eb183a2bb2d44a91a0af8b8a03b97ef1"
+    "research_tracks/action_selection/full_spatial_dynamics_2026_10.cs.md": "d6570d84bcd681ad2fc69eba73f355b0eb183a2bb2d44a91a0af8b8a03b97ef1",
+    ".github/workflows/lean.yml": "06c1f6874e105c91ace2fb852bd6c91aa1faeaf77d2051d1fb42db7bba1e4960",
+    "formal/lean/UBT.lean": "5b5fbc3f85695ea4a03265eadccafcb7e7f1a5114508d6130f48c0a5691921a1"
   },
   "local_validation": {
     "new_pytest_cases": 39,
@@ -234,20 +236,50 @@
     "bilingual_structural_pairs": 293,
     "research_origin_events": 8,
     "release_checksums": 83,
-    "command": "python -m pytest -q tests/test_spatial_constraint_closure.py tests/test_mm_composite_variation_identity.py tests/test_mm_finite_splitjet_lift.py research_tracks/action_selection/tests/test_implicit_composite_legendre_gate.py research_tracks/action_selection/tests/test_adm_gr_hessian.py"
+    "command": "python -m pytest -q tests/test_spatial_constraint_closure.py tests/test_mm_composite_variation_identity.py tests/test_mm_finite_splitjet_lift.py research_tracks/action_selection/tests/test_implicit_composite_legendre_gate.py research_tracks/action_selection/tests/test_adm_gr_hessian.py",
+    "provenance_checksum_tests": 11
   },
   "formal_verification": {
-    "status": "LEAN-PENDING",
-    "reason": "No local Lean runtime. Six finite cores submitted to strict root build, independent leanchecker and axiom audit in CI.",
+    "status": "PROVED_FINITE_CORES",
+    "reason": "Strict root compilation, independent leanchecker and axiom audit succeeded on GitHub. No local runtime.",
     "finite_lemmas": 6,
     "not_formalized": [
       "continuum functional Poisson brackets and spatial integrations by parts",
       "reduction of full Theta/jet/matter/psi phase space to canonical metric variables",
       "global physical positivity and microscopic action selection"
-    ]
+    ],
+    "source_commit": "020a8cacfeeff30db1d1b111b9a55fb08b37923d",
+    "lean_version": "4.33.1",
+    "root_build": "PASS --wfail",
+    "independent_leanchecker": "PASS UBT",
+    "axiom_audit": "PASS",
+    "audited_declarations": 483,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40852754227/job/123376054470"
   },
   "bilingual_semantics": {
-    "status": "PENDING",
-    "reason": "Independent model review must be obtained by CI; structural parity is not semantic approval."
+    "status": "NOT_COMPLETED",
+    "source_commit": "020a8cacfeeff30db1d1b111b9a55fb08b37923d",
+    "job_id": 123376162871,
+    "reason": "Independent model job was still running at evidence recording. Structural parity and author-directed integration are not semantic approval."
+  },
+  "ci_validation": {
+    "source_commit": "020a8cacfeeff30db1d1b111b9a55fb08b37923d",
+    "configured_full_pytest_suite": "PASS",
+    "full_pytest_job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40852754771/job/123376056200",
+    "mathematical_checks": "All completed exact, invariant, focused and formal jobs passed.",
+    "latex_job_status_at_evidence_record": "IN_PROGRESS",
+    "latex_job_url": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40852754535/job/123376056373",
+    "latex_scope_note": "No TeX source changed in this PR; the repository-wide rebuild is not represented as passed."
+  },
+  "integration_scope": {
+    "author_direction": "Current author instruction requests all working research merged and dynamics prioritized.",
+    "scientific_status": "CONDITIONAL; microscopic action DEFINED_FAMILY_NOT_FINALIZED",
+    "human_review": "not_attested",
+    "semantic_approval": "not_granted"
   }
 }
