@@ -1,0 +1,81 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-10-29",
+  "claim_or_decision_id": "FREE-JET-TORSION-TENSOR-PRINCIPAL-20261029",
+  "summary": "On a declared timelike isotropic free-jet branch, algebraic rotational variation removes the spatial TT gradient for the full supplied constant quadratic torsion family; an exact original-field zero-torsion stationary FLRW witness is non-Einstein.",
+  "development_mode": "ai_initiated",
+  "stage_events": [
+    {
+      "kind": "ai_proposal",
+      "actor": "ai",
+      "description": "Tested whether releasing the earlier flat Lorentz-jet and closed real-dilation restrictions restores tensor dynamics, while retaining the canonical composite coframe, sharp metric and declared Lorentz-real gravity representation. These comparison assumptions are not an author-selected microscopic action.",
+      "evidence_ids": ["prior", "new"]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Aligned the timelike carrier by Lorentz gauge, retained all twelve rotational auxiliaries, derived their coefficient-independent principal stationary translation, and identified positive Einstein-sign tensor time kinetics without spatial stiffness. Constructed a regular curved zero-torsion original-field stationary background and verified its non-Einstein Ricci tensor.",
+      "evidence_ids": ["new"]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Computed full torsion contractions and coordinate Ricci curvature in CAS; independently reconstructed nonflat original jets and solved their twelve-variable quadratic actions, including singular coefficients, in NumPy; encoded seven finite Lean cores with compiled status delegated to the source-bound CI record.",
+      "evidence_ids": ["new"]
+    },
+    {
+      "kind": "literature_comparison",
+      "actor": "ai",
+      "description": "Separated the freely curved auxiliary-connection variation from standard flat inertial-connection teleparallel gravity. No originality for the quadratic torsion invariants, standard tensor decomposition or stationarity of a quadratic form at zero is claimed.",
+      "evidence_ids": ["literature"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "prior",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/pull/813; https://github.com/UBT-Institute/unified-biquaternion-theory/commit/b24894b461a19f17a3c1f90c028e44859ff1067d; research_tracks/action_selection/splitjet_spatial_dirac_2026_10.en.md",
+      "original_checked": true,
+      "supports": "The earlier flat/closed restricted torsion-action result and the distinction between a chosen gravity parent and microscopic action selection.",
+      "limitations": "Does not select the current freely curved branch, its torsion coefficients or the exact new stationary witness."
+    },
+    {
+      "id": "new",
+      "class": "repository_artifact",
+      "locator": "tools/verify_free_jet_torsion_principal.py; tests/test_free_jet_torsion_principal.py; formal/lean/UBT/GR/FreeJetTensor.lean; paired free_jet_torsion_principal_2026_10 notes; reports/free_jet_torsion_principal_2026_10_29.json",
+      "original_checked": true,
+      "supports": "The specified principal tensor block, algebraic auxiliary equations, source-level stationary witness and scoped verification.",
+      "limitations": "Does not provide a complete mode count, all stationary backgrounds, unrestricted UBT dynamics or an independently approved translation. Formal source alone is not compiled proof."
+    },
+    {
+      "id": "literature",
+      "class": "external_publication",
+      "locator": "https://arxiv.org/pdf/1810.12932, sections IV and IX",
+      "original_checked": true,
+      "supports": "Standard quadratic torsion and flat inertial-connection teleparallel context.",
+      "limitations": "Its variation space differs from the freely curved composite auxiliary branch tested here; its established GR equivalence is not refuted."
+    }
+  ],
+  "rejected_alternatives": [
+    "Freezing all rotational perturbations before variation and reporting their nonstationary TT wave form as dynamics.",
+    "Treating singular auxiliary Hessians as restoring a missing spatial principal term.",
+    "Inferring two physical propagating modes from a positive tensor time coefficient.",
+    "Calling timelike Lorentz-gauge alignment a fundamental central-scalar restriction of Theta.",
+    "Identifying the jet connection with the physical connection throughout the varied theory.",
+    "Extrapolating the declared family obstruction to all UBT or flat-connection teleparallel gravity."
+  ],
+  "verification": {
+    "status": "partial",
+    "artifacts": [
+      "tools/verify_free_jet_torsion_principal.py",
+      "tests/test_free_jet_torsion_principal.py",
+      "formal/lean/UBT/GR/FreeJetTensor.lean",
+      "reports/free_jet_torsion_principal_2026_10_29.json"
+    ],
+    "limitations": "Finite algebraic cores and independent exact/numerical checks; continuum field reduction, complete constraints and microscopic action selection are outside the formal scope."
+  },
+  "attribution_status": "evidence_linked",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "Specific AI-proposed continuation within the existing author-directed human-AI research programme. Prior joint modelling and human architectural constraints remain credited in their records. No private prompts, human sign-off, priority assertion or provenance-tier change is introduced."
+}

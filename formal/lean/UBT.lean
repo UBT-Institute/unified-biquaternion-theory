@@ -7,6 +7,7 @@ import UBT.GR.CompositeKinetic
 import UBT.GR.BareSplitJet
 import UBT.GR.NonlinearCartanChart
 import UBT.GR.FlatJetTorsion
+import UBT.GR.FreeJetTensor
 import UBT.GR.CompositeActionStationarity
 import UBT.GR.CurvatureUnderdetermination
 import UBT.GR.LegacyActionObstructions
