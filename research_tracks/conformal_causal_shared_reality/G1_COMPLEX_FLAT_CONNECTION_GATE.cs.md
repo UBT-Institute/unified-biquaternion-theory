@@ -144,8 +144,42 @@ F^\Omega_{tx}=i Z\not\equiv0.
 
 Protipříklad výslovně rozlišuje **kalibrační křivost** od **Riemannovy křivosti pozorovatelné metriky**. Ve skutečném gravitačním řešení UBT vyžaduje jejich vztah odvozenou kompatibilitu tetrády, vazby torze/kontorze a skutečné pohybové rovnice; samotné nenulové F nedokazuje požadovanou prostoročasovou dynamiku. V příkladu je F nenulové, ale operátor křivosti působí na dané pole Theta triviálně.
 
+## Rozšíření sdílené reality: holonomie neviditelná metrice [PROVED jako kalibrační kontrola]
+
+U předchozího příkladu s plochou metrikou, ale zakřivenou
+konexí se omezme na obdélníkovou smyčku v rovině t-x při y=z=0.
+Všechny matice konexe na smyčce komutují, takže uspořádaná
+holonomie a její stopa vycházejí přesně:
+
+\[
+\Omega_x=i\lambda t\,x\sigma_1\quad(y=z=0),\qquad
+\Phi=\lambda\,\delta t\,\left(x_0\ell+\tfrac12\ell^2\right),
+\quad W_\square=\exp(-i\Phi\sigma_1),\quad
+\operatorname{tr}W_\square=2\cos\Phi.
+\]
+
+\[
+(\lambda,\delta t,\ell,x_0)=(1,1/3,1/2,1)
+\Longrightarrow \Phi=5/24,\qquad
+g_{\mu\nu}=\eta_{\mu\nu},\quad
+\operatorname{tr}W_\square=2\cos(5/24)\ne2.
+\]
+
+Stopa je invariantní vůči konjugaci při lokálních změnách
+spinového rámce SU(2) (se společným základním bodem smyčky).
+Rozlišuje rodinu parametrů lambda, přestože každý její člen
+má přesně stejnou reálnou kanonickou metriku.
+Příklad NEDOKAZUJE, že tuto holonomii dokáže v UBT měřit
+konkrétní látkové pole či pozorovatel: k tomu potřebujeme
+odvozenou vazbu a měřicí protokol. Ukazuje však, že pouhá
+shoda lokálních metrických údajů nestačí k výběru konexe.
+Fyzikálně podložený princip sdílené reality možná musí
+srovnávat také dostupné holonomie v překrývajících se
+kauzálních oblastech; zůstává to explicitní operační
+výzkumnou branou.
+
 ## Další vyvratitelný úkol G1 [OPEN]
 
 Další jediný kandidát musí skutečně odvodit *zakřivený* levý/pravý uzávěr a jeho fyzikální přípustnost z Theta a dosud nedokončené jediné akce; prokázat nenulovou účinnou křivost působící na relevantní pole, reálnou nedegenerovanou centrální metriku sharp, kompatibilitu konexe/tetrády, torzi a nezávislé variace i zdravý redukovaný lineární hlavní symbol. Fázové/projektivní Gramovy metriky zůstávají oddělenými průzkumnými modely. **Sdílená realita** má testovat shodu těchto *kanonických reálných kalibračně invariantních* pozorovatelných mezi pozorovateli, nikoliv vybrat konexi předem. Zachovat G1 PARTIAL a původní kanonický status.
 
-**Reprodukovatelnost:** `python -m unittest discover -s tests -p 'test_theta_canonical_flatness_gate.py' -v`. Všech 10 přesných symbolických testů prošlo lokálně; GitHub Actions jsou nezávislé. Základ: `canonical/CANONICAL_DEFINITIONS.md:164-190`; `canonical/fields/theta_field.tex:101-160`; `G1_CANONICAL_SHARP_BRIDGE.en.md`; status akce v master `DEFINED_FAMILY_NOT_FINALIZED`. Nepovažovat za fyzikální předpověď metriky či kvantovou efektivní akci.
+**Reprodukovatelnost:** `python -m unittest discover -s tests -p 'test_theta_canonical_flatness_gate.py' -v`. Všech 11 přesných symbolických testů prošlo lokálně; GitHub Actions jsou nezávislé. Základ: `canonical/CANONICAL_DEFINITIONS.md:164-190`; `canonical/fields/theta_field.tex:101-160`; `G1_CANONICAL_SHARP_BRIDGE.en.md`; status akce v master `DEFINED_FAMILY_NOT_FINALIZED`. Nepovažovat za fyzikální předpověď metriky či kvantovou efektivní akci.
