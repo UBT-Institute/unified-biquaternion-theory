@@ -84,14 +84,22 @@
   "formal": {
     "module": "UBT.GR.NonlinearCartanChart",
     "finite_core_lemma_count": 4,
-    "status": "LEAN-PENDING_FRESH_CI",
-    "reason": "No local Lean runtime; fresh CI compilation and axiom audit required.",
+    "status": "PROVED_FINITE_CORES",
     "scope": "Finite norm, tangency, quotient and coordinate-retention cores; full covariance rank, group action and physical claims not formalized.",
     "first_ci_attempt": {
       "source_commit": "e098066a0d2740e3abcbcd3937ba77ba14777f26",
       "job": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40796010367/job/123192540544",
       "result": "Strict build blocked by two unnecessarySeqFocus linter warnings; sequential tactic syntax corrected without disabling the linter."
-    }
+    },
+    "overall_formalization": "PARTIAL",
+    "source_commit": "86ef4c2eefb15da2bb1e1944da1aa5f8621426a8",
+    "ci_job": "https://github.com/UBT-Institute/unified-biquaternion-theory/actions/runs/40796540388/job/123194265626",
+    "strict_full_root_build": "PASS",
+    "independent_leanchecker": "PASS",
+    "axiom_audit": "PASS; propext, Classical.choice, Quot.sound only",
+    "local_runtime": "UNAVAILABLE; formal checks observed in GitHub CI",
+    "lean_version": "4.33.1",
+    "axiom_audit_root_declarations": 474
   },
   "pytest_new_cases_passed": 52,
   "independent_bilingual_semantics": "PENDING; no approval or attestation claimed",
