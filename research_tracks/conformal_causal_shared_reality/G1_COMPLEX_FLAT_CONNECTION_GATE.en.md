@@ -44,7 +44,7 @@ There is **no second tetrad** and no new fundamental field in this
 operator lift. Clifford bivectors, pseudoscalars, axial torsion, spin
 curvature and the complete geometric product must be kept. The
 current regression tests below are useful only as **negative controls**
-against returning to a gradient-only theory. They must not be
+against returning to a pure-gradient truncation. They must not be
 advertised as the main advance of this PR.
 
 The already stated real work is to take the **existing**
