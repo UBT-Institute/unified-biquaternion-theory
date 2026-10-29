@@ -118,6 +118,22 @@ class TestCanonicalFlatnessGate(unittest.TestCase):
         self.assertEqual(Ft_x,s.I*Z)
         self.assertNotEqual(Ft_x.subs({t:0,x:1,y:0,z:0}),s.zeros(2))
 
+    def test_metric_blind_to_nontrivial_spin_holonomy(self):
+        lam,dt,dx,x0=s.symbols('lam dt dx x0',real=True)
+        phase=lam*dt*(x0*dx+dx**2/2)
+        # Along y=z=0, Omega_x=i*lam*t*x*sigma1; rectangular
+        # holonomy consists of commuting parallel transports.
+        hol=s.cos(phase)*I+s.I*s.sin(phase)*S[1]
+        self.assertEqual(s.simplify(s.trace(hol)-2*s.cos(phase)),0)
+        self.assertEqual(s.simplify(hol.det()),1)
+        values={lam:1,dt:s.Rational(1,3),dx:s.Rational(1,2),x0:1}
+        self.assertEqual(phase.subs(values),s.Rational(5,24))
+        self.assertNotEqual(s.simplify(s.trace(hol).subs(values)),2)
+        rotation=s.diag(s.I,-s.I)
+        self.assertEqual(s.simplify(s.trace(rotation*hol*rotation.inv())
+                                    -s.trace(hol)),0)
+        # The canonical metric is exactly eta, independently of lam.
+
     def test_two_sided_covariant_derivative_transform_exactly(self):
         t=s.symbols('t',real=True)
         Q=s.Matrix([[2,t],[0,3]])
