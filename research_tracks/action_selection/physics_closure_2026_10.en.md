@@ -236,6 +236,8 @@ one-form is derived as w=-d ln(det H)/2 instead of varied freely.
 The complete fixed-e Cartan equation follows afterward.
 15/15 local exact SymPy regressions passed.
 
+**Crucial connection separation:** varpi is the defining H-parallel jet spin and omega is the independently varied physical spin in the geometric action. The older auxiliary coordinate may be shifted as K_J=K_old+omega-varpi; the separate variable is not selected from the original full-Theta bimodule. Identifying varpi with torsion-free physical omega would force a parallel timelike direction and exclude generic nonzero-Lambda Einstein vacua. The proof does not establish full solution-set equivalence without this separation.
+
 **Non-negotiable representation gate:** this assumes K_J is a
 separate real-linear auxiliary action on the X jet. Using the SAME
 SL(2,C) spin coefficient on H and X violates this premise:
