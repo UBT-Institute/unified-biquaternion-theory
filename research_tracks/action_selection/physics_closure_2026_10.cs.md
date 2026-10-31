@@ -196,3 +196,34 @@ pro tuto normovou cestu, nikoli pro úplné komplexní
 Theta, jeho nezávislé Cliffordovy stupně, derivované
 uzávěry či nedokončenou jedinou akci.
 11 přesných regresí SymPy; mikroskopický výběr dynamiky OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.full-theta-hermitian-relative-20261031 -->
+## Úplné Theta: relativní člen z hermitovského determinantu a zakřivená metrika sharp
+
+[Dvojjazyčný audit celého Theta](full_theta_hermitian_compensator_2026_10.cs.md)
+přebírá existující hermitovský/antihermitovský rozklad TÉHOŽ
+bikvaternionu se čtyřmi komplexními složkami. Na nedegenerované
+oblasti s pozitivním hermitovským H vynucuje požadavek,
+aby celý definující jet zůstal na klasickém řezu i-Herm,
+spolu s bezestopou spinovou konexí SL(2,C) relaci
+w=-d log(det H)/2. Zbývající úplná maticová podmínka
+požaduje kovariantně paralelní normalizované H;
+samotné vybrání w z její stopy to nezajišťuje.
+
+Tento relativní jet závislý na již existujícím poli
+umožňuje lokální škálovací variaci PŮVODNÍHO Theta s
+delta e=epsilon e a nenulovým párováním normálového
+Eulerova zdroje bez samostatného skalárního pole.
+Explicitní příklad neploché metriky sharp má
+det e=-1-4ab z^2, R^x_yxy=-12ab v prostorovém počátku
+a nekomutující křivost SU(2). Celá původní metrika
+sharp a Cliffordův antikomutátor 4 krát 4 se kontrolují
+ve 20 přesných lokálních regresích SymPy.
+
+Mechanismus je podmíněnou kinematikou, nikoli výběrem
+mikroskopické akce. Pozitivní H omezuje spinovou holonomii,
+kovariance centrální komplexní fáze není automatická
+a hermitovský determinant není holomorfní funkcí
+neomezeného komplexního pole. Skutečné rovnice konexe,
+vazby fyzikální torze a redukovaná zdravá dynamika
+zůstávají OPEN.
