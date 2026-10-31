@@ -74,6 +74,17 @@ class FullThetaHermitianCompensator(unittest.TestCase):
                 L=sp.simplify((sharp(E[mu])*E[nu]+sharp(E[nu])*E[mu])/2)
                 self.assertEqual(sp.simplify(L-metric[mu,nu]*J),zero)
 
+    def test_full_block_clifford_lift_preserves_metric(self):
+        def gamma(Q):
+            return sp.BlockMatrix([[zero,Q],[sharp(Q),zero]]).as_explicit()
+        G=[gamma(Q) for Q in E]
+        for mu in range(4):
+            for nu in range(4):
+                anticommutator=G[mu]*G[nu]+G[nu]*G[mu]
+                self.assertEqual(
+                    sp.simplify(anticommutator-2*metric[mu,nu]*sp.eye(4)),
+                    sp.zeros(4))
+
     def test_real_regular_curved_frame(self):
         self.assertEqual(sp.factor(frame.det()),-1-4*a*b*z*z)
         self.assertEqual(frame.subs({x:0,y:0,z:0}),sp.diag(1,-1,-1,-1))
