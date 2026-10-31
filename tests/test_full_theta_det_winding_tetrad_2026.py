@@ -26,7 +26,11 @@ K=s.Matrix([[0,c],[c,b]])
 Theta=H+I*(K+t*J+x*SIG[0]+y*SIG[1]+z*SIG[2])
 coord=(t,x,y,z)
 
-def adj(A): return s.conjugate(A).T
+def adj(A):
+    # For real psi/R and rho=1/2, 1+rho*cos(psi/R) >= 1/2 > 0.
+    # SymPy does not infer this trigonometric bound symbolically, so apply
+    # the mathematically justified real-positive-root identity explicitly.
+    return s.conjugate(A).T.xreplace({s.conjugate(c):c})
 def sharp(A): return s.trace(A)*J-A
 def hpart(A): return s.simplify((A+adj(A))/2)
 def xpart(A): return s.simplify((A-adj(A))/2)
