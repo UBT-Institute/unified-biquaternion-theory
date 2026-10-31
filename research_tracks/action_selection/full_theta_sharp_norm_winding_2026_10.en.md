@@ -76,7 +76,7 @@ This is a kinematic witness only: no microscopic Euler equation is shown, and th
 
 ## Distinct logarithmic connections and square-root sign [PROVED]
 
-The former Hermitian-determinant reality compensator is zero. The FULL central sharp norm supplies another, mathematically defined scalar 1-form wherever Theta is invertible:
+The former Hermitian-determinant reality compensator is zero. The FULL central sharp norm supplies another, mathematically defined scalar one-form wherever Theta is invertible:
 
 \[
 w_H=-\tfrac12d\log|\det H|=0,\quad
