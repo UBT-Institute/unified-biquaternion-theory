@@ -31,18 +31,18 @@ q=X^aX_a\ne0,\quad\det H>0,\quad
 w_\mu=-\tfrac12\partial_\mu\ln\det H.
 \]
 
-Předpokládejme, že fyzikální Lorentzova omega zachovává normalizované H, ale algebraický split-jet K_J působí odděleně na X. Toto reálně lineární rozdělení NENÍ odvozenou obecnou komplexně lineární dvoustrannou konexí Theta:
+**Rozlišujme DVĚ role:** definující Lorentzova jetová konexe varpi zachovává normalizované H, zatímco fyzikální Lorentzova konexe omega ve funkcionálu S_geom je variována nezávisle. Algebraický split-jet K_J působí odděleně na X. Jde o reálně lineární srovnávací model, NIKOLI odvozenou obecnou komplexně lineární dvoustrannou konexi Theta. Vůči původní volné split-jetové souřadnici K_old je ekvivalentní pomocná souřadnice K_J=K_old+omega-varpi; její neomezená algebraická variace se nemění:
 
 \[
 e_\mu{}^a=s^{-1}(\partial_\mu X^a+
-(\omega_\mu{}^a{}_b+K_{J\mu}{}^a{}_b)X^b+w_\mu X^a),
+(\varpi_\mu{}^a{}_b+K_{J\mu}{}^a{}_b)X^b+w_\mu X^a),
 \quad s=\sqrt{\mathcal N_0}>0,\quad\det e\ne0.
 \]
 
 Nechť vybraný čistě gravitační geometrický funkcionál závisí na pomocném K_J a Theta pouze přes e. Ve variaci ponechme úplný Cartanův zdroj C při pevné tetrádě:
 
 \[
-S_{\rm pull}=S_{\rm geom}[e(X,H,K_J,\omega),\omega],\qquad
+S_{\rm pull}=S_{\rm geom}[e(X,H,K_J,\varpi),\omega],\qquad
 \delta S_{\rm geom}=\int d^4x\,
 (\mathcal P^\mu{}_a\delta e_\mu{}^a+
 \mathcal C^\mu{}_{ab}\delta\omega_\mu{}^{ab}).
@@ -86,6 +86,20 @@ Stacionarita téhož gravitačního funkcionálu odstraní poslední normálovou
 \]
 
 Jde o LOKÁLNÍ větu pro URČENÝ variační prostor. Nevybírá mikroskopickou akci, nezahrnuje přímé hmotové členy závislé na H a nedokazuje fyzikální stabilitu. Diferenciální rovnice X je nutná: K_J plus jeden Weylův tangent NEJSOU bodově surjektivní.
+
+**Varování k fyzikální a definující konexi:** ztotožnění varpi s fyzikální Levi-Civitovou omega bez torze dává z pozitivního normalizovaného H kovariantně konstantní vnitřní časupodobný vektor. Jeho prostoročasový obraz n je Levi-Civitovsky paralelní a splňuje Ric(n)=0; Einsteinovo vakuum s nenulovým Lambda pak není možné. I když adjungovaná věta přenáší gravitační rovnice, podmínka varpi=omega může vyloučit obecná řešení. Podmíněná větev Einstein–Lambda vyžaduje oddělení fyzikální a jetové konexe, nikoli jejich ztotožnění.
+
+\[
+D^\varpi_\mu\widehat H=0,\quad
+\varpi=\mathring\omega(e),\quad
+\widehat H>0
+\ \Longrightarrow\
+\nabla^{\mathrm{LC}}_\mu n^\nu=0
+\ \Longrightarrow\
+R_{\mu\nu}n^\nu=0,\quad
+R_{\mu\nu}=\Lambda g_{\mu\nu},\ \Lambda\ne0
+\ \Longrightarrow\ n=0.
+\]
 
 ## Překážka jediné společné konexe [PROVED]
 
