@@ -132,7 +132,7 @@ Y=\int_0^L g^*\delta\langle\mathcal H\rangle\,d\psi,
 
 ## The canonical metric gate remains open
 
-The existing phase/metric audit already proves that a continuous scalar phase on the covariant tetrad has weight two in the locked sharp metric. A neutral potential invariant does not fix this independent obstruction. We do not reinterpret the full scalar phase as a proven electromagnetic gauge symmetry, replace sharp by a Hermitian norm, or change the two-sided derivative. The next physical calculation is the constrained composite correlator and electromagnetic matching from an admissible common action. Communication with another multiverse segment is not established.
+The existing phase/metric audit already establishes that a continuous scalar phase on the covariant tetrad has weight two in the locked sharp metric. A neutral potential invariant does not fix this independent obstruction. We do not reinterpret the full scalar phase as a proven electromagnetic gauge symmetry, replace sharp by a Hermitian norm, or change the two-sided derivative. The next physical calculation is the constrained composite correlator and electromagnetic matching from an admissible common action. Communication with another multiverse segment is not established.
 
 \[
 g_{\mu\nu}[e^{i\alpha}E]=e^{2i\alpha}g_{\mu\nu}[E].

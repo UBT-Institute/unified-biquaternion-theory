@@ -132,7 +132,7 @@ Y=\int_0^L g^*\delta\langle\mathcal H\rangle\,d\psi,
 
 ## Podmínka kanonické metriky zůstává otevřená
 
-Existující audit fáze a metriky již dokazuje, že spojitá skalární fáze kovariantní tetrády má v uzamčené metrice se sharp váhu dvě. Neutrální invariant potenciálu tuto nezávislou překážku neřeší. Nepřeznačujeme plnou skalární fázi na dokázanou elektromagnetickou kalibrační symetrii, nenahrazujeme sharp hermitovskou normou ani neměníme dvoustrannou derivaci. Dalším fyzikálním výpočtem je omezený korelátor složené veličiny a elektromagnetické přiřazení ze slučitelné společné akce. Komunikace s jiným segmentem multiversa prokázána není.
+Existující audit fáze a metriky již prokazuje, že spojitá skalární fáze kovariantní tetrády má v uzamčené metrice se sharp váhu dvě. Neutrální invariant potenciálu tuto nezávislou překážku neřeší. Nepřeznačujeme plnou skalární fázi na dokázanou elektromagnetickou kalibrační symetrii, nenahrazujeme sharp hermitovskou normou ani neměníme dvoustrannou derivaci. Dalším fyzikálním výpočtem je omezený korelátor složené veličiny a elektromagnetické přiřazení ze slučitelné společné akce. Komunikace s jiným segmentem multiversa prokázána není.
 
 \[
 g_{\mu\nu}[e^{i\alpha}E]=e^{2i\alpha}g_{\mu\nu}[E].
