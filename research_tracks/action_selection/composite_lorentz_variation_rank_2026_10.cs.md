@@ -78,6 +78,8 @@ Nechť je S0[e,omega] LIBOVOLNÝ nezávisle diferencovatelný geometrický srovn
 =\int\!(\mathcal C+J_X^*\mathcal E)\cdot\delta\omega.
 \]
 
+Přesné derivování lokální lineární akce s nezávislými Eulerovými zdroji tetrády a zdroji konexe při pevné tetrádě ověřuje úplné řetězové pravidlo ve všech 24 Lorentzových směrech. Tento konečný test zdrojů nevariuje skutečnou zakřivenou akci. Společná centrální jednofoma se mezi dvěma stranami vyruší; relativní centrální člen nikoliv.
+
 Nenulový normálový Eulerův kovektor tetrády může ležet v ker J_X^*:
 
 \[
@@ -127,4 +129,4 @@ Přesný společný maticový výpočet dává následující hodnost a nulitu v
 
 **Neopakovat známé výsledky:** nezávislá Palatiniho–Holstova Cartanova mapa, pravá inverze split-jetu, řetězové pravidlo reálné dilatace v minisupersprostoru, vakuová degenerace b i úplný homogenní Hamiltonián jsou už v repozitáři. Další rozhodující kontrolou je zapsat JEDNU kandidátní akci Theta s explicitní reálnou mírou, určením fyzikální/redundantní konexe a dovoleným variačním svazkem. Spočítat úplný řetězový přenos Eulerových rovnic a jejich projekci do výše uvedeného normálového kovektoru; prokázat, že tato rovnice přežije po eliminaci auxiliárních proměnných a vazeb. Potom spočítat redukovaný hlavní symbol a zdola omezený fyzikální Hamiltonián bez předpokladu nové dimenze nosiče či nahrazení kanonické metriky sharp. Tato poznámka takovou akci nevybírá.
 
-**Ověření:** `tests/test_clifford_composite_variation_rank.py` (9/9 lokálních přesných testů SymPy). **Zdroje:** `canonical/geometry/connection.tex:13-83`; `research_tracks/action_selection/physics_closure_action_family_2026_10.en.md:39-80`; `research_tracks/action_selection/physics_closure_dilation_2026_10.en.md:16-54`; `research_tracks/action_selection/splitjet_spatial_dirac_2026_10.en.md:17-145`; `research_tracks/canonical_relation_generalized_dirac/FULL_CLIFFORD_TORSION_SQUARE.en.md:15-132`. Netvrdíme výběr fundamentální akce ani nezávislé schválení významové shody překladů.
+**Ověření:** `tests/test_clifford_composite_variation_rank.py` (11/11 lokálních přesných testů SymPy). **Zdroje:** `canonical/geometry/connection.tex:13-83`; `research_tracks/action_selection/physics_closure_action_family_2026_10.en.md:39-80`; `research_tracks/action_selection/physics_closure_dilation_2026_10.en.md:16-54`; `research_tracks/action_selection/splitjet_spatial_dirac_2026_10.en.md:17-145`; `research_tracks/canonical_relation_generalized_dirac/FULL_CLIFFORD_TORSION_SQUARE.en.md:15-132`. Netvrdíme výběr fundamentální akce ani nezávislé schválení významové shody překladů.
