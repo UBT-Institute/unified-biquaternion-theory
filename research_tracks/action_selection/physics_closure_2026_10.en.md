@@ -300,3 +300,29 @@ predictions. 17 exact tests cover the result. The previous
 33 graded/MM tests remain in the same CI.
 Single-Theta action selection, psi kinetic dynamics and
 physical constraint reduction are still OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.full-theta-sharp-norm-winding -->
+## Full complex Theta: nontrivial sharp-norm winding with canonical tetrad intact
+
+The [paired full-complex-Theta witness](full_theta_sharp_norm_winding_2026_10.en.md)
+corrects any overgeneralization of the earlier positive-H
+determinant result: H>0 around the whole circle implies
+det Theta has zero winding by the accretive homotopy,
+but the ORIGINAL complex biquaternion permits an
+indefinite-H sector with det H=-1 and
+det Theta|origin=rho exp(i psi/R_psi).
+This is exactly the central quaternion-sharp norm
+Theta^sharp Theta, NOT a substitute for the metric.
+
+A single full Theta realizes nontrivial determinant
+winding 1 on a nonsingular psi circle while its FOUR
+spacetime derivatives generate the unchanged regular
+Minkowski tetrad and exact canonical sharp metric.
+The distinct composite one-form
+A_Theta=(1/2)d log det Theta has square-root
+holonomy -1; the previous tetrad-reality w(H) stays 0.
+Conditional half-shifted charged-probe spectra are
+not yet UBT field equations, nor physical string winding,
+spin-statistics or T-duality. 21 exact symbolic tests
+now guard this strict scope. Indefinite-H action
+admissibility and psi/matter dynamics remain OPEN.
