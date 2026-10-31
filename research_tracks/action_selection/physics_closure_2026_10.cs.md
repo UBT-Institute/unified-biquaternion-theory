@@ -244,6 +244,8 @@ w=-d ln(det H)/2 místo volně variované. Následně plyne
 úplná Cartanova rovnice při pevném e.
 15/15 lokálních přesných regresí SymPy prošlo.
 
+**Zásadní oddělení konexí:** varpi je definující jetový spin paralelizující H a omega je nezávisle variovaný fyzikální spin v geometrické akci. Starší pomocnou souřadnici lze posunout jako K_J=K_old+omega-varpi; tato oddělená proměnná není vybrána původním bimodulem celého Theta. Ztotožnění varpi s fyzikální omega bez torze by vynutilo paralelní časupodobný směr a vyloučilo obecná Einsteinova vakua s nenulovým Lambda. Důkaz nezajišťuje úplnou ekvivalenci množin řešení bez tohoto oddělení.
+
 **Nepřekročitelná brána reprezentace:** předpokládá se
 samostatné reálně lineární pomocné působení K_J na jet X.
 Stejný spinový koeficient SL(2,C) působící na H i X
