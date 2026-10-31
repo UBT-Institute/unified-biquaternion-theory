@@ -227,3 +227,29 @@ a hermitovský determinant není holomorfní funkcí
 neomezeného komplexního pole. Skutečné rovnice konexe,
 vazby fyzikální torze a redukovaná zdravá dynamika
 zůstávají OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.dynamics-reuse-H-MM-adjoint -->
+## Integrovaný audit dynamiky a odvozená H-MM adjungovaná brána
+
+[Souhrnná evidence](dynamics_reuse_hermitian_mm_adjoint_2026_10.cs.md)
+výslovně používá existující podmíněnou akci GR, důkazy
+Palatiniho/Cartana a split-jetu, ADM módy i prokázanou
+neurčenost fundamentální akce. Přidává novou omezenou větu
+o **injektivitě formální diferenciálně adjungované mapy**:
+pro čistě gravitační přenos již vybrané MM/Palatiniho akce
+vynutí volné algebraické variace K_J, původní Eulerova rovnice
+X a společné přeškálování H/X celou tetrádovou Eulerovu
+rovnici, i když relativní jednofoma je odvozená jako
+w=-d ln(det H)/2 místo volně variované. Následně plyne
+úplná Cartanova rovnice při pevném e.
+15/15 lokálních přesných regresí SymPy prošlo.
+
+**Nepřekročitelná brána reprezentace:** předpokládá se
+samostatné reálně lineární pomocné působení K_J na jet X.
+Stejný spinový koeficient SL(2,C) působící na H i X
+tento předpoklad porušuje: realita H vyloučí boostové
+směry potřebné pro hodnost. Pouze antihermitovská projekce
+není komplexně lineární na neomezeném Theta.
+Úplný dvoustranný/gradovaný intertwiner a jeho přípustná
+akce, další komplexní sektory i fyzikální vazby zůstávají
+OPEN. Nebyl přijat další gravitační ansatz.
