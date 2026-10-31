@@ -66,7 +66,7 @@ class ComplexTimeGradedFork(unittest.TestCase):
         self.assertEqual(s.simplify(H+X-A),ZERO)
         self.assertEqual(s.simplify(reflected(H)-H),ZERO)
         self.assertEqual(s.simplify(reflected(X)+X),ZERO)
-        self.assertEqual(s.simplify(s.diff(H,s.conjugate(z))),ZERO)
+        self.assertFalse(H.has(s.conjugate(z)))
 
     def test_plain_dagger_is_antiholomorphic_off_real_axis(self):
         A=I*z*ONE
