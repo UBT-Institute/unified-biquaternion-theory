@@ -88,3 +88,27 @@ The [flat-jet torsion calculation](flat_jet_torsion_action_2026_10.en.md) varies
 ## Free-jet tensor principal test
 
 The [free-jet tensor calculation](free_jet_torsion_principal_2026_10.en.md) allows curved Lorentz jets and unrestricted real dilation on a timelike isotropic branch. The supplied quadratic torsion family regains a tensor time kinetic term with positive Einstein-sign normalization, but algebraic variation of all rotational jet auxiliaries removes the spatial TT gradient for every coefficient choice, including singular choices. This is a necessary principal-block obstruction, not a complete mode count. A regular exact original-field stationary background is non-Einstein for every cosmological constant. An additional derived connection law or functional is needed before this family can recover the GR tensor wave operator; microscopic selection remains open.
+
+<!-- BILINGUAL-UNIT: physics-closure.composite-connection-rank-20261031 -->
+## Physical Lorentz-connection variation: exact normal-cokernel boundary
+
+The [paired exact projection audit](composite_lorentz_variation_rank_2026_10.en.md)
+does not repeat the earlier Cartan, Holst or split-jet results.
+For fixed non-null real carrier X, a **pure physical Lorentz**
+connection perturbation induces a tetrad response with rank 12,
+but its composite canonical metric response has rank **9**:
+the normal Euler projection along the carrier-induced spacetime
+vector V is absent from this one variation channel.
+A distinct *relative* real dilation restores rank **10**
+algebraically, but is not a selected physical connection.
+
+In the fixed-gamma Clifford lower-order comparator, the previous
+24-to-8 spin contraction and the rank-9 metric projection form
+a joint 24-to-16 map with kernel dimension **8**. This is
+a pointwise algebraic visibility count and not an off-shell
+physical-mode theorem; the full operator varies its gamma matrices
+and curvature. The next microscopic gate is the admissible
+single-Theta variation bundle and the surviving normal
+equation after all constraints, not an independently imported
+Palatini or a freely selected connection. Exact 11/11 tests;
+C_working, dynamical action OPEN.
