@@ -115,7 +115,7 @@ class FullThetaDeterminantWinding(unittest.TestCase):
         alpha=I/(2*R)
         for q in (0,2,4):
             self.assertEqual(s.simplify((s.diff(s.exp(I*m*psi/R),psi)
-                +q*alpha*s.exp(I*m*psi/R))/s.exp(I*m*psi/R)),I*(m+q/2)/R)
+                +q*alpha*s.exp(I*m*psi/R))/s.exp(I*m*psi/R)),I*(m+s.Rational(q,2))/R)
 
     def test_lorentz_SL2_congruence_preserves_full_winding(self):
         S=s.Matrix([[2,0],[0,s.Rational(1,2)]])
