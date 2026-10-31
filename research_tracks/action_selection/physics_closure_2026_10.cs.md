@@ -88,3 +88,28 @@ Výpočet [úplné prostorové dynamiky](full_spatial_dynamics_2026_10.cs.md) od
 ## Test hlavní tensorové části volného jetu
 
 [Tensorový výpočet volného jetu](free_jet_torsion_principal_2026_10.cs.md) dovoluje zakřivené Lorentzovy jety a neomezenou reálnou dilataci na časupodobné izotropní větvi. Zadaná rodina kvadratické torze znovu získá časový tensorový kinetický člen s kladnou normalizací Einsteinova znaménka, ale algebraická variace všech pomocných rotačních složek jetu odstraní prostorový TT gradient pro každou volbu koeficientů včetně singulárních. Jde o nutnou překážku v hlavním bloku, nikoli úplný počet módů. Regulární přesné stacionární pozadí v původních polích není Einsteinovo pro žádnou kosmologickou konstantu. Než tato rodina obnoví tensorový vlnový operátor GR, potřebuje další odvozený zákon konexe nebo funkcionál; mikroskopický výběr zůstává otevřený.
+
+<!-- BILINGUAL-UNIT: physics-closure.composite-connection-rank-20261031 -->
+## Variace fyzikální Lorentzovy konexe: přesná hranice normálového kokernelu
+
+[Dvojjazyčný přesný audit projekce](composite_lorentz_variation_rank_2026_10.cs.md)
+neopakuje dřívější výsledky Cartana, Holsta ani split-jetu.
+Pro pevný neizotropní reálný nosič X vyvolá porucha **čistě
+fyzikální Lorentzovy** konexe změny tetrády s hodností 12,
+ale odezva kompozitní kanonické metriky má hodnost **9**:
+v tomto jednom variačním kanálu chybí normálová Eulerova
+projekce podél prostoročasového vektoru V indukovaného
+nosičem. Odlišná *relativní* reálná dilatace obnoví hodnost
+**10** algebraicky, ale nejde o vybranou fyzikální konexi.
+
+Ve srovnávacím Cliffordově modelu nižšího řádu s pevnými
+gama maticemi dávají předchozí spinová kontrakce 24 ku 8
+a metrická projekce s hodností 9 společnou mapu 24 ku 16
+s jádrem dimenze **8**. Jde o bodové algebraické počítání
+viditelnosti, nikoli o větu o fyzikálních módech mimo
+rovnice pohybu; úplný operátor variuje gama matice i křivost.
+Další mikroskopickou branou je dovolený variační svazek
+jediné Theta a přežívající normálová rovnice po všech
+vazbách, nikoli nezávisle převzatý Palatiniho člen nebo
+volně vybraná konexe. Přesné testy 9/9;
+C_working, dynamická akce OPEN.
