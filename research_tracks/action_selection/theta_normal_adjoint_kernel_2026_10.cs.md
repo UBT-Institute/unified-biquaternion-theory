@@ -106,6 +106,52 @@ Na uvedeném pozadí dává nezávislá variace tetrády nenulové E; obě kompo
 
 **Zásadní omezení:** H a pozadí jsou EXTERNÍ, pevná data. S_H není difeomorfně/kalibračně vybraná mikroskopická akce UBT a příklad nepředstavuje fyzikální řešení ani selhání Einsteinových rovnic. Pouze přesně osvědčuje nenulový kokernel diferenciální variační mapy.
 
+## Kontroly neploché spinové konexe a rodiny transportních řešení [PROVED, omezeně]
+
+Společné jádro není artefaktem předpokladu nulové spinové
+křivosti. Na stejném časupodobném kartézském poli X=x
+zaveďme metricky kompatibilní prostorovou rotační konexi,
+která stabilizuje X:
+
+\[
+\omega_0{}^i{}_j=\epsilon^i{}_{jk}x^k,\quad
+\omega_\ell{}^a{}_b=0\ (\ell=1,2,3),\quad
+\omega_\mu{}^a{}_bX^b=0,\quad
+F_{i0}=\partial_i\omega_0\not\equiv0,
+\]
+
+Její křivost je nenulová, ale **skutečná** definující
+tetráda zůstává regulární a normálová adjungovaná divergence
+zůstává nulová:
+
+\[
+D_\mu^\omega X^a=\delta_\mu{}^a,\quad
+g_{\mu\nu}=\eta_{\mu\nu},\quad
+D_\mu^\omega(hx^\mu x_a)=0.
+\]
+
+Jde o zvolenou kinematickou spinovou konexi, NIKOLI o řešení
+mikroskopické Eulerovy rovnice konexe UBT. Je to přísnější
+kontrolní protipříklad než s nulovou konexí a zachovává
+úplnou kovariantní relaci, nikoli náhradní metriku dagger
+Gram. Zdroj a jeho jádro se mohou změnit, jakmile bude
+určen fyzikální Cartanův zdroj či neminimální Cliffordova
+vazba.
+
+Adjungované jádro má také lokálně nejedinečné normálové
+profily. Pro reálnou konstantu lambda funguje celá rodina:
+
+\[
+h_\lambda=\rho^{-5/2}(1+\lambda y/t),\quad
+x^\mu\partial_\mu h_\lambda=-5h_\lambda,\quad
+\partial_\mu(h_\lambda x^\mu x_a)=0.
+\]
+
+To ilustruje volnost počátečních dat transportní rovnice,
+nikoli počet fyzikálních propagujících módů. Oba dodatečné
+případy jsou přesné regrese SymPy. Celkový lokální ověřovač:
+13/13.
+
 ## Noetherova identita a zbývající brána úplné teorie [OPEN]
 
 Pro nezávisle difeomorfně invariantní čistě metrickou akci na kompatibilní větvi bez torze dává známá Bianchiho/Noetherova identita ještě silnější redundanci variace X (s hustotním metrickým Eulerovým tenzorem H):
@@ -122,4 +168,4 @@ Metrická Noetherova identita zde činí Eulerovu rovnici pro X diferenciální 
 
 **Další rozhodující výpočet:** určit skutečně dovolené Eulerovy zdroje a úplný variační svazek JEDINÉ vybrané akce komplexního Theta včetně Cartanovy derivace při pevné tetrádě, relativního dvoustranného jetu, všech Cliffordových stupňů, okrajových dat a vazbového kvocientu. Ověřit, zda se množina dovolených zdrojů protíná s tímto nenulovým normálovým transportním jádrem. Nepředpokládat, že libovolné E pochází z UBT.
 
-**Přesný ověřovač:** `tests/test_theta_normal_euler_adjoint_kernel.py` (11/11 lokálních testů SymPy). **Dřívější výsledky:** `research_tracks/action_selection/composite_lorentz_variation_rank_2026_10.en.md`; `research_tracks/action_selection/physics_closure_action_family_2026_10.en.md`; `research_tracks/action_selection/splitjet_spatial_dirac_2026_10.en.md`; `canonical/ACTION.en.md`. Netvrdíme ověření Leanem ani nezávislé významové schválení překladů.
+**Přesný ověřovač:** `tests/test_theta_normal_euler_adjoint_kernel.py` (13/13 lokálních testů SymPy). **Dřívější výsledky:** `research_tracks/action_selection/composite_lorentz_variation_rank_2026_10.en.md`; `research_tracks/action_selection/physics_closure_action_family_2026_10.en.md`; `research_tracks/action_selection/splitjet_spatial_dirac_2026_10.en.md`; `canonical/ACTION.en.md`. Netvrdíme ověření Leanem ani nezávislé významové schválení překladů.
