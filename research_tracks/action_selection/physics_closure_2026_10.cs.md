@@ -140,3 +140,29 @@ tento zbytkový zdroj algebraicky detekuje, avšak její
 fyzikální přípustnost a dynamika stále vyžaduje jedinou
 vybranou fundamentální akci.
 11/11 přesných kontrol SymPy; C_working, akce OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.theta-normal-adjoint-20261031 -->
+## Úplná variace X a fyzikální Lorentzovy konexe: normálové adjungované jádro
+
+[Přesný omezený audit adjungované mapy](theta_normal_adjoint_kernel_2026_10.cs.md)
+jde za dřívější výsledek hodnosti 9 při pevném X a variuje
+původní Lorentzovo reálné pole X i jeho fyzikální Lorentzovu
+konexi. Eulerova rovnice pole je kovariantní divergencí
+hustoty nezávislé tetrádové Eulerovy rovnice, NIKOLI
+celou rovnicí tetrády.
+
+Nenulový normálový zdroj E^mu_a=h V^mu X_a je neviditelný
+všem antisymetrickým variacím konexe. Lokální transportní
+rovnice prvního řádu pro h anuluje i jeho Eulerovu
+variaci pole. Explicitní časupodobný zdroj h=(-X^2)^(-5/2)
+a předepsaný EXTERNÍ funkcionál metrického zdroje dokládají
+obě vyrušení v 11 nezávislých přesných testech SymPy.
+Externí funkcionál NENÍ přípustnou mikroskopickou akcí UBT
+a neplyne z něj žádné fyzikální neeinsteinovské řešení.
+
+Úkolem výběru akce je nyní určit, zda se SKUTEČNÝ obraz
+Eulerových zdrojů vybrané akce jediného komplexního Theta
+protíná s tímto formálním jádrem po zahrnutí fyzikálních
+Cartanových zdrojů, všech Cliffordových stupňů, relativních
+jetů, hranic a vazeb. C_working; dynamika jediného Theta
+zůstává OPEN.
