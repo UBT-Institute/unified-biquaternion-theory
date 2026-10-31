@@ -83,6 +83,8 @@ class CompositeLorentzVariationRank(unittest.TestCase):
         V=minimal_dirac_contraction_matrix()
         self.assertEqual(V.rank(),8)
         self.assertEqual(len(V.nullspace()),16)
+        realified=V.applyfunc(s.re).col_join(V.applyfunc(s.im))
+        self.assertEqual(realified.rank(),8)
 
     def test_combined_response_has_eight_dimensional_kernel(self):
         X=s.Matrix([2,0,0,0]);_,G=matrices(X,s.eye(4))
@@ -90,6 +92,8 @@ class CompositeLorentzVariationRank(unittest.TestCase):
         J=G.col_join(V)
         self.assertEqual(J.rank(),16)
         self.assertEqual(len(J.nullspace()),8)
+        realified=G.col_join(V.applyfunc(s.re)).col_join(V.applyfunc(s.im))
+        self.assertEqual(realified.rank(),16)
         self.assertEqual(G.rank()+V.rank()-J.rank(),1)
         self.assertTrue(all(J*w==s.zeros(26,1) for w in J.nullspace()))
 
