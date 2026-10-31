@@ -156,7 +156,13 @@ všem antisymetrickým variacím konexe. Lokální transportní
 rovnice prvního řádu pro h anuluje i jeho Eulerovu
 variaci pole. Explicitní časupodobný zdroj h=(-X^2)^(-5/2)
 a předepsaný EXTERNÍ funkcionál metrického zdroje dokládají
-obě vyrušení v 11 nezávislých přesných testech SymPy.
+obě vyrušení v 13 nezávislých přesných testech SymPy.
+Test je zesílen neplochou stabilizátorovou konexí SO(3)
+s omega_mu X=0: skutečná definující tetráda zůstává
+regulární a společné normálové adjungované jádro přetrvá.
+Druhá homogenní transportní rodina potvrzuje lokální
+nejedinečnost profilu, nikoliv fyzikální propagující módy.
+Úplný omezený ověřovač má nyní 13 přesných testů SymPy.
 Externí funkcionál NENÍ přípustnou mikroskopickou akcí UBT
 a neplyne z něj žádné fyzikální neeinsteinovské řešení.
 
