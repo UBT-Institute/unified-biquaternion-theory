@@ -111,5 +111,5 @@ rovnice pohybu; úplný operátor variuje gama matice i křivost.
 Další mikroskopickou branou je dovolený variační svazek
 jediné Theta a přežívající normálová rovnice po všech
 vazbách, nikoli nezávisle převzatý Palatiniho člen nebo
-volně vybraná konexe. Přesné testy 9/9;
+volně vybraná konexe. Přesné testy 11/11;
 C_working, dynamická akce OPEN.
