@@ -136,3 +136,27 @@ varied relative dilation w detects this residual source
 algebraically, but the physical permission and dynamics
 of w still require one selected fundamental action.
 11/11 exact SymPy controls; C_working, action OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.theta-normal-adjoint-20261031 -->
+## Full X plus physical Lorentz variation: normal adjoint kernel
+
+The [exact restricted adjoint audit](theta_normal_adjoint_kernel_2026_10.en.md)
+goes beyond the prior rank-9 fixed-X result by varying both the
+original Lorentz-real field X and its physical Lorentz connection.
+The field Euler equation is the covariant divergence of the
+independent tetrad Euler density, NOT the whole tetrad equation.
+
+A nonzero normal source E^mu_a=h V^mu X_a is invisible to
+every antisymmetric connection variation. A local first-order
+transport equation for h also annihilates its field Euler
+variation. An explicit timelike h=(-X^2)^(-5/2) source and
+a prescribed EXTERNAL metric-source functional demonstrate
+both cancellations with 11 exact independent SymPy tests.
+The external functional is NOT an admissible UBT microscopic
+action, and no physical non-Einstein on-shell claim follows.
+
+The action-level selection problem now is whether the ACTUAL
+Euler-source image of a chosen single-complex-Theta action
+intersects this formal kernel after physical Cartan sources,
+all Clifford grades, relative jets, boundaries and constraints.
+C_working; single-Theta dynamics remain OPEN.
