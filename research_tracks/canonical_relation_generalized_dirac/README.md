@@ -128,28 +128,3 @@ are retained at:
 
 They are useful comparative mathematics but are not the active UBT metric
 mechanism.
-
-## Full-Clifford metric-compatible torsion-square audit (2026-10-31)
-
-The established Clifford lift and action-order obstruction above are
-unchanged. A new **restricted exact check**, not a new dynamical
-postulate, lives in
-`FULL_CLIFFORD_TORSION_SQUARE.en.md` /
-`FULL_CLIFFORD_TORSION_SQUARE.cs.md` and
-`tests/test_clifford_compatible_torsion_square.py`.
-In a constant orthonormal frame, the arbitrary metric-compatible
-Lorentz spin connection has 24 coefficient directions and its
-minimal contracted Clifford term has rank 8: 4 vector plus
-4 trivector directions, with a 16-dimensional tensor kernel.
-The **torsion-corrected** operator square is verified coefficient
-by coefficient, including a nonzero-spin-curvature example whose
-minimal Dirac contraction vanishes identically. These are standard
-Einstein–Cartan facts checked in the existing UBT block carrier,
-not a proof of an UBT action, physical fermion spectrum, or
-dynamical tensor-torsion elimination.
-
-This narrows the next computation: derive the compatible
-left/right physical connection and its torsion from **one**
-selected Theta action, then verify the full Clifford operator
-and reduced constraint/energy structure without dropping
-the 16 tensor modes by hand.
