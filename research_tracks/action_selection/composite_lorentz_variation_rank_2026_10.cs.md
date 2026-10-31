@@ -78,7 +78,7 @@ Nechť je S0[e,omega] LIBOVOLNÝ nezávisle diferencovatelný geometrický srovn
 =\int\!(\mathcal C+J_X^*\mathcal E)\cdot\delta\omega.
 \]
 
-Přesné derivování lokální lineární akce s nezávislými Eulerovými zdroji tetrády a zdroji konexe při pevné tetrádě ověřuje úplné řetězové pravidlo ve všech 24 Lorentzových směrech. Tento konečný test zdrojů nevariuje skutečnou zakřivenou akci. Společná centrální jednofoma se mezi dvěma stranami vyruší; relativní centrální člen nikoliv.
+Přesné derivování lokální lineární akce s nezávislými Eulerovými zdroji tetrády a zdroji konexe při pevné tetrádě ověřuje úplné řetězové pravidlo ve všech 24 Lorentzových směrech. Tento konečný test zdrojů nevariuje skutečnou zakřivenou akci. Společná centrální jednoforma se mezi dvěma stranami vyruší; relativní centrální člen nikoliv.
 
 Nenulový normálový Eulerův kovektor tetrády může ležet v ker J_X^*:
 
