@@ -273,3 +273,30 @@ The previous MM conditional Euler-pullback theorem can
 use this **explicit candidate representation**, but
 microscopic action selection, phase/time admissibility,
 complex matter and Dirac constraint closure remain OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.complex-time-graded-reflection-fork -->
+## Complex-time admissibility fork for the existing graded real-linear connection
+
+The [exact paired branch audit](complex_time_graded_reflection_fork_2026_10.en.md)
+REUSES the earlier canonical scalar-fiber interpretation and
+strict all-frame Lorentz/holomorphy no-go. The local smooth
+Theta(x,psi) branch keeps the dagger-graded K operator local
+without imposing strict tau=t+i psi holomorphy.
+
+A reduced STRICT holomorphic sector can replace dagger with
+the Schwarz-reflected F*(tau)=F(conjugate(tau))†: it
+maps holomorphic fields to holomorphic fields and preserves
+the transformed Lorentz jet. However this samples the
+MIRRORED psi point. For every finite jet order N a polynomial
+with zero N-jet at a nonreal tau0 has a nonzero reflected
+value there. The replacement is therefore not an arbitrary-
+field finite-jet-local operator on the compact scalar fiber.
+
+A globally periodic analytic Hermitian witness has a
+determinant winding n and relative-center holonomy (-1)^n;
+normalized H changes sign on odd loops. These are
+conditional global topology checks, not physical particle
+predictions. 17 exact tests cover the result. The previous
+33 graded/MM tests remain in the same CI.
+Single-Theta action selection, psi kinetic dynamics and
+physical constraint reduction are still OPEN.
