@@ -220,3 +220,27 @@ and the Hermitian determinant is not holomorphic in the
 unrestricted complex field. The actual connection equations,
 physical torsion constraints and reduced healthy dynamics
 remain OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.dynamics-reuse-H-MM-adjoint -->
+## Integrated dynamics audit and derived-H MM adjoint gate
+
+The [consolidated evidence ledger](dynamics_reuse_hermitian_mm_adjoint_2026_10.en.md)
+explicitly reuses the existing GR conditional action, Palatini/Cartan
+and split-jet proofs, ADM modes, and the documented first-principles
+action nonselection. It gives a new restricted **formal differential
+adjoint-injectivity** theorem: for a gravity-only pullback of the
+already chosen MM/Palatini action, free algebraic K_J variations,
+the original X Euler equation and a joint H/X scale variation
+enforce the complete tetrad Euler equation even if the relative
+one-form is derived as w=-d ln(det H)/2 instead of varied freely.
+The complete fixed-e Cartan equation follows afterward.
+15/15 local exact SymPy regressions passed.
+
+**Non-negotiable representation gate:** this assumes K_J is a
+separate real-linear auxiliary action on the X jet. Using the SAME
+SL(2,C) spin coefficient on H and X violates this premise:
+H reality excludes the boost directions needed for the rank.
+An anti-Hermitian-only projection is not complex linear on
+unrestricted Theta. The full two-sided/graded intertwiner and
+its admissible action, extra complex sectors and physical
+constraints remain OPEN. No additional gravity ansatz was adopted.
