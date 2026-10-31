@@ -31,18 +31,18 @@ q=X^aX_a\ne0,\quad\det H>0,\quad
 w_\mu=-\tfrac12\partial_\mu\ln\det H.
 \]
 
-Assume physical Lorentz omega preserves normalized H, but algebraic split-jet K_J acts separately on X. This real-linear separation is NOT a derived unrestricted complex-linear two-sided Theta connection:
+**Keep TWO roles distinct:** the defining Lorentz jet connection varpi preserves normalized H, while the physical Lorentz connection omega entering S_geom is independently varied. An algebraic split-jet K_J acts separately on X. This is a real-linear comparator, NOT a derived unrestricted complex-linear two-sided Theta connection. Relative to the older freely variable split-jet coordinate K_old, the equivalent auxiliary coordinate is K_J=K_old+omega-varpi; its unrestricted algebraic variation is unchanged:
 
 \[
 e_\mu{}^a=s^{-1}(\partial_\mu X^a+
-(\omega_\mu{}^a{}_b+K_{J\mu}{}^a{}_b)X^b+w_\mu X^a),
+(\varpi_\mu{}^a{}_b+K_{J\mu}{}^a{}_b)X^b+w_\mu X^a),
 \quad s=\sqrt{\mathcal N_0}>0,\quad\det e\ne0.
 \]
 
 Let a chosen geometric gravity-only functional depend on auxiliary K_J and Theta only through e. Keep the complete fixed-tetrad Cartan source C in the variation:
 
 \[
-S_{\rm pull}=S_{\rm geom}[e(X,H,K_J,\omega),\omega],\qquad
+S_{\rm pull}=S_{\rm geom}[e(X,H,K_J,\varpi),\omega],\qquad
 \delta S_{\rm geom}=\int d^4x\,
 (\mathcal P^\mu{}_a\delta e_\mu{}^a+
 \mathcal C^\mu{}_{ab}\delta\omega_\mu{}^{ab}).
@@ -86,6 +86,20 @@ Stationarity of that same gravity functional eliminates the final normal Euler c
 \]
 
 This is a LOCAL theorem for a SPECIFIED variation space. It does not select the microscopic action, include direct H-dependent matter terms, or prove physical stability. The differential X equation is essential: K_J plus one Weyl tangent is NOT pointwise surjective.
+
+**Physical-versus-defining spin warning:** if varpi is identified with torsion-free physical Levi-Civita omega, the positive normalized H supplies a covariantly constant timelike internal vector. Its spacetime image n is Levi-Civita parallel and obeys Ric(n)=0; a nonzero-Lambda Einstein vacuum cannot then occur. Thus even when the adjoint theorem transmits the gravitational equations, imposing varpi=omega can exclude generic solutions. The conditional Einstein–Lambda branch needs the physical/jet separation, not a common spin identification.
+
+\[
+D^\varpi_\mu\widehat H=0,\quad
+\varpi=\mathring\omega(e),\quad
+\widehat H>0
+\ \Longrightarrow\
+\nabla^{\mathrm{LC}}_\mu n^\nu=0
+\ \Longrightarrow\
+R_{\mu\nu}n^\nu=0,\quad
+R_{\mu\nu}=\Lambda g_{\mu\nu},\ \Lambda\ne0
+\ \Longrightarrow\ n=0.
+\]
 
 ## Same-connection obstruction [PROVED]
 
