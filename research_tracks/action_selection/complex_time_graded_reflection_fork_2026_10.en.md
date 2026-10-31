@@ -19,7 +19,7 @@ UBT-AI-PROVENANCE-END
 
 ## Canonical interpretation and reflected involution [ASSUMED]
 
-Canonical psi is a compact internal scalar-fiber coordinate. Previous work proves that strict all-inertial-frame holomorphy in t+i psi cannot be imposed on general Lorentz-covariant microscopic dynamics when psi is an independent Lorentz scalar. We therefore examine a reduced holomorphic strip with reflection symmetry only, not the complete physical Lorentz theory:
+Canonical psi is a compact internal scalar-fiber coordinate. Prior work established that strict all-inertial-frame holomorphy in t+i psi cannot be imposed on general Lorentz-covariant microscopic dynamics when psi is an independent Lorentz scalar. We therefore examine a reduced holomorphic strip with reflection symmetry only, not the complete physical Lorentz theory:
 
 \[
 \tau=t+i\psi,\qquad
