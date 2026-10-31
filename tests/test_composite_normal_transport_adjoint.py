@@ -79,6 +79,12 @@ class NormalTransport(unittest.TestCase):
             s.trace(sharp(jets[mu])*jets[nu])/2))
         self.assertEqual(metric,eta)
 
+    def test_normal_source_from_symmetric_metric_euler_tensor(self):
+        H=s.Rational(1,2)*lam*V*V.T
+        source=2*H*E*eta
+        self.assertEqual(s.simplify(source-p),s.zeros(4))
+        self.assertEqual(H,H.T)
+
     def test_affine_nonorthonormal_frame(self):
         M=s.Matrix([[1,s.Rational(1,2),0,0],
                     [0,1,0,0],[0,0,2,0],[0,0,0,1]])
