@@ -49,3 +49,28 @@ Pro vektor je úplný geometrický součin $\nabla A=\nabla\cdot A+\nabla\wedge 
 <!-- BILINGUAL-UNIT: gate -->
 ## Potřebný následující výpočet
 Odvodit kompatibilní $\mathscr D_\mu$ z již specifikovaného oboustranného spojení, umocnit $\slashed{\mathscr D}$ včetně křivosti a torze a porovnat hlavní symbol a vazby s neměnnou kanonickou akcí. Samostatně sledovat axiální torzi, komutátorové bivektory a případné skalární/pseudoskalární projekce. **Stav: výzkumný kandidát; úplný Hamiltonián OPEN (otevřená); LEAN-PENDING; CAS-PENDING; významová kontrola překladů PENDING.**
+
+<!-- BILINGUAL-UNIT: full-clifford-exact-torsion-square-20261031 -->
+## Kompatibilní torzní kvadrát: přesný omezený ověřovač [PROVED, podmíněně]
+
+Dvojjazyčná poznámka
+`research_tracks/canonical_relation_generalized_dirac/FULL_CLIFFORD_TORSION_SQUARE.en.md`
+a 8 přesných testů v `tests/test_clifford_compatible_torsion_square.py`
+nahrazují dřívější schematický kvadrát v jednom přesně vymezeném
+modelu s *konstantní ortonormální tetrádou*. Standardní
+Lorentzova spinová konexe má 24 koeficientů; její minimálně
+kontrahovaný Cliffordův operátor prvního řádu zachycuje
+4 vektorové a 4 trivztorové směry, zatímco 16 tenzorových
+směrů tvoří její algebraické jádro. Jde o známou Einsteinovu–
+Cartanovu strukturu, nyní ověřenou v UBT blokové gama reprezentaci.
+
+Úplný kompatibilní kvadrát operátoru obsahuje spinovou
+křivost i opravu první derivace s torzí.
+Explicitní příklad z jádra má nenulovou spinovou křivost,
+ale přesně plochý Diracův operátor i kvadrát v tomto
+zmrazeném rámci. Ponechat křivostní člen a vypustit
+torzi by tedy vedlo k nesprávnému závěru.
+**Žádná dynamická konexe UBT nebyla vybrána.**
+Další branou zůstává odvození z jediné akce Theta,
+výběr faktoru, redukce vazeb a fyzikální stabilita.
+G1 a úplný Hamiltonián zůstávají OPEN.

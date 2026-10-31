@@ -49,3 +49,28 @@ The full geometric product for a vector is $\nabla A=\nabla\cdot A+\nabla\wedge 
 <!-- BILINGUAL-UNIT: gate -->
 ## Required next computation
 Compute the compatible $\mathscr D_\mu$ from the already specified two-sided connection, square $\slashed{\mathscr D}$ including curvature and torsion, and compare its principal symbol and constraint structure against the frozen canonical action. Track independently the axial torsion, commutator bivectors and any scalar/pseudoscalar projections. **Status: research candidate; full-Hamiltonian OPEN; LEAN-PENDING; CAS-PENDING; bilingual semantic check PENDING.**
+
+<!-- BILINGUAL-UNIT: full-clifford-exact-torsion-square-20261031 -->
+## Compatible torsion square: exact restricted verifier [PROVED, conditional]
+
+The paired note
+`research_tracks/canonical_relation_generalized_dirac/FULL_CLIFFORD_TORSION_SQUARE.en.md`
+and 8 exact checks in `tests/test_clifford_compatible_torsion_square.py`
+replace the prior schematic square in one carefully specified
+*constant orthonormal tetrad* comparison. The standard Lorentz
+spin connection has 24 coefficients; its minimally contracted
+first-order Clifford operator sees 4 vector and 4 trivector
+directions, while 16 tensor directions form its algebraic
+kernel. This is known Einstein–Cartan structure, now checked
+in the UBT block gamma representation.
+
+The full compatible operator square contains both spin
+curvature and the torsion-first-derivative correction.
+An explicit kernel example has nonzero spin curvature but
+identically the flat Dirac operator and flat square in this
+frozen frame. Thus retaining the curvature term while
+dropping torsion gives a spurious inference.
+**No dynamical UBT connection is selected.**
+The next gate remains derivation from the single-Theta
+action, factor selection, reduction of constraints and
+physical stability. G1 and the full Hamiltonian remain OPEN.
