@@ -293,6 +293,50 @@ Chybějící konstruktivní složkou je netautologická
 která vytvoří zakřivenou reálnou kanonickou centrální
 metriku ze svých vlastních jetů.
 G1 PARTIAL; fyzikální akce nebyla vybrána.
+**Navázat na existující program celé geometrické algebry** v
+`canonical/geometry/biquaternion_dirac_lift.tex` a
+`research_tracks/observer_information_hamiltonian_2026_10_full_clifford_operator.en.md`:
+otevřenou branou je kompatibilní konexe Cliffordova modulu,
+kvadrát Diracova operátoru včetně bivektorových, křivostních
+a torzních složek a jeho odvození z jediné akce Theta.
+Operátorové pozvednutí nepřidává druhou tetrádu;
+no-go čistého gradientu nesmí být vydáváno za nové
+výsledky Cliffordova modelu.
+
+<!-- BILINGUAL-UNIT: conformal-causal.full-complex-gradient-update -->
+## G1 historická regrese úplného komplexního gradientu sharp [HISTORICAL / PROVED]
+
+Viz G1_COMPLEX_FLAT_CONNECTION_GATE.en.md a
+tests/test_theta_canonical_flatness_gate.py.
+No-go plochosti přesného gradientu byl uzavřen již
+v červencovém patchi 2026 GAP-10T-GRADIENT-FLATNESS;
+zdejší komplexní Jacobiho výpočet je regresní a mírně
+zobecněné algebraické ověření, nikoli nově nalezená
+fyzikální věta. Předchozí říjnový Killingův výpočet
+předpokládal rank(d Re Theta)=4. Nynější komplexní
+výpočet odvozuje rank_C(dTheta)=4 jen z nedegenerovanosti;
+indukovaná komplexní afinní Levi-Civitova konexe je plochá.
+Explicitně je uvedena reálná Lorentzova metrika komplexního
+gradientu s rank(d Re Theta)=2. Nulová definiční konexe
+tedy nedokáže vytvořit zakřivenou kanonickou geometrii
+na deklarovaném 4-komplexně-složkovém nosiči Mat(2,C).
+
+V determinant zachovávajícím srovnávacím modelu
+SL(2,C)xSL(2,C) lze obě *ploché* levé/pravé konexe
+kalibračně odstranit, takže nejméně jedna neplochá
+konexe je pro neplochou kanonickou geometrii v této
+kalibrační třídě nutná. NENÍ dostačující: explicitní
+antihermitovská Lorentzova spinová konexe má nenulové F,
+ale na zvoleném Theta působí triviálně a g zůstává plochá.
+Naivní bezestopá Maurerova–Cartanova kompozitní konexe
+A=-(dTheta Theta^-1)_0 navíc poskytne tetrádu/metriku
+s hodností nejvýše 1 a chybějící dynamiku neuzavírá.
+
+Následujícím úkolem je skutečný kovariantní dvoustranný
+uzávěr odvozený z Theta s reálnou zakřivenou kanonickou
+metrikou sharp, netriviální vazbou křivosti na pole,
+kompatibilitou metriky/torze a dynamikou; bez vložení
+volné akce či cílového GR. G1 PARTIAL, C_working.
 
 <!-- BILINGUAL-UNIT: conformal-causal.integration-verification -->
 ## Společný rozsah ověření
