@@ -78,6 +78,8 @@ Let S0[e,omega] be ANY independently differentiable geometric comparator with it
 =\int\!(\mathcal C+J_X^*\mathcal E)\cdot\delta\omega.
 \]
 
+Exact differentiation of a linear local action with independent tetrad Euler sources and fixed-tetrad connection sources verifies the full composite chain rule for all 24 Lorentz directions. This finite source test does not vary an actual curved action. A common central one-form cancels between the two sides; a relative center does not.
+
 A nonzero normal tetrad Euler covector can lie in ker J_X^*:
 
 \[
@@ -127,4 +129,4 @@ An exact combined matrix calculation yields the following rank and nullity at th
 
 **Do not repeat known work:** the independent Palatini-Holst Cartan map, split-jet right inverse, real-dilation minisuperspace chain rule, vacuum b-degeneracy and full homogeneous Hamiltonian are already available in the repo. The next decisive check is to write a SINGLE candidate Theta action with an explicit real measure, physical/redundant connection identification and permitted variation bundle. Compute its full chain-rule pullback and project its Euler equations onto the normal covector above; prove that this equation survives after reducing auxiliaries and constraints. Then calculate the reduced principal symbol and bounded physical Hamiltonian, without assuming a new carrier dimension or replacing the canonical sharp metric. The current note does not select such an action.
 
-**Verifier:** `tests/test_clifford_composite_variation_rank.py` (9/9 local exact SymPy tests). **Grounding:** `canonical/geometry/connection.tex:13-83`; `research_tracks/action_selection/physics_closure_action_family_2026_10.en.md:39-80`; `research_tracks/action_selection/physics_closure_dilation_2026_10.en.md:16-54`; `research_tracks/action_selection/splitjet_spatial_dirac_2026_10.en.md:17-145`; `research_tracks/canonical_relation_generalized_dirac/FULL_CLIFFORD_TORSION_SQUARE.en.md:15-132`. No fundamental action selection or independent semantic translation approval is claimed.
+**Verifier:** `tests/test_clifford_composite_variation_rank.py` (11/11 local exact SymPy tests). **Grounding:** `canonical/geometry/connection.tex:13-83`; `research_tracks/action_selection/physics_closure_action_family_2026_10.en.md:39-80`; `research_tracks/action_selection/physics_closure_dilation_2026_10.en.md:16-54`; `research_tracks/action_selection/splitjet_spatial_dirac_2026_10.en.md:17-145`; `research_tracks/canonical_relation_generalized_dirac/FULL_CLIFFORD_TORSION_SQUARE.en.md:15-132`. No fundamental action selection or independent semantic translation approval is claimed.
