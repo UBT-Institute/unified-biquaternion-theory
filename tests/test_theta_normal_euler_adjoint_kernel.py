@@ -75,6 +75,34 @@ class NormalEulerAdjointKernel(unittest.TestCase):
                     rot[b,a]=-eta[b,b]
                     self.assertEqual(s.simplify((Eb.row(mu)*rot*Q)[0]),0)
 
+    def test_nonflat_stabilizer_connection_preserves_joint_kernel(self):
+        # Nonzero metric-compatible SO(3) rotation around spatial X.
+        # This is NOT a dynamically derived Theta spin connection.
+        Omega=s.zeros(4)
+        for i in range(1,4):
+            for j in range(1,4):
+                Omega[i,j]=sum(s.LeviCivita(i-1,j-1,k-1)*coords[k]
+                               for k in range(1,4))
+        self.assertEqual(Omega+Omega.T,s.zeros(4))
+        self.assertEqual(Omega*X,s.zeros(4,1))
+        self.assertNotEqual(s.diff(Omega,coords[1]),s.zeros(4))
+        self.assertEqual(s.Matrix(4,4,lambda mu,a:
+              int(mu==a)+((Omega*X)[a] if mu==0 else 0)),s.eye(4))
+        self.assertEqual(E.row(0)*Omega,s.zeros(1,4))
+        for a in range(4):
+            cov_div=sum(s.diff(E[mu,a],coords[mu]) for mu in range(4))
+            cov_div-=sum(E[0,b]*Omega[b,a] for b in range(4))
+            self.assertEqual(s.simplify(cov_div),0)
+
+    def test_nontrivial_homogeneous_transport_family(self):
+        h2=h*(1+coords[2]/coords[0])
+        self.assertEqual(s.simplify(sum(coords[mu]*s.diff(h2,coords[mu])
+                        for mu in range(4))+5*h2),0)
+        E2=s.Matrix(4,4,lambda mu,a:h2*X[mu]*Xlow[a])
+        for a in range(4):
+            self.assertEqual(s.simplify(sum(s.diff(E2[mu,a],coords[mu])
+                                        for mu in range(4))),0)
+
     def test_integration_by_parts_density_identity(self):
         t=s.symbols('t',positive=True)
         q=s.Function('q')(t)
