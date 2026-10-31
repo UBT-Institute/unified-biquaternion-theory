@@ -166,3 +166,26 @@ Euler-source image of a chosen single-complex-Theta action
 intersects this formal kernel after physical Cartan sources,
 all Clifford grades, relative jets, boundaries and constraints.
 C_working; single-Theta dynamics remain OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.exact-relative-weyl-norm-gate -->
+## Exact relative dilation: normal recovery and norm-only degeneracy
+
+The [paired exact-Weyl selection audit](exact_relative_weyl_norm_gate_2026_10.en.md)
+reuses the previously known closed relative-dilation
+construction, rather than presenting it as a new field mechanism.
+If an exact scalar phi is INDEPENDENTLY varied with X, the
+coupled variation delta X=epsilon X, delta phi=-epsilon
+gives delta e=epsilon e with no derivative of epsilon.
+With the existing 9-dimensional Lorentz metric image, the
+pointwise metric response reaches rank 10 and detects the
+normal formal Euler source of PR #819.
+
+If phi must instead be a **Lorentz-invariant ultralocal
+function only of X squared**, the uniquely compensating
+choice is phi=-log(abs(X squared))/2. This forces
+X contracted with e to vanish, hence the regular coframe
+and its canonical sharp metric degenerate (rank at most 3).
+The result is a scoped no-go for that norm-only route,
+not for full complex Theta, its independent Clifford grades,
+derivative closures or the unfinished single action.
+11 exact SymPy regressions; microscopic dynamical selection OPEN.
