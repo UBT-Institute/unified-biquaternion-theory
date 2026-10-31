@@ -189,3 +189,34 @@ The result is a scoped no-go for that norm-only route,
 not for full complex Theta, its independent Clifford grades,
 derivative closures or the unfinished single action.
 11 exact SymPy regressions; microscopic dynamical selection OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.full-theta-hermitian-relative-20261031 -->
+## Full Theta: Hermitian-determinant relative center and curved sharp witness
+
+The [paired full-Theta audit](full_theta_hermitian_compensator_2026_10.en.md)
+reuses the existing Hermitian/anti-Hermitian split of the SAME
+four-complex-component biquaternion. On a nondegenerate
+positive-Hermitian patch, insisting that the entire defining
+jet remain on the classical i-Hermitian slice, together with
+a traceless SL(2,C) spin connection, **forces**
+w=-d log(det H)/2. The full remaining matrix condition
+requires the normalized H to be covariantly parallel;
+choosing w from its trace alone does not enforce that.
+
+This built-in field-dependent relative jet permits a
+local scaling variation of the ORIGINAL Theta with
+delta e=epsilon e and a nonzero normal Euler pairing,
+without a separate scalar field. An explicit nonflat
+sharp-metric witness has det e=-1-4ab z^2,
+R^x_yxy=-12ab at the spatial origin, and noncommuting
+SU(2) curvature. The complete original sharp metric and
+4-by-4 Clifford anticommutator are checked in
+20 exact local SymPy regressions.
+
+The mechanism is conditional kinematics, not microscopic
+action selection. Positive H reduces the allowed spin
+holonomy, central complex phase covariance is not automatic,
+and the Hermitian determinant is not holomorphic in the
+unrestricted complex field. The actual connection equations,
+physical torsion constraints and reduced healthy dynamics
+remain OPEN.
