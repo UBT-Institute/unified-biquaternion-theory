@@ -282,3 +282,31 @@ Předchozí podmíněná MM věta o přenosu Eulerových rovnic
 může použít tuto **explicitní kandidátní reprezentaci**,
 avšak mikroskopický výběr akce, přípustnost fáze/času,
 komplexní hmota a Diracovy vazby zůstávají OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.complex-time-graded-reflection-fork -->
+## Volba přípustné větve komplexního času pro existující gradovanou reálně lineární konexi
+
+[Přesný dvojjazyčný audit větví](complex_time_graded_reflection_fork_2026_10.cs.md)
+PŘEBÍRÁ starší kanonickou interpretaci skalárního vlákna
+a no-go přísné Lorentzovy holomorfie ve všech rámcích.
+Lokální hladká větev Theta(x,psi) zachovává dagger-gradovaný
+operátor K lokální bez požadavku holomorfie tau=t+i psi.
+
+Redukovaný PŘÍSNĚ holomorfní sektor může nahradit dagger
+Schwarzovým zrcadlením F*(tau)=F(conjugate(tau))†:
+zachovává holomorfii polí i transformovaného Lorentzova jetu.
+Zároveň však používá ZRCADLENÝ bod psi. Pro každý konečný
+řád jetu N existuje polynom s nulovým N-jetem v mimoreálném
+tau0 a nenulovou zrcadlenou hodnotou tamtéž.
+Náhrada proto není lokálním diferenciálním operátorem
+konečného řádu pro obecné pole na kompaktním skalárním vlákně.
+
+Globálně periodický analytický hermitovský příklad má
+vinutí determinantu n a holonomii relativního členu (-1)^n;
+normalizované H změní na lichém oběhu znaménko.
+Jde o podmíněné globální topologické kontroly,
+nikoli o fyzikální předpovědi částic.
+Výsledek pokrývá 17 přesných testů. Dřívějších
+33 testů gradované/MM větve zůstává ve stejném CI.
+Výběr akce jediného Theta, kinetická dynamika psi
+a redukce fyzikálních vazeb zůstávají OPEN.
