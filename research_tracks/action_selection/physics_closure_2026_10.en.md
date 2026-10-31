@@ -110,5 +110,5 @@ physical-mode theorem; the full operator varies its gamma matrices
 and curvature. The next microscopic gate is the admissible
 single-Theta variation bundle and the surviving normal
 equation after all constraints, not an independently imported
-Palatini or a freely selected connection. Exact 9/9 tests;
+Palatini or a freely selected connection. Exact 11/11 tests;
 C_working, dynamical action OPEN.
