@@ -310,3 +310,32 @@ Výsledek pokrývá 17 přesných testů. Dřívějších
 33 testů gradované/MM větve zůstává ve stejném CI.
 Výběr akce jediného Theta, kinetická dynamika psi
 a redukce fyzikálních vazeb zůstávají OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.full-theta-sharp-norm-winding -->
+## Celé komplexní Theta: netriviální vinutí normy sharp při zachované kanonické tetrádě
+
+[Dvojjazyčný příklad celého komplexního Theta](full_theta_sharp_norm_winding_2026_10.cs.md)
+opravuje případné neoprávněné zobecnění staršího
+výsledku pro pozitivní H: H>0 na celém kruhu
+implikuje nulové vinutí det Theta pomocí
+akretivní homotopie, ale PŮVODNÍ komplexní
+bikvaternion připouští sektor indefinitního H
+s det H=-1 a det Theta|origin=rho exp(i psi/R_psi).
+Jde přesně o centrální kvaternionovou normu sharp
+Theta^sharp Theta, NIKOLI náhradu metriky.
+
+Jediné celé Theta uskutečňuje netriviální
+vinutí determinantu 1 na nesingulárním kruhu
+psi, zatímco jeho ČTYŘI prostoročasové derivace
+generují nezměněnou regulární Minkowského
+tetrádu a přesnou kanonickou metriku sharp.
+Odlišná kompozitní jednofoma
+A_Theta=(1/2)d log det Theta má odmocninovou
+holonomii -1; předchozí realitní w(H) tetrády
+zůstává 0. Podmíněná půlčíselná spektra
+nabitých testovacích polí zatím nejsou
+rovnicemi UBT ani fyzikálním vinutím struny,
+spinovou statistikou nebo T-dualitou.
+Tento přesný rozsah hlídá 21 symbolických
+testů. Přípustnost indefinitního H v akci
+a dynamika psi/hmoty zůstávají OPEN.
