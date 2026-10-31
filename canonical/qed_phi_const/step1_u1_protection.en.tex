@@ -1,0 +1,67 @@
+% UBT-AI-PROVENANCE-BEGIN
+% schema: ubt-ai-provenance/v1
+% tier: B_machine_verified
+% ai_assistance: disclosed
+% human_review: machine-verification
+% editorial_responsibility: Ing. David Jaroš
+% policy: ../../AI_PROVENANCE.md
+% notice: Machine-verified against named sources or verifiers; individual attestation is not claimed.
+% UBT-AI-PROVENANCE-END
+
+\ifdefined\INCLUDEMODE\else
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\emergencystretch=3em
+\usepackage{ubtprovenance}
+\UBTTier{B}
+\renewcommand{\UBTProvenanceNotice}{\par\smallskip{\footnotesize AI provenance --- Tier B. AI-assisted; machine-verified against the named verifier; individual human attestation is not claimed.}\par\smallskip}
+\title{Step 1: corrected U(1) background test}
+\author{UBT}
+\date{2026-10-31}
+\begin{document}\maketitle\UBTProvenanceNotice
+\fi
+
+
+% BILINGUAL-UNIT: u1-neutrality.scope
+
+\section{Scope and corrected status}
+
+GAP-U1-NEUTRALITY: FORMER PROOF REFUTED; PHYSICAL BRIDGE OPEN. The former argument in \path{canonical/qed_phi_const/step1_u1_protection.tex} replaced the declared left phase action by conjugation. We correct that argument and continue only on the original single-biquaternion carrier. The microscopic action, physical charge representation and constrained positive fluctuation spectrum remain unselected. No new field, metric or universe identification is adopted.
+
+% BILINGUAL-UNIT: u1-neutrality.action
+
+\section{The action, not commutation, determines charge}
+
+For a psi-independent electromagnetic gauge parameter, every Fourier coefficient has the same declared left charge. Being real or having zero Fourier index does not make a nonzero field invariant. Central conjugation would leave the ENTIRE algebra invariant and could not charge just the other components. The old theorem therefore establishes neither neutrality nor a massless photon.
+
+\[
+\begin{gathered}\Theta'=e^{i\alpha}\Theta,\qquad \left.\frac{d}{d\alpha}(e^{i\alpha}v)\right|_{\alpha=0}=iv\ne0\quad(v\ne0),\\ e^{i\alpha}ve^{-i\alpha}=v.
+\qquad \theta'_n=e^{i\alpha}\theta_n.\end{gathered}
+\]
+
+% BILINGUAL-UNIT: u1-neutrality.mass
+
+\section{Conditional gauge-boson mass test}
+
+Assume a positive canonically normalized complex-scalar kinetic term, Hermitian charge Q and a constant background v, with natural units and signature (+---). Comparing its quadratic gauge term with the Proca normalization gives the following result. Here v is the complex field value itself, not the real radial convention v divided by the square root of two. Thus a nonzero background in the declared charge-one representation fails the neutral-background test. This is a diagnostic of the former scalar comparator, not a derivation of the unresolved UBT physical Hessian. Gauge invariance of an action alone does not imply a massless gauge boson.
+
+\[
+\begin{gathered}
+\mathcal L_{\rm kin}=(D_\mu\phi)^\dagger D^\mu\phi,\qquad D_\mu=\partial_\mu+ieQA_\mu,\\
+\mathcal L_{A^2}=e^2 v^\dagger Q^2v A_\mu A^\mu=\tfrac12m_\gamma^2 A_\mu A^\mu,\\
+m_\gamma^2=2e^2\lVert Qv\rVert^2,\qquad m_\gamma^2=0\Longleftrightarrow Qv=0\quad(e\ne0).
+\end{gathered}
+\]
+
+% BILINGUAL-UNIT: u1-neutrality.verification
+
+\section{Verification and continuation}
+
+The analytical correction and independent checks are recorded in the paired research note \path{u1_neutrality_composite_channel} and \path{reports/u1_neutrality_2026_10_31.json}. The verifier \path{tools/verify_u1_neutrality.py} checks the phase counterexample and positive-scalar mass normalization. LEAN-PENDING: neither lean nor lake is installed. This does not derive a UBT physical Hessian or a multiverse channel. The former QED conclusion is OPEN, not PROVED. English is the translation source. Independent semantic translation approval and author attestation are not claimed.
+
+\ifdefined\INCLUDEMODE\def\UBTFinish{}\else\def\UBTFinish{\end{document}}\fi
+\UBTFinish

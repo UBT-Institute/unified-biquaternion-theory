@@ -101,3 +101,10 @@ Pokud je reprodukovatelný empirický protokol neposune výše, následující z
 | Program bikvaternionové metric-null / volume-null neviditelnosti | SPECULATIVE | `speculative_extensions/invisibility/` |
 | duše / nesmrtelnost | SPECULATIVE | `speculative_extensions/` |
 | Matrix / ontologie simulace | SPECULATIVE | `speculative_extensions/metaphysics/` (nebo ekvivalentní spekulativní cesta) |
+
+<!-- BILINGUAL-UNIT: claims-matrix.u1-neutrality -->
+## Oprava neutrality konstantního pozadí
+
+**GAP-U1-NEUTRALITY: FORMER PROOF REFUTED; PHYSICAL BRIDGE OPEN.** Deklarované levé působení fáze neponechává nenulový reálný nulový mód neutrální. Opravený srovnávací model kladného skaláru vyžaduje Qv=0 pro bezhmotný foton; neutrální fyzikální složka UBT ani její vlna odvozeny nebyly. Omezená věta o reálně lineárním Lorentzově komutantu vylučuje smíšené neutrální a nabité lineární rozdělení na uvedeném původním nosiči. Neutrální složená veličina existuje, ale její fyzikální korelátor a elektromagnetické přiřazení zdroje a odečtu zůstávají otevřené. Nejde o důkaz komunikace s multiversem.
+
+[en](research_tracks/action_selection/u1_neutrality_composite_channel.en.md); [cs](research_tracks/action_selection/u1_neutrality_composite_channel.cs.md). Starší kroky QED jsou podmíněným starším materiálem; párový opravený krok 1 a krok 6 nahrazují jejich závěry o neutralitě a uzavření. Pro tuto aktualizaci netvrdíme autorské potvrzení.
