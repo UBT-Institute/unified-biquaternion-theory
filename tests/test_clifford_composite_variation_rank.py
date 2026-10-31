@@ -113,4 +113,23 @@ class CompositeLorentzVariationRank(unittest.TestCase):
         self.assertNotEqual(source,s.zeros(10,1))
         self.assertEqual(source.T*G,s.zeros(1,24))
 
+    def test_full_composite_chain_rule_all_lorentz_coefficients(self):
+        X=s.Matrix([2,1,0,0]); e0=s.eye(4)
+        source=s.Matrix(4,4,lambda i,j:s.Rational(2*i+3*j+1,7))
+        t=s.symbols("t")
+        for k,d in enumerate(dirs):
+            de=omega_response(*d,X)
+            bare=s.Rational(k-11,3)
+            L=sum(source[i,j]*(e0[i,j]+t*de[i,j])
+                  for i in range(4) for j in range(4))+bare*t
+            target=bare+sum(source[i,j]*de[i,j]
+                            for i in range(4) for j in range(4))
+            self.assertEqual(s.diff(L,t),target)
+
+    def test_common_central_two_sided_jet_cancels(self):
+        t=s.symbols("t")
+        Q=s.Matrix([[1+I,2],[3,4-I]])
+        self.assertEqual(t*s.eye(2)*Q-Q*t*s.eye(2),s.zeros(2))
+        self.assertEqual(2*t*s.eye(2)*Q-Q*t*s.eye(2),t*Q)
+
 if __name__=="__main__": unittest.main()
