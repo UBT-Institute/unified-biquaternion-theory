@@ -93,7 +93,7 @@ Její integrál má netriviální odmocninové znaménko. Jde o holonomii FORMÁ
 \sqrt{\det\Theta}|_0=\sqrt\rho\,e^{i\psi/(2R_\psi)}.
 \]
 
-NENAHR AZUJME w(H) členem A_Theta v definující derivaci tetrády: realita by obecně selhala. Tyto dva geometrické/kompozitní objekty slouží odlišným účelům a žádný není novým nezávislým fundamentálním polem.
+NENAHRAZUJME w(H) členem A_Theta v definující derivaci tetrády: realita by obecně selhala. Tyto dva geometrické/kompozitní objekty slouží odlišným účelům a žádný není novým nezávislým fundamentálním polem.
 
 ## Proč striktně pozitivní H zakazuje vinutí celého pole [PROVED]
 
