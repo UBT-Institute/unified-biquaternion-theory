@@ -45,6 +45,11 @@ class FullThetaDeterminantWinding(unittest.TestCase):
         self.assertEqual(H.eigenvals(),{s.Integer(-1):1,s.Integer(1):1})
         self.assertEqual(s.simplify(H+adj(H)),2*H)
 
+    def test_winding_is_canonical_complex_quaternion_sharp_norm(self):
+        T=sector_at_origin(Theta)
+        self.assertEqual(s.simplify(sharp(T)*T-T.det()*J),Z)
+        self.assertEqual(s.simplify(T*sharp(T)-T.det()*J),Z)
+
     def test_full_field_determinant_is_nonzero_unit_winding(self):
         d=s.simplify(sector_at_origin(Theta).det())
         self.assertEqual(s.simplify(d-rho*s.exp(I*theta)),0)
