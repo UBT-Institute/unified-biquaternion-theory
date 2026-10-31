@@ -172,3 +172,27 @@ protíná s tímto formálním jádrem po zahrnutí fyzikálních
 Cartanových zdrojů, všech Cliffordových stupňů, relativních
 jetů, hranic a vazeb. C_working; dynamika jediného Theta
 zůstává OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.exact-relative-weyl-norm-gate -->
+## Exaktní relativní dilatace: normálové obnovení a normová degenerace
+
+[Dvojjazyčný audit exaktní Weylovy selekce](exact_relative_weyl_norm_gate_2026_10.cs.md)
+navazuje na dříve známou konstrukci uzavřené relativní
+dilatace a nevydává ji za nový mechanismus pole.
+Je-li exaktní skalár phi variován NEZÁVISLE na X,
+spřažená variace delta X=epsilon X, delta phi=-epsilon
+dává delta e=epsilon e bez derivací epsilon.
+S dřívějším 9-rozměrným Lorentzovým metrickým obrazem
+dosáhne bodová odezva hodnosti 10 a zachytí normálový
+formální Eulerův zdroj z PR #819.
+
+Musí-li však být phi **Lorentzovsky invariantní
+ultralokální funkcí pouze druhé mocniny X**,
+jediná kompenzační volba je phi=-log(abs(X squared))/2.
+Ta vynutí nulovou kontrakci X s e, takže regulární
+tetráda a její kanonická metrika sharp degenerují
+(hodnost nejvýše 3). Výsledek je omezeným no-go
+pro tuto normovou cestu, nikoli pro úplné komplexní
+Theta, jeho nezávislé Cliffordovy stupně, derivované
+uzávěry či nedokončenou jedinou akci.
+11 přesných regresí SymPy; mikroskopický výběr dynamiky OPEN.
