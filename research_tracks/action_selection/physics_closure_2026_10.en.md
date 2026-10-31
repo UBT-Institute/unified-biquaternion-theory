@@ -151,7 +151,13 @@ every antisymmetric connection variation. A local first-order
 transport equation for h also annihilates its field Euler
 variation. An explicit timelike h=(-X^2)^(-5/2) source and
 a prescribed EXTERNAL metric-source functional demonstrate
-both cancellations with 11 exact independent SymPy tests.
+both cancellations with 13 exact independent SymPy tests.
+The test is strengthened by a nonzero-curvature SO(3) stabilizer
+connection with omega_mu X=0: the actual defining tetrad remains
+regular, and the simultaneous normal adjoint kernel persists.
+A second homogeneous transport family confirms local profile
+nonuniqueness, not physical propagating modes.
+The full restricted verifier now has 13 exact SymPy tests.
 The external functional is NOT an admissible UBT microscopic
 action, and no physical non-Einstein on-shell claim follows.
 
