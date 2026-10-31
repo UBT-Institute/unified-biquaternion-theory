@@ -255,3 +255,30 @@ není komplexně lineární na neomezeném Theta.
 Úplný dvoustranný/gradovaný intertwiner a jeho přípustná
 akce, další komplexní sektory i fyzikální vazby zůstávají
 OPEN. Nebyl přijat další gravitační ansatz.
+
+<!-- BILINGUAL-UNIT: physics-closure.full-theta-graded-reallinear -->
+## Ekvivariantní gradovaný pomocný jet celého Theta: reprezentační brána v reálně lineární kategorii
+
+[Dvojjazyčná přesná konstrukce](full_theta_reallinear_graded_jet_2026_10.cs.md)
+nezavádí nové fundamentální pole ani gravitační funkcionál.
+Algebraický pomocný tenzor K z algebry sl2(C) působí jen
+na již existující antihermitovskou složku P_-(Theta),
+ve tvaru K P_-(Theta)+P_-(Theta) K†. Tento **reálně
+lineární** gradovaný jet je přesně Lorentzovsky
+ekvivariantní vůči lokální kongruenci SL2(C) a zachovává
+podmínku paralelnosti H i kanonickou centrální metriku
+sharp. Nezávislé K na neizotropním nosiči má hodnost 12
+v odezvě tetrády; dříve odvozené relativní w z determinantu
+vyruší gradienty lokálního REÁLNÉHO přeškálování.
+
+Tatáž věta vylučuje nenulové KOMPLEXNĚ lineární mapy
+na Mat2(C) anulující všechny hermitovské směry.
+Sestrojený gradovaný jet není ekvivariantní vůči
+nezávislé centrální komplexní fázi. Již dříve víme,
+že tato fáze není homogenní kalibrací zamčené metriky
+sharp (starší věta #701); nejde o nové fázové no-go.
+18 přesných lokálních regresí SymPy pokrývá výsledek.
+Předchozí podmíněná MM věta o přenosu Eulerových rovnic
+může použít tuto **explicitní kandidátní reprezentaci**,
+avšak mikroskopický výběr akce, přípustnost fáze/času,
+komplexní hmota a Diracovy vazby zůstávají OPEN.

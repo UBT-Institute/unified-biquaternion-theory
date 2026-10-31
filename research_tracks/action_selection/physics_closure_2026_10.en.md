@@ -246,3 +246,30 @@ An anti-Hermitian-only projection is not complex linear on
 unrestricted Theta. The full two-sided/graded intertwiner and
 its admissible action, extra complex sectors and physical
 constraints remain OPEN. No additional gravity ansatz was adopted.
+
+<!-- BILINGUAL-UNIT: physics-closure.full-theta-graded-reallinear -->
+## Full-Theta equivariant graded auxiliary jet: representation gate resolved in real-linear category
+
+The [paired exact construction](full_theta_reallinear_graded_jet_2026_10.en.md)
+introduces no new fundamental field or gravity functional.
+An algebraic sl2(C) auxiliary tensor K acts only on the
+already-existing anti-Hermitian component P_-(Theta),
+via K P_-(Theta)+P_-(Theta) K†. This **real-linear**
+graded jet is exactly Lorentz-equivariant under local
+SL2(C) congruence while preserving the Hermitian
+parallelism constraint and the canonical central-sharp
+metric. Independent K at a non-null carrier has rank 12
+in its coframe response; the existing determinant-derived
+relative w cancels local REAL scaling gradients.
+
+The same theorem excludes nonzero COMPLEX-linear maps
+on Mat2(C) annihilating every Hermitian direction.
+The constructed graded jet is not equivariant under an
+independent central complex phase. This phase is already
+known not to be a homogeneous gauge of the locked sharp
+metric (old #701 theorem); no new phase no-go is claimed.
+18 exact local SymPy regressions cover the result.
+The previous MM conditional Euler-pullback theorem can
+use this **explicit candidate representation**, but
+microscopic action selection, phase/time admissibility,
+complex matter and Dirac constraint closure remain OPEN.
