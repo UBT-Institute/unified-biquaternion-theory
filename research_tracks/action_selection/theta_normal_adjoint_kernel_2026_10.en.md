@@ -106,6 +106,48 @@ At the stated background, independent tetrad variation gives nonzero E; both com
 
 **Critical limitation:** H and the background are EXTERNAL, fixed data. S_H is not a diffeomorphism/gauge-selected microscopic UBT action, nor does this example exhibit a physical solution or Einstein failure. Its role is to certify a genuine nonzero cokernel of the differential variation map.
 
+## Nonflat spin-connection and transport-family controls [PROVED, restricted]
+
+The joint kernel is not an artefact of assuming vanishing spin
+curvature. On the same timelike Cartesian field X=x, introduce a
+metric-compatible spatial rotation connection stabilizing X:
+
+\[
+\omega_0{}^i{}_j=\epsilon^i{}_{jk}x^k,\quad
+\omega_\ell{}^a{}_b=0\ (\ell=1,2,3),\quad
+\omega_\mu{}^a{}_bX^b=0,\quad
+F_{i0}=\partial_i\omega_0\not\equiv0,
+\]
+
+It has nonzero curvature, but leaves the **actual** defining
+coframe regular and the normal adjoint divergence zero:
+
+\[
+D_\mu^\omega X^a=\delta_\mu{}^a,\quad
+g_{\mu\nu}=\eta_{\mu\nu},\quad
+D_\mu^\omega(hx^\mu x_a)=0.
+\]
+
+This is a chosen kinematic spin connection and NOT a solution of
+the microscopic UBT connection Euler equation. It gives a stricter
+counter-control than the flat-connection witness, while retaining
+the full covariant relation rather than a substituted dagger Gram
+readout. The source and its kernel may change once a physical
+Cartan source or nonminimal Clifford coupling is specified.
+
+The adjoint kernel also has locally nonunique normal profiles.
+For a real constant lambda the following entire family works:
+
+\[
+h_\lambda=\rho^{-5/2}(1+\lambda y/t),\quad
+x^\mu\partial_\mu h_\lambda=-5h_\lambda,\quad
+\partial_\mu(h_\lambda x^\mu x_a)=0.
+\]
+
+This illustrates the transport initial-data freedom; it does not
+constitute a count of physical propagating modes. Both additional
+cases are exact SymPy regressions. Total local verifier: 13/13.
+
 ## Noether identity and the remaining full-theory gate [OPEN]
 
 For an independently diffeomorphism-invariant pure-metric action on a torsion-free compatible branch, the familiar Bianchi/Noether identity gives an even stronger redundancy of X variation (with densitized metric Euler H):
@@ -122,4 +164,4 @@ Here the metric Noether identity makes the X Euler equation a differential ident
 
 **Next decisive calculation:** identify the actual admissible Euler sources and full variation bundle of ONE selected complex-Theta action, including the independent fixed-tetrad Cartan derivative, relative two-sided jet, all Clifford grades, boundary data and constraint quotient. Test whether that admissible source set intersects this nonzero normal transport kernel. Do not assume any arbitrary E comes from UBT.
 
-**Exact verifier:** `tests/test_theta_normal_euler_adjoint_kernel.py` (11/11 local SymPy tests). **Prior-work baseline:** `research_tracks/action_selection/composite_lorentz_variation_rank_2026_10.en.md`; `research_tracks/action_selection/physics_closure_action_family_2026_10.en.md`; `research_tracks/action_selection/splitjet_spatial_dirac_2026_10.en.md`; `canonical/ACTION.en.md`. No Lean or independent bilingual semantic approval is claimed.
+**Exact verifier:** `tests/test_theta_normal_euler_adjoint_kernel.py` (13/13 local SymPy tests). **Prior-work baseline:** `research_tracks/action_selection/composite_lorentz_variation_rank_2026_10.en.md`; `research_tracks/action_selection/physics_closure_action_family_2026_10.en.md`; `research_tracks/action_selection/splitjet_spatial_dirac_2026_10.en.md`; `canonical/ACTION.en.md`. No Lean or independent bilingual semantic approval is claimed.
