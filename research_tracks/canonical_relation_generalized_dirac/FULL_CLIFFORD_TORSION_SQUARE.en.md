@@ -104,7 +104,7 @@ Yet it has noncommuting spin matrices and nonzero curvature, while the minimal f
 \mathcal D^2=\eta^{\mu\nu}\partial_\mu\partial_\nu.
 \]
 
-This does not exclude additional torsion observables or matter couplings; it proves that spin curvature alone cannot be read off from the contracted Dirac operator. All curvature and torsion terms must be retained before drawing a dynamical conclusion.
+This does not exclude additional torsion observables or matter couplings; it demonstrates that spin curvature alone cannot be read off from the contracted Dirac operator. All curvature and torsion terms must be retained before drawing a dynamical conclusion.
 
 ## Vector, axial and causal control [PROVED, restricted]
 
