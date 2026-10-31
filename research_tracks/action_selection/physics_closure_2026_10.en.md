@@ -112,3 +112,27 @@ single-Theta variation bundle and the surviving normal
 equation after all constraints, not an independently imported
 Palatini or a freely selected connection. Exact 11/11 tests;
 C_working, dynamical action OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.normal-transport-adjoint-20261031 -->
+## Carrier Euler variation: transport is weaker than the normal metric equation
+
+[Exact local formal-adjoint witness](composite_normal_transport_adjoint_2026_10.en.md)
+continues the rank-9 physical-Lorentz-only metric variation result
+from PR #817. With a fixed scale, regular e=D_omega X/s
+and an independently varied Lorentz omega, the carrier
+Euler equation is the covariant divergence of the tetrad
+Euler density. When the fixed-tetrad connection source C_omega
+vanishes, the joint carrier/Lorentz equations still admit
+P^mu_a=lambda V^mu X_a, with
+partial_mu(lambda V^mu)+s lambda=0 rather than lambda=0.
+A smooth timelike chart with X=x and lambda=t^-5
+gives a **nonzero symmetric metric Euler source** annihilating
+all 24 Lorentz variations and all 4 carrier Euler equations.
+
+This is a constructed formal-adjoint source, NOT a
+stationary solution of the unfinalized S_UBT or an
+action-level no-go. The previously known independently
+varied relative dilation w detects this residual source
+algebraically, but the physical permission and dynamics
+of w still require one selected fundamental action.
+11/11 exact SymPy controls; C_working, action OPEN.

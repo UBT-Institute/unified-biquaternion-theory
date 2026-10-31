@@ -113,3 +113,30 @@ jediné Theta a přežívající normálová rovnice po všech
 vazbách, nikoli nezávisle převzatý Palatiniho člen nebo
 volně vybraná konexe. Přesné testy 11/11;
 C_working, dynamická akce OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.normal-transport-adjoint-20261031 -->
+## Eulerova variace nosiče: transport je slabší než normálová metrická rovnice
+
+[Přesný lokální příklad formálně adjungovaného jádra](composite_normal_transport_adjoint_2026_10.cs.md)
+navazuje na výsledek metrické variace hodnosti 9 při
+ryze fyzikální Lorentzově konexi z PR #817.
+Při pevné škále, regulární e=D_omega X/s a nezávisle
+variované Lorentzově omega je Eulerova rovnice nosiče
+kovariantní divergencí tetrádové Eulerovy hustoty.
+Když zmizí zdroj konexe C_omega při pevné tetrádě,
+společné rovnice nosiče a Lorentzovy konexe stále
+připouštějí P^mu_a=lambda V^mu X_a s
+partial_mu(lambda V^mu)+s lambda=0 namísto lambda=0.
+Hladká časupodobná oblast s X=x a lambda=t^-5
+poskytuje **nenulový symetrický metrický Eulerův zdroj**,
+který anuluje všech 24 Lorentzových variací i všechny
+4 Eulerovy rovnice nosiče.
+
+Jde o zkonstruovaný formálně adjungovaný zdroj,
+NIKOLIV o stacionární řešení nedokončené S_UBT
+ani o no-go na úrovni fundamentální akce.
+Dříve známá nezávisle variovaná relativní dilatace w
+tento zbytkový zdroj algebraicky detekuje, avšak její
+fyzikální přípustnost a dynamika stále vyžaduje jedinou
+vybranou fundamentální akci.
+11/11 přesných kontrol SymPy; C_working, akce OPEN.
