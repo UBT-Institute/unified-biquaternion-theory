@@ -63,7 +63,7 @@
     "Postulate a new independent scalar, change the locked sharp metric, or select arbitrary source/readout gain to close the gap."
   ],
   "verification": {
-    "status": "analytic_with_exact_and_numeric_checks",
+    "status": "verified_with_scope",
     "artifacts": [
       "tools/verify_u1_neutrality.py",
       "tests/test_u1_neutrality.py",

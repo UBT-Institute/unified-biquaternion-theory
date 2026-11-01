@@ -10,6 +10,10 @@ from datetime import datetime, timezone
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import verify_bilingual_semantics as v
 
+LOCAL_MAX_CHARS = 24000
+LOCAL_MAX_PARAGRAPHS = 12
+LOCAL_MAX_PREDICT = 4096
+
 # Constrain JSON structure at decoding time; semantic checks remain fail-closed.
 REVIEW_SCHEMA = {
     "type": "object", "additionalProperties": False,
@@ -44,6 +48,7 @@ class OllamaReviewer:
     last_response = None
     def __init__(self, model=None, timeout=600):
         self.model, self.timeout = model or os.environ.get("OLLAMA_MODEL", "qwen2.5:7b"), timeout
+        self.calls = 0
     def __call__(self, batch):
         # Small local models omit reviews in multi-pair requests. Review each
         # pair independently, validate it immediately, then combine evidence.
@@ -63,6 +68,16 @@ class OllamaReviewer:
         # Constrain identifiers at decoding time rather than repairing model output.
         # Multi-paragraph pairs retain the original strict coverage validator.
         item = batch[0]
+        schema["properties"]["reviews"]["minItems"] = 1
+        schema["properties"]["reviews"]["maxItems"] = 1
+        alignment = schema["properties"]["reviews"]["items"]["properties"]["alignments"]
+        alignment["minItems"] = 1
+        alignment["maxItems"] = len(item["en"]) + len(item["cs"])
+        for lang in ("en", "cs"):
+            ids = alignment["items"]["properties"][lang]
+            ids["items"]["enum"] = [p["id"] for p in item[lang]]
+            ids["maxItems"] = len(item[lang])
+            ids["uniqueItems"] = True
         if len(item["en"]) == 1 and len(item["cs"]) == 1:
             alignment = schema["properties"]["reviews"]["items"]["properties"]["alignments"]
             alignment["minItems"] = 1
@@ -74,7 +89,15 @@ class OllamaReviewer:
                 ids["items"]["enum"] = [item[lang][0]["id"]]
         payload=json.dumps({"model":self.model,"prompt":v.make_prompt(batch),
                             "stream":False,"format":schema,
-                            "options":{"temperature":0,"num_ctx":16384,"num_predict":8192}}).encode()
+                            "options":{"temperature":0,"num_ctx":16384,"num_predict":LOCAL_MAX_PREDICT}}).encode()
+        if len(v.make_prompt(batch)) > LOCAL_MAX_CHARS:
+            raise v.ReviewError("local model context budget exceeded; no content truncated")
+        if max(len(item["en"]),len(item["cs"])) > LOCAL_MAX_PARAGRAPHS:
+            raise v.ReviewError("local model paragraph budget exceeded; split before review")
+        if self.calls >= v.MAX_CALLS:
+            raise v.ReviewError("local model request budget exceeded; no approval issued")
+        self.calls += 1
+        print(f"Ollama request {self.calls}: {item['id']} ({len(item['en'])}/{len(item['cs'])} paragraphs)",flush=True)
         req=urllib.request.Request("http://127.0.0.1:11434/api/generate",
                                    payload,{"Content-Type":"application/json"})
         try:
@@ -98,6 +121,9 @@ def main():
             "created_at":datetime.now(timezone.utc).isoformat(),"base":base,
             "sources":[],"reviews":[],"calibration":{"status":"not_run"},
             "verifier_sha256":v.sha256(Path(v.__file__).read_bytes()),
+            "backend_sha256":v.sha256(Path(__file__).read_bytes()),
+            "request_limits":{"characters":LOCAL_MAX_CHARS,"paragraphs":LOCAL_MAX_PARAGRAPHS,
+                              "predicted_tokens":LOCAL_MAX_PREDICT,"calls":v.MAX_CALLS},
             "prompt_sha256":v.sha256(v.PROMPT.encode()),
             "structure_verifier_sha256":v.sha256(Path(v.parity.__file__).read_bytes()),
             "policy_sha256":{}}
@@ -109,12 +135,15 @@ def main():
         report["sources"]=[{k:value for k,value in item.items() if k not in ("en","cs")} for item in docs]
         reviewer=OllamaReviewer()
         try:
-            v.run_review(docs,reviewer,report,workers=1)
+            v.run_review(docs,reviewer,report,workers=1,
+                         max_batch_chars=LOCAL_MAX_CHARS,max_paragraphs=LOCAL_MAX_PARAGRAPHS)
         except v.ReviewError:
             # Keep raw model evidence for debugging, never convert invalid output to approval.
             if reviewer.last_response is not None:
                 report['invalid_model_response']=reviewer.last_response[:16000]
             raise
+        finally:
+            report["model_requests"] = reviewer.calls
         v.verify_sources(root,docs)
         report["status"]="passed"
     except (v.ReviewError,OSError,UnicodeError,subprocess.SubprocessError,ValueError) as exc:
