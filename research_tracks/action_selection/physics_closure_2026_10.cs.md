@@ -373,3 +373,5 @@ stability a mohou narušit starý kvocient posuvů
 nosiče. Omezený výsledek pokrývá 16 symbolických
 regresí. Výběr fundamentální akce a fyzikální
 dynamika psi zůstávají OPEN.
+
+**Silnější brána NA ŘEŠENÍCH pouze pro STARŠÍ volný splitjet K_J/w:** použijme přesnou starší pravou inverzi k pozvednutí LIBOVOLNÉHO lokálního Einsteinova–Lambda/Cartanova řešení (e_GR,omega_GR) na každé původní komplexní Theta_n s neizotropním X_n. Zvolme Y_n=s e_GR-D^omega_GR X_n, w_n=(X_n·Y_n)/X_n² a K_{n,ab}=(U_{n,a}X_{n,b}-X_{n,a}U_{n,b})/X_n², kde U_n=Y_n-w_n X_n. Pak E_n=e_GR pro všechna n i po celé spojité interpolaci n=0→1 přes nulový determinant, kde X² zůstává nenulové. **Starší pomocný MM model s volnými proměnnými** tak má společnou geometrii řešení a nemůže globálně chránit toto vinutí. NEPLATÍ to pro pozdější odvozené w(H) ani omezenou gradovanou teorii K. Nové přesné kontroly pravé inverze zvyšují počet cílených testů na 19.
