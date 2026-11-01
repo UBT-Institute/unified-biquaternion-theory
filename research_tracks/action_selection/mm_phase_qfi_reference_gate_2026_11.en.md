@@ -53,6 +53,25 @@ p_\pm(\psi;\chi)=\frac12\pm
 
 The two outcomes are an equatorial projective measurement with tunable reference phase chi. At a=rho and generic psi, choosing chi=0 yields classical Fisher information for estimating psi equal to n²/Rpsi² (zero-probability fringes require a limiting interpretation). Thus the phase information is operationally accessible **IF** such a coherent reference and protocol exist. The QFI depends on n² and by itself does not determine the sign of n. J_Q is a geometric information integral, **not** energy, tension, or a physical psi Hamiltonian; in particular its overall coefficient is unselected.
 
+## Reference amplitude is not dynamically selected [PROVED]
+
+The same winding n and the same original Theta produce continuously different QFI whenever the independently chosen reference amplitude changes. This exact modulation is bounded by unity and tends to zero for a vanishing or dominating reference:
+
+\[
+x=\frac a\rho>0,\qquad
+F_Q[d_n;a]=\frac{n^2}{R_\psi^2}
+\frac{4x^2}{(1+x^2)^2},\quad
+0<\frac{4x^2}{(1+x^2)^2}\le1,
+\quad
+1-\frac{4x^2}{(1+x^2)^2}
+=\frac{(x^2-1)^2}{(1+x^2)^2},
+\quad
+\lim_{x\to0,\infty}\frac{4x^2}{(1+x^2)^2}=0.
+\]
+
+
+The equality at x=1 is the optimally balanced *chosen readout*, not a unique Theta prediction. Thus neither the winding integer nor the canonical sharp geometry fixes the numerical QFI of an unspecified observer channel.
+
 ## The determinant-zero crossing remains regular [PROVED]
 
 Reuse the existing n=0 to n=1 interpolation from the previous full-Theta MM note. At its determinant zero, the original spacetime tetrad remains regular. For every fixed a>0 the projective readout and its QFI also remain smooth:
