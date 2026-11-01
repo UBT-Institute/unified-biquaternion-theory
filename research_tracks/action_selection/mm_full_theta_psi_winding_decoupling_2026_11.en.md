@@ -146,6 +146,36 @@ R_{\mu\nu}=\Lambda g_{\mu\nu}
 \quad\text{is NOT satisfied by }\eta_{\mu\nu}.
 \]
 
+## Stronger conditional result: free split-jet lift of an ON-SHELL Einstein background [PROVED, conditional]
+
+The previous fixed-flat-tetrad example was strictly OFF SHELL when the chosen MM cosmological constant is nonzero. We can sharpen the result by REUSING the existing local right-inverse theorem from `split_jet_palatii_variational_lift.en.md` and `single_theta_macdowell_mansouri_candidate.en.md`. This argument applies ONLY to the earlier freely varied K_J and w model, NOT automatically to the later w(H) or constrained graded-K construction.
+
+Fix any local nondegenerate Einstein–Lambda vacuum tetrad e_GR(x), its torsion-free physical spin connection omega_GR(x), and fixed N0=s². For each winding n, project the SAME full-complex Theta_n onto its original Lorentz-real carrier X_n. On a small patch around x=0 every X_n is spacelike and non-null, uniformly for psi on the circle: at x=0, X_n has real Lorentz components (b_n/2,c_n,0,-b_n/2) and X_n²=c_n²>0.
+
+\[
+Y_{n\mu}{}^a=s e_{\mathrm{GR},\mu}{}^a-
+D_\mu^{\omega_{\mathrm{GR}}}X_n^a,\quad
+q_n=X_n^aX_{na}>0,\quad
+w_{n\mu}=\frac{X_{na}Y_{n\mu}{}^a}{q_n},\quad
+U_{n\mu}{}^a=Y_{n\mu}{}^a-w_{n\mu}X_n^a,
+\]
+\[
+(K_{J,n})_{\mu ab}
+=\frac{U_{n\mu a}X_{nb}-X_{na}U_{n\mu b}}{q_n},
+\quad
+(K_{J,n})_\mu{}^a{}_b X_n^b+w_{n\mu}X_n^a=Y_{n\mu}{}^a,
+\]
+\[
+\boxed{E[\Theta_n,K_{J,n},w_n,\omega_{\mathrm{GR}}]
+=e_{\mathrm{GR}}}\qquad\text{for every }n.
+\]
+
+The exact pre-existing split-jet variation theorem then transfers the full Einstein tetrad and Cartan equations to **every such pulled-back configuration**. Since the chosen MM action depends only on e_GR and omega_GR, all these configurations have identical on-shell gravitational action and the same 4D observables. This is an ON-SHELL existence statement **only within the freely varied auxiliary MM comparator**: it is not the full holomorphic/graded single-Theta dynamics.
+
+Even the det-Theta=0 crossing along the n=0 to n=1 interpolation is locally liftable: at psi=pi Rpsi and s=s-star, the carrier is X=(0,1,0,0), q=1, while det Theta=0 and det e_GR is unchanged. The older MM functional does not use inverse Theta, so no singularity follows in its chosen field variables. Therefore **the freely varied MM gravitational equations alone do not topologically protect winding, even on their own solution set**.
+
+This does NOT extend automatically to a physically selected action, where w may be fixed as w(H), K_J may be constrained by the full Hermitian reality equations, matter could break the shift quotient, and inversion of Theta might become mandatory. The absence of that selection is exactly the unresolved dynamical gate.
+
 ## What a real ψ action would have to supply [OPEN]
 
 As a TEST ONLY, a positive quadratic psi-derivative functional could distinguish the windings, while the original MM functional cannot. Such a term is not part of the locked action and can break the prior split-jet shift symmetry; its physical Hessian, Cartan constraints and energy sign would have to be derived and checked:
@@ -173,4 +203,4 @@ Do not confuse a nonzero ψ-gradient norm at a fixed background with a stable ph
 
 ## Verification and decision [OPEN]
 
-**16 exact SymPy tests** in `tests/test_mm_full_theta_psi_winding_decoupling.py`, added alongside the existing 71 regressions in Physics Laws CI: periodic profiles n, winding from det Theta, fixed canonical sharp tetrad, ψ-shift variation, singular interpolation with regular e, direct zero ψ-principal Hessian, nonzero MM Lambda incompatibility, conditional ψ-gradient diagnostic and full complex-Theta carrier non-nullness. **Decision:** the current gravity-only comparator cannot select or protect the topological label without additional input. Test next whether any pre-existing fundamental invariant of UBT (information principle, shared-reality constraint, or full-Theta kinetic/connection sector) yields a ψ-principal term and a precise det-Theta admissibility boundary **without arbitrarily appending a new action**. Existing sources: `research_tracks/action_selection/full_theta_sharp_norm_winding_2026_10.en.md:15-143`, `research_tracks/action_selection/single_theta_macdowell_mansouri_candidate.en.md:30-160`, `research_tracks/action_selection/mm_shift_gauge_dirac.en.md:23-47`, `research_tracks/action_selection/mm_complex_spectator_rank.en.md:23-39`, `research_tracks/action_selection/mm_shift_potential_obstruction.en.md:23-36`, `canonical/CANONICAL_DEFINITIONS.md:160-190`, `canonical/THEORY/t_duality_ubt.tex:31-90`. No physical T-duality, string, on-shell winding solution or unique action is asserted.
+**19 exact SymPy tests** in `tests/test_mm_full_theta_psi_winding_decoupling.py`, added alongside the existing 71 regressions in Physics Laws CI: periodic profiles n, winding from det Theta, fixed canonical sharp tetrad, ψ-shift variation, singular interpolation with regular e, direct zero ψ-principal Hessian, nonzero MM Lambda incompatibility, conditional ψ-gradient diagnostic and full complex-Theta carrier non-nullness. **Decision:** the current gravity-only comparator cannot select or protect the topological label without additional input. Test next whether any pre-existing fundamental invariant of UBT (information principle, shared-reality constraint, or full-Theta kinetic/connection sector) yields a ψ-principal term and a precise det-Theta admissibility boundary **without arbitrarily appending a new action**. Existing sources: `research_tracks/action_selection/full_theta_sharp_norm_winding_2026_10.en.md:15-143`, `research_tracks/action_selection/single_theta_macdowell_mansouri_candidate.en.md:30-160`, `research_tracks/action_selection/mm_shift_gauge_dirac.en.md:23-47`, `research_tracks/action_selection/mm_complex_spectator_rank.en.md:23-39`, `research_tracks/action_selection/mm_shift_potential_obstruction.en.md:23-36`, `canonical/CANONICAL_DEFINITIONS.md:160-190`, `canonical/THEORY/t_duality_ubt.tex:31-90`. No physical T-duality, string, on-shell winding solution or unique action is asserted.
