@@ -357,3 +357,5 @@ necessary to assign physical energy or topological stability,
 and may break the old carrier-shift quotient.
 16 exact symbolic regressions cover the restricted result.
 Fundamental action selection and physical psi dynamics remain OPEN.
+
+**Stronger ON-SHELL gate for the OLDER free-K_J/free-w splitjet only:** reuse the exact old right-inverse to lift ANY local Einstein–Lambda/Cartan solution (e_GR,omega_GR) to each original complex Theta_n with non-null X_n. Set Y_n=s e_GR-D^omega_GR X_n, w_n=(X_n·Y_n)/X_n², and K_{n,ab}=(U_{n,a}X_{n,b}-X_{n,a}U_{n,b})/X_n² with U_n=Y_n-w_n X_n. Then E_n=e_GR for every n and along the continuous n=0→1 determinant-zero crossing, where X² remains nonzero. Thus the **old free-auxiliary MM comparator** has a common on-shell solution geometry and cannot protect this winding globally. This is NOT a result for the later derived-w(H) or restricted graded-K theory. New exact right-inverse controls bring the targeted tests to 19.
