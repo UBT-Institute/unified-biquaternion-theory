@@ -326,3 +326,34 @@ not yet UBT field equations, nor physical string winding,
 spin-statistics or T-duality. 21 exact symbolic tests
 now guard this strict scope. Indefinite-H action
 admissibility and psi/matter dynamics remain OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.mm-full-theta-psi-winding-decoupling -->
+## Full-complex Theta winding is not dynamically protected by the existing MM gravity action
+
+The [paired off-shell dynamical audit](mm_full_theta_psi_winding_decoupling_2026_11.en.md)
+REUSES the prior exact full-Theta sharp-norm winding witness,
+the free-splitjet vertical-shift theorem and the gravity-only
+MM complex-spectator principal rank. The fifth Clifford matrix
+Gamma_psi in the existing MM gravity connection does NOT
+by itself introduce an internal derivative d_psi.
+
+For integer n, the single original complex Theta_n has
+det Theta_n|origin=rho exp(i n psi/R_psi), but its FOUR
+spacetime derivatives generate exactly the same canonical
+tetrad and sharp metric for every n. There is an explicit
+continuous straight interpolation between winding 0 and 1,
+through det Theta=0 at an intermediate s-star and psi=pi R_psi,
+while det e=-1 everywhere. Consequently the metric lock
+does NOT impose det Theta invertibility or physically protect
+the winding integer.
+
+With flat defining spin, K=0, w_H=0 and fixed physical omega,
+the chosen curvature-square MM gravity action is identical
+OFF SHELL along this entire family; its direct psi-principal
+Hessian is zero. The explicit flat witness is NOT an MM
+vacuum solution at nonzero Lambda. A separate psi kinetic
+term or an action-imposed invertibility constraint would be
+necessary to assign physical energy or topological stability,
+and may break the old carrier-shift quotient.
+16 exact symbolic regressions cover the restricted result.
+Fundamental action selection and physical psi dynamics remain OPEN.
