@@ -53,6 +53,25 @@ p_\pm(\psi;\chi)=\frac12\pm
 
 Dva výsledky tvoří ekvatoriální projektivní měření s nastavitelnou referenční fází chi. Při a=rho a generickém psi dává volba chi=0 klasickou Fisherovu informaci pro odhad psi rovnou n²/Rpsi² (v bodech s nulovou pravděpodobností výsledku je třeba použít limitu). Fázová informace je tedy operacionálně dostupná **POKUD** taková koherentní reference a protokol existují. QFI závisí na n² a sama neurčuje znaménko n. J_Q je geometrický informační integrál, **nikoli** energie, napětí ani fyzikální Hamiltonián psi; zejména jeho celkový koeficient není vybrán.
 
+## Referenční amplituda není dynamicky určena [PROVED]
+
+Tentýž winding n a totéž původní Theta dávají spojitě odlišnou QFI při změně nezávisle zvolené referenční amplitudy. Toto přesné zeslabení je omezeno jednotkou a při mizivé či dominantní referenci konverguje k nule:
+
+\[
+x=\frac a\rho>0,\qquad
+F_Q[d_n;a]=\frac{n^2}{R_\psi^2}
+\frac{4x^2}{(1+x^2)^2},\quad
+0<\frac{4x^2}{(1+x^2)^2}\le1,
+\quad
+1-\frac{4x^2}{(1+x^2)^2}
+=\frac{(x^2-1)^2}{(1+x^2)^2},
+\quad
+\lim_{x\to0,\infty}\frac{4x^2}{(1+x^2)^2}=0.
+\]
+
+
+Rovnost při x=1 znamená optimálně vyvážené *zvolené měření*, nikoli jedinečnou predikci Theta. Samotný celočíselný winding ani kanonická geometrie sharp tedy neurčují numerickou QFI nespecifikovaného pozorovatelského kanálu.
+
 ## Průchod nulovým determinantem zůstává regulární [PROVED]
 
 Převezměme existující interpolaci od n=0 k n=1 z předchozí poznámky o plném Theta a MM. V jejím nulovém determinantu zůstává původní prostoročasová tetráda regulární. Pro každé pevné a>0 zůstává hladké také projektivní měření a jeho QFI:
