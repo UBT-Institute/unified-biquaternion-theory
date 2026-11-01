@@ -339,3 +339,37 @@ spinovou statistikou nebo T-dualitou.
 Tento přesný rozsah hlídá 21 symbolických
 testů. Přípustnost indefinitního H v akci
 a dynamika psi/hmoty zůstávají OPEN.
+
+<!-- BILINGUAL-UNIT: physics-closure.mm-full-theta-psi-winding-decoupling -->
+## Vinutí celého komplexního Theta není dynamicky chráněno existující čistě gravitační akcí MM
+
+[Dvojjazyčný audit mimo řešení](mm_full_theta_psi_winding_decoupling_2026_11.cs.md)
+PŘEBÍRÁ předchozí přesný příklad vinutí normy sharp
+celého Theta, větu o vertikálních posuvech volného
+splitjetu a hlavní hodnost diváckého komplexního sektoru
+v čistě gravitační MM. Pátá Cliffordova matice
+Gamma_psi v existující gravitační konexi MM sama
+NEZAVÁDÍ vnitřní derivaci d_psi.
+
+Pro celé n má jediné původní komplexní Theta_n
+det Theta_n|origin=rho exp(i n psi/R_psi), ale jeho
+ČTYŘI prostoročasové derivace dávají pro každé n
+přesně stejnou kanonickou tetrádu a metriku sharp.
+Existuje explicitní spojitá přímá interpolace mezi
+vinutím 0 a 1 přes det Theta=0 při mezilehlém
+s-star a psi=pi R_psi, přičemž det e=-1 zůstává
+všude. Zamčená metrika tudíž NEVYNUCUJE
+invertibilitu det Theta ani fyzikální ochranu vinutí.
+
+Pro plochý definující spin, K=0, w_H=0 a pevnou
+fyzikální omega je vybraná gravitační akce MM
+čtverce křivosti identická MIMO ŘEŠENÍ na celé
+rodině; její přímý hlavní Hessian psi je nulový.
+Explicitní plochý příklad NENÍ vakuovým řešením
+MM při nenulovém Lambda. Samostatný kinetický
+člen psi nebo invertibilita uložená akcí jsou
+nutné k přiřazení fyzikální energie či topologické
+stability a mohou narušit starý kvocient posuvů
+nosiče. Omezený výsledek pokrývá 16 symbolických
+regresí. Výběr fundamentální akce a fyzikální
+dynamika psi zůstávají OPEN.
