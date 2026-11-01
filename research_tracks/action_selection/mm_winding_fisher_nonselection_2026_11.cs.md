@@ -14,11 +14,11 @@ UBT-AI-PROVENANCE-END
 
 # Winding determinantu není chráněn Fisherovou informací amplitudy
 
-**2026-11-01 · C_working · omezený matematický výsledek o nejednoznačnosti výběru.** Pokračování mergnutých PR #826 a #827, s PŮVODNÍM jediným plně komplexním bikvaternionovým polem a nezměněnou čtyřrozměrnou tetrádou sharp. Nepostulujeme dodatečnou strunu, fyzikální sondu ani kinetickou akci.
+**2026-11-01 · C_working · omezený matematický výsledek o nejednoznačnosti výběru.** Pokračování mergnutých PR #826 a #827, s PŮVODNÍM jediným plně komplexním bikvaternionovým polem a nezměněnou 4D tetrádou sharp. Nepostulujeme dodatečnou strunu, fyzikální sondu ani kinetickou akci.
 
-## Přesná rodina polí a regulární geometrie [PŘEVZATO, DOKÁZÁNO]
+## Přesná rodina polí a regulární geometrie [REUSED, PROVED]
 
-Použijeme již ověřenou interpolaci od n=0 k n=1 na hladké kompaktní vnitřní kružnici. Definiční čtyřrozměrná konexe je v tomto příkladu plochá. Všichni členové mají STEJNOU regulární tetrádu a metriku sharp; determinant v jediném mezilehlém bodě vymizí:
+Použijeme již ověřenou interpolaci od n=0 k n=1 na hladké kompaktní vnitřní kružnici. Definiční 4D konexe je v tomto příkladu plochá. Všichni členové mají STEJNOU regulární tetrádu a metriku sharp; determinant v jediném mezilehlém bodě vymizí:
 
 \[
 \Theta_s=\sigma_3+i\left(
@@ -34,7 +34,7 @@ d_{s_*}(\pi R_\psi)=0,\quad \det e_{s_*}=-1 .
 \]
 
 
-## Invariantní amplituda a explicitní Fisherův protipříklad [NOVÉ, DOKÁZÁNO]
+## Invariantní amplituda a explicitní Fisherův protipříklad [NEW, PROVED]
 
 Komplexní determinant je původní centrální kvaternionová norma sharp. Její absolutní druhá mocnina je invariantní při existující kongruenci SL(2,C) s determinantem jedna. Pro MATEMATICKÝ TEST tuto nezápornou amplitudu normalizujeme na kružnici a spočteme klasický Fisherův funkcionál jedné souřadnice:
 
@@ -62,7 +62,7 @@ Uvedený odhad plyne bodově z Cauchyovy–Schwarzovy nerovnosti pro nenulové q
 
 Toto p je výslovně ilustrační hustota pravděpodobnosti na vnitřní souřadnici psi, **nikoli nezávisle odvozené rozdělení fyzikálních záznamů nebo jediný informační zákon UBT**. Invariance vůči SL(2,C) sama neřeší libovolné přeparametrizování psi ani fyzikální volbu integrační míry. Protipříklad platí pro tvrzení o automatické ochraně Fisherovou informací, nikoli pro každý myslitelný informační princip.
 
-## Obyčejný hladký gradient versus singularita inverzního determinantu [NOVÉ, DOKÁZÁNO]
+## Obyčejný hladký gradient versus singularita inverzního determinantu [NEW, PROVED]
 
 Stejná interpolace má konečnou normu obyčejného gradientu podle psi i při det Theta=0. Tento Frobeniův diagnostický výraz NEPROHLAŠUJEME za lorentzovsky invariantní fyzikální akci:
 
@@ -80,15 +80,15 @@ F_\Theta=dA_\Theta=0\quad (\det\Theta\ne0),\qquad
 
 Na podmnožině invertibilních polí je dříve zkoumaná determinantová konexe A_Theta lokálně exaktní a její křivost mizí. Proto místní člen Maxwellova typu založený pouze na křivosti F_Theta nemůže vytvořit objemové šíření ani chránit winding. Naproti tomu akce používající Theta^{-1} nebo |A_Theta|² může při det Theta=0 singularizovat. Taková ochrana by ale *předpokládala* vybraný operátor s inverzí pole nebo omezenou definiční oblast; nic z toho současná MM ani formulace sdílené reality neodvozuje. Holonomie odmocniny rozlišuje pouze paritu windingu a automaticky nepředstavuje fyzikální náboj.
 
-## Operacionální sdílená realita a pouze gravitační funkcionál [PŘEVZATO, DŮSLEDEK]
+## Operacionální sdílená realita a pouze gravitační funkcionál [REUSED, CONSEQUENCE]
 
-Každý informační nebo pozorovatelský funkcionál závislý POUZE na společné složené čtyřrozměrné geometrii g[Theta_s], jejích derivacích a protokolech či stavech nezávisle určených touto geometrií má po celé interpolaci stejnou hodnotu. Nemůže tedy vyloučit průchod nulovým determinantem. Tvrzení NEZAHRNUJE pozorovatelské kanály nebo kvantové stavy s nezávisle doloženou citlivostí na determinant či fázi celého Theta.
+Každý informační nebo pozorovatelský funkcionál závislý POUZE na společné složené 4D geometrii g[Theta_s], jejích derivacích a protokolech či stavech nezávisle určených touto geometrií má po celé interpolaci stejnou hodnotu. Nemůže tedy vyloučit průchod nulovým determinantem. Tvrzení NEZAHRNUJE pozorovatelské kanály nebo kvantové stavy s nezávisle doloženou citlivostí na determinant či fázi celého Theta.
 
 Existující MM komparátor nemá nezávislý hlavní člen podle psi. Dříve zdokumentované příklady konzistence pozorovatelů SR0/SR1 nevybírají jednoznačný Hamiltonián. Uvedený konečný Fisherův protipříklad tedy nelze povýšit na akci ani univerzální větu o nemožnosti.
 
-## Rozhodnutí a falzifikovatelná fyzikální podmínka [OTEVŘENO]
+## Rozhodnutí a falzifikovatelná fyzikální podmínka [OPEN]
 
-**DOKÁZÁNO v daném příkladu:** regulární čtyřrozměrná tetráda, krajní konfigurace s různým windingem, izolovaná nula det Theta, konečný Fisherův funkcionál invariantní amplitudy a konečný hladký gradient podle psi. **NEDOKÁZÁNO:** fyzikální excitace windingu, stabilní sektor, kladný redukovaný Hamiltonián, spinová struktura ani mikroskopická akce.
+**PROVED v daném příkladu:** regulární 4D tetráda, krajní konfigurace s různým windingem, izolovaná nula det Theta, konečný Fisherův funkcionál invariantní amplitudy a konečný hladký gradient podle psi. **NOT PROVED:** fyzikální excitace windingu, stabilní sektor, kladný redukovaný Hamiltonián, spinová struktura ani mikroskopická akce.
 
 Další fyzikální podmínka vyžaduje NEZÁVISLÝ původ jak (i) přípustných konfigurací s det Theta != 0 či dynamicky nekonečné bariéry, tak (ii) dobře definovaného hlavního členu podle psi a Diracovsky redukovaného sektoru. Nejprve odvoďme pravděpodobnostní pozorovatelské kanály a míru i kovariantní derivaci celého Theta z existujících předpokladů UBT; poté ověřme, zda jejich akce vyloučí předložený hladký přechod. Neprohlašujme A_Theta bez důkazu fyzikálním kalibračním polem ani nepřidávejme zvolený singulární potenciál.
 
