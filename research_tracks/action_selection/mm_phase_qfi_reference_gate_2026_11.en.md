@@ -99,6 +99,73 @@ The upper bound is uniform along the compact smooth interpolation because a stay
 
 Geometrically the rays [a:d] belong to CP¹, a 2-sphere with trivial fundamental group. In the chart a>0 the coordinate d traverses the origin smoothly; the integer winding lives only in the extra *punctured* region d != 0. The explicit Theta interpolation supplies the actual original-field lift on the restricted flat defining-connection chart, not merely an abstract CP¹ homotopy.
 
+## Exact full-Theta radial unwinding and second-variation test [PROVED, CONDITIONAL]
+
+A stronger test examines whether **postulating** the phase-sensitive QFI integral as a positive psi-gradient energy could make winding dynamically stable. Use the same original FULL complex biquaternion and flat defining 4D connection as in PR #827, with no new tetrad or auxiliary worldsheet:
+
+\[
+0<\rho<1,\quad n\in\mathbb Z\setminus\{0\},\quad
+r_s=(1-s)\rho,\ 0\le s\le1,\quad
+c_s=\sqrt{1+r_s\cos(n\psi/R_\psi)},\quad
+b_s=r_s\sin(n\psi/R_\psi),
+\]
+\[
+\Theta_{n,s}=\sigma_3+
+i\left[\begin{pmatrix}0&c_s\\c_s&b_s\end{pmatrix}
++t I+x\sigma_1+y\sigma_2+z\sigma_3\right],\qquad
+\det\Theta_{n,s}|_{x^\mu=0}=r_s e^{in\psi/R_\psi}.
+\]
+\[
+E_\mu=\partial_\mu\Theta_{n,s}
+=(iI,i\sigma_1,i\sigma_2,i\sigma_3),\quad
+g_{\mu\nu}=\eta_{\mu\nu},\quad
+X_{n,s}^2=c_s^2>0 .
+\]
+
+
+For every s<1, det Theta is nonzero along the entire internal circle, its integer winding remains n, and the same full original sharp tetrad and flat Lorentz metric survive. At s=1 the determinant vanishes, yet the original carrier X remains spacelike non-null and the tetrad is regular. The fields are smooth because 1+r_s cos(...) remains positive for rho<1.
+
+The QFI functional for the **chosen** hypothetical reference readout has an exact radial value:
+
+\[
+\mathcal J_Q[r]=\int_0^{2\pi R_\psi}
+\frac{4a^2|\partial_\psi d|^2}{(a^2+|d|^2)^2}\,d\psi
+=\frac{2\pi n^2}{R_\psi}\frac{4a^2r^2}{(a^2+r^2)^2},
+\]
+\[
+a=\rho,\qquad
+\frac{\mathcal J_Q[r_s]}{\mathcal J_Q[\rho]}
+=\frac{4(1-s)^2}{(1+(1-s)^2)^2}
+=1-s^2+O(s^3),\qquad
+\lim_{s\to1^-}\mathcal J_Q[r_s]=0,
+\]
+\[
+\left.\frac{d^2\mathcal J_Q}{dr^2}\right|_{r=a}
+=-\frac{4\pi n^2}{R_\psi a^2}<0 .
+\]
+
+
+For any fixed n!=0 and fixed a>0 the infimum of J_Q on the **nonzero-determinant winding-n subset** is already zero (take r>0 toward zero). Hence even imposing det Theta != 0 does not supply a positive winding-dependent lower bound from this functional. With the balanced reference a=rho, the nominal r=a winding is a stationary *maximum in the uniform radial direction*, not a stable energy minimum. The displayed negative second derivative is an explicit instability direction for this **hypothetical** energy, not a physical UBT instability theorem.
+
+A direct variation treating z and its conjugate as independent real variations gives the projective sigma-model Euler equation:
+
+\[
+\mathcal L_Q=\frac{4a^2z'\bar z'}{(a^2+z\bar z)^2},\qquad
+z''-\frac{2\bar z(z')^2}{a^2+|z|^2}=0 ,
+\]
+\[
+z(\psi)=r e^{in\psi/R_\psi}
+\quad\Longrightarrow\quad
+z''-\frac{2\bar z(z')^2}{a^2+|z|^2}
+=\frac{n^2}{R_\psi^2}z\,
+\frac{r^2-a^2}{r^2+a^2}.
+\]
+
+
+The constant-radius winding is stationary for nonzero n only at r=a, and that point has the negative radial second variation. It therefore cannot be promoted to a protected physical solution by merely calling the reference-sensitive QFI an action. Neither a lower-dimensional sigma-model kinetic functional nor a new Hamiltonian has been derived from the locked single-Theta action.
+
+**Scope:** this is a no-positive-winding-floor and negative-mode theorem for the explicitly chosen 1D QFI test functional on the exhibited full-Theta family. It does not exclude other independently derived invariants, full constraints, nonlocal terms or physical phase-sensitive sectors.
+
 ## Physical selection and shared-reality verdict [OPEN]
 
 The old amplitude-only classical Fisher functional gives zero at both winding endpoints; this phase-sensitive *reference-dependent* QFI instead scales with n². Neither one derives a microscopic field action, imposes det Theta nonzero, supplies Cartan/Dirac constraints, or proves stable excitations. The full-Theta gravity-only MM comparator remains blind to the winding interpolation. Even postulating J_Q as a cost leaves the singular crossing finite and adds an unselected readout and coefficient.
@@ -107,4 +174,4 @@ The physical gate is to **derive rather than assume** a Theta-native observer al
 
 ## Verification and prior sources
 
-Exact SymPy checks: `tests/test_mm_phase_qfi_reference_gate.py` (eight local tests). Reuses `research_tracks/action_selection/mm_winding_fisher_nonselection_2026_11.en.md`, `research_tracks/action_selection/mm_full_theta_psi_winding_decoupling_2026_11.en.md` and `research_tracks/fundamental_dynamics/SHARED_REALITY_INFORMATION_SELECTOR.en.md`. General pure-state QFI/Fubini–Study relation: https://www.nature.com/articles/ncomms8282. All physical claims remain C_working; no change to canonical architecture.
+Exact SymPy checks: `tests/test_mm_phase_qfi_reference_gate.py` (eight local tests; expanded radial tests pending). Reuses `research_tracks/action_selection/mm_winding_fisher_nonselection_2026_11.en.md`, `research_tracks/action_selection/mm_full_theta_psi_winding_decoupling_2026_11.en.md` and `research_tracks/fundamental_dynamics/SHARED_REALITY_INFORMATION_SELECTOR.en.md`. General pure-state QFI/Fubini–Study relation: https://www.nature.com/articles/ncomms8282. All physical claims remain C_working; no change to canonical architecture.
