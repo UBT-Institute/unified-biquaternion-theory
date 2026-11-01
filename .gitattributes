@@ -43,3 +43,9 @@ docs/pdfs/UBT_Textbook_CS.pdf export-ignore
 docs/pdfs/UBT_Textbook_EN.pdf export-ignore
 docs/pdfs/UBT_canonical_main.pdf export-ignore
 docs/pdfs/UBT_GR_Submission.pdf export-ignore
+
+# Cached upstream LMFDB web-page captures are reference data, not source files.
+# Keep them tracked for reproducibility; omit the two downloaded HTML snapshots
+# from generated GitHub source ZIPs (which must remain below the 12 MiB gate).
+DATA/modular_forms/index.html export-ignore
+DATA/modular_forms/index.html.1 export-ignore
