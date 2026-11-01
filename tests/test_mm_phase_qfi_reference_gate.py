@@ -79,4 +79,59 @@ class FullThetaPhaseQFI(unittest.TestCase):
         self.assertEqual(sp.factor(bound-actual),
           sp.factor(4*derivative_norm*(N**2-A**4)/(A**2*N**2)))
 
+
+    def test_full_theta_radial_family_keeps_original_tetrad(self):
+        psi,s,R=sp.symbols('psi s R',real=True)
+        R=sp.symbols('R',positive=True)
+        n=sp.Integer(2)
+        rr=(1-s)*sp.Rational(1,2)
+        c=sp.sqrt(1+rr*sp.cos(n*psi/R))
+        b=rr*sp.sin(n*psi/R)
+        one=sp.eye(2)
+        pauli=(sp.Matrix([[0,1],[1,0]]),
+               sp.Matrix([[0,-sp.I],[sp.I,0]]),
+               sp.diag(1,-1))
+        t,x,y,z=sp.symbols('t x y z',real=True)
+        theta=pauli[2]+sp.I*(sp.Matrix([[0,c],[c,b]])+
+                            t*one+x*pauli[0]+y*pauli[1]+z*pauli[2])
+        origin=theta.subs({t:0,x:0,y:0,z:0})
+        self.assertEqual(sp.simplify(origin.det()-
+            rr*(sp.cos(n*psi/R)+sp.I*sp.sin(n*psi/R))),0)
+        self.assertEqual([theta.diff(var) for var in (t,x,y,z)],
+            [sp.I*one,sp.I*pauli[0],sp.I*pauli[1],sp.I*pauli[2]])
+        self.assertEqual(sp.simplify(c.subs(s,1)),1)
+
+    def test_fixed_winding_qfi_infimum_zero_even_before_det_zero(self):
+        rr,a,R,n=sp.symbols('r a R n',positive=True)
+        J=2*sp.pi*n**2/R*4*a**2*rr**2/(a**2+rr**2)**2
+        self.assertEqual(sp.limit(J,rr,0,dir='+'),0)
+        self.assertEqual(sp.simplify(J.subs(rr,a)-2*sp.pi*n**2/R),0)
+
+    def test_uniform_radial_descent_second_variation_is_negative(self):
+        s=sp.symbols('s',real=True)
+        f=4*(1-s)**2/(1+(1-s)**2)**2
+        self.assertEqual(sp.simplify(f.subs(s,0)-1),0)
+        self.assertEqual(sp.simplify(f.subs(s,1)),0)
+        self.assertEqual(sp.simplify(sp.diff(f,s).subs(s,0)),0)
+        self.assertEqual(sp.simplify(sp.diff(f,s,2).subs(s,0)+2),0)
+        self.assertLess(sp.diff(f,s).subs(s,sp.Rational(1,2)),0)
+
+    def test_radial_hessian_negative_at_balanced_reference(self):
+        a,w,R,n=sp.symbols('a w R n',positive=True)
+        J=2*sp.pi*n**2/R*4*a**2*w**2/(a**2+w**2)**2
+        self.assertEqual(sp.simplify(sp.diff(J,w).subs(w,a)),0)
+        self.assertEqual(sp.simplify(sp.diff(J,w,2).subs(w,a)
+            +4*sp.pi*n**2/(R*a**2)),0)
+
+    def test_fubini_study_euler_lagrange_circle_equator(self):
+        a,w,R=sp.symbols('a w R',positive=True)
+        theta=sp.symbols('theta',real=True)
+        n=sp.Integer(2)
+        z=w*sp.exp(sp.I*n*theta/R)
+        zpsi=sp.diff(z,theta)
+        residual=sp.diff(zpsi,theta)-2*sp.conjugate(z)*zpsi**2/(a**2+w**2)
+        expected=n**2/R**2*z*(w**2-a**2)/(w**2+a**2)
+        self.assertEqual(sp.simplify(residual-expected),0)
+        self.assertEqual(sp.simplify(residual.subs(w,a)),0)
+
 if __name__=="__main__": unittest.main()
