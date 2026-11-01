@@ -190,6 +190,29 @@ def check_pair(en: Path, cs: Path) -> list[str]:
     return errors
 
 
+def language_router(path: Path) -> bool:
+    """Accept only prose-free legacy entry points resolving to a complete pair.
+
+    This does not exempt the target editions from structural/semantic review.
+    No scientific assertion, arbitrary TeX command or extra link is allowed.
+    """
+    text = governed_content(path.read_text(encoding="utf-8"))
+    text = re.sub(r"(?m)^%[^\n]*$", "", text).strip()
+    if path.suffix == ".tex":
+        match = re.fullmatch(r"\\input\{([A-Za-z0-9_-]+)\.en\.tex\}", text)
+        if not match:
+            return False
+        targets = [path.with_name(f"{match[1]}.{lang}.tex") for lang in ("en", "cs")]
+    elif path.suffix == ".md":
+        match = re.fullmatch(r"- \[en\]\(([A-Za-z0-9_-]+)\.en\.md\)\s*\n- \[cs\]\(\1\.cs\.md\)", text)
+        if not match:
+            return False
+        targets = [path.with_name(f"{match[1]}.{lang}.md") for lang in ("en", "cs")]
+    else:
+        return False
+    return all(target.is_file() for target in targets) and not check_pair(*targets)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path("."))
@@ -210,6 +233,7 @@ def main() -> int:
                 or excluded(relative)
                 or relative.as_posix() in GOVERNANCE_FILES
                 or relative.as_posix() in SHARED_LANGUAGE_NEUTRAL_FILES
+                or (path.is_file() and language_router(path))
             ):
                 continue
             other = pair_for(path)

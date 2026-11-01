@@ -194,6 +194,12 @@ jobs:
         run: |
           python -m pytest -q tests/test_full_theta_reallinear_graded_jet.py tests/test_theta_hermitian_mm_adjoint_closure.py tests/test_complex_time_graded_reflection_fork.py tests/test_full_theta_det_winding_tetrad_2026.py tests/test_mm_full_theta_psi_winding_decoupling.py
 
+      - name: U(1) neutrality erratum and constrained claim scope
+        run: |
+          python tools/verify_u1_neutrality.py --output build/u1-neutrality.json
+          python tools/verify_qed_phi_const.py
+          python -m pytest -q tests/test_u1_neutrality.py
+
   # -----------------------------------------------------------------------
   # 7. QM limit tests (existing)
   # -----------------------------------------------------------------------

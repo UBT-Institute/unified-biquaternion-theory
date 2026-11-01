@@ -355,3 +355,33 @@ claims:
     - a unique microscopic UBT action has been selected by this audit
     - the homogeneous Hamiltonian is the full UBT Hamiltonian
     - GW170817 measures the UBT Holst coefficient
+
+  qed_phi_const_neutrality:
+    id: GAP-U1-NEUTRALITY
+    status: OPEN_GAP
+    former_left_phase_neutrality_proof: REFUTED
+    scalar_comparator_mass_test: DERIVED_WITH_ASSUMPTIONS
+    original_carrier_real_linear_commutant: DERIVED_WITH_ASSUMPTIONS
+    composite_physical_pole: OPEN_GAP
+    electromagnetic_source_readout_matching: OPEN_GAP
+    human_attestation: not_attested
+    evidence:
+    - canonical/qed_phi_const/step1_u1_protection.en.tex
+    - canonical/qed_phi_const/step1_u1_protection.cs.tex
+    - canonical/qed_phi_const/step6_qed_summary.en.tex
+    - canonical/qed_phi_const/step6_qed_summary.cs.tex
+    - research_tracks/action_selection/u1_neutrality_composite_channel.en.md
+    - research_tracks/action_selection/u1_neutrality_composite_channel.cs.md
+    - tools/verify_u1_neutrality.py
+    - tests/test_u1_neutrality.py
+    - reports/u1_neutrality_2026_10_31.json
+    assumptions:
+    - The declared central phase acts by left multiplication; conjugation is a different representation.
+    - The scalar mass formula assumes a positive canonical complex-scalar kinetic term, not an already derived UBT physical Hessian.
+    - The commutant theorem fixes the original Mat(2,C) carrier, Lorentz congruence and commuting real-linear continuous compact internal action.
+    - Bilinear pair thresholds assume positive free relativistic modes; no psi mass formula or spectrum is selected.
+    forbidden_wording:
+    - a real Fourier zero mode is automatically electromagnetic-neutral
+    - the old step 1 proves a massless photon for a nonzero charge-one background
+    - a neutral composite automatically supplies a healthy propagating wave
+    - fiber Fourier indices identify adjacent universes

@@ -32,3 +32,10 @@ Einstein–Lambda recovery, Schwarzschild inclusion and its standard perturbatio
 The [closure audit](../research_tracks/action_selection/physics_closure_2026_10.en.md) derives a constrained Hamiltonian for the specified homogeneous comparator and exposes its singular coefficient limit. This is a restricted calculation, not the full field-theoretic UBT dynamics. Alpha remains `OPEN_GAP`; a fitted B near 46.28 is not a first-principles prediction.
 
 The formally continued self-dual comparator has an exact canonical GR FLRW match. The original Hermitian pair fails the generic tetrad readout after that continuation, so an admissible microscopic self-dual branch and a mandatory dust prediction are not established.
+
+<!-- BILINGUAL-UNIT: current-status.u1-neutrality -->
+## Constant-background neutrality correction
+
+**GAP-U1-NEUTRALITY: FORMER PROOF REFUTED; PHYSICAL BRIDGE OPEN.** The declared left phase does not leave a nonzero real zero mode neutral. The corrected positive-scalar comparator requires Qv=0 for a massless photon; neither a neutral physical UBT component nor its wave has been derived. The scoped real-linear Lorentz commutant theorem excludes a mixed neutral/charged linear split on the specified original carrier. A neutral composite exists, but its physical correlator and electromagnetic source/readout matching remain open. This is not evidence of multiverse communication.
+
+[en](../research_tracks/action_selection/u1_neutrality_composite_channel.en.md); [cs](../research_tracks/action_selection/u1_neutrality_composite_channel.cs.md). The older QED steps are conditional legacy material; the paired corrected step 1 and step 6 supersede their neutrality and closure conclusions. No author attestation is asserted for this update.

@@ -43,3 +43,12 @@ docs/pdfs/UBT_Textbook_CS.pdf export-ignore
 docs/pdfs/UBT_Textbook_EN.pdf export-ignore
 docs/pdfs/UBT_canonical_main.pdf export-ignore
 docs/pdfs/UBT_GR_Submission.pdf export-ignore
+
+# Generated historical raw scans remain in Git; source exports retain their
+# scripts and omit the rest of these reproducible archival result tables.
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/** export-ignore
+
+# Reproducible verification outputs stay in Git and CI artifacts; release
+# source ZIPs retain the generators rather than these generated reports.
+reports/latex_build/summary.md export-ignore
+reports/u1_neutrality_2026_10_31.json export-ignore

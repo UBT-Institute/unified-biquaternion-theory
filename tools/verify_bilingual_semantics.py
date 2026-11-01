@@ -136,8 +136,14 @@ def make_prompt(batch: list[dict]) -> str:
     return PROMPT + json.dumps([public_input(item) for item in batch], ensure_ascii=False)
 
 
-def split_oversized_pair(item: dict) -> list[dict]:
-    if len(make_prompt([item])) <= MAX_BATCH_CHARS:
+def split_oversized_pair(item: dict, *, max_chars: int | None = None,
+                         max_paragraphs: int | None = None) -> list[dict]:
+    limit = MAX_BATCH_CHARS if max_chars is None else max_chars
+    if limit < 1 or (max_paragraphs is not None and max_paragraphs < 1):
+        raise ReviewError("positive review limits required")
+    if (len(make_prompt([item])) <= limit
+            and (max_paragraphs is None
+                 or max(len(item["en"]), len(item["cs"])) <= max_paragraphs)):
         return [item]
     if len(item["en"]) != len(item["cs"]):
         raise ReviewError(f"pair exceeds review size limit; split into paired sources: {item['id']}")
@@ -148,14 +154,16 @@ def split_oversized_pair(item: dict) -> list[dict]:
     while start < count:
         best: dict | None = None
         end = start
-        while end < count:
+        while end < count and (max_paragraphs is None or end - start < max_paragraphs):
             candidate = {
                 **item,
                 "id": item["id"],
                 "en": item["en"][start:end + 1],
                 "cs": item["cs"][start:end + 1],
             }
-            if len(make_prompt([candidate])) <= MAX_BATCH_CHARS:
+            # Reserve room for the final part identifier; its bytes are also
+            # part of the model context. No paragraph or hash is shortened.
+            if len(make_prompt([candidate])) <= limit - 128:
                 best = candidate
                 end += 1
                 continue
@@ -173,13 +181,16 @@ def split_oversized_pair(item: dict) -> list[dict]:
     return chunks
 
 
-def batches(documents: list[dict]) -> list[list[dict]]:
+def batches(documents: list[dict], *, max_chars: int | None = None,
+            max_paragraphs: int | None = None) -> list[list[dict]]:
+    limit = MAX_BATCH_CHARS if max_chars is None else max_chars
     result: list[list[dict]] = []
     current: list[dict] = []
     for item in documents:
-        for part in split_oversized_pair(item):
+        for part in split_oversized_pair(item, max_chars=limit,
+                                         max_paragraphs=max_paragraphs):
             candidate = current + [part]
-            if current and (len(candidate) > 4 or len(make_prompt(candidate)) > MAX_BATCH_CHARS):
+            if current and (len(candidate) > 4 or len(make_prompt(candidate)) > limit):
                 result.append(current)
                 current = []
             current.append(part)
@@ -340,8 +351,11 @@ class CopilotReviewer:
             return result.stdout.strip()
 
 
-def run_review(documents: list[dict], reviewer, report: dict, workers: int = 2) -> None:
-    work = batches(documents)  # Verify budget before making any model request.
+def run_review(documents: list[dict], reviewer, report: dict, workers: int = 2,
+               *, max_batch_chars: int | None = None,
+               max_paragraphs: int | None = None) -> None:
+    work = batches(documents, max_chars=max_batch_chars,
+                   max_paragraphs=max_paragraphs)  # Verify budget before model requests.
     examples, expected = calibration()
     checked = validate_response(reviewer(examples), examples)
     report["calibration"] = {"status": "failed", "reviews": checked}

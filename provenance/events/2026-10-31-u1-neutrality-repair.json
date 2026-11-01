@@ -1,0 +1,78 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-10-31",
+  "claim_or_decision_id": "GAP-U1-NEUTRALITY",
+  "summary": "Repair the declared-left-phase neutrality proof, correct the scalar mass normalization and continue a scoped original-carrier/composite-channel derivation.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_proposal",
+      "actor": "human",
+      "description": "The author requested correction of the identified error and continuation of the derivation in the hyperspace-wave/UBT research task. This records the task direction, not priority for a physical theory.",
+      "evidence_ids": [
+        "direction"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "The agent replaced the invalid conjugation proof with the left-action counterexample and positive-scalar mass condition, derived the scoped real-linear Lorentz commutant classification, and developed neutral-composite Fourier/response bookkeeping.",
+      "evidence_ids": [
+        "base",
+        "changes"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "The implementation makes charge explicit, removes the old numerical utility closure claim and retains the original edited sources as verbatim snapshots.",
+      "evidence_ids": [
+        "changes"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "direction",
+      "class": "discussion_context",
+      "locator": "Current research session, author instruction recorded 2026-10-31; no public transcript deposited",
+      "original_checked": true,
+      "supports": "Authorization to repair the error and continue the derivation.",
+      "limitations": "No priority claim, direct quotation, complete conversation history or substantive author review is inferred."
+    },
+    {
+      "id": "base",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/tree/5cde1af91541cd33e3ae61b13a82f9639e9d2dfb/canonical/qed_phi_const",
+      "original_checked": true,
+      "supports": "The old proof declares left multiplication but tests conjugation and asserts neutrality.",
+      "limitations": "Repository text establishes the recorded error, not experimental physics or historical idea origin."
+    },
+    {
+      "id": "changes",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/u1_neutrality_composite_channel.en.md; .cs.md; tools/verify_u1_neutrality.py",
+      "original_checked": true,
+      "supports": "The scoped analytic correction and executable checks supplied with this change.",
+      "limitations": "No UBT action selection, healthy physical pole, electromagnetic coefficient or multiverse communication is verified."
+    }
+  ],
+  "rejected_alternatives": [
+    "Replace left multiplication by central conjugation while retaining charged components.",
+    "Declare a real/Fourier-zero or Hermitian component neutral without an equivariant representation.",
+    "Postulate a new independent scalar, change the locked sharp metric, or select arbitrary source/readout gain to close the gap."
+  ],
+  "verification": {
+    "status": "verified_with_scope",
+    "artifacts": [
+      "tools/verify_u1_neutrality.py",
+      "tests/test_u1_neutrality.py",
+      "reports/u1_neutrality_2026_10_31.json"
+    ],
+    "limitations": "LEAN-PENDING: Lean unavailable. Independent semantic translation review is required before merge and not attested by this record. Encoded algebra and conditional comparators do not prove a physical channel."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "No tier-map entry, author signature or attestation date was changed. The original edited sources are preserved verbatim under provenance/snapshots/2026-10-31-u1-neutrality. Large legacy attested overview files have no zero-mode proof entry and are not substantively rewritten; the machine ledger, bilingual claim matrix and current-status editions carry this scoped correction."
+}

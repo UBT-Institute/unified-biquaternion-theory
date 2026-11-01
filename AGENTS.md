@@ -474,3 +474,13 @@ Specific requirements:
 - A missing evidence trail is reported honestly as `not_recorded` / `undetermined`; it must not be invented to satisfy CI. Routine commits that do not touch theory may state `not_applicable`.
 
 Research provenance records are evidence summaries and should not block exploratory drafts merely because complete chat archives are unavailable. However, a PR must not claim verified historical origin or human approval without supporting records.
+
+## U(1) zero-mode erratum
+
+For `GAP-U1-NEUTRALITY`, use the paired corrected step 1/step 6 and
+`research_tracks/action_selection/u1_neutrality_composite_channel.en.md` /
+`.cs.md`. Never infer left-action neutrality from commutation or Fourier index.
+The positive-scalar mass test and real-linear commutant theorem have explicit
+hypotheses; neither supplies the unresolved UBT physical spectrum or an
+inter-universe channel. Do not reactivate the older QED proof labels or scalar
+loop estimates merely because the numerical comparison script exits zero.

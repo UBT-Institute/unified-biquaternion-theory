@@ -85,3 +85,21 @@ def test_equation_drift_remains_a_failure(tmp_path: Path) -> None:
     en.write_text("# Note\n\\[a=1\\]\n", encoding="utf-8")
     cs.write_text("# Poznámka\n\\[a=2\\]\n", encoding="utf-8")
     assert any(error.startswith("math mismatch:") for error in GATE.check_pair(en, cs))
+
+
+@pytest.mark.parametrize("suffix,content", [
+    ("tex", r"\input{note.en.tex}"),
+    ("md", "- [en](note.en.md)\n- [cs](note.cs.md)"),
+])
+def test_prose_free_router_requires_both_real_editions(tmp_path, suffix, content):
+    router = tmp_path / f"note.{suffix}"
+    router.write_text(content)
+    assert not GATE.language_router(router)
+    for lang in ("en", "cs"):
+        (tmp_path / f"note.{lang}.{suffix}").write_text("\\[a=1\\]\n")
+    assert GATE.language_router(router)
+    router.write_text(content + "\nPROVED")
+    assert not GATE.language_router(router)
+    router.write_text(content)
+    (tmp_path / f"note.cs.{suffix}").write_text("\\[a=2\\]\n")
+    assert not GATE.language_router(router)

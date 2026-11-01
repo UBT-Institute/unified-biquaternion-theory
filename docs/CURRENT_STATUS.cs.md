@@ -32,3 +32,10 @@ Obnova Einsteinovy–Lambda gravitace, zahrnutí Schwarzschilda a jeho standardn
 [Audit uzavření](../research_tracks/action_selection/physics_closure_2026_10.cs.md) odvozuje Hamiltonián s vazbami určeného homogenního srovnávacího modelu a odhaluje jeho singulární limitu koeficientu. Jde o omezený výpočet, nikoli úplnou polní dynamiku UBT. Alfa zůstává `OPEN_GAP`; fitované B poblíž 46.28 není predikce z prvních principů.
 
 Formálně pokračovaný samoduální srovnávací model má přesné kanonické přiřazení GR FLRW. Původní hermitovská dvojice po tomto pokračování nesplňuje obecné vyčítání tetrády, takže přípustná mikroskopická samoduální větev ani povinná predikce prachu nejsou stanoveny.
+
+<!-- BILINGUAL-UNIT: current-status.u1-neutrality -->
+## Oprava neutrality konstantního pozadí
+
+**GAP-U1-NEUTRALITY: FORMER PROOF REFUTED; PHYSICAL BRIDGE OPEN.** Deklarované levé působení fáze neponechává nenulový reálný nulový mód neutrální. Opravený srovnávací model kladného skaláru vyžaduje Qv=0 pro bezhmotný foton; neutrální fyzikální složka UBT ani její vlna odvozeny nebyly. Omezená věta o reálně lineárním Lorentzově komutantu vylučuje smíšené neutrální a nabité lineární rozdělení na uvedeném původním nosiči. Neutrální složená veličina existuje, ale její fyzikální korelátor a elektromagnetické přiřazení zdroje a odečtu zůstávají otevřené. Nejde o důkaz komunikace s multiversem.
+
+[en](../research_tracks/action_selection/u1_neutrality_composite_channel.en.md); [cs](../research_tracks/action_selection/u1_neutrality_composite_channel.cs.md). Starší kroky QED jsou podmíněným starším materiálem; párový opravený krok 1 a krok 6 nahrazují jejich závěry o neutralitě a uzavření. Pro tuto aktualizaci netvrdíme autorské potvrzení.
