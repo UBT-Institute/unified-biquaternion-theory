@@ -146,6 +146,36 @@ R_{\mu\nu}=\Lambda g_{\mu\nu}
 \quad\text{is NOT satisfied by }\eta_{\mu\nu}.
 \]
 
+## Silnější podmíněný výsledek: volný split-jet na ŘEŠENÍ Einsteinových rovnic [PROVED, podmíněně]
+
+Předchozí příklad s pevnou plochou tetrádou byl při nenulové kosmologické konstantě zvoleného MM skutečně MIMO ŘEŠENÍ. Výsledek lze zesílit PŘEVZETÍM již existující věty o lokální pravé inverzi z `split_jet_palatii_variational_lift.en.md` a `single_theta_macdowell_mansouri_candidate.en.md`. Argument platí POUZE pro dřívější model s volně variovanými K_J a w, NIKOLI automaticky pro pozdější w(H) nebo omezenou gradovanou konstrukci K.
+
+Zafixujme libovolnou lokální nedegenerovanou vakuovou Einsteinovu–Lambda tetrádu e_GR(x), její fyzikální spinovou konexi omega_GR(x) bez torze a pevné N0=s². Pro každé vinutí n projektujme TOTÉŽ celé komplexní Theta_n na původní Lorentzovsky reálný nosič X_n. Na malé oblasti kolem x=0 je každé X_n prostorupodobné a neizotropní, rovnoměrně pro psi na celém kruhu: v x=0 má X_n reálné Lorentzovy složky (b_n/2,c_n,0,-b_n/2) a X_n²=c_n²>0.
+
+\[
+Y_{n\mu}{}^a=s e_{\mathrm{GR},\mu}{}^a-
+D_\mu^{\omega_{\mathrm{GR}}}X_n^a,\quad
+q_n=X_n^aX_{na}>0,\quad
+w_{n\mu}=\frac{X_{na}Y_{n\mu}{}^a}{q_n},\quad
+U_{n\mu}{}^a=Y_{n\mu}{}^a-w_{n\mu}X_n^a,
+\]
+\[
+(K_{J,n})_{\mu ab}
+=\frac{U_{n\mu a}X_{nb}-X_{na}U_{n\mu b}}{q_n},
+\quad
+(K_{J,n})_\mu{}^a{}_b X_n^b+w_{n\mu}X_n^a=Y_{n\mu}{}^a,
+\]
+\[
+\boxed{E[\Theta_n,K_{J,n},w_n,\omega_{\mathrm{GR}}]
+=e_{\mathrm{GR}}}\qquad\text{for every }n.
+\]
+
+Přesná dříve dokázaná věta o split-jetových variacích potom přenáší celé Einsteinovy tetrádové a Cartanovy rovnice na **každou takto přenesenou konfiguraci**. Protože vybraná MM akce závisí jen na e_GR a omega_GR, všechny konfigurace mají identickou gravitační akci na řešeních i stejné 4D pozorovatelné veličiny. Jde o existenční tvrzení NA ŘEŠENÍCH **pouze ve srovnávacím MM modelu s volně variovanými pomocnými proměnnými**: nikoli o úplnou holomorfní/gradovanou dynamiku jediného Theta.
+
+Dokonce i přechod přes det Theta=0 při interpolaci mezi n=0 a n=1 lze lokálně pozvednout: v psi=pi Rpsi a s=s-star je nosič X=(0,1,0,0), q=1, zatímco det Theta=0 a det e_GR se nemění. Starší funkcionál MM nepoužívá inverzi Theta, takže v jeho zvolených proměnných nevzniká singularita. **Samotné gravitační rovnice volného MM proto topologicky nechrání vinutí ani na vlastní množině řešení.**
+
+To se NEPŘENÁŠÍ automaticky na fyzikálně vybranou akci, v níž může být w určeno jako w(H), K_J může omezovat úplná hermitovská podmínka reality, hmota může porušit posuvný kvocient a invertibilita Theta může být povinná. Nepřítomnost takového výběru je právě neuzavřenou dynamickou branou.
+
 ## Co by musela dodat skutečná akce ve směru ψ [OPEN]
 
 POUZE JAKO TEST by mohl kladný kvadratický funkcionál derivací psi rozlišit vinutí, zatímco původní MM funkcionál to neumí. Takový člen není součástí zamčené akce a může narušit dřívější posuvnou symetrii split-jetu; jeho fyzikální Hessian, Cartanovy vazby a znaménko energie by musely být odvozeny a zkontrolovány:
@@ -173,4 +203,4 @@ Nezaměňujme nenulovou normu gradientu psi na pevném pozadí se stabilním fyz
 
 ## Ověření a rozhodnutí [OPEN]
 
-**16 přesných testů SymPy** v `tests/test_mm_full_theta_psi_winding_decoupling.py`, přidaných ke stávajícím 71 regresím ve fyzikálním CI: periodické profily n, vinutí z det Theta, pevná kanonická tetráda sharp, variace posunu psi, singulární interpolace s regulární e, přímý nulový hlavní Hessian psi, neslučitelnost nenulového Lambda MM, podmíněný gradientový test psi a neizotropnost nosiče celého komplexního Theta. **Rozhodnutí:** nynější čistě gravitační model nemůže vybrat ani ochránit topologický index bez dalšího vstupu. Dále testovat, zda některý již existující fundamentální invariant UBT (informační princip, vazba sdílené reality nebo kinetický/konexní sektor celého Theta) dává hlavní člen psi a přesnou hranici přípustnosti det Theta **bez svévolného přidávání nové akce**. Existující zdroje: `research_tracks/action_selection/full_theta_sharp_norm_winding_2026_10.en.md:15-143`, `research_tracks/action_selection/single_theta_macdowell_mansouri_candidate.en.md:30-160`, `research_tracks/action_selection/mm_shift_gauge_dirac.en.md:23-47`, `research_tracks/action_selection/mm_complex_spectator_rank.en.md:23-39`, `research_tracks/action_selection/mm_shift_potential_obstruction.en.md:23-36`, `canonical/CANONICAL_DEFINITIONS.md:160-190`, `canonical/THEORY/t_duality_ubt.tex:31-90`. Netvrdíme fyzikální T-dualitu, strunu, řešení s vinutím na řešeních ani jedinečnou akci.
+**19 přesných testů SymPy** v `tests/test_mm_full_theta_psi_winding_decoupling.py`, přidaných ke stávajícím 71 regresím ve fyzikálním CI: periodické profily n, vinutí z det Theta, pevná kanonická tetráda sharp, variace posunu psi, singulární interpolace s regulární e, přímý nulový hlavní Hessian psi, neslučitelnost nenulového Lambda MM, podmíněný gradientový test psi a neizotropnost nosiče celého komplexního Theta. **Rozhodnutí:** nynější čistě gravitační model nemůže vybrat ani ochránit topologický index bez dalšího vstupu. Dále testovat, zda některý již existující fundamentální invariant UBT (informační princip, vazba sdílené reality nebo kinetický/konexní sektor celého Theta) dává hlavní člen psi a přesnou hranici přípustnosti det Theta **bez svévolného přidávání nové akce**. Existující zdroje: `research_tracks/action_selection/full_theta_sharp_norm_winding_2026_10.en.md:15-143`, `research_tracks/action_selection/single_theta_macdowell_mansouri_candidate.en.md:30-160`, `research_tracks/action_selection/mm_shift_gauge_dirac.en.md:23-47`, `research_tracks/action_selection/mm_complex_spectator_rank.en.md:23-39`, `research_tracks/action_selection/mm_shift_potential_obstruction.en.md:23-36`, `canonical/CANONICAL_DEFINITIONS.md:160-190`, `canonical/THEORY/t_duality_ubt.tex:31-90`. Netvrdíme fyzikální T-dualitu, strunu, řešení s vinutím na řešeních ani jedinečnou akci.
