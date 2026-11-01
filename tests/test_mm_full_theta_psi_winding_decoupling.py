@@ -150,6 +150,52 @@ class MMPsiTopologicalDecoupling(unittest.TestCase):
             self.assertEqual(positive,rho**2*n**2/R**2)
         self.assertEqual(sp.diff(base(theta(0)),psi),ZERO)
 
+    def test_existing_splitjet_free_Q_right_inverse_exact(self):
+        # Reuse the EXISTING split_jet_palatii_variational_lift formula.
+        # This is the FREELY VARIED w model, NOT derived w(H).
+        X=sp.Matrix([3,1,2,0])
+        Y=sp.Matrix([1,2,3,4])
+        q=(X.T*ETA*X)[0]
+        self.assertEqual(q,-4)
+        w=(X.T*ETA*Y)[0]/q
+        U=Y-w*X
+        Xa=ETA*X
+        Ua=ETA*U
+        Kdown=(Ua*Xa.T-Xa*Ua.T)/q
+        Kmixed=ETA*Kdown
+        self.assertEqual(sp.simplify(Kdown+Kdown.T),sp.zeros(4))
+        self.assertEqual(sp.simplify(Kmixed*X+w*X-Y),sp.zeros(4,1))
+
+    def test_winding_interpolation_is_nonnul_carrier_even_at_det_zero(self):
+        lam=sp.symbols("lam",real=True)
+        c0=sp.sqrt(1+rho)
+        c1=sp.sqrt(1-rho)
+        c=(1-lam)*c0+lam*c1
+        X=sp.Matrix([0,c,0,0])
+        q=sp.simplify((X.T*ETA*X)[0])
+        self.assertEqual(sp.simplify(q-c*c),0)
+        lam_star=(c0-1)/(c0-c1)
+        self.assertEqual(sp.simplify(q.subs(lam,lam_star)),1)
+        # det Theta=0 need not obstruct the FREE-Q lift (q remains 1).
+        self.assertEqual(sp.simplify((-1+c*c).subs(lam,lam_star)),0)
+
+    def test_any_tetrad_target_can_be_lifted_at_topological_crossing(self):
+        # At the explicit zero of det Theta, original Lorentz carrier X
+        # is spacelike and non-null. The free-w splitjet right inverse works.
+        X=sp.Matrix([0,1,0,0])
+        q=(X.T*ETA*X)[0]
+        self.assertEqual(q,1)
+        target=sp.diag(2,3,4,5)
+        dX=sp.eye(4)
+        for mu in range(4):
+            Y=target[mu,:].T-dX[mu,:].T
+            w=(X.T*ETA*Y)[0]/q
+            U=Y-w*X
+            Kdown=(ETA*U*(ETA*X).T-ETA*X*(ETA*U).T)/q
+            self.assertEqual(sp.simplify(ETA*Kdown*X+w*X+dX[mu,:].T
+                                         -target[mu,:].T),sp.zeros(4,1))
+            self.assertEqual(sp.simplify(Kdown+Kdown.T),sp.zeros(4))
+
     def test_global_winding_invariant_under_nonsingular_continuation(self):
         # The zero-determinant passage above is forced by changing the
         # homotopy class; do NOT call winding an ordinary local gauge mode.
