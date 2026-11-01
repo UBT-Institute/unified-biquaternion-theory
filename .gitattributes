@@ -43,3 +43,7 @@ docs/pdfs/UBT_Textbook_CS.pdf export-ignore
 docs/pdfs/UBT_Textbook_EN.pdf export-ignore
 docs/pdfs/UBT_canonical_main.pdf export-ignore
 docs/pdfs/UBT_GR_Submission.pdf export-ignore
+
+# Generated historical raw scans remain in Git; source exports retain their
+# scripts and omit the rest of these reproducible archival result tables.
+ARCHIVE/archive_legacy/ARCHIVE/generated_outputs/scans/raw/** export-ignore
