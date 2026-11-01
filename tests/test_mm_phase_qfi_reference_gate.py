@@ -32,6 +32,14 @@ class FullThetaPhaseQFI(unittest.TestCase):
         self.assertEqual(sp.simplify(expression.subs(A,rho)-n**2/R**2),0)
         self.assertEqual(expression.subs(n,0),0)
 
+    def test_reference_strength_is_unselected(self):
+        x=sp.symbols('x', positive=True)
+        weight=4*x**2/(1+x**2)**2
+        self.assertEqual(sp.simplify((1-weight) - (x**2-1)**2/(1+x**2)**2), 0)
+        self.assertEqual(sp.limit(weight,x,0),0)
+        self.assertEqual(sp.limit(weight,x,sp.oo),0)
+        self.assertEqual(sp.simplify(weight.subs(x,1)),1)
+
     def test_crossing_has_finite_qfi_and_nonzero_reference_norm(self):
         rr=sp.Rational(1,2)
         s_star=(sp.sqrt(1+rr)-1)/(sp.sqrt(1+rr)-sp.sqrt(1-rr))
