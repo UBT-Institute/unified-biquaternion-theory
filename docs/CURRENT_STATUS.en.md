@@ -32,3 +32,8 @@ Einstein–Lambda recovery, Schwarzschild inclusion and its standard perturbatio
 The [closure audit](../research_tracks/action_selection/physics_closure_2026_10.en.md) derives a constrained Hamiltonian for the specified homogeneous comparator and exposes its singular coefficient limit. This is a restricted calculation, not the full field-theoretic UBT dynamics. Alpha remains `OPEN_GAP`; a fitted B near 46.28 is not a first-principles prediction.
 
 The formally continued self-dual comparator has an exact canonical GR FLRW match. The original Hermitian pair fails the generic tetrad readout after that continuation, so an admissible microscopic self-dual branch and a mandatory dust prediction are not established.
+
+<!-- BILINGUAL-UNIT: current-status.derived-h-gaussian -->
+## Derived-H graded local lift — 2026-11-02
+
+The [derived-H graded lift](../research_tracks/action_selection/derived_h_graded_gaussian_lift_2026_11.en.md) constructs a smooth local representative of every nondegenerate Lorentz tetrad in the existing positive-H real-linear graded comparator, with the relative center fixed by H rather than independently varied. The full Theta stays invertible. Its actual carrier variation gives a local stationary lift of the supplied gravity equations and an equality of presymplectic pullback currents on stationary solutions and their linearized tangent variations. Gaussian coordinates and constants label a representative; they do not select a connection functional or action. No global symplectic bijection, full Dirac reduction, psi kinetic term or physical stability is established. The action remains DEFINED_FAMILY_NOT_FINALIZED and GR recovery remains CONDITIONAL.

@@ -1,0 +1,94 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-02",
+  "claim_or_decision_id": "DERIVED-H-GRADED-LOCAL-LIFT",
+  "summary": "Local Gaussian right inverse, stationary transmission and on-shell presymplectic boundary term for the existing positive-H real-linear graded comparator with determinant-derived relative center.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_architecture_decision",
+      "actor": "human",
+      "description": "The repository author fixes the single full-Theta covariant tetrad, central sharp metric and architecture-before-repair constraints; the present work stays within that documented research boundary.",
+      "evidence_ids": [
+        "architecture"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Reuse audit distinguishes the older free central one-form from the derived-H graded comparator and identifies its local representability and variational boundary gap.",
+      "evidence_ids": [
+        "existing-graded",
+        "new-proof"
+      ]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Construct a non-null Gaussian representative with positive H, derive its exact right inverse, use Y=X/h for the complete local variation and obtain the stationary presymplectic pullback identity.",
+      "evidence_ids": [
+        "new-proof"
+      ]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Exact SymPy controls and a separately implemented NumPy finite-difference check test both normal signs, complete tetrads, determinant signs, variation and boundary identities.",
+      "evidence_ids": [
+        "verification"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "architecture",
+      "class": "repository_artifact",
+      "locator": "AGENTS.md",
+      "original_checked": true,
+      "supports": "Documented author-controlled architecture and scope requirements.",
+      "limitations": "Does not attest the new proof or establish the historical origin of each intermediate formula."
+    },
+    {
+      "id": "existing-graded",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/full_theta_reallinear_graded_jet_2026_10.en.md",
+      "original_checked": true,
+      "supports": "Existing real-linear graded model and its explicit unresolved action and variation gates.",
+      "limitations": "Does not by itself establish the new Gaussian right inverse."
+    },
+    {
+      "id": "new-proof",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/derived_h_graded_gaussian_lift_2026_11.en.md",
+      "original_checked": true,
+      "supports": "The new scoped analytic derivation and its stated assumptions.",
+      "limitations": "Working material without independent external review or a selected microscopic action."
+    },
+    {
+      "id": "verification",
+      "class": "repository_artifact",
+      "locator": "reports/derived_h_graded_gaussian_lift_2026_11_02.json",
+      "original_checked": true,
+      "supports": "Source-bound finite symbolic and numerical controls.",
+      "limitations": "Does not formalize Gaussian existence, full continuum reduction or a physical spectrum."
+    }
+  ],
+  "rejected_alternatives": [
+    "Do not identify the old freely varied central one-form with the derived-H form without proof.",
+    "Do not promote the equality of on-shell pullback currents to a global reduced-phase-space bijection.",
+    "Do not add an unselected Fisher action or change the locked tetrad."
+  ],
+  "verification": {
+    "status": "verified_with_scope",
+    "artifacts": [
+      "tests/test_derived_h_graded_gaussian_lift.py",
+      "tools/verify_derived_h_graded_gaussian_lift_numeric.py",
+      "reports/derived_h_graded_gaussian_lift_2026_11_02.json"
+    ],
+    "limitations": "Finite controls and the accompanying analytic proof under explicit comparator assumptions; Lean and independent bilingual semantic approval remain pending."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "Research-origin evidence is separate from AI-provenance tiers. No raw private conversation or author signature is supplied; underlying earliest concept origins remain undetermined where not evidenced."
+}

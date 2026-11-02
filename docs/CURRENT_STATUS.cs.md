@@ -32,3 +32,8 @@ Obnova Einsteinovy–Lambda gravitace, zahrnutí Schwarzschilda a jeho standardn
 [Audit uzavření](../research_tracks/action_selection/physics_closure_2026_10.cs.md) odvozuje Hamiltonián s vazbami určeného homogenního srovnávacího modelu a odhaluje jeho singulární limitu koeficientu. Jde o omezený výpočet, nikoli úplnou polní dynamiku UBT. Alfa zůstává `OPEN_GAP`; fitované B poblíž 46.28 není predikce z prvních principů.
 
 Formálně pokračovaný samoduální srovnávací model má přesné kanonické přiřazení GR FLRW. Původní hermitovská dvojice po tomto pokračování nesplňuje obecné vyčítání tetrády, takže přípustná mikroskopická samoduální větev ani povinná predikce prachu nejsou stanoveny.
+
+<!-- BILINGUAL-UNIT: current-status.derived-h-gaussian -->
+## Gradovaný lokální zdvih s H-odvozenou konexí — 2026-11-02
+
+[Gradovaný zdvih s H-odvozenou konexí](../research_tracks/action_selection/derived_h_graded_gaussian_lift_2026_11.cs.md) konstruuje hladkého lokálního reprezentanta každé nedegenerované Lorentzovy tetrády v existujícím reálně lineárním gradovaném komparátoru s kladným H, v němž je relativní centrální člen určen složkou H a nevariuje se nezávisle. Plná Theta zůstává invertibilní. Skutečná variace nosiče poskytuje lokální stacionární zdvih zadaných gravitačních rovnic a rovnost zpětně přenesených presymplektických proudů na stacionárních řešeních a jejich linearizovaných tečných variacích. Gaussovy souřadnice a konstanty označují reprezentanta; nevybírají funkcionál konexe ani akci. Globální symplektická bijekce, úplná Diracova redukce, psi-kinetický člen ani fyzikální stabilita nejsou doloženy. Akce zůstává DEFINED_FAMILY_NOT_FINALIZED a obnova GR zůstává CONDITIONAL.

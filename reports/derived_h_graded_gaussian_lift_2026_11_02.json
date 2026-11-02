@@ -1,0 +1,79 @@
+{
+  "schema": "ubt-derived-h-graded-lift-verification/v1",
+  "recorded_on": "2026-11-02",
+  "base_commit": "68c73508e239bfbccb1d8bd9266fac0e76f1839e",
+  "claim_id": "DERIVED-H-GRADED-LOCAL-LIFT",
+  "status": "verified_with_scope",
+  "tools": {
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "numpy": "2.5.4"
+  },
+  "exact": {
+    "artifact": "tests/test_derived_h_graded_gaussian_lift.py",
+    "test_count": 12,
+    "result": "PASS",
+    "scope": "Both normal signs; exact boosted coframes; Lorentz skewness; original sharp metric; determinant sign; full delta-w chain rule; rescaled boundary term; normal-source trace."
+  },
+  "independent_numeric": {
+    "artifact": "tools/verify_derived_h_graded_gaussian_lift_numeric.py",
+    "samples_per_sign": 128,
+    "normal_signs": [
+      -1,
+      1
+    ],
+    "finite_difference_step": 1e-05,
+    "absolute_tolerance": 2e-08,
+    "numpy": "2.5.4",
+    "max_errors": {
+      "normal": 2.6645352591003757e-15,
+      "orthogonality": 7.885966728999387e-11,
+      "recovered": 3.4549030303310246e-11,
+      "lorentz": 0.0,
+      "sharp_metric": 6.82177647703952e-11,
+      "hermitian": 0.0
+    },
+    "result": "PASS",
+    "scope": "finite numerical controls only"
+  },
+  "targeted_regression": {
+    "test_count": 102,
+    "result": "PASS",
+    "artifacts": [
+      "tests/test_derived_h_graded_gaussian_lift.py",
+      "tests/test_full_theta_reallinear_graded_jet.py",
+      "tests/test_theta_hermitian_mm_adjoint_closure.py",
+      "tests/test_complex_time_graded_reflection_fork.py",
+      "tests/test_full_theta_det_winding_tetrad_2026.py",
+      "tests/test_mm_full_theta_psi_winding_decoupling.py"
+    ]
+  },
+  "source_sha256": {
+    "research_tracks/action_selection/derived_h_graded_gaussian_lift_2026_11.en.md": "119b43f7bc046839b4c3db957560564b38f4b8e4e11b4b00d4cb38e48a09c9f7",
+    "research_tracks/action_selection/derived_h_graded_gaussian_lift_2026_11.cs.md": "830922db87596418d603be2ed312d1ad2d17bd38c85181ce210d37c1be6aa957",
+    "tests/test_derived_h_graded_gaussian_lift.py": "75466fefac40ce4b807ccc42e0cf3149e21da824370a5bdb17eefc794fc53c8b",
+    "tools/verify_derived_h_graded_gaussian_lift_numeric.py": "12f771ab1689b089b18ad3ab0134fc5fef985a3f15f3cfb4c01f0bf53f83308b"
+  },
+  "lean": {
+    "status": "LEAN-PENDING",
+    "reason": "Lean and Lake executables are unavailable; no kernel-checked formalization is supplied."
+  },
+  "semantic_review": {
+    "status": "PENDING",
+    "reason": "Local independent semantic gate attempted and blocked: required Copilot CLI 1.0.103 is unavailable. Fresh source-bound workflow review remains required before merge."
+  },
+  "limitations": [
+    "Analytic Gaussian-coordinate existence and continuum variational implications are not established by finite tests.",
+    "The connection map is a local Gaussian representative choice, not a unique equivariant action-selected functional.",
+    "No microscopic action, psi principal dynamics, positive physical spectrum, full Dirac quotient, global symplectic bijection or horizon/null continuation is derived.",
+    "Physical and defining spin connections remain distinct.",
+    "No author-owned Tier-A attestation is refreshed."
+  ],
+  "repository_checks": {
+    "bilingual_structural_parity": "PASS, 309 pairs including changed-prose enforcement",
+    "research_origin_schema": "PASS, 12 events",
+    "provenance_headers": "PASS",
+    "documentation_lint": "PASS, zero violations",
+    "tier_a_attestation": "BLOCKED: unchanged author-owned attestation is 93 days old; no signature/date modified"
+  }
+}
