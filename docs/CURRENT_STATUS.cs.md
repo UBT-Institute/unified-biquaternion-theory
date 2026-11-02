@@ -32,3 +32,8 @@ Obnova Einsteinovy–Lambda gravitace, zahrnutí Schwarzschilda a jeho standardn
 [Audit uzavření](../research_tracks/action_selection/physics_closure_2026_10.cs.md) odvozuje Hamiltonián s vazbami určeného homogenního srovnávacího modelu a odhaluje jeho singulární limitu koeficientu. Jde o omezený výpočet, nikoli úplnou polní dynamiku UBT. Alfa zůstává `OPEN_GAP`; fitované B poblíž 46.28 není predikce z prvních principů.
 
 Formálně pokračovaný samoduální srovnávací model má přesné kanonické přiřazení GR FLRW. Původní hermitovská dvojice po tomto pokračování nesplňuje obecné vyčítání tetrády, takže přípustná mikroskopická samoduální větev ani povinná predikce prachu nejsou stanoveny.
+
+<!-- BILINGUAL-UNIT: current-status.theta-neural -->
+## Spekulativní větev vazby Θ a neuronů — 2026-11-02
+
+[SPEC-THETA-NEURAL-001](../speculative_extensions/consciousness/theta_neural_interface/README.cs.md) otevírá úzce vymezené zkoumání se statusem `SPECULATIVE`, zaměřené na kolektivní módy Θ vázané na měřenou neuronální aktivitu bez výběru jediného biologického nosiče. Jeho klasický dvoumódový srovnávací model ověřuje pouze stabilitu a odezvu. Fyzikální kalibračně invariantní pozorovatelná veličina, vazba odvozená z akce, bilance dekoherence, rozlišující predikce UBT a interpretace vědomí zůstávají `OPEN_GAP`. Žádný kanonický fyzikální status se nepovyšuje a historický částicový model psychonů se neobnovuje.
