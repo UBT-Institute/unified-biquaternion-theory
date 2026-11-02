@@ -199,6 +199,11 @@ jobs:
           python -m pytest -q tests/test_derived_h_graded_gaussian_lift.py
           python tools/verify_derived_h_graded_gaussian_lift_numeric.py
 
+      - name: Derived-H representative quotient and non-Gaussian lift
+        run: |
+          python -m pytest -q tests/test_derived_h_representative_quotient.py
+          python tools/verify_derived_h_representative_quotient_numeric.py
+
   # -----------------------------------------------------------------------
   # 7. QM limit tests (existing)
   # -----------------------------------------------------------------------
