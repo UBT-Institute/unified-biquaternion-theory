@@ -314,8 +314,6 @@ claims:
     - speculative_extensions/consciousness/
     forbidden_wording: []
 
-<<<<<<< HEAD
-=======
   theta_neural_interface:
     status: SPECULATIVE
     evidence:
@@ -334,7 +332,6 @@ claims:
     - the comparator demonstrates quantum consciousness
     - complex time automatically protects biological quantum coherence
 
->>>>>>> origin/master
   physics_closure_2026_10:
     status: CONDITIONAL
     action_derivation_status: AXIOMATIC_CANDIDATE
