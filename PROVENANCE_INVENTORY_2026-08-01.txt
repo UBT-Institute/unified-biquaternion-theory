@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-Provenance source inventory: A_attested=7, B_machine_verified=226, C_working=1825, D_historical=420, excluded=8
-=======
-Provenance source inventory: A_attested=7, B_machine_verified=226, C_working=1823, D_historical=420, excluded=8
->>>>>>> origin/master
+Provenance source inventory: A_attested=7, B_machine_verified=226, C_working=1827, D_historical=420, excluded=8
