@@ -33,6 +33,16 @@ Obnova Einsteinovy–Lambda gravitace, zahrnutí Schwarzschilda a jeho standardn
 
 Formálně pokračovaný samoduální srovnávací model má přesné kanonické přiřazení GR FLRW. Původní hermitovská dvojice po tomto pokračování nesplňuje obecné vyčítání tetrády, takže přípustná mikroskopická samoduální větev ani povinná predikce prachu nejsou stanoveny.
 
+<!-- BILINGUAL-UNIT: current-status.derived-h-gaussian -->
+## Gradovaný lokální zdvih s H-odvozenou konexí — 2026-11-02
+
+[Gradovaný zdvih s H-odvozenou konexí](../research_tracks/action_selection/derived_h_graded_gaussian_lift_2026_11.cs.md) konstruuje hladkého lokálního reprezentanta každé nedegenerované Lorentzovy tetrády v existujícím reálně lineárním gradovaném komparátoru s kladným H, v němž je relativní centrální člen určen složkou H a nevariuje se nezávisle. Plná Theta zůstává invertibilní. Skutečná variace nosiče poskytuje lokální stacionární zdvih zadaných gravitačních rovnic a rovnost zpětně přenesených presymplektických proudů na stacionárních řešeních a jejich linearizovaných tečných variacích. Gaussovy souřadnice a konstanty označují reprezentanta; nevybírají funkcionál konexe ani akci. Globální symplektická bijekce, úplná Diracova redukce, psi-kinetický člen ani fyzikální stabilita nejsou doloženy. Akce zůstává DEFINED_FAMILY_NOT_FINALIZED a obnova GR zůstává CONDITIONAL.
+
+<!-- BILINGUAL-UNIT: current-status.derived-h-quotient -->
+## Lokální kvocient reprezentantů — 2026-11-02
+
+[Úplný diferenciální popis reprezentantů](../research_tracks/action_selection/derived_h_graded_representative_quotient_2026_11.cs.md) rekonstruuje gradované proměnné s kladným H z celé tetrády, existující normy nosiče a označení stabilizátoru pomocí konečných diferenciálních inverzí. Klasifikuje všechny vertikální transformace v tomto popisu, výslovně kvocientuje dodatečné rozdělení definující spinové konexe a poskytuje zdvih v časové souřadnici bez Gaussovy konstrukce. Spolu s přenosem stacionarity a skutečným presymplektickým proudem tím vzniká lokální kovariantní ekvivalence redukovaných prostorů řešení za uvedených předpokladů regulárního základního kvocientu a prostorových nosičů zárodků řešení kolem vnitřního Cauchyho řezu, na němž jsou vertikální parametry přípustné. Konkrétní rodina ukazuje, proč by umělý zákaz změn reprezentantů poblíž Cauchyho řezu tomuto kvocientu bránil. Tím se neposkytuje kanonická transformace v pevném čase, úplný počet Diracových vazeb, mikroskopická akce ani fyzikální psi stabilita; obnova GR zůstává CONDITIONAL.
+
 <!-- BILINGUAL-UNIT: current-status.theta-neural -->
 ## Spekulativní větev vazby Θ a neuronů — 2026-11-02
 

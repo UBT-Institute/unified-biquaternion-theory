@@ -86,6 +86,16 @@ Definitions are governed by [`docs/UBT_SCOPE_AND_CLAIM_LEVELS.md`](docs/UBT_SCOP
 | Massless flat-torus one-loop modulus selection | PROVED | `research_tracks/theta_torus_potential/zeta_regularized_shape_audit.md` | Zeta-regularized determinant is proportional to `Im(tau)|eta(tau)|^4`; the standard bosonic massless logdet does not produce a finite global modulus minimum. |
 | Unique finalized fundamental one-Theta action | OPEN_GAP | `canonical/ACTION.en.md` | The action family is defined, but the unique microscopic action/measure/constraint system is not finalized. |
 
+<!-- BILINGUAL-UNIT: claims-matrix.derived-h-gaussian -->
+## Derived-H graded comparator — 2026-11-02
+
+The [local Gaussian lift](research_tracks/action_selection/derived_h_graded_gaussian_lift_2026_11.en.md) proves local representability of every smooth Lorentz tetrad with invertible full Theta in the existing positive-H real-linear graded comparator. The determinant-derived relative center is not independently varied. The complete variation transmits the supplied geometric Euler equations, and its presymplectic current agrees with the pulled-back base current on stationary solutions and linearized tangent variations. This is a PROVED mathematical implication under declared comparator assumptions. Physical GR recovery remains CONDITIONAL; fundamental action selection, the full Dirac quotient, physical psi dynamics and stability remain OPEN_GAP. The representative uses a local Gaussian construction rather than a selected covariant connection functional.
+
+<!-- BILINGUAL-UNIT: claims-matrix.derived-h-quotient -->
+## Derived-H representative quotient — 2026-11-02
+
+The [complete representative parametrization](research_tracks/action_selection/derived_h_graded_representative_quotient_2026_11.en.md) is a PROVED local finite-differential theorem for the supplied positive-H graded gravity comparator: it classifies its norm/stabilizer and defining-spin-split redundancies, proves a non-Gaussian representative corollary, and establishes local covariant reduced-space equivalence when the base quotient is regular and the stated spatial-support boundary convention is used for Jacobi fields around an internal Cauchy slice; physical Cauchy data are not fixed and representative parameters are allowed on that slice. The proof includes tangent surjectivity and the actual on-shell current; a finite-jet inverse alone is insufficient. It does not count fixed-time Dirac constraints or select microscopic dynamics. Physical GR recovery remains CONDITIONAL and fundamental action/psi-sector closure remains OPEN_GAP.
+
 ## Explicitly Speculative Claims (non-canonical)
 
 Unless a reproducible empirical protocol upgrades them, the following remain **SPECULATIVE**:

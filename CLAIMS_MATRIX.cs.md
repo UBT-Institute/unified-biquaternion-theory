@@ -86,6 +86,16 @@ Definice se řídí dokumentem [`docs/UBT_SCOPE_AND_CLAIM_LEVELS.md`](docs/UBT_S
 | Massless flat-torus one-loop výběr modulu | PROVED | `research_tracks/theta_torus_potential/zeta_regularized_shape_audit.md` | Zeta-regularizovaný determinant je úměrný `Im(tau)|eta(tau)|^4`; standardní bosonický massless logdet nedává konečné globální minimum modulu. |
 | Jedinečná finalizovaná fundamentální one-Theta akce | OPEN_GAP | `canonical/ACTION.en.md` | Rodina akcí je definovaná, ale jedinečná mikroskopická akce/míra/constraint systém nejsou finalizovány. |
 
+<!-- BILINGUAL-UNIT: claims-matrix.derived-h-gaussian -->
+## Gradovaný komparátor s H-odvozenou konexí — 2026-11-02
+
+[Lokální Gaussův zdvih](research_tracks/action_selection/derived_h_graded_gaussian_lift_2026_11.cs.md) dokazuje lokální reprezentovatelnost každé hladké Lorentzovy tetrády s invertibilní plnou Theta v existujícím reálně lineárním gradovaném komparátoru s kladným H. Relativní centrální člen odvozený z determinantu se nevariuje nezávisle. Úplná variace přenáší zadané geometrické Eulerovy rovnice a její presymplektický proud se shoduje se zpětně přeneseným základním proudem na stacionárních řešeních a linearizovaných tečných variacích. Jde o matematickou implikaci se statusem PROVED za uvedených předpokladů komparátoru. Fyzikální obnova GR zůstává CONDITIONAL; výběr fundamentální akce, úplný Diracův kvocient, fyzikální psi dynamika a stabilita zůstávají OPEN_GAP. Reprezentant používá lokální Gaussovu konstrukci, nikoli vybraný kovariantní funkcionál konexe.
+
+<!-- BILINGUAL-UNIT: claims-matrix.derived-h-quotient -->
+## Kvocient reprezentantů s H-odvozenou konexí — 2026-11-02
+
+[Úplná parametrizace reprezentantů](research_tracks/action_selection/derived_h_graded_representative_quotient_2026_11.cs.md) je lokální větou s konečným počtem derivací a statusem PROVED pro zadaný gradovaný gravitační komparátor s kladným H: klasifikuje jeho redundance normy/stabilizátoru a rozdělení definující spinové konexe, dokazuje důsledek o reprezentantu bez Gaussovy konstrukce a ustavuje lokální kovariantní ekvivalenci redukovaných prostorů, pokud je základní kvocient regulární a pro Jacobiho pole kolem vnitřního Cauchyho řezu se používá uvedená okrajová konvence prostorových nosičů; fyzikální Cauchyho data nejsou fixována a parametry reprezentantů jsou na tomto řezu přípustné. Důkaz zahrnuje surjektivitu tečné mapy a skutečný proud na řešeních; samotná inverze konečných jetů nestačí. Nepočítá Diracovy vazby v pevném čase ani nevybírá mikroskopickou dynamiku. Fyzikální obnova GR zůstává CONDITIONAL a uzavření fundamentální akce/psi sektoru zůstává OPEN_GAP.
+
 ## Explicitně spekulativní tvrzení (nekanonická)
 
 Pokud je reprodukovatelný empirický protokol neposune výše, následující zůstávají **SPECULATIVE**:
