@@ -42,7 +42,11 @@ REVIEW_SCHEMA = {
 
 class OllamaReviewer:
     last_response = None
+<<<<<<< HEAD
     def __init__(self, model=None, timeout=900):
+=======
+    def __init__(self, model=None, timeout=600):
+>>>>>>> origin/master
         self.model, self.timeout = model or os.environ.get("OLLAMA_MODEL", "qwen2.5:7b"), timeout
     def __call__(self, batch):
         # Small local models omit reviews in multi-pair requests. Review each
@@ -74,7 +78,11 @@ class OllamaReviewer:
                 ids["items"]["enum"] = [item[lang][0]["id"]]
         payload=json.dumps({"model":self.model,"prompt":v.make_prompt(batch),
                             "stream":False,"format":schema,
+<<<<<<< HEAD
                             "options":{"temperature":0,"num_ctx":16384,"num_predict":4096}}).encode()
+=======
+                            "options":{"temperature":0,"num_ctx":16384,"num_predict":8192}}).encode()
+>>>>>>> origin/master
         req=urllib.request.Request("http://127.0.0.1:11434/api/generate",
                                    payload,{"Content-Type":"application/json"})
         try:

@@ -93,6 +93,10 @@ Pokud je reprodukovatelný empirický protokol neposune výše, následující z
 | Tvrzení | Status | Umístění |
 |---|---|---|
 | pole vědomí | SPECULATIVE | `speculative_extensions/consciousness/` |
+<<<<<<< HEAD
+=======
+| Vazba Θ a neuronů bez předvoleného nosiče; pouze klasický srovnávací model odezvy, fyzikální pozorovatelná veličina a biologické propojení otevřené | SPECULATIVE | `speculative_extensions/consciousness/theta_neural_interface/README.cs.md`, `speculative_extensions/consciousness/theta_neural_interface/status.json` |
+>>>>>>> origin/master
 | psychony jako fyzické částice | SPECULATIVE | `speculative_extensions/consciousness/` |
 | posmrtný život | SPECULATIVE | `speculative_extensions/` |
 | přežití vědomí | SPECULATIVE | `speculative_extensions/` |
