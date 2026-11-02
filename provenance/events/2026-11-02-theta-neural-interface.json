@@ -1,0 +1,86 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-02",
+  "claim_or_decision_id": "SPEC-THETA-NEURAL-001",
+  "summary": "Open a narrowly scoped speculative Theta/neural-interface track, preserving the full single-Theta architecture and testing a classical comparator without selecting a biological carrier.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_proposal",
+      "actor": "human",
+      "description": "The author asked whether UBT has an alternative to microtubule-based consciousness proposals and then directed creation of a research or speculative branch.",
+      "evidence_ids": ["current-direction"]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "The agent inspected current axioms and historical drafts, proposed a substrate-neutral observable-first route, and supplied a reciprocal damped two-coordinate classical response comparator. This is current technical execution, not a claim to originate the earlier full-field or consciousness ideas.",
+      "evidence_ids": ["current-artifacts", "base-architecture", "legacy-psychons"]
+    },
+    {
+      "kind": "failed_route",
+      "actor": "ai",
+      "description": "The comparator cannot distinguish a Theta origin from an ordinary coupled oscillator without an independently derived observable and parameter restrictions; neural autoresponse alone also leaves the coupling sign unidentifiable. The hypothetical physical bridge remains open.",
+      "evidence_ids": ["current-artifacts"]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "SymPy identities, a separately formulated numerical state-space resolvent, stability/passivity sampling, forced time-domain response and unforced energy-dissipation tests check the adopted classical comparator only.",
+      "evidence_ids": ["current-artifacts"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "current-direction",
+      "class": "discussion_context",
+      "locator": "Author direction in the current conversation on 2026-11-02; original transcript not deposited in this public repository.",
+      "original_checked": false,
+      "supports": "Author-directed research scope and permission to create a speculative branch.",
+      "limitations": "No public transcript permalink or historical first-origin evidence; no raw conversation, quotation, human scientific sign-off, or priority claim is deposited."
+    },
+    {
+      "id": "base-architecture",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/blob/68c73508e239bfbccb1d8bd9266fac0e76f1839e/canonical/AXIOMS.md",
+      "original_checked": true,
+      "supports": "Full single-Theta field, complex time, and frozen covariant-tetrad architecture are constraints on this speculative work.",
+      "limitations": "Definitions do not derive the neural observable, coupling, physical spectrum, or consciousness."
+    },
+    {
+      "id": "legacy-psychons",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/blob/68c73508e239bfbccb1d8bd9266fac0e76f1839e/speculative_extensions/consciousness/psychons.tex",
+      "original_checked": true,
+      "supports": "An earlier historical speculative psychon proposal exists and is not the new comparator's derivation.",
+      "limitations": "Neither artifact authorship nor this inspection establishes first conceptual origin, biological validity, or reliable scale estimates."
+    },
+    {
+      "id": "current-artifacts",
+      "class": "repository_artifact",
+      "locator": "speculative_extensions/consciousness/theta_neural_interface/README.en.md; README.cs.md; model.py; verify_model.py; verification.json; tests/test_theta_neural_interface.py",
+      "original_checked": true,
+      "supports": "Current explicit assumptions, comparator mathematics, implementation, and bounded verification results in this PR.",
+      "limitations": "Standard coupled-oscillator mathematics is not claimed as a new physical discovery. Lean and the physical/biological bridge remain pending; independent bilingual semantic review is a separate gate."
+    }
+  ],
+  "rejected_alternatives": [
+    "Treating an arbitrary bare Theta phase as a demonstrated physical oscillator.",
+    "Replacing the full field with a scalar ansatz or reviving quaternionic time.",
+    "Inferring biological quantum coherence from compactness, winding, resonance, or topology alone.",
+    "Interpreting a generic double resonance as a UBT-specific empirical signature."
+  ],
+  "verification": {
+    "status": "verified_with_scope",
+    "artifacts": [
+      "speculative_extensions/consciousness/theta_neural_interface/verification.json",
+      "speculative_extensions/consciousness/theta_neural_interface/verify_model.py",
+      "tests/test_theta_neural_interface.py"
+    ],
+    "limitations": "Exact classical comparator identities and sampled/time-domain checks only. No validated Theta observable, action-derived neural coupling, quantum coherence, consciousness mechanism, or empirical discrimination is claimed."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "Historical conceptual attribution is undetermined beyond the cited context and artifacts. Current direction is not retrospective first-origin evidence or author attestation."
+}

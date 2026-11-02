@@ -33,6 +33,7 @@ The [closure audit](../research_tracks/action_selection/physics_closure_2026_10.
 
 The formally continued self-dual comparator has an exact canonical GR FLRW match. The original Hermitian pair fails the generic tetrad readout after that continuation, so an admissible microscopic self-dual branch and a mandatory dust prediction are not established.
 
+<<<<<<< HEAD
 <!-- BILINGUAL-UNIT: current-status.derived-h-gaussian -->
 ## Derived-H graded local lift — 2026-11-02
 
@@ -42,3 +43,9 @@ The [derived-H graded lift](../research_tracks/action_selection/derived_h_graded
 ## Local representative quotient — 2026-11-02
 
 The [complete differential representative chart](../research_tracks/action_selection/derived_h_graded_representative_quotient_2026_11.en.md) reconstructs the positive-H graded variables from the entire tetrad, the existing carrier norm and stabilizer labels, with finite differential inverses. It classifies all vertical transformations in that chart, explicitly quotients the additional defining-spin split, and supplies a non-Gaussian temporal-coordinate lift. Together with stationary transmission and the actual presymplectic current this gives a local covariant reduced-solution-space equivalence under the stated regular-base-quotient and spatial-support assumptions for solution germs around an internal Cauchy slice, with vertical parameters allowed on that slice. A concrete family shows why artificially forbidding representative changes near the Cauchy slice would obstruct this quotient. This does not supply a fixed-time canonical transformation, a full Dirac constraint count, a microscopic action or physical psi stability; GR recovery remains CONDITIONAL.
+=======
+<!-- BILINGUAL-UNIT: current-status.theta-neural -->
+## Speculative Theta–neural track — 2026-11-02
+
+[SPEC-THETA-NEURAL-001](../speculative_extensions/consciousness/theta_neural_interface/README.en.md) opens a narrowly scoped `SPECULATIVE` investigation of collective Theta modes coupled to measured neural activity without selecting a unique biological carrier. Its classical two-mode comparator checks stability and response only. A physical gauge-invariant observable, action-derived coupling, decoherence budget, UBT-specific prediction, and consciousness interpretation remain `OPEN_GAP`. No canonical physical status is promoted and the historical psychon particle model is not reactivated.
+>>>>>>> origin/master

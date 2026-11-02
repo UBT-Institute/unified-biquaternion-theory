@@ -33,6 +33,7 @@ Obnova Einsteinovy–Lambda gravitace, zahrnutí Schwarzschilda a jeho standardn
 
 Formálně pokračovaný samoduální srovnávací model má přesné kanonické přiřazení GR FLRW. Původní hermitovská dvojice po tomto pokračování nesplňuje obecné vyčítání tetrády, takže přípustná mikroskopická samoduální větev ani povinná predikce prachu nejsou stanoveny.
 
+<<<<<<< HEAD
 <!-- BILINGUAL-UNIT: current-status.derived-h-gaussian -->
 ## Gradovaný lokální zdvih s H-odvozenou konexí — 2026-11-02
 
@@ -42,3 +43,9 @@ Formálně pokračovaný samoduální srovnávací model má přesné kanonické
 ## Lokální kvocient reprezentantů — 2026-11-02
 
 [Úplný diferenciální popis reprezentantů](../research_tracks/action_selection/derived_h_graded_representative_quotient_2026_11.cs.md) rekonstruuje gradované proměnné s kladným H z celé tetrády, existující normy nosiče a označení stabilizátoru pomocí konečných diferenciálních inverzí. Klasifikuje všechny vertikální transformace v tomto popisu, výslovně kvocientuje dodatečné rozdělení definující spinové konexe a poskytuje zdvih v časové souřadnici bez Gaussovy konstrukce. Spolu s přenosem stacionarity a skutečným presymplektickým proudem tím vzniká lokální kovariantní ekvivalence redukovaných prostorů řešení za uvedených předpokladů regulárního základního kvocientu a prostorových nosičů zárodků řešení kolem vnitřního Cauchyho řezu, na němž jsou vertikální parametry přípustné. Konkrétní rodina ukazuje, proč by umělý zákaz změn reprezentantů poblíž Cauchyho řezu tomuto kvocientu bránil. Tím se neposkytuje kanonická transformace v pevném čase, úplný počet Diracových vazeb, mikroskopická akce ani fyzikální psi stabilita; obnova GR zůstává CONDITIONAL.
+=======
+<!-- BILINGUAL-UNIT: current-status.theta-neural -->
+## Spekulativní větev vazby Θ a neuronů — 2026-11-02
+
+[SPEC-THETA-NEURAL-001](../speculative_extensions/consciousness/theta_neural_interface/README.cs.md) otevírá úzce vymezené zkoumání se statusem `SPECULATIVE`, zaměřené na kolektivní módy Θ vázané na měřenou neuronální aktivitu bez výběru jediného biologického nosiče. Jeho klasický dvoumódový srovnávací model ověřuje pouze stabilitu a odezvu. Fyzikální kalibračně invariantní pozorovatelná veličina, vazba odvozená z akce, bilance dekoherence, rozlišující predikce UBT a interpretace vědomí zůstávají `OPEN_GAP`. Žádný kanonický fyzikální status se nepovyšuje a historický částicový model psychonů se neobnovuje.
+>>>>>>> origin/master
