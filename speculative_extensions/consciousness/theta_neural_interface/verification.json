@@ -1,0 +1,53 @@
+{
+  "schema": "ubt-theta-neural-verification/v1",
+  "status": "passed",
+  "claim_id": "SPEC-THETA-NEURAL-001",
+  "checks": {
+    "stiffness_determinant": true,
+    "energy_balance": true,
+    "driven_response_x": true,
+    "driven_response_z": true,
+    "undamped_roots": true,
+    "coupling_sign_unidentifiable": true,
+    "sampled_response_resolvent": true,
+    "sampled_asymptotic_stability": true,
+    "sampled_passivity": true
+  },
+  "samples": 128,
+  "seed": 20261102,
+  "tolerances": {
+    "maximum_response_error": 2e-11,
+    "minimum_imaginary_response": -1e-12,
+    "maximum_drift_real_part_strictly_below": 0,
+    "minimum_stiffness_eigenvalue_strictly_above": 0
+  },
+  "metrics": {
+    "maximum_response_error": 2.808666774861361e-15,
+    "maximum_drift_real_part": -0.027117574146006823,
+    "minimum_imaginary_response": 0.0025525287373704755,
+    "minimum_stiffness_eigenvalue": 0.0379421194063253
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sympy": "1.14.0"
+  },
+  "source_sha256": {
+    "model.py": "f932d31d7af6c1e6b7b045396175ee02826de640e619ec86c9eb0e4fec68c275",
+    "verify_model.py": "9c6eb3b7f899fc4220b4fa946f8b3f47f2eb70a32149d661bad7bdf8b8802194",
+    "README.en.md": "d45c11115ff5b69bcc0786bc802a38038f39a7057289ee5e7de997f35646c89a",
+    "README.cs.md": "d873d06ca6576a08354d19419695e1aaace96c3053f465a9c29a790b24f58114"
+  },
+  "lean_status": "LEAN-PENDING",
+  "lean_reason": "Lean and Lake are not installed in the authoring environment; no kernel-checked proof is supplied.",
+  "scope": "Exact finite classical comparator identities and sampled independent state-space checks only.",
+  "not_verified": [
+    "a gauge-invariant physical Theta observable",
+    "derivation from the UBT action",
+    "biological coupling or parameter calibration",
+    "quantum coherence or objective reduction",
+    "consciousness",
+    "UBT-specific empirical discrimination"
+  ]
+}

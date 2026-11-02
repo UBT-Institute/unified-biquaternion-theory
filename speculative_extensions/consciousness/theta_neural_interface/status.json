@@ -1,0 +1,42 @@
+{
+  "schema": "ubt-speculative-track/v1",
+  "track_id": "SPEC-THETA-NEURAL-001",
+  "recorded_on": "2026-11-02",
+  "status": "SPECULATIVE",
+  "provenance_tier": "C_working",
+  "base_commit": "68c73508e239bfbccb1d8bd9266fac0e76f1839e",
+  "scope": "A substrate-neutral Theta/neural coupling hypothesis with a classical response comparator.",
+  "canonical_status_changes": {},
+  "fundamental_fields_added": [],
+  "biological_carrier_selected": null,
+  "physical_Theta_observable_constructed": false,
+  "UBT_action_derivation": "OPEN_GAP",
+  "quantum_coherence": "OPEN_GAP",
+  "consciousness_mechanism": "OPEN_GAP",
+  "empirical_prediction": "OPEN_GAP",
+  "gates": [
+    {"id": "G0", "status": "OPEN_GAP", "target": "Gauge-invariant observable, physical fluctuation, and no double counting."},
+    {"id": "G1", "status": "OPEN_GAP", "target": "Derived neural/material coupling and physical normalization."},
+    {"id": "G2", "status": "OPEN_GAP", "target": "Healthy constrained UBT spectrum and justified effective reduction."},
+    {"id": "G3", "status": "OPEN_GAP", "target": "Environment, noise, and any claimed quantum decoherence budget."},
+    {"id": "G4", "status": "OPEN_GAP", "target": "Frozen consequence distinguishable from ordinary coupled biology."},
+    {"id": "G5", "status": "OPEN_GAP", "target": "Operational relation to a measured consciousness correlate."}
+  ],
+  "comparator": {
+    "kind": "classical_two_coordinate_linear_response",
+    "assumptions": ["dimensionless unit inertia", "positive frequencies and damping", "reciprocal real coupling", "strictly positive stiffness"],
+    "stability_condition": "abs(kappa) < omega_n * omega_z",
+    "parameters_are_calibrated": false,
+    "physical_units_calibrated": false,
+    "specific_to_UBT": false,
+    "verification": "verification.json",
+    "tests": "../../../tests/test_theta_neural_interface.py",
+    "lean_status": "LEAN-PENDING"
+  },
+  "next_scientific_step": "G0: construct and test one explicit observable on a specified admissible full-Theta background before fitting any frequency.",
+  "stop_conditions": ["pure-gauge candidate", "unhealthy physical fluctuation", "double counted neural and collective variables"],
+  "legacy_material_reactivated": false,
+  "interpretation_does_not_establish": ["new particles", "objective reduction", "quantum consciousness", "nonlocal communication", "survival after death"],
+  "bilingual_semantic_review": "PENDING_INDEPENDENT_PREMERGE_REVIEW",
+  "human_attestation": "not_attested"
+}

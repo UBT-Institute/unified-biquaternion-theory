@@ -32,3 +32,8 @@ Einstein–Lambda recovery, Schwarzschild inclusion and its standard perturbatio
 The [closure audit](../research_tracks/action_selection/physics_closure_2026_10.en.md) derives a constrained Hamiltonian for the specified homogeneous comparator and exposes its singular coefficient limit. This is a restricted calculation, not the full field-theoretic UBT dynamics. Alpha remains `OPEN_GAP`; a fitted B near 46.28 is not a first-principles prediction.
 
 The formally continued self-dual comparator has an exact canonical GR FLRW match. The original Hermitian pair fails the generic tetrad readout after that continuation, so an admissible microscopic self-dual branch and a mandatory dust prediction are not established.
+
+<!-- BILINGUAL-UNIT: current-status.theta-neural -->
+## Speculative Theta–neural track — 2026-11-02
+
+[SPEC-THETA-NEURAL-001](../speculative_extensions/consciousness/theta_neural_interface/README.en.md) opens a narrowly scoped `SPECULATIVE` investigation of collective Theta modes coupled to measured neural activity without selecting a unique biological carrier. Its classical two-mode comparator checks stability and response only. A physical gauge-invariant observable, action-derived coupling, decoherence budget, UBT-specific prediction, and consciousness interpretation remain `OPEN_GAP`. No canonical physical status is promoted and the historical psychon particle model is not reactivated.
