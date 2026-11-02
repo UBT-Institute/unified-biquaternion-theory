@@ -93,6 +93,7 @@ Unless a reproducible empirical protocol upgrades them, the following remain **S
 | Claim | Status | Location |
 |---|---|---|
 | consciousness field | SPECULATIVE | `speculative_extensions/consciousness/` |
+| Substrate-neutral Theta–neural interface; classical response comparator only, physical observable and biological bridge open | SPECULATIVE | `speculative_extensions/consciousness/theta_neural_interface/README.en.md`, `speculative_extensions/consciousness/theta_neural_interface/status.json` |
 | psychons as physical particles | SPECULATIVE | `speculative_extensions/consciousness/` |
 | afterlife | SPECULATIVE | `speculative_extensions/` |
 | survival of consciousness | SPECULATIVE | `speculative_extensions/` |

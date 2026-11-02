@@ -314,6 +314,24 @@ claims:
     - speculative_extensions/consciousness/
     forbidden_wording: []
 
+  theta_neural_interface:
+    status: SPECULATIVE
+    evidence:
+    - speculative_extensions/consciousness/theta_neural_interface/README.en.md
+    - speculative_extensions/consciousness/theta_neural_interface/README.cs.md
+    - speculative_extensions/consciousness/theta_neural_interface/status.json
+    - speculative_extensions/consciousness/theta_neural_interface/verification.json
+    assumptions:
+    - The full single-Theta field and complex time are retained; the real comparator coordinate is not a new fundamental field or a scalar ansatz for Theta.
+    - A gauge-invariant physical observable, independent healthy constrained mode, biological coupling and physical normalization remain OPEN_GAP.
+    - The dimensionless reciprocal damped two-mode comparator has no UBT-specific empirical signature without independently derived parameter restrictions.
+    - Classical stability and response checks establish neither quantum coherence nor a mechanism of consciousness; all biological carrier choices remain unselected.
+    forbidden_wording:
+    - UBT has derived a biological replacement for microtubules
+    - the two-mode resonance proves a Theta mode
+    - the comparator demonstrates quantum consciousness
+    - complex time automatically protects biological quantum coherence
+
   physics_closure_2026_10:
     status: CONDITIONAL
     action_derivation_status: AXIOMATIC_CANDIDATE
