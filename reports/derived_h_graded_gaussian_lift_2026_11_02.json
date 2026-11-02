@@ -75,5 +75,17 @@
     "provenance_headers": "PASS",
     "documentation_lint": "PASS, zero violations",
     "tier_a_attestation": "BLOCKED: unchanged author-owned attestation is 93 days old; no signature/date modified"
+  },
+  "source_export_repair": {
+    "original_ci_zip_bytes": 12598696,
+    "unchanged_limit_bytes": 12582912,
+    "excluded_from_source_zip_only": [
+      "DATA/modular_forms/index.html",
+      "DATA/modular_forms/index.html.1"
+    ],
+    "reference_snapshots_remain_tracked": true,
+    "new_scientific_sources_and_verifiers_retained_in_zip": true,
+    "source_zip_below_limit": true,
+    "scope": "Packaging-only reuse of the two upstream page-capture export exclusions already proposed in draft PR #828; no scientific content is deleted and the archive gate is unchanged."
   }
 }
