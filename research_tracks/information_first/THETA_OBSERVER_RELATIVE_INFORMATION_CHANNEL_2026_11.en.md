@@ -103,6 +103,36 @@ N_2=\operatorname{diag}(\sqrt2,1/\sqrt2),\qquad
 
 There is no unique observer-independent normalization selected by this construction. The hypothetical physical observer must supply its time direction, admissible effects, and preparation protocol from already derived UBT geometry and matter couplings.
 
+<!-- BILINGUAL-UNIT: theta-observer-channel.multiclock -->
+## Ideal three-clock shared-reality tomography [PROVED for this local channel]
+
+The single-clock rank deficit is **not** an absolute information-loss theorem if calibrated observers can compare complete density matrices. On the same matrix fiber use the following positive unit-determinant clock directions with noncommuting relative boosts:
+\[
+N_0=I_2,\qquad N_1=\operatorname{diag}(2,1/2),\qquad
+N_2=\begin{pmatrix}2&1\\1&1\end{pmatrix},\quad
+N_j=N_j^\dagger>0,\ \det N_j=1,
+\]
+\[
+\left(\forall j\in\{0,1,2\},\
+\rho_{N_j}[\Theta]=\rho_{N_j}[\Phi]\right)
+\ \wedge\ \det\Theta\det\Phi\ne0
+\quad\Longrightarrow\quad
+\boxed{\Theta=c\Phi,\quad c\in\mathbb C^\times},
+\]
+\[
+\dim_{\mathbb R}\ker d(\rho_{N_0},\rho_{N_1},\rho_{N_2})=2,\qquad
+\operatorname{rank}_{\mathbb R}d(\rho_{N_0},\rho_{N_1},\rho_{N_2})=6.
+\]
+\[
+\rho_{N_0}[I_2]=\rho_{N_0}[\sigma_z],\quad
+\rho_{N_1}[I_2]=\rho_{N_1}[\sigma_z],\quad
+\rho_{N_2}[I_2]\ne\rho_{N_2}[\sigma_z].
+\]
+
+**Proof.** Equality at N_0 gives `A=Phi^{-1}Theta=sqrt(k) V`, where k is positive and V unitary. At the other clocks, equality of normalized readouts and their determinants forces `V N_j^{-1} V†=N_j^{-1}`, so V commutes with both. The commutant of diagonal N_1 is diagonal, while commuting with the off-diagonal N_2 forces its diagonal entries to coincide. Thus V is a global phase and Theta differs from Phi only by one nonzero complex scalar. The intersection of infinitesimal kernels gives the displayed real rank and kernel. The last line is an exact witness that the first two clocks cannot resolve the relative right-unitary phase.
+
+This is a **conditional local identifiability theorem**, not a claim that physical UBT detectors implement complete tomography in causally overlapping regions. Protocols must calibrate all clocks on the same geometric fiber, and operational effects and comparison maps remain to be derived. The residual complex scalar is blindness of this readout, NOT automatically a microscopic gauge orbit. A rescaled full field need not preserve the locked tetrad.
+
 <!-- BILINGUAL-UNIT: theta-observer-channel.no-selection -->
 ## Static information does not yet select the Hamiltonian [PROVED benchmark]
 
@@ -130,4 +160,4 @@ For any hypothetical microscopic use of rho_N, vary BOTH Theta and the tetrad-de
 <!-- BILINGUAL-UNIT: theta-observer-channel.verification -->
 ## Verification and provenance
 
-Exact symbolic regression: `tests/test_theta_observer_information_channel.py` (eleven SymPy unit tests), including nontrivial Lorentz transport, observer choice, rank-three differential, five null directions, winding blindness and arbitrary-frequency benchmark. A test proves only the displayed finite matrix identities, not a physical measurement theory. No Lean formalization, independent semantic translation approval, on-shell state, selected Hamiltonian, or experimental prediction is claimed. Source premises: `canonical/CANONICAL_DEFINITIONS.md`, `research_tracks/information_first/SHARED_REALITY_PRINCIPLE.md`, `research_tracks/information_first/CAUSAL_ACCESS_SHARED_REALITY_HAMILTONIAN_GATE.md`, `research_tracks/information_first/MODULAR_HAMILTONIAN_RECONSTRUCTION_GATE.md`, and `research_tracks/action_selection/mm_phase_qfi_reference_gate_2026_11.en.md` (draft PR #828).
+Exact symbolic regression: `tests/test_theta_observer_information_channel.py` (fifteen SymPy unit tests), including nontrivial Lorentz transport, observer choice, rank-three differential, five null directions, winding blindness and arbitrary-frequency benchmark. A test proves only the displayed finite matrix identities, not a physical measurement theory. No Lean formalization, independent semantic translation approval, on-shell state, selected Hamiltonian, or experimental prediction is claimed. Source premises: `canonical/CANONICAL_DEFINITIONS.md`, `research_tracks/information_first/SHARED_REALITY_PRINCIPLE.md`, `research_tracks/information_first/CAUSAL_ACCESS_SHARED_REALITY_HAMILTONIAN_GATE.md`, `research_tracks/information_first/MODULAR_HAMILTONIAN_RECONSTRUCTION_GATE.md`, and `research_tracks/action_selection/mm_phase_qfi_reference_gate_2026_11.en.md` (draft PR #828).
