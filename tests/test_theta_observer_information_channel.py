@@ -210,5 +210,30 @@ class MultiObserverTests(unittest.TestCase):
             columns.append(sp.Matrix(combined))
         self.assertEqual(sp.Matrix.hstack(*columns).rank(), 6)
 
+
+class InformationalCompletenessTests(unittest.TestCase):
+    def test_tetrahedral_povm_local_fisher_metric(self):
+        sy = sp.Matrix([[0, -sp.I], [sp.I, 0]])
+        directions = [(1, 1, 1), (1, -1, -1), (-1, 1, -1), (-1, -1, 1)]
+        effects = [
+            (I2 + (x * SX + y * sy + z * SZ) / sp.sqrt(3)) / 4
+            for x, y, z in directions
+        ]
+        self.assertEqual(sp.simplify(sum(effects, sp.zeros(2)) - I2), sp.zeros(2))
+        for effect in effects:
+            self.assertEqual(sorted(effect.eigenvals()), [0, sp.Rational(1, 2)])
+        r1, r2, r3 = sp.symbols("r1 r2 r3", real=True)
+        density = (I2 + r1 * SX + r2 * sy + r3 * SZ) / 2
+        probabilities = [sp.simplify(sp.trace(effect * density)) for effect in effects]
+        self.assertEqual(sum(probabilities), 1)
+        fisher = sp.zeros(3)
+        for p in probabilities:
+            derivative = sp.Matrix([sp.diff(p, r) for r in (r1, r2, r3)])
+            fisher += sp.simplify(
+                derivative * derivative.T
+                / p.subs({r1: 0, r2: 0, r3: 0})
+            )
+        self.assertEqual(sp.simplify(fisher - sp.eye(3) / 3), sp.zeros(3))
+
 if __name__ == "__main__":
     unittest.main()
