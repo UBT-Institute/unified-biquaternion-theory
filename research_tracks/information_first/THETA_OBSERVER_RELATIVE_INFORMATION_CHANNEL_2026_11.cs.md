@@ -103,6 +103,36 @@ N_2=\operatorname{diag}(\sqrt2,1/\sqrt2),\qquad
 
 Konstrukce sama nevybírá jednoznačnou normalizaci nezávislou na pozorovateli. Hypotetický fyzikální pozorovatel musí získat svůj časový směr, přípustné efekty a přípravný protokol z již odvozené geometrie UBT a vazeb hmoty.
 
+<!-- BILINGUAL-UNIT: theta-observer-channel.multiclock -->
+## Ideální tomografie sdílené reality se třemi časovými směry [PROVED pro tento lokální kanál]
+
+Deficit hodnosti jednoho pozorovatele **není** absolutní větou o ztrátě informace, mohou-li kalibrovaní pozorovatelé porovnat celé matice hustoty. Na stejném maticovém vlákně použijeme následující kladné časové směry s jednotkovým determinantem a nekomutujícími relativními boosty:
+\[
+N_0=I_2,\qquad N_1=\operatorname{diag}(2,1/2),\qquad
+N_2=\begin{pmatrix}2&1\\1&1\end{pmatrix},\quad
+N_j=N_j^\dagger>0,\ \det N_j=1,
+\]
+\[
+\left(\forall j\in\{0,1,2\},\
+\rho_{N_j}[\Theta]=\rho_{N_j}[\Phi]\right)
+\ \wedge\ \det\Theta\det\Phi\ne0
+\quad\Longrightarrow\quad
+\boxed{\Theta=c\Phi,\quad c\in\mathbb C^\times},
+\]
+\[
+\dim_{\mathbb R}\ker d(\rho_{N_0},\rho_{N_1},\rho_{N_2})=2,\qquad
+\operatorname{rank}_{\mathbb R}d(\rho_{N_0},\rho_{N_1},\rho_{N_2})=6.
+\]
+\[
+\rho_{N_0}[I_2]=\rho_{N_0}[\sigma_z],\quad
+\rho_{N_1}[I_2]=\rho_{N_1}[\sigma_z],\quad
+\rho_{N_2}[I_2]\ne\rho_{N_2}[\sigma_z].
+\]
+
+**Důkaz.** Rovnost pro N_0 dává `A=Phi^{-1}Theta=sqrt(k) V`, kde k je kladné a V unitární. Pro další časové směry rovnost normalizovaných stavů a jejich determinantů vynutí `V N_j^{-1} V†=N_j^{-1}`, takže V komutuje s oběma. Komutant diagonálního N_1 je diagonální a komutace s mimodiagonálním N_2 vynutí shodu diagonálních prvků. Proto je V globální fáze a Theta se od Phi liší jediným nenulovým komplexním násobkem. Průnik infinitesimálních jader dává uvedenou reálnou hodnost a jádro. Poslední řádek je přesný svědek, že první dva časové směry nedovedou rozlišit relativní pravou unitární fázi.
+
+Jde o **podmíněnou větu o lokální identifikovatelnosti**, nikoli o tvrzení, že fyzikální detektory UBT realizují úplnou tomografii v kauzálně se překrývajících oblastech. Protokoly musí kalibrovat všechny směry na témže geometrickém vlákně; fyzikální efekty a porovnávací zobrazení ještě musíme odvodit. Zbývající komplexní násobek je neviditelnost tohoto kanálu, NIKOLI automaticky mikroskopická kalibrační orbita. Přeškálování celého pole nemusí zachovat uzamčenou tetrádu.
+
 <!-- BILINGUAL-UNIT: theta-observer-channel.no-selection -->
 ## Statická informace zatím nevybírá Hamiltonián [PROVED benchmark]
 
@@ -130,4 +160,4 @@ Při jakémkoli hypotetickém mikroskopickém použití rho_N variujme Theta i N
 <!-- BILINGUAL-UNIT: theta-observer-channel.verification -->
 ## Ověření a provenience
 
-Přesné symbolické regrese: `tests/test_theta_observer_information_channel.py` (jedenáct jednotkových testů SymPy), včetně netriviálního Lorentzova přenosu, volby pozorovatele, diferenciálu hodnosti tři, pěti nulových směrů, neviditelnosti windingu a testu libovolné frekvence. Testy dokazují pouze uvedené identity konečných matic, nikoli fyzikální teorii měření. Netvrdíme formální důkaz v Lean, nezávislé sémantické schválení překladu, stav na hmotové slupce, vybraný Hamiltonián ani experimentální predikci. Výchozí zdroje: `canonical/CANONICAL_DEFINITIONS.md`, `research_tracks/information_first/SHARED_REALITY_PRINCIPLE.md`, `research_tracks/information_first/CAUSAL_ACCESS_SHARED_REALITY_HAMILTONIAN_GATE.md`, `research_tracks/information_first/MODULAR_HAMILTONIAN_RECONSTRUCTION_GATE.md` a `research_tracks/action_selection/mm_phase_qfi_reference_gate_2026_11.en.md` (draft PR #828).
+Přesné symbolické regrese: `tests/test_theta_observer_information_channel.py` (patnáct jednotkových testů SymPy), včetně netriviálního Lorentzova přenosu, volby pozorovatele, diferenciálu hodnosti tři, pěti nulových směrů, neviditelnosti windingu a testu libovolné frekvence. Testy dokazují pouze uvedené identity konečných matic, nikoli fyzikální teorii měření. Netvrdíme formální důkaz v Lean, nezávislé sémantické schválení překladu, stav na hmotové slupce, vybraný Hamiltonián ani experimentální predikci. Výchozí zdroje: `canonical/CANONICAL_DEFINITIONS.md`, `research_tracks/information_first/SHARED_REALITY_PRINCIPLE.md`, `research_tracks/information_first/CAUSAL_ACCESS_SHARED_REALITY_HAMILTONIAN_GATE.md`, `research_tracks/information_first/MODULAR_HAMILTONIAN_RECONSTRUCTION_GATE.md` a `research_tracks/action_selection/mm_phase_qfi_reference_gate_2026_11.en.md` (draft PR #828).
