@@ -204,6 +204,10 @@ jobs:
           python -m pytest -q tests/test_derived_h_representative_quotient.py
           python tools/verify_derived_h_representative_quotient_numeric.py
 
+      - name: Full-Theta observer-relative information channel and kernel
+        run: |
+          python -m pytest -q tests/test_theta_observer_information_channel.py
+
   # -----------------------------------------------------------------------
   # 7. QM limit tests (existing)
   # -----------------------------------------------------------------------
