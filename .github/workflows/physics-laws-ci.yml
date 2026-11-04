@@ -208,6 +208,10 @@ jobs:
         run: |
           python -m pytest -q tests/test_theta_observer_information_channel.py
 
+      - name: Information readout versus positive-H gravity quotient
+        run: |
+          python -m pytest -q tests/test_information_gravity_quotient_channel.py
+
   # -----------------------------------------------------------------------
   # 7. QM limit tests (existing)
   # -----------------------------------------------------------------------
