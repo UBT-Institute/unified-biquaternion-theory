@@ -152,5 +152,63 @@ class InformationChannelTests(unittest.TestCase):
         self.assertEqual(sp.trigsimp(fisher - expected), 0)
 
 
+
+class MultiObserverTests(unittest.TestCase):
+    def test_three_clock_matrix_commutant_is_only_scalars(self):
+        n2 = sp.diag(2, sp.Rational(1, 2))
+        n3 = sp.Matrix([[2, 1], [1, 1]])
+        self.assertEqual(n2.det(), 1)
+        self.assertEqual(n3.det(), 1)
+        a, b, c, d = sp.symbols("a b c d")
+        u = sp.Matrix([[a, b], [c, d]])
+        conditions = list(n2 * u - u * n2) + list(n3 * u - u * n3)
+        matrix = sp.linear_eq_to_matrix(conditions, [a, b, c, d])[0]
+        self.assertEqual(matrix.rank(), 3)
+        self.assertEqual(matrix.nullspace(), [sp.Matrix([1, 0, 0, 1])])
+
+    def test_two_clocks_leave_relative_phase_invisible(self):
+        n2 = sp.diag(2, sp.Rational(1, 2))
+        n3 = sp.Matrix([[2, 1], [1, 1]])
+        theta = I2
+        theta2 = sp.diag(-1, 1)
+        self.assertEqual(rho(theta, I2), rho(theta2, I2))
+        self.assertEqual(rho(theta, n2), rho(theta2, n2))
+        self.assertNotEqual(rho(theta, n3), rho(theta2, n3))
+
+    def test_all_clocks_still_blind_to_complex_scalar(self):
+        theta = sp.Matrix([[2, sp.I], [1 - sp.I, 1]])
+        clocks = [I2, sp.diag(2, sp.Rational(1, 2)), sp.Matrix([[2, 1], [1, 1]])]
+        for n in clocks:
+            self.assertEqual(sp.simplify(rho(theta, n) - rho(3 * sp.I * theta, n)), sp.zeros(2))
+
+    def test_joint_three_clock_readout_has_rank_six(self):
+        theta = I2
+        clocks = [I2, sp.diag(2, sp.Rational(1, 2)), sp.Matrix([[2, 1], [1, 1]])]
+        directions = []
+        for i in range(2):
+            for j in range(2):
+                m = sp.zeros(2)
+                m[i, j] = 1
+                directions.extend([m, sp.I * m])
+        columns = []
+        for v in directions:
+            combined = []
+            for n in clocks:
+                b = (n.inv() + I2) / sp.sqrt(sp.trace(n) + 2)
+                t = b * theta * b
+                dt = b * v * b
+                q = t * t.H
+                dq = dt * t.H + t * dt.H
+                derivative = sp.simplify(
+                    dq / sp.trace(q) - q * sp.trace(dq) / sp.trace(q) ** 2
+                )
+                combined.extend([
+                    sp.re(derivative[0, 1] + derivative[1, 0]),
+                    sp.im(derivative[1, 0] - derivative[0, 1]),
+                    sp.simplify(derivative[0, 0] - derivative[1, 1]),
+                ])
+            columns.append(sp.Matrix(combined))
+        self.assertEqual(sp.Matrix.hstack(*columns).rank(), 6)
+
 if __name__ == "__main__":
     unittest.main()
