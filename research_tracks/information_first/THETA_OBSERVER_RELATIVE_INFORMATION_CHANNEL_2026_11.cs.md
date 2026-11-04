@@ -133,6 +133,37 @@ N_j=N_j^\dagger>0,\ \det N_j=1,
 
 Jde o **podmíněnou větu o lokální identifikovatelnosti**, nikoli o tvrzení, že fyzikální detektory UBT realizují úplnou tomografii v kauzálně se překrývajících oblastech. Protokoly musí kalibrovat všechny směry na témže geometrickém vlákně; fyzikální efekty a porovnávací zobrazení ještě musíme odvodit. Zbývající komplexní násobek je neviditelnost tohoto kanálu, NIKOLI automaticky mikroskopická kalibrační orbita. Přeškálování celého pole nemusí zachovat uzamčenou tetrádu.
 
+<!-- BILINGUAL-UNIT: theta-observer-channel.fisher -->
+## Explicitní informačně úplné měření a hodnost společné Fisherovy metriky [PROVED podmíněně]
+
+Aby byl *kanál* operacionální, zvolíme v každém kalibrovaném Hilbertově rámci pozorovatele kladné tetraedrické qubitové POVM. Efekty, pravděpodobnosti a běžná klasická Fisherova informace podle reálných parametrů plného Theta jsou:
+\[
+E_\ell=\tfrac14(I_2+\mathbf u_\ell\cdot\boldsymbol{\sigma}),\quad
+\mathbf u_\ell\in\frac1{\sqrt3}
+\{(1,1,1),(1,-1,-1),(-1,1,-1),(-1,-1,1)\},
+\]
+\[
+\sum_\ell E_\ell=I_2,\quad E_\ell\ge0,\quad
+\rho_N=\tfrac12(I_2+\mathbf b_N\cdot\boldsymbol{\sigma}),\quad
+p_{N,\ell}=\tfrac14(1+\mathbf b_N\cdot\mathbf u_\ell),
+\]
+\[
+F_{AB}^{\mathrm{joint}}
+=\sum_{j,\ell}\frac{\partial_A p_{N_j,\ell}\,\partial_B p_{N_j,\ell}}
+{p_{N_j,\ell}},\qquad
+F_{\mathbf b=0}^{\mathrm{single}}=\tfrac13 I_3,
+\]
+\[
+\ker F^{\mathrm{joint}}
+=\operatorname{span}_{\mathbb R}\{\Theta,i\Theta\},\qquad
+\operatorname{rank}_{\mathbb R}F^{\mathrm{joint}}=6
+\quad(\det\Theta\ne0).
+\]
+
+Každý efekt je kladný a jejich součet dává jednotku. Uvnitř množiny stavů plné hodnosti má každý výsledek kladnou pravděpodobnost. Čtyři tetraedrické Blochovy vektory pokrývají celý trojrozměrný tečný prostor jednoho pozorovatele a v maximálně smíšeném stavu je jejich přesná klasická Fisherova matice uvedeným kladným násobkem jednotky. U tří výše uvedených nekomutujících časových směrů má součet pozitivně semidefinitních Fisherových kvadratických forem jádro rovné průniku jader jejich úplných tomografií; předchozí věta je přesně ztotožňuje s komplexním přeškálováním. Uvedená hodnost tedy plyne bez volby energetického funkcionálu.
+
+Jde o fyzikálně interpretovatelný, avšak STÁLE ZVOLENÝ ideální měřicí protokol, nikoli nezávisle odvozenou vazbu detektoru ani důkaz fundamentální Fisherovy akce. Sdílené záznamy mohou obnovit šest reálných projektivních souřadnic pole; z kladnosti Fisherovy informace však neplyne ani reference pro celkovou fázi/amplitudu, ani jednoznačný mikroskopický generátor času.
+
 <!-- BILINGUAL-UNIT: theta-observer-channel.no-selection -->
 ## Statická informace zatím nevybírá Hamiltonián [PROVED benchmark]
 
@@ -160,4 +191,4 @@ Při jakémkoli hypotetickém mikroskopickém použití rho_N variujme Theta i N
 <!-- BILINGUAL-UNIT: theta-observer-channel.verification -->
 ## Ověření a provenience
 
-Přesné symbolické regrese: `tests/test_theta_observer_information_channel.py` (patnáct jednotkových testů SymPy), včetně netriviálního Lorentzova přenosu, volby pozorovatele, diferenciálu hodnosti tři, pěti nulových směrů, neviditelnosti windingu a testu libovolné frekvence. Testy dokazují pouze uvedené identity konečných matic, nikoli fyzikální teorii měření. Netvrdíme formální důkaz v Lean, nezávislé sémantické schválení překladu, stav na hmotové slupce, vybraný Hamiltonián ani experimentální predikci. Výchozí zdroje: `canonical/CANONICAL_DEFINITIONS.md`, `research_tracks/information_first/SHARED_REALITY_PRINCIPLE.md`, `research_tracks/information_first/CAUSAL_ACCESS_SHARED_REALITY_HAMILTONIAN_GATE.md`, `research_tracks/information_first/MODULAR_HAMILTONIAN_RECONSTRUCTION_GATE.md` a `research_tracks/action_selection/mm_phase_qfi_reference_gate_2026_11.en.md` (draft PR #828).
+Přesné symbolické regrese: `tests/test_theta_observer_information_channel.py` (šestnáct jednotkových testů SymPy), včetně netriviálního Lorentzova přenosu, volby pozorovatele, diferenciálu hodnosti tři, pěti nulových směrů, neviditelnosti windingu a testu libovolné frekvence. Testy dokazují pouze uvedené identity konečných matic, nikoli fyzikální teorii měření. Netvrdíme formální důkaz v Lean, nezávislé sémantické schválení překladu, stav na hmotové slupce, vybraný Hamiltonián ani experimentální predikci. Výchozí zdroje: `canonical/CANONICAL_DEFINITIONS.md`, `research_tracks/information_first/SHARED_REALITY_PRINCIPLE.md`, `research_tracks/information_first/CAUSAL_ACCESS_SHARED_REALITY_HAMILTONIAN_GATE.md`, `research_tracks/information_first/MODULAR_HAMILTONIAN_RECONSTRUCTION_GATE.md` a `research_tracks/action_selection/mm_phase_qfi_reference_gate_2026_11.en.md` (draft PR #828).
