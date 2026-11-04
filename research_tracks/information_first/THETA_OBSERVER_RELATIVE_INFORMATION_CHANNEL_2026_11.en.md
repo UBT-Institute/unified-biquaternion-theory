@@ -133,6 +133,37 @@ N_j=N_j^\dagger>0,\ \det N_j=1,
 
 This is a **conditional local identifiability theorem**, not a claim that physical UBT detectors implement complete tomography in causally overlapping regions. Protocols must calibrate all clocks on the same geometric fiber, and operational effects and comparison maps remain to be derived. The residual complex scalar is blindness of this readout, NOT automatically a microscopic gauge orbit. A rescaled full field need not preserve the locked tetrad.
 
+<!-- BILINGUAL-UNIT: theta-observer-channel.fisher -->
+## Explicit informationally complete measurement and joint Fisher rank [PROVED conditional]
+
+To make the *readout* operational, choose a tetrahedral positive qubit POVM in each calibrated observer Hilbert frame. The effects, probabilities and ordinary classical Fisher information with respect to real full-Theta parameters are:
+\[
+E_\ell=\tfrac14(I_2+\mathbf u_\ell\cdot\boldsymbol{\sigma}),\quad
+\mathbf u_\ell\in\frac1{\sqrt3}
+\{(1,1,1),(1,-1,-1),(-1,1,-1),(-1,-1,1)\},
+\]
+\[
+\sum_\ell E_\ell=I_2,\quad E_\ell\ge0,\quad
+\rho_N=\tfrac12(I_2+\mathbf b_N\cdot\boldsymbol{\sigma}),\quad
+p_{N,\ell}=\tfrac14(1+\mathbf b_N\cdot\mathbf u_\ell),
+\]
+\[
+F_{AB}^{\mathrm{joint}}
+=\sum_{j,\ell}\frac{\partial_A p_{N_j,\ell}\,\partial_B p_{N_j,\ell}}
+{p_{N_j,\ell}},\qquad
+F_{\mathbf b=0}^{\mathrm{single}}=\tfrac13 I_3,
+\]
+\[
+\ker F^{\mathrm{joint}}
+=\operatorname{span}_{\mathbb R}\{\Theta,i\Theta\},\qquad
+\operatorname{rank}_{\mathbb R}F^{\mathrm{joint}}=6
+\quad(\det\Theta\ne0).
+\]
+
+Each effect is positive and the effects sum to identity. On the full-rank density interior every outcome has positive probability. The four tetrahedral Bloch vectors span the complete three-dimensional single-observer tangent, and at the maximally mixed state their exact classical Fisher matrix is the displayed positive identity multiple. For the three noncommuting clocks above, the sum of their positive-semidefinite Fisher quadratic forms has kernel equal to the intersection of their complete-tomography kernels; the preceding theorem identifies it exactly with complex scalar rescaling. The displayed rank therefore follows without selecting an energy functional.
+
+This is a physically interpretable but STILL CHOSEN ideal measurement protocol, not an independently derived detector coupling or proof of a fundamental Fisher action. Shared records can restore six real projective field coordinates; neither a total phase/scale reference nor a unique microscopic time generator follows from Fisher positivity.
+
 <!-- BILINGUAL-UNIT: theta-observer-channel.no-selection -->
 ## Static information does not yet select the Hamiltonian [PROVED benchmark]
 
@@ -160,4 +191,4 @@ For any hypothetical microscopic use of rho_N, vary BOTH Theta and the tetrad-de
 <!-- BILINGUAL-UNIT: theta-observer-channel.verification -->
 ## Verification and provenance
 
-Exact symbolic regression: `tests/test_theta_observer_information_channel.py` (fifteen SymPy unit tests), including nontrivial Lorentz transport, observer choice, rank-three differential, five null directions, winding blindness and arbitrary-frequency benchmark. A test proves only the displayed finite matrix identities, not a physical measurement theory. No Lean formalization, independent semantic translation approval, on-shell state, selected Hamiltonian, or experimental prediction is claimed. Source premises: `canonical/CANONICAL_DEFINITIONS.md`, `research_tracks/information_first/SHARED_REALITY_PRINCIPLE.md`, `research_tracks/information_first/CAUSAL_ACCESS_SHARED_REALITY_HAMILTONIAN_GATE.md`, `research_tracks/information_first/MODULAR_HAMILTONIAN_RECONSTRUCTION_GATE.md`, and `research_tracks/action_selection/mm_phase_qfi_reference_gate_2026_11.en.md` (draft PR #828).
+Exact symbolic regression: `tests/test_theta_observer_information_channel.py` (sixteen SymPy unit tests), including nontrivial Lorentz transport, observer choice, rank-three differential, five null directions, winding blindness and arbitrary-frequency benchmark. A test proves only the displayed finite matrix identities, not a physical measurement theory. No Lean formalization, independent semantic translation approval, on-shell state, selected Hamiltonian, or experimental prediction is claimed. Source premises: `canonical/CANONICAL_DEFINITIONS.md`, `research_tracks/information_first/SHARED_REALITY_PRINCIPLE.md`, `research_tracks/information_first/CAUSAL_ACCESS_SHARED_REALITY_HAMILTONIAN_GATE.md`, `research_tracks/information_first/MODULAR_HAMILTONIAN_RECONSTRUCTION_GATE.md`, and `research_tracks/action_selection/mm_phase_qfi_reference_gate_2026_11.en.md` (draft PR #828).
