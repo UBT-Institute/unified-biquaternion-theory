@@ -208,6 +208,10 @@ jobs:
         run: |
           python -m pytest -q tests/test_theta_observer_information_channel.py
 
+      - name: Information first - full Bloch gravity orbit
+        run: |
+          python -m pytest -q tests/test_information_full_bloch_vertical.py
+
   # -----------------------------------------------------------------------
   # 7. QM limit tests (existing)
   # -----------------------------------------------------------------------
