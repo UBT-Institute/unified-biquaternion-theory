@@ -208,6 +208,10 @@ jobs:
         run: |
           python -m pytest -q tests/test_theta_observer_information_channel.py
 
+      - name: Projective winding parity and Fisher no-floor tests
+        run: |
+          python -m pytest -q tests/test_information_projective_winding_parity.py
+
   # -----------------------------------------------------------------------
   # 7. QM limit tests (existing)
   # -----------------------------------------------------------------------
