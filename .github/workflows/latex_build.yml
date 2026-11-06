@@ -131,6 +131,10 @@ jobs:
           if-no-files-found: error
           retention-days: 90
 
+      - name: Verify reviewed Tier-A content before publication
+        if: success() && github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: python3 tools/verify_release_attestation.py
+
       - name: Commit report and curated PDFs
         if: success() && github.event_name == 'push' && github.ref == 'refs/heads/master'
         shell: bash
@@ -150,7 +154,7 @@ jobs:
           # whitelisted canonical PDFs, and provenance/checksum files.
           git add -f reports/latex_build/summary.md || true
           git add -f docs/pdfs/UBT_canonical_main.pdf docs/pdfs/UBT_GR_Submission.pdf || true
-          git add SHA256SUMS.txt PROVENANCE_INVENTORY_2026-08-01.txt || true
+          git add SHA256SUMS.txt SHA256SUMS_PDFS.txt PROVENANCE_INVENTORY_2026-08-01.txt
           if git diff --cached --quiet; then
             echo "No report or PDF changes to commit"
             exit 0

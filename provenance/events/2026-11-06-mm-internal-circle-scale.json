@@ -1,0 +1,68 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-06",
+  "claim_or_decision_id": "MM-INTERNAL-CIRCLE-SCALE",
+  "summary": "The Lorentz centralizer in the MM algebra is trivial and circle rescaling preserves the specified four-dimensional gravity comparator.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_proposal",
+      "actor": "human",
+      "description": "The author asked how the curvature scale is related to measured expansion and what the internal phase circle represents.",
+      "evidence_ids": ["scale-question"]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Test the commuting internal circle within the existing MM algebra and derive the separate rescaling of the internal coordinate at fixed curvature scale.",
+      "evidence_ids": ["existing-mm", "circle-proof"]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Formalize the finite boost equations in Lean and test both signatures in the vector and Clifford representations with exact arithmetic.",
+      "evidence_ids": ["circle-proof"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "scale-question",
+      "class": "discussion_context",
+      "locator": "Author research discussion, November 2026, privately held",
+      "original_checked": true,
+      "supports": "The direction of the scale and phase-circle question.",
+      "limitations": "The discussion does not establish authorship of individual proof steps or attest the result."
+    },
+    {
+      "id": "existing-mm",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/fifth_channel_macdowell_mansouri.en.md",
+      "original_checked": true,
+      "supports": "The existing Clifford generators and the curvature scale in the MM connection.",
+      "limitations": "The candidate leaves the physical radius and the microscopic action open."
+    },
+    {
+      "id": "circle-proof",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/mm_internal_circle_scale_2026_11.en.md",
+      "original_checked": true,
+      "supports": "The scoped analytic derivation and verification record.",
+      "limitations": "The result is restricted to the stated comparator and the proposed commuting action."
+    }
+  ],
+  "rejected_alternatives": [
+    "Identifying the Clifford generator with a continuous internal circle that commutes with the full Lorentz subgroup inside MM.",
+    "Inferring a physical radius from a quadratic circle derivative with a free normalization."
+  ],
+  "verification": {
+    "status": "verified_with_scope",
+    "artifacts": [
+      "formal/lean/UBT/GR/MMInternalCircle.lean",
+      "tests/test_mm_internal_circle.py"
+    ],
+    "limitations": "Lean verifies the finite entry core. The group and continuum implications use the stated analytic arguments."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false
+}
