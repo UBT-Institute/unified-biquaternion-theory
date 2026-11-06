@@ -1,0 +1,44 @@
+% UBT-AI-PROVENANCE-BEGIN
+% schema: ubt-ai-provenance/v1
+% tier: B_machine_verified
+% ai_assistance: disclosed
+% human_review: machine-verification
+% editorial_responsibility: Ing. David Jaroš
+% policy: ../../AI_PROVENANCE.md
+% notice: Machine-verified against named sources or verifiers; individual attestation is not claimed.
+% UBT-AI-PROVENANCE-END
+
+\ifdefined\INCLUDEMODE\else
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\emergencystretch=3em
+\usepackage{ubtprovenance}
+\UBTTier{B}
+\renewcommand{\UBTProvenanceNotice}{\par\smallskip{\footnotesize Provenience AI --- úroveň B. Text vznikl s pomocí AI; strojově ověřen uvedeným ověřovačem; individuální lidské potvrzení netvrdíme.}\par\smallskip}
+\title{Krok 6: opravený stav předpokladů QED}
+\author{UBT}
+\date{2026-10-31}
+\begin{document}\maketitle\UBTProvenanceNotice
+\fi
+
+% BILINGUAL-UNIT: qed-summary.status
+\section{Oprava závislostí}
+GAP-U1-NEUTRALITY: FORMER PROOF REFUTED; PHYSICAL BRIDGE OPEN. Původní důkaz neutrality pro levé působení fáze je neplatný. Bezhmotnost na nenulovém pozadí není dokázána. Skalární srovnávací model místo toho vyžaduje následující podmínku; nejde o odvozenou kinetickou akci UBT.
+\[m_\gamma^2=2e^2\lVert Qv\rVert^2,\qquad m_\gamma^2=0\Longleftrightarrow Qv=0\quad(e\ne0).\]
+
+% BILINGUAL-UNIT: qed-summary.downstream
+\section{Navazující výsledky}
+Kroky 2--5 zůstávají nepárovými staršími výpočty s nevyřešenými předpoklady, nikoli ověřenými odvozeními na nabitém nenulovém pozadí UBT. Standardní srovnání s jedno-smyčkovým Schwingerovým členem QED je následující výraz. Jeho numerické vyčíslení neodvozuje z UBT bezhmotný foton, Diracův vrchol, neutrální skalár, Yukawovu vazbu ani vakuum. Dřívější výrazy s chybným faktorem dvě a paušální dvousmyčkové odhady ve starším kroku 4 nejsou autoritativní. Yukawova interakce neutrálního skaláru sama může přispět již v jedné smyčce; neutralita neodstraňuje všechny skalární smyčkové efekty. Bez hmotnosti a vazeb z ní neplyne univerzální numerická korekce.
+\[a_e^{(1),\mathrm{QED}}=\frac{\alpha}{2\pi}.\]
+
+Odkaz pro smyčku neutrálního skaláru: \url{https://arxiv.org/abs/1403.2309}.
+
+% BILINGUAL-UNIT: qed-summary.checks
+\section{Ověření a otevřená podmínka}
+Opravený krok 1 a párová výzkumná poznámka uvádějí předpoklady, přesný protipříklad, normalizaci hmotnosti, odvození odezvy složené veličiny a záznam strojového ověření. Numerická pomůcka \path{tools/verify_qed_phi_const.py} je pouze podmíněným srovnáním. Vyžaduje výslovný náboj a nemůže potvrdit uzavření UBT. LEAN-PENDING: není nainstalován lean ani lake. Výchozím jazykem překladu je angličtina; netvrdíme významové schválení ani lidské potvrzení.
+\ifdefined\INCLUDEMODE\def\UBTFinish{}\else\def\UBTFinish{\end{document}}\fi
+\UBTFinish
