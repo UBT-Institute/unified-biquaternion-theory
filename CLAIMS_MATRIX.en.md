@@ -96,6 +96,11 @@ The [local Gaussian lift](research_tracks/action_selection/derived_h_graded_gaus
 
 The [complete representative parametrization](research_tracks/action_selection/derived_h_graded_representative_quotient_2026_11.en.md) is a PROVED local finite-differential theorem for the supplied positive-H graded gravity comparator: it classifies its norm/stabilizer and defining-spin-split redundancies, proves a non-Gaussian representative corollary, and establishes local covariant reduced-space equivalence when the base quotient is regular and the stated spatial-support boundary convention is used for Jacobi fields around an internal Cauchy slice; physical Cauchy data are not fixed and representative parameters are allowed on that slice. The proof includes tangent surjectivity and the actual on-shell current; a finite-jet inverse alone is insufficient. It does not count fixed-time Dirac constraints or select microscopic dynamics. Physical GR recovery remains CONDITIONAL and fundamental action/psi-sector closure remains OPEN_GAP.
 
+<!-- BILINGUAL-UNIT: claims-matrix.derived-h-radial -->
+## Derived-H radial scalar and Einstein vacuum
+
+The [radial scalar result](research_tracks/action_selection/derived_h_radial_vacuum_2026_11.en.md) is PROVED in the declared timelike positive-H chart for the AXIOMATIC_CANDIDATE with Hilbert–Palatini gravity and a minimally coupled first-derivative radial scalar term. The complete source variation and local covariant quotient give Einstein gravity with one scalar mode on a regular hyperbolic branch. Every exact Einstein vacuum in that chart forces the spatial principal coefficient to vanish. A uniform positive coefficient and bounded carrier norm enforce a strictly positive lower bound on observer-normalized null Ricci curvature. The unique microscopic action and physical psi sector remain OPEN.
+
 ## Explicitly Speculative Claims (non-canonical)
 
 Unless a reproducible empirical protocol upgrades them, the following remain **SPECULATIVE**:

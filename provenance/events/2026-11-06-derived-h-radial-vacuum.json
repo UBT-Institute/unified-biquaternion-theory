@@ -1,0 +1,73 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-06",
+  "claim_or_decision_id": "DERIVED-H-RADIAL-EINSTEIN-VACUUM",
+  "summary": "Complete source variation and local covariant reduction for the chosen minimally coupled radial action, with an Einstein-vacuum obstruction and invariant null-focusing bound.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_architecture_decision",
+      "actor": "human",
+      "description": "The existing single complex-biquaternion field and central-sharp covariant tetrad specify the continuation.",
+      "evidence_ids": ["architecture"]
+    },
+    {
+      "kind": "ai_proposal",
+      "actor": "ai",
+      "description": "Test a minimal scalar action using the existing composite radial coordinate in the positive-H timelike chart.",
+      "evidence_ids": ["prior-quotient", "derivation"]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Derive the full source Euler transmission, reduced scalar Hamiltonian, exact null-focusing bound and flat and curved controls.",
+      "evidence_ids": ["derivation", "verification"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "architecture",
+      "class": "repository_artifact",
+      "locator": "canonical/AXIOMS.md",
+      "original_checked": true,
+      "supports": "The documented author-controlled one-field architecture and locked metric.",
+      "limitations": "Approval of the candidate action and derivation remains pending."
+    },
+    {
+      "id": "prior-quotient",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/derived_h_graded_representative_quotient_2026_11.en.md",
+      "original_checked": true,
+      "supports": "Existing radial coordinates, stabilizer reconstruction and covariant quotient.",
+      "limitations": "The earlier action is gravity-only and independent of the radial coordinate."
+    },
+    {
+      "id": "derivation",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/derived_h_radial_vacuum_2026_11.en.md",
+      "original_checked": true,
+      "supports": "Explicit assumptions, analytic derivation and controls.",
+      "limitations": "Working comparison with supplied gravity and scalar terms."
+    },
+    {
+      "id": "verification",
+      "class": "repository_artifact",
+      "locator": "reports/derived_h_radial_vacuum_2026_11_06.json",
+      "original_checked": true,
+      "supports": "Source-bound verification with distinct algebraic and continuum scope.",
+      "limitations": "The continuum phase-space argument is analytic."
+    }
+  ],
+  "rejected_alternatives": [
+    "An exact Einstein vacuum with a nondegenerate two-derivative scalar wave cone in the stated chart.",
+    "A regular canonical-scalar vacuum limit with bounded anti-Hermitian carrier norm at fixed normalization."
+  ],
+  "verification": {
+    "status": "verified_with_scope",
+    "artifacts": ["tests/test_derived_h_radial_vacuum.py", "reports/derived_h_radial_vacuum_2026_11_06.json"],
+    "limitations": "Formal and symbolic scope is detailed in the verification record. Physical psi dynamics and the fundamental action remain open."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false
+}

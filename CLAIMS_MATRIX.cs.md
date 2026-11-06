@@ -96,6 +96,11 @@ Definice se řídí dokumentem [`docs/UBT_SCOPE_AND_CLAIM_LEVELS.md`](docs/UBT_S
 
 [Úplná parametrizace reprezentantů](research_tracks/action_selection/derived_h_graded_representative_quotient_2026_11.cs.md) je lokální větou s konečným počtem derivací a statusem PROVED pro zadaný gradovaný gravitační komparátor s kladným H: klasifikuje jeho redundance normy/stabilizátoru a rozdělení definující spinové konexe, dokazuje důsledek o reprezentantu bez Gaussovy konstrukce a ustavuje lokální kovariantní ekvivalenci redukovaných prostorů, pokud je základní kvocient regulární a pro Jacobiho pole kolem vnitřního Cauchyho řezu se používá uvedená okrajová konvence prostorových nosičů; fyzikální Cauchyho data nejsou fixována a parametry reprezentantů jsou na tomto řezu přípustné. Důkaz zahrnuje surjektivitu tečné mapy a skutečný proud na řešeních; samotná inverze konečných jetů nestačí. Nepočítá Diracovy vazby v pevném čase ani nevybírá mikroskopickou dynamiku. Fyzikální obnova GR zůstává CONDITIONAL a uzavření fundamentální akce/psi sektoru zůstává OPEN_GAP.
 
+<!-- BILINGUAL-UNIT: claims-matrix.derived-h-radial -->
+## Radiální skalár v modelu s odvozeným centrálním členem a Einsteinovo vakuum
+
+[Výsledek pro radiální skalár](research_tracks/action_selection/derived_h_radial_vacuum_2026_11.cs.md) má status PROVED v uvedené časupodobné oblasti s kladným H pro AXIOMATIC_CANDIDATE s Hilbertovou–Palatiniho gravitací a minimálně vázaným radiálním skalárním členem s prvními derivacemi. Úplná variace v původních proměnných a lokální kovariantní kvocient dávají Einsteinovu gravitaci s jedním skalárním módem na regulární hyperbolické větvi. Každé přesné Einsteinovo vakuum v této oblasti vynucuje vymizení prostorového koeficientu hlavního symbolu. Rovnoměrně kladný koeficient a omezená norma nosiče dávají ryze kladný dolní odhad nulové kontrakce Ricciho tenzoru normalizované pozorovatelem. Jediná mikroskopická akce a fyzikální sektor psi zůstávají OPEN.
+
 ## Explicitně spekulativní tvrzení (nekanonická)
 
 Pokud je reprodukovatelný empirický protokol neposune výše, následující zůstávají **SPECULATIVE**:
