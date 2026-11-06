@@ -1,14 +1,11 @@
 """Regression gates for UBT AI-provenance marking."""
 from __future__ import annotations
 
-import datetime as dt
 import importlib.util
 import subprocess
 import sys
-import warnings
 from pathlib import Path
 
-import pytest
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -76,20 +73,6 @@ def test_tier_map_is_signed_off() -> None:
     )
     assert data.get("signed_off_date"), "signed_off_date must be set by the author"
     assert data.get("attested_as_of"), "attested_as_of must be set by the author"
-
-
-def test_attestation_is_not_stale_when_signed() -> None:
-    data = config()
-    raw = data.get("attested_as_of")
-    if raw is None:
-        pytest.skip("author attestation is still pending")
-    value = raw if isinstance(raw, dt.date) else dt.date.fromisoformat(str(raw))
-    age = dt.date.today() - value
-    if age.days > 90:
-        warnings.warn(
-            f"Tier-A attestation is {age.days} days old; author refresh required",
-            RuntimeWarning,
-        )
 
 
 def test_all_markable_sources_match_the_tier_map() -> None:

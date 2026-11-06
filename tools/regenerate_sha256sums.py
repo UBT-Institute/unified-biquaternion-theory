@@ -7,6 +7,8 @@ import argparse
 import hashlib
 from pathlib import Path
 
+from verify_sha256sums import default_manifests
+
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SUMS = ROOT / "SHA256SUMS.txt"
 
@@ -49,11 +51,11 @@ def main() -> None:
     parser.add_argument(
         "--file",
         type=Path,
-        default=DEFAULT_SUMS,
-        help="Checksum manifest to regenerate (default: repository SHA256SUMS.txt)",
+        help="Checksum manifest to regenerate (default: all manifests in this distribution)",
     )
     args = parser.parse_args()
-    regenerate(args.file.resolve())
+    for manifest in [args.file.resolve()] if args.file else default_manifests():
+        regenerate(manifest)
 
 
 if __name__ == "__main__":
