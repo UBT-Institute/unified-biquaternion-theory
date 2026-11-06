@@ -192,11 +192,17 @@ def numerical_checks(n=3, seed=20261029):
     omega = np.einsum("dnc,cab->dnab", components, basis)
     scale = 1.7
     J_E = scale*sparse.eye(graph_count, format="csr")
-    J_X = sparse.vstack([-sparse.kron(D[i], sparse.eye(4), format="csr")
-                        - sparse.block_diag(omega[i], format="csr") for i in range(3)], format="csr")
-    J_omega = sparse.block_diag([
-        sparse.block_diag([-np.stack([T@X[site] for T in basis], axis=1)
-                           for site in range(cells)], format="csr") for _ in range(3)], format="csr")
+    J_X = sparse.vstack([
+        -sparse.kron(D[i], sparse.eye(4), format="csr")
+        - sparse.block_diag([sparse.csr_matrix(block) for block in omega[i]], format="csr")
+        for i in range(3)
+    ], format="csr")
+    site_blocks = [
+        sparse.csr_matrix(-np.stack([T @ X[site] for T in basis], axis=1))
+        for site in range(cells)
+    ]
+    direction_block = sparse.block_diag(site_blocks, format="csr")
+    J_omega = sparse.block_diag([direction_block] * 3, format="csr")
     J_F = sparse.hstack([J_E, J_omega, J_X], format="csr")
     identity = sparse.eye(graph_count, format="csr")
     zero_base = sparse.csr_matrix((graph_count, base_count))

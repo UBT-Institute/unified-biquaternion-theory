@@ -1,5 +1,10 @@
 """Regression checks for provenance-aware publication workflows."""
+import json
+import subprocess
+from datetime import date
 from pathlib import Path
+
+from tools.verify_release_attestation import attestation_errors
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -35,6 +40,48 @@ def test_automated_commit_is_success_only_and_includes_checksums() -> None:
     assert "git add -f docs/pdfs/UBT_canonical_main.pdf docs/pdfs/UBT_GR_Submission.pdf" in block
     assert "git add docs/pdfs SHA256SUMS.txt" not in block
     assert "if: always() && github.event_name == 'push'" not in block
+    assert "git add SHA256SUMS.txt SHA256SUMS_PDFS.txt" in block
+
+
+def test_publication_verifies_reviewed_bytes_before_commit() -> None:
+    text = (ROOT / ".github/workflows/latex_build.yml").read_text(encoding="utf-8")
+    gate = text.index("- name: Verify reviewed Tier-A content before publication")
+    commit = text.index("- name: Commit report and curated PDFs")
+    assert gate < commit
+    assert "python3 tools/verify_release_attestation.py" in text[gate:commit]
+
+
+def test_release_attestation_detects_stale_date_and_content_drift(tmp_path: Path) -> None:
+    def git(*args: str) -> str:
+        return subprocess.check_output(["git", *args], cwd=tmp_path, text=True).strip()
+
+    policy = tmp_path / "PROVENANCE_TIERS.yaml"
+    policy.write_text(
+        "signed_off_by: Author\n"
+        "signed_off_date: 2026-08-01\n"
+        "attested_as_of: 2026-08-01\n"
+        "tiers:\n"
+        "  A_attested: [PROVENANCE_TIERS.yaml, CLAIMS.yaml]\n",
+        encoding="utf-8",
+    )
+    claims = tmp_path / "CLAIMS.yaml"
+    claims.write_text("claim: reviewed\n", encoding="utf-8")
+    git("init", "--quiet")
+    git("add", "PROVENANCE_TIERS.yaml", "CLAIMS.yaml")
+    git("-c", "user.name=Fixture", "-c", "user.email=fixture@example.test",
+        "commit", "--quiet", "-m", "Reviewed content")
+    record = tmp_path / ".github/tier_a_attestation.json"
+    record.parent.mkdir()
+    record.write_text(json.dumps({"reviewed_commit": git("rev-parse", "HEAD")}), encoding="utf-8")
+
+    assert attestation_errors(tmp_path, date(2026, 10, 30)) == []
+    assert "91 days old" in attestation_errors(tmp_path, date(2026, 10, 31))[0]
+    assert "future" in attestation_errors(tmp_path, date(2026, 7, 31))[0]
+
+    claims.write_text("claim: edited\n", encoding="utf-8")
+    assert attestation_errors(tmp_path, date(2026, 8, 2)) == [
+        "Tier-A content changed since reviewed revision: CLAIMS.yaml"
+    ]
 
 
 def test_full_verify_workflow_installs_yaml_dependency() -> None:

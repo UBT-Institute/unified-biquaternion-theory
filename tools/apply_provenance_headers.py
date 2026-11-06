@@ -224,7 +224,9 @@ def inventory_counts(root: Path, config: dict) -> dict[str, int]:
     Git permits tracked paths that differ only by case, while the default
     macOS filesystem collapses them.  Count the union of Git-index paths and
     visible filesystem paths so the report is identical on macOS and Linux
-    and still includes newly created, not-yet-tracked sources.
+    and still includes newly created, not-yet-tracked sources. The generated
+    LaTeX build report is checked for provenance but is outside this source
+    inventory, since the source archive excludes it.
     """
     relative_paths: set[str] = set()
     try:
@@ -248,6 +250,8 @@ def inventory_counts(root: Path, config: dict) -> dict[str, int]:
         "excluded": 0,
     }
     for rel in sorted(relative_paths):
+        if rel == "reports/latex_build/summary.md":
+            continue
         path = Path(rel)
         if any(part in INTERNAL_SKIP_DIRS for part in path.parts):
             continue
