@@ -1,0 +1,86 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-06",
+  "claim_or_decision_id": "RESIDUAL-SO2-INVARIANT-BASIS",
+  "summary": "Complete local residual-connection basis at Cartan weight two in the restricted Lorentz two-carrier lift, with an auxiliary criterion and exact Hilbert–Palatini and Holst comparisons.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_proposal",
+      "actor": "human",
+      "description": "Requested that the residual connection be classified by enumerating invariants, reducing boundary redundancies and checking the Hamiltonian constraints.",
+      "evidence_ids": ["research-brief"]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Used the transverse Levi-Civita reference and the transport-reduced jet filtration to obtain the twelve-term basis, geometric realizability, the curvature and torsion distinction, and the algebraic constraint block.",
+      "evidence_ids": ["two-carrier", "new-proof"]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Checked the finite coefficient-independence theorem in Lean and independently checked the jet, invariant, Cartan and curvature algebra in SymPy.",
+      "evidence_ids": ["new-proof", "lean", "sympy"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "research-brief",
+      "class": "discussion_context",
+      "locator": "Research brief dated 2026-11-06, private source retained outside this repository",
+      "original_checked": true,
+      "supports": "The requested scope and order of the investigation.",
+      "limitations": "Does not establish the earliest origin of the suggestion or human review of any derivation."
+    },
+    {
+      "id": "two-carrier",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/pull/780",
+      "original_checked": true,
+      "supports": "The prior exact two-carrier transport compatibility and stabilizer theorem.",
+      "limitations": "Does not supply an action or physical mode count."
+    },
+    {
+      "id": "new-proof",
+      "class": "repository_artifact",
+      "locator": "research_tracks/fundamental_dynamics/residual_so2_invariant_basis.en.md",
+      "original_checked": true,
+      "supports": "The declared derivative filtration, the continuum proof and the restricted variational comparisons.",
+      "limitations": "This local analysis uses the two-carrier Lorentz branch and compactly supported variations."
+    },
+    {
+      "id": "lean",
+      "class": "repository_artifact",
+      "locator": "formal/lean/UBT/Hamiltonian/ResidualSO2Basis.lean",
+      "original_checked": true,
+      "supports": "The finite Euler-coefficient map has zero kernel over a characteristic-zero field.",
+      "limitations": "The continuum classification is not formalized in this module."
+    },
+    {
+      "id": "sympy",
+      "class": "repository_artifact",
+      "locator": "tests/test_residual_so2_invariant_basis.py",
+      "original_checked": true,
+      "supports": "The tested exact jet, rank, torsion, curvature and Hessian identities.",
+      "limitations": "Finite controls do not select a microscopic action or establish the coupled Dirac algebra."
+    }
+  ],
+  "rejected_alternatives": [
+    "Identifying the tensorial difference of two full connections with a choice of transverse frame.",
+    "Counting the Maxwell kinetic block as Cartan weight two.",
+    "Inferring a physical mode count from the residual velocity Hessian or the independent-potential comparison."
+  ],
+  "verification": {
+    "status": "verified_with_scope",
+    "artifacts": [
+      "formal/lean/UBT/Hamiltonian/ResidualSO2Basis.lean",
+      "tests/test_residual_so2_invariant_basis.py"
+    ],
+    "limitations": "Lean 4.33.1 checks finite coefficient independence. SymPy 1.14.0 checks exact finite identities. The continuum geometry, the selected action and its physical constraint algebra remain outside these checks."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "The record describes evidenced contributions to this continuation. It does not establish exclusive origin or editorial approval."
+}

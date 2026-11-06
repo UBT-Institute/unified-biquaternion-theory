@@ -3,6 +3,7 @@ import UBT.Hamiltonian.PalatiniHolst
 import UBT.Hamiltonian.HolstSpinSource
 import UBT.Hamiltonian.SpatialClosure
 import UBT.Hamiltonian.SplitJetDirac
+import UBT.Hamiltonian.ResidualSO2Basis
 import UBT.GR.CompositeKinetic
 import UBT.GR.BareSplitJet
 import UBT.GR.NonlinearCartanChart

@@ -54,3 +54,8 @@ Formálně pokračovaný samoduální srovnávací model má přesné kanonické
 ## Spekulativní větev vazby Θ a neuronů — 2026-11-02
 
 [SPEC-THETA-NEURAL-001](../speculative_extensions/consciousness/theta_neural_interface/README.cs.md) otevírá úzce vymezené zkoumání se statusem `SPECULATIVE`, zaměřené na kolektivní módy Θ vázané na měřenou neuronální aktivitu bez výběru jediného biologického nosiče. Jeho klasický dvoumódový srovnávací model ověřuje pouze stabilitu a odezvu. Fyzikální kalibračně invariantní pozorovatelná veličina, vazba odvozená z akce, bilance dekoherence, rozlišující predikce UBT a interpretace vědomí zůstávají `OPEN_GAP`. Žádný kanonický fyzikální status se nepovyšuje a historický částicový model psychonů se neobnovuje.
+
+<!-- BILINGUAL-UNIT: current-status.residual-so2-basis -->
+## Báze invariantů reziduální konexe SO(2) — 2026-11-06
+
+[Klasifikace se dvěma nosiči](../research_tracks/fundamental_dynamics/residual_so2_invariant_basis.cs.md) dává dvanáct struktur reziduální konexe do Cartanovy váhy dva modulo divergence a členy nezávislé na reziduálním posunu. V této větvi je nezávislý rychlostní Hessian reziduální proměnné nulový. Invertibilní algebraický blok z reziduální jednoformy činí pomocnou proměnnou. Omezené Hilbertovo–Palatiniho srovnání má nulovou objemovou reziduální variaci a Holstův člen dává lineární geometrickou vazbu. Výsledek používá uvedenou derivační filtraci a kompozitní akci i počet fyzikálních módů po Diracově redukci ponechává ve stavu `OPEN_GAP`.
