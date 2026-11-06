@@ -5,6 +5,7 @@ import UBT.Hamiltonian.SpatialClosure
 import UBT.Hamiltonian.SplitJetDirac
 import UBT.Hamiltonian.ResidualSO2Basis
 import UBT.Hamiltonian.ResidualSO2Torsion
+import UBT.Hamiltonian.ResidualSO2Commutator
 import UBT.GR.CompositeKinetic
 import UBT.GR.BareSplitJet
 import UBT.GR.NonlinearCartanChart

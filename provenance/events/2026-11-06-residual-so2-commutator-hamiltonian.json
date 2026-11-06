@@ -1,0 +1,77 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-06",
+  "claim_or_decision_id": "RESIDUAL-SO2-COMMUTATOR-HAMILTONIAN",
+  "summary": "Exact stationary elimination, nonlinear constraint algebra and three-mode principal symbol of the existing commutator-square candidate in the two-carrier branch.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Applied the existing higher-jet commutator candidate to the two-carrier comparison after the residual torsion coefficient matching.",
+      "evidence_ids": ["candidate", "basis", "derivation"]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Derived stationary elimination, the two primary and two secondary first-class constraints, and the physical principal frequencies on the exact flat stationary branch.",
+      "evidence_ids": ["derivation"]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Checked the finite torsion, Legendre, generator and directional-symbol formulas in SymPy, and the gauge kernel and characteristic polynomial in Lean.",
+      "evidence_ids": ["checks"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "candidate",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/commutator_invariant_action_selection_audit.en.md",
+      "original_checked": true,
+      "supports": "The existing commutator-square operator and its original action-selection boundary.",
+      "limitations": "The antecedent does not compute its reduced constraint system or fix its coefficient."
+    },
+    {
+      "id": "basis",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/pull/838",
+      "original_checked": true,
+      "supports": "The established two-carrier invariant basis and local chart.",
+      "limitations": "This basis is restricted to the stated vector transport branch."
+    },
+    {
+      "id": "derivation",
+      "class": "repository_artifact",
+      "locator": "research_tracks/fundamental_dynamics/residual_so2_commutator_hamiltonian.en.md",
+      "original_checked": true,
+      "supports": "The exact reduced action, Hamiltonian, constraint closure and flat principal symbol.",
+      "limitations": "The result is for the pure commutator-square comparison with the declared real pairing and positive quadratic kinetic sign."
+    },
+    {
+      "id": "checks",
+      "class": "repository_artifact",
+      "locator": "tests/test_residual_so2_commutator_hamiltonian.py",
+      "original_checked": true,
+      "supports": "Exact finite controls for the formulae in the comparison.",
+      "limitations": "Finite tests do not prove a unique microscopic action or a physical UBT spectrum."
+    }
+  ],
+  "rejected_alternatives": [
+    "Reading a vanishing independent residual velocity Hessian as the total physical mode count.",
+    "Selecting the pure commutator square as an Einstein kinetic sector on this branch."
+  ],
+  "verification": {
+    "status": "verified_with_scope",
+    "artifacts": [
+      "tests/test_residual_so2_commutator_hamiltonian.py",
+      "formal/lean/UBT/Hamiltonian/ResidualSO2Commutator.lean"
+    ],
+    "limitations": "The finite checks complement the analytic local reduction. They do not verify the complete composite Theta dynamics."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "This is a continuation of the repository research direction. Attribution is provisional."
+}
