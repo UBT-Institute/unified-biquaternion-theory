@@ -1,0 +1,77 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-06",
+  "claim_or_decision_id": "RESIDUAL-SO2-TORSION-MATCHING",
+  "summary": "Exact Hessian and source of the five metric-and-orientation quadratic torsion contractions on the two-carrier SO(2) branch.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Continued the merged invariant classification by restricting the existing geometric action family to the declared residual connection.",
+      "evidence_ids": ["merged-basis", "geometric-family"]
+    },
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Computed the reference torsion, the even residual matrix and its kernel, the two odd sources and the stationary correction.",
+      "evidence_ids": ["derivation"]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Checked the coframe contractions and stationary value in SymPy, and verified finite coefficient and elimination identities in Lean.",
+      "evidence_ids": ["derivation", "checks"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "merged-basis",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/pull/838",
+      "original_checked": true,
+      "supports": "The prior two-carrier setup, invariant basis and independent residual constraint criterion.",
+      "limitations": "The prior basis did not determine the quadratic torsion coefficients."
+    },
+    {
+      "id": "geometric-family",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/physics_closure_action_family_2026_10.en.md",
+      "original_checked": true,
+      "supports": "The pre-existing geometric action and the two-parity torsion operators used in the comparison.",
+      "limitations": "The chosen action family does not fix a microscopic UBT action."
+    },
+    {
+      "id": "derivation",
+      "class": "repository_artifact",
+      "locator": "research_tracks/fundamental_dynamics/residual_so2_torsion_matching.en.md",
+      "original_checked": true,
+      "supports": "The local matching formula, stationarity conditions and coefficient scope.",
+      "limitations": "The result uses independent variation within the constrained transport family."
+    },
+    {
+      "id": "checks",
+      "class": "repository_artifact",
+      "locator": "tests/test_residual_so2_torsion_matching.py",
+      "original_checked": true,
+      "supports": "Exact tensor and stationary-density regression checks.",
+      "limitations": "These checks do not compute the complete physical constraint algebra."
+    }
+  ],
+  "rejected_alternatives": [
+    "Applying the independent 24-component torsion equation to the four-component residual variation.",
+    "Using the Einstein-sign torsion combination as a nondegenerate residual selector."
+  ],
+  "verification": {
+    "status": "verified_with_scope",
+    "artifacts": [
+      "tests/test_residual_so2_torsion_matching.py",
+      "formal/lean/UBT/Hamiltonian/ResidualSO2Torsion.lean"
+    ],
+    "limitations": "Finite Lean and SymPy checks address the declared algebra. The complete composite equations and their physical modes remain open."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "This record describes the continuation of the merged research direction. Attribution remains provisional."
+}

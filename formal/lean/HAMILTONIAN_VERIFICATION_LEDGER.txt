@@ -10,6 +10,7 @@ Status: **partial formalization; full single-Theta Hamiltonian OPEN**.
 - `UBT.Action.PsiRestHamiltonian`: algebra of the **declared free psi-sector candidate**; not an action selected by UBT.
 - `UBT.Hamiltonian.VerificationBoundary`: named bridge theorems for the October 2026 Hamiltonian track.
 - `UBT.Hamiltonian.ResidualSO2Basis`: independence of the twelve residual Euler polynomials over a characteristic-zero field in the restricted two-carrier basis.
+- `UBT.Hamiltonian.ResidualSO2Torsion`: even coefficient map, its kernel and stationary quadratic translation for the restricted torsion comparison.
 
 ## Open proof obligations (do not silently promote to theorems)
 
