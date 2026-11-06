@@ -1,0 +1,50 @@
+{
+  "schema": "ubt-u1-neutrality/v1",
+  "base_commit": "5cde1af91541cd33e3ae61b13a82f9639e9d2dfb",
+  "claim_id": "GAP-U1-NEUTRALITY",
+  "status": "FORMER_PROOF_REFUTED; PHYSICAL_BRIDGE_OPEN",
+  "assumptions": [
+    "The audited phase acts by left multiplication, not conjugation.",
+    "The mass formula assumes positive canonical complex-scalar kinetic normalization.",
+    "The commutant theorem concerns real-linear actions on Mat(2,C) commuting with S X S^dagger.",
+    "The two-body threshold comparison assumes positive relativistic free modes, not a selected UBT spectrum."
+  ],
+  "tools": {
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "numpy": "2.3.5"
+  },
+  "exact": {
+    "left_phase_variation": "I*v",
+    "conjugation_variation": "0",
+    "scalar_mass_squared": "2*e**2*q**2*v**2",
+    "lorentz_commutant_constraint_rank": 60,
+    "lorentz_commutant_dimension": 4,
+    "block_basis_commutes": true,
+    "nontrivial_compact_generator_determinant": "b**2",
+    "neutral_bilinear_variation": "0",
+    "neutral_bilinear_linearization_at_zero": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "numerical": {
+    "seed": 43127,
+    "samples": 80,
+    "maximum_invariant_error": 1.2445095308301377e-14,
+    "tolerance": 1e-10,
+    "passed": true
+  },
+  "lean_status": "LEAN-PENDING: no lean or lake executable available in the verification runtime",
+  "limitations": [
+    "No UBT physical Hessian, charge embedding, bound-state pole, EM matching coefficient or adjacent-universe channel is derived.",
+    "The noncompact Lorentz bilinear is not a positive norm.",
+    "Numerical checks do not prove analytic statements; no human attestation is made."
+  ]
+}

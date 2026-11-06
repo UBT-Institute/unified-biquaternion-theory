@@ -96,11 +96,6 @@ The [local Gaussian lift](research_tracks/action_selection/derived_h_graded_gaus
 
 The [complete representative parametrization](research_tracks/action_selection/derived_h_graded_representative_quotient_2026_11.en.md) is a PROVED local finite-differential theorem for the supplied positive-H graded gravity comparator: it classifies its norm/stabilizer and defining-spin-split redundancies, proves a non-Gaussian representative corollary, and establishes local covariant reduced-space equivalence when the base quotient is regular and the stated spatial-support boundary convention is used for Jacobi fields around an internal Cauchy slice; physical Cauchy data are not fixed and representative parameters are allowed on that slice. The proof includes tangent surjectivity and the actual on-shell current; a finite-jet inverse alone is insufficient. It does not count fixed-time Dirac constraints or select microscopic dynamics. Physical GR recovery remains CONDITIONAL and fundamental action/psi-sector closure remains OPEN_GAP.
 
-<!-- BILINGUAL-UNIT: claims-matrix.derived-h-radial -->
-## Derived-H radial scalar and Einstein vacuum
-
-The [radial scalar result](research_tracks/action_selection/derived_h_radial_vacuum_2026_11.en.md) is PROVED in the declared timelike positive-H chart for the AXIOMATIC_CANDIDATE with Hilbert–Palatini gravity and a minimally coupled first-derivative radial scalar term. The complete source variation and local covariant quotient give Einstein gravity with one scalar mode on a regular hyperbolic branch. Every exact Einstein vacuum in that chart forces the spatial principal coefficient to vanish. A uniform positive coefficient and bounded carrier norm enforce a strictly positive lower bound on observer-normalized null Ricci curvature. The unique microscopic action and physical psi sector remain OPEN.
-
 ## Explicitly Speculative Claims (non-canonical)
 
 Unless a reproducible empirical protocol upgrades them, the following remain **SPECULATIVE**:
@@ -117,3 +112,10 @@ Unless a reproducible empirical protocol upgrades them, the following remain **S
 | Biquaternionic metric-null / volume-null invisibility program | SPECULATIVE | `speculative_extensions/invisibility/` |
 | soul / immortality | SPECULATIVE | `speculative_extensions/` |
 | Matrix / simulation ontology | SPECULATIVE | `speculative_extensions/metaphysics/` (or equivalent speculative path) |
+
+<!-- BILINGUAL-UNIT: claims-matrix.u1-neutrality -->
+## Constant-background neutrality correction
+
+**GAP-U1-NEUTRALITY: FORMER PROOF REFUTED; PHYSICAL BRIDGE OPEN.** The declared left phase does not leave a nonzero real zero mode neutral. The corrected positive-scalar comparator requires Qv=0 for a massless photon; neither a neutral physical UBT component nor its wave has been derived. The scoped real-linear Lorentz commutant theorem excludes a mixed neutral/charged linear split on the specified original carrier. A neutral composite exists, but its physical correlator and electromagnetic source/readout matching remain open. This is not evidence of multiverse communication.
+
+[en](research_tracks/action_selection/u1_neutrality_composite_channel.en.md); [cs](research_tracks/action_selection/u1_neutrality_composite_channel.cs.md). The older QED steps are conditional legacy material; the paired corrected step 1 and step 6 supersede their neutrality and closure conclusions. No author attestation is asserted for this update.

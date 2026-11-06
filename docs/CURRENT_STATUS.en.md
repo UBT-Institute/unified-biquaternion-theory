@@ -33,6 +33,13 @@ The [closure audit](../research_tracks/action_selection/physics_closure_2026_10.
 
 The formally continued self-dual comparator has an exact canonical GR FLRW match. The original Hermitian pair fails the generic tetrad readout after that continuation, so an admissible microscopic self-dual branch and a mandatory dust prediction are not established.
 
+<!-- BILINGUAL-UNIT: current-status.u1-neutrality -->
+## Constant-background neutrality correction
+
+**GAP-U1-NEUTRALITY: FORMER PROOF REFUTED; PHYSICAL BRIDGE OPEN.** The declared left phase does not leave a nonzero real zero mode neutral. The corrected positive-scalar comparator requires Qv=0 for a massless photon; neither a neutral physical UBT component nor its wave has been derived. The scoped real-linear Lorentz commutant theorem excludes a mixed neutral/charged linear split on the specified original carrier. A neutral composite exists, but its physical correlator and electromagnetic source/readout matching remain open. This is not evidence of multiverse communication.
+
+[en](../research_tracks/action_selection/u1_neutrality_composite_channel.en.md); [cs](../research_tracks/action_selection/u1_neutrality_composite_channel.cs.md). The older QED steps are conditional legacy material; the paired corrected step 1 and step 6 supersede their neutrality and closure conclusions. No author attestation is asserted for this update.
+
 <!-- BILINGUAL-UNIT: current-status.derived-h-gaussian -->
 ## Derived-H graded local lift — 2026-11-02
 
@@ -47,3 +54,8 @@ The [complete differential representative chart](../research_tracks/action_selec
 ## Speculative Theta–neural track — 2026-11-02
 
 [SPEC-THETA-NEURAL-001](../speculative_extensions/consciousness/theta_neural_interface/README.en.md) opens a narrowly scoped `SPECULATIVE` investigation of collective Theta modes coupled to measured neural activity without selecting a unique biological carrier. Its classical two-mode comparator checks stability and response only. A physical gauge-invariant observable, action-derived coupling, decoherence budget, UBT-specific prediction, and consciousness interpretation remain `OPEN_GAP`. No canonical physical status is promoted and the historical psychon particle model is not reactivated.
+
+<!-- BILINGUAL-UNIT: current-status.residual-so2-basis -->
+## Residual SO(2) invariant basis — 2026-11-06
+
+The [two-carrier classification](../research_tracks/fundamental_dynamics/residual_so2_invariant_basis.en.md) gives twelve residual-connection structures through Cartan weight two modulo divergences and terms independent of the residual shift. In that branch the independent residual velocity Hessian vanishes. An invertible algebraic block makes the residual one-form auxiliary. The restricted Hilbert–Palatini comparison has zero bulk residual variation, and Holst gives a linear geometric constraint. The result uses the stated derivative filtration and leaves the composite action and the physical Dirac count `OPEN_GAP`.

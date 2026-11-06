@@ -3,6 +3,7 @@ import UBT.Hamiltonian.PalatiniHolst
 import UBT.Hamiltonian.HolstSpinSource
 import UBT.Hamiltonian.SpatialClosure
 import UBT.Hamiltonian.SplitJetDirac
+import UBT.Hamiltonian.ResidualSO2Basis
 import UBT.GR.CompositeKinetic
 import UBT.GR.BareSplitJet
 import UBT.GR.NonlinearCartanChart
@@ -10,6 +11,7 @@ import UBT.GR.FlatJetTorsion
 import UBT.GR.FreeJetTensor
 import UBT.GR.CompositeActionStationarity
 import UBT.GR.CurvatureUnderdetermination
+import UBT.GR.MMInternalCircle
 import UBT.GR.LegacyActionObstructions
 import UBT.Action.PotentialInvariants
 import UBT.Action.DerivedHRadialVacuum

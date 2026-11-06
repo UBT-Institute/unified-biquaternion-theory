@@ -96,11 +96,6 @@ Definice se řídí dokumentem [`docs/UBT_SCOPE_AND_CLAIM_LEVELS.md`](docs/UBT_S
 
 [Úplná parametrizace reprezentantů](research_tracks/action_selection/derived_h_graded_representative_quotient_2026_11.cs.md) je lokální větou s konečným počtem derivací a statusem PROVED pro zadaný gradovaný gravitační komparátor s kladným H: klasifikuje jeho redundance normy/stabilizátoru a rozdělení definující spinové konexe, dokazuje důsledek o reprezentantu bez Gaussovy konstrukce a ustavuje lokální kovariantní ekvivalenci redukovaných prostorů, pokud je základní kvocient regulární a pro Jacobiho pole kolem vnitřního Cauchyho řezu se používá uvedená okrajová konvence prostorových nosičů; fyzikální Cauchyho data nejsou fixována a parametry reprezentantů jsou na tomto řezu přípustné. Důkaz zahrnuje surjektivitu tečné mapy a skutečný proud na řešeních; samotná inverze konečných jetů nestačí. Nepočítá Diracovy vazby v pevném čase ani nevybírá mikroskopickou dynamiku. Fyzikální obnova GR zůstává CONDITIONAL a uzavření fundamentální akce/psi sektoru zůstává OPEN_GAP.
 
-<!-- BILINGUAL-UNIT: claims-matrix.derived-h-radial -->
-## Radiální skalár v modelu s odvozeným centrálním členem a Einsteinovo vakuum
-
-[Výsledek pro radiální skalár](research_tracks/action_selection/derived_h_radial_vacuum_2026_11.cs.md) má status PROVED v uvedené časupodobné oblasti s kladným H pro AXIOMATIC_CANDIDATE s Hilbertovou–Palatiniho gravitací a minimálně vázaným radiálním skalárním členem s prvními derivacemi. Úplná variace v původních proměnných a lokální kovariantní kvocient dávají Einsteinovu gravitaci s jedním skalárním módem na regulární hyperbolické větvi. Každé přesné Einsteinovo vakuum v této oblasti vynucuje vymizení prostorového koeficientu hlavního symbolu. Rovnoměrně kladný koeficient a omezená norma nosiče dávají ryze kladný dolní odhad nulové kontrakce Ricciho tenzoru normalizované pozorovatelem. Jediná mikroskopická akce a fyzikální sektor psi zůstávají OPEN.
-
 ## Explicitně spekulativní tvrzení (nekanonická)
 
 Pokud je reprodukovatelný empirický protokol neposune výše, následující zůstávají **SPECULATIVE**:
@@ -117,3 +112,10 @@ Pokud je reprodukovatelný empirický protokol neposune výše, následující z
 | Program bikvaternionové metric-null / volume-null neviditelnosti | SPECULATIVE | `speculative_extensions/invisibility/` |
 | duše / nesmrtelnost | SPECULATIVE | `speculative_extensions/` |
 | Matrix / ontologie simulace | SPECULATIVE | `speculative_extensions/metaphysics/` (nebo ekvivalentní spekulativní cesta) |
+
+<!-- BILINGUAL-UNIT: claims-matrix.u1-neutrality -->
+## Oprava neutrality konstantního pozadí
+
+**GAP-U1-NEUTRALITY: FORMER PROOF REFUTED; PHYSICAL BRIDGE OPEN.** Deklarované levé působení fáze neponechává nenulový reálný nulový mód neutrální. Opravený srovnávací model kladného skaláru vyžaduje Qv=0 pro bezhmotný foton; neutrální fyzikální složka UBT ani její vlna odvozeny nebyly. Omezená věta o reálně lineárním Lorentzově komutantu vylučuje smíšené neutrální a nabité lineární rozdělení na uvedeném původním nosiči. Neutrální složená veličina existuje, ale její fyzikální korelátor a elektromagnetické přiřazení zdroje a odečtu zůstávají otevřené. Nejde o důkaz komunikace s multiversem.
+
+[en](research_tracks/action_selection/u1_neutrality_composite_channel.en.md); [cs](research_tracks/action_selection/u1_neutrality_composite_channel.cs.md). Starší kroky QED jsou podmíněným starším materiálem; párový opravený krok 1 a krok 6 nahrazují jejich závěry o neutralitě a uzavření. Pro tuto aktualizaci netvrdíme autorské potvrzení.

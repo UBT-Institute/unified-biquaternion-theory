@@ -10,6 +10,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MANIFEST = ROOT / "SHA256SUMS.txt"
+PDF_MANIFEST = ROOT / "SHA256SUMS_PDFS.txt"
+
+
+def default_manifests() -> list[Path]:
+    manifests = [DEFAULT_MANIFEST]
+    # Git checkouts, including worktrees, must retain the PDF manifest.
+    # The source distribution exports neither that manifest nor the PDFs.
+    if (ROOT / ".git").exists() or PDF_MANIFEST.exists():
+        manifests.append(PDF_MANIFEST)
+    return manifests
 
 
 def _sha256(path: Path) -> str:
@@ -32,7 +42,12 @@ def _entries(manifest: Path) -> list[tuple[str, str]]:
         expected, relative = parts
         if len(expected) != 64 or any(ch not in "0123456789abcdefABCDEF" for ch in expected):
             raise ValueError(f"Invalid SHA-256 digest on line {lineno}: {expected!r}")
-        entries.append((expected.lower(), relative.lstrip("*")))
+        path = Path(relative.lstrip("*"))
+        if path.is_absolute() or ".." in path.parts:
+            raise ValueError(f"Invalid repository-relative path on line {lineno}: {relative!r}")
+        entries.append((expected.lower(), path.as_posix()))
+    if not entries:
+        raise ValueError(f"Empty checksum manifest: {manifest}")
     return entries
 
 
@@ -79,15 +94,16 @@ def main() -> None:
     parser.add_argument(
         "--file",
         type=Path,
-        default=DEFAULT_MANIFEST,
         help="Manifest to verify; paths remain repository-relative",
     )
     parser.add_argument("--quiet", action="store_true", help="Print only the summary")
     args = parser.parse_args()
-    manifest = args.file.resolve()
-    if not manifest.is_file():
-        parser.error(f"manifest not found: {manifest}")
-    raise SystemExit(verify(manifest, quiet=args.quiet))
+    manifests = [args.file.resolve()] if args.file else default_manifests()
+    for manifest in manifests:
+        if not manifest.is_file():
+            parser.error(f"manifest not found: {manifest}")
+    results = [verify(manifest, quiet=args.quiet) for manifest in manifests]
+    raise SystemExit(max(results))
 
 
 if __name__ == "__main__":

@@ -33,6 +33,13 @@ Obnova Einsteinovy–Lambda gravitace, zahrnutí Schwarzschilda a jeho standardn
 
 Formálně pokračovaný samoduální srovnávací model má přesné kanonické přiřazení GR FLRW. Původní hermitovská dvojice po tomto pokračování nesplňuje obecné vyčítání tetrády, takže přípustná mikroskopická samoduální větev ani povinná predikce prachu nejsou stanoveny.
 
+<!-- BILINGUAL-UNIT: current-status.u1-neutrality -->
+## Oprava neutrality konstantního pozadí
+
+**GAP-U1-NEUTRALITY: FORMER PROOF REFUTED; PHYSICAL BRIDGE OPEN.** Deklarované levé působení fáze neponechává nenulový reálný nulový mód neutrální. Opravený srovnávací model kladného skaláru vyžaduje Qv=0 pro bezhmotný foton; neutrální fyzikální složka UBT ani její vlna odvozeny nebyly. Omezená věta o reálně lineárním Lorentzově komutantu vylučuje smíšené neutrální a nabité lineární rozdělení na uvedeném původním nosiči. Neutrální složená veličina existuje, ale její fyzikální korelátor a elektromagnetické přiřazení zdroje a odečtu zůstávají otevřené. Nejde o důkaz komunikace s multiversem.
+
+[en](../research_tracks/action_selection/u1_neutrality_composite_channel.en.md); [cs](../research_tracks/action_selection/u1_neutrality_composite_channel.cs.md). Starší kroky QED jsou podmíněným starším materiálem; párový opravený krok 1 a krok 6 nahrazují jejich závěry o neutralitě a uzavření. Pro tuto aktualizaci netvrdíme autorské potvrzení.
+
 <!-- BILINGUAL-UNIT: current-status.derived-h-gaussian -->
 ## Gradovaný lokální zdvih s H-odvozenou konexí — 2026-11-02
 
@@ -47,3 +54,8 @@ Formálně pokračovaný samoduální srovnávací model má přesné kanonické
 ## Spekulativní větev vazby Θ a neuronů — 2026-11-02
 
 [SPEC-THETA-NEURAL-001](../speculative_extensions/consciousness/theta_neural_interface/README.cs.md) otevírá úzce vymezené zkoumání se statusem `SPECULATIVE`, zaměřené na kolektivní módy Θ vázané na měřenou neuronální aktivitu bez výběru jediného biologického nosiče. Jeho klasický dvoumódový srovnávací model ověřuje pouze stabilitu a odezvu. Fyzikální kalibračně invariantní pozorovatelná veličina, vazba odvozená z akce, bilance dekoherence, rozlišující predikce UBT a interpretace vědomí zůstávají `OPEN_GAP`. Žádný kanonický fyzikální status se nepovyšuje a historický částicový model psychonů se neobnovuje.
+
+<!-- BILINGUAL-UNIT: current-status.residual-so2-basis -->
+## Báze invariantů reziduální konexe SO(2) — 2026-11-06
+
+[Klasifikace se dvěma nosiči](../research_tracks/fundamental_dynamics/residual_so2_invariant_basis.cs.md) dává dvanáct struktur reziduální konexe do Cartanovy váhy dva modulo divergence a členy nezávislé na reziduálním posunu. V této větvi je nezávislý rychlostní Hessian reziduální proměnné nulový. Invertibilní algebraický blok z reziduální jednoformy činí pomocnou proměnnou. Omezené Hilbertovo–Palatiniho srovnání má nulovou objemovou reziduální variaci a Holstův člen dává lineární geometrickou vazbu. Výsledek používá uvedenou derivační filtraci a kompozitní akci i počet fyzikálních módů po Diracově redukci ponechává ve stavu `OPEN_GAP`.
