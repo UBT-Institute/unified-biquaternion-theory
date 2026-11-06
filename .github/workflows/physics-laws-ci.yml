@@ -208,6 +208,14 @@ jobs:
         run: |
           python -m pytest -q tests/test_theta_observer_information_channel.py
 
+      - name: Information first - full Bloch gravity orbit
+        run: |
+          python -m pytest -q tests/test_information_full_bloch_vertical.py
+
+      - name: Information-colour invariant and physical-multiplex gate
+        run: |
+          python -m pytest -q tests/test_information_colour_multiplex_gate.py
+
   # -----------------------------------------------------------------------
   # 7. QM limit tests (existing)
   # -----------------------------------------------------------------------
