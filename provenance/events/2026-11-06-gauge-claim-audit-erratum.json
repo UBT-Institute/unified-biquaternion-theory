@@ -1,0 +1,51 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-06",
+  "claim_or_decision_id": "GAUGE-CLAIM-AUDIT-ERRATUM",
+  "summary": "Correct the period-matrix rank and right-action covariance in Appendix G. Align the summary with the scoped SU(3) results and open U(1) physical bridge.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "ai_critique",
+      "actor": "ai",
+      "description": "Identify the five-dimensional symmetric subspace, the flatness of the trace-free Maurer-Cartan form and the incompatible right-action signs.",
+      "evidence_ids": ["audit-base"]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Check the rank, flatness and covariance with exact SymPy calculations. Compare summary rows with the structured claim ledger.",
+      "evidence_ids": ["audit-base", "checks"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "audit-base",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/tree/287b65c646684860aaf9df372428f33c6dc3a15f",
+      "original_checked": true,
+      "supports": "The former Appendix G, proof summary and authoritative claim statuses at the audited revision.",
+      "limitations": "This tree does not establish the origin of earlier proposals."
+    },
+    {
+      "id": "checks",
+      "class": "repository_artifact",
+      "locator": "tests/test_su3_carrier_erratum.py",
+      "original_checked": true,
+      "supports": "Exact matrix checks of the corrected conventions and an explicit noncommuting unitary frame.",
+      "limitations": "The finite witnesses do not derive the UBT gauge dynamics or physical spectrum."
+    }
+  ],
+  "rejected_alternatives": [
+    "Relabeling the map to the eight real coordinates while leaving the five-dimensional domain and invalid modular dictionary in place.",
+    "Using a pure-gauge frame as evidence for a propagating color field."
+  ],
+  "verification": {
+    "status": "verified_with_scope",
+    "artifacts": ["tests/test_su3_carrier_erratum.py", "tests/test_claims_consistency.py"],
+    "limitations": "LEAN-PENDING. The local audit uses analytic proofs and exact SymPy controls. Local gauge dynamics, quark embedding, confinement and the physical photon pole remain open."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false
+}
