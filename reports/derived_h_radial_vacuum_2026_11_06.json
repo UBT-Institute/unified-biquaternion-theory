@@ -1,0 +1,59 @@
+{
+  "schema": "ubt-derived-h-radial-vacuum-verification/v1",
+  "recorded_on": "2026-11-06",
+  "base_commit": "672f365ad39c46149ecbbbabe2e6178d6c89e054",
+  "claim_id": "DERIVED-H-RADIAL-EINSTEIN-VACUUM",
+  "status": "verified_with_scope",
+  "candidate_status": "AXIOMATIC_CANDIDATE",
+  "lean": {
+    "status": "PARTIAL",
+    "version": "4.33.1",
+    "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "artifact": "formal/lean/UBT/Action/DerivedHRadialVacuum.lean",
+    "commands": [
+      "lake build --wfail UBT.Action.DerivedHRadialVacuum",
+      "lake env leanchecker UBT.Action.DerivedHRadialVacuum"
+    ],
+    "result": "PASS",
+    "theorems": [
+      "carrier_norm_identity",
+      "rest_null_stress",
+      "einstein_vacuum_degeneracy",
+      "null_focusing_floor"
+    ],
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "scope": "Algebraic carrier norm, rest-frame null stress, entire spatial principal kernel at zero null stress and uniform focusing bound.",
+    "limitation": "The continuum field variation, presymplectic quotient, Einstein equations and physical interpretation are analytic."
+  },
+  "sympy": {
+    "version": "1.14.0",
+    "python_version": "3.12.14",
+    "pytest_version": "9.2.0",
+    "artifact": "tests/test_derived_h_radial_vacuum.py",
+    "test_count": 7,
+    "result": "PASS",
+    "scope": "Congruence invariants of both dagger sectors, logarithmic chart, exact metric variation, scalar Hessian, two explicit smooth lifted solutions and ADM scalar Hamiltonian.",
+    "limitation": "Finite symbolic controls do not prove PDE well-posedness or the continuum covariant quotient."
+  },
+  "targeted_regressions": {
+    "test_count": 156,
+    "result": "PASS",
+    "scope": "New scalar tests, existing full-Theta and derived-H tests, and bilingual and provenance verifier tests."
+  },
+  "document_gates": {
+    "structural": "PASS",
+    "independent_semantic_review": "pending",
+    "existing_master_failure": "The signed Tier-A attestation dated 2026-08-01 exceeds the 90-day age gate. The test and tier map are identical to the base."
+  },
+  "source_sha256": {
+    "research_tracks/action_selection/derived_h_radial_vacuum_2026_11.en.md": "93737f2b16345725977c3fcc42194635f46d2402ac9c853b0d08dd77a56e0822",
+    "research_tracks/action_selection/derived_h_radial_vacuum_2026_11.cs.md": "638741a274029edd3b0f02c173684910f87520e1ae1be0564072457630c8ee36",
+    "formal/lean/UBT/Action/DerivedHRadialVacuum.lean": "32d8f83b45f95c0f53d280f862370714a59a2b05752475215095c7b1c926f99c",
+    "tests/test_derived_h_radial_vacuum.py": "022da1d47db5ce8e3d4dc796f4288a9523752d777727916a1f52175e6931fae1",
+    "research_tracks/action_selection/derived_h_graded_representative_quotient_2026_11.en.md": "f56dd4332831c66d4beea36cba2fba3194bb2634dd5bfce36dc7c795c5a0c29c"
+  }
+}
