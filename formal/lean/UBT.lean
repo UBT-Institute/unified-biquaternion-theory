@@ -10,6 +10,7 @@ import UBT.GR.FlatJetTorsion
 import UBT.GR.FreeJetTensor
 import UBT.GR.CompositeActionStationarity
 import UBT.GR.CurvatureUnderdetermination
+import UBT.GR.MMInternalCircle
 import UBT.GR.LegacyActionObstructions
 import UBT.Action.PotentialInvariants
 import UBT.GR.VolumeVariation
