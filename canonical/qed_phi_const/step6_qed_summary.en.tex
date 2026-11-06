@@ -1,0 +1,44 @@
+% UBT-AI-PROVENANCE-BEGIN
+% schema: ubt-ai-provenance/v1
+% tier: B_machine_verified
+% ai_assistance: disclosed
+% human_review: machine-verification
+% editorial_responsibility: Ing. David Jaroš
+% policy: ../../AI_PROVENANCE.md
+% notice: Machine-verified against named sources or verifiers; individual attestation is not claimed.
+% UBT-AI-PROVENANCE-END
+
+\ifdefined\INCLUDEMODE\else
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\emergencystretch=3em
+\usepackage{ubtprovenance}
+\UBTTier{B}
+\renewcommand{\UBTProvenanceNotice}{\par\smallskip{\footnotesize AI provenance --- Tier B. AI-assisted; machine-verified against the named verifier; individual human attestation is not claimed.}\par\smallskip}
+\title{Step 6: corrected QED dependency status}
+\author{UBT}
+\date{2026-10-31}
+\begin{document}\maketitle\UBTProvenanceNotice
+\fi
+
+% BILINGUAL-UNIT: qed-summary.status
+\section{Dependency correction}
+GAP-U1-NEUTRALITY: FORMER PROOF REFUTED; PHYSICAL BRIDGE OPEN. The old left-phase neutrality proof is invalid. Masslessness at a nonzero background is not proved. The scalar comparator instead requires the following condition; it is not a derived UBT kinetic action.
+\[m_\gamma^2=2e^2\lVert Qv\rVert^2,\qquad m_\gamma^2=0\Longleftrightarrow Qv=0\quad(e\ne0).\]
+
+% BILINGUAL-UNIT: qed-summary.downstream
+\section{Downstream results}
+Steps 2--5 remain unpaired legacy calculations with unresolved hypotheses, not validated derivations at a charged nonzero UBT background. The standard QED one-loop Schwinger comparison is the following expression. Numerical evaluation of it does not derive a massless photon, Dirac vertex, neutral scalar, Yukawa coupling or vacuum from UBT. The earlier factor-of-two expressions and blanket two-loop estimates in the legacy step 4 are not authoritative. A neutral scalar Yukawa interaction can itself give a one-loop contribution; neutrality does not remove all scalar-loop effects. No universal numerical correction follows without its mass and couplings.
+\[a_e^{(1),\mathrm{QED}}=\frac{\alpha}{2\pi}.\]
+
+Neutral-scalar loop reference: \url{https://arxiv.org/abs/1403.2309}.
+
+% BILINGUAL-UNIT: qed-summary.checks
+\section{Verification and open gate}
+The corrected step 1 and paired research note supply assumptions, exact counterexample, mass normalization, composite response derivation and machine-verification record. The numerical utility \path{tools/verify_qed_phi_const.py} is a conditional comparison only. It requires an explicit charge and cannot certify UBT closure. LEAN-PENDING: neither lean nor lake is installed. English is the translation source; semantic approval and human attestation are not claimed.
+\ifdefined\INCLUDEMODE\def\UBTFinish{}\else\def\UBTFinish{\end{document}}\fi
+\UBTFinish
