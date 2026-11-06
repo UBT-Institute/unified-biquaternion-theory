@@ -54,3 +54,8 @@ The [complete differential representative chart](../research_tracks/action_selec
 ## Speculative Theta–neural track — 2026-11-02
 
 [SPEC-THETA-NEURAL-001](../speculative_extensions/consciousness/theta_neural_interface/README.en.md) opens a narrowly scoped `SPECULATIVE` investigation of collective Theta modes coupled to measured neural activity without selecting a unique biological carrier. Its classical two-mode comparator checks stability and response only. A physical gauge-invariant observable, action-derived coupling, decoherence budget, UBT-specific prediction, and consciousness interpretation remain `OPEN_GAP`. No canonical physical status is promoted and the historical psychon particle model is not reactivated.
+
+<!-- BILINGUAL-UNIT: current-status.residual-so2-basis -->
+## Residual SO(2) invariant basis — 2026-11-06
+
+The [two-carrier classification](../research_tracks/fundamental_dynamics/residual_so2_invariant_basis.en.md) gives twelve residual-connection structures through Cartan weight two modulo divergences and terms independent of the residual shift. In that branch the independent residual velocity Hessian vanishes. An invertible algebraic block makes the residual one-form auxiliary. The restricted Hilbert–Palatini comparison has zero bulk residual variation, and Holst gives a linear geometric constraint. The result uses the stated derivative filtration and leaves the composite action and the physical Dirac count `OPEN_GAP`.
