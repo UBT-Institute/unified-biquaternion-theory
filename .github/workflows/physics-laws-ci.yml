@@ -214,7 +214,13 @@ jobs:
           python tools/verify_derived_h_representative_quotient_numeric.py
 
       - name: Residual SO(2) invariant basis and Cartan comparisons
-        run: python -m pytest -q tests/test_residual_so2_invariant_basis.py tests/test_residual_so2_torsion_matching.py research_tracks/action_selection/tests/test_irreducible_torsion_projection.py
+        run: >-
+          python -m pytest -q
+          tests/test_residual_so2_invariant_basis.py
+          tests/test_residual_so2_torsion_matching.py
+          tests/test_residual_so2_commutator_hamiltonian.py
+          tests/test_residual_so2_quadratic_cone.py
+          research_tracks/action_selection/tests/test_irreducible_torsion_projection.py
 
       - name: Derived-H radial scalar and Einstein-vacuum obstruction
         run: python -m pytest -q tests/test_derived_h_radial_vacuum.py
