@@ -222,6 +222,9 @@ jobs:
           tests/test_residual_so2_quadratic_cone.py
           research_tracks/action_selection/tests/test_irreducible_torsion_projection.py
 
+      - name: Derived-H radial scalar and Einstein-vacuum obstruction
+        run: python -m pytest -q tests/test_derived_h_radial_vacuum.py
+
       - name: Full-Theta observer-relative information channel and kernel
         run: |
           python -m pytest -q tests/test_theta_observer_information_channel.py
