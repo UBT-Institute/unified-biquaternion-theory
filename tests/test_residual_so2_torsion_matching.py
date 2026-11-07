@@ -94,7 +94,18 @@ def test_reference_torsion_and_five_residual_contractions():
         sp.Rational(2, 3) * (linear_longitudinal + linear_screen),
         2 * (linear_longitudinal + 2 * linear_screen),
     )
-    differences = tuple(sp.expand(v - v0) for v, v0 in zip(invariants(shifted), invariants(reference)))
+    reference_invariants = invariants(reference)
+    shear_difference = sp.trace(n_block**2 - u_block**2)
+    bc = u_block * n_block
+    expected_reference = (
+        2 * shear_difference - 8 * (x2**2 + x3**2),
+        shear_difference,
+        trace_n**2 - trace_u**2,
+        0,
+        -2 * (bc[0, 1] - bc[1, 0]),
+    )
+    assert all(sp.expand(v - ref) == 0 for v, ref in zip(reference_invariants, expected_reference))
+    differences = tuple(sp.expand(v - v0) for v, v0 in zip(invariants(shifted), reference_invariants))
     assert differences == tuple(sp.expand(value) for value in expected)
 
 

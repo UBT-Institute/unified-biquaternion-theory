@@ -1,0 +1,64 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-07",
+  "claim_or_decision_id": "RESIDUAL-SO2-QUADRATIC-CONE",
+  "summary": "Regular trace and metric cone tuning for quadratic torsion, with separate transverse Ricci and nonlinear trace obstructions.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Extended the prior torsion matching to the regular reduced principal symbol, derived the cone and trace factorization, and checked the metric polarizations and exact conformal variation.",
+      "evidence_ids": ["prior", "derivation"]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Checked the reference contractions, principal complement, rational witness, Ricci components and trace residue in exact algebra.",
+      "evidence_ids": ["checks"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "prior",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/43f666cd606d8c7a076ca53e55a80ef3a63658ea",
+      "original_checked": true,
+      "supports": "The prior pure commutator-square constraint and three-branch symbol comparison.",
+      "limitations": "That comparison fixes one coefficient direction only."
+    },
+    {
+      "id": "derivation",
+      "class": "repository_artifact",
+      "locator": "research_tracks/fundamental_dynamics/residual_so2_quadratic_cone.en.md",
+      "original_checked": true,
+      "supports": "Regular principal coefficient locus, transverse metric test and quadratic one-phase obstruction.",
+      "limitations": "The coefficient locus uses regular auxiliary elimination and the pure quadratic family."
+    },
+    {
+      "id": "checks",
+      "class": "repository_artifact",
+      "locator": "tests/test_residual_so2_quadratic_cone.py",
+      "original_checked": true,
+      "supports": "Finite exact tensor, cone and trace checks.",
+      "limitations": "The continuum constraint variation and perturbative scope are analytic."
+    }
+  ],
+  "rejected_alternatives": [
+    "Identifying coincidence of the wave cones with Einstein polarization recovery.",
+    "Treating the null quadratic trace direction as an exact trace symmetry."
+  ],
+  "verification": {
+    "status": "verified_with_scope",
+    "artifacts": [
+      "tests/test_residual_so2_quadratic_cone.py",
+      "tests/test_residual_so2_torsion_matching.py",
+      "formal/lean/UBT/Hamiltonian/ResidualSO2QuadraticCone.lean"
+    ],
+    "limitations": "These checks address the declared regular comparison and the leading one-phase obstruction. They do not classify the singular auxiliary equations."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "This continues the established repository research direction. Attribution remains provisional."
+}
