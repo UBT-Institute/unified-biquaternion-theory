@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import verify_bilingual_semantics as v
 
 LOCAL_MAX_CHARS = 24000
-LOCAL_MAX_PARAGRAPHS = 12
+LOCAL_MAX_PARAGRAPHS = 6
 LOCAL_MAX_PREDICT = 4096
 
 # Constrain JSON structure at decoding time; semantic checks remain fail-closed.
@@ -44,20 +44,55 @@ REVIEW_SCHEMA = {
     }
 }
 
+class InferenceTimeout(v.ReviewError):
+    """Ollama did not return a complete response within the request timeout."""
+
+
 class OllamaReviewer:
     last_response = None
     def __init__(self, model=None, timeout=600):
         self.model, self.timeout = model or os.environ.get("OLLAMA_MODEL", "qwen2.5:7b"), timeout
         self.calls = 0
-    def __call__(self, batch):
-        # Small local models omit reviews in multi-pair requests. Review each
-        # pair independently, validate it immediately, then combine evidence.
-        if len(batch) > 1:
-            reviews = []
-            for item in batch:
-                raw = self([item])
-                reviews.extend(v.validate_response(raw, [item]))
-            return json.dumps({"schema": v.SCHEMA, "reviews": reviews}, ensure_ascii=False)
+        self.retry_partitions: list[dict] = []
+
+    def __call__(self, batch: list[dict]) -> str:
+        reviews = [self._review_item(item) for item in batch]
+        return json.dumps({"schema": v.SCHEMA, "reviews": reviews}, ensure_ascii=False)
+
+    def _review_item(self, item: dict) -> dict:
+        try:
+            return v.validate_response(self._request(item), [item])[0]
+        except (v.ParagraphCoverageError, InferenceTimeout) as error:
+            count = len(item["en"])
+            if count < 2 or count != len(item["cs"]):
+                raise
+            parts = v.split_oversized_pair(
+                item,
+                max_chars=LOCAL_MAX_CHARS,
+                max_paragraphs=(count + 1) // 2,
+            )
+            self.retry_partitions.append({
+                "source": item["id"],
+                "reason": str(error),
+                "parts": [part["id"] for part in parts],
+            })
+
+        # The failed request supplies no approval. Each smaller request must
+        # independently cover its exact paragraphs against the same raw hashes.
+        reviews = [self._review_item(part) for part in parts]
+        verdicts = {review["verdict"] for review in reviews}
+        verdict = next(value for value in ("fail", "uncertain", "pass") if value in verdicts)
+        return {
+            "id": item["id"],
+            "en_sha256": item["en_sha256"],
+            "cs_sha256": item["cs_sha256"],
+            "verdict": verdict,
+            "checks": {key: all(review["checks"][key] for review in reviews) for key in v.CHECKS},
+            "alignments": [alignment for review in reviews for alignment in review["alignments"]],
+        }
+
+    def _request(self, item: dict) -> str:
+        batch = [item]
         # Constrain source identifiers and hashes to the exact input batch.
         # Never repair or overwrite model-generated evidence after decoding.
         schema=json.loads(json.dumps(REVIEW_SCHEMA))
@@ -67,7 +102,6 @@ class OllamaReviewer:
         # A single-paragraph pair has exactly one valid alignment on each side.
         # Constrain identifiers at decoding time rather than repairing model output.
         # Multi-paragraph pairs retain the original strict coverage validator.
-        item = batch[0]
         schema["properties"]["reviews"]["minItems"] = 1
         schema["properties"]["reviews"]["maxItems"] = 1
         alignment = schema["properties"]["reviews"]["items"]["properties"]["alignments"]
@@ -97,12 +131,15 @@ class OllamaReviewer:
         if self.calls >= v.MAX_CALLS:
             raise v.ReviewError("local model request budget exceeded; no approval issued")
         self.calls += 1
+        self.last_response = None
         print(f"Ollama request {self.calls}: {item['id']} ({len(item['en'])}/{len(item['cs'])} paragraphs)",flush=True)
         req=urllib.request.Request("http://127.0.0.1:11434/api/generate",
                                    payload,{"Content-Type":"application/json"})
         try:
             with urllib.request.urlopen(req,timeout=self.timeout) as response:
                 result=json.load(response)
+        except TimeoutError as exc:
+            raise InferenceTimeout(f"local Ollama unavailable: TimeoutError ({item['id']})") from exc
         except Exception as exc:
             raise v.ReviewError(f"local Ollama unavailable: {type(exc).__name__}") from exc
         if not result.get("done") or not result.get("response"):
@@ -144,6 +181,7 @@ def main():
             raise
         finally:
             report["model_requests"] = reviewer.calls
+            report["retry_partitions"] = reviewer.retry_partitions
         v.verify_sources(root,docs)
         report["status"]="passed"
     except (v.ReviewError,OSError,UnicodeError,subprocess.SubprocessError,ValueError) as exc:

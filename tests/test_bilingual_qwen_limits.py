@@ -38,7 +38,7 @@ def test_local_chunking_keeps_raw_hashes_and_all_paragraphs_exactly_once():
     item = sample(37)
     parts = V.split_oversized_pair(item, max_chars=QWEN.LOCAL_MAX_CHARS,
                                    max_paragraphs=QWEN.LOCAL_MAX_PARAGRAPHS)
-    assert len(parts) == 4
+    assert len(parts) == 7
     for lang in ("en", "cs"):
         assert [p for part in parts for p in part[lang]] == item[lang]
         assert all(part[f"{lang}_sha256"] == item[f"{lang}_sha256"] for part in parts)
@@ -102,3 +102,71 @@ def test_timeout_and_unbounded_request_cannot_issue_approval(monkeypatch):
     with pytest.raises(V.ReviewError, match="paragraph budget"):
         reviewer([sample(13)])
     assert reviewer.last_response is None
+
+
+@pytest.mark.parametrize("failure", ["incomplete", "duplicate", "timeout"])
+def test_retry_reviews_every_paragraph_with_fresh_model_evidence(monkeypatch, failure):
+    item = sample(4)
+    requests = []
+
+    def request(part):
+        requests.append(part)
+        if len(requests) == 1 and failure == "timeout":
+            raise QWEN.InferenceTimeout("fixture timeout")
+        result = model_fixture(part)
+        alignment = result["reviews"][0]["alignments"][0]
+        if len(requests) == 1:
+            if failure == "incomplete":
+                alignment["en"].pop()
+            else:
+                alignment["en"].append(alignment["en"][0])
+        return json.dumps(result)
+
+    reviewer = QWEN.OllamaReviewer()
+    monkeypatch.setattr(reviewer, "_request", request)
+    review, = V.validate_response(reviewer([item]), [item])
+    assert review["verdict"] == "pass"
+    assert [len(request["en"]) for request in requests] == [4, 2, 2]
+    assert reviewer.retry_partitions[0]["parts"] == [request["id"] for request in requests[1:]]
+    for lang in ("en", "cs"):
+        assert all(request[f"{lang}_sha256"] == item[f"{lang}_sha256"] for request in requests)
+        assert [value for part in review["alignments"] for value in part[lang]] == [
+            paragraph["id"] for paragraph in item[lang]
+        ]
+
+
+@pytest.mark.parametrize("verdict", ["fail", "uncertain"])
+def test_retry_does_not_discard_an_existing_negative_verdict(monkeypatch, verdict):
+    item = sample(4)
+    result = model_fixture(item)
+    review = result["reviews"][0]
+    review["verdict"] = verdict
+    review["alignments"][0]["en"].pop()
+    reviewer = QWEN.OllamaReviewer()
+    monkeypatch.setattr(reviewer, "_request", lambda part: json.dumps(result))
+    with pytest.raises(V.ReviewError, match="coverage"):
+        reviewer([item])
+    assert reviewer.retry_partitions == []
+
+
+def test_uncertain_retry_part_keeps_original_document_unapproved(monkeypatch):
+    item = sample(4)
+    requests = []
+
+    def request(part):
+        requests.append(part)
+        result = model_fixture(part)
+        review = result["reviews"][0]
+        if len(requests) == 1:
+            review["alignments"][0]["en"].pop()
+        if len(requests) == 2:
+            review["verdict"] = "uncertain"
+            review["checks"]["claims"] = False
+            review["alignments"][0].update(verdict="uncertain", reason="Ambiguous claim")
+        return json.dumps(result)
+
+    reviewer = QWEN.OllamaReviewer()
+    monkeypatch.setattr(reviewer, "_request", request)
+    review, = V.validate_response(reviewer([item]), [item])
+    assert review["verdict"] == "uncertain"
+    assert review["checks"]["claims"] is False

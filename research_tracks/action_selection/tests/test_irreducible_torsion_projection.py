@@ -14,8 +14,8 @@ Q=s.MutableDenseNDimArray.zeros(4,4,4)
 for a in range(4):
  for b in range(4):
   for c in range(4):
-   A[a,b,c]=(T[a,b,c]+T[b,c,a]+T[c,a,b])/3
-   V=((eta[a]*t[c] if a==b else 0)-(eta[a]*t[b] if a==c else 0))/3
+   A[a,b,c]=(T[a,b,c]+T[b,c,a]+T[c,a,b])/s.Integer(3)
+   V=((eta[a]*t[c] if a==b else 0)-(eta[a]*t[b] if a==c else 0))/s.Integer(3)
    Q[a,b,c]=T[a,b,c]-V-A[a,b,c]
 class TestTorsion(unittest.TestCase):
  def test_tracefree(self):

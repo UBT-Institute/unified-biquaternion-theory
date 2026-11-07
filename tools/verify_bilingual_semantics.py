@@ -78,6 +78,10 @@ class ReviewError(ValueError):
         self.diagnostic = diagnostic
 
 
+class ParagraphCoverageError(ReviewError):
+    """A positive response with known IDs did not cover all paragraphs."""
+
+
 def sha256(value: bytes) -> str:
     return hashlib.sha256(value).hexdigest()
 
@@ -258,15 +262,22 @@ def validate_response(raw: str, batch: list[dict]) -> list[dict]:
                 raise ReviewError("empty alignment")
             if verdict == "pass" and (not alignment["en"] or not alignment["cs"]):
                 raise ReviewError("missing translation cannot pass")
-        for lang, ids in covered.items():
-            required = {paragraph["id"] for paragraph in item[lang]}
-            if len(ids) != len(set(ids)) or set(ids) != required:
-                raise ReviewError(f"incomplete/duplicate {lang} paragraph coverage: {identifier}")
         if review["verdict"] == "pass" and (
             not all(review["checks"].values())
             or any(part["verdict"] != "pass" for part in review["alignments"])
         ):
             raise ReviewError("pass contradicts failed/uncertain checks")
+        required = {
+            lang: {paragraph["id"] for paragraph in item[lang]}
+            for lang in covered
+        }
+        unknown_ids = any(set(ids) - required[lang] for lang, ids in covered.items())
+        for lang, ids in covered.items():
+            if len(ids) != len(set(ids)) or set(ids) != required[lang]:
+                message = f"incomplete/duplicate {lang} paragraph coverage: {identifier}"
+                if review["verdict"] == "pass" and not unknown_ids:
+                    raise ParagraphCoverageError(message)
+                raise ReviewError(message)
     if seen != set(expected):
         raise ReviewError("missing document reviews")
     return data["reviews"]
