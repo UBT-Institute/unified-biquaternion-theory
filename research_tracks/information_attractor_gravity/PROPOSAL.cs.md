@@ -1,15 +1,18 @@
-<!-- UBT-AI-PROVENANCE-BEGIN
+<!--
+UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
 tier: C_working
 ai_assistance: disclosed
 human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
-policy: AI_PROVENANCE.md
-notice: Hypotéza a plán testů; gravitace není odvozena.
-UBT-AI-PROVENANCE-END -->
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 
 # Informačně řízené atraktory a emergentní gravitace — výzkumný návrh
-Stav: SPEKULATIVNÍ / OTEVŘENÝ, nekanonický. Datum: 2026-11-07.
+Stav: SPEKULATIVNÍ / OTEVŘENÝ (SPECULATIVE / OPEN), nekanonický. Datum: 2026-11-07.
 
 ## Rozsah a omezení
 Nedávný numerický výzkum propletených/fraktálních oblastí přitažlivosti při trénování neuronových sítí motivuje testování citlivosti na počáteční podmínky. **Neprokazuje**, že gravitace je atraktor ani že Jacobiho theta jádra vytvářejí fraktální oblasti. Optimalizační čas učení nesmíme zaměnit za fyzikální čas.

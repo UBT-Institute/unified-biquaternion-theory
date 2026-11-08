@@ -1,0 +1,77 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-07",
+  "claim_or_decision_id": "TWO-CARRIER-SHARP-REALITY",
+  "summary": "Compared the flat parallel two-carrier obstruction with the exact real sharp metric on regular complex backgrounds, and derived conditional transmission of the metric Euler symbol.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Derived the flat parallel scalar transport constraint, the regular fixed-carrier image and an explicit singular family with both Einstein tidal amplitudes.",
+      "evidence_ids": [
+        "prior",
+        "derivation"
+      ]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Checked the finite transport and symbol algebra in Lean and tested exact metric, rank, Ricci and singular-limit witnesses in SymPy.",
+      "evidence_ids": [
+        "cas",
+        "lean"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "prior",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/26e2ebfe1a751b46e5498719669f50374f218a54",
+      "original_checked": true,
+      "supports": "The restricted parallel two-carrier polarization obstruction.",
+      "limitations": "The original comparison requires the full tetrad on the Lorentz real slice."
+    },
+    {
+      "id": "derivation",
+      "class": "repository_artifact",
+      "locator": "research_tracks/fundamental_dynamics/two_carrier_sharp_reality.en.md",
+      "original_checked": true,
+      "supports": "Parallel transport obstruction, the rank-eight constrained metric image and conditional Einstein metric symbol.",
+      "limitations": "Uses a specified pure Lorentz connection representation and a complex tetrad with an exactly real sharp metric."
+    },
+    {
+      "id": "cas",
+      "class": "repository_artifact",
+      "locator": "tests/test_two_carrier_sharp_reality.py",
+      "original_checked": true,
+      "supports": "Exact affine metrics, scalar and curvature transport, ranks, transverse polarization lifts and singular limit.",
+      "limitations": "Finite algebra and explicit witnesses."
+    },
+    {
+      "id": "lean",
+      "class": "repository_artifact",
+      "locator": "formal/lean/UBT/Hamiltonian/TwoCarrierSharpReality.lean",
+      "original_checked": true,
+      "supports": "Finite kernel elimination, transport and two-by-two symbol relations.",
+      "limitations": "The geometric rank and continuum variation arguments are analytic."
+    }
+  ],
+  "rejected_alternatives": [
+    "Inferring metric polarization recovery from perturbing away from the Lorentz slice at a flat parallel reference alone.",
+    "Identifying the constrained metric image or a supplied metric principal symbol with a microscopic Hamiltonian."
+  ],
+  "verification": {
+    "status": "verified_with_scope",
+    "artifacts": [
+      "tests/test_two_carrier_sharp_reality.py",
+      "formal/lean/UBT/Hamiltonian/TwoCarrierSharpReality.lean"
+    ],
+    "limitations": "The proof requires a regular local branch for the positive result and a supplied diffeomorphism-invariant metric action for stationary transmission. The physical Dirac quotient and composite action selection are open."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "Continues the published two-carrier research comparison. The parallel obstruction and regular complex branch concern different reference configurations."
+}

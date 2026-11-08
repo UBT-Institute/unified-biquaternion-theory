@@ -13,6 +13,7 @@ Status: **partial formalization; full single-Theta Hamiltonian OPEN**.
 - `UBT.Hamiltonian.ResidualSO2Torsion`: even coefficient map, its kernel and stationary quadratic translation for the restricted torsion comparison.
 - `UBT.Hamiltonian.ResidualSO2Commutator`: finite gauge-kernel identity and characteristic polynomial for the two-carrier commutator-square symbol.
 - `UBT.Hamiltonian.ResidualSO2QuadraticCone`: polynomial factorization of the regular trace and cone conditions, the shift complement and the bracket norm.
+- `UBT.Hamiltonian.TwoCarrierSharpReality`: finite kernel, affine transport and two-by-two symbol identities in the complex tetrad comparison with a real sharp metric.
 
 ## Open proof obligations (do not silently promote to theorems)
 
