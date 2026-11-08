@@ -171,8 +171,9 @@ def test_fixed_clock_bloch_frobenius_helcity_and_helical_counterexample():
         ])
 
     assert sp.simplify(sp.expand(v.dot(curl(v)))) == 0
-    helical = sp.Matrix([-y, x, 1])
-    assert sp.simplify(helical.dot(curl(helical))) == 2
+    helical = sp.Matrix([-y/4, x/4, sp.Rational(1, 4)])
+    assert sp.simplify(helical.dot(curl(helical))) == sp.Rational(1, 8)
+    assert (helical.dot(helical)).subs({x: 1, y: 1}) < 1
 
 
 def test_strict_quartic_sign_form():
