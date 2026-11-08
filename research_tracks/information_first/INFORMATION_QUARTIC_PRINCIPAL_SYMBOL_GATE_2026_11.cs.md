@@ -142,6 +142,34 @@ Dříve navržený informačně citlivý potenciál V=lambda J nemá na homogenn
 \frac{\partial^2\mathcal J}{\partial u^2}=\frac{3712}{81}.
 \]
 
+<!-- BILINGUAL-UNIT: information-hessian.integrability -->
+## Bodová surjektivita Blochovy koule neznamená tři nezávislé prostorové kanály [PROVED podmíněně]
+
+Starší informační výsledek ukázal, že v jednom bodě mohou tři Gaussovy boostové parametry pokrýt celý vnitřek qubitové Blochovy koule. V přesné inverzi odvozeného H jsou však tři prostorové složky nosiče derivacemi JEDINÉHO hladkého skalárního reprezentanta r. Pro pevný geometrický časový směr pozorovatele N=I2 dává Pauliho násobení následující lokální hustotu a Blochův vektor. Skalární faktor f se může měnit v prostoru, avšak Frobeniova identita helicity platí PŘESNĚ. Vektorové pole s nenulovou hustotou helicity, jak ukazuje příklad, nelze na žádném regulárním otevřeném okolí rekonstruovat jako tento zvolený Blochův kanál.
+
+\[
+Q=\Theta\Theta^\dagger=
+\left(h^2+(x^0)^2+|\mathbf x|^2\right)I_2
+-2x^0\mathbf x\cdot\boldsymbol\sigma,
+\quad \mathbf x=\frac{h^2}{2s}\nabla r,
+\]
+\[
+\rho_{N=I_2}=\tfrac12(I_2+\boldsymbol{\beta}_{\rm obs}\cdot\boldsymbol\sigma),
+\quad
+\boxed{\boldsymbol{\beta}_{\rm obs}
+=-\frac{2x^0}{h^2+(x^0)^2+|\mathbf x|^2}
+\frac{h^2}{2s}\nabla r=f\nabla r},
+\]
+\[
+\boxed{\boldsymbol{\beta}_{\rm obs}\cdot
+(\nabla\times\boldsymbol{\beta}_{\rm obs})=0},\qquad
+\boldsymbol{\beta}_{\rm forbidden}(x,y,z)=(-y,x,1),\quad
+\boldsymbol{\beta}_{\rm forbidden}\cdot
+(\nabla\times\boldsymbol{\beta}_{\rm forbidden})=2\ne0.
+\]
+
+Toto rozlišení bodových a polních dat je překážkou integrability, nikoli univerzální větou proti QCD. Platí jen v tomto reprezentančním grafu s normalizovaným H a s pevným časovým směrem pozorovatele; proměnný rámec detektoru, další fyzikálně odvozené vnitřní konexe nebo jiný mikroskopický fázový prostor by mohly omezený ansatz změnit. Tři hodnoty Blochova vektoru NEJSOU třemi nezávislými propagujícími barvami kvarků ani třemi nezávislými multiplexními kanály mezi vesmíry.
+
 <!-- BILINGUAL-UNIT: information-hessian.implication -->
 ## Důsledek pro barvu, informaci a multiplex na psi [OPEN fyzika]
 
@@ -163,4 +191,4 @@ Tento kandidát s jediným polem a pouze s potenciálem nedává zdravý regulá
 <!-- BILINGUAL-UNIT: information-hessian.tests -->
 ## Ověření, provenience a použité výsledky
 
-Dvanáct lokálních testů SymPy ověřuje generické Pauliho invarianty celé matice, přesný holonomní pullback, obnovu známé afinní boostové Gaussovy reprezentace, obecný Hessian při pevné tetrádě, vymizení m², nezávislé nestabilní paprsky při záporných kvartických koeficientech, degenerovanou homogenní větev J, nakloněný příklad s nesprávným časovým znaménkem a omezení na psi. Strukturální i nezávislá sémantická kontrola překladů jsou povinnými branami GitHubu; práce zůstává C_working a atestace Tier A se nemění. Znovu použité, nikoli nově dokazované výsledky: research_tracks/action_selection/theta_potential_invariants.en.md; derived_h_graded_representative_quotient_2026_11.en.md; research_tracks/information_first/THETA_COLOUR_MULTIPLEX_SELECTION_GATE_2026_11.en.md a mergnutá informační tomografie. Netvrdíme formalizaci spojitého důkazu v Lean, model na hmotové slupce, fyzikální teorii měření ani úplnou gravitační Diracovu větu.
+Čtrnáct lokálních testů SymPy ověřuje generické Pauliho invarianty celé matice, přesný holonomní pullback, obnovu známé afinní boostové Gaussovy reprezentace, obecný Hessian při pevné tetrádě, vymizení m², nezávislé nestabilní paprsky při záporných kvartických koeficientech, degenerovanou homogenní větev J, nakloněný příklad s nesprávným časovým znaménkem a omezení na psi. Strukturální i nezávislá sémantická kontrola překladů jsou povinnými branami GitHubu; práce zůstává C_working a atestace Tier A se nemění. Znovu použité, nikoli nově dokazované výsledky: research_tracks/action_selection/theta_potential_invariants.en.md; derived_h_graded_representative_quotient_2026_11.en.md; research_tracks/information_first/THETA_COLOUR_MULTIPLEX_SELECTION_GATE_2026_11.en.md a mergnutá informační tomografie. Netvrdíme formalizaci spojitého důkazu v Lean, model na hmotové slupce, fyzikální teorii měření ani úplnou gravitační Diracovu větu.
