@@ -144,6 +144,37 @@ def test_no_internal_compact_psi_derivative_generated():
     assert psi not in J.free_symbols
 
 
+def test_exact_fixed_clock_bloch_vector_is_collinear_with_spatial_gradient():
+    h, x0, x, y, z = sp.symbols("h x0 x y z", real=True)
+    t = full_theta(h, (x0, x, y, z))
+    q = sp.simplify(t * t.H)
+    total = h*h + x0*x0 + x*x + y*y + z*z
+    assert sp.simplify(q - (
+        total*I2 - 2*x0*(x*SX + y*SY + z*SZ)
+    )) == sp.zeros(2)
+    density = sp.simplify(q / sp.trace(q))
+    for sigma, component in ((SX,x), (SY,y), (SZ,z)):
+        assert sp.factor(sp.trace(density*sigma) + 2*x0*component/total) == 0
+
+
+def test_fixed_clock_bloch_frobenius_helcity_and_helical_counterexample():
+    x, y, z = sp.symbols("x y z", real=True)
+    scalar = sp.Function("r")(x, y, z)
+    multiplier = sp.Function("f")(x, y, z)
+    v = sp.Matrix([multiplier*sp.diff(scalar, q) for q in (x, y, z)])
+
+    def curl(vector):
+        return sp.Matrix([
+            sp.diff(vector[2], y) - sp.diff(vector[1], z),
+            sp.diff(vector[0], z) - sp.diff(vector[2], x),
+            sp.diff(vector[1], x) - sp.diff(vector[0], y),
+        ])
+
+    assert sp.simplify(sp.expand(v.dot(curl(v)))) == 0
+    helical = sp.Matrix([-y, x, 1])
+    assert sp.simplify(helical.dot(curl(helical))) == 2
+
+
 def test_strict_quartic_sign_form():
     r = sp.symbols("r", real=True)
     assert sp.factor(
