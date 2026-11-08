@@ -142,6 +142,34 @@ The previously proposed information-sensitive trial V=lambda J has no quadratic 
 \frac{\partial^2\mathcal J}{\partial u^2}=\frac{3712}{81}.
 \]
 
+<!-- BILINGUAL-UNIT: information-hessian.integrability -->
+## Pointwise Bloch surjectivity does not imply three independent spatial channels [PROVED conditional]
+
+Earlier information-first work showed that at a single event, the three Gaussian-boost parameters can sweep the complete interior qubit Bloch ball. But in the exact derived-H inverse the three spatial carrier components are derivatives of ONE smooth representative scalar r. With the fixed geometric observer clock N=I2, Pauli multiplication gives the local density and Bloch vector shown below. The scalar multiplier f may vary in space; nevertheless the Frobenius/helicity identity is EXACT. A vector field with nonzero helicity density, exemplified below, cannot be reconstructed as this chosen Bloch readout on any regular open neighborhood where its expression applies.
+
+\[
+Q=\Theta\Theta^\dagger=
+\left(h^2+(x^0)^2+|\mathbf x|^2\right)I_2
+-2x^0\mathbf x\cdot\boldsymbol\sigma,
+\quad \mathbf x=\frac{h^2}{2s}\nabla r,
+\]
+\[
+\rho_{N=I_2}=\tfrac12(I_2+\boldsymbol{\beta}_{\rm obs}\cdot\boldsymbol\sigma),
+\quad
+\boxed{\boldsymbol{\beta}_{\rm obs}
+=-\frac{2x^0}{h^2+(x^0)^2+|\mathbf x|^2}
+\frac{h^2}{2s}\nabla r=f\nabla r},
+\]
+\[
+\boxed{\boldsymbol{\beta}_{\rm obs}\cdot
+(\nabla\times\boldsymbol{\beta}_{\rm obs})=0},\qquad
+\boldsymbol{\beta}_{\rm forbidden}(x,y,z)=(-y,x,1),\quad
+\boldsymbol{\beta}_{\rm forbidden}\cdot
+(\nabla\times\boldsymbol{\beta}_{\rm forbidden})=2\ne0.
+\]
+
+This pointwise-versus-field distinction is an integrability obstruction, not a universal QCD no-go. It applies only to this normalized-H representative chart and fixed observer clock; a varying detector frame, other physically derived internal connections or a different microscopic phase space could invalidate the stated restricted ansatz. The three values of the Bloch vector are NOT three independent propagating quark colours or three independent multiverse multiplex channels.
+
 <!-- BILINGUAL-UNIT: information-hessian.implication -->
 ## Consequence for colour, information and psi multiplex [OPEN physics]
 
@@ -163,4 +191,4 @@ This single-field potential-only candidate does not furnish a healthy regular ve
 <!-- BILINGUAL-UNIT: information-hessian.tests -->
 ## Verification, provenance and reuse
 
-Twelve local SymPy tests check generic full-matrix Pauli invariants, exact holonomic pullback, recovery of the known affine-boost Gaussian representative, general fixed-coframe Hessian, cancellation of m², independent instability rays for negative quartic coefficients, the degenerate homogeneous J branch, a tilted wrong-sign kinetic witness, and the psi limitation. Bilingual structural and independent semantic validation remain mandatory GitHub gates; this is C_working and no Tier-A attestation is changed. Reused, not claimed anew: research_tracks/action_selection/theta_potential_invariants.en.md; derived_h_graded_representative_quotient_2026_11.en.md; research_tracks/information_first/THETA_COLOUR_MULTIPLEX_SELECTION_GATE_2026_11.en.md; and the merged information tomography. No continuum Lean formalization, on-shell model, physical measurement theory or full gravitational Dirac theorem is claimed.
+Fourteen local SymPy tests check generic full-matrix Pauli invariants, exact holonomic pullback, recovery of the known affine-boost Gaussian representative, general fixed-coframe Hessian, cancellation of m², independent instability rays for negative quartic coefficients, the degenerate homogeneous J branch, a tilted wrong-sign kinetic witness, and the psi limitation. Bilingual structural and independent semantic validation remain mandatory GitHub gates; this is C_working and no Tier-A attestation is changed. Reused, not claimed anew: research_tracks/action_selection/theta_potential_invariants.en.md; derived_h_graded_representative_quotient_2026_11.en.md; research_tracks/information_first/THETA_COLOUR_MULTIPLEX_SELECTION_GATE_2026_11.en.md; and the merged information tomography. No continuum Lean formalization, on-shell model, physical measurement theory or full gravitational Dirac theorem is claimed.
