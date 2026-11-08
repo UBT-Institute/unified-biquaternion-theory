@@ -163,9 +163,10 @@ Q=\Theta\Theta^\dagger=
 \[
 \boxed{\boldsymbol{\beta}_{\rm obs}\cdot
 (\nabla\times\boldsymbol{\beta}_{\rm obs})=0},\qquad
-\boldsymbol{\beta}_{\rm forbidden}(x,y,z)=(-y,x,1),\quad
+\boldsymbol{\beta}_{\rm forbidden}(x,y,z)=\tfrac14(-y,x,1),\quad
 \boldsymbol{\beta}_{\rm forbidden}\cdot
-(\nabla\times\boldsymbol{\beta}_{\rm forbidden})=2\ne0.
+(\nabla\times\boldsymbol{\beta}_{\rm forbidden})=\tfrac18\ne0,\quad
+|\boldsymbol{\beta}_{\rm forbidden}|<1\text{ when }|x|,|y|\le1.
 \]
 
 Toto rozlišení bodových a polních dat je překážkou integrability, nikoli univerzální větou proti QCD. Platí jen v tomto reprezentančním grafu s normalizovaným H a s pevným časovým směrem pozorovatele; proměnný rámec detektoru, další fyzikálně odvozené vnitřní konexe nebo jiný mikroskopický fázový prostor by mohly omezený ansatz změnit. Tři hodnoty Blochova vektoru NEJSOU třemi nezávislými propagujícími barvami kvarků ani třemi nezávislými multiplexními kanály mezi vesmíry.
