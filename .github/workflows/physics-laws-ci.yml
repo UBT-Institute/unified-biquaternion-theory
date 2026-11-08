@@ -246,6 +246,10 @@ jobs:
         run: |
           python -m pytest -q tests/test_information_colour_multiplex_gate.py
 
+      - name: Information-first quartic pullback principal-symbol gate
+        run: |
+          python -m pytest -q tests/test_information_quartic_pullback_gate.py
+
   # -----------------------------------------------------------------------
   # 7. QM limit tests (existing)
   # -----------------------------------------------------------------------
