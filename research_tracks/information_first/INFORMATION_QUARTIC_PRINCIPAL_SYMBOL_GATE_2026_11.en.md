@@ -163,9 +163,10 @@ Q=\Theta\Theta^\dagger=
 \[
 \boxed{\boldsymbol{\beta}_{\rm obs}\cdot
 (\nabla\times\boldsymbol{\beta}_{\rm obs})=0},\qquad
-\boldsymbol{\beta}_{\rm forbidden}(x,y,z)=(-y,x,1),\quad
+\boldsymbol{\beta}_{\rm forbidden}(x,y,z)=\tfrac14(-y,x,1),\quad
 \boldsymbol{\beta}_{\rm forbidden}\cdot
-(\nabla\times\boldsymbol{\beta}_{\rm forbidden})=2\ne0.
+(\nabla\times\boldsymbol{\beta}_{\rm forbidden})=\tfrac18\ne0,\quad
+|\boldsymbol{\beta}_{\rm forbidden}|<1\text{ when }|x|,|y|\le1.
 \]
 
 This pointwise-versus-field distinction is an integrability obstruction, not a universal QCD no-go. It applies only to this normalized-H representative chart and fixed observer clock; a varying detector frame, other physically derived internal connections or a different microscopic phase space could invalidate the stated restricted ansatz. The three values of the Bloch vector are NOT three independent propagating quark colours or three independent multiverse multiplex channels.
