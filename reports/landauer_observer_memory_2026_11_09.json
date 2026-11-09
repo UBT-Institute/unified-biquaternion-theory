@@ -1,0 +1,58 @@
+{
+  "schema": "ubt-verification/v1",
+  "recorded_on": "2026-11-09",
+  "claim_id": "GAP-INFO-LANDAUER-BRIDGE",
+  "base_commit": "733b6ea8221109add3eeb182daeff5ff9e393f32",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "sympy": "1.14.0",
+    "pytest": "9.2.0"
+  },
+  "checks": [
+    {
+      "command": "python -m pytest -q tests/test_landauer_observer_memory.py tests/test_information_observer_capacity_selector.py tests/test_shared_reality_quantum_marginals.py tests/test_shared_negentropy_composition.py",
+      "result": "passed",
+      "tests": 33,
+      "scope": "18 numerical thermal balance cases; symbolic balance; correlated reset; exact record coarsening and compatibility examples; 11 existing observer regressions"
+    },
+    {
+      "command": "python tools/check_bilingual_pairs.py",
+      "result": "passed",
+      "pairs": 332
+    },
+    {
+      "command": "python tools/apply_provenance_headers.py --check",
+      "result": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed"
+    }
+  ],
+  "source_sha256": {
+    "research_tracks/fundamental_dynamics/LANDAUER_OBSERVER_MEMORY.en.md": "279e6b254bf24b6f91fd4cd126acf35f090a167a052825033e90291012c3b7a3",
+    "research_tracks/fundamental_dynamics/LANDAUER_OBSERVER_MEMORY.cs.md": "6927a90a433e651761fbad777740570754b290b4173729479c32744fe07cb4f5",
+    "tests/test_landauer_observer_memory.py": "27dd6ea387ef09815aa647fb2b72bebbbb2d22a87bc64339b0a801e8f7bed452"
+  },
+  "lean_status": "LEAN-PENDING",
+  "lean_reason": "No lean executable installed; no formal entropy proof supplied.",
+  "semantic_review": {
+    "status": "blocked",
+    "reason": "Copilot CLI 1.0.103 is required but unavailable locally.",
+    "artifact": "reports/landauer_bilingual_semantic_attempt_2026_11_09.json",
+    "merge_policy": "Keep draft pending independent semantic review; no override or fabricated approval."
+  },
+  "limitations": [
+    "No canonical UBT dynamics, quantum emergence, ghost reduction or ontology is proved.",
+    "Finite tests do not prove general entropy inequalities.",
+    "Heat admissibility is necessary, not sufficient, and does not select an action."
+  ],
+  "status_surface_scope": {
+    "CLAIMS.yaml": "New OPEN_GAP research record only.",
+    "STATUS_OF_UBT.md": "Unchanged: existing canonical statuses and A-tier attestation are not amended by this noncanonical proposal.",
+    "WHAT_IS_PROVED.md": "Unchanged: no new canonical proof claimed.",
+    "CLAIMS_MATRIX.md": "Unchanged: no canonical claim promoted.",
+    "DERIVATION_INDEX.md": "Unchanged: the research entry is linked from the existing paired information selector."
+  }
+}
