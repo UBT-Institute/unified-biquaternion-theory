@@ -55,7 +55,7 @@
     "Treating an entropy inequality as a uniquely derived UBT action."
   ],
   "verification": {
-    "status": "see_companion_report",
+    "status": "verified_with_scope",
     "artifacts": [
       "tests/test_landauer_observer_memory.py",
       "reports/landauer_observer_memory_2026_11_09.json"

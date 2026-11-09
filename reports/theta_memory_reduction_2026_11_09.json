@@ -1,0 +1,59 @@
+{
+  "schema": "ubt-verification/v1",
+  "recorded_on": "2026-11-09",
+  "claim_id": "GAP-INFO-LANDAUER-BRIDGE",
+  "status": "conditional_comparator_checked",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "sympy": "1.14.0",
+    "pytest": "9.2.0"
+  },
+  "checks": [
+    {
+      "command": "python -m pytest -q tests/test_theta_memory_reduction.py tests/test_landauer_observer_memory.py tests/test_theta_observer_information_channel.py tests/test_information_gravity_quotient_channel.py",
+      "result": "passed",
+      "tests": 64,
+      "scope": "20 new mode-memory/phase-path checks; 44 Landauer, observer and quotient regressions."
+    },
+    {
+      "command": "python tools/check_bilingual_pairs.py",
+      "result": "passed",
+      "pairs": 333
+    },
+    {
+      "command": "python -m pytest -q tests/test_theta_memory_reduction.py tests/test_research_origin_events.py tests/test_provenance_headers.py tests/test_sha256sums_integrity.py",
+      "result": "passed",
+      "tests": 36,
+      "scope": "20 memory checks rerun after NumPy compatibility fix; 16 provenance, event-contract and source-archive integrity checks."
+    }
+  ],
+  "source_sha256": {
+    "research_tracks/information_first/THETA_MEMORY_DYNAMICAL_BRIDGE_2026_11.en.md": "82ba82a6adb1dc471400494abdfe30fd1b56ac00bdebe82a65d5343871295853",
+    "research_tracks/information_first/THETA_MEMORY_DYNAMICAL_BRIDGE_2026_11.cs.md": "479017e2fa8fdebaced620e0d1f7a27c9d4731f89c90e9b78aeadd279c048a29",
+    "research_tracks/fundamental_dynamics/LANDAUER_OBSERVER_MEMORY.en.md": "1c2341838cc4d772291705d81963b044f7491567da9971ad4260b9fbda4c6aec",
+    "research_tracks/fundamental_dynamics/LANDAUER_OBSERVER_MEMORY.cs.md": "64fbaf560244dd846da4e6d26e89d0483a87768e9a0bdd838ec94e26e146dd54",
+    "tests/test_theta_memory_reduction.py": "ac6a298885550fef70451bee7c7bc8c6b7311bc2656079aaa5a06b289be445cc"
+  },
+  "analytic_scope": [
+    "Exact static Schur complement for the declared polynomial, not a microscopic UBT reduction.",
+    "Conditional minima, barrier, force threshold, Markov retention and detailed-balance reset cycle.",
+    "Full-complex phase path has zero potential barrier in the classified quartic family; no full-action obstruction claimed."
+  ],
+  "independent_channels": [
+    "SymPy symbolic identities and exact polynomial calculus",
+    "NumPy Hessian spectrum and work quadrature; independent elementary retention evaluation"
+  ],
+  "lean_status": "LEAN-PENDING",
+  "lean_reason": "No local Lean executable or kernel-checked formalization.",
+  "semantic_review": {
+    "status": "blocked_locally",
+    "reason": "Local Ollama endpoint unavailable; no approval fabricated.",
+    "artifact": "reports/theta_memory_semantic_attempt_2026_11_09.json"
+  },
+  "limitations": [
+    "No physical reduced Theta mode, bath spectrum, Markov limit, temperature, coupling or unique microscopic action derived.",
+    "The same-metric representative condition applies only to the stated gravity-only comparator, not all full-theory matter observables.",
+    "New canonical closure claims are not made; existing canonical status surfaces remain unchanged."
+  ]
+}

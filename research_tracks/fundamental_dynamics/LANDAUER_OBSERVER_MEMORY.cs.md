@@ -106,3 +106,7 @@ Doprovodný test numericky kontroluje bilanci pro koherentní paměťové stavy 
 
 - [1] Reeb & Wolf, *An improved Landauer principle with finite-size corrections*, New J. Phys. 16, 103011 (2014), https://doi.org/10.1088/1367-2630/16/10/103011 ; https://arxiv.org/abs/1306.4352 .
 - [2] Bérut et al., *Experimental verification of Landauer’s principle linking information and thermodynamics*, Nature 483, 187–189 (2012), https://doi.org/10.1038/nature10872 .
+
+<!-- BILINGUAL-UNIT: landauer.dynamical-followup -->
+
+[Podmíněná redukce paměti](../information_first/THETA_MEMORY_DYNAMICAL_BRIDGE_2026_11.cs.md) odvozuje kritérium bistability, zákon uchování a ideální cyklus resetu z deklarovaného modelu redukované energie. Výběr fyzikálního módu a tepelné rychlosti z kanonické akce zůstávají OPEN.

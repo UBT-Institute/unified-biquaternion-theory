@@ -106,3 +106,7 @@ The companion test checks the balance numerically for coherent memory states and
 
 - [1] Reeb & Wolf, *An improved Landauer principle with finite-size corrections*, New J. Phys. 16, 103011 (2014), https://doi.org/10.1088/1367-2630/16/10/103011 ; https://arxiv.org/abs/1306.4352 .
 - [2] Bérut et al., *Experimental verification of Landauer’s principle linking information and thermodynamics*, Nature 483, 187–189 (2012), https://doi.org/10.1038/nature10872 .
+
+<!-- BILINGUAL-UNIT: landauer.dynamical-followup -->
+
+The [conditional memory reduction](../information_first/THETA_MEMORY_DYNAMICAL_BRIDGE_2026_11.en.md) derives a bistability criterion, retention law and ideal reset cycle from a declared reduced-energy comparator. Physical mode selection and thermal rates from the canonical action remain OPEN.
