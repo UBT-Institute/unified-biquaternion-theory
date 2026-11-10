@@ -21,7 +21,9 @@ UBT-AI-PROVENANCE-END
 | OI-1 | Distinguishing causal order determines conformal class in appropriate Lorentzian spacetimes | [STD], conditional | HKMM/Malament; Lorentzian manifold already assumed |
 | OI-2 | Conformal structure + compatible volume element fixes metric scale | [STD], conditional | Smooth continuum and measure assumptions |
 | OI-3 | `Herm(2,C)` determinant has signature (+---) | [STD/L0 algebra], representation chosen | Pauli matrices; does not single out `C⊗H` physically |
-| OI-4 | Distinguishability implies intrinsic causal ordering | [OPEN] | Must derive order or add an axiom and admit it |
+| OI-4 | Distinguishability implies intrinsic causal ordering | [OPEN] | No unconditional derivation; operational influence is neither automatically acyclic nor a complete account of ontic order |
+| OI-4-T1 | For any finite directed R, its transitive closure R+ is a strict partial order iff R is acyclic | [STD] elementary theorem | [OI4_OPERATIONAL_CAUSALITY.md](OI4_OPERATIONAL_CAUSALITY.md); finite n=3 check in [verifier](verify_operational_order.py) |
+| OI-4-N1 | Normalized finite intervention tables need not yield a strict operational order; operational data do not uniquely determine underlying causal embedding | [STD] elementary countermodels (within toy assumptions) | Bidirectional table and unused links; **not** a new fundamental physics theorem |
 | OI-5 | Operational principles uniquely select 3+1 Lorentz geometry | [OPEN] | Countermodels of alternate dimensions/signatures |
 | OI-6 | Operational principles select `C⊗H` over alternate Clifford/matrix systems | [OPEN] | Need minimal faithful-selector theorem, not a matching identity |
 | OI-7 | Thermodynamic information principles generate UBT field action and constants | [OPEN] | Erasure vs measurement, state dynamics, UV/IR and stability |
