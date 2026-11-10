@@ -92,6 +92,8 @@ Landauer's bound concerns physical logically irreversible information erasure (u
 
 **First formal work package OI-4 (2026-11-10):** [Operational causality theorem, explicit countermodels and limits](OI4_OPERATIONAL_CAUSALITY.md) plus [finite verifier](verify_operational_order.py). The conditional statement “acyclic operational influence graph → strict partial order by transitive closure” is elementary [STD]. Operational distinguishability does **not** imply acyclicity or identify physical spacetime order. Run `python3 research_tracks/ontological_information_axioms/verify_operational_order.py` (five tests).
  
+**OI-4 second work package (2026-11-10):** [Universal consistency versus definite causal order](OI4_CONSISTENCY_VS_ORDER.md), verified by [standard-library script](verify_consistency_vs_order.py). Its two contrasting results are an elementary fixed-wiring DAG iff universal-uniqueness theorem and the **published counterexample** of the logically consistent, noncausal three-party Lugano process. Pairwise exclusivity of complete deterministic events characterizes universal fixed-point uniqueness (published 2026 result). Neither the unconditional information-to-causality bridge nor 3+1 Lorentz geometry is derived. 
+   
 See [PROOF_STATUS.md](PROOF_STATUS.md) and [AXIOM_MATRIX.md](AXIOM_MATRIX.md).
 
 ## Relevant standard references (background, not UBT validation)
