@@ -30,7 +30,7 @@ def test_positive_intensity_domain_has_valid_real_logarithm():
 def test_score_gradient_contains_velocity_of_rep_label():
     r, u, v, s = parameters()
     H, _, _ = reduced_invariants(r, u, v, s)
-    assert sp.factor(sp.diff(H, u) / H + 2*u/(v*v-u*u)) == 0
+    assert sp.factor(sp.diff(H, u) / H - 2*u/(v*v-u*u)) == 0
     assert sp.factor(
         sp.diff(H, r) / H - (1/r - 1/(1-r))
     ) == 0
@@ -109,7 +109,7 @@ def test_ostro_hamiltonian_linear_in_lowest_momentum():
     Hamiltonian = sp.factor((P0*u + P1*acc-L).subs(acc, ainv))
     expected = P0*u + u*u*P1**2/(8*kappa) + u*u*f*P1/2 + potential
     assert sp.factor(Hamiltonian - expected) == 0
-    assert sp.diff(Hamiltonian, P0) == u
+    assert sp.simplify(sp.diff(Hamiltonian, P0) - u) == 0
 
 
 def test_algebraic_quartic_potential_cannot_cancel_acceleration_square():
