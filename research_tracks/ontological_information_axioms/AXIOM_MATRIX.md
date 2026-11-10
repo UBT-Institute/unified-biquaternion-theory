@@ -29,7 +29,7 @@ The objective is **reverse engineering** established physics, not using a religi
 
 ## Priority discriminators
 
-**D1: causal emergence.** Is there a theorem mapping operational composition and no-signalling assumptions to a *nontrivial* event order without choosing a metric? Test with nonlocal box-type, classical and quantum models; no-signalling alone is not an ordering theorem.
+**D1: causal emergence.** Is there a theorem mapping operational composition and no-signalling assumptions to a *nontrivial* event order without choosing a metric? Test with nonlocal box-type, classical and quantum models; no-signalling alone is not an ordering theorem. Initial finite-graph result: [OI-4 theorem and counterexamples](OI4_OPERATIONAL_CAUSALITY.md). **Acyclicity remains an unproved extra axiom**, and indefinite-order quantum processes must not be dismissed.
 
 **D2: dimensional selection.** Try at least `Herm(2,C)`, `Herm(3,C)`, real symmetric matrices, and alternative Clifford modules. List precisely which extra premises eliminate each. The 2x2 determinant identity is a compatibility check, not selection.
 
