@@ -45,6 +45,29 @@ Při pevných smíšených a prostorových jetech druhého řádu je obyčejný 
 
 Po zmrazení koeficientů u hladkého nakloněného pozadí má nejvyšší derivační část linearizovaného módu při nenulové prostorové hybnosti světelný faktor a kladný časový koeficient pro kladné gamma. Při nulové hybnosti symbol degeneruje. Nejde o částici na hmotové slupce ani fyzikální komunikační kanál.
 
+<!-- BILINGUAL-UNIT: degenerate-info.angular -->
+## Úhlová degenerace prostorového hlavního symbolu [PROVED při zmrazených koeficientech]
+
+Redukovaný jednorozměrný světelný faktor není nezávislým izotropně propagujícím skalárním módem. V úplné prostorové aproximaci hlavního symbolu na pevné tetrádě vstupuje do kinetické odezvy nejvyššího řádu pouze projekce prostorového vlnového vektoru perturbace na gradient pozadí. Kolmé vlnové vektory mají NULOVÝ kvadratický hlavní symbol. Je to další degenerace, nikoli nezávislá barevná nebo komunikační cesta.
+
+\[
+\delta\mathcal T_{\rm principal}
+=\frac{\mathbf v_0\cdot\nabla\delta r}{s^2(1-r_0)^3},
+\quad \mathbf v_0=\nabla r_0\ne0,
+\]
+\[
+\mathcal L_{\rm principal}^{(2)}
+=\frac{\gamma}{2s^4(1-r_0)^6}
+\left[(\mathbf v_0\cdot\nabla\partial_t\delta r)^2
+-|\nabla(\mathbf v_0\cdot\nabla\delta r)|^2\right],
+\]
+\[
+\boxed{\mathcal P(\omega,\mathbf k)\propto
+(\mathbf v_0\cdot\mathbf k)^2
+(\omega^2-|\mathbf k|^2)},\qquad
+\mathbf v_0\cdot\mathbf k=0\Longrightarrow\mathcal P=0.
+\]
+
 <!-- BILINGUAL-UNIT: degenerate-info.decision -->
 ## Fyzikální uzavření je stále OPEN
 
