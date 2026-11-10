@@ -1,0 +1,24 @@
+name: Inverse Metric Scale Lean
+
+on:
+  pull_request:
+    paths:
+      - "research_tracks/unified_physics_axioms/formal/**"
+      - ".github/workflows/inverse-metric-scale-lean.yml"
+  push:
+    branches: ["master"]
+    paths:
+      - "research_tracks/unified_physics_axioms/formal/**"
+      - ".github/workflows/inverse-metric-scale-lean.yml"
+  workflow_dispatch:
+
+jobs:
+  lean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: research_tracks/unified_physics_axioms/formal
+          build: "true"
+          use-mathlib-cache: "true"
