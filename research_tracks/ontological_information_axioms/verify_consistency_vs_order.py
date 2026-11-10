@@ -107,6 +107,38 @@ def process_dependency_edges(w, n):
     return edges
 
 
+
+def count_binary_three_party_process_functions():
+    """Exhaust 16^3 environment maps with no direct self-dependence.
+
+    Reproduces published 744 valid deterministic process functions and 64
+    whose three output-to-input component maps are all nonconstant.
+    """
+    all_out = list(product((0, 1), repeat=3))
+    candidates = list(product((0, 1), repeat=4))  # 16 truth tables for 2 bits
+    exclusive_count = 0
+    no_constant_components = 0
+    for truth_tables in product(candidates, repeat=3):
+        def environment(outgoing):
+            a, b, c = outgoing
+            return (
+                truth_tables[0][(b << 1) | c],
+                truth_tables[1][(a << 1) | c],
+                truth_tables[2][(a << 1) | b],
+            )
+
+        incoming = [environment(o) for o in all_out]
+        if all(
+            any(incoming[k][i] == incoming[m][i] and all_out[k][i] != all_out[m][i]
+                for i in range(3))
+            for k, m in combinations(range(8), 2)
+        ):
+            exclusive_count += 1
+            if all(t not in ((0, 0, 0, 0), (1, 1, 1, 1)) for t in truth_tables):
+                no_constant_components += 1
+    return exclusive_count, no_constant_components
+
+
 class ConsistencyVersusOrderTests(unittest.TestCase):
     def test_all_three_node_wiring_graphs_and_local_maps(self):
         graph_types = Counter()
@@ -151,6 +183,10 @@ class ConsistencyVersusOrderTests(unittest.TestCase):
         self.assertTrue(cyclic(3, edges))
         # Cyclic potential dependencies are not a fixed Boolean wiring ring.
         self.assertTrue(events_pairwise_exclusive(lugano_process, 3))
+
+    def test_full_tripartite_process_function_enumeration(self):
+        # Established enumeration, not an original UBT claim.
+        self.assertEqual(count_binary_three_party_process_functions(), (744, 64))
 
     def test_simple_ring_fails_pairwise_exclusive_events(self):
         self.assertFalse(events_pairwise_exclusive(lambda out: (out[1], out[0]), 2))
