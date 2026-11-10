@@ -254,6 +254,10 @@ jobs:
         run: |
           python -m pytest -q tests/test_information_derivative_acceleration_gate.py
 
+      - name: Degenerate information contrast and tilted wave principal gate
+        run: |
+          python -m pytest -q tests/test_information_degenerate_contrast_gate.py
+
   # -----------------------------------------------------------------------
   # 7. QM limit tests (existing)
   # -----------------------------------------------------------------------
