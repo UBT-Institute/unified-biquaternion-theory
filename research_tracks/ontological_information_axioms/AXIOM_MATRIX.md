@@ -44,3 +44,4 @@ The objective is **reverse engineering** established physics, not using a religi
 - 2026-11-10 — Opened as **research**, not canonical. Three entry points remain competitors.
 - 2026-11-10 — Genesis 1:1–3 retained *solely* as a conceptual metaphor for existence → potential → resolution of distinctions.
 - 2026-11-10 — First concrete priority: **D1** and **D2**; these expose the greatest risk of importing the desired conclusion as a hidden axiom.
+- 2026-11-10 — **D1 clarified:** on static freely rewired Boolean graphs universal unique fixed points select DAGs [STD], but **general classical process functions admit noncausal yet universally consistent three-party examples** (Lugano), so bare logical consistency cannot derive a definite global order. [Full formal comparison](OI4_CONSISTENCY_VS_ORDER.md). Next gate: a non-circular physical *selection* principle, not an automatic promotion of "consistency" to "causality".
