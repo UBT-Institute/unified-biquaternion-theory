@@ -45,6 +45,29 @@ At fixed mixed and spatial second jets, the ordinary time-velocity Hessian is no
 
 Freeze coefficients near a smooth tilted background. At nonzero spatial momentum, the highest-derivative linearized mode has a lightlike factor and positive time coefficient for gamma positive. At zero spatial momentum its symbol degenerates. The result is neither an on-shell particle nor a physical communication channel.
 
+<!-- BILINGUAL-UNIT: degenerate-info.angular -->
+## Angular degeneracy of the spatial principal symbol [PROVED fixed-coefficient approximation]
+
+The reduced one-dimensional lightlike factor is not an isotropically propagating independent scalar mode. In the full fixed-coframe three-dimensional principal approximation, only the projection of the perturbation's spatial wavevector onto the background gradient enters its highest-derivative kinetic response. Orthogonal wavevectors have ZERO quadratic principal symbol. This is an additional degeneracy, not an independent colour or communication channel.
+
+\[
+\delta\mathcal T_{\rm principal}
+=\frac{\mathbf v_0\cdot\nabla\delta r}{s^2(1-r_0)^3},
+\quad \mathbf v_0=\nabla r_0\ne0,
+\]
+\[
+\mathcal L_{\rm principal}^{(2)}
+=\frac{\gamma}{2s^4(1-r_0)^6}
+\left[(\mathbf v_0\cdot\nabla\partial_t\delta r)^2
+-|\nabla(\mathbf v_0\cdot\nabla\delta r)|^2\right],
+\]
+\[
+\boxed{\mathcal P(\omega,\mathbf k)\propto
+(\mathbf v_0\cdot\mathbf k)^2
+(\omega^2-|\mathbf k|^2)},\qquad
+\mathbf v_0\cdot\mathbf k=0\Longrightarrow\mathcal P=0.
+\]
+
 <!-- BILINGUAL-UNIT: degenerate-info.decision -->
 ## Physical completion is still OPEN
 
