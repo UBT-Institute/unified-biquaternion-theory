@@ -246,6 +246,18 @@ jobs:
         run: |
           python -m pytest -q tests/test_information_colour_multiplex_gate.py
 
+      - name: Information-first quartic pullback principal-symbol gate
+        run: |
+          python -m pytest -q tests/test_information_quartic_pullback_gate.py
+
+      - name: Derivative information metric acceleration and Ostrogradsky gate
+        run: |
+          python -m pytest -q tests/test_information_derivative_acceleration_gate.py
+
+      - name: Degenerate information contrast and tilted wave principal gate
+        run: |
+          python -m pytest -q tests/test_information_degenerate_contrast_gate.py
+
   # -----------------------------------------------------------------------
   # 7. QM limit tests (existing)
   # -----------------------------------------------------------------------
