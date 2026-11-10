@@ -98,7 +98,7 @@ Run from repository root:
 python3 research_tracks/ontological_information_axioms/verify_consistency_vs_order.py
 ```
 
-Local run on 2026-11-10: **6 tests passed** (Python standard library). Enumerations:
+Local run on 2026-11-10: **7 tests passed** (Python standard library). Enumerations:
 - 64 loop-free directed graphs on three labelled vertices: 25 DAGs / 39 cyclic;
 - all **17,576** fixed-wiring local Boolean rule profiles across those graphs; the DAGs have universal unique solutions, every cyclic graph admits a failure;
 - profile-wide distribution of fixed-point counts: 0: 2,902; 1: 11,832; 2: 2,784; 3: 56; 4: 2;
@@ -107,6 +107,24 @@ Local run on 2026-11-10: **6 tests passed** (Python standard library). Enumerati
 - pairwise exclusivity passes for Lugano and fails for a simple 2-node identity feedback ring.
 
 Finite enumeration validates the scripts' scope and these combinatorial claims, **not physical realizability, novel predictions, quantum dynamics, or emergence of 3+1 spacetime**.
+
+### Optional selection idea: stability under a truth-table-bit flip [NUM]
+
+To make the next "physical selector" question precise, consider the Hamming-1 graph on the 4,096 deterministic three-party process maps (each map represented by 3 x 4 = 12 truth-table bits). For each of the **744 logically consistent** maps, count the number of the **12 single-bit changes** that leave it consistent. Full enumeration yields:
+
+| Consistent Hamming-1 neighbours | Number of valid maps |
+|---:|---:|
+| 3 | 64 |
+| 4 | 120 |
+| 5 | 192 |
+| 6 | 192 |
+| 8 | 168 |
+| 12 | 8 |
+| **Total** | **744** |
+
+All **64** consistent maps with **no constant input component** have precisely **three** valid Hamming-1 neighbours (3/12). Every other consistent map has at least four. This is an **exact, reproducible finite-model observation**, not a new law of causal physics or evidence of a preferred dimension. Its apparent separation depends crucially on the choice of three binary parties, the unconstrained Boolean truth-table metric, and the representation of "perturbation" as one flipped truth-table bit.
+
+**Status of selector hypothesis:** [NUM]/[MC] only. A physical proposal would have to specify a natural measure, actual perturbation/noise channel and meaningful scale-dependent dynamics; a different metric or higher arity may eliminate the distinction. Do not equate "one bit of a truth table" with one erased thermodynamic bit or a Landauer heat cost.
 
 ## 6. Implications for UBT and precise next gates
 
