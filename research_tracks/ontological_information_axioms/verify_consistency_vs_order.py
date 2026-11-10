@@ -139,6 +139,49 @@ def count_binary_three_party_process_functions():
     return exclusive_count, no_constant_components
 
 
+
+def single_flip_neighbor_histograms():
+    """Hamming-1 perturbation robustness over 12 deterministic truth-table bits.
+
+    This is a combinatorial diagnostic, *not* physical stability or noise.
+    """
+    all_out = list(product((0, 1), repeat=3))
+    pairs = list(combinations(range(8), 2))
+    lookup = [
+        [(b << 1) | c for a, b, c in all_out],
+        [(a << 1) | c for a, b, c in all_out],
+        [(a << 1) | b for a, b, c in all_out],
+    ]
+    valid = set()
+    for profile in product(range(16), repeat=3):
+        inputs = [
+            tuple((profile[i] >> lookup[i][k]) & 1 for i in range(3))
+            for k in range(8)
+        ]
+        if all(
+            any(inputs[a][i] == inputs[b][i] and all_out[a][i] != all_out[b][i]
+                for i in range(3))
+            for a, b in pairs
+        ):
+            valid.add(profile)
+    histogram = Counter()
+    no_constant_histogram = Counter()
+    with_constant_histogram = Counter()
+    for profile in valid:
+        neighbors = 0
+        for site in range(3):
+            for bit in range(4):
+                other = list(profile)
+                other[site] ^= 1 << bit
+                neighbors += tuple(other) in valid
+        histogram[neighbors] += 1
+        if all(v not in (0, 15) for v in profile):
+            no_constant_histogram[neighbors] += 1
+        else:
+            with_constant_histogram[neighbors] += 1
+    return histogram, no_constant_histogram, with_constant_histogram
+
+
 class ConsistencyVersusOrderTests(unittest.TestCase):
     def test_all_three_node_wiring_graphs_and_local_maps(self):
         graph_types = Counter()
@@ -187,6 +230,12 @@ class ConsistencyVersusOrderTests(unittest.TestCase):
     def test_full_tripartite_process_function_enumeration(self):
         # Established enumeration, not an original UBT claim.
         self.assertEqual(count_binary_three_party_process_functions(), (744, 64))
+
+    def test_hamming_one_perturbation_robustness_observation(self):
+        all_hist, no_past_hist, with_past_hist = single_flip_neighbor_histograms()
+        self.assertEqual(all_hist, Counter({3: 64, 4: 120, 5: 192, 6: 192, 8: 168, 12: 8}))
+        self.assertEqual(no_past_hist, Counter({3: 64}))
+        self.assertEqual(with_past_hist, Counter({4: 120, 5: 192, 6: 192, 8: 168, 12: 8}))
 
     def test_simple_ring_fails_pairwise_exclusive_events(self):
         self.assertFalse(events_pairwise_exclusive(lambda out: (out[1], out[0]), 2))
