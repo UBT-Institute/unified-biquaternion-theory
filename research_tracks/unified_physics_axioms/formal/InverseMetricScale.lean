@@ -9,6 +9,9 @@ a metric, a volume form, a quantum-information density or gravity.
 No `sorry` or additional axioms are introduced here.
 -/
 
+/-! The hypotheses deliberately supply a scalar reference density; no theorem below
+claims that a covariant information measure or spacetime metric has been derived. -/
+
 namespace InverseMetricScale
 
 /-- A nonzero conformal scale preserves the vanishing set of a
