@@ -1,0 +1,31 @@
+name: Inverse Metric Scale Lean
+
+on:
+  pull_request:
+    paths:
+      - "research_tracks/unified_physics_axioms/formal/**"
+      - ".github/workflows/inverse-metric-scale-lean.yml"
+  push:
+    branches: ["master"]
+    paths:
+      - "research_tracks/unified_physics_axioms/formal/**"
+      - ".github/workflows/inverse-metric-scale-lean.yml"
+  workflow_dispatch:
+
+jobs:
+  lean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lean toolchain and generate pinned dependency manifest
+        shell: bash
+        run: |
+          curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          cd research_tracks/unified_physics_axioms/formal
+          "$HOME/.elan/bin/lake" update
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: research_tracks/unified_physics_axioms/formal
+          build: "true"
+          use-mathlib-cache: "true"
