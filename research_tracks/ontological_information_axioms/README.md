@@ -90,6 +90,8 @@ Landauer's bound concerns physical logically irreversible information erasure (u
 - `research_tracks/gray_transport_layer/`, `research_tracks/information_probes/`: observational/coding diagnostics, not foundational axiom proofs.
 - `speculative_extensions/`: appropriate home for substantive metaphysical interpretation; this track keeps only an explicitly labeled historical analogy.
 
+**First formal work package OI-4 (2026-11-10):** [Operational causality theorem, explicit countermodels and limits](OI4_OPERATIONAL_CAUSALITY.md) plus [finite verifier](verify_operational_order.py). The conditional statement “acyclic operational influence graph → strict partial order by transitive closure” is elementary [STD]. Operational distinguishability does **not** imply acyclicity or identify physical spacetime order. Run `python3 research_tracks/ontological_information_axioms/verify_operational_order.py` (five tests).
+ 
 See [PROOF_STATUS.md](PROOF_STATUS.md) and [AXIOM_MATRIX.md](AXIOM_MATRIX.md).
 
 ## Relevant standard references (background, not UBT validation)
