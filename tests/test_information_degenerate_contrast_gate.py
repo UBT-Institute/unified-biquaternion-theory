@@ -106,6 +106,19 @@ def test_frozen_tilted_WKB_principal_polynomial():
     assert sp.factor(P.subs(w,k))==0
 
 
+def test_three_dimensional_angular_symbol_has_transverse_null_cone():
+    wx, wy, wz, kx, ky, kz, omega, gamma = sp.symbols(
+        "wx wy wz kx ky kz omega gamma", real=True
+    )
+    parallel = wx*kx + wy*ky + wz*kz
+    k2 = kx*kx + ky*ky + kz*kz
+    symbol = sp.factor(gamma * parallel**2 * (omega**2-k2))
+    assert sp.factor(symbol.subs({wx:1, wy:0, wz:0, kx:0, ky:2, kz:3})) == 0
+    assert sp.factor(symbol.subs(omega**2, k2)) == 0
+    assert sp.factor(symbol.subs({wx:1, wy:0, wz:0, kx:2, ky:0, kz:0})
+                     -4*gamma*(omega**2-4)) == 0
+
+
 def test_scalar_score_excludes_any_independent_psi_kinetic():
     r,u,v,s=variables()
     _,_,_,T=invariants(r,u,v,s)
