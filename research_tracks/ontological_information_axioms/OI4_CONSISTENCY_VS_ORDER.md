@@ -98,10 +98,11 @@ Run from repository root:
 python3 research_tracks/ontological_information_axioms/verify_consistency_vs_order.py
 ```
 
-Local run on 2026-11-10: **5 tests passed** (Python standard library). Enumerations:
+Local run on 2026-11-10: **6 tests passed** (Python standard library). Enumerations:
 - 64 loop-free directed graphs on three labelled vertices: 25 DAGs / 39 cyclic;
 - all **17,576** fixed-wiring local Boolean rule profiles across those graphs; the DAGs have universal unique solutions, every cyclic graph admits a failure;
 - profile-wide distribution of fixed-point counts: 0: 2,902; 1: 11,832; 2: 2,784; 3: 56; 4: 2;
+- all **4,096** binary three-party deterministic environment maps with no direct self-dependence: **744** pairwise-exclusive, universally consistent process functions; of those, **64** have no constant local input component, reproducing the published counts (Dourdent et al. 2026); 
 - Lugano: 64/64 local function profiles have a unique fixed point; the aggregate potential-dependency graph has 6 directed edges and cycles;
 - pairwise exclusivity passes for Lugano and fails for a simple 2-node identity feedback ring.
 
