@@ -105,7 +105,7 @@ The canonical UBT file canonical/geometry/biquaternion_dirac_lift.tex uses E_mu 
 
 ## G. Reproduction and established mathematical references
 
-The standard-library Python script verify_lorentz_algebra_carrier.py contains 12 tests covering invariants, vectorization, multiplicativity, Hermiticity, rank, concurrence and generic SU4 nonpreservation. Independently executed NumPy calculations confirm the key formulas, but the exact GitHub script is not claimed to have passed until separately executed. These are mathematical checks, not experimental support for UBT.
+The standard-library Python script verify_lorentz_algebra_carrier.py contains 12 tests covering invariants, vectorization, multiplicativity, Hermiticity, rank, concurrence and generic SU4 nonpreservation. All 12/12 tests of the exact GitHub script passed in local Python execution on 2026-11-11; its local Git blob SHA 14049662bcad8daa81c3ae92332706cb1827ec69 matches the uploaded file. Independently executed NumPy calculations also confirm the key formulas. These are mathematical checks, not experimental support for UBT.
 
 - Tübingen lecture notes on Lorentz spinors: https://www.math.uni-tuebingen.de/de/forschung/maphy/lehre/ws-2025-26/grar/dateien/notes.pdf .
 - MathWorld on column-major vectorization: https://mathworld.wolfram.com/MatrixVectorization.html .
