@@ -73,9 +73,32 @@ Dvouqubitový vektorový prostor i vektorizace kanonického biquaternionového p
 
 Publikovaná věta de la Torre, Masanese, Shorta a Müllera (2012) identifikuje standardní komplexní dvouqubitovou teorii z **již dané lokální struktury qubitů a existence spojité reverzibilní interakce** v přesně vymezeném rámci. Masanes, Müller, Pérez-García a Augusiak (2014) rozšiřují srovnání na lokálně tomografické systémy s eukleidovskými koulemi. Jde o dříve publikované klasifikační výsledky, nikoli naše nezávislá nová odvození.
 
+### E.1 — OI-6-T11: Shoda vektorových nosičů neznamená izomorfismus algeber
+
+Podle Skolemovy–Noetherovy věty je každý unitální automorfismus úplné maticové algebry nad komplexními čísly vnitřní konjugací invertibilní maticí, určenou až na nenulový centrální skalár. Jeho komplexní dimenze je tedy menší než dimenze celé dvouqubitové speciální unitární grupy:
+
+$
+\operatorname{Aut}_{\mathbb C\text{-alg}}(M_2(\mathbb C))
+\simeq\operatorname{PGL}_2(\mathbb C),\qquad
+\dim_{\mathbb R}=6,\qquad \dim_{\mathbb R}\operatorname{SU}(4)=15.
+$
+
+Konkrétní překážku lze ukázat i bez počítání dimenzí. Ztotožněme čtyřsložkový komplexní vektor s maticí pomocí sloupcové vektorizace a nechme provazující unitaritu působit **lineárně na vektorizovanou matici**. Dva ortogonální idempotenty mají nulový součin, ale po této vektorové transformaci už součin jejich obrazů nemusí být nulový:
+
+$
+\Phi_t(E_{00}E_{11})=0,\qquad
+\Phi_t(E_{00})\Phi_t(E_{11})
+=-i\cos t\sin t\,I_2\ne0,\qquad
+\Phi_t=\operatorname{vec}^{-1}e^{-it\sigma_x\otimes\sigma_x}\operatorname{vec}.
+$
+
+**OI-6-T11 [STD, podmíněně]:** obecná reverzibilní transformace dvou qubitů ze SU(4) není unitálním multiplikativním automorfismem biquaternionové algebry M2(C). Výpočet vyvrací naivní ztotožnění kvantové řiditelnosti s algebraickou symetrií UBT. Neurčuje, které transformace slučitelné s násobením případně představují fyzikální kalibrační transformace UBT. Vektorový nosič a strukturu algebry musíme odlišovat.
+
+Reference: [Skolemova–Noetherova věta pro konečněrozměrné centrální jednoduché algebry](https://link.springer.com/chapter/10.1007/978-3-030-56694-4_7).
+
 ## F. Reprodukce, otevřené úkoly a literatura
 
-Skript research_tracks/ontological_information_axioms/verify_entangling_lie.py se standardní knihovnou prošel 9/9 lokálních testů dne 2026-11-11 a Git blob SHA spuštěného souboru přesně odpovídalo kopii na GitHubu. Testy obsahují všechny komutátory dvojic Pauliho součinů, Lieovy rozměry 6 oproti 15, všechny typy dvoutělesových Pauliho interakcí, přesnou reverzibilní provazující cestu, lokální čistotu a ortogonalitu globální Pauliho báze. Testy reprodukují standardní konečnou algebru; nejde o fyzikální experimenty.
+Skript research_tracks/ontological_information_axioms/verify_entangling_lie.py se standardní knihovnou prošel 11/11 lokálních testů dne 2026-11-11 a Git blob SHA spuštěného souboru přesně odpovídalo kopii na GitHubu. Testy obsahují všechny komutátory dvojic Pauliho součinů, Lieovy rozměry 6 oproti 15, všechny typy dvoutělesových Pauliho interakcí, přesnou reverzibilní provazující cestu, lokální čistotu a ortogonalitu globální Pauliho báze. Testy reprodukují standardní konečnou algebru; nejde o fyzikální experimenty.
 
 **G-OI6-7 [OPEN]:** nezávisle zdůvodnit nelokální reverzibilní interakci z informačního či kompozičního principu místo vložení provazujícího generátoru. **G-OI6-8 [OPEN]:** ukázat, proč musí být operační lokální nosič komplexní, dvouúrovňový a skládaný Hilbertovým tenzorovým součinem. **G-OI6-9 [OPEN]:** propojit vybraný nosič a interakce s nekomutativním násobením, kovariantní derivací Theta, lokálními vazbami a stabilní akcí UBT; následně ověřit limity GR a SM.
 
