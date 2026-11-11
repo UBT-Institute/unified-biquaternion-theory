@@ -85,7 +85,14 @@ $$
 
 **OI-6-T1 [STD, podmíněně].** Nenulové vektory koeficientů jsou vzájemně kolmé v reálném prostoru dimenze 3, takže d nemůže překročit 3 **za uvedených předpokladů**. Při d=3 tvoří Pauliho trojici až na unitární ekvivalenci a chiralitu. Stejné předpoklady dovolují i d=1 a d=2. Větší spinorový nosič omezení mění.
 
-$$
+**OI-6-T1R [STD, podmíněně].** Bezestopé reálně symetrické matice rozměru 2 krát 2 tvoří pouze 2 reálné směry, reprezentované Pauliho maticemi X a Z. Jejich Gramova matice dovoluje nejvýše d=2 při stejném izotropním dvouvětvovém předpokladu; komplexně hermitovský 2 krát 2 nosič připouští navíc Pauliho směr Y a d=3. Jde o srovnávací omezení reprezentace, nikoli informačně-teoretický výběr komplexních čísel nebo pozorovaného prostoru.
+
+$
+\dim_{\mathbb R}\mathrm{Sym}_0(2,\mathbb R)=2,\qquad
+\dim_{\mathbb R}\mathrm{Herm}_0(2,\mathbb C)=3.
+$
+
+$
 A_iA_j+A_jA_i=2v^2\delta_{ij}I_2,\quad
 \det(EI_2-H(\mathbf p))=E^2-v^2|\mathbf p|^2.
 $$
@@ -108,7 +115,7 @@ Dřívější práce o buněčných automatech odvodily Weylovu a Diracovu dlouh
 
 ## E. Reprodukovatelnost a stav důkazů
 
-Skript research_tracks/ontological_information_axioms/verify_diffusion_weyl.py používá standardní knihovnu a obsahuje 7 matematických jednotkových testů. Všech 7/7 testů prošlo lokálně dne 2026-11-11; Git blob hash spuštěného souboru odpovídal zdroji na GitHubu. Kontroluje konečné identity a konvergenci, nikoli odvození přírody či ověřené fyzikální předpovědi.
+Skript research_tracks/ontological_information_axioms/verify_diffusion_weyl.py používá standardní knihovnu a obsahuje 8 matematických jednotkových testů. Všech 8/8 testů prošlo lokálně dne 2026-11-11; Git blob hash spuštěného souboru odpovídal zdroji na GitHubu. Kontroluje konečné identity a konvergenci, nikoli odvození přírody či ověřené fyzikální předpovědi.
 
 - **G-OI4-3 [OPEN]:** fyzikálně vybrat lokální aktualizace a difuzní či balistické škálování.
 - **G-OI6-1 [OPEN]:** odvodit 2-komplexně-složkové amplitudy, dynamiku prvního řádu a nasycení při d=3.
