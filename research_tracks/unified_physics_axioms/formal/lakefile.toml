@@ -1,6 +1,6 @@
 name = "inverse_metric_scale"
 version = "0.1.0"
-defaultTargets = ["InverseMetricScale", "BiquaternionJordan", "InformationEnergyLocality", "ThetaOddWeightKernel", "ThetaTwoSquaresPrimeResidues", "ThetaPrimeRobustness", "ThetaPhysicalHessianGate", "FullBiquaternionOffDiagonalEnergy", "RadialStabilityRankObstruction", "NondegenerateBareCauchyGate", "SplitJetConditionalTTStability", "DeWittTTPositivityGate", "ThetaWaveGhostSeparation", "SplitJetFullRankTTWitness", "ThetaGravityMixedHessianGate"]
+defaultTargets = ["InverseMetricScale", "BiquaternionJordan", "InformationEnergyLocality", "ThetaOddWeightKernel", "ThetaTwoSquaresPrimeResidues", "ThetaPrimeRobustness", "ThetaPhysicalHessianGate", "FullBiquaternionOffDiagonalEnergy", "RadialStabilityRankObstruction", "NondegenerateBareCauchyGate", "SplitJetConditionalTTStability", "DeWittTTPositivityGate", "ThetaWaveGhostSeparation", "SplitJetFullRankTTWitness", "ThetaGravityMixedHessianGate", "SplitJetPullbackDiracGate"]
 
 [[require]]
 name = "mathlib"
@@ -51,3 +51,6 @@ name = "SplitJetFullRankTTWitness"
 
 [[lean_lib]]
 name = "ThetaGravityMixedHessianGate"
+
+[[lean_lib]]
+name = "SplitJetPullbackDiracGate"
