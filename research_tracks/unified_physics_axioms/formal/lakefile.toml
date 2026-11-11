@@ -48,4 +48,6 @@ name = "ThetaWaveGhostSeparation"
 
 [[lean_lib]]
 name = "SplitJetFullRankTTWitness"
-\n[[lean_lib]]\nname = "ThetaGravityMixedHessianGate"\n
+
+[[lean_lib]]
+name = "ThetaGravityMixedHessianGate"
