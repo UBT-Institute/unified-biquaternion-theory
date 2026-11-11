@@ -1,6 +1,6 @@
 name = "inverse_metric_scale"
 version = "0.1.0"
-defaultTargets = ["InverseMetricScale", "BiquaternionJordan", "InformationEnergyLocality"]
+defaultTargets = ["InverseMetricScale", "BiquaternionJordan", "InformationEnergyLocality", "ThetaOddWeightKernel"]
 
 [[require]]
 name = "mathlib"
@@ -15,3 +15,6 @@ name = "InverseMetricScale"
 
 [[lean_lib]]
 name = "InformationEnergyLocality"
+
+[[lean_lib]]
+name = "ThetaOddWeightKernel"
