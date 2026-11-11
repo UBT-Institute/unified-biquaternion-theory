@@ -55,6 +55,32 @@ From an isolated unit bit at u, one has `s_v(k)=1 iff u in B_k(v)`. This follows
 - **Cycles in the spatial graph are not time-travel paradoxes.** The time-unrolled influence graph contains edges only `(u,t)->(v,t+1)` and is automatically acyclic. That DAG structure is inherited from the *assumed step index*, rather than derived from logical consistency (see OI-4B's Lugano counterexample).
 - **If the graph has all-to-all edges**, a local-in-the-given-graph update can broadcast information everywhere in one tick; finite **spatial** propagation needs a separately motivated graph embedding, controlled degree/interaction range, or analogous locality assumption.
 
+## 4. An exact obstruction: a fixed finite stencil cannot yield a rotationally invariant maximal cone
+
+**OI-4-T6 [STD, conditional isotropy no-go].** Suppose a translation-invariant synchronous model on a Euclidean 2D lattice permits a **fixed finite** set `D ⊂ R^2` of one-step displacements, including the zero move. Every sequence of `k` steps has net displacement in the Minkowski sum `D^{⊕k}`. Its convex hull is exactly
+
+```text
+conv(D^{⊕k}) = k conv(D).
+```
+
+The directional maximal propagation support along a unit vector `n` is therefore
+
+```text
+h_k(n) = max_{x in D^{⊕k}} n·x = k max_{d in D} n·d = k h_D(n).
+```
+
+If `conv(D)` has nonzero extent, this convex hull is a polygon with finitely many extreme vertices. A compact convex set invariant under every planar rotation around the origin must be a disk (or the trivial point); no nondegenerate finite polygon is such a disk. Thus **the maximal geometric influence cone from one fixed finite-step stencil cannot have exact continuous spatial rotational symmetry**. The same reasoning extends to spatial dimension `d>=2`, replacing polygon by polytope and disk by ball.
+
+**Proof.** The convex hull of a Minkowski sum is the Minkowski sum of convex hulls, giving `conv(D^{⊕k}) = k conv(D)`; maximizing a linear functional yields the displayed support identity. A full rotational orbit of any nonzero extreme point of a nontrivial rotationally invariant compact convex body contains infinitely many points, whereas a polytope has finitely many extreme points. Contradiction. QED.
+
+**Scope:** this is an obstruction to **exact isotropy of the maximal reachability front** for a single fixed finite displacement stencil and synchronous step dynamics. It does **not** forbid statistically isotropic long-wavelength propagation (diffusion, special quantum-walk/field-theory continuum limits), dynamically changing or randomized interaction directions, unbounded stencils, or approximate emergent Lorentz symmetry. Those may have a different operational propagation front and must be tested separately.
+
+For the cardinal-neighbor stencil `D_4={(0,0),(±1,0),(0,±1)}`, the axial support `h_D(e_x)=1` while the diagonal support `h_D((1,1)/sqrt(2))=1/sqrt(2)`. For the eight-neighbor stencil `D_8={-1,0,1}^2`, the corresponding supports are `1` and `sqrt(2)`. Both show directional nonuniformity even when normalized per tick. **Picking a lattice spacing and tick rate cannot remove this anisotropy.**
+
+A naive continuum scaling with *the same fixed stencil* and `a/Δt` fixed simply rescales the same polytope; it does not make its maximal-front support into a Euclidean sphere. A nontrivial scaling limit with emergent field propagation requires a new dynamical analysis.
+
+---
+ 
 ## 4. Standard related results, not UBT discoveries
 
 - Quantum lattice systems: finite-range / sufficiently decaying interactions lead to **Lieb-Robinson bounds** on information/correlation spreading. Unlike the exact finite-step support statement above, continuous-time Lieb-Robinson bounds generally allow exponentially small tails beyond an effective cone. Wilming & Werner (2022), [Phys. Rev. B 105, 125101](https://doi.org/10.1103/PhysRevB.105.125101); Wang & Hazzard (2020), [PRX Quantum 1, 010303](https://doi.org/10.1103/PRXQuantum.1.010303).
@@ -68,7 +94,7 @@ Run from the repository root:
 python3 research_tracks/ontological_information_axioms/verify_finite_lightcones.py
 ```
 
-Six standard-library tests verify a directed chain's minimum arrival time; spatial cycles with acyclic *time-unrolling*; sharp propagation by a Boolean OR update; 2D 13-versus-25 cross-section countermodels; an exact intervention/noise coupling test exhaustive over 3 binary nodes and two updates; and all-to-all one-tick broadcast. **6/6 passed in local Python 3 execution on 2026-11-11**. These tests validate the finite-model mathematics only.
+Eight standard-library tests verify a directed chain's minimum arrival time; spatial cycles with acyclic *time-unrolling*; sharp propagation by a Boolean OR update; 2D 13-versus-25 cross-section countermodels; an exact intervention/noise coupling test exhaustive over 3 binary nodes and two updates; all-to-all one-tick broadcast; direction-dependent finite stencil support; and support scaling under repeated steps. **8/8 passed in local Python 3 execution on 2026-11-11**. These tests validate the finite-model mathematics only.
 
 ## 6. UBT research implications and next proof obligations
 
@@ -78,7 +104,7 @@ Current UBT canonical geometric objects such as `E_mu=D_mu Theta/sqrt(N0)`, the 
 |---|---|---|
 | OI-4-L1 | [STD] conditional CLOSED | Finite propagation from *assumed* local updates and discrete ticks |
 | OI-4-L2 | [STD] countermodels CLOSED | Neither unique cone geometry nor numerical speed follows from generic finite locality |
-| OI-4-L3 | **OPEN** | Information principle that independently selects a locality relation or interaction decay |
+| OI-4-L2a | [STD] conditional CLOSED | A fixed finite displacement stencil has polyhedral maximal propagation fronts, not exact continuous spatial rotational symmetry |\n| OI-4-L3 | **OPEN** | Information principle that independently selects a locality relation or interaction decay |
 | OI-4-L4 | **OPEN** | Selection of continuum dimension/signature and emergence of approximate/exact local Lorentz invariance |
 | OI-4-L5 | **OPEN** | Operational observables and a stable UBT action connecting reconstructed causal geometry to Theta dynamics and GR/QFT |
 
