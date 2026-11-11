@@ -108,7 +108,7 @@ Earlier cellular-automaton work derived Weyl and Dirac long-wavelength behavior 
 
 ## E. Reproducibility and proof status
 
-The standard-library script research_tracks/ontological_information_axioms/verify_diffusion_weyl.py provides 7 mathematical unit tests. The tests check finite identities and convergence, not a derivation of nature or verified physical predictions.
+The standard-library script research_tracks/ontological_information_axioms/verify_diffusion_weyl.py provides 7 mathematical unit tests. All 7/7 tests passed locally on 2026-11-11; the executed file's Git blob hash matched the GitHub source. The tests check finite identities and convergence, not a derivation of nature or verified physical predictions.
 
 - **G-OI4-3 [OPEN]:** physically select local updates and diffusive versus ballistic scaling.
 - **G-OI6-1 [OPEN]:** derive 2-complex-component amplitudes, first-order dynamics and saturation at d=3.
