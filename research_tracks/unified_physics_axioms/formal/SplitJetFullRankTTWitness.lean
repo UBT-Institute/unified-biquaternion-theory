@@ -16,7 +16,7 @@ namespace UBTSplitJetTTWitness
 
 /-- Exact determinant of a spatial triad I + h_TT/2, where
 h_TT has entries (p,q;q,-p) in the first two directions. -/
-def tetradDetFactor (p q : ℝ) : ℝ :=
+noncomputable def tetradDetFactor (p q : ℝ) : ℝ :=
   1 - (p^2+q^2)/4
 
 /-- Finite-amplitude transverse-traceless perturbations preserve
