@@ -1,0 +1,2 @@
+- [en](OI6_LOCAL_TOMOGRAPHY.en.md)
+- [cs](OI6_LOCAL_TOMOGRAPHY.cs.md)
