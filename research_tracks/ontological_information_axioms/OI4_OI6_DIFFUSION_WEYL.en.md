@@ -87,12 +87,12 @@ $$
 
 **OI-6-T1R [STD, conditional].** The traceless real symmetric 2-by-2 coefficient matrices span just 2 real directions, represented by Pauli X and Z. Their Gram matrix permits at most d=2 under the same isotropic two-branch assumption; the complex Hermitian 2-by-2 carrier admits the additional Pauli Y direction and d=3. This is a comparative representation bound, not an information-theoretic selection of complex numbers or observed space.
 
-$
+$$
 \dim_{\mathbb R}\mathrm{Sym}_0(2,\mathbb R)=2,\qquad
 \dim_{\mathbb R}\mathrm{Herm}_0(2,\mathbb C)=3.
-$
+$$
 
-$
+$$
 A_iA_j+A_jA_i=2v^2\delta_{ij}I_2,\quad
 \det(EI_2-H(\mathbf p))=E^2-v^2|\mathbf p|^2.
 $$
