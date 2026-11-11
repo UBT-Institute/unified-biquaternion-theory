@@ -105,7 +105,7 @@ Kanonický soubor UBT canonical/geometry/biquaternion_dirac_lift.tex používá 
 
 ## G. Reprodukce a existující matematické zdroje
 
-Python skript verify_lorentz_algebra_carrier.py se standardní knihovnou obsahuje 12 testů invariantů, vektorizace, multiplikativity, hermitovskosti, hodnosti, konkurence a nezachování struktur obecnou SU4. Nezávislé výpočty NumPy potvrdily klíčové vzorce, ale úspěšné spuštění přesného skriptu na GitHubu netvrdíme, dokud neproběhne. Jde o matematické kontroly, nikoli experimentální potvrzení UBT.
+Python skript verify_lorentz_algebra_carrier.py se standardní knihovnou obsahuje 12 testů invariantů, vektorizace, multiplikativity, hermitovskosti, hodnosti, konkurence a nezachování struktur obecnou SU4. Všech 12/12 testů přesného skriptu z GitHubu prošlo lokálně v Pythonu dne 2026-11-11; lokální Git blob SHA 14049662bcad8daa81c3ae92332706cb1827ec69 odpovídá uloženému souboru. Nezávislé výpočty NumPy také potvrdily klíčové vzorce. Jde o matematické kontroly, nikoli experimentální potvrzení UBT.
 
 - Tübingen lecture notes on Lorentz spinors: https://www.math.uni-tuebingen.de/de/forschung/maphy/lehre/ws-2025-26/grar/dateien/notes.pdf .
 - MathWorld on column-major vectorization: https://mathworld.wolfram.com/MatrixVectorization.html .
