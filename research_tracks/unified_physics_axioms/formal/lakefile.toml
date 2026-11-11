@@ -45,3 +45,6 @@ name = "DeWittTTPositivityGate"
 
 [[lean_lib]]
 name = "ThetaWaveGhostSeparation"
+
+[[lean_lib]]
+name = "SplitJetFullRankTTWitness"
