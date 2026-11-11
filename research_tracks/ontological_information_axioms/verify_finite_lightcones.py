@@ -4,6 +4,7 @@
 Elementary finite mathematics; neither Lorentz invariance nor UBT dynamics is
 claimed. Run: python3 verify_finite_lightcones.py
 """
+# The spatial dependency graph and common update index are premises, not derived physics.
 from itertools import product
 import unittest
 
