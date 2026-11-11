@@ -31,7 +31,10 @@ theorem positive_c_opposite_signs
   · unfold radialMassSq
     positivity
   · unfold transverseMassSq
-    positivity
+    apply div_neg_of_neg_of_pos
+    · have hnum : 0 < 4 * lambda2 * r ^ 2 := by positivity
+      linarith
+    · exact hc
 
 /-- Flipping the kinetic normalization does not remove the negative
     generalized eigenvalue: the radial mode then becomes negative. -/
@@ -43,9 +46,14 @@ theorem negative_c_opposite_signs
       0 < transverseMassSq lambda2 r c := by
   constructor
   · unfold radialMassSq
-    positivity
+    apply div_neg_of_pos_of_neg
+    · positivity
+    · exact hc
   · unfold transverseMassSq
-    positivity
+    apply div_pos_of_neg_of_neg
+    · have hnum : 0 < 4 * lambda2 * r ^ 2 := by positivity
+      linarith
+    · exact hc
 
 /-- With c nonzero, there always exists a negative generalized eigenvalue.
     This is a sign diagnostic, not a full constraint-reduced physical spectrum. -/
