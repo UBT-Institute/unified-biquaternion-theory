@@ -108,7 +108,7 @@ Dřívější práce o buněčných automatech odvodily Weylovu a Diracovu dlouh
 
 ## E. Reprodukovatelnost a stav důkazů
 
-Skript research_tracks/ontological_information_axioms/verify_diffusion_weyl.py používá standardní knihovnu a obsahuje 7 matematických jednotkových testů. Kontroluje konečné identity a konvergenci, nikoli odvození přírody či ověřené fyzikální předpovědi.
+Skript research_tracks/ontological_information_axioms/verify_diffusion_weyl.py používá standardní knihovnu a obsahuje 7 matematických jednotkových testů. Všech 7/7 testů prošlo lokálně dne 2026-11-11; Git blob hash spuštěného souboru odpovídal zdroji na GitHubu. Kontroluje konečné identity a konvergenci, nikoli odvození přírody či ověřené fyzikální předpovědi.
 
 - **G-OI4-3 [OPEN]:** fyzikálně vybrat lokální aktualizace a difuzní či balistické škálování.
 - **G-OI6-1 [OPEN]:** odvodit 2-komplexně-složkové amplitudy, dynamiku prvního řádu a nasycení při d=3.
