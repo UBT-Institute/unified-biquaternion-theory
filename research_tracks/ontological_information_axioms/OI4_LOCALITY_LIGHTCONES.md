@@ -1,0 +1,2 @@
+- [en](OI4_LOCALITY_LIGHTCONES.en.md)
+- [cs](OI4_LOCALITY_LIGHTCONES.cs.md)
