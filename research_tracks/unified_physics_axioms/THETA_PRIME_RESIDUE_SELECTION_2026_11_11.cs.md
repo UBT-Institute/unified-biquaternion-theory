@@ -46,21 +46,15 @@ r_2(p)=
 \]
 
 
-Prvočíslo kongruentní 3 modulo 4 nemůže být součtem dvou celočíselných čtverců, protože čtverce jsou modulo 4 jen 0 nebo 1. Prvočísla kongruentní 1 modulo 4 takové reprezentace naopak mají podle Fermatovy věty. Obecná formule počítá všechny uspořádané dvojice celých čísel včetně znamének. U složeného N platí r2(N)=0 právě tehdy, když některé p≡3 mod4 dělí N v liché mocnině. Jinak je r2(N)=4 krát součin (v_p(N)+1) pro p≡1 mod4. Proto se degenerace prvočíselných tříd liší, ale prvočíslo 139 může být součástí povolené *složené* hladiny N=139².
+Prvočísla ze třídy tři modulo čtyři nelze reprezentovat jako součet dvou celočíselných čtverců, neboť čtverce jsou modulo čtyři nula nebo jedna. Fermatova věta zajišťuje opačný směr pro prvočíselné hladiny ze třídy jedna modulo čtyři. Jacobiho formule enumeruje uspořádané dvojice včetně znamének a prvočíselný rozklad určuje degenerace složených hladin.
 
-## Vazba na Gaussovu aritmetiku a UBT
+## Gaussova aritmetika a fyzika
 
-Norma Gaussových celých čísel N(a+ib)=a²+b² vysvětluje aritmetický rozklad prvočísel. Užívá běžnou komutující komplexní jednotku i, která existuje v komplexifikovaných kvaternionech C⊗H. Samotné vložení této algebry však NEVYBÍRÁ celočíselné Gaussovy módy, fyzikální dvourozměrnou mřížku ani předpokládanou kladnou energii. Kanonická bikvaternionová Jordanova metrika je komplexně bilineární a na Lorentzově větvi indefinitní, zatímco modelová energie je kladná eukleidovská kvadratická forma.
+Normy Gaussových celých čísel vysvětlují tento aritmetický rozklad. Přestože se komutující komplexní jednotka objevuje i v komplexifikovaných kvaternionech, neplyne z toho fyzikální kvantování Gaussových módů ani kladný Hamiltonián. Kanonické Jordanovo bikvaternionové párování je komplexně bilineární a na reálné větvi Lorentzovsky indefinitní. Jiná kladná kvadratická matice může modulární vzorec zrušit, proto ukázané příklady prvočísel neurčují fyzikální výběr.
 
-Jde nejvýše o disciplinovaný srovnávací model dosud neznámé kladné kvadratické formy K odvozené z fyzikálního Hessianu jediné akce UBT po vyřešení vazeb. Mimodiagonální nebo neceločíselná K mohou jednoduchý modulární výběr zrušit; mřížky s vyšší hodností mají jiné identity theta koeficientů. Rozdíl 137/139 je tedy **aritmetické pozorování závislé na modelu**, nikoliv empirická podpora těchto konstant.
+## Rozsah formalizace
 
-## Lean a testy
-
-Soubor formal/ThetaTwoSquaresPrimeResidues.lean v Leanu dokazuje, že čtverce v ZMod 4 jsou 0 nebo 1 a že součet dvou čtverců nemůže být 3 modulo 4. Formálně kontroluje **pouze nutnou modulární překážku**. Nedokazuje Fermatovu větu o dvou čtvercích, úplnou Jacobiho formuli r2, Eulerův součin Dirichletovy řady ani fyziku. Známé úplné věty citujeme odděleně. Přesné Python testy enumerují celočíselné dvojice se znaménky a ověřují r2(N) proti dělitelům, prvočíslům, konkrétním 137 a 139 i lokálním faktorům prvočíselných mocnin.
-
-## Otevřené úkoly
-
-Pro fyzikální UBT/RH musíme odvodit K, kvantování módů a okrajové podmínky z kanonické komplexní dynamiky Theta, doložit nezápornost fyzikální energie po vyřešení vazeb a otestovat pozorovatelné důsledky vůči alternativním a nulovým modelům bez dodatečného ladění. Nesmíme zaměňovat Jacobiho theta funkce vartheta se základním bikvaternionovým polem Theta ani předpokládat AdS/CFT.
+Lean ověřuje pouze nutnou modulární překážku v konečném okruhu zbytkových tříd, nikoliv opačný směr Fermatovy věty ani úplnou Jacobiho formuli. Python nezávisle ověřuje počty degenerací, lokální prvočíselné faktory a uvedené příklady. Fyzikální spektrum módů a kladnou kvadratickou formu musíme odvodit z jediné kanonické akce včetně vazeb; případné vazby na holografii, gravitaci a RH zůstávají OPEN.
 
 ## Literatura
 
