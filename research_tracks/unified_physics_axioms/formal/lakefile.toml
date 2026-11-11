@@ -1,6 +1,6 @@
 name = "inverse_metric_scale"
 version = "0.1.0"
-defaultTargets = ["InverseMetricScale", "BiquaternionJordan", "InformationEnergyLocality", "ThetaOddWeightKernel", "ThetaTwoSquaresPrimeResidues", "ThetaPrimeRobustness", "ThetaPhysicalHessianGate", "FullBiquaternionOffDiagonalEnergy", "RadialStabilityRankObstruction", "NondegenerateBareCauchyGate", "SplitJetConditionalTTStability"]
+defaultTargets = ["InverseMetricScale", "BiquaternionJordan", "InformationEnergyLocality", "ThetaOddWeightKernel", "ThetaTwoSquaresPrimeResidues", "ThetaPrimeRobustness", "ThetaPhysicalHessianGate", "FullBiquaternionOffDiagonalEnergy", "RadialStabilityRankObstruction", "NondegenerateBareCauchyGate", "SplitJetConditionalTTStability", "DeWittTTPositivityGate"]
 
 [[require]]
 name = "mathlib"
@@ -39,3 +39,6 @@ name = "NondegenerateBareCauchyGate"
 
 [[lean_lib]]
 name = "SplitJetConditionalTTStability"
+
+[[lean_lib]]
+name = "DeWittTTPositivityGate"
