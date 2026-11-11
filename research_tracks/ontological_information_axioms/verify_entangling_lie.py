@@ -171,5 +171,46 @@ class ConnectedEntanglementTests(unittest.TestCase):
             self.assertAlmostEqual(tr(matmul(ap, aq)).imag, 0)
 
 
+    def test_full_su4_vector_action_does_not_preserve_matrix_multiplication(self):
+        # Column-major vectorization M2(C) ~= C^4. A generic entangler acting
+        # on the vectorized carrier is not an automorphism of the algebra.
+        theta = math.pi / 4
+        c, st = math.cos(theta), math.sin(theta)
+        xx = kron(X, X)
+
+        def phi(a):
+            v = (a[0][0], a[1][0], a[0][1], a[1][1])
+            w = tuple(c * v[i] - 1j * st * sum(xx[i][j] * v[j]
+                        for j in range(4)) for i in range(4))
+            return ((w[0], w[2]), (w[1], w[3]))
+
+        e00 = ((1, 0), (0, 0))
+        e11 = ((0, 0), (0, 1))
+        zero = ((0, 0), (0, 0))
+        self.assertEqual(matmul(e00, e11), zero)
+        self.assertEqual(phi(matmul(e00, e11)), zero)
+        got = matmul(phi(e00), phi(e11))
+        expected = ((-1j * c * st, 0), (0, -1j * c * st))
+        self.assertTrue(all(abs(got[i][j] - expected[i][j]) < 1e-12
+                            for i, j in product(range(2), repeat=2)))
+        self.assertGreater(abs(got[0][0]), 0.49)
+
+    def test_inner_conjugation_does_preserve_matrix_multiplication(self):
+        theta = math.pi / 8
+        g = tuple(tuple((math.cos(theta) if i == j else 0) -
+                         1j * math.sin(theta) * X[i][j]
+                         for j in range(2)) for i in range(2))
+
+        def phi(a):
+            return matmul(matmul(g, a), dagger(g))
+
+        self.assertTrue(all(abs(phi(I)[i][j] - I[i][j]) < 1e-12
+                            for i, j in product(range(2), repeat=2)))
+        for a, b in product((I, X, Y, Z), repeat=2):
+            lhs, rhs = phi(matmul(a, b)), matmul(phi(a), phi(b))
+            self.assertTrue(all(abs(lhs[i][j] - rhs[i][j]) < 1e-12
+                                for i, j in product(range(2), repeat=2)))
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)
