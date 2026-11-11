@@ -32,7 +32,6 @@ theorem velocity_energy_nonnegative
 theorem null_velocity_direction (a α t : ℝ) :
     kineticQ a α (-α*t) t = 0 := by
   simp [kineticQ]
-  ring
 
 def physicalCoordinate (α h ψ : ℝ) : ℝ :=
   h + α*ψ
