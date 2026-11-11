@@ -15,8 +15,8 @@ def matrices(lambda1, lambda2, r, c):
 
 def test_kinetic_inertia_and_restricted_normal():
     k,m=matrices(sp.Rational(1,2),1,2,1)
-    assert sum(k[i,i]>0 for i in range(8)) == 2
-    assert sum(k[i,i]<0 for i in range(8)) == 6
+    assert sum(bool(k[i,i]>0) for i in range(8)) == 2
+    assert sum(bool(k[i,i]<0) for i in range(8)) == 6
     # Real normal fluctuation coordinates: u1,u2,u3,v0.
     assert [k[i,i] for i in (1,2,3,4)] == [-2,-2,-2,2]
     assert [m[i,i] for i in (1,2,3,4)] == [32,32,32,96]
@@ -26,9 +26,9 @@ def test_generalized_mass_opposite_sign_for_both_c():
     for c in (sp.Rational(1,3),-2):
         k,m=matrices(2,3,5,c)
         spec=[sp.simplify(m[i,i]/k[i,i]) for i in range(8)]
-        assert sum(x<0 for x in spec)==(3 if c>0 else 1)
-        assert sum(x>0 for x in spec)==(1 if c>0 else 3)
-        assert sum(x==0 for x in spec)==4
+        assert sum(bool(x<0) for x in spec)==(3 if c>0 else 1)
+        assert sum(bool(x>0) for x in spec)==(1 if c>0 else 3)
+        assert sum(bool(x==0) for x in spec)==4
 
 
 def test_ghost_direction_unbounded_energy_no_positive_gibbs():
