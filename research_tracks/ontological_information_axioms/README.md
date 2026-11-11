@@ -94,8 +94,6 @@ Landauer's bound concerns physical logically irreversible information erasure (u
  
 **OI-4 second work package (2026-11-10):** [Universal consistency versus definite causal order](OI4_CONSISTENCY_VS_ORDER.md), verified by [standard-library script](verify_consistency_vs_order.py). Its two contrasting results are an elementary fixed-wiring DAG iff universal-uniqueness theorem and the **published counterexample** of the logically consistent, noncausal three-party Lugano process. Pairwise exclusivity of complete deterministic events characterizes universal fixed-point uniqueness (published 2026 result). Neither the unconditional information-to-causality bridge nor 3+1 Lorentz geometry is derived. 
    
-**OI-4 finite-propagation extension (2026-11-11):** [Exact discrete information cones and finite-stencil isotropy no-go](OI4_LOCALITY_LIGHTCONES.md), with [eight executable unit tests](verify_finite_lightcones.py). A local synchronous update network has a sharply bounded graph influence cone [STD], but its fixed finite displacement stencil gives polyhedral maximal fronts rather than exact continuous rotational symmetry [STD]. **No Lorentz invariance, invariant vacuum light speed, spacetime dimension or action has been derived.**
-
 See [PROOF_STATUS.md](PROOF_STATUS.md) and [AXIOM_MATRIX.md](AXIOM_MATRIX.md).
 
 ## Relevant standard references (background, not UBT validation)
