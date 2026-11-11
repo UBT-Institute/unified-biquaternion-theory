@@ -15,7 +15,7 @@ def test_all_complex_offdiagonal_terms():
     X=sp.Matrix([[a,b],[c,d]])
     assert sp.simplify(hermitian_size(X)-
         (a*sp.conjugate(a)+b*sp.conjugate(b)+c*sp.conjugate(c)+d*sp.conjugate(d)))==0
-    target=2*sp.re(a*sp.conjugate(d)-b*sp.conjugate(c))
+    target=2*sp.re(a*sp.conjugate(d))-b*sp.conjugate(b)-c*sp.conjugate(c)
     assert sp.simplify(sp.expand_complex(adjugate_hermitian_pair(X)-target))==0
 
 def test_negative_is_from_full_offdiagonal_coupling():
@@ -23,7 +23,7 @@ def test_negative_is_from_full_offdiagonal_coupling():
     assert hermitian_size(X)==10
     assert adjugate_hermitian_pair(X)==-6
 
-def test_nondiagonal_shear_alters_hs_not_determinant():
+def test_nondiagonal_shear_changes_hs_and_preserves_determinant():
     X=sp.eye(2)
     A=sp.Matrix([[1,2],[0,1]])
     X2=A*X*A.conjugate().T
