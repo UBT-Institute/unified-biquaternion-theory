@@ -17,7 +17,7 @@ def directCost (alpha beta d : ℝ) : ℝ :=
   alpha + beta * d ^ 2
 
 /-- One intermediate relay, two equal segments. -/
-def relayCost (alpha beta d : ℝ) : ℝ :=
+noncomputable def relayCost (alpha beta d : ℝ) : ℝ :=
   2 * alpha + beta * d ^ 2 / 2
 
 /-- An exact selection threshold: relaying wins iff the convex
