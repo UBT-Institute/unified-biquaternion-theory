@@ -15,7 +15,7 @@ def trace3 (a b c : ℝ) : ℝ := a+b+c
 def quad3 (a b c xy xz yz : ℝ) : ℝ :=
   a^2+b^2+c^2+2*(xy^2+xz^2+yz^2)
 
-def kinetic3 (a b c xy xz yz : ℝ) : ℝ :=
+noncomputable def kinetic3 (a b c xy xz yz : ℝ) : ℝ :=
   quad3 a b c xy xz yz - (trace3 a b c)^2 / 2
 
 /-- The unreduced DeWitt trace channel is negative on a pure trace tensor. -/
