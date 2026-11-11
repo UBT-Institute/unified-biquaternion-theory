@@ -2,7 +2,7 @@
 
 ## Exact context: an already selected comparator, not finalized microscopic UBT
 
-The existing research_tracks/action_selection/full_spatial_dynamics_2026_10.en.md assumes a canonical reduced spatial metric phase space and a local ultralocal quadratic kinetic/curvature Hamiltonian. Its off-shell hypersurface deformation algebra forces the DeWitt trace ratio chi=1/2 and the product of kinetic and curvature coefficients ab=1. research_tracks/action_selection/splitjet_spatial_dirac_2026_10.en.md proves that the redundant split-jet coordinates do not modify the reduced canonical Dirac brackets for this supplied gravity-only base action. Neither theorem selects a microscopic complex-Theta action, its physical phase space, or the positive sign a.
+The existing research_tracks/action_selection/full_spatial_dynamics_2026_10.en.md assumes a canonical reduced spatial metric phase space and a local ultralocal quadratic kinetic/curvature Hamiltonian. Its off-shell hypersurface deformation algebra forces the DeWitt trace ratio chi=1/2 and the product of kinetic and curvature coefficients ab=1. research_tracks/action_selection/splitjet_spatial_dirac_2026_10.en.md establishes that the redundant split-jet coordinates do not modify the reduced canonical Dirac brackets for this supplied gravity-only base action. Neither theorem selects a microscopic complex-Theta action, its physical phase space, or the positive sign a.
 
 ## DeWitt signature and true tensor sector
 
