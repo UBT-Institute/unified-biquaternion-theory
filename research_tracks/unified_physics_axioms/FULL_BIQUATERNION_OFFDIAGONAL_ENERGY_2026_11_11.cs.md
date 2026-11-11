@@ -11,7 +11,7 @@ P(X)=\operatorname{Tr}(X^\dagger X)
 
 \[
 H(X)=\operatorname{Tr}(\operatorname{adj}(X)X^\dagger)
-=2\operatorname{Re}(a\bar d-b\bar c).
+=2\operatorname{Re}(a\bar d)-|b|^2-|c|^2.
 \]
 
 \[
@@ -26,7 +26,7 @@ X'=AA^\dagger=\begin{pmatrix}5&2\\2&1\end{pmatrix},
 \]
 
 
-Komplexní bikvaternion reprezentujeme obecnou komplexní maticí bez omezení na diagonálu, jednotkovou normalizaci nebo komutující složky. Hilbertova–Schmidtova veličina zahrnuje *všechny* mimodiagonální prvky, ale není invariantním skalárem při neomezené nekompaktní Lorentzově spinorové kongruenci. Dosavadní kvadratické párování H v UBT obsahuje smíšené členy explicitně a může být záporné i pro nenulovou matici. Jeho deklarovaná invariance se musí vždy vztahovat ke konkrétnímu transformačnímu zákonu; z ní neplyne invariance vůči každé libovolné dvoustranné transformaci. Příklad hermitovské matice X'=AA† ukazuje, že determinant zůstává při vybrané kongruenci s jednotkovým determinantem invariantní, ale HS velikost se proti jednotkové matici mění. Zde H=2det pro hermitovské matice řádu dva; neplatí to automaticky pro obecné komplexní matice.
+Komplexní bikvaternion reprezentujeme obecnou komplexní maticí bez omezení na diagonálu, jednotkovou normalizaci nebo komutující složky. Hilbertova–Schmidtova veličina zahrnuje *všechny* mimodiagonální prvky, ale není invariantním skalárem při neomezené nekompaktní Lorentzově spinorové kongruenci. Dosavadní kvadratické párování H v UBT obsahuje smíšený člen skalárních složek a záporné čtverce absolutních hodnot mimodiagonálních složek a může být záporné i pro nenulovou matici. Jeho deklarovaná invariance se musí vždy vztahovat ke konkrétnímu transformačnímu zákonu; z ní neplyne invariance vůči každé libovolné dvoustranné transformaci. Příklad hermitovské matice X'=AA† ukazuje, že determinant zůstává při vybrané kongruenci s jednotkovým determinantem invariantní, ale HS velikost se proti jednotkové matici mění. Zde H=2det pro hermitovské matice řádu dva; neplatí to automaticky pro obecné komplexní matice.
 
 ## Alternativy normy a úskalí
 
@@ -36,7 +36,7 @@ Kladná fyzikální hustota energie závislá na pozorovateli může být kovari
 
 ## Rozsah ověření a další experiment
 
-Lean soubor formal/FullBiquaternionOffDiagonalEnergy.lean dokazuje znaménkový protipříklad pro reálné matice a ne-invarianci HS veličiny při mimodiagonálním smyku. Komplexní identity zahrnující všechny prvky, kongruenční příklad s jednotkovým determinantem a nenulovou singulární matici ověřuje SymPy; Lean neformalizuje plné komplexní transformační grupy. Kladná fyzikální energie, kalibrační vazby a skutečná dynamika skalárních či tenzorových interakcí jsou OPEN. Nejdřív odvoďme akci, vyřešme vazby a teprve potom hledejme kladný fyzikální kvadratický Hessian a jeho případnou mimodiagonální mřížku Jacobiho theta módů.
+Lean soubor formal/FullBiquaternionOffDiagonalEnergy.lean dokazuje znaménkový protipříklad pro reálné matice, obě kvadratická párování při smyku a příklad hermitovské kongruence s jednotkovým determinantem. Komplexní identity zahrnující všechny prvky, kongruenční příklad s jednotkovým determinantem a nenulovou singulární matici ověřuje SymPy; Lean neformalizuje plné komplexní transformační grupy. Kladná fyzikální energie, kalibrační vazby a skutečná dynamika skalárních či tenzorových interakcí jsou OPEN. Nejdřív odvoďme akci, vyřešme vazby a teprve potom hledejme kladný fyzikální kvadratický Hessian a jeho případnou mimodiagonální mřížku Jacobiho theta módů.
 
 ## Kanonické podklady
 
