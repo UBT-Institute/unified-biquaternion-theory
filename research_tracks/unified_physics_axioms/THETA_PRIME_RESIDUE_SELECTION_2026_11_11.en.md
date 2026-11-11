@@ -46,21 +46,15 @@ r_2(p)=
 \]
 
 
-For primes congruent to 3 modulo 4, no integer square pair can represent the prime, because every square is 0 or 1 modulo 4. Primes congruent to 1 modulo 4 do have representations by Fermat's sum-of-two-squares theorem. The general formula counts all ordered signed integer pairs. For composite N, r2(N)=0 precisely when some p≡3 mod4 divides N to odd exponent. Otherwise r2(N)=4 product over p≡1 mod4 of (v_p(N)+1). This explains why prime classes have different multiplicities, while a prime such as 139 can occur as a factor of an allowed *composite* energy label N=139².
+For primes in the class three modulo four, the energy label cannot be represented as two integer squares, since squares are zero or one modulo four. Fermat's theorem supplies the converse for prime labels in the class one modulo four. The Jacobi formula enumerates signed ordered pairs, and prime factorization determines the degeneracies at composite levels.
 
-## Connection to Gaussian arithmetic and UBT
+## Gaussian arithmetic and physics
 
-The Gaussian-integer norm N(a+ib)=a²+b² explains the arithmetic prime split. This norm uses an ordinary commuting complex unit i, which does exist inside complexified quaternions C⊗H, but that algebraic embedding alone does NOT select Gaussian-integer mode labels, a two-dimensional physical lattice or this positive energy. The canonical biquaternion Jordan metric is complex bilinear and indefinite on the Lorentz slice, not the assumed Euclidean positive quadratic mode Hamiltonian.
+Gaussian-integer norms explain this arithmetic split. Although a commuting complex unit also occurs in complexified quaternions, its presence does not imply physical Gaussian-integer mode quantization, nor a positive Hamiltonian. The canonical biquaternion Jordan pairing is complex bilinear and Lorentz-indefinite on the real slice. A different positive quadratic matrix may destroy the modulo-four pattern, so the displayed prime examples cannot establish physical selection.
 
-At most this provides a disciplined comparator for an unknown positive quadratic form K extracted from an on-shell, constrained Hessian of the single UBT action. A nondiagonal or nonintegral K can destroy simple modulo-four selection; higher rank lattices have different theta coefficient identities. Thus the 137/139 separation is a **model-contingent arithmetic observation** rather than empirical support for those constants.
+## Formal scope
 
-## Lean and tests
-
-The Lean file formal/ThetaTwoSquaresPrimeResidues.lean proves that squares in ZMod 4 belong to {0,1} and that no pair sums to 3 mod 4. This formally checks the **necessary modular exclusion only**. It does not prove Fermat's two-square theorem, Jacobi's complete r2 formula, Dirichlet-series Euler product or any physics. Those established theorems are cited independently. Exact Python tests enumerate signed lattice pairs and check r2(N) against divisors, check primes, explicit 137 and 139, and local prime-power factors.
-
-## Open gates
-
-Before invoking this for UBT/RH: derive K, integer mode quantization and the boundary conditions from the canonical complex Theta dynamics; demonstrate nonnegative constrained energy and physical observable consequences; then test primes against alternatives and null models without fitting. Do not conflate Jacobi theta functions vartheta with fundamental biquaternion field Theta or assume AdS/CFT.
+Lean verifies the necessary modular exclusion in the finite residue ring only, not Fermat's converse or the complete Jacobi formula. Python independently checks degeneracy counts, local prime factors, and the displayed examples. The physical mode spectrum and positive quadratic form must be derived from the one canonical action with its constraints; possible connections to holography, gravitation and RH remain OPEN.
 
 ## Literature
 
