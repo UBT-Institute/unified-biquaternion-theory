@@ -28,7 +28,7 @@ K_{\rm mixed}\succeq0\ \Longleftrightarrow\ ac-b^2\ge0
 ## Přesné nové závěry
 
 1. Pro c<0 platí Q(0,1)=c<0 při **libovolném** b. Pouhé smíchání nezávislého záporného směru s kladnou TT gravitací proto neodstraní ghost.
-2. Pro c=0 a nenulové b platí det K=-b²<0 a Q(-b,a)=-ab²<0. Nulový diagonální kinetický člen psi tedy NENÍ důkazem neškodného pomocného módu po zapojení smíšené časové derivace: smíchání naopak může učinit dvourozměrný rychlostní blok regulární a indefinitní. Při b=0,c=0 máme singulární kladně semidefinitní blok, **nikoliv** automatický důkaz odstranění psi vazbou; rozhoduje zachování vazeb v čase a prostorové/potenciálové interakce.
+2. Pro c=0 a nenulové b platí det K=-b²<0 a Q(-b,a)=-ab²<0. Nulový diagonální kinetický člen psi tedy NENÍ důkazem neškodného pomocného módu po zapojení smíšené časové derivace: smíchání naopak může učinit 2x2 rychlostní blok regulární a indefinitní. Při b=0,c=0 máme singulární kladně semidefinitní blok, **nikoliv** automatický důkaz odstranění psi vazbou; rozhoduje zachování vazeb v čase a prostorové/potenciálové interakce.
 3. Pro a>0 je pozitivní semidefinitnost tohoto skutečně dvoufyzikálního rychlostního bloku ekvivalentní podmínce ac-b²>=0. Při ostré nerovnosti je blok pozitivně definitní. Při rovnosti má nulový rychlostní směr a může vzniknout primární vazba; úplná Diracova algebra a redukovaný Hamiltonián však musí být spočteny.
 4. I při splnění kinetické podmínky ještě nemáme stabilitu celého módu: nezávisle je nutné ověřit potenciální Hessian, prostorové gradienty, hyperbolicitu, okrajové podmínky a nelineární interakce. Kinetický ghost a tachyonická nestabilita jsou odlišné jevy.
 
