@@ -52,7 +52,10 @@ theorem negative_det_witness
     mul_neg_of_neg_of_pos hdet hsq
   have hsimple : a * kineticForm a b c (-b) a =
       determinant a b c * a^2 := by
-    convert hkey using 1 <;> ring
+    calc
+      _ = (a*(-b)+b*a)^2 + determinant a b c*a^2 :=
+        scaled_completed_square a b c (-b) a
+      _ = determinant a b c*a^2 := by ring
   have hproduct : a * kineticForm a b c (-b) a < 0 := by
     rw [hsimple]
     exact hneg
