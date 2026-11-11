@@ -73,9 +73,32 @@ The two-qubit vector space and the vectorization of the canonical UBT biquaterni
 
 The literature theorem of de la Torre, Masanes, Short and Müller (2012) identifies the standard complex two-qubit theory from **already-fixed local qubit structure plus existence of a continuous reversible interaction** within its stated framework. Masanes, Müller, Pérez-García and Augusiak (2014) extend the comparison to locally tomographic Euclidean-ball systems. These are already-published classification results, not independent novel derivations made here.
 
+### E.1 — OI-6-T11: The vector-carrier identification is not an algebra isomorphism
+
+The Skolem–Noether theorem states that every unital complex-algebra automorphism of the full matrix algebra is inner conjugation by an invertible matrix, modulo a central nonzero scalar. Its complex dimension is therefore smaller than the full two-qubit special-unitary group:
+
+$
+\operatorname{Aut}_{\mathbb C\text{-alg}}(M_2(\mathbb C))
+\simeq\operatorname{PGL}_2(\mathbb C),\qquad
+\dim_{\mathbb R}=6,\qquad \dim_{\mathbb R}\operatorname{SU}(4)=15.
+$
+
+To see the concrete obstruction independently of dimension counting, identify the same four-component complex vector with a matrix through column-major vectorization and let the entangling unitary act **linearly on the vectorized matrix**. Two orthogonal idempotents have zero product, but after the resulting vector action their images need not have zero product:
+
+$
+\Phi_t(E_{00}E_{11})=0,\qquad
+\Phi_t(E_{00})\Phi_t(E_{11})
+=-i\cos t\sin t\,I_2\ne0,\qquad
+\Phi_t=\operatorname{vec}^{-1}e^{-it\sigma_x\otimes\sigma_x}\operatorname{vec}.
+$
+
+**OI-6-T11 [STD, conditional]:** a general reversible two-qubit SU(4) transformation is not a unital multiplicative automorphism of the biquaternion algebra M2(C). The calculation is a counterexample to a naive identification of qubit controllability with UBT algebraic symmetry. It does not determine which multiplication-compatible transformations, if any, are physical UBT gauge transformations. The full vector carrier and algebra structure must be distinguished.
+
+Reference: [Skolem–Noether for finite-dimensional central simple algebras](https://link.springer.com/chapter/10.1007/978-3-030-56694-4_7).
+
 ## F. Reproducibility, gates, and prior art
 
-The standard-library script research_tracks/ontological_information_axioms/verify_entangling_lie.py passed 9/9 local tests on 2026-11-11, and the executed file's Git blob SHA matched the GitHub copy exactly. Tests include all Pauli-pair commutators, 6 versus 15 Lie dimensions, all Pauli two-body interaction types, an exact reversible entangling path, local purity and global Pauli orthogonality. Unit tests reproduce standard finite algebra; they are not physical experiments.
+The standard-library script research_tracks/ontological_information_axioms/verify_entangling_lie.py passed 11/11 local tests on 2026-11-11, and the executed file's Git blob SHA matched the GitHub copy exactly. Tests include all Pauli-pair commutators, 6 versus 15 Lie dimensions, all Pauli two-body interaction types, an exact reversible entangling path, local purity and global Pauli orthogonality. Unit tests reproduce standard finite algebra; they are not physical experiments.
 
 **G-OI6-7 [OPEN]:** independently motivate a nonlocal reversible interaction from an information/composition principle rather than inserting an entangling generator. **G-OI6-8 [OPEN]:** show why the operational local carrier must be complex, two-level and composed as a Hilbert tensor product. **G-OI6-9 [OPEN]:** map the selected carrier and interactions to the noncommutative multiplication, Theta covariant derivative, local constraints and stable UBT action; then check GR and SM limits.
 
