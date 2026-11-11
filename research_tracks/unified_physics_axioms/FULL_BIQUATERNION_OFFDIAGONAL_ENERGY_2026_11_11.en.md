@@ -11,7 +11,7 @@ P(X)=\operatorname{Tr}(X^\dagger X)
 
 \[
 H(X)=\operatorname{Tr}(\operatorname{adj}(X)X^\dagger)
-=2\operatorname{Re}(a\bar d-b\bar c).
+=2\operatorname{Re}(a\bar d)-|b|^2-|c|^2.
 \]
 
 \[
@@ -26,7 +26,7 @@ X'=AA^\dagger=\begin{pmatrix}5&2\\2&1\end{pmatrix},
 \]
 
 
-The complex biquaternion is represented by a general complex matrix without imposing diagonality, a unit normalization, or commuting components. The Hilbert–Schmidt expression includes *all* off-diagonal entries but is not an invariant scalar under unrestricted noncompact Lorentz spinor congruence. The existing UBT Lorentz/phase quadratic pairing H includes cross terms explicitly and can be negative even for a nonzero matrix. Its stated invariance must always be interpreted with the representation's prescribed transformation law; do not infer H is invariant under every arbitrary two-sided transformation. The Hermitian matrix example X'=AA† demonstrates that determinant is invariant under the selected determinant-one congruence while the HS size changes from the identity value. Here H=2det on Hermitian two-by-two matrices; that does not establish this identity for general complex matrices.
+The complex biquaternion is represented by a general complex matrix without imposing diagonality, a unit normalization, or commuting components. The Hilbert–Schmidt expression includes *all* off-diagonal entries but is not an invariant scalar under unrestricted noncompact Lorentz spinor congruence. The existing UBT Lorentz/phase quadratic pairing H includes the scalar cross term and negative off-diagonal norm squares explicitly and can be negative even for a nonzero matrix. Its stated invariance must always be interpreted with the representation's prescribed transformation law; do not infer H is invariant under every arbitrary two-sided transformation. The Hermitian matrix example X'=AA† demonstrates that determinant is invariant under the selected determinant-one congruence while the HS size changes from the identity value. Here H=2det on Hermitian two-by-two matrices; that does not establish this identity for general complex matrices.
 
 ## Norm alternatives and pitfalls
 
@@ -36,7 +36,7 @@ A physical observer-dependent positive energy density can be a covariant tensor 
 
 ## Verification boundary and next experiment
 
-Lean file formal/FullBiquaternionOffDiagonalEnergy.lean proves the real-matrix sign counterexample and the non-invariance of HS size under an off-diagonal shear. The complex all-entry identities, determinant-one congruence example and singular nonzero matrix are checked by SymPy; Lean does not formalize full complex transformation groups. The positive physical energy, gauge constraints and actual scalar/tensor interaction dynamics are OPEN. Derive the action first, solve constraints, and only then extract a positive physical quadratic Hessian and its (possibly non-diagonal) Jacobi theta-mode lattice.
+Lean file formal/FullBiquaternionOffDiagonalEnergy.lean proves the real-matrix sign counterexample, both quadratic pairings for a shear, and the explicit Hermitian determinant-one congruence example. The complex all-entry identities, determinant-one congruence example and singular nonzero matrix are checked by SymPy; Lean does not formalize full complex transformation groups. The positive physical energy, gauge constraints and actual scalar/tensor interaction dynamics are OPEN. Derive the action first, solve constraints, and only then extract a positive physical quadratic Hessian and its (possibly non-diagonal) Jacobi theta-mode lattice.
 
 ## Repo grounding
 
