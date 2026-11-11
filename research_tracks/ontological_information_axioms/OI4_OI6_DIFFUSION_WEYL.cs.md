@@ -87,12 +87,12 @@ $$
 
 **OI-6-T1R [STD, podmíněně].** Bezestopé reálně symetrické matice rozměru 2 krát 2 tvoří pouze 2 reálné směry, reprezentované Pauliho maticemi X a Z. Jejich Gramova matice dovoluje nejvýše d=2 při stejném izotropním dvouvětvovém předpokladu; komplexně hermitovský 2 krát 2 nosič připouští navíc Pauliho směr Y a d=3. Jde o srovnávací omezení reprezentace, nikoli informačně-teoretický výběr komplexních čísel nebo pozorovaného prostoru.
 
-$
+$$
 \dim_{\mathbb R}\mathrm{Sym}_0(2,\mathbb R)=2,\qquad
 \dim_{\mathbb R}\mathrm{Herm}_0(2,\mathbb C)=3.
-$
+$$
 
-$
+$$
 A_iA_j+A_jA_i=2v^2\delta_{ij}I_2,\quad
 \det(EI_2-H(\mathbf p))=E^2-v^2|\mathbf p|^2.
 $$
