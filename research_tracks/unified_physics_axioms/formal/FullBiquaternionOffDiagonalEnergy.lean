@@ -15,7 +15,7 @@ def positivePairing (a b c d : ℝ) : ℝ :=
   a^2 + b^2 + c^2 + d^2
 
 def adjugatePairing (a b c d : ℝ) : ℝ :=
-  2 * (a*d - b*c)
+  2 * a*d - b^2 - c^2
 
 theorem positivePairing_nonneg (a b c d : ℝ) :
     0 ≤ positivePairing a b c d := by
@@ -29,15 +29,22 @@ theorem negative_offdiagonal_example :
       positivePairing 1 2 2 1 = 10 := by
   norm_num [adjugatePairing, positivePairing]
 
-/-- An off-diagonal shear preserves determinant/adjugate pairing. -/
-theorem shear_adjugate_constant (t : ℝ) :
-    adjugatePairing 1 t 0 1 = 2 := by
-  simp [adjugatePairing]
+/-- An off-diagonal shear preserves determinant, but not the full H pairing. -/
+theorem shear_adjugate_formula (t : ℝ) :
+    adjugatePairing 1 t 0 1 = 2 - t^2 := by
+  unfold adjugatePairing
+  ring
 
 theorem shear_positive_pairing (t : ℝ) :
     positivePairing 1 t 0 1 = 2 + t^2 := by
   unfold positivePairing
   ring
+
+/-- A determinant-one congruence of the identity has H=2 but HS=34. -/
+theorem hermitian_congruence_example :
+    adjugatePairing 5 2 2 1 = 2 ∧
+      positivePairing 5 2 2 1 = 34 := by
+  norm_num [adjugatePairing, positivePairing]
 
 /-- Positive HS pairing is strictly changed by every nonzero shear. -/
 theorem shear_hs_not_invariant (t : ℝ) (ht : t ≠ 0) :
