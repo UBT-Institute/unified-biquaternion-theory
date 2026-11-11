@@ -36,6 +36,7 @@ theorem shear_adjugate_constant (t : ℝ) :
 
 theorem shear_positive_pairing (t : ℝ) :
     positivePairing 1 t 0 1 = 2 + t^2 := by
+  unfold positivePairing
   ring
 
 /-- Positive HS pairing is strictly changed by every nonzero shear. -/
