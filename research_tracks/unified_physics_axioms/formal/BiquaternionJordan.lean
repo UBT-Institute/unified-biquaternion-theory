@@ -29,7 +29,7 @@ def sharp (a : BQ) : BQ := ⟨a.s,-a.u,-a.v,-a.w⟩
 def central (z : ℂ) : BQ := ⟨z,0,0,0⟩
 
 /-- Symmetric conjugate product. -/
-def jordan (a b : BQ) : BQ :=
+noncomputable def jordan (a b : BQ) : BQ :=
   ⟨((mul (sharp a) b).s + (mul (sharp b) a).s)/2,
    ((mul (sharp a) b).u + (mul (sharp b) a).u)/2,
    ((mul (sharp a) b).v + (mul (sharp b) a).v)/2,
@@ -46,7 +46,14 @@ theorem jordan_is_central (a b : BQ) :
   | mk as au av aw =>
     cases b with
     | mk bs bu bv bw =>
-      ext <;> dsimp [jordan, mul, sharp, metricPairing, central] <;> ring
+      simp only [jordan, mul, sharp, metricPairing, central, BQ.mk.injEq]
+      constructor
+      · ring
+      constructor
+      · ring
+      constructor
+      · ring
+      · ring
 
 /-- Symmetry of the complex bilinear metric. -/
 theorem metricPairing_symmetric (a b : BQ) :
