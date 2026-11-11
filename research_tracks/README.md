@@ -39,6 +39,12 @@ mathematical closure, and compatibility with canonical structure).
 
 ## Track Index
 
+### Foundational reverse engineering
+
+| Track | Directory | Confidence | Notes |
+|-------|-----------|-----------|-------|
+| Ontological and information axioms | [`ontological_information_axioms/`](ontological_information_axioms/README.md) | **Open** | Independent existence-first, operational-information and causal-first routes; no selection or physical derivation yet proved |
+
 ### Physics and Geometry
 
 | Track | Directory | Confidence | Notes |
@@ -126,4 +132,4 @@ A research track may be promoted to `canonical/` when:
 
 ---
 
-**Last Updated**: 2026-07-25
+**Last Updated**: 2026-11-10
