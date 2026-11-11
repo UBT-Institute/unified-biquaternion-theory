@@ -1,11 +1,14 @@
 name = "inverse_metric_scale"
 version = "0.1.0"
-defaultTargets = ["InverseMetricScale"]
+defaultTargets = ["InverseMetricScale", "BiquaternionJordan"]
 
 [[require]]
 name = "mathlib"
 scope = "leanprover-community"
 rev = "v4.35.0"
+
+[[lean_lib]]
+name = "BiquaternionJordan"
 
 [[lean_lib]]
 name = "InverseMetricScale"
