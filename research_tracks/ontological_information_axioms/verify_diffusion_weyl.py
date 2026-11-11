@@ -87,6 +87,17 @@ class InformationLimitTests(unittest.TestCase):
                     self.assertAlmostEqual(determinant(matrix).real, energy**2 - velocity**2 * squared)
                     self.assertAlmostEqual(determinant(matrix).imag, 0)
 
+    def test_real_symmetric_two_component_carrier_has_at_most_two_axes(self):
+        # Real symmetric traceless 2-by-2 matrices have basis X and Z.
+        # No nonzero real symmetric candidate can anticommute with both.
+        zero = scale(IDENTITY, 0)
+        for ax, az in product(range(-2, 3), repeat=2):
+            candidate = add(scale(SIGMA_X, ax), scale(SIGMA_Z, az))
+            anti_x = add(mul(candidate, SIGMA_X), mul(SIGMA_X, candidate))
+            anti_z = add(mul(candidate, SIGMA_Z), mul(SIGMA_Z, candidate))
+            both_zero = matrix_close(anti_x, zero) and matrix_close(anti_z, zero)
+            self.assertEqual(both_zero, ax == 0 and az == 0)
+
     def test_fourth_independent_pauli_direction_impossible_in_this_model(self):
         # Three traceless Hermitian 2x2 matrices identify vectors in real R^3.
         # Any putative fourth such matrix is in their real span.
