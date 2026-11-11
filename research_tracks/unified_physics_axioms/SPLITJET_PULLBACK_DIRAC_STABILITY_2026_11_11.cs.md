@@ -2,7 +2,7 @@
 
 ## Motivace a přesný rozsah
 
-Gravitační split-jet parent má přesný lokální kvocient vůči vertikálním posunům nosiče na nenulové Lorentzově větvi a zachovává dvě kladné TT Einsteinovy polarizace, podmíněně na zvolené Palatiniho/GR akci. Nedávný test smíšeného Hessianu správně varuje, že nezávisle zadané nenulové smíchání b a nulový diagonální člen c vytvářejí indefinitní regulární kinetickou matici. Zde odvozujeme jiný případ: smíchání vzniklé **redundantní parametrizací jediného fyzikálního módu** automaticky dává diagonální člen c=b²/a a nulový kalibrační směr, NIKOLIV ghost.
+Gravitační split-jet parent má přesný lokální kvocient vůči vertikálním posunům nosiče na nenulové Lorentzově větvi a zachovává dvě kladné TT Einsteinovy polarizace, podmíněně na zvolené Palatiniho/GR akci. Nedávný test smíšeného Hessianu správně varuje, že nezávisle zadané nenulové smíchání b a nulový diagonální člen c=0 vytvářejí indefinitní regulární kinetickou matici. Zde odvozujeme jiný případ: smíchání vzniklé **redundantní parametrizací jediného fyzikálního módu** automaticky dává diagonální člen c=b²/a a nulový kalibrační směr, NIKOLIV ghost.
 
 Jde o přesný konečněrozměrný mechanický analog existujícího split-jet kotangentního zdvihu. Není to odvození kinetických koeficientů gravitace a komplexního Theta z dosud nedokončené mikroskopické akce UBT. Souřadnici psi nelze bez důkazu symetrie ztotožnit s celým komplexním nebo kompaktním fázovým stupněm volnosti UBT.
 
@@ -45,7 +45,7 @@ Jde o konkrétní **mechanismus**, jímž může být netriviální smíchání 
 
 ## Citlivá hranice: samostatně dynamické komplexní Theta
 
-Dodatečný spectator člen d dot(psi)²/2 mění determinant na a*d. Při d<0 vzniká záporný kinetický směr; při d>0 je blok pozitivně definitní a psi je samostatný kinetický mód, jehož potenciálovou i gradientní stabilitu musíme ověřit zvlášť. Při d=0 zůstává redundantní mód kalibrační JEN pokud všechny potenciálové, prostorové, okrajové a interakční členy zachovají stejný posun. Protipříklad: přidání beta*psi²/2 do potenciálu dává {C,H}=-beta*psi místo nuly; časové zachování pak vytváří sekundární podmínku, nikoliv volný kalibrační posun první třídy.
+Dodatečný spectator člen d dot(psi)^2/2 mění determinant na a*d. Při d<0 vzniká záporný kinetický směr; při d>0 je blok pozitivně definitní a psi je samostatný kinetický mód, jehož potenciálovou i gradientní stabilitu musíme ověřit zvlášť. Při d=0 zůstává redundantní mód kalibrační JEN pokud všechny potenciálové, prostorové, okrajové a interakční členy zachovají stejný posun. Protipříklad: přidání beta*psi²/2 do potenciálu dává {C,H}=-beta*psi místo nuly; časové zachování pak vytváří sekundární podmínku, nikoliv volný kalibrační posun první třídy.
 
 Při nelineární změně Q=h+alpha psi+ell psi² je Hessian složené akce Hess(S)=J^T Hess(F) J **v bodě stacionárního řešení** s dF/dQ=0. Mimo stacionární bod vzniká další člen druhé derivace mapy, který může Hessian změnit. Předpoklad on-shell je zásadní pro přenos výsledků hodnosti mezi gravitací a pomocnými bikvaternionovými proměnnými.
 
