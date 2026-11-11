@@ -40,6 +40,13 @@ def square_grid(radius, mode="von-neumann"):
             for v in sites}
 
 
+
+def directional_support(displacements, direction):
+    """Support function for the convex hull of a finite displacement stencil."""
+    return max(dx * direction[0] + dy * direction[1]
+               for dx, dy in displacements)
+
+
 class FinitePropagationTests(unittest.TestCase):
     def test_directed_chain_exact_bound(self):
         graph = {0: set(), 1: {0}, 2: {1}, 3: {2}, 4: {3}}
@@ -101,6 +108,28 @@ class FinitePropagationTests(unittest.TestCase):
                         if tick < 2:
                             state = xor_noise_step(graph, state, noises[tick])
                             altered = xor_noise_step(graph, altered, noises[tick])
+
+    def test_finite_stencil_directional_front_is_anisotropic(self):
+        from math import sqrt
+        cardinal = ((0, 0), (1, 0), (-1, 0), (0, 1), (0, -1))
+        eight = tuple(product((-1, 0, 1), repeat=2))
+        axial = (1.0, 0.0)
+        diagonal = (1 / sqrt(2), 1 / sqrt(2))
+        self.assertAlmostEqual(directional_support(cardinal, axial), 1)
+        self.assertAlmostEqual(directional_support(cardinal, diagonal), 1 / sqrt(2))
+        self.assertAlmostEqual(directional_support(eight, axial), 1)
+        self.assertAlmostEqual(directional_support(eight, diagonal), sqrt(2))
+
+    def test_support_scales_exactly_under_repeated_steps(self):
+        stencil = ((0, 0), (1, 0), (0, 1), (-1, 0), (0, -1))
+        direction = (3.0 / 5, 4.0 / 5)
+        single = directional_support(stencil, direction)
+        for k in range(1, 5):
+            reachable = {(0, 0)}
+            for _ in range(k):
+                reachable = {(x + dx, y + dy) for x, y in reachable
+                             for dx, dy in stencil}
+            self.assertAlmostEqual(directional_support(reachable, direction), k * single)
 
     def test_complete_graph_can_broadcast_in_one_tick(self):
         vertices = tuple(range(6))
