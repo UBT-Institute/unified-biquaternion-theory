@@ -41,3 +41,23 @@ On a Lorentz-invariant vacuum, a conventional local second-order Lorentz-covaria
 4. Compare the physical characteristic cone with the GR TT cone and electromagnetic sector. No measured speed, ghost cure, or new phase is claimed until this is done.
 
 **Proof boundary:** all assertions above are elementary matrix/principal-symbol deductions conditional on their explicitly stated assumptions. No Lean verification of the general field theory and no microscopic UBT action selection is claimed.
+
+
+## New exact zero-speed versus zero-kinetic gate
+
+For a single **already physical** real mode on a homogeneous isotropic background, consider the explicitly assumed effective quadratic Lagrangian
+```
+L = epsilon/2 (dt psi)^2 - g/2 |grad psi|^2
+    - beta/2 (Delta psi)^2 - m2/2 psi^2
+```
+with `epsilon>0`, `g>=0`, `beta>=0`, `m2>=0`. Fourier analysis gives
+`epsilon omega^2=g k^2+beta k^4+m2`. The canonical Hamiltonian density is
+`H=epsilon/2 (dt psi)^2+g/2 |grad psi|^2+beta/2 (Delta psi)^2+m2/2 psi^2>=0`
+under suitable boundaries. In the massless `g=0, beta>0` branch,
+`omega=sqrt(beta/epsilon) k^2`, so the **long-wave phase and group velocities tend to zero** but the mode has positive time kinetic energy and remains dispersive. At nonzero `m2`, `omega(k=0)` is nonzero and phase speed `omega/k` does not vanish; do not conflate these cases.
+
+Conversely at fixed `g>0`, `epsilon -> 0+` gives `omega^2 ~ g k^2/epsilon`, a singular fast-frequency limit rather than a zero-speed limit. At exactly `epsilon=0`, the momentum constraint `p_psi=0` and its consistency condition must be analyzed together with spatial and potential equations; the formula obtained by dividing by epsilon is invalid.
+
+**Interaction strong-coupling warning:** for a nonzero cubic potential `lambda3 psi^3/3!`, the canonical variable `chi=sqrt(epsilon) psi` has cubic coefficient `lambda3/epsilon^(3/2)`. Thus `epsilon -> 0+` at fixed `lambda3` makes the canonically normalized coupling diverge. This is a toy-model obstruction, not a proof that the actual UBT phase is strongly coupled; other terms and constraints may alter the limit.
+
+**Proof boundary:** all of these statements follow from the specified effective quadratic model, not from the fundamental biquaternion action. A higher-spatial-derivative `k^4` branch is not automatically Lorentz invariant, and must not be advertised as a new universal vacuum light cone.
