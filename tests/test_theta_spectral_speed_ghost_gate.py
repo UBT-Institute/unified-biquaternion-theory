@@ -61,3 +61,24 @@ def test_gravity_mixing_cannot_repair_negative_theta_block():
     k = a.row_join(b).col_join(b.T.row_join(c))
     assert k.det() == a.det() * schur.det()
     assert len([v for v in schur.eigenvals() if v < 0]) == 1
+
+
+def test_zero_gradient_branch_has_positive_k4_dispersion():
+    epsilon, beta, k = sp.symbols("epsilon beta k", positive=True)
+    omega2 = beta * k**4 / epsilon
+    assert sp.simplify(omega2 / k**4 - beta / epsilon) == 0
+    # group velocity d omega / dk tends to zero as k tends to zero
+    omega = sp.sqrt(beta / epsilon) * k**2
+    assert sp.limit(sp.diff(omega, k), k, 0, dir="+") == 0
+
+
+def test_zero_time_kinetic_limit_is_singular_not_slow():
+    epsilon, g, k = sp.symbols("epsilon g k", positive=True)
+    omega2 = g * k**2 / epsilon
+    assert sp.limit(omega2, epsilon, 0, dir="+") == sp.oo
+
+
+def test_canonical_cubic_coupling_diverges_in_zero_kinetic_limit():
+    epsilon, lam = sp.symbols("epsilon lam", positive=True)
+    canonical_coupling = lam / epsilon**sp.Rational(3, 2)
+    assert sp.limit(canonical_coupling, epsilon, 0, dir="+") == sp.oo
