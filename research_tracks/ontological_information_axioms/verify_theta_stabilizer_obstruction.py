@@ -207,6 +207,23 @@ class ThetaStabilizerObstruction(unittest.TestCase):
         # This is NOT a function selected solely by Theta.
         self.assertFalse(close(commute(P,Q),sc(I,0)))
 
+    def test_second_independent_covariant_matrix_removes_residual_u1(self):
+        theta1=add(I,sc(Z,1j))
+        theta2=add(I,sc(X,1j))
+        generators=(X,Y,Z,sc(X,1j),sc(Y,1j),sc(Z,1j))
+        rows=[]
+        for g in generators:
+            d1=stabilizer_variation(g,theta1)
+            d2=stabilizer_variation(g,theta2)
+            matrices=(d1,d2)
+            rows.append([m[i][j].real for m in matrices
+                         for i,j in product(range(2),repeat=2)] +
+                        [m[i][j].imag for m in matrices
+                         for i,j in product(range(2),repeat=2)])
+        self.assertEqual(stabilizer_rank(theta1),5)
+        self.assertEqual(stabilizer_rank(theta2),5)
+        self.assertEqual(rank_real(rows),6)
+
     def test_stabilizer_generator_is_tracefree_for_generic_field(self):
         for r in (0.1,0.4,1):
             theta=((2+0.3j,r+0.1j),(r+0.2j,1-0.3j))
