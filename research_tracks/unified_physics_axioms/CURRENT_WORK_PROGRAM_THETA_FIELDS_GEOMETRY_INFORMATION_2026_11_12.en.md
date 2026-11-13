@@ -13,7 +13,9 @@ UBT-AI-PROVENANCE-END
 # Current UBT Research Programme — Theta Geometry, Electromagnetism, Scalars, Then Information
 
 **Date:** 2026-11-12  
-**Status:** WORKING PLAN / OPEN hypotheses, not new axioms, proofs, or a replacement fundamental action.  
+**Status:** WORKING PLAN / OPEN hypotheses, not new axioms, proofs, or a replacement fundamental action.
+
+**UPDATE 2026-11-13 — SUPERSEDED WORKFLOW ORDER:** The user has selected the deeper derivation route **Theta → quantum theory and observer-compatible information → quantum gauge interactions (QED benchmark) alongside composite gravity/GR → classical Maxwell; Standard Model as the broader electroweak/colour completion**. See `research_tracks/unified_physics_axioms/REVISED_THETA_QUANTUM_OBSERVER_QED_GR_TO_MAXWELL_SM_PROGRAM_2026_11_13.en.md`. The direct EM coefficient/projection calculations below are now **diagnostic benchmarks**, not the preferred order of fundamental derivation. Information is to be tested early at the quantum/observer level, not postponed to the end. Retain the original historical proposal below for comparison.  
 **Location:** Research track only. Preserve locked canonical definitions until an independently verified complete derivation justifies a change.
 
 ## Motivation and guiding hypothesis
