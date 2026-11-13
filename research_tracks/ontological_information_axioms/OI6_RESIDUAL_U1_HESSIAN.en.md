@@ -65,6 +65,17 @@ $$
 
 **OI-6-T24 [STD, conditional].** In this regular pure-matter model, the connection is auxiliary and does not propagate its own Maxwell polarizations. The phase is gauge, leaving one radial scalar degree of freedom. At rho=0 the algebraic equation loses rank, so this elimination is not uniform over field space. This does **not** prove that the UBT residual connection is auxiliary; its action and compositeness are different.
 
+### OI-6-T24a — Exact reduced kinetic Hessian
+
+Eliminating the algebraic temporal connection changes the scalar-velocity Hessian by a Schur complement. At nonzero scalar amplitude, the angular vector is its null direction and the radial vector its only kinetic direction. At the origin this elimination is undefined. The result is **not** a count of modes of the full UBT connection.
+
+$
+\mathbf r=(u,v)^T,\quad J\mathbf r=(-v,u)^T,\quad
+W_{\rm reduced}=I_2-\frac{(J\mathbf r)(J\mathbf r)^T}{\mathbf r^T\mathbf r}
+=\frac{\mathbf r\mathbf r^T}{\mathbf r^T\mathbf r},\qquad
+\operatorname{rank}W_{\rm reduced}=1\quad(\rho>0).
+$
+
 ## D. OI-6-T25 — Maxwell branch has Gauss constraints and two transverse polarizations
 
 For positive z, the b0 momentum vanishes as a primary first-class constraint. Its preservation yields Gauss's law, the second first-class constraint. For a nonzero spatial Fourier momentum, the transverse projector has rank 2. Four gauge-vector configuration variables minus two first-class constraints yield two propagating vector polarizations. With two real charged scalars the total configuration-space count is 4 in this model, whether described on the symmetric side or as one radial scalar plus a massive vector in a regular nonzero-amplitude gauge.
@@ -111,7 +122,7 @@ The canonical files already derive Omega(e,T) from a prescribed tetrad and torsi
 
 ## G. Reproducibility and established methods
 
-The standard-library test script research_tracks/ontological_information_axioms/verify_residual_u1_hessian.py passed 12/12 local tests on 2026-11-13; Git blob SHA 11ab912b7beebc6f94ddb6551940591cd6a9686a was verified identical to the committed GitHub source. Tests cover exact rational Hessian ranks and sign, auxiliary elimination, local U1 covariance, transverse Fourier projector and constraint count, and the exact variational-chain pullback. This is a mathematical comparator, not validated UBT dynamics.
+The standard-library test script research_tracks/ontological_information_axioms/verify_residual_u1_hessian.py passed 13/13 local tests on 2026-11-13; Git blob SHA bdb7a531224a61a55aa7c8926963728111c8daaa was verified identical to the committed GitHub source. Tests cover exact rational Hessian ranks and sign, auxiliary elimination, local U1 covariance, transverse Fourier projector and constraint count, and the exact variational-chain pullback. This is a mathematical comparator, not validated UBT dynamics.
 
 - J. David Brown (2022), *Singular Lagrangians, Constrained Hamiltonian Systems and Gauge Invariance*: https://arxiv.org/abs/2201.06558 .
 - *Constraint characterization and degree of freedom counting in Lagrangian field theory* (2024): https://doi.org/10.1103/PhysRevD.109.025010 .
