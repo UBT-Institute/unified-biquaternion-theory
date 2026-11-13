@@ -65,6 +65,17 @@ $$
 
 **OI-6-T24 [STD, podmíněně].** V regulárním modelu s pouhou látkovou kinetikou je konexe pomocná a nešíří vlastní Maxwellovy polarizace. Fáze je kalibrační a zbývá jediný radiální skalární stupeň volnosti. Při rho=0 ztrácí algebraická rovnice hodnost, takže eliminace není jednotná na celém prostoru polí. To **nedokazuje**, že reziduální konexe UBT je pomocná; její akce i kompozitní struktura jsou jiné.
 
+### OI-6-T24a — Přesný redukovaný kinetický Hessian
+
+Eliminace algebraické časové konexe změní Hessian skalárních rychlostí Schurovým doplňkem. Při nenulové skalární amplitudě je úhlový vektor jeho nulovým směrem a radiální vektor jediným kinetickým směrem. V počátku je tato eliminace nedefinovaná. Výsledek **nepočítá** módy úplné konexe UBT.
+
+$
+\mathbf r=(u,v)^T,\quad J\mathbf r=(-v,u)^T,\quad
+W_{\rm reduced}=I_2-\frac{(J\mathbf r)(J\mathbf r)^T}{\mathbf r^T\mathbf r}
+=\frac{\mathbf r\mathbf r^T}{\mathbf r^T\mathbf r},\qquad
+\operatorname{rank}W_{\rm reduced}=1\quad(\rho>0).
+$
+
 ## D. OI-6-T25 — Maxwellova větev má Gaussovy vazby a dvě příčné polarizace
 
 Pro kladné z mizí hybnost b0 jako primární vazba první třídy. Její časové zachování dává Gaussův zákon, druhou vazbu první třídy. Pro nenulovou prostorovou Fourierovu hybnost má příčný projektor hodnost 2. Ze čtyř vektorových konfiguračních proměnných po odečtení dvou vazeb první třídy zbývají dvě propagující vektorové polarizace. Se dvěma reálnými nabitými skaláry je celkový počet konfiguračních stupňů volnosti 4, ať už v symetrickém popisu nebo jako radiální skalár a masivní vektor v regulární kalibraci s nenulovou amplitudou.
@@ -111,7 +122,7 @@ Kanonické soubory již odvozují Omega(e,T) ze zadané tetrády a torze, reduku
 
 ## G. Reprodukovatelnost a známé metody
 
-Skript research_tracks/ontological_information_axioms/verify_residual_u1_hessian.py se standardní knihovnou prošel 12/12 lokálních testů dne 2026-11-13; Git blob SHA 11ab912b7beebc6f94ddb6551940591cd6a9686a byl ověřen jako shodný s uloženým zdrojem na GitHubu. Testy pokrývají přesné racionální hodnosti a znaménko Hessianu, eliminaci pomocné konexe, lokální kovarianci U1, příčný Fourierův projektor, počet vazeb a přesné dosazení variačního řetězce. Jde o matematický komparátor, nikoli ověřenou dynamiku UBT.
+Skript research_tracks/ontological_information_axioms/verify_residual_u1_hessian.py se standardní knihovnou prošel 13/13 lokálních testů dne 2026-11-13; Git blob SHA bdb7a531224a61a55aa7c8926963728111c8daaa byl ověřen jako shodný s uloženým zdrojem na GitHubu. Testy pokrývají přesné racionální hodnosti a znaménko Hessianu, eliminaci pomocné konexe, lokální kovarianci U1, příčný Fourierův projektor, počet vazeb a přesné dosazení variačního řetězce. Jde o matematický komparátor, nikoli ověřenou dynamiku UBT.
 
 - J. David Brown (2022), *Singular Lagrangians, Constrained Hamiltonian Systems and Gauge Invariance*: https://arxiv.org/abs/2201.06558 .
 - *Constraint characterization and degree of freedom counting in Lagrangian field theory* (2024): https://doi.org/10.1103/PhysRevD.109.025010 .
