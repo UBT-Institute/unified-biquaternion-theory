@@ -62,6 +62,14 @@ def radial_kinetic(u, v, du, dv):
     return (u*du+v*dv)**2/(2*r2)
 
 
+def reduced_radial_hessian(u, v):
+    """Velocity Hessian after algebraically removing b0, rho>0."""
+    r2 = u*u + v*v
+    if not r2:
+        raise ValueError('At origin the auxiliary Schur complement is singular')
+    return [[u*u/r2, u*v/r2], [u*v/r2, v*v/r2]]
+
+
 def projector_numerator(k):
     """3x3 numerator: k² I - kk^T, exact integer entries."""
     k2 = sum(x*x for x in k)
@@ -109,6 +117,15 @@ class ResidualU1HessianTests(unittest.TestCase):
             b0 = stationary_b0(u,v,du,dv)
             self.assertEqual(scalar_temporal_lagrangian(u,v,du,dv,b0),
                              radial_kinetic(u,v,du,dv))
+
+    def test_auxiliary_elimination_projects_velocity_hessian_to_rank_one(self):
+        for u, v in ((F(1), F(2)), (F(2,3), F(1,5)), (F(-1), F(0))):
+            h = reduced_radial_hessian(u, v)
+            self.assertEqual(rank(h), 1)
+            self.assertEqual([sum(h[i][j]*[u,v][j] for j in range(2))
+                              for i in range(2)], [u,v])
+            self.assertEqual([sum(h[i][j]*[-v,u][j] for j in range(2))
+                              for i in range(2)], [0,0])
 
     def test_zero_scalar_amplitude_is_singular_auxiliary_patch(self):
         with self.assertRaises(ValueError):
