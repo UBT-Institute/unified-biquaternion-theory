@@ -111,3 +111,17 @@ def test_first_jet_action_is_blind_to_so2_direction():
     local_jet_trial = s.trace(DV.T*eta*DV)+s.trace(DW.T*eta*DW)
     assert s.diff(local_jet_trial,lam) == 0
     assert s.diff(local_jet_trial,lam,2) == 0
+
+
+def test_local_spin_holonomy_carries_opposite_eigenline_phases():
+    area = s.symbols("area", real=True)
+    generator = I*sigma[1]/2
+    assert generator.H == -generator
+    assert s.trace(generator) == 0
+    assert generator*sigma[2]-sigma[2]*generator == -sigma[3]
+    assert generator*sigma[3]-sigma[3]*generator == sigma[2]
+    U = s.cos(area/2)*s.eye(2)+2*s.sin(area/2)*generator
+    plus = s.Matrix([1,1])/s.sqrt(2)
+    minus = s.Matrix([1,-1])/s.sqrt(2)
+    assert s.simplify(U*plus-s.exp(I*area/2)*plus) == s.zeros(2,1)
+    assert s.simplify(U*minus-s.exp(-I*area/2)*minus) == s.zeros(2,1)
