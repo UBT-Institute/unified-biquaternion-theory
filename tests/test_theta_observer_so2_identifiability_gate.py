@@ -57,6 +57,9 @@ def test_curvature_changes_even_though_theta_jet_same():
     assert R_yz.subs(point) == J.subs(point)
     assert R_yz.subs(point) != s.zeros(4)
     assert s.simplify(s.trace(R_yz.subs(point)**2)) == -2
+    # Nonzero SO(2) curvature is pointwise in the annihilator of BOTH carriers.
+    assert R_yz.subs(point)*V.subs(point) == s.zeros(4,1)
+    assert R_yz.subs(point)*W.subs(point) == s.zeros(4,1)
 
 
 def test_multiple_observer_density_matrices_cannot_identify_connection():
