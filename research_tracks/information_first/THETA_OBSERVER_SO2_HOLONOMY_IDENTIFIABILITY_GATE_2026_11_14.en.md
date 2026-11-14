@@ -71,7 +71,18 @@ Nevertheless,
 \mathcal R[\omega_0]=0,\qquad
 \mathcal R[\omega_1]_{yz}(p)=J(p)\ne0.
 \]
-Indeed \(\mathcal R_1=d(yJdz)+(yJdz)\wedge(yJdz)\) and y(p)=0, hence only dy wedge dz times J remains. The connections are NOT gauge-equivalent, since a flat curvature cannot be conjugated to a nonzero one. Omega_1 has different torsion away from y=0, so uniqueness of the torsion-free Levi-Civita connection is not violated. The infinitesimal loop holonomy at p differs at first order in the enclosed area. These are two compatible *kinematic* configurations, not two claimed solutions to one microscopic action.
+Indeed \(\mathcal R_1=d(yJdz)+(yJdz)\wedge(yJdz)\) and y(p)=0, hence only dy wedge dz times J remains. The connections are NOT gauge-equivalent, since a flat curvature cannot be conjugated to a nonzero one.
+
+**Further pointwise curvature-kernel check:** At p the nonzero curvature lies entirely in the stabilizer of BOTH full-Theta real carriers:
+\[
+\mathcal R_{yz}[\omega_1](p)V(p)=0,\qquad
+\mathcal R_{yz}[\omega_1](p)W(p)=0,
+\]
+so the corresponding curvature commutator on the *single Theta carrier* also vanishes at p,
+\[
+\boxed{[D_y,D_z]\Theta(p)=0\quad\text{while}\quad\mathcal R_{yz}[\omega_1](p)\neq0.}
+\]
+This is a strictly **pointwise** counterexample showing that a candidate density built only from the norm of \([D,D]\Theta\) can fail to detect some nonzero connection curvature at a point. Away from p the varying stabilizer J and nonzero y can make the commutator nonzero; this does NOT prove that every commutator-square action is globally insensitive to the SO(2) branch, nor does it fix its physical principal symbol. Omega_1 has different torsion away from y=0, so uniqueness of the torsion-free Levi-Civita connection is not violated. The infinitesimal loop holonomy at p differs at first order in the enclosed area. These are two compatible *kinematic* configurations, not two claimed solutions to one microscopic action.
 
 ## 3. Local multi-clock observer records cannot determine this connection
 
