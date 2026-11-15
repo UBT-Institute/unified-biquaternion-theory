@@ -102,3 +102,22 @@ def test_pure_real_gradient_tetrad_fluctuations_are_diffeomorphisms():
         sum(eta[a,nu]*sp.diff(xi[a],coords[mu])+
             eta[a,mu]*sp.diff(xi[a],coords[nu]) for a in range(4)) / lam)
     assert sp.simplify(dmetric-expected)==sp.zeros(4)
+
+
+def test_same_covariant_theta_tetrad_cannot_solve_naive_massless_weyl_equation():
+    # A general nontrivial invertible upper triangular tetrad suffices to
+    # check the universal inverse-tetrad contraction identity.
+    a,b,d,e,f,g,h=sp.symbols('a b d e f g h', nonzero=True)
+    s=sp.symbols('s',positive=True)
+    emu_a=sp.Matrix([[a,b,0,0],[0,d,e,0],[0,0,f,g],[0,0,0,h]])
+    ea_mu=emu_a.inv()
+    # Greek rows, tangent-space columns; e_a^mu = inverse[a,mu].
+    Dtheta=[I*s*sum((emu_a[mu,j]*sig[j] for j in range(4)),sp.zeros(2))
+            for mu in range(4)]
+    frame_derivs=[sp.simplify(sum((ea_mu[j,mu]*Dtheta[mu]
+                          for mu in range(4)),sp.zeros(2))) for j in range(4)]
+    assert frame_derivs==[I*s*sig[j] for j in range(4)]
+    Weyl=frame_derivs[0]-sum((sig[j]*frame_derivs[j] for j in range(1,4)),sp.zeros(2))
+    assert sp.simplify(Weyl+2*I*s*sig[0])==sp.zeros(2)
+    # This is a restricted obstruction if SAME derivative and Theta itself
+    # enter both the locked gravitational tetrad and massless Dirac comparator.
