@@ -130,6 +130,67 @@ For instance take Theta=I and a non-central SU2 rotation S=i sigma3. Congruence 
 
 This is a sharper version of the previous -I spinor no-go: PGL topology supplies a *candidate* universal Spin double cover, but the canonical physical transformation law does not automatically USE that cover as a physical spin-frame lift. The same issue blocks directly identifying the three invisible unitary parameters with independent electric gauge variables.
 
+## 5b. NEW: exactly the same causal cone is already encoded by the LOCKED canonical tetrad
+
+We can strengthen the reverse-engineering bridge in section 3 WITHOUT replacing the canonical metric by a Hilbert–Schmidt metric or by a proposed quantum density. For every Lorentz-real tetrad leg
+\[
+E_\mu=iX_\mu,\quad X_\mu=-iE_\mu=X_\mu^\dagger\in{\rm Herm}_2,
+\]
+and every real tangent v, define \(X(v)=v^\mu X_\mu\). Let \(B_{\det}(X,Y)=\tfrac12[\det(X+Y)-\det X-\det Y]\). Since
+\[
+\det(x^0I+\mathbf x\cdot\sigma)=(x^0)^2-|\mathbf x|^2
+\]
+and the quaternion-sharp contraction on \(i{\rm Herm}_2\) is the **negative** Minkowski determinant polarisation,
+\[
+\boxed{g_{\mu\nu}=-B_{\det}(X_\mu,X_\nu),\qquad
+g(v,v)=-\det X(v).}
+\]
+On any nondegenerate four-dimensional tetrad, with time orientation chosen by the positive cone,
+\[
+\boxed{v\text{ is future causal for the LOCKED }g
+\quad\Longleftrightarrow\quad X(v)\succeq0.}
+\]
+This is an EXACT cone-MATCH theorem for the existing UBT classical sharp tetrad, not merely a similarity of two unrelated quadratic forms. The Lorentz frame law \(X_\mu\mapsto S X_\mu S^\dagger\) preserves positivity and determinant for \(S\in SL_2(\mathbb C)\), so it is a frame-covariant statement. **Physical caveat:** interpreting \(X(v)\) as an actual quantum effect/record, selecting a state and deriving the spacetime dynamics are additional steps; positivity of the Hermitian matrix alone is not Born's rule or GR.
+
+The conditional *minimal complex information cell* principle also has a sharp count. If a simple noncommutative finite-dimensional complex matrix algebra is assumed and minimality in its matrix size is imposed, then \(M_2(\mathbb C)\) is the first possibility. Its self-adjoint real vector space has dimension 4 and quadratic determinant. For \(M_n(\mathbb C)\), \(n>2\), the Hermitian real dimension is \(n^2\ge9\) and the determinant has degree \(n>2\); the full positive matrix cone is NOT automatically a single 3+1 Lorentz cone. This makes 3+1 a plausible *minimality consequence*, NOT an unrestricted theorem that QM uniquely chooses n=2: real/quaternionic/Jordan alternatives and composite quantum systems exist and must be evaluated separately.
+
+## 5c. NEW: rank-four ceiling forces dependent or null higher directions in the same classical slice
+
+Suppose a proposed d-dimensional parameter space (d>=4) is given a quadratic form by **exactly the same** Lorentz-real tetrad construction
+\[
+E_M=i e_M{}^a\sigma_a,\quad a=0,1,2,3,\quad
+g_{MN}=\eta_{ab}e_M{}^ae_N{}^b.
+\]
+The 4xd matrix e has rank at most four. Therefore
+\[
+\boxed{\mathrm{rank}(g)\le4.}
+\]
+If e is surjective onto the four Lorentz components (rank(e)=4), then
+\[
+\boxed{\ker g=\ker e,\quad \mathrm{rank}(g)=4,\quad
+\dim\ker(g)=d-4.}
+\]
+Proof: every v with ev=0 pairs to zero; conversely, if g(v,w)=0 for all w and e is surjective, eta(ev,y)=0 for all y, so ev=0. Thus if the same locked central-sharp recipe is naively applied to ten independent coordinate labels, **six tangent directions are necessarily metric-degenerate**. It is impossible to invert such a ten-dimensional metric without additional structure. This is NOT a no-go against higher-dimensional UBT geometries which use a genuinely different fiber, pairing, embedding or additional independent metric data, and not a deduction that the six null directions are gauge. It is exactly the dimension-dependence gate requested by reverse engineering.
+
+**Integrable representative:** if e^a=dh^a, the kernel directions are tangent to the level sets h^a=const and Frobenius-integrable, so the effective 4D quotient exists locally when rank(e)=4. In the canonical connection-free real-gradient branch these h^a are coordinate functions and its induced 4D metric is exactly Minkowski (previous pure-gradient no-curvature gate).
+
+**Nonintegrable counterexample (six nominal dimensions):** use coordinates \((t,x,y,z,u,v)\) and the rank-four Lorentz-real one-forms
+\[
+e^0=dt,\quad e^1=dx+u\,dv,\quad e^2=dy,\quad e^3=dz.
+\]
+The induced six-dimensional g=e^T eta e has rank four, while its null distribution is spanned by
+\[
+K_u=\partial_u,\qquad K_v=\partial_v-u\partial_x.
+\]
+Its commutator is
+\[
+\boxed{[K_u,K_v]=-\partial_x\notin\ker e,\quad
+e^1([K_u,K_v])=-1.}
+\]
+The null distribution is NOT Frobenius integrable, so it CANNOT be treated as ordinary coordinate fibers over an automatically defined four-dimensional quotient. The nonclosure is accompanied by \(de^1=du\wedge dv\neq0\), a geometric seed for a transport/connection problem. This is a valid kinematic example of a rank-four Lorentz-valued coframe, but it is **NOT YET an on-shell or even explicitly constructed canonical single-Theta E=DTheta**, since a nonzero composite connection/torsion lift must still be supplied. The obstruction neither yields an electromagnetic U1 generator nor a propagating Maxwell mode by itself.
+
+**Next non-ad-hoc test:** construct e_M from the EXACT specified UBT two-sided \(D_M\Theta\), calculate the rank of e and the Frobenius tensor of its kernel, then derive the correct reduced symplectic/gauge quotient and physical causal operator X(v) using only the fixed sharp metric. This simultaneously tests the user's dependent-dimension hypothesis, the correct quantum/relativity cone identification and whether extra phase directions are truly physical instead of postulated coordinates.
+
 ## 6. Falsifiable principle programme, not an ad hoc new axiom
 
 Reverse engineering suggests a MINIMAL set of independent candidate requirements, each tested rather than imposed to reproduce a sector:
@@ -142,4 +203,4 @@ Reverse engineering suggests a MINIMAL set of independent candidate requirements
 
 These conditions are not proven to be the unique or sufficient fundamental principles. The topological Z2 and Lorentz cone are genuine mathematical facts, but no microscopic Theta action or QED photon follows from them alone.
 
-**Verification:** 12 targeted SymPy/pytest checks passed locally on 2026-11-16. Regression: tests/test_theta_projective_spin_topology_gate.py. They test finite-matrix identities, quotient tangent rank, spin-cover loops, phase winding invariance, cone determinant and canonical-congruence mismatch. The topology of pi1(PGL) follows the standard homotopy exact-sequence argument and is not proven by finite symbolic tests.
+**Verification:** 16 targeted SymPy/pytest checks passed locally on 2026-11-16. Regression: tests/test_theta_projective_spin_topology_gate.py. They test finite-matrix identities, quotient tangent rank, spin-cover loops, phase winding invariance, cone determinant and canonical-congruence mismatch. The topology of pi1(PGL) follows the standard homotopy exact-sequence argument and is not proven by finite symbolic tests.
