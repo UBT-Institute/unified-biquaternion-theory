@@ -1,0 +1,14 @@
+# Multiple biquaternion phases: U(1), Sp(1), and metric-preserving actions
+
+**Status:** algebraic group classification, not a derivation of the Standard Model gauge sector.
+
+Let H_C=C tensor H with central complex unit i and quaternion generators I,J,K, with I^2=J^2=K^2=IJK=-1. Distinguish central complex conjugation from quaternion conjugation bar.
+
+1. Central phase exp(i alpha) belongs to central U(1). If sharp is quaternion conjugation, sharp(exp(i alpha))=exp(i alpha), so central multiplication of a Lorentz tetrad changes the canonical quadratic metric by exp(2i alpha). A central phase on a *charged module* is a different possibility.
+2. Unit real quaternions q=exp(alpha I)exp(beta J)exp(gamma K) obey bar(q)q=1 and form Sp(1) isomorphic to SU(2). Three generator directions do not give U(1)^3: [I,J]=2K etc. The parameterization is locally redundant at special coordinate values, as with Euler angles.
+3. For canonical g_{mu nu}1=1/2(bar(E_mu) E_nu+bar(E_nu) E_mu) on a Lorentz-compatible slice, a **left** multiplication E'_mu=q E_mu with bar(q)q=1 leaves g invariant algebraically: bar(q E_mu)q E_nu=bar(E_mu)bar(q)q E_nu. This does not by itself establish that q E_mu stays on the same Lorentz-real slice W_L or is a legitimate internal gauge transformation. **Right** multiplication E'_mu=E_mu q instead gives g'=bar(q)g q=g if g is central, but the full ordered tensor transforms by conjugation. The permitted physical action must be checked.
+4. A local left transformation requires a compatible connection A'_mu=q A_mu q^{-1}-(partial_mu q)q^{-1}, so D'_mu Theta'=q D_mu Theta when Theta'=q Theta and the right connection is held fixed. For two-sided actions Theta'=L Theta R^{-1}, the full transformation laws are A'=L A L^{-1}-(dL)L^{-1}, B'=R B R^{-1}-(dR)R^{-1}.
+5. General biquaternion exponentials exp(z_1 I+z_2 J+z_3 K), z_j complex, generate a complexified group locally related to SL(2,C), not a compact three-phase torus. Compact SU(2) and noncompact complex directions must be distinguished; the latter may include boosts and cannot be identified with new positive-norm gauge bosons without a Hamiltonian analysis.
+6. An independent commuting U(1) times unit-quaternion SU(2) gives a *candidate algebraic* U(1)xSU(2), but central phase acting on the geometric tetrad remains obstructed in the quaternion-conjugate Lorentz realization. No hypercharge assignment, chiral fermion representation, Higgs mechanism, photon/Z mixing, or electroweak prediction is obtained merely from group factors.
+
+**Next decisive gate:** identify the canonical sharp and W_L action, calculate whether Sp(1) left/right rotations are local Lorentz-frame gauge transformations already counted in Omega (rather than an independent weak SU(2)), and build a faithful charged chiral fermion module with independent gauge curvature and positive kinetic term. Do not double-count the existing Lorentz spin connection.
