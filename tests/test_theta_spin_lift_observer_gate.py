@@ -101,3 +101,22 @@ def test_projective_cp1_curvature_has_unit_chern_integral():
     flux = sp.integrate(curv, (theta, 0, sp.pi), (phi, 0, 2*sp.pi))
     assert flux == 2*sp.pi
     assert flux/(2*sp.pi) == 1
+
+
+def test_spin_sign_is_universal_but_projective_berry_phase_is_path_dependent():
+    phi, polar = sp.symbols("phi polar", real=True)
+    S = sp.diag(sp.exp(I*phi/2), sp.exp(-I*phi/2))
+    spin_up = sp.Matrix([1, 0])
+    assert S.subs(phi, 2*sp.pi)*spin_up == -spin_up
+    # The north-pole ray is constant: Berry holonomy is +1, not -1.
+    P0 = spin_up*spin_up.H
+    assert zero(S*P0*S.H-P0)
+    static_a = -I*(spin_up.H*spin_up.diff(phi))[0]
+    assert static_a == 0
+    # A generic azimuthal loop has a path-dependent geometric phase.
+    v = sp.Matrix([sp.cos(polar/2), sp.exp(I*phi)*sp.sin(polar/2)])
+    a_phi = sp.trigsimp(-I*(v.H*v.diff(phi))[0])
+    phase = sp.simplify(sp.integrate(a_phi, (phi, 0, 2*sp.pi)))
+    assert sp.trigsimp(phase-sp.pi*(1-sp.cos(polar))) == 0
+    assert phase.subs(polar, 0) == 0
+    assert sp.simplify(phase.subs(polar, sp.pi/2)) == sp.pi
