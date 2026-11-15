@@ -143,3 +143,16 @@ def test_flat_canonical_soldering_and_scalar_gradient_comparator():
     scalar_orbit = I*c*right
     trial_kinetic = sp.trace(scalar_orbit.diff(x).H*scalar_orbit.diff(x))
     assert sp.simplify(trial_kinetic - 2*c*c*wave_number**2) == 0
+
+
+def test_flat_affine_canonical_tetrad_has_nonzero_projected_reference_curvature():
+    t, x, y, z, c = sp.symbols("t x y z c", real=True, positive=True)
+    h = (c+t)*P[0] + x*P[1] + y*P[2] + z*P[3]
+    theta = I*h
+    delta = (c+t)**2-x*x-y*y-z*z
+    a_x = sp.simplify(sp.im(sp.trace(P[3]*theta.inv()*theta.diff(x)))/2)
+    a_y = sp.simplify(sp.im(sp.trace(P[3]*theta.inv()*theta.diff(y)))/2)
+    assert sp.simplify(a_x-y/delta) == 0
+    assert sp.simplify(a_y+x/delta) == 0
+    f_xy = sp.simplify(sp.diff(a_y, x)-sp.diff(a_x, y))
+    assert sp.simplify(f_xy.subs({t:0,x:0,y:0,z:0})+2/c**2) == 0
