@@ -78,6 +78,31 @@ Furthermore right multiplication by R commutes with the flat Dirac LEFT SL2 spin
 
 **Precise conclusion:** a genuine mass-preserving vector U1 appears in an existing single-Theta flat Dirac representation, but the same simple right-column action is NOT an independent gauge symmetry of the locked geometrical Lorentz slice. This is a scoped homogeneous-action obstruction, not a no-go for a nonlinear physical spinor/tetrad soldering map or a dynamically derived phase-neutral composite tetrad.
 
+## 3b. Positive *noncanonical* comparison: a phase-neutral bilinear soldering is kinematically possible
+
+There is a precise way to escape the direct right-multiplication reality failure, at the cost of changing the tetrad **map** (not an authorized revision of canonical UBT):
+\[
+\boxed{K[\Theta]=\Theta\Theta^\dagger.}
+\]
+Under the flat Dirac LEFT Lorentz action \(\Theta\mapsto S\Theta\), the Hermitian bilinear transforms as \(K\mapsto SKS^\dagger\), i.e. it has the correct four-vector Lorentz transformation. Under the physical Dirac vector phase \(\Theta\mapsto\Theta R_{\alpha(x)}\), it is *exactly invariant*, even for space-dependent alpha, since \(RR^\dagger=I\).
+
+As a local comparison define an **alternative** tetrad
+\[
+\boxed{\widetilde E_\mu=i\,\partial_\mu K.}
+\]
+For any Hermitian K, these values lie in \(W_L=i\mathrm{Herm}_2\). Choose the smooth positive-definite matrix background
+\[
+K=(c+t)I+x\sigma_1+y\sigma_2+z\sigma_3,\quad
+c+t>\sqrt{x^2+y^2+z^2},\quad c>0.
+\]
+It has a unique positive square root \(\Theta=K^{1/2}\in M_2(\mathbb C)\), so no second fundamental field has been introduced. The candidate legs are \(\widetilde E_\mu=i\sigma_\mu\), with the EXACT canonical sharp bilinear \(\widetilde g=\eta\), nondegenerate Minkowski. Moreover \(\widetilde E_\mu\) is right-U1 invariant while K transforms by Lorentz congruence. This is a **constructive kinematic example of a nonlinear spinor-to-geometric soldering map**, not a proof that UBT selects it.
+
+**Two sharp limitations:**
+1. Canonical UBT locks \(E_\mu=\mathcal N_0^{-1/2}D_\mu\Theta\), **not** \(\widetilde E_\mu=iD_\mu(\Theta\Theta^\dagger)\). The positive example does NOT satisfy canonical Axiom C unless a derived, covariant, dynamically admissible composite two-sided derivative establishes equality. In the naive D=partial comparator, a Hermitian \(\Theta=K^{1/2}\) even gives Hermitian, not anti-Hermitian, derivatives. Do not silently replace the definition.
+2. K is invariant under the **entire right U(2)**, not merely the one-dimensional electromagnetic vector phase. It therefore does not select the correct physical internal gauge group or its charges and cannot by itself generate a photon kinetic term.
+
+This explicit positive comparator identifies a useful NEXT TEST: can the existing UBT composite connection (with its full variation, torsion and Lorentz slice) yield a physically selected phase-neutral tetrad bilinear and a smaller residual charged module *without* abandoning the locked E=DTheta definition? If not, the simple same-carrier geometrical and fermionic representations remain incompatible on this branch.
+
 ## 4. What still must be derived before calling this QED
 
 1. A real Lorentz-covariant physical spinor observable from the SAME Theta and constrained geometric phase space that carries the vector phase without disrupting E in W_L.
