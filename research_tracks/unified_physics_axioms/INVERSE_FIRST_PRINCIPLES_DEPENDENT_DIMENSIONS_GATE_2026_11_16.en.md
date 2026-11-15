@@ -50,7 +50,7 @@ In d=4 this is exactly \(4N_0\), regardless of the tetrad's local shape. A bare 
 
 ## 4. Proposed dependent compact phase: local vertical-extension identifiability no-go
 
-Take a nominal fifth coordinate \(\psi\) of circle radius R, but hypothesize the physical submanifold satisfies \(\psi=f(x^\mu)\bmod 2\pi R\). The pullback field is \(\widetilde\Theta(x)=\Theta(x,f(x))\) and satisfies
+Take a nominal fifth ANGULAR coordinate \(\psi\) with period \(2\pi\), whose metric radius is R, but hypothesize the physical submanifold satisfies \(\psi=f(x^\mu)\bmod 2\pi\). The pullback field is \(\widetilde\Theta(x)=\Theta(x,f(x))\) and satisfies
 \[
 \partial_\mu\widetilde\Theta
 =\bigl[\partial_\mu\Theta+(\partial_\psi\Theta)\,\partial_\mu f\bigr]_{\psi=f}.
@@ -58,7 +58,7 @@ Take a nominal fifth coordinate \(\psi\) of circle radius R, but hypothesize the
 For arbitrary full-matrix F(x), H(x), define two smooth periodic lifts
 \[
 \Theta_1(x,\psi)=F(x),\quad
-\Theta_2(x,\psi)=F(x)+R\sin((\psi-f(x))/R)\,H(x).
+\Theta_2(x,\psi)=F(x)+\sin(\psi-f(x))\,H(x).
 \]
 These have the **same pullback and all its tangential derivatives** but arbitrary distinct normal jets:
 \[
@@ -86,6 +86,36 @@ The ambient 5D geometry is flat and the induced 4D geometry is not: dependent di
 
 A full unconstrained analytic 4D metric has 10 components at a point. Classical local analytic embedding results (Janet-Cartan-Friedman, with pseudo-Riemannian variants) give a 10D FLAT ambient space as a sufficient local embedding dimension for general analytic 4D metrics, not an inevitable physical 10D spacetime or a unique minimal number for individual metrics. This is motivation to study the rank/normal bundle of proposed 8-real/10-real Theta carriers, not permission to introduce independent dimensions.
 
+## 5b. More promising dependent-dimension route: NONINTEGRABLE circle transport generates U(1) curvature
+
+A functional graph psi=f(x) was an INTEGRABLE dependence; it does not exhaust the user's proposal. A weaker and more interesting structure is a circle bundle over the physical 4D base, with an *angular* coordinate psi modulo 2pi and a one-form
+\[
+\boxed{\vartheta=d\psi+A_\mu(x)dx^\mu,\qquad \mathcal H=\ker\vartheta.}
+\]
+The horizontal physical directions are not required to be tangent to a 4D graph! A local reparameterization psi'=psi-chi(x) forces A'=A+dchi so theta remains unchanged; the transformation is the Abelian U1 gauge law. The curvature is \(F=dA\) and does NOT require extra physical propagating spacetime coordinates. A nonzero curvature measures the Frobenius obstruction to integrating horizontal directions into psi=f(x).
+
+Explicitly on an x,y subpatch set \(A=B x\,dy\), so
+\[
+F=B\,dx\wedge dy,\quad H_x=\partial_x,\quad
+H_y=\partial_y-Bx\,\partial_\psi,\quad
+\boxed{[H_x,H_y]=-B\partial_\psi}.
+\]
+For B!=0 there is no smooth f(x,y) with df=-A on an open patch because mixed partials would disagree; this is NONHOLONOMIC dimension coupling. The correct primitive would be a constrained horizontal DISTRIBUTION/transport, not an independent scalar function or a passive extra coordinate.
+
+As an instructive **standard Kaluza-Klein comparator** introduce an angular circle of fixed radius R and the 5D metric
+\[
+\boxed{ds_5^2=g_{\mu\nu}dx^\mu dx^\nu+R^2(d\psi+A_\mu dx^\mu)^2.}
+\]
+For fields independent of psi and constant R, its 5D Ricci scalar satisfies the standard reduction identity
+\[
+\boxed{\mathcal R_5=\mathcal R_4-\frac{R^2}{4}F_{\mu\nu}F^{\mu\nu}.}
+\]
+A direct five-dimensional Christoffel/Ricci computation for a flat base and A=Bx dy gives EXACTLY \(\mathcal R_5=-R^2B^2/2\) since F_{\mu\nu}F^{\mu\nu}=2B². Therefore a SINGLE 5D Einstein-Hilbert action would yield the Maxwell-square term after circle integration, with the sign/relative coefficient dictated by the geometry. Unlike the projected Maurer–Cartan Berry candidates, F=dA has a LINEAR perturbation about A=0 and can support a quadratic Maxwell kinetic term.
+
+**Crucial non-adhoc qualification:** the circle-bundle connection A, fifth metric component, \(\psi\)-independence, constant R and 5D Einstein-Hilbert action were all specified in this comparator; NONE is yet selected by fundamental UBT. Promoting them to axioms would IMPORT Kaluza-Klein physics and violate the user's reverse-engineering requirement. The *research task* is instead to show an EXISTING connection/constraint of one complex Theta has precisely this nonintegrable circle-bundle quotient, or to falsify the candidate. Distinguish its internal U1 from the Lorentz SO2 stabilizer and prove the one-Theta action reduces to the needed curvature coefficient. A generic nonzero F is a genuine geometric obstruction, NOT automatically the physical photon. The known KK mechanism is an accepted external benchmark, not a new discovery.
+
+**A sharper D2 test:** derive a candidate 1-form theta[Theta,DTheta] and compute \(d\vartheta\) restricted to \(\ker\vartheta\). If it vanishes, the graph branch is locally integrable and its vertical dynamics need separate justification. If nonzero, test a consistent nonholonomic/connection quotient, then construct the gauge-invariant action and full Hessian with no added independent photon.
+
 ## 6. Research roadmap and kill criteria
 
 **D1 — dimension inventory.** For each proposed dimension (x^mu, compact psi, complex tau, observer phase, Theta value components) specify: independent coordinate, algebraic internal coordinate, field, or gauge-label; exhibit its covariant definition and the Jacobian rank. Reject coordinate-counting derived solely from notation.
@@ -96,6 +126,6 @@ A full unconstrained analytic 4D metric has 10 components at a point. Classical 
 
 **D4 — matched reverse reconstruction.** Derive, rather than assume, the spin-2 causal-cone GR sector, unitary quantum operator net and CAR, first-class internal U1 photon and electroweak/colour multiplets. Record separate coupling/scale parameters without tuning measured constants by hand. Test IR QED Ward identities, GR, SM chirality/anomalies. Only a shared action with a clear pullback to all sectors qualifies.
 
-**Immediate verdict:** the dependency idea is mathematically testable and can explain two pre-existing structural failures: (i) metric-lock contraction erases the purported kinetic term; (ii) treating a phase direction as an independent compact coordinate when its normal derivatives are not identifiable from physical data. The graph example also proves that dependencies may induce curvature. Whether actual UBT's compact phase is dependent remains **OPEN**, not established.
+**Immediate verdict:** the dependency idea is mathematically testable and can explain two pre-existing structural failures: (i) metric-lock contraction erases the purported kinetic term; (ii) treating a phase direction as an independent compact coordinate when its normal derivatives are not identifiable from physical data. The graph example also proves that dependencies may induce curvature. New nonintegrable phase-transport tests give a stronger U1-bundle bridge, with a direct 5D Ricci comparator, without proving this bundle is selected by Theta. Whether actual UBT's compact phase is dependent remains **OPEN**, not established.
 
-Eight new exact small SymPy/pytest checks pass locally in tests/test_theta_dependent_dimension_reverse_principles_gate.py. These tests verify mathematical identities and counterexamples only, not the derivation of the proposed dimension constraints from the UBT action.
+Ten new exact small SymPy/pytest checks pass locally in tests/test_theta_dependent_dimension_reverse_principles_gate.py. These tests verify mathematical identities and counterexamples only, not the derivation of the proposed dimension constraints from the UBT action.
