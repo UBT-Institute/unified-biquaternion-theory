@@ -154,3 +154,71 @@ def test_bilinear_k_is_not_lorentz_vector_under_canonical_congruence_boost():
     assert zero(bilinear_from_canonical-s.diag(s.exp(2*beta),s.exp(-2*beta)))
     assert zero(vector_covariant-s.diag(s.exp(beta),s.exp(-beta)))
     assert bilinear_from_canonical.subs(beta,1)!=vector_covariant.subs(beta,1)
+
+
+
+def test_locked_sharp_tetrad_causal_metric_is_negative_determinant_polarization():
+    v=s.symbols('v0:4',real=True)
+    E=[I*M for M in (ID,s1,s2,s3)]
+    X=[-I*M for M in E]
+    eta=s.diag(-1,1,1,1)
+    def sharp(m):
+        return s.trace(m)*ID-m
+    for a in range(4):
+        for b in range(4):
+            sharp_metric=s.simplify((sharp(E[a])*E[b]+sharp(E[b])*E[a])/2)
+            determinant_polar=-s.simplify(
+                (s.det(X[a]+X[b])-s.det(X[a])-s.det(X[b]))/2)
+            assert zero(sharp_metric-eta[a,b]*ID)
+            assert determinant_polar==eta[a,b]
+    Xv=sum((v[a]*X[a] for a in range(4)),s.zeros(2))
+    gvv=s.expand((s.Matrix(v).T*eta*s.Matrix(v))[0])
+    assert s.simplify(gvv+s.det(Xv))==0
+    # On the future causal cone v0>=sqrt(v1²+v2²+v3²),
+    # eigenvalues of Xv are v0 +/- spatial norm.
+
+
+def test_causal_cone_is_preserved_by_lorentz_congruence_boost():
+    r,b=s.symbols('r b',real=True,positive=True)
+    X=r*ID
+    S=s.diag(s.exp(b/2),s.exp(-b/2))
+    Y=S*X*S.H
+    assert s.simplify(s.det(S)-1)==0
+    assert zero(Y-Y.H)
+    assert s.simplify(s.det(Y)-s.det(X))==0
+    assert Y[0,0].is_positive and Y[1,1].is_positive
+
+
+def test_ten_nominal_coordinates_with_one_four_real_tetrad_have_six_null_directions():
+    eta=s.diag(-1,1,1,1)
+    e=s.eye(4).row_join(s.Matrix(4,6,lambda a,b:s.Integer((a+b)%3)))
+    g=e.T*eta*e
+    assert e.rank()==4
+    assert g.rank()==4
+    assert len(g.nullspace())==6
+    for z in e.nullspace():
+        assert e*z==s.zeros(4,1)
+        assert g*z==s.zeros(10,1)
+    assert g.det()==0
+
+
+def test_null_distribution_of_six_dimensional_tetrad_can_be_nonintegrable():
+    t,x,y,z,u,v=s.symbols('t x y z u v',real=True)
+    eta=s.diag(-1,1,1,1)
+    # e0=dt, e1=dx+u dv, e2=dy, e3=dz
+    e=s.Matrix([[1,0,0,0,0,0],
+                [0,1,0,0,0,u],
+                [0,0,1,0,0,0],
+                [0,0,0,1,0,0]])
+    g=e.T*eta*e
+    assert e.rank()==g.rank()==4
+    ku=s.Matrix([0,0,0,0,1,0])
+    kv=s.Matrix([0,-u,0,0,0,1])
+    assert e*ku==e*kv==s.zeros(4,1)
+    coords=(t,x,y,z,u,v)
+    bracket=s.Matrix([
+        sum(ku[j]*s.diff(kv[i],coords[j])-
+            kv[j]*s.diff(ku[i],coords[j]) for j in range(6))
+        for i in range(6)])
+    assert bracket==s.Matrix([0,-1,0,0,0,0])
+    assert e*bracket==s.Matrix([0,-1,0,0])
