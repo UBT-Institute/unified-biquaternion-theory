@@ -19,7 +19,7 @@ Theta = sp.Matrix([[u0, v0], [u1, v1]])
 
 
 def zero(M):
-    return M.applyfunc(sp.simplify) == sp.zeros(*M.shape)
+    return M.applyfunc(lambda value: sp.simplify(sp.expand_complex(value))) == sp.zeros(*M.shape)
 
 
 def sharp(M):
