@@ -39,19 +39,19 @@ def test_holonomic_real_gradient_tetrad_is_flat_4d_metric():
 
 
 def test_dependent_compact_coordinate_has_unobservable_vertical_jet():
-    x,y,psi,R,k=s.symbols("x y psi R k",real=True,nonzero=True)
+    x,y,psi,k=s.symbols("x y psi k",real=True,nonzero=True)
     f=k*x*y
     F=s.Function("F")(x,y)
     H=s.Function("H")(x,y)
     lift1=F
-    lift2=F+R*s.sin((psi-f)/R)*H
+    lift2=F+s.sin(psi-f)*H
     assert s.simplify(lift2.subs(psi,f)-F)==0
     assert s.simplify((s.diff(lift2,psi)-s.diff(lift1,psi)).subs(psi,f)-H)==0
     for q in (x,y):
         D2=s.diff(lift2,q)+s.diff(lift2,psi)*s.diff(f,q)
         D1=s.diff(lift1,q)+s.diff(lift1,psi)*s.diff(f,q)
         assert s.simplify((D2-D1).subs(psi,f))==0
-    assert s.trigsimp(lift2.subs(psi,psi+2*s.pi*R)-lift2)==0
+    assert s.trigsimp(lift2.subs(psi,psi+2*s.pi)-lift2)==0
 
 
 def test_flat_five_d_ambient_with_dependent_psi_can_induce_nonflat_4d():
@@ -104,3 +104,53 @@ def test_metric_locked_kinetic_norm_is_exactly_four_not_new_gravity_dynamics():
         for mu in range(4) for nu in range(4)))
     assert norm==4
     assert s.diff(norm,u)==s.diff(norm,v)==s.diff(norm,w)==0
+
+
+
+def test_nonintegrable_circle_connection_gives_u1_curvature_not_graph():
+    x,y,psi,B,q=s.symbols("x y psi B q",real=True)
+    Ax=s.Integer(0)
+    Ay=B*x
+    assert s.diff(Ay,x)-s.diff(Ax,y)==B
+    chi=q*x*y
+    Ax_new=Ax+s.diff(chi,x)
+    Ay_new=Ay+s.diff(chi,y)
+    assert s.simplify(s.diff(Ay_new,x)-s.diff(Ax_new,y)-B)==0
+    # Horizontal lifts Hx=partial_x-Ax partial_psi and
+    # Hy=partial_y-Ay partial_psi do not commute vertically.
+    vertical_bracket=-s.diff(Ay,x)+s.diff(Ax,y)
+    assert vertical_bracket==-B
+    # A graph df=-A would require equality of mixed derivatives.
+    assert s.simplify(s.diff(-Ay,x)-s.diff(-Ax,y))==-B
+
+
+def test_kk_fixed_radius_magnetic_field_gives_exact_curvature_square():
+    # Full 5D ds5²=-dt²+dx²+dy²+dz²+R²(dpsi+B*x*dy)².
+    t,x,y,z,psi,R,B=s.symbols("t x y z psi R B",real=True,nonzero=True)
+    coords=(t,x,y,z,psi)
+    G=s.diag(-1,1,1,1,R**2)
+    G[2,2]+=R**2*B**2*x**2
+    G[2,4]=G[4,2]=R**2*B*x
+    inv=s.simplify(G.inv())
+    gamma={}
+    for a in range(5):
+        for b in range(5):
+            for c in range(b,5):
+                v=s.simplify(sum(inv[a,d]*(s.diff(G[d,b],coords[c])+
+                    s.diff(G[d,c],coords[b])-s.diff(G[b,c],coords[d]))/2
+                    for d in range(5)))
+                if v!=0:
+                    gamma[a,b,c]=gamma[a,c,b]=v
+    def C(a,b,c):
+        return gamma.get((a,b,c),s.Integer(0))
+    ric=s.zeros(5)
+    for a in range(5):
+        for b in range(5):
+            v=0
+            for k in range(5):
+                v+=s.diff(C(k,a,b),coords[k])-s.diff(C(k,a,k),coords[b])
+                for m in range(5):
+                    v+=C(k,k,m)*C(m,a,b)-C(k,b,m)*C(m,a,k)
+            ric[a,b]=s.simplify(v)
+    scalar=s.simplify(sum(inv[a,b]*ric[a,b] for a in range(5) for b in range(5)))
+    assert s.simplify(scalar+R**2*B**2/2)==0
