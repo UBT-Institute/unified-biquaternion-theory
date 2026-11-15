@@ -81,3 +81,25 @@ def test_formal_local_right_gauge_transport_only():
     derivative = F.diff(x)-I*q*a*F*sigma3
     transformed = (F*rot).diff(x)-I*q*(a+phi.diff(x))*(F*rot)*sigma3
     assert zero(transformed-derivative*rot)
+
+
+def test_alternative_bilinear_soldering_flat_lorentz_metric_and_right_u2_blindness():
+    t, x, y, z, c = sp.symbols("t x y z c", real=True)
+    K = (c+t)*sigma0 + x*sigma1 + y*sigma2 + z*sigma3
+    assert zero(K-K.H)
+    assert sp.simplify(K.det()-((c+t)**2-x**2-y**2-z**2)) == 0
+    # This K has a positive-definite patch c+t>sqrt(x^2+y^2+z^2)
+    # and hence a local Theta=positive_sqrt(K) with K=Theta Theta^dagger.
+    E = [I*K.diff(q) for q in (t, x, y, z)]
+    eta = sp.diag(-1, 1, 1, 1)
+    for a in range(4):
+        assert zero(E[a]+E[a].H)
+        for b in range(4):
+            metric = (sharp(E[a])*E[b]+sharp(E[b])*E[a])/2
+            assert zero(metric-eta[a,b]*sigma0)
+    assert zero(R*R.H-sigma0)
+    # More than EM U1 survives: any right U(2) is invisible to K.
+    beta = sp.symbols("beta", real=True)
+    U = sp.cos(beta)*sigma0+I*sp.sin(beta)*sigma1
+    assert zero(U*U.H-sigma0)
+    assert zero(U*U.H-R*R.H)
