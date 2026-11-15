@@ -162,6 +162,22 @@ As an extra diagnostic, on the much simpler constant-H texture \(\Theta=i c\exp[
 \]
 The ungauged right phase is an ordinary compact-scalar gradient mode, NOT an automatic massless photon; this comparator has no nondegenerate canonical tetrad.
 
+### 5b. Affine canonical tetrad can already have nonzero projected curvature
+
+The charged projection does not define a photon-free vacuum merely by making the canonical metric Minkowski. On the preceding Theta=iH affine flat tetrad, with
+\[
+\Delta=(c+t)^2-x^2-y^2-z^2,\qquad \Delta>0,
+\]
+the very same projected composite one-form (Omega=0) is
+\[
+\boxed{a=\frac{y\,dx-x\,dy}{\Delta}}.
+\]
+At the origin (t,x,y,z)=(0,0,0,0) it has
+\[
+\boxed{f_{xy}=-\frac2{c^2}\neq0}.
+\]
+Yet E_mu=i sigma_mu has the EXACT flat Minkowski metric, and this affine Theta has not been shown to satisfy either the Dirac comparator's Euler–Lagrange equations or the unknown fundamental UBT equations. Thus a nonzero geometric charge projection on a flat reference is NOT evidence of a physical magnetic field: vacuum definition, dynamics, and subtraction/physical observables are still required. This is an exact warning against confusing a projected Maurer–Cartan curvature with on-shell electromagnetism.
+
 ## 6. Decision and next falsifiable gate
 
 **EXACT AND CONDITIONAL:** one Theta supports a mass-conserving vector Dirac charge current, the positivity/determinant causal identity, a projected local right U1 composite connection with the correct transformation and possibly nonzero curvature, and a sharp full Lorentz-slice intertwiner obstruction preventing naive identification of the charge action with the direct canonical tetrad.
@@ -172,4 +188,4 @@ The next productive action-selection gate is to compute the *full composite cons
 
 ## Verification
 
-Seven focused SymPy tests passed locally on 2026-11-15, covering flat Dirac continuity including the mass term, causal determinant identity, vector charge/right phase, canonical slice plus Lorentz co-rotation, nonflat right-composite U1, absence of linear curvature around identity, and the flat sharp tetrad/compact-scalar comparator. Regression: tests/test_theta_charge_current_projected_u1_intertwiner_gate.py. The PR is still draft until repository CI gates pass.
+Eight focused SymPy tests passed locally on 2026-11-15, covering flat Dirac continuity including the mass term, causal determinant identity, vector charge/right phase, canonical slice plus Lorentz co-rotation, nonflat right-composite U1, absence of linear curvature around identity, and the flat sharp tetrad/compact-scalar comparator. Regression: tests/test_theta_charge_current_projected_u1_intertwiner_gate.py. The PR is still draft until repository CI gates pass.
