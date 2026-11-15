@@ -123,6 +123,25 @@ This is the standard projective-state Hopf-line-bundle obstruction to a global s
 
 **Lorentz warning:** eigenprojectors built from bare K=Theta Theta† fail generic boost covariance. Their observer-relative analogues from rho_N, as in section 3, do possess the correct induced SU2 covariance. Ordinary positive matrix eigenvectors cannot be declared full-SL2 Weyl spinors by fiat.
 
+### 4b. Essential correction: Berry -1 does NOT itself implement the universal Spin double cover
+
+The equatorial -1 phase is an **example-specific geometric holonomy**. To see why it cannot replace the Spin representation, take instead the constant north-pole ray |up-z>=(1,0)^T. Under the SAME group path S(phi)=exp(i phi sigma3/2),
+\[
+S(2\pi)|\uparrow z\rangle=-|\uparrow z\rangle
+\]
+as required by spin-half, but the projector
+\[
+P(\varphi)=S(\varphi)|\uparrow z\rangle\langle\uparrow z|S(\varphi)^\dagger
+=|\uparrow z\rangle\langle\uparrow z|
+\]
+is CONSTANT. Its natural projective Berry holonomy is therefore **+1**, not -1. More generally an azimuthal loop at polar angle theta has
+\[
+\gamma_{\rm Berry}=\pi(1-\cos\theta)\pmod {2\pi},
+\]
+which depends on the path; the spin-group central sign -1 does not.
+
+**Conclusion:** a projective state and its Berry connection can reveal NONTRIVIAL transport but cannot, by themselves, recover the universal action of the central element -I of Spin(1,3) on all spinor states. A genuine spin lift/associated spinor module remains essential. One must NOT infer fermionic exchange antisymmetry/CAR from the single equatorial -1 holonomy. This addresses the main possible over-interpretation of section 4.
+
 ## 5. Implications for the next real quantum-UBT gate
 
 The one-Theta programme now faces a sharper choice than "read a spinor from the four complex entries":
@@ -135,6 +154,6 @@ The already recorded BIQUATERNION_INTRINSIC_CAR_SPIN_STATISTICS_GATE.md provides
 
 ## Verification
 
-Seven scoped SymPy/pytest checks (2026-11-15) pass locally, covering central Z2 blindness on Theta tensor jets; algebraic zero of any equivariant Weyl component; the nonunitary-boost K counterexample; observer-clock SU2 covariance; signed 2pi eigenline lift of a periodic projector; Berry -1 equatorial holonomy; and unit CP1 first Chern integral. Regression: tests/test_theta_spin_lift_observer_gate.py.
+Eight scoped SymPy/pytest checks (2026-11-15) pass locally, covering central Z2 blindness on Theta tensor jets; algebraic zero of any equivariant Weyl component; the nonunitary-boost K counterexample; observer-clock SU2 covariance; signed 2pi eigenline lift of a periodic projector; Berry -1 equatorial holonomy; unit CP1 first Chern integral, and a counterexample distinguishing path-dependent Berry phase from the universal Spin sign. Regression: tests/test_theta_spin_lift_observer_gate.py.
 
 **Status:** exact representation-theoretic and projective bundle kinematics; no UBT fermions, QED or GR derived. Maintain the existing locked canonical action/tetrad and record failures rather than replacing them silently.
