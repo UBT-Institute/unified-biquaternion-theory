@@ -178,6 +178,69 @@ At the origin (t,x,y,z)=(0,0,0,0) it has
 \]
 Yet E_mu=i sigma_mu has the EXACT flat Minkowski metric, and this affine Theta has not been shown to satisfy either the Dirac comparator's Euler–Lagrange equations or the unknown fundamental UBT equations. Thus a nonzero geometric charge projection on a flat reference is NOT evidence of a physical magnetic field: vacuum definition, dynamics, and subtraction/physical observables are still required. This is an exact warning against confusing a projected Maurer–Cartan curvature with on-shell electromagnetism.
 
+### 5c. New principal-symbol gate: two charged-potential tangent directions are not two physical photon helicities
+
+The natural next test is the **linearized constitutive map**, not just a nonzero curvature and a formal right-vector-U(1) transformation. Retain the EXACT canonical affine-flat comparator
+\[
+\bar\Theta=i[(c+t)I+x\sigma_1+y\sigma_2+z\sigma_3],\quad c>0,\quad D=d,
+\]
+with \(E_\mu=i\sigma_\mu\in W_L\), \(\det e=1\), \(g=\eta\). At the origin, \(\bar\Theta_0=icI\) and
+\[
+\bar B_\mu=(\bar\Theta^{-1}\partial_\mu\bar\Theta)|_0=\frac1c\,\sigma_\mu.
+\]
+
+For an **arbitrary full eight-real-component** right tangent \(\Theta=\bar\Theta(I+\varepsilon Y)\) with \(Y=Y_0I+Y_j\sigma_j\), the standard Maurer–Cartan variation is EXACT at first order:
+\[
+\delta B=dY+[\bar B,Y],\qquad
+\delta a=\tfrac12d\,\mathrm{Im\,tr}(\sigma_3Y)
++\tfrac12\mathrm{Im\,tr}(\sigma_3[\bar B,Y]).
+\]
+The first term is exact and drops from \(\delta f=d\delta a\). The second is a genuine algebraic one-form response. At the origin,
+\[
+\boxed{
+\delta a_{\mathrm{nonexact}}|_0=
+\frac{2}{c}(\mathrm{Re}\,Y_2\,dx-\mathrm{Re}\,Y_1\,dy),\qquad
+\mathrm{rank}_{\mathbb R}=2.
+}
+\]
+This is the rank of the **principal first-derivative map** from all eight real entries of \(Y\); it is NOT a physical Dirac count and NOT two independent photon helicities. For a test plane-wave covector \(k=-\omega\,dt+q\,dx\), the corresponding linearized field-strength principal symbol has
+\[
+\boxed{\delta f_{tz}^{\mathrm{principal}}=0}
+\]
+for every possible eight-real tangent \(Y\), while a general Maxwell wave moving along \(x\) has an independent \(z\)-polarized solution. The chosen right-vector-\(U(1)\) composite curvature therefore **fails the general free Maxwell polarization test around this canonical affine comparator when Omega is kept fixed**. For a wave along z the same symbol spans two transverse directions; this directional asymmetry is itself a useful test.
+
+A quadratic comparison action \(-Z_F\int f_{\mu\nu}f^{\mu\nu}/4\), with the same frozen \(\Omega=0\), consequently has a **rank-two velocity Hessian** at the comparison point (the electric components of \(f\) depend linearly only on the velocities of \(\mathrm{Re}\,Y_1,\mathrm{Re}\,Y_2\)). This rank does NOT establish two healthy photons: the canonical real slice does not admit the naive local right U(1) as a physical gauge symmetry, and the direction-dependent symbol lacks the full Maxwell wave space. Including the full \(\delta\Omega[\Theta]\), additional dynamically selected terms, or quantum collective excitations can change the conclusion; they remain OPEN.
+
+### 5d. Stronger flat-pure-slice result: these four real fields are local coordinate clocks
+
+Keep only the restricted pure-real-gradient branch \(D=d,\ \Theta=i h^a(x)\sigma_a\), with \(h^a\in\mathbb R\) and \(\det(\partial_\mu h^a)\ne0\). Then
+\[
+e_\mu{}^a=\partial_\mu h^a,\qquad
+\boxed{g_{\mu\nu}=\eta_{ab}\partial_\mu h^a\partial_\nu h^b}.
+\]
+By the inverse-function theorem the four \(h^a\) are legitimate local coordinates \(X^a=h^a(x)\). Thus **the metric is exactly flat for all such configurations**, and in a diffeomorphism-invariant model all local perturbations \(\delta h^a=\xi^\mu\partial_\mu\bar h^a\) are locally coordinate relabellings, not propagating gravitational or electromagnetic excitations of this subbranch. Equivalently on the affine reference,
+\[
+\delta g_{\mu\nu}
+=\partial_\mu\xi_\nu+\partial_\nu\xi_\mu,\quad
+\delta R_{\mu\nu\rho\sigma}=0.
+\]
+The projected f may be nonzero, but changes in h alone do NOT create gauge-inequivalent local degrees of freedom on this pure-gradient subbranch. This does **not** apply to the general eight-real Theta, curved/torsionful composite \(\Omega[\Theta]\), or additional physically derived quantum degrees of freedom.
+
+### 5e. On-shell consistency check: the affine tetrad is not a solution of the assumed flat one-Theta Dirac evolution
+
+The flat Dirac comparison equation from ONE_THETA_DIRAC_EVOLUTION_PULLBACK_ACTION.md imposes
+\[
+\partial_t\Theta-\sum_{j=1}^3\sigma_j\partial_j\Theta
+=-im\,\varepsilon\overline\Theta\sigma_1.
+\]
+For the current affine background, the left-hand side is **exactly**
+\[
+\boxed{\partial_t\bar\Theta-\sum_j\sigma_j\partial_j\bar\Theta=-2iI}.
+\]
+At the origin the right-hand mass term is traceless (proportional to \(\sigma_3\)), so **no choice of real m can make these two matrices equal there**. Therefore this reference cannot be treated as a joint on-shell vacuum of the previous flat Dirac comparison and the canonical D=d tetrad. The full UBT joint equations remain unknown; the counterexample merely removes one tempting but invalid shortcut.
+
+**New regression:** tests/test_theta_projected_u1_principal_symbol_gate.py — six focused tests passed with SymPy/pytest locally on 2026-11-15. They verify the canonical sharp tetrad, nonzero background curvature, full-eight-real principal rank 2, missing transverse polarization, Dirac mismatch, and pure-diffeomorphism restricted branch. These results strengthen the NO-PHOTON claim for the specific fixed-connection ansatz; they do not constitute a full-UBT no-go theorem.
+
 ## 6. Decision and next falsifiable gate
 
 **EXACT AND CONDITIONAL:** one Theta supports a mass-conserving vector Dirac charge current, the positivity/determinant causal identity, a projected local right U1 composite connection with the correct transformation and possibly nonzero curvature, and a sharp full Lorentz-slice intertwiner obstruction preventing naive identification of the charge action with the direct canonical tetrad.
