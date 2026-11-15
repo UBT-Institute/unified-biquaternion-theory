@@ -239,7 +239,30 @@ For the current affine background, the left-hand side is **exactly**
 \]
 At the origin the right-hand mass term is traceless (proportional to \(\sigma_3\)), so **no choice of real m can make these two matrices equal there**. Therefore this reference cannot be treated as a joint on-shell vacuum of the previous flat Dirac comparison and the canonical D=d tetrad. The full UBT joint equations remain unknown; the counterexample merely removes one tempting but invalid shortcut.
 
-**New regression:** tests/test_theta_projected_u1_principal_symbol_gate.py — six focused tests passed with SymPy/pytest locally on 2026-11-15. They verify the canonical sharp tetrad, nonzero background curvature, full-eight-real principal rank 2, missing transverse polarization, Dirac mismatch, and pure-diffeomorphism restricted branch. These results strengthen the NO-PHOTON claim for the specific fixed-connection ansatz; they do not constitute a full-UBT no-go theorem.
+**New regression:** tests/test_theta_projected_u1_principal_symbol_gate.py — seven focused tests passed with SymPy/pytest locally on 2026-11-15. They verify the canonical sharp tetrad, nonzero background curvature, full-eight-real principal rank 2, missing transverse polarization, Dirac mismatch, and pure-diffeomorphism restricted branch. These results strengthen the NO-PHOTON claim for the specific fixed-connection ansatz; they do not constitute a full-UBT no-go theorem.
+
+### 5f. Stronger representation gate: naive same-gradient massless Weyl cannot coexist with the locked tetrad
+
+The previous mismatch on the affine reference admits an exact **background-independent** conditional statement. Suppose the *same matrix carrier Theta* is used as a left Weyl field, and its Weyl kinetic operator uses the **same D_mu** already defining the physical nondegenerate tetrad. On the canonical Lorentz slice
+\[
+D_\mu\Theta=i\sqrt{\mathcal N_0}\,e_\mu{}^a\sigma_a,
+\quad e_a{}^\mu e_\mu{}^b=\delta_a{}^b,
+\quad \bar\sigma^a=(I,-\sigma_1,-\sigma_2,-\sigma_3).
+\]
+Then the Weyl contraction is IDENTICALLY
+\[
+\boxed{
+\bar\sigma^a e_a{}^\mu D_\mu\Theta
+=i\sqrt{\mathcal N_0}\,\bar\sigma^a\sigma_a
+=i\sqrt{\mathcal N_0}(I-3I)
+=-2i\sqrt{\mathcal N_0}\,I\ne0.
+}
+\]
+No choice of nondegenerate tetrad makes this particular massless Weyl equation hold. The identity uses the inverse tetrad and three Pauli squares, and survives nontrivial connection/torsion provided the SAME D_mu and same matrix carrier enter both equations. A symbolic test with a nontrivial invertible upper-triangular tetrad confirmed the identity.
+
+**Scope is essential:** The actual curved left/right Weyl operator may use a *different representation/connection* of the geometrical spin connection and act on a **nonlinear derived charged spinor** \(F[\Theta]\), rather than on Theta itself. The positive/negative energy splitting, physical CAR and full one-Theta action are unconstructed. This is a no-go against the **naive same-carrier same-derivative identification**, not against all quantum-gravity unification by Theta.
+
+This result motivates the precise next gate: explicitly give the Lorentz-equivariant map \(F[\Theta]\) and its induced quantum derivative, compute the complete linearized variation including \(\delta\omega[\Theta]\), then verify a nondegenerate, positive physical Hamiltonian with independent gravity and photon observables before claiming QED emergence.
 
 ## 6. Decision and next falsifiable gate
 
