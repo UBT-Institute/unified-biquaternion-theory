@@ -12,7 +12,7 @@ UBT-AI-PROVENANCE-END
 
 # Inverse-first-principles UBT programme: dependent dimensions, rank/quotient gates and the metric-lock trap
 
-**16 November 2026. Status: HYPOTHESIS + 8 scoped verified tests (L0 conditional mathematics).**
+**16 November 2026. Status: HYPOTHESIS + 10 scoped verified tests (L0 conditional mathematics).**
 
 **Motivation.** UBT must not invent missing sectors by writing Maxwell, Dirac, Einstein, SU(3) or a photon kinetic term into an action and then calling them derived. We instead seek a minimal, independent set of principles capable of selecting one Theta quantum dynamics, including its observer/physical quotient and effective dimension. A user's further hypothesis is that some presumed coordinates, complex-time components, phase variables or internal dimensions may be functionally dependent. Such dependencies can remove spurious modes AND generate nontrivial induced geometry.
 
