@@ -38,4 +38,4 @@ To claim exact quantum equivalence on a regular timelike patch one must:
 3. demonstrate that the residual stabilizer and carrier quotient cancels the relevant volume without anomalous Jacobians;
 4. prove matching of invariant observables and boundary conditions.
 
-This local result neither proves nor disproves that a full complex-biquaternionic measure has additional physical degrees of freedom.
+This local result neither proves nor disshows under its stated assumptions that a full complex-biquaternionic measure has additional physical degrees of freedom.
