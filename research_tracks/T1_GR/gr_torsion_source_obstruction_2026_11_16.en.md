@@ -44,3 +44,14 @@ B: Keeping one physical torsionful connection avoids the auxiliary split, but re
 <!-- UNIT: verification -->
 ## Verification/status
 An independent exact symbolic toy check of the polynomial identity is included in tools/verify_gr_torsion_source_obstruction_2026_11_16.py; this does not validate canonical Theta sources. Lean, repository CI, bilingual semantic verifier, and full coupled Hessian: PENDING. Do not merge prior to repository-mandated gates.
+
+<!-- UNIT: composite-variation -->
+## Chain-rule obstruction in the canonical composite tetrad
+For an illustrative functional F[Theta,E,omega] evaluated at E_mu=N0^(-1/2)D_mu^omega Theta, the actual variation at fixed Theta satisfies
+```text
+delta_omega F_composite =
+  (delta F / delta omega)|_(Theta,E) delta omega
+ + (delta F / delta E_mu) delta_omega E_mu
+delta_omega E_mu = N0^(-1/2) (delta omega_mu) acted on Theta
+```
+with indices, adjoints and the paired left/right generators restored for the exact UBT representation. Thus the *fixed-E* current is not automatically the complete source. Even if an effective Palatini source is nonzero, a chain-rule term could in principle modify the full stationarity equation. Conversely, claiming a cancellation without computing the full derivative is unjustified. The source-obstruction lemma must only be applied after this distinction is resolved.
