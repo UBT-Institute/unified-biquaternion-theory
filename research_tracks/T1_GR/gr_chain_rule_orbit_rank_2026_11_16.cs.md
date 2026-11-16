@@ -40,3 +40,7 @@ B: vypočítat přímý proud při pevném E a jeho projekce do stabilizátoru n
 <!-- UNIT: implementation -->
 ## Ověření a omezení
 Přesné SymPy výpočty pro časupodobné X=(1,0,0,0), prostorupodobné X=(0,1,0,0) a netriviální časupodobné X=(2,1,0,0) dávají rank(L_X)=3, dim(kernel)=3 a X dot L_X=0. Reprodukovatelný program: tools/verify_gr_chain_rule_orbit_rank_2026_11_16.py. Obecný případ nenulové normy plyne analyticky, protože Lorentzovy generátory pokrývají kolmou nadrovinu. Úplný Hessian Theta, řetězově rekonstruovaná konexe, Lean, CI a nezávislá dvojjazyčná významová kontrola čekají.
+
+<!-- UNIT: simple-current -->
+## Kontrola: jednoduchý kinetický proud splňuje chráněné podmínky automaticky
+Pokud má proud konexe při pevném E **v omezeném Lorentzově vektorovém kinetickém modelu** tvar C_{mu,ab}=v_{mu,c}(J_ab X)^c pro nějaký kovektor v, pak pro každý generátor stabilizátoru Lambda s Lambda X=0 platí Lambda^{ab}C_{mu,ab}=v_mu dot (Lambda X)=0. Těchto dvanáct nutných podmínek tedy jednoduchému proudu nepřekáží. Vyrušení jeho zbývajících složek řetězovým členem stále vyžaduje skutečnou tetrádovou Eulerovu derivaci a přesné koeficienty kanonické akce. Toto pozorování brání vydávat hodnost orbity za no-go.
