@@ -61,3 +61,23 @@ For the minimal Hilbert–Palatini action with invertible e and no matter spin s
 <!-- UNIT: result -->
 ## Conclusion
 [CONDITIONAL] The Cartan comparator supplies established GR dynamics, not a first-principles UBT action. Nieh–Yan removes one naive redundancy in the invariant list. The key unresolved task is compatibility with the **canonical** covariant-tetrad Theta-only variation and its spin/torsion source.
+
+
+<!-- UNIT: exact-matrix -->
+## Exact minimal Cartan matrix: completed test
+For the oriented coframe e^a=dx^a, expand T^a=sum_{m<n}t^a_{mn} dx^m wedge dx^n. The 24 columns are indexed by (a,m<n), and the 24 rows by (c<d,i<j<k). The coefficient matrix of C(T)_{cd}=epsilon_{abcd}T^a wedge dx^b has
+```text
+shape = (24,24)
+rank = 24
+determinant = 16
+inverse * matrix = identity
+```
+with these precise ordering and orientation conventions. The determinant is basis-dependent; invertibility is not. An exact-integer SymPy checker is tools/verify_gr_cartan_map_2026_11_16.py. This reproduces the already canonical conditional GAP-10T-PALATINI theorem, rather than creating a new proof of UBT dynamics.
+
+<!-- UNIT: obstruction -->
+## Consequence for the canonical GR obstruction
+When the Cartan source vanishes, invertibility forces physical T=0. But the canonical repository's GAP-10T-MINIMAL-ONE-CONNECTION-GR no-go states that identifying this torsion-free physical connection with the only jet connection excludes generic curved GR in the pure-pair single-Theta representation. A nonzero Theta-induced source can instead force torsion on a nominal flat vacuum (GAP-10T-FLAT-NOGO). Thus eliminating auxiliary torsion alone does **not** fix the canonical GR recovery: one must distinguish jet and physical connections, or establish a viable torsionful modification, with a complete Theta composite variation. A split-jet construction must not be called an independent fundamental field without reconciling Axiom A.
+
+<!-- UNIT: verification -->
+## Verification log
+Exact rank, determinant and inverse were checked with SymPy in a local exact-arithmetic calculation. The committed reproducibility script implements the same basis. The full repository CI, bilingual semantic verifier, Lean compilation, and coupled canonical Hessian remain **NOT RUN / PENDING**. Merge approval is blocked until mandatory repository gates are satisfied.
