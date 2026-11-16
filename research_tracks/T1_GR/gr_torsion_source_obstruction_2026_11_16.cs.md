@@ -44,3 +44,14 @@ B: Jediná fyzikální torzní konexe se vyhne pomocnému rozdělení, ale vyža
 <!-- UNIT: verification -->
 ## Ověření/stav
 Nezávislý přesný symbolický demonstrační test polynomiální identity je v tools/verify_gr_torsion_source_obstruction_2026_11_16.py; nepotvrzuje kanonické zdroje Theta. Lean, CI repozitáře, sémantický ověřovač dvojjazyčnosti a úplný spřažený Hessian: ČEKAJÍ. Před splněním povinných kontrol nemergovat.
+
+<!-- UNIT: composite-variation -->
+## Překážka řetězové variace v kanonické kompozitní tetrádě
+Pro ilustrační funkcionál F[Theta,E,omega] dosazený za E_mu=N0^(-1/2)D_mu^omega Theta splňuje skutečná variace při pevném Theta
+```text
+delta_omega F_composite =
+  (delta F / delta omega)|_(Theta,E) delta omega
+ + (delta F / delta E_mu) delta_omega E_mu
+delta_omega E_mu = N0^(-1/2) (delta omega_mu) acted on Theta
+```
+Přesné vyjádření UBT musí obnovit indexy, adjungování a párové levé/pravé generátory. Proud vypočtený při *pevném E* tedy není automaticky úplným zdrojem. I když je efektivní Palatiniho zdroj nenulový, řetězový člen může v principu změnit úplnou rovnici stacionarity. Bez vypočtení celé derivace ale nelze prohlásit, že se příspěvky ruší. Lemma o zdrojové překážce lze na úplnou teorii použít až po vyřešení tohoto rozdílu.
