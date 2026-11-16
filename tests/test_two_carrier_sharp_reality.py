@@ -191,3 +191,78 @@ def test_transverse_plus_lift_is_singular_at_fixed_carriers_in_parallel_limit():
     response = 2 * (tetrad[:, 1].T * ETA * (p + sp.I * q))[0]
     real, imaginary = response.as_real_imag()
     assert sp.expand(real - 2 * imaginary + 4 * epsilon * p[3] + 2 * epsilon * q[3]) == 0
+
+
+def test_complex_eikonal_auxiliaries_are_regular_at_zero_multiplier():
+    x, y, a, b = sp.symbols("x y a b", real=True)
+    sqrt_gamma = sp.Symbol("sqrt_gamma", positive=True)
+    zeta = x + sp.I * y
+    multiplier = a + sp.I * b
+    first = -(zeta**2)
+    second = 2 * sqrt_gamma * multiplier * zeta
+    constraints = sp.Matrix([*first.as_real_imag(), *second.as_real_imag()])
+    jacobian = constraints.jacobian([x, y, a, b])
+    determinant = 16 * sqrt_gamma**2 * (x**2 + y**2)**2
+    assert sp.factor(jacobian.det() - determinant) == 0
+    assert jacobian.subs({a: 0, b: 0, x: 0, y: 1}).det() == 16 * sqrt_gamma**2
+
+
+def test_complex_eikonal_hamiltonian_after_auxiliary_elimination():
+    zeta = sp.Symbol("zeta", nonzero=True)
+    momentum = sp.Symbol("momentum")
+    sqrt_gamma = sp.Symbol("sqrt_gamma", positive=True)
+    shell = zeta**2
+    multiplier = -momentum / (2 * sqrt_gamma * zeta)
+    hamiltonian = momentum * zeta - sqrt_gamma * multiplier * (shell - zeta**2)
+    boundary_momentum = -2 * sqrt_gamma * multiplier * zeta
+    assert sp.simplify(hamiltonian - momentum * zeta) == 0
+    assert sp.simplify(boundary_momentum - momentum) == 0
+    assert boundary_momentum.subs(momentum, 0) == 0
+
+
+def test_complex_eikonal_square_root_yields_spatial_momentum_bracket():
+    gradient = sp.Matrix(sp.symbols("q1:4"))
+    gamma_inverse = sp.Matrix([
+        [2, sp.Rational(1, 2), 0],
+        [sp.Rational(1, 2), 1, sp.Rational(1, 3)],
+        [0, sp.Rational(1, 3), 3],
+    ])
+    chi = sp.Symbol("chi")
+    kappa = sp.Symbol("kappa", positive=True)
+    shell = (gradient.T * gamma_inverse * gradient)[0] - 4 * kappa**2 * chi
+    for root in (sp.sqrt(shell), -sp.sqrt(shell)):
+        derivative = sp.Matrix([sp.diff(root, component) for component in gradient])
+        assert (root * derivative - gamma_inverse * gradient).applyfunc(sp.simplify) == sp.zeros(3, 1)
+
+
+def test_complex_eikonal_frequency_discriminant():
+    a0, b0, q, r, frequency = sp.symbols("a0 b0 q r frequency", real=True)
+    a = a0 * frequency - q
+    b = b0 * frequency - r
+    symbol = sp.Matrix([[a, -b], [b, a]])
+    discriminant = sp.discriminant(symbol.det(), frequency)
+    assert sp.expand(discriminant + 4 * (a0 * r - b0 * q)**2) == 0
+
+
+def test_complex_eikonal_nonreal_frequency_on_the_flat_family():
+    tetrad = sp.eye(4) + sp.I * GENERATOR / 3
+    metric = (tetrad.T * ETA * tetrad).applyfunc(sp.simplify)
+    t = (tetrad.inv() * (V0 + sp.I * W0)).applyfunc(sp.simplify)
+    a = t.applyfunc(sp.re)
+    assert (a.T * metric * a)[0] == -sp.Rational(3, 4)
+    assert sp.simplify(t[1] / t[0]) == sp.Rational(1, 2) + sp.I
+
+
+def test_affine_complex_eikonal_and_normal_stress_transport():
+    x = sp.Matrix(sp.symbols("x0:4", real=True))
+    t = x + sp.Matrix([1 + sp.I / 2, sp.I, 0, 0])
+    # The affine transport coefficient is kappa = 1.
+    multiplier = t[0]**-5
+    perturbation = t[1]**2 / t[0]
+    gradient = sp.Matrix([sp.diff(perturbation, coordinate) for coordinate in x])
+    assert sp.cancel(t.dot(gradient) - perturbation) == 0
+    flux = multiplier * t * t.T
+    divergence = sp.Matrix([
+        sum(sp.diff(flux[i, j], x[i]) for i in range(4)) for j in range(4)
+    ])
+    assert divergence.applyfunc(sp.cancel) == sp.zeros(4, 1)
