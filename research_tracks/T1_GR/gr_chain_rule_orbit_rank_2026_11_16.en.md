@@ -40,3 +40,7 @@ B: compute the fixed-E current and its stabilizer projections on an actual on-sh
 <!-- UNIT: implementation -->
 ## Verification and limit
 Exact SymPy calculations on timelike X=(1,0,0,0), spacelike X=(0,1,0,0), and nontrivial timelike X=(2,1,0,0) give rank(L_X)=3, dim(kernel)=3 and X dot L_X=0. Reproducible checker: tools/verify_gr_chain_rule_orbit_rank_2026_11_16.py. General non-null result follows analytically because Lorentz generators span the orthogonal hyperplane. Full Theta Hessian, chained reconstruction, Lean, CI, and bilingual independent semantic checker remain pending.
+
+<!-- UNIT: simple-current -->
+## Check: a simple kinetic current satisfies protected conditions automatically
+If, **in a restricted Lorentz-vector kinetic model**, the fixed-E connection current is C_{mu,ab}=v_{mu,c}(J_ab X)^c for some covector v, then for every stabilizer generator Lambda with Lambda X=0 one has Lambda^{ab}C_{mu,ab}=v_mu dot (Lambda X)=0. Thus these twelve necessary constraints do not obstruct that simple current. Cancellation of its remaining components by the chain-rule term still requires the actual tetrad Euler derivative and the exact canonical action coefficients. This observation prevents treating the orbit rank as a no-go result.
