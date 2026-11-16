@@ -61,3 +61,23 @@ Pro minimální Hilbertovu–Palatiniho akci s invertibilní e a bez spinového 
 <!-- UNIT: result -->
 ## Závěr
 [PODMÍNĚNÉ] Cartanův komparátor poskytuje známou dynamiku GR, nikoli fundamentální akci UBT odvozenou z prvních principů. Identita Nieh–Yan odstraňuje jednu naivní redundanci seznamu invariantů. Hlavním otevřeným úkolem je slučitelnost s **kanonickou** variací Theta přes kovariantní tetrádu a jejím spinovým/torzním zdrojem.
+
+
+<!-- UNIT: exact-matrix -->
+## Přesná minimální Cartanova matice: dokončený test
+Pro orientovanou kotetrádu e^a=dx^a rozepišme T^a=sum_{m<n}t^a_{mn} dx^m wedge dx^n. Indexy 24 sloupců jsou (a,m<n) a indexy 24 řádků jsou (c<d,i<j<k). Matice koeficientů zobrazení C(T)_{cd}=epsilon_{abcd}T^a wedge dx^b má
+```text
+shape = (24,24)
+rank = 24
+determinant = 16
+inverse * matrix = identity
+```
+při uvedeném pořadí a orientaci. Determinant závisí na bázi; invertibilita nikoli. Přesný kontrolní program v SymPy je tools/verify_gr_cartan_map_2026_11_16.py. Reprodukuje již kanonicky zaznamenanou podmíněnou větu GAP-10T-PALATINI, nikoli nový důkaz dynamiky UBT.
+
+<!-- UNIT: obstruction -->
+## Důsledek pro kanonickou překážku odvození GR
+Při nulovém Cartanově zdroji vynucuje invertibilita nulovou fyzikální torzi T=0. Avšak kanonický no-go GAP-10T-MINIMAL-ONE-CONNECTION-GR říká, že ztotožnění této bez-torzní fyzikální konexe s jedinou jet-konexí v čistě párové reprezentaci jediného Theta vylučuje obecnou zakřivenou GR. Nenulový zdroj indukovaný Theta může naopak vynucovat torzi i v nominálně plochém vakuu (GAP-10T-FLAT-NOGO). Samotná eliminace pomocné torze tedy **neřeší** odvození kanonické GR: musíme rozlišit jet-konexi a fyzikální konexi nebo prokázat životaschopné torzní rozšíření při úplné kompozitní variaci Theta. Rozdělenou jet-konstrukci nelze bez sladění s axiomem A nazývat nezávislým fundamentálním polem.
+
+<!-- UNIT: verification -->
+## Záznam ověření
+Přesná hodnost, determinant a inverze byly ověřeny lokálním výpočtem v SymPy s exaktní aritmetikou. Commitnutý reprodukovatelný skript implementuje stejnou bázi. Kompletní CI repozitáře, dvojjazyčný významový ověřovač, kompilace Lean a spřažený kanonický Hessian zůstávají **NESPUŠTĚNÉ / ČEKAJÍ**. Merge je blokován, dokud neprojdou povinné kontroly repozitáře.
