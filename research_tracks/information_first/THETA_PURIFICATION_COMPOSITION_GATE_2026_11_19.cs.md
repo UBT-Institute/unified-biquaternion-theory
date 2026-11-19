@@ -10,24 +10,24 @@ policy: ../../AI_PROVENANCE.md
 notice: Purification and operator-composition mathematics only; the physical tensor split, on-shell quantization, Born instrument and gravity constraints remain OPEN.
 UBT-AI-PROVENANCE-END
 -->
-# Jediné úplné Theta, purifikovaná hustota pozorovatele a chybějící fyzikální tenzorový zákon
+# Jediné úplné Θ, purifikovaná hustota pozorovatele a chybějící fyzikální zákon tenzorového součinu
 
 <!-- UNIT: scope -->
-## Cíl: odvodit stopu bez přidání druhého pole
+## Cíl: odvodit stopu bez zavádění druhého pole
 
-Navazujeme na podmíněný důkaz jednoznačnosti: přímo ukážeme, jak jedno původní úplné Θ poskytne dvouindexovou amplitudu, jak ignorování indexu vede ke kandidátní hustotě a které fyzikální předpoklady nadále chybějí. Jde o maticovou identitu a srovnávací model měření, nikoli dokončenou kvantovou dynamiku UBT.
+Jděme za předchozí podmíněný důkaz jednoznačnosti: ukažme explicitně, jak jediné původní úplné Θ poskytuje matematickou amplitudu se dvěma indexy, jak zapomenutí jednoho indexu vede ke kandidátní matici hustoty a jakou další přesnou fyzikální strukturu to stále předpokládá. Jde o maticovou identitu a komparátor kvantového měřicího instrumentu, nikoli o dokončený výsledek kvantové dynamiky UBT.
 
 <!-- UNIT: purification -->
-## Jediný biquaternion jako podmíněná purifikace pozorovatelského stavu
+## Jediný bikvaternion jako podmíněný purifikovaný stav pozorovatele
 
-For the already DECLARED candidate observer reference \(N=N^\dagger>0\), define \(T_N=N^{-1/2}\Theta N^{-1/2}\in M_2(\mathbb C)\) and its four-component **vectorization**
+Pro již DEKLAROVANOU kandidátní pozorovatelskou referenci \(N=N^\dagger>0\) definujme \(T_N=N^{-1/2}\Theta N^{-1/2}\in M_2(\mathbb C)\) a její čtyřsložkovou **vektorizaci**
 \[
 \boxed{|T_N\rangle\rangle=\sum_{i,j=0}^{1}(T_N)_{ij}|i\rangle_A|j\rangle_B
 \quad\in\mathbb C^2\otimes\mathbb C^2.}\tag{A}
 \]
-The two labels \(A,B\) are at this stage mathematical matrix indices, NOT demonstrated separate particles, detectors, causally independent regions or a new fundamental field. The positive Hilbert norm requires the **observer-selected Hermitian involution** \(\dagger\), NOT the canonical complex-bilinear gravitational sharp.
+Oba štítky \(A,B\) jsou zatím matematickými maticovými indexy, **NIKOLI** prokázanými oddělenými částicemi, detektory, kauzálně nezávislými oblastmi nebo novým fundamentálním polem. Kladná Hilbertova norma vyžaduje **hermitovskou involuci zvolenou pozorovatelem** \(\dagger\), **NIKOLI** kanonickou komplexně bilineární gravitační sharp-operaci.
 
-For \(T_N\ne0\), normalize \(|\Phi_N\rangle=|T_N\rangle\rangle/\sqrt{\langle\langle T_N|T_N\rangle\rangle}\); then
+Pro \(T_N\ne0\) normalizujme \(|\Phi_N\rangle=|T_N\rangle\rangle/\sqrt{\langle\langle T_N|T_N\rangle\rangle}\); potom
 \[
 \langle\langle T_N|T_N\rangle\rangle=\operatorname{tr}(T_N^\dagger T_N),
 \]
@@ -37,14 +37,14 @@ For \(T_N\ne0\), normalize \(|\Phi_N\rangle=|T_N\rangle\rangle/\sqrt{\langle\lan
 =\frac{T_NT_N^\dagger}{\operatorname{tr}(T_NT_N^\dagger)}
 =\rho_N.}\tag{B}
 \]
-Proof by matrix entries: \((\operatorname{Tr}_B|\Phi\rangle\langle\Phi|)_{ik}=\sum_j (T_N)_{ij}\overline{(T_N)_{kj}}/\operatorname{tr}(T_N^\dagger T_N)\). This is a UNIQUE finite-dimensional algebraic identity for the **CHOSEN** factorization. It is not yet an ontic claim that UBT contains a second physical subsystem \(B\).
+Důkaz po maticových prvcích: \((\operatorname{Tr}_B|\Phi\rangle\langle\Phi|)_{ik}=\sum_j (T_N)_{ij}\overline{(T_N)_{kj}}/\operatorname{tr}(T_N^\dagger T_N)\). Jde o JEDNOZNAČNOU konečně rozměrnou algebraickou identitu pro **ZVOLENOU** faktorizaci. Zatím to není ontologické tvrzení, že UBT obsahuje druhý fyzikální podsystém \(B\).
 
-This makes the trace a partial trace of one amplitude over an **assumed unresolved index**, not a free numerical normalization trick. The interpretation of that index, positivity and Hilbert tensor product are the actual undetermined physical assumptions.
+Stopa se tak stává parciální stopou jedné amplitudy přes **předpokládaný nerozlišený index**, nikoli volným trikem s číselnou normalizací. Skutečně neurčenými fyzikálními předpoklady zůstávají interpretace indexu, kladnost a Hilbertův tenzorový součin.
 
 <!-- UNIT: filter -->
-## Kvadratické filtrační odezvy: kde se stále předpokládá Bornovo pravidlo
+## Kvadratické podíly filtrační odezvy: kde se Bornovo pravidlo předpokládá
 
-Given a positive hypothetical detector effect \(0\le M\le I_2\) acting on the \(A\) index and a linear filter \(K\) satisfying \(K^\dagger K=M\), the **conditional relative transmitted quadratic response** is
+Pro hypotetický kladný detektorový efekt \(0\le M\le I_2\) působící na index \(A\) a lineární filtr \(K\) splňující \(K^\dagger K=M\) je **podmíněný relativní podíl přenesené kvadratické odezvy**
 \[
 \boxed{
 p(M|T_N)=\frac{\|(K\otimes I_2)|T_N\rangle\rangle\|^2}
@@ -53,107 +53,107 @@ p(M|T_N)=\frac{\|(K\otimes I_2)|T_N\rangle\rangle\|^2}
 {\operatorname{tr}(T_N^\dagger T_N)}
 =\operatorname{tr}(\rho_NM).}\tag{C}
 \]
-For example take \(M=\operatorname{diag}(1/4,3/4)\), \(K=\operatorname{diag}(1/2,\sqrt3/2)\). The two effects \(M\) and \(I_2-M\) sum to identity and have total transmitted fraction \(1\). Exact SymPy calculation with \(T_N=\begin{psmallmatrix}1&2+i\\3-i&4\end{psmallmatrix}\) gives \(p(M)=21/32\).
+Například vezměme \(M=\operatorname{diag}(1/4,3/4)\) a \(K=\operatorname{diag}(1/2,\sqrt3/2)\). Dva efekty \(M\) a \(I_2-M\) dávají v součtu identitu a jejich celkový přenesený podíl je \(1\). Přesný výpočet SymPy s \(T_N=\begin{psmallmatrix}1&2+i\\3-i&4\end{psmallmatrix}\) dává \(p(M)=21/32\).
 
-If an outcome is **postselected**, the normalized filtered \(A\)-state is the usual conditional map \(K\rho_NK^\dagger/\operatorname{tr}(M\rho_N)\). But no physical detector or dynamically stochastic outcome is supplied by the mathematical identity (C): assuming a positive Hilbert norm and a linear effect filter already assumes substantial QM structure. Neither \(\sqrt M\), outcome probabilities in repeated experiments, detector-pointer decoherence, nor actual collapse is derived from the locked UBT action.
+Je-li výsledek **dodatečně vybrán**, normalizovaný filtrovaný stav \(A\) je obvyklé podmíněné zobrazení \(K\rho_NK^\dagger/\operatorname{tr}(M\rho_N)\). Samotná matematická identita (C) však neposkytuje fyzikální detektor ani dynamicky stochastický výsledek: předpoklad kladné Hilbertovy normy a lineárního filtru efektů už předpokládá podstatnou část struktury QM. Ze zamčené akce UBT není odvozena ani \(\sqrt M\), ani pravděpodobnosti výsledků v opakovaných experimentech, dekoherence ukazatele detektoru či skutečný kolaps.
 
 <!-- UNIT: phase -->
 ## Lokálně skrytá fáze SU(2) a společná dvouindexová korelace
 
-A small exact phase witness illustrates what one observer cannot see. Let
+Malý přesný fázový příklad ilustruje, co jeden pozorovatel nevidí. Nechť
 \[
 \Theta_+=I_2,\qquad\Theta_-=i\sigma_3,\qquad N=I_2.
 \]
-Both are full invertible biquaternions and \(\Theta_-= \Theta_+ (i\sigma_3)\) with the right factor in \(SU(2)\). Yet
+Obě hodnoty jsou úplné invertibilní bikvaterniony a \(\Theta_-= \Theta_+ (i\sigma_3)\) s pravým faktorem v \(SU(2)\). Přesto
 \[
 \boxed{\rho_I[\Theta_+]=\rho_I[\Theta_-]=\tfrac12 I_2.}\tag{D}
 \]
-Their normalized vectorizations are \(|\Phi_+\rangle=(|00\rangle+|11\rangle)/\sqrt2\) and \(|\Phi_-\rangle=i(|00\rangle-|11\rangle)/\sqrt2\). A **joint mathematical operator**, if physically available, distinguishes the relative phase:
+Jejich normalizované vektorizace jsou \(|\Phi_+\rangle=(|00\rangle+|11\rangle)/\sqrt2\) a \(|\Phi_-\rangle=i(|00\rangle-|11\rangle)/\sqrt2\). **Společný matematický operátor**, pokud by byl fyzikálně dostupný, rozliší relativní fázi:
 \[
 \boxed{
 \langle\Phi_+|\sigma_1\otimes\sigma_1|\Phi_+\rangle=1,\qquad
 \langle\Phi_-|\sigma_1\otimes\sigma_1|\Phi_-\rangle=-1.}\tag{E}
 \]
-Embedding each constant value \(B\in\{\Theta_+,\Theta_-\}\) in the SAME one-field affine jet
+Dosazením obou konstantních hodnot \(B\in\{\Theta_+,\Theta_-\}\) do TÉHOŽ afinního jetu jediného pole
 \[
 \Theta_B(t,x,y,z)=B+i(tI_2+x\sigma_1+y\sigma_2+z\sigma_3)
 \]
-yields \(E_\mu=i\sigma_\mu\in W_L\) and the locked sharp \(g=\eta\) for **both configurations**, at every ordinary 4D point. The displayed \(\rho_I\) equality is asserted at the coordinate origin; away from it the readouts can differ. This is OFF-SHELL flat kinematics, not two selected full UBT solutions or an observed Bell experiment.
+dostaneme \(E_\mu=i\sigma_\mu\in W_L\) a uzamčenou sharp-metriku \(g=\eta\) pro **obě konfigurace**, v každém běžném bodě 4D. Zobrazená rovnost \(\rho_I\) je tvrzena v počátku souřadnic; mimo něj se mohou odečty lišit. Jde o OFF-SHELL plochou kinematiku, nikoli dvě vybraná úplná řešení UBT nebo pozorovaný Bellův experiment.
 
-It is crucial that \(i\sigma_3\) is also one of the observer-blind right transformations that generally fail to preserve the entire Lorentz-real slice when applied to a **whole first jet**. The affine example instead changes only the x-constant value \(B\) and keeps \(E_\mu\) fixed; these transformations MUST NOT be conflated. Whether the difference in \(B\) is a physical observable or a hidden global/gauge direction requires a selected action and detector law.
+Je zásadní, že \(i\sigma_3\) je také jednou z pozorovatelsky nerozlišitelných pravých transformací, které při použití na **celý první jet** obecně nezachovají úplný Lorentzovsky reálný řez. Afinní příklad však mění pouze konstantní hodnotu \(B\) a zachovává \(E_\mu\); tyto transformace se **NESMĚJÍ** zaměňovat. Zda rozdíl v \(B\) představuje fyzikální pozorovatelnou veličinu nebo skrytý globální či kalibrační směr, vyžaduje zvolenou akci a zákon detektoru.
 
 <!-- UNIT: lorentz -->
-## Kovariance formální purifikace při společné Lorentzově transformaci
+## Kovariance formální purifikace při současné Lorentzově změně rámce
 
-Under the already proven joint Lorentz-spin/observer reference change
+Při již dokázané společné změně Lorentzova spinového rámce a pozorovatelské reference
 \[
 \Theta'=S\Theta S^\dagger,\quad N'=SNS^\dagger,\quad
 U=N'^{-1/2}SN^{1/2}\in SU(2),
 \]
-we have \(T_{N'}'=UT_NU^\dagger\). With the row-first vectorization convention,
+platí \(T_{N'}'=UT_NU^\dagger\). Při konvenci vektorizace po řádcích
 \[
 \boxed{
 |T_{N'}'\rangle\rangle=(U\otimes\overline U)|T_N\rangle\rangle,\qquad
 \rho_{N'}'=U\rho_NU^\dagger.}\tag{F}
 \]
-This supplies a consistent CANDIDATE observer frame transformation, where the two mathematical factors transform **correlatively**, not as two independently derived physical local gauge groups. Physical multi-observer synchronization and the connection needed for between-point comparison remain unspecified. The fixed canonical sharp-derived tetrad and the complex-time definition \(\tau=t+i\psi\) are not altered.
+To dává konzistentní KANDIDÁTNÍ transformaci pozorovatelského rámce, v níž se oba matematické faktory transformují **korelovaně**, nikoli jako dvě nezávisle odvozené fyzikální lokální kalibrační grupy. Fyzikální synchronizace více pozorovatelů a konexe potřebná pro porovnání různých bodů zůstávají neurčené. Pevná kanonická tetráda odvozená ze sharp-operace ani definice komplexního času \(\tau=t+i\psi\) se nemění.
 
 <!-- UNIT: composites -->
 ## Bez operační faktorizace nevznikne druhá nezávislá lokální maticová algebra
 
-**The new compositional obstruction is not "a \(2\times2\) matrix cannot describe two-qubit entanglement."** As (A)–(E) show, the vector space \(M_2(\mathbb C)\simeq\mathbb C^4\) CAN be algebraically factorized as \(\mathbb C^2\otimes\mathbb C^2\) for an individual *pure* bipartite mathematical state. The issue is that the underlying **physical tensor-factor and local operator algebras are not selected by the canonical UBT axioms**. In particular, if one insists that two independent full qubit observable algebras live as commuting unital subalgebras INSIDE the same single \(M_2(\mathbb C)\) output algebra, this is impossible: any faithful embedded \(M_2(\mathbb C)\) is all of \(M_2(\mathbb C)\), whose commutant is just \(\mathbb C I_2\). Hence a second independent commuting copy cannot also fit there.
+**Nová kompoziční překážka NEZNÍ „matice \(2\times2\) nemůže popsat provázání dvou qubitů“.** Jak ukazují (A)–(E), vektorový prostor \(M_2(\mathbb C)\simeq\mathbb C^4\) LZE algebraicky faktorizovat jako \(\mathbb C^2\otimes\mathbb C^2\) pro jednotlivý *čistý* bipartitní matematický stav. Problém spočívá v tom, že **fyzikální tenzorové faktory ani lokální operátorové algebry nejsou vybrány kanonickými axiomy UBT**. Konkrétně požadujeme-li, aby dvě nezávislé úplné pozorovatelné algebry qubitů byly komutujícími unitalními podalgebrami UVNITŘ téže jediné výstupní algebry \(M_2(\mathbb C)\), je to nemožné: každé věrně vložené \(M_2(\mathbb C)\) tvoří celé \(M_2(\mathbb C)\), jehož komutantem jsou jen \(\mathbb C I_2\). Druhá nezávislá komutující kopie se tam proto nemůže vejít.
 
-One may instead let left and right multiplication act on the **vectorized \(\mathbb C^4\)**, where the tensor algebra is \(M_2(\mathbb C)\otimes M_2(\mathbb C)\simeq M_4(\mathbb C)\). This is mathematically consistent but **an additional operational factorization**, not a physical discovery of two qubits from the one-field action. Its row/column split is frame/reference dependent and the full right-unitary family is not canonical Lorentz tetrad gauge.
+Levé a pravé násobení lze místo toho nechat působit na **vektorizované \(\mathbb C^4\)**, kde je tenzorová algebra \(M_2(\mathbb C)\otimes M_2(\mathbb C)\simeq M_4(\mathbb C)\). To je matematicky konzistentní, avšak jde o **dodatečnou operační faktorizaci**, nikoli fyzikální objev dvou qubitů z akce jediného pole. Rozdělení na řádky a sloupce závisí na rámci a referenci a úplná rodina pravých unitárních transformací není kanonickou kalibrací Lorentzovy tetrády.
 
-Moreover a single pointwise \(\mathbb C^4\) amplitude cannot represent an arbitrary pure state of THREE independently addressable qubits (complex dimension \(8\)); multi-particle physics must use nonlocal/multimode quantum states, an appropriate Fock/operator construction, or other justified emergent compositional structures from the ONE spatially extended field \(\Theta\). This does NOT require extra fundamental classical fields, but DOES require a selected microscopic symplectic form, quantization, locality and causal commutativity.
+Bodová amplituda jediného \(\mathbb C^4\) navíc nemůže reprezentovat libovolný čistý stav TŘÍ nezávisle adresovatelných qubitů (komplexní dimenze \(8\)); mnohočásticová fyzika potřebuje nelokální či multimódové kvantové stavy, vhodnou Fockovu/operátorovou konstrukci nebo jinou odůvodněnou emergentní kompoziční strukturu z JEDINÉHO prostorově rozprostřeného pole \(\Theta\). To **NEVYŽADUJE** další fundamentální klasická pole, **VYŽADUJE** však zvolenou mikroskopickou symplektickou formu, kvantování, lokalitu a kauzální komutativitu.
 
-Finally a deterministic classical map \(\Theta\mapsto\rho_N\) alone cannot select a genuinely random unique detector outcome. A dynamical measurement instrument (or a justified hidden-variable or branching account) and its probability calculus are independent missing parts.
+Konečně samotné deterministické klasické zobrazení \(\Theta\mapsto\rho_N\) nemůže vybrat skutečně náhodný jediný výsledek detektoru. Dynamický měřicí instrument (nebo odůvodněné vysvětlení skrytými proměnnými či větvením) a jeho počet pravděpodobností jsou samostatnými chybějícími částmi.
 
 <!-- UNIT: norm-gauge -->
-## Biquaternionová sharp-norma, concurrence a překážka pozorování pravé kalibrační fáze
+## Bikvaternionová sharp-norma, concurrence a věta o nepozorovatelnosti pravé kalibrace
 
-There is a useful exact bridge to the ORIGINAL biquaternion sharp norm, and a sharper physical-observability obstruction.
+Existuje užitečný přesný most k PŮVODNÍ bikvaternionové sharp-normě a silnější překážka fyzikální pozorovatelnosti.
 
-For the CHOSEN \(2\otimes2\) Hilbert factorization of the normalized \(|T_N\rangle\rangle\), the pure bipartite **concurrence** is the standard algebraic quantity
+Pro ZVOLENOU Hilbertovu faktorizaci \(2\otimes2\) normalizovaného \(|T_N\rangle\rangle\) je **concurrence** čistého bipartitního stavu standardní algebraickou veličinou
 \[
 \boxed{
 \mathcal C_N=\frac{2|\det T_N|}{\operatorname{tr}(T_NT_N^\dagger)}
 =\frac{2|\det\Theta|}{\operatorname{tr}(T_NT_N^\dagger)}
 \quad(\det N=1).}\tag{G}
 \]
-The second equality follows from \(T_N=N^{-1/2}\Theta N^{-1/2}\), whereas the quaternion-conjugate identity \(T_N^\sharp T_N=(\det T_N)I_2\) explains the determinant's occurrence from within the original \(\mathbb C\otimes\mathbb H\) algebra. For the reduced observer density,
+Druhá rovnost plyne z \(T_N=N^{-1/2}\Theta N^{-1/2}\), zatímco identita pro kvaternionově sdružený objekt \(T_N^\sharp T_N=(\det T_N)I_2\) vysvětluje přítomnost determinantu přímo v původní algebře \(\mathbb C\otimes\mathbb H\). Pro redukovanou pozorovatelskou matici hustoty platí
 \[
 \boxed{
 \operatorname{tr}(\rho_N^2)=1-\frac{\mathcal C_N^2}{2},
 \qquad 0\le\mathcal C_N\le1.}\tag{H}
 \]
-Proof: \(\operatorname{tr}\rho_N=1\), \(\det\rho_N=|\det T_N|^2/[\operatorname{tr}(T_NT_N^\dagger)]^2\), and for a \(2\times2\) trace-one matrix \(\operatorname{tr}\rho_N^2=1-2\det\rho_N\). The bound follows from arithmetic-geometric mean on the squared singular values of \(T_N\). Pure reduced state has \(\mathcal C_N=0\) and rank-one \(T_N\). Maximally mixed reduced state has \(\mathcal C_N=1\), with \(T_N\) proportional to a unitary. The candidate \(\mathcal C_N\) is invariant under the declared simultaneous Lorentz/observer change \(T_N\mapsto U T_NU^\dagger\). It is NOT a proved physically measured UBT entanglement monotone, because its right-index subsystem is not dynamically selected.
+Důkaz: \(\operatorname{tr}\rho_N=1\), \(\det\rho_N=|\det T_N|^2/[\operatorname{tr}(T_NT_N^\dagger)]^2\) a pro matici \(2\times2\) se stopou jedna \(\operatorname{tr}\rho_N^2=1-2\det\rho_N\). Omezení plyne z aritmeticko-geometrického průměru čtverců singulárních hodnot \(T_N\). Čistý redukovaný stav má \(\mathcal C_N=0\) a hodnost jedna \(T_N\). Maximálně smíšený redukovaný stav má \(\mathcal C_N=1\), kde \(T_N\) je úměrné unitární matici. Kandidátní \(\mathcal C_N\) je invariantní vůči deklarované současné změně Lorentzova rámce a pozorovatele \(T_N\mapsto U T_NU^\dagger\). **NENÍ** prokázaným fyzikálně měřeným monotónem provázání UBT, protože podsystém pravého indexu není dynamicky vybrán.
 
-**Operational right-gauge theorem.** Suppose (as an ADDITIONAL, unproved hypothesis) that the full right \(U(2)\) freedom of the one-clock protocol is a genuine physical gauge redundancy on the vectorized purification. Then every allowable Hermitian **joint observable** \(\mathcal O\) must be invariant under all \((I_2\otimes V)\), \(V\in U(2)\) (up to the harmless transpose choice for the right index). By the commutant of the fundamental irreducible \(U(2)\) action,
+**Operační věta o pravé kalibraci.** Předpokládejme jako DODATEČNOU nedokázanou hypotézu, že úplná pravá volnost \(U(2)\) jednohodinového protokolu je skutečnou fyzikální kalibrační redundancí ve vektorizované purifikaci. Pak musí být každá přípustná hermitovská **společná pozorovatelná veličina** \(\mathcal O\) invariantní vůči všem \((I_2\otimes V)\) a \(V\in U(2)\) (až na nepodstatnou volbu transpozice pravého indexu). Z komutantu fundamentální ireducibilní reprezentace \(U(2)\) plyne
 \[
 \boxed{
 [\mathcal O,I_2\otimes V]=0\quad\forall V\in U(2)
 \;\Longrightarrow\;
 \mathcal O=A\otimes I_2.}\tag{I}
 \]
-Proof with no representation-theory black box: write \(\mathcal O\) as four \(2\times2\) blocks on the right index. Commutation with \(I_2\otimes\sigma_3\) forces each block to be diagonal; with \(I_2\otimes\sigma_1\) forces its diagonal entries to be equal. Thus every block is a multiple of \(I_2\).
+Důkaz bez odvolání na teoreticko-reprezentační černou skříňku: zapišme \(\mathcal O\) jako čtyři bloky \(2\times2\) na pravém indexu. Komutace s \(I_2\otimes\sigma_3\) nutí každý blok být diagonální, komutace s \(I_2\otimes\sigma_1\) vynucuje rovnost jeho diagonálních prvků. Každý blok je proto násobkem \(I_2\).
 
-Consequently \(\langle\mathcal O\rangle=\operatorname{tr}(\rho_N A)\) depends ONLY on the one-clock density. No **physical gauge-invariant** observable could then distinguish the earlier \(\Theta_+=I_2\) and \(\Theta_-=i\sigma_3\), despite their mathematical \(\sigma_1\otimes\sigma_1\) correlation difference. In fact
+Proto \(\langle\mathcal O\rangle=\operatorname{tr}(\rho_N A)\) závisí POUZE na jednohodinové matici hustoty. Žádná **fyzikální kalibračně invariantní** pozorovatelná veličina pak nemůže rozlišit dřívější \(\Theta_+=I_2\) a \(\Theta_-=i\sigma_3\), přestože jejich matematická korelace \(\sigma_1\otimes\sigma_1\) je rozdílná. Ve skutečnosti
 \[
 (I_2\otimes i\sigma_3)^\dagger
 (\sigma_1\otimes\sigma_1)
 (I_2\otimes i\sigma_3)
 =-(\sigma_1\otimes\sigma_1),\tag{J}
 \]
-so this comparator is specifically NOT invariant under the proposed right gauge. This is a precise **either/or**: if the whole right group is genuine gauge, hidden phase differences are unobservable in the one-clock theory; if an independently calibrated right-phase reference exposes them, the right action must NOT be treated as that unrestricted physical gauge (or the reference must transform as part of a fully gauge-invariant relational measurement). The prior canonical \(W_L\) right-action obstruction independently warns against such promotion.
+takže tento komparátor konkrétně **NENÍ** invariantní vůči navržené pravé kalibraci. Jde o přesnou **alternativu buď/anebo**: pokud je celá pravá grupa skutečnou kalibrací, jsou skryté fázové rozdíly v jednohodinové teorii nepozorovatelné; pokud je odhaluje nezávisle kalibrovaná reference pravé fáze, pravá akce **NESMÍ** být považována za tuto neomezenou fyzikální kalibraci (nebo se musí reference transformovat jako součást plně kalibračně invariantního relačního měření). Dřívější kanonická překážka pravé akce \(W_L\) před takovým povýšením nezávisle varuje.
 
-The sharp norm connects algebraic \(\Theta\) and a mathematical entanglement proxy, but does NOT select Born outcomes, a physical second subsystem or a new Hamiltonian.
+Sharp-norma spojuje algebraickou \(\Theta\) s matematickým zástupným ukazatelem provázání, ale **NEVYBÍRÁ** Bornovy výsledky, fyzikální druhý podsystém ani nový Hamiltonián.
 
 <!-- UNIT: next -->
 ## Mikroskopická dynamika potřebná pro skutečnou kvantovou kompozici
 
-**Concrete next derivation.** Fix an admissible full-\(\Theta\) microscopic action, identify its reduced physical phase space and symplectic two-form, and derive the fundamental positive observer representation. Then test whether two **spacelike separated smeared observable algebras** can be constructed with physically justified commutation/factorization rather than by arbitrarily labeling two matrix indices as particles. Only then derive the detector filter effect, frequencies, projection/update and Born weights without assuming the latter. Analyze the same canonical \(D_\mu\Theta\) Lorentz-real constraints, possible torsion, ghost/energy positivity and \(\psi\)-sector stability.
+**Konkrétní další odvození.** Určit přípustnou mikroskopickou akci úplného \(\Theta\), identifikovat její redukovaný fyzikální fázový prostor a symplektickou dvouformu a odvodit fundamentální kladnou pozorovatelskou reprezentaci. Potom otestovat, zda lze vytvořit dvě **prostorupodobně oddělené rozmazané algebry pozorovatelných veličin** s fyzikálně odůvodněnou komutací a faktorizací, nikoli pouhým libovolným označením dvou maticových indexů za částice. Teprve poté odvodit filtrační efekt detektoru, četnosti, projekci/aktualizaci a Bornovy váhy bez jejich předpokládání. Analyzovat tytéž kanonické Lorentzovsky reálné vazby \(D_\mu\Theta\), případnou torzi, kladnost ghostů/energie a stabilitu sektoru \(\psi\).
 
-This note is NOT a claimed new proof of standard purification or Bell correlations. It is a scoped reverse-engineering result and a concrete **missing-physics gate** for UBT.
+Tento text **NENÍ** proklamovaným novým důkazem standardní purifikace ani Bellových korelací. Jde o vymezený výsledek zpětného odvozování a konkrétní test **chybějící fyziky** v UBT.
 
-Earlier merged sources: canonical/AXIOMS.md, research_tracks/information_first/THETA_DENSITY_REVERSE_PRINCIPLE_2026_11_19.en.md, research_tracks/information_first/THETA_OBSERVER_RELATIVE_INFORMATION_CHANNEL_2026_11.en.md. Existing draft predecessor: research_tracks/information_first/THETA_OPERATIONAL_ADDITIVITY_LORENTZ_GAUGE_GATE_2026_11_19.en.md. Checker: tools/verify_theta_purification_composition_gate_2026_11_19.py.
+Dříve mergnuté zdroje: canonical/AXIOMS.md, research_tracks/information_first/THETA_DENSITY_REVERSE_PRINCIPLE_2026_11_19.en.md, research_tracks/information_first/THETA_OBSERVER_RELATIVE_INFORMATION_CHANNEL_2026_11.en.md. Předchozí rozpracovaná verze: research_tracks/information_first/THETA_OPERATIONAL_ADDITIVITY_LORENTZ_GAUGE_GATE_2026_11_19.en.md. Ověřovač: tools/verify_theta_purification_composition_gate_2026_11_19.py.
