@@ -30,7 +30,7 @@ Tsum=s.simplify(Tplus+Tminus)
 assert s.simplify(j0(Tplus)-2*m*norm)==0
 assert s.simplify(j0(Tminus)+2*m*norm)==0
 assert s.simplify(j0(Tsum))==0
-assert s.simplify(s.diff(s.trace(Tsum.H*Tsum),t)+8*m*s.sin(2*m*t)*norm)==0
+assert s.simplify(s.diff(s.trace(Tsum.H*Tsum),t)+4*m*s.sin(2*m*t)*norm)==0
 assert s.simplify(s.diff(j0(Tplus),t))==0
 assert s.simplify(s.diff(j0(Tminus),t))==0
 
