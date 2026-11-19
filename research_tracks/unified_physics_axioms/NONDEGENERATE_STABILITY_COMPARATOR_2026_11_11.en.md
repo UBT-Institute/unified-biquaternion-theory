@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Nondegenerate tetrad witness versus full UBT stability
 
 This note complements RADIAL_STABILITY_RANK_GATE_2026_11_11.en.md. The healthy auxiliary-connection scalar reduction cannot yield a nondegenerate composite metric, but a distinct **split-jet** kinematic construction already realizes a regular composite tetrad, as documented in research_tracks/action_selection/physics_closure_bare_action_2026_10.en.md.

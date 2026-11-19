@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Nedegenerovaná tetráda versus úplná stabilita UBT
 
 Tato poznámka doplňuje RADIAL_STABILITY_RANK_GATE_2026_11_11.cs.md. Zdravá skalární větev s pomocnou konexí nevytvoří nedegenerovanou kompozitní metriku, ale odlišná **split-jet** kinematická konstrukce již dává regulární tetrádu, viz research_tracks/action_selection/physics_closure_bare_action_2026_10.en.md.
