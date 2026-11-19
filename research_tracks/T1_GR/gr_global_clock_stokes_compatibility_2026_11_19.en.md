@@ -10,12 +10,32 @@ policy: ../../AI_PROVENANCE.md
 notice: Conditional global clock and volume-form topology theorem; no full UBT dynamics or Lambda prediction.
 UBT-AI-PROVENANCE-END
 -->
-# The compact-HT contradiction is excluded already by the global Theta proper-time clock
+# Local HT volume potential needs no global Theta time
 
 <!-- UNIT: scope -->
-## Resolution of the apparent contradiction
+## Correction: global time was an extra assumption
 
-The equation dC3=volume contradicts global smooth C3 on a compact closed spacetime. The point is not an inconsistency of all UBT: that global topology is also incompatible with the already-derived intrinsic Theta clock on the globally timelike Lorentz branch. Two conditional global assumptions had been combined; both cannot hold. The Stokes obstruction is standard exterior calculus, and the clock maximum argument is standard smooth calculus.
+The earlier title and explanation overstated what the UBT kinematics implies. The restricted real Lorentz-vector identity yields a **local** proper-time scalar on any patch where the carrier X is timelike and the physical connection is metric compatible. An FLRW/synchronous coframe was only a **chosen diagnostic geometry**, not cosmological evolution derived from Theta. Neither the locked kinematics nor the example proves X is timelike everywhere, that such a scalar extends smoothly over all of spacetime, or that the full complex-Theta theory requires a global time.
+
+The HT equation dC3=volume and its potential Stokes contradiction are logically separate from the clock identity. On arbitrary local patches the HT equation is solved without using a time variable derived from Theta at all. The maximality argument below is a valid **conditional theorem** only after imposing a globally timelike carrier; it cannot be used to rule out closed spacetime topology for UBT in general.
+
+<!-- UNIT: local -->
+## Direct local C3 primitive without any cosmology
+
+On an arbitrary oriented coordinate chart \(U\), write the metric volume form as
+\[
+\nu_e=f(x^0,x^1,x^2,x^3)\,dx^0\wedge dx^1\wedge dx^2\wedge dx^3,
+\qquad f=\sqrt{-\det g}>0.
+\]
+Fix a reference coordinate value \(x^0_\ast\) inside the chart and define
+\[
+\boxed{
+C_3=\left(\int_{x^0_\ast}^{x^0}
+f(\tau,x^1,x^2,x^3)\,d\tau\right)
+dx^1\wedge dx^2\wedge dx^3 .
+}\tag{D}
+\]
+Its exterior derivative is exactly \(dC_3=\nu_e\), since all spatial-derivative contributions contain a repeated spatial differential. The coordinate \(x^0\) is **arbitrary** here: it is NOT a derived global time, NOT the intrinsic \(T=\sqrt{-X^2/\mathcal N_0}\), and NOT an FLRW or synchronous ansatz. This construction is a local instance of the Poincare lemma. It works on every oriented chart with nondegenerate volume form without assuming that the carrier \(X\) is timelike. The exact global existence question is instead whether the de Rham class \([\nu_e]\in H^4_{\rm dR}(M)\) vanishes for the chosen manifold and auxiliary potential model.
 
 <!-- UNIT: theorem -->
 ## Two independent global obstructions
@@ -29,7 +49,7 @@ Define the globally smooth scalar \(T=\sqrt{-X^2/\mathcal N_0}\). Metric compati
 \[
 \boxed{g^{-1}(dT,dT)=-1.}\tag{A}
 \]
-Thus \(dT\) is nowhere zero. On a compact boundaryless manifold a smooth real-valued \(T\) attains its maximum, where \(dT=0\), contradiction. This conclusion is independent of the auxiliary HT three-form: the globally timelike restricted carrier/clock already excludes a compact boundaryless spacetime. It does NOT exclude globally non-null carrier patches on a spacetime where X fails to be timelike everywhere, and does NOT constrain other full-complex UBT sectors without the eikonal identity.
+Thus \(dT\) is nowhere zero. On a compact boundaryless manifold a smooth real-valued \(T\) attains its maximum, where \(dT=0\), contradiction. This conclusion follows from the ADDITIONAL global timelike carrier/clock hypothesis, independent of the auxiliary HT three-form. No global clock existence theorem follows for the complete Theta field. It does NOT exclude globally non-null carrier patches on a spacetime where X fails to be timelike everywhere, and does NOT constrain other full-complex UBT sectors without the eikonal identity.
 
 Separately, for the **adopted effective** HT auxiliary equation
 \[
