@@ -8,16 +8,13 @@ policy: ../../AI_PROVENANCE.md
 notice: Conditional mathematical derivation, not finalized fundamental UBT action.
 UBT-AI-PROVENANCE-END -->
 
+# Hamiltonián kanonické rodiny a přesná redukce na testovací sektor
 
-# Hamiltonián kanonické rodiny a exaktní redukce na testovací sektor
-
-**Stav: matematické odvození za výslovných předpokladů; fundamentální uzavření zůstává OPEN.** This is a Legendre transform of the family recorded in canonical/ACTION.en.md, not an additional competing fundamental action.
+**Stav: matematické odvození za výslovných předpokladů; fundamentální uzavření OPEN.** Jde o Legendreovu transformaci rodiny uvedené v canonical/ACTION.en.md, nikoli o další konkurenční fundamentální akci.
 
 ## Tvrzení 1 — Hamiltonián na předepsaném pozadí
 
-**České shrnutí:** Tento článek spojuje dříve odvozený testovací Hamiltonián s již zavedenou kineticko-potenciálovou rodinou UBT. Jeho hlavním novým výsledkem je přesný důkaz nekladné kinetické signatury a výčet dynamických překážek, které nesmějí být zaměňovány za důkaz nestability dokončené teorie. Matematické vzorce a číselné údaje jsou úmyslně identické s anglickou verzí; anglická odborná argumentace zůstává zatím připojena pro kontrolu překladu.
-
-Represent the biquaternion field by eight real components q^A. Assume a fixed ADM metric of signature (-+++), lapse N>0, shift N^i, spatial metric h_ij, a fixed linear two-sided connection with D_t q = dot q + Omega_0 q, and a real symmetric nondegenerate kinetic matrix K_AB. With c nonzero and U(q) an unspecified real potential, define the **conditional realization of the existing family**
+Bikvaternionové pole popišme osmi reálnými složkami q^A. Předpokládejme pevnou ADM metriku se signaturou (-+++), lapse N>0, shift N^i, prostorovou metriku h_ij, pevnou lineární oboustrannou konexi s D_t q = dot q + Omega_0 q a reálnou symetrickou nedegenerovanou kinetickou matici K_AB. Pro nenulové c a nespecifikovaný reálný potenciál U(q) definujme **podmíněnou realizaci existující rodiny**
 
 \[
 S=\int dt\,d^3x\,N\sqrt h\left[
@@ -26,14 +23,14 @@ S=\int dt\,d^3x\,N\sqrt h\left[
 \quad v^A=(D_tq)^A-N^i(D_iq)^A.
 \]
 
-This ADM sign convention is explicitly chosen, not derived from a unique microscopic UBT action. Then
+Tato ADM konvence znamének je výslovně zvolena, nikoli odvozena z jediné mikroskopické akce UBT. Pak platí
 
 \[
 \pi_A=\frac{c\sqrt h}{N}K_{AB}v^B,\qquad
 v^A=\frac{N}{c\sqrt h}(K^{-1})^{AB}\pi_B.
 \]
 
-The Legendre transform gives the **exact fixed-background Hamiltonian density**
+Legendreova transformace dává **přesnou hustotu Hamiltoniánu na pevném pozadí**
 
 \[
 \boxed{\mathcal H=
@@ -42,20 +39,18 @@ N\left[\frac{\pi_A(K^{-1})^{AB}\pi_B}{2c\sqrt h}
 +N^i\pi_A(D_iq)^A-\pi_A(\Omega_0q)^A.}
 \]
 
-**Důkaz:** Substitute dot q = v + N^i D_i q - Omega_0 q into pi dot q - L and eliminate v using the momentum relation. This is algebraic and exact under the assumptions. If the metric or connections are independent dynamical fields or composites of q, the full canonical momenta and constraints differ; this is NOT the gravitational ADM constraint.
+**Důkaz:** Dosadíme dot q = v + N^i D_i q - Omega_0 q do pi dot q - L a pomocí vztahu pro hybnost eliminujeme v. Za uvedených předpokladů jde o přesnou algebraickou identitu. Jsou-li metrika či konexe nezávislá dynamická pole nebo kompozity q, úplné kanonické hybnosti a vazby jsou jiné; toto **NENÍ** gravitační ADM vazba.
 
-## Tvrzení 2 — redukce na existující dodekahedrální Hamiltonián
+## Tvrzení 2 — redukční zobrazení na existující dodekahedrální Hamiltonián
 
-Redukce vyžaduje oddělený normalizovaný skalární kanál, nikoli další nezávislou fundamentální akci. Tento předpoklad musí být potvrzen v úplném vázaném systému.
-
-Assume q=bar q+Q phi, with K(Q,Q)=1, D_mu Q=0, D_mu bar q=0, vanishing linear potential term, decoupled transverse channels, and U(bar q+Q phi)=U(bar q)+m_eff^2 phi^2/2+O(phi^3). Choose c=1 as a **sector normalization**, not a fundamental parameter prediction. On a *prescribed* FLRW quotient background N=1, shift=0, h_ij=a(t)^2 h0_ij, the quadratic action is
+Předpokládejme q=bar q+Q phi, kde K(Q,Q)=1, D_mu Q=0, D_mu bar q=0, lineární člen potenciálu mizí, příčné kanály jsou oddělené a U(bar q+Q phi)=U(bar q)+m_eff^2 phi^2/2+O(phi^3). Volíme c=1 jako **normalizaci sektoru**, nikoli předpověď fundamentálního parametru. Na *předepsaném* kvocientním pozadí FLRW s N=1, shift=0, h_ij=a(t)^2 h0_ij má kvadratická akce tvar
 
 \[
 S_\phi^{(2)}=\frac12\int dt\,d\mathrm{vol}_{h0}\,a^3
 [\dot\phi^2-a^{-2}|\nabla_{h0}\phi|^2-m_{\rm eff}^2\phi^2].
 \]
 
-Expand phi=sum_{n,j} u_nj(t) Y_nj(x), with orthonormal eigenfunctions -Delta_h0 Y_nj=lambda_n Y_nj. Then
+Rozviňme phi=sum_{n,j} u_nj(t) Y_nj(x), kde ortonormální vlastní funkce splňují -Delta_h0 Y_nj=lambda_n Y_nj. Potom
 
 \[
 p_{nj}=a^3\dot u_{nj},\quad
@@ -63,64 +58,45 @@ p_{nj}=a^3\dot u_{nj},\quad
 \left[a^{-3}p_{nj}^2+a^3(\lambda_n/a^2+m_{\rm eff}^2)u_{nj}^2\right].}
 \]
 
-For h0=R_c^2 gamma on S^3/(binary icosahedral group), lambda_n=n(n+2)/R_c^2 on the allowed invariant modes. This **recovers exactly** the test Hamiltonian already proved in research_tracks/dodecahedral_action_cmb/DERIVATION.md. It is a conditional reduction from the existing family, not a new unrelated postulate.
+Pro h0=R_c^2 gamma na S^3/(binární ikosaedrická grupa) platí lambda_n=n(n+2)/R_c^2 na povolených invariantních módech. To **přesně reprodukuje** testovací Hamiltonián již dokázaný v research_tracks/dodecahedral_action_cmb/DERIVATION.md. Jde o podmíněnou redukci existující rodiny, nikoli o nový nesouvisející postulát.
 
-**Unproved dynamical inputs:** existence and selection of bar q, a physical gauge-invariant Q, absence of mixing with other seven real components, positive kinetic signature on physical modes, the compact quotient topology, and backreaction. The chosen K is not thereby proven to be Lorentz-invariant.
+**Neodvozené dynamické vstupy:** existence a výběr bar q, fyzikální kalibračně invariantní Q, nepřítomnost směšování se zbývajícími sedmi reálnými složkami, kladná kinetická signatura na fyzikálních módech, topologie kompaktního kvocientu a zpětná reakce. Tím se také nedokazuje Lorentzova invariance zvoleného K.
 
-## Tvrzení 3 — překážka nestability na pevném pozadí
+## Tvrzení 3 — překážka ghostů na pevném pozadí
 
-Pevná nedegenerovaná kinetická forma se zápornými směry vede při neomezené variaci k energii, která nemá dolní mez. Dynamické vazby celého pole zde dosud nejsou zahrnuty.
+Má-li cK záporné vlastní číslo a na sdruženou hybnost nepůsobí žádná vazba, je kinetický Hamiltonián pi^T K^{-1} pi/(2c sqrt h) neomezený zdola: stačí zvětšovat pi podél záporného vlastního směru. Indefinitní nedegenerované párování proto nemůže určovat nevázaný stabilní testovací Hamiltonián s osmi složkami. **Nejde** o no-go tvrzení pro úplný vázaný model UBT; je nutné vypočítat jeho vazby první třídy a fyzikální kvocient.
 
-If cK has a negative eigenvalue and there is no constraint on its conjugate momentum, the kinetic Hamiltonian pi^T K^{-1} pi/(2c sqrt h) is unbounded below: scale pi along a negative eigendirection. Thus an indefinite nondegenerate pairing cannot define an unconstrained stable eight-component test-field Hamiltonian. This is **not** a no-go for a constrained full UBT model; one must compute its first-class constraints and physical quotient.
+## Tvrzení 4 — jediná invariantní kinetická forma a její signatura (přesná algebra)
 
-## Tvrzení 4 — jediná invariantní kinetická forma a její signatura
-
-Omezení daná Lorentzovou a fázovou symetrií určují tvar kvadratického párování až na měřítko. Kladný eukleidovský součin proto nelze bez dalšího prohlásit za ekvivalentní náhradu.
-
-The invariant-potential classification in
-theta_potential_invariants.en.md establishes that the real quadratic
-invariants of the declared U(1) x SL(2,C) congruence representation are
-spanned by
+Klasifikace invariantních potenciálů v theta_potential_invariants.en.md stanovuje, že prostor reálných kvadratických invariantů deklarované kongruenční reprezentace U(1) x SL(2,C) je generován výrazem
 
 \[
 H(X)=\operatorname{Tr}(X^\sharp X^\dagger).
 \]
 
-Polarizing H therefore gives the only nonzero invariant constant symmetric
-bilinear kinetic form, up to an overall scalar, **if the derivative field
-transforms in that same representation**. Explicitly, write a completely
-general complex matrix as
+Polarizace H proto poskytuje jedinou nenulovou konstantní symetrickou bilineární kinetickou formu invariantní až na celkový násobek, **pokud se derivační pole transformuje v téže reprezentaci**. Výslovně zapíšeme zcela obecnou komplexní matici jako
 
 \[
 X=(u_0+iv_0)I+\sum_{j=1}^3(u_j+iv_j)\sigma_j,
 \quad u_\alpha,v_\alpha\in\mathbb R.
 \]
 
-The 2-by-2 adjugate and Pauli identities yield
+Identita adjungované matice rozměru 2-by-2 a Pauliho identity dávají
 
 \[
 \boxed{H(X)=2(u_0^2+v_0^2-\mathbf u^2-\mathbf v^2).}
 \]
 
-Its real quadratic-form matrix, in the order
-\((u_0,u_1,u_2,u_3,v_0,v_1,v_2,v_3)\), is
+Její reálná matice kvadratické formy, v pořadí \((u_0,u_1,u_2,u_3,v_0,v_1,v_2,v_3)\), je
 
 \[
 K=2\operatorname{diag}(1,-1,-1,-1,1,-1,-1,-1),
 \quad\operatorname{inertia}(K)=(2,6).
 \]
 
-**Výsledek:** the minimal *unconstrained, fixed-background* quadratic kinetic
-family with this exact connected symmetry has a negative Hamiltonian
-direction for either choice of nonzero kinetic sign \(c\).
-A positive Hilbert--Schmidt replacement is NOT invariant under the declared
-full noncompact spin congruence action. This excludes a straightforward
-positive-energy eight-component realization, not a theory with additional
-genuine first-class constraints or a different declared representation.
+**Výsledek:** minimální *nevázaná kvadratická kinetická rodina na pevném pozadí* s touto přesnou souvislou symetrií má záporný směr Hamiltoniánu pro libovolnou volbu nenulového kinetického znaménka \(c\). Nahrazení pozitivní Hilbertovou–Schmidtovou normou **NENÍ** invariantní vůči deklarované úplné nekompaktní spinové kongruenci. Tím se vylučuje přímočará kladnoenergetická realizace s osmi složkami, nikoli teorie se skutečnými dodatečnými vazbami první třídy nebo s jinak deklarovanou reprezentací.
 
-## Tvrzení 5 — normální módy u již odvozeného nenulového minima
-
-Kladnost Hessianu potenciálu nestačí ke kladnosti energie fluktuací. Ortogonální rozklad ukazuje další překážku; degenerované testovací pozadí ovšem není fyzikálním vakuem zakřivené gravitace.
+## Proposition 5 — symmetry-normal modes at the established nonzero minimum
 
 Use **the same** invariant quartic potential already classified and minimized
 in biquaternionic_potential_vacuum.en.md:
@@ -186,7 +162,7 @@ for \(c<0\) the scalar normal mode grows exponentially. Hence this
 have only stable propagating normal modes with the invariant pairing,
 regardless of kinetic sign.
 
-**Důležité omezení:** the constant vacuum with zero connection has
+**Crucial scope:** the constant vacuum with zero connection has
 \(D_\mu X_0=0\) and therefore a *degenerate composite tetrad*.
 It is **not** an admissible nondegenerate vacuum of completed UBT gravity.
 Moreover, the orbit is a symmetry orbit; identifying it as a removable
@@ -197,7 +173,7 @@ It gives a sharp obstruction any claimed completion must evade and
 a counterexample to inferring stability from the pointwise positive
 potential Hessian alone.
 
-**Exaktní výpočetní kontrola:**
+**Exact computational certificate:**
 tools/verify_theta_kinetic_signature.py checks the Pauli-matrix
 expansion, 8-real Hessian, 4+4 orbit/normal decomposition, full potential
 gradient/Hessian and generalized normal eigenvalues symbolically.
@@ -206,9 +182,7 @@ checker was executed independently with SymPy 1.14 and its focused
 pytest passed (1 test). Full repository CI and the Dirac algebra have
 **not** been checked by that local execution.
 
-## Tvrzení 6 — algebraické rovnice pro konexe holé rodiny
-
-**Poznámka k překladu:** Matematické odvození je dočasně ponecháno v anglickém znění kvůli doslovné kontrole rovnic v CI; český odborný překlad vyžaduje redakční revizi.
+## Proposition 6 — the bare kinetic/potential family contains no propagating Yang--Mills connection (tree-level)
 
 Treat a connection \(C_\mu^a\) as an independent field entering only the
 covariant derivative \(D_\mu X=\partial_\mu X+C_\mu^aT_aX\),
@@ -263,9 +237,7 @@ long-wavelength dispersion relation for Proposition 5 are recorded in
 **Proposition 2 remains a conditional scalar truncation**, not a
 demonstration that the remaining modes of the full UBT action are stable.
 
-## Tvrzení 7 — odstranění pomocných konexí nezhojí nestabilitu normály
-
-**Poznámka k překladu:** Matematické odvození je dočasně ponecháno v anglickém znění kvůli doslovné kontrole rovnic v CI; český odborný překlad vyžaduje redakční revizi.
+## Proposition 7 — eliminating auxiliary phase/boost connections does not cure the normal instability
 
 This is a **stronger, still conditional** statement than merely quotienting
 the symmetry orbit. Consider the same fixed-background minimal family,
@@ -335,7 +307,7 @@ Exact symbolic verifier:
 tools/verify_theta_auxiliary_connection_reduction.py;
 regression tests: tests/test_theta_auxiliary_connection_reduction.py.
 
-### Důsledek — eliminace pomocných časových konexí
+### Corollary — eliminating auxiliary temporal gauge connections
 
 Assume the local phase and boost connection components have no independent time derivatives and are varied algebraically. Linearizing their action about the same fixed constant vacuum, write orbit-tangent fluctuation coordinates as t and normal coordinates as n. The temporal gauge components a and b enter the kinetic energy exactly as follows:
 
@@ -354,9 +326,7 @@ L_{\rm kin,red}^{(2)}
 
 Variation sets the covariant tangent velocities to zero, so the tangent kinetic block disappears. **The indefinite normal kinetic block survives even after this particular auxiliary gauge reduction.** This is stronger than freezing the gauge field, but still is not the full constrained composite-gravity Dirac analysis. The exact elimination identity is checked symbolically in tools/verify_theta_kinetic_signature.py.
 
-## Tvrzení 8 — zdravá radiální redukce vede k degenerované tetrádě
-
-**Poznámka k překladu:** Matematické odvození je dočasně ponecháno v anglickém znění kvůli doslovné kontrole rovnic v CI; český odborný překlad vyžaduje redakční revizi.
+## Proposition 8 — a healthy Lorentz-real radial reduction has a rank-one emergent tetrad
 
 The Lorentz-real slice suggests a possible escape from the transverse ghosts
 of Proposition 7, but it exposes a **different, exact obstruction** in the
@@ -428,9 +398,7 @@ Independent symbolic verification:
 tools/verify_theta_timelike_auxiliary_rank.py;
 regression tests: tests/test_theta_timelike_auxiliary_rank.py.
 
-## Tvrzení 9 — podmíněná překážka minimální kompozitní akce
-
-**Poznámka k překladu:** Matematické odvození je dočasně ponecháno v anglickém znění kvůli doslovné kontrole rovnic v CI; český odborný překlad vyžaduje redakční revizi.
+## Proposition 9 — exact composite-metric volume collapse and timelike auxiliary-branch no-go
 
 Proposition 8 prescribed the metric. Here we instead **vary the
 central composite metric consistently**, still within a sharply defined
@@ -528,11 +496,12 @@ Exact independent matrix and determinant checker:
 tools/verify_theta_composite_volume_no_go.py;
 regression tests: tests/test_theta_composite_volume_no_go.py.
 
-## Zbývající kritické kroky důkazu
+## Remaining theorem-critical work
 
 1. Finalize the single Theta action's pairing, measure, potential, composite metric and connection variations.
 2. Compute the full Dirac constraints and remove any ghost directions without breaking Lorentz covariance.
 3. Derive the selected vacuum, scalar channel and effective Einstein coefficient from that same action.
 4. Only then promote the conditional dodecahedral CMB calculation to a parameter-controlled physical prediction.
 
-**Rozsah tvrzení:** this note proves a conditional Hamiltonian and reduction identity. It does not prove fundamental UBT dynamics, GR recovery without effective-action assumptions, alpha, or a Planck fit.
+**Claim boundary:** this note proves a conditional Hamiltonian and reduction identity. It does not prove fundamental UBT dynamics, GR recovery without effective-action assumptions, alpha, or a Planck fit.
+
