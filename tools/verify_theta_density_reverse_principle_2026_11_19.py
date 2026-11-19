@@ -93,8 +93,8 @@ P0=s.diag(1,0)
 Gbeta=s.diag(s.exp(beta),s.exp(-beta))
 rho_beta=Gbeta/s.trace(Gbeta)
 rho_beta2=Gbeta*Gbeta/s.trace(Gbeta*Gbeta)
-assert s.simplify(rho_beta-(Id+s.tanh(beta)*(2*P0-Id))/2)==s.zeros(2)
-assert s.simplify(rho_beta2-(Id+s.tanh(2*beta)*(2*P0-Id))/2)==s.zeros(2)
+assert (rho_beta-(Id+s.tanh(beta)*(2*P0-Id))/2).applyfunc(lambda z:s.simplify(z.rewrite(s.exp)))==s.zeros(2)
+assert (rho_beta2-(Id+s.tanh(2*beta)*(2*P0-Id))/2).applyfunc(lambda z:s.simplify(z.rewrite(s.exp)))==s.zeros(2)
 assert s.simplify(rho_beta[0,0]-rho_beta2[0,0])!=0
 
 print("PASS: positivity, normalized trace, observer covariance and support gate")
