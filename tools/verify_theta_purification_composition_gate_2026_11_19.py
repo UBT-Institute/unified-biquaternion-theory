@@ -46,7 +46,8 @@ assert filterprob==p
 
 # Two equal left reduced densities can have different joint phase coherence.
 Theta_plus=one
-Theta_minus=sz
+Theta_minus=I*sz
+assert sp.det(Theta_minus)==1 and simplify(Theta_minus.H*Theta_minus-one)==sp.zeros(2)
 v_plus=vec(Theta_plus)/sp.sqrt(2)
 v_minus=vec(Theta_minus)/sp.sqrt(2)
 assert reduce_right(v_plus*v_plus.H)==one/2
