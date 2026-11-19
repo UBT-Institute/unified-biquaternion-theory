@@ -9,17 +9,6 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Exact frozen Fourier first-jet rank, not Euler-Lagrange principal symbol.
 UBT-AI-PROVENANCE-END -->
-<!--
-UBT-AI-PROVENANCE-BEGIN
-schema: ubt-ai-provenance/v1
-tier: C_working
-ai_assistance: disclosed
-human_review: risk-based
-editorial_responsibility: Ing. David Jaroš
-policy: ../../AI_PROVENANCE.md
-notice: Working material; exhaustive human review is not claimed.
-UBT-AI-PROVENANCE-END
--->
 
 # Rank metriky jediného Theta závislý na Fourierově frekvenci
 
