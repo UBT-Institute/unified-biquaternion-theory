@@ -84,6 +84,20 @@ is algebraically admissible. For \(T_N=\operatorname{diag}(2,1)\), \(p=1\) gives
 
 **Conditional Lorentz covariance.** Under \(\Theta'=S\Theta S^\dagger\), \(N'=SNS^\dagger\), \(S\in SL(2,\mathbb C)\), the induced \(U=N'^{-1/2}SN^{1/2}\) is unitary and \(T_{N'}'=UT_NU^\dagger\). Hence \(\rho_{N'}'=U\rho_NU^\dagger\) and \(p_{N'}(UMU^\dagger\mid\Theta')=p_N(M\mid\Theta)\). This is an algebraic property of the declared observer protocol, not the physical selection of \(N\) or its measurement instrument.
 
+<!-- UNIT: topological-p -->
+## Same topological phase, inequivalent nonlinear probability weights
+
+**A topological invariant cannot select the Born exponent.** Reuse the rank-one projector family \(P(\theta,\varphi)\) on the auxiliary parameter sphere from the previous UBT phase-transport note, and let \(Q_P=2P-I_2\). For \(\beta>0\), choose a positive invertible full-biquaternion observer amplitude \(T_\beta=\exp(\frac{\beta}{2}Q_P)\). The family of alternative normalized response laws gives
+\[
+\boxed{
+\rho_\beta^{(p)}
+=\frac{(T_\beta T_\beta^\dagger)^p}
+{\operatorname{tr}[(T_\beta T_\beta^\dagger)^p]}
+=\tfrac12[I_2+\tanh(p\beta)Q_P],\qquad p>0.
+}\tag{F}
+\]
+All these laws have the SAME nondegenerate higher-eigenvalue projector \(P\), hence the SAME standard eigenline Berry curvature and Chern number \(c_1(P)=1\), but their probabilities differ. Therefore even the previously found integer Berry/Chern invariant cannot determine \(p=1\) or Born's rule. The choice of quadratic unnormalized response is an independent unresolved physical task, not forced by phase topology.
+
 <!-- UNIT: pure -->
 ## Pure state values and regular gravitational geometry
 
