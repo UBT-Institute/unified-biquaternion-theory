@@ -314,13 +314,12 @@ S_{\rm min}=\int d^4x\,\sqrt{-g}\,[4cN_0-U(\rho)].
 }
 \]
 
-Při \(A_\mu+A_\mu^\dagger=b_\mu^j\sigma_j\) in the timelike gauge,
-the tetrad columns are
+Při \(A_\mu+A_\mu^\dagger=b_\mu^j\sigma_j\) v časupodobné kalibraci mají sloupce tetrády tvar
 \[
 E_\mu{}^a=N_0^{-1/2}
 \big(\partial_\mu\rho,\rho b_\mu^1,\rho b_\mu^2,\rho b_\mu^3\big),
 \]
-and on a patch of fixed orientation,
+a v oblasti s pevnou orientací,
 \[
 \sqrt{-g}=\frac{\rho^3}{N_0^2}
 \left|\det[\partial\rho,b^1,b^2,b^3]\right|.
