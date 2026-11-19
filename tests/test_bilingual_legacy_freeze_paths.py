@@ -50,10 +50,10 @@ def fixture(root: Path) -> tuple[Path, Path]:
     git(root, "init", "-q")
     textbook = root / "docs/textbook"
     textbook.mkdir(parents=True)
-    (textbook / "chapter.en.md").write_text("# Chapter\\n\\[x=1\\]\\n")
-    (textbook / "chapter.cs.md").write_text("# Kapitola\\n\\[x=1\\]\\n")
+    (textbook / "chapter.en.md").write_text("# Chapter\n\\[x=1\\]\n")
+    (textbook / "chapter.cs.md").write_text("# Kapitola\n\\[x=1\\]\n")
     legacy = textbook / "legacy.en.md"
-    legacy.write_text("# Historical\\n\\nOriginal claim.\\n")
+    legacy.write_text("# Historical\n\nOriginal claim.\n")
     inventory(root, legacy)
     return textbook, legacy
 
@@ -67,7 +67,7 @@ def test_scoped_textbook_gate_uses_repository_ledger_and_checks_hash(tmp_path: P
     assert valid.returncode == 0, valid.stderr
     assert "1 exact-content-frozen" in valid.stdout
 
-    legacy.write_text("# Historical\\n\\nChanged claim.\\n")
+    legacy.write_text("# Historical\n\nChanged claim.\n")
     invalid = subprocess.run(args, cwd=tmp_path, capture_output=True, text=True)
     assert invalid.returncode != 0
     assert "missing language pair" in invalid.stderr
@@ -76,9 +76,9 @@ def test_scoped_textbook_gate_uses_repository_ledger_and_checks_hash(tmp_path: P
 def test_semantic_gate_defers_only_metadata_changes_not_substantive_changes(tmp_path: Path) -> None:
     _, legacy = fixture(tmp_path)
     base = commit(tmp_path)
-    header = ("<!--\\nUBT-AI-PROVENANCE-BEGIN\\n"
-              "schema: ubt-ai-provenance/v1\\n"
-              "tier: C_working\\nUBT-AI-PROVENANCE-END\\n-->\\n\\n")
+    header = ("<!--\nUBT-AI-PROVENANCE-BEGIN\n"
+              "schema: ubt-ai-provenance/v1\n"
+              "tier: C_working\nUBT-AI-PROVENANCE-END\n-->\n\n")
     legacy.write_text(header + legacy.read_text())
     inventory(tmp_path, legacy)
     commit(tmp_path)
@@ -87,7 +87,7 @@ def test_semantic_gate_defers_only_metadata_changes_not_substantive_changes(tmp_
     assert SEM.load_documents(tmp_path, base) == []
 
     # Even an updated inventory SHA cannot bless a changed scientific claim.
-    legacy.write_text(header + "# Historical\\n\\nDifferent scientific claim.\\n")
+    legacy.write_text(header + "# Historical\n\nDifferent scientific claim.\n")
     inventory(tmp_path, legacy)
     commit(tmp_path)
     with pytest.raises(SEM.ReviewError, match="substantively changed"):
