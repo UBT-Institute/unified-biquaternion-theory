@@ -52,4 +52,22 @@ assert s.simplify(g.inv()[0,0]*s.diff(TH,t)**2)==0
 print("PASS: phase+SL2 orbit preserves H and |det|² but moves off Lorentz-real slice")
 print("PASS: canonical sharp metric has phase weight two in the tested orbit")
 print("PASS: constant-Theta split-jet metric is regular yet field-value clock frozen")
+
+# Real central quadratic metric need not imply a Lorentz-real coframe.
+# A complex orthogonal (not real Lorentz) matrix can preserve eta exactly.
+eta = s.diag(-1, 1, 1, 1)
+co = s.sqrt(2)/2
+isn = s.I*co
+L = s.eye(4)
+L[0,0], L[1,1] = co, co
+L[0,1], L[1,0] = isn, isn
+assert s.simplify(L.T*eta*L-eta) == s.zeros(4)
+assert s.simplify(s.im(L[0,1])-co) == 0
+assert s.simplify(s.det(L)-1)==0
+# These are constant full-complex tetrad coefficients; an affine complex
+# Theta with D=partial realizes them as FIRST JETS pointwise. This is a
+# kinematic witness only; the admissible classical branch separately
+# requires the coefficients to be real.
+print("PASS: real central Minkowski metric from non-Lorentz-real complex first jets")
+
 print("SCOPE: no theorem that full on-shell UBT has no global time")
