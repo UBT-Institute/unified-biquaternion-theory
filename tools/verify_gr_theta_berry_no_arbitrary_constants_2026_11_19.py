@@ -29,7 +29,7 @@ rb=sp.simplify(Tb*Tb.H/sp.trace(Tb*Tb.H))
 pred=(Id+sp.tanh(beta)*Q0)/2
 assert (rb-pred).applyfunc(lambda x:sp.simplify(x.rewrite(sp.exp)))==sp.zeros(2)
 assert sp.simplify(sp.sqrt(2)*Tb.subs(beta,sp.log(2))-(Id+P0))==sp.zeros(2)
-assert sp.simplify(sp.trace(rb)-1)==0
+assert sp.simplify((sp.trace(rb)-1).rewrite(sp.exp))==0
 
 # Any nonzero real beta retains a spectral line, beta=0 destroys uniqueness.
 assert rb.subs(beta,0)==Id/2
@@ -41,7 +41,7 @@ th,ph=sp.symbols("theta phi",real=True)
 v=sp.Matrix([sp.cos(th/2),sp.exp(I*ph)*sp.sin(th/2)])
 P=sp.simplify(v*v.H)
 Q=2*P-Id
-assert sp.simplify(P*P-P)==sp.zeros(2)
+assert (P*P-P).applyfunc(lambda x:sp.trigsimp(sp.expand_trig(x),method="fu"))==sp.zeros(2)
 Pt=sp.diff(P,th)
 Pp=sp.diff(P,ph)
 F=sp.trigsimp(-I*sp.trace(P*(Pt*Pp-Pp*Pt)),method="fu")
