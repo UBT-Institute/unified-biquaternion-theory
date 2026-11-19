@@ -258,22 +258,31 @@ def main() -> int:
     root = args.root.resolve()
     errors: list[str] = []
     try:
-        frozen = load_frozen_legacy(root)
-    except (OSError, ValueError, KeyError, TypeError) as exc:
+        # --root limits the scan, but migration debt and Git hashes are
+        # repository-relative. Textbook-only CI must use the same inventory.
+        repo_root = Path(subprocess.check_output(
+            ["git", "rev-parse", "--show-toplevel"], cwd=root, text=True
+        ).strip()).resolve()
+        if not root.is_relative_to(repo_root):
+            raise ValueError("Bilingual root must be inside its Git repository")
+        frozen = load_frozen_legacy(repo_root)
+    except (OSError, ValueError, KeyError, TypeError, subprocess.CalledProcessError) as exc:
         print(f"Bilingual migration-debt inventory invalid: {exc}", file=sys.stderr)
         return 1
 
     pairs = all_pairs(root)
     historical_debt = 0
     for en, cs in sorted(pairs):
-        if (not en.is_file() or not cs.is_file()) and frozen_legacy_missing_pair(en, cs, root, frozen):
+        if (not en.is_file() or not cs.is_file()) and frozen_legacy_missing_pair(en, cs, repo_root, frozen):
             historical_debt += 1
             continue
         errors.extend(check_pair(en, cs))
 
     if args.changed_base:
-        for path in changed_paths(root, args.changed_base):
-            relative = path.relative_to(root)
+        for path in changed_paths(repo_root, args.changed_base):
+            if not path.is_relative_to(root):
+                continue
+            relative = path.relative_to(repo_root)
             if (
                 path.suffix not in TEXT_SUFFIXES
                 or excluded(relative)
