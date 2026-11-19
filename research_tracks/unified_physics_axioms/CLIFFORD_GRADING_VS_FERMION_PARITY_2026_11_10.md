@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Inverse physical symmetry: Clifford grading is not fermion parity or an independent odd-field sign symmetry
 
 **Date:** 2026-11-10. **Status:** exact algebraic distinction + explicit QED comparator; microscopic UBT selection OPEN.
