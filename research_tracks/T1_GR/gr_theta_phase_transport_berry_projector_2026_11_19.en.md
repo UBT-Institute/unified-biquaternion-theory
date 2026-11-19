@@ -124,6 +124,14 @@ The final UBT action must determine whether such constant field-value shifts are
 
 Focused exact checker: tools/verify_gr_theta_affine_berry_family_2026_11_19.py.
 
+**Compatibility with the locked complex-time coordinate.** The same construction admits the explicit *holomorphic* affine extension
+\[
+\boxed{\Theta(\tau,\mathbf x;\theta,\varphi)
+=I_2+P(\theta,\varphi)+i(\tau I_2+x\sigma_1+y\sigma_2+z\sigma_3),
+\qquad \tau=t+i\psi.}\tag{K}
+\]
+Indeed \(\partial_\psi\Theta=i\partial_t\Theta=-I_2\) as required by Cauchy–Riemann, while all four classical spacetime derivatives and their central-sharp metric remain the same as in (I) for every fixed \(\psi\). At the reference \(\psi=0\) and \(t=\mathbf x=0\) the positive spectral projector construction and Chern number remain exact. This is a **coordinate-analytic extension** of a kinematic example, not a demonstrated unitary or stable physical \(\psi\)-sector, not a globally derived physical time and not an on-shell UBT solution.
+
 <!-- UNIT: cov -->
 ## Covariance and the still-open physical Lorentz jet gate
 
