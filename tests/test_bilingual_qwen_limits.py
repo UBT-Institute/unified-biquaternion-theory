@@ -176,8 +176,8 @@ def test_review_shards_partition_all_source_paragraphs_without_overlap():
     documents = [
         V.document(
             f"source-{index}.en.md",
-            ("\\n\\n".join(f"Statement {i} for {index}." for i in range(count))).encode(),
-            ("\\n\\n".join(f"Tvrzení {i} pro {index}." for i in range(count))).encode(),
+            ("\n\n".join(f"Statement {i} for {index}." for i in range(count))).encode(),
+            ("\n\n".join(f"Tvrzení {i} pro {index}." for i in range(count))).encode(),
         )
         for index, count in enumerate((37, 15, 3, 29, 10))
     ]
@@ -211,7 +211,7 @@ def test_review_shards_reject_invalid_partition_sizes(shards):
 
 def test_review_shards_fail_closed_for_unalignable_large_pair():
     bad = V.document("unaligned.en.md",
-                     ("\\n\\n".join("English " + str(i) for i in range(20))).encode(),
-                     ("\\n\\n".join("Česky " + str(i) for i in range(19))).encode())
+                     ("\n\n".join("English " + str(i) for i in range(20))).encode(),
+                     ("\n\n".join("Česky " + str(i) for i in range(19))).encode())
     with pytest.raises(V.ReviewError, match="split into paired sources"):
         QWEN.shard_review_units([bad], 4)
