@@ -28,15 +28,15 @@ rank([C,L^T])=15
 p_(mu=0,c=1)=1, others zero => (L^T p)_(mu=0,ab=01)=1
 L^T p not in image(C)
 ```
-In the chosen timelike v frame, image(L^T) comprises 12 independent boost-current slots. The pure-trace family image(C) is four-dimensional and intersects image(L^T) in one dimension, giving rank 15 for their combined formal linear span. An arbitrary tetrad-force covector p with just p_(0,1)=1 yields an off-diagonal boost-current slot that cannot arise from C(X). This establishes only the **possibility** of additional directions: an actual composite action may constrain p to a smaller space. Existing pre-2026-11-16 exact rank-12 orbit and rank-four spin source results remain valid in their respective scopes.
+In the chosen timelike v frame, image(L^T) comprises twelve independent boost-current slots. The pure-trace family image(C) is four-dimensional and intersects image(L^T) in one dimension, giving rank fifteen for their combined formal linear span. An arbitrary tetrad-force covector p with just p_(0,1)=1 yields an off-diagonal boost-current slot that cannot arise from C(X). This establishes only the **possibility** of additional directions: an actual composite action may constrain p to a smaller space. Earlier exact rank-12 orbit and rank-4 spin source results remain valid in their respective scopes.
 
 <!-- UNIT: chain -->
 ## The real implicit chain correction
-Canonical connection reconstruction contains derivatives of E: E=J(Theta,E,K) and A=I-J_E is a differential operator. Only after gauge/boundary solvability can one write E_K=A^-1 J_K. The reduced K equation is S_K + J_K^*(A^*)^-1 S_E=0. Neither S_E nor the range of the inverse-adjoint is supplied by the fixed-point rank test. In particular L^T p is a formal available tangent structure, not evidence that the actual solution necessarily populates all its 12 directions.
+Canonical connection reconstruction contains derivatives of E: E=J(Theta,E,K) and A=I-J_E is a differential operator. Only after gauge/boundary solvability can one write E_K=A^-1 J_K. The reduced K equation is S_K + J_K^*(A^*)^-1 S_E=0. Neither S_E nor the range of the inverse-adjoint is supplied by the fixed-point rank test. In particular L^T p is a formal available tangent structure, not evidence that the actual solution necessarily populates all its twelve directions.
 
 <!-- UNIT: consequence -->
 ## Consequence for constant redundancy
-The 4x4 contact response Q=C^T H^-1 C is sufficient only for the restricted fixed-E current family. It cannot establish physical equivalence of torsion Hessians or eliminate their couplings in the full composite UBT. The pre-existing Nieh–Yan equivalence beta=b+zeta remains valid as a separate identity in its specified Holst/torsion-square comparator under fixed boundary data; it does not require a rank-four current. A genuine full-UBT redundancy claim must compare gauge-invariant observables and the actual on-shell source manifold.
+The four-by-four contact response Q=C^T H^-1 C is sufficient only for the restricted fixed-E current family. It cannot establish physical equivalence of torsion Hessians or eliminate their couplings in the full composite UBT. The pre-existing Nieh–Yan equivalence beta=b+zeta remains valid as a separate identity in its specified Holst/torsion-square comparator under fixed boundary data; it does not require a rank-four current. A genuine full-UBT redundancy claim must compare gauge-invariant observables and the actual on-shell source manifold.
 
 <!-- UNIT: gates -->
 ## Next decisive steps

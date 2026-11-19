@@ -14,7 +14,7 @@ UBT-AI-PROVENANCE-END
 
 <!-- UNIT: scope -->
 ## Přesný příklad a fyzikální omezení
-[PŘESNÁ LINEÁRNÍ ALGEBRA / KOMPOZITNÍ DYNAMIKA OTEVŘENÁ] Dosavadní hodnost čtyři platí pro Lorentzovský vektorový proud při pevném E. Kanonická tetráda E=N0^-1/2 D Theta se ovšem při změně spinové konexe mění také. Variace akce S[E,omega,Theta] proto obsahuje jak Eulerovu derivaci podle konexe při pevném E, tak transponované zobrazení změny konexe na E působící na Eulerovu derivaci podle tetrády. Tento dokument poskytuje přesný lokální protipříklad k tvrzení, že **všechny** takové zdroje musejí zůstat v původní čtyřrozměrné rodině čisté stopy. Není to vypočtený gradient celé akce UBT.
+[PŘESNÁ LINEÁRNÍ ALGEBRA / KOMPOZITNÍ DYNAMIKA OTEVŘENÁ / OPEN] Dosavadní hodnost čtyři platí pro Lorentzovský vektorový proud při pevném E. Kanonická tetráda E=N0^-1/2 D Theta se ovšem při změně spinové konexe mění také. Variace akce S[E,omega,Theta] proto obsahuje jak Eulerovu derivaci podle konexe při pevném E, tak transponované zobrazení změny konexe na E působící na Eulerovu derivaci podle tetrády. Tento dokument poskytuje přesný lokální protipříklad k tvrzení, že **všechny** takové zdroje musejí zůstat v původní čtyřrozměrné rodině čisté stopy. Není to vypočtený gradient celé akce UBT.
 
 <!-- UNIT: exact -->
 ## Přesný racionální příklad s 24 složkami
