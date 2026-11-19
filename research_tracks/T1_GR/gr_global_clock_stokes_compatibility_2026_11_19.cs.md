@@ -10,12 +10,32 @@ policy: ../../AI_PROVENANCE.md
 notice: Conditional global clock and volume-form topology theorem; no full UBT dynamics or Lambda prediction.
 UBT-AI-PROVENANCE-END
 -->
-# Kompaktní HT spor již vylučují globální vlastní hodiny z Theta
+# Lokální HT tříforma nevyžaduje globální čas z Theta
 
 <!-- UNIT: scope -->
-## Vyřešení zdánlivého sporu
+## Oprava: globální čas byl dodatečný předpoklad
 
-Rovnice dC3=objem je neslučitelná s globální hladkou C3 na kompaktním uzavřeném prostoročasu. Nejde o rozpor celé UBT: tato globální topologie je neslučitelná také s dříve odvozenými vlastními hodinami Theta na všude časupodobné Lorentzově větvi. Smíchali jsme neslučitelné globální předpoklady. Stokesova překážka je standardní diferenciální geometrie a argument maxima hodin je standardní hladká analýza.
+Předchozí název a výklad přeháněly, co plyne z kinematiky UBT. Omezená identita reálného Lorentzova vektorového nosiče dává **lokální** vlastní čas na oblasti, kde je X časupodobné a fyzikální konexe je metrická. Tetráda FLRW či synchronní metrika byla pouze **zvoleným testovacím příkladem**, nikoli kosmologickým vývojem odvozeným z Theta. Ani kanonická kinematika, ani tento příklad nedokazují, že X je všude časupodobné, že lze čas hladce rozšířit na celý prostoročas nebo že úplná komplexní UBT globální čas vyžaduje.
+
+HT rovnice dC3=objem a případný Stokesův spor jsou logicky nezávislé na hodinách. Na libovolné lokální oblasti lze HT rovnici vyřešit i bez času odvozeného z Theta. Níže uvedený argument maxima je platnou **podmíněnou větou** pouze při dodatečném předpokladu globálně časupodobného nosiče; nelze jím pro celou UBT vyloučit uzavřenou topologii prostoročasu.
+
+<!-- UNIT: local -->
+## Přímá lokální konstrukce C3 bez kosmologického modelu
+
+On an arbitrary oriented coordinate chart \(U\), write the metric volume form as
+\[
+\nu_e=f(x^0,x^1,x^2,x^3)\,dx^0\wedge dx^1\wedge dx^2\wedge dx^3,
+\qquad f=\sqrt{-\det g}>0.
+\]
+Fix a reference coordinate value \(x^0_\ast\) inside the chart and define
+\[
+\boxed{
+C_3=\left(\int_{x^0_\ast}^{x^0}
+f(\tau,x^1,x^2,x^3)\,d\tau\right)
+dx^1\wedge dx^2\wedge dx^3 .
+}\tag{D}
+\]
+Its exterior derivative is exactly \(dC_3=\nu_e\), since all spatial-derivative contributions contain a repeated spatial differential. The coordinate \(x^0\) is **arbitrary** here: it is NOT a derived global time, NOT the intrinsic \(T=\sqrt{-X^2/\mathcal N_0}\), and NOT an FLRW or synchronous ansatz. This construction is a local instance of the Poincare lemma. It works on every oriented chart with nondegenerate volume form without assuming that the carrier \(X\) is timelike. The exact global existence question is instead whether the de Rham class \([\nu_e]\in H^4_{\rm dR}(M)\) vanishes for the chosen manifold and auxiliary potential model.
 
 <!-- UNIT: theorem -->
 ## Dvě nezávislé globální překážky
@@ -29,7 +49,7 @@ Define the globally smooth scalar \(T=\sqrt{-X^2/\mathcal N_0}\). Metric compati
 \[
 \boxed{g^{-1}(dT,dT)=-1.}\tag{A}
 \]
-Thus \(dT\) is nowhere zero. On a compact boundaryless manifold a smooth real-valued \(T\) attains its maximum, where \(dT=0\), contradiction. This conclusion is independent of the auxiliary HT three-form: the globally timelike restricted carrier/clock already excludes a compact boundaryless spacetime. It does NOT exclude globally non-null carrier patches on a spacetime where X fails to be timelike everywhere, and does NOT constrain other full-complex UBT sectors without the eikonal identity.
+Thus \(dT\) is nowhere zero. On a compact boundaryless manifold a smooth real-valued \(T\) attains its maximum, where \(dT=0\), contradiction. This conclusion follows from the ADDITIONAL global timelike carrier/clock hypothesis, independent of the auxiliary HT three-form. No global clock existence theorem follows for the complete Theta field. It does NOT exclude globally non-null carrier patches on a spacetime where X fails to be timelike everywhere, and does NOT constrain other full-complex UBT sectors without the eikonal identity.
 
 Separately, for the **adopted effective** HT auxiliary equation
 \[
