@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Canonical UBT right-action survival gate: geometry versus internal gauge
 
 **Scope:** direct comparison with canonical/geometry/connection.tex and canonical/geometry/biquaternion_metric.tex (master inspected 2026-11-12). This is a conditional algebraic gate, not a derivation of weak SU(2).

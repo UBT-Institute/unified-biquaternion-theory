@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Inverse UBT: Clifford principal symbol gives a conformal cone, not full gravity
 
 **2026-11-10 | exact 3+1D Clifford matrix calculation, conditional geometry comparator; fundamental information-to-UBT action OPEN.**
