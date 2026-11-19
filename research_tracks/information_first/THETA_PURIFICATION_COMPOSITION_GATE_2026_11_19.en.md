@@ -109,6 +109,46 @@ Moreover a single pointwise \(\mathbb C^4\) amplitude cannot represent an arbitr
 
 Finally a deterministic classical map \(\Theta\mapsto\rho_N\) alone cannot select a genuinely random unique detector outcome. A dynamical measurement instrument (or a justified hidden-variable or branching account) and its probability calculus are independent missing parts.
 
+<!-- UNIT: norm-gauge -->
+## Biquaternion-sharp concurrence and the no-observable right-gauge theorem
+
+There is a useful exact bridge to the ORIGINAL biquaternion sharp norm, and a sharper physical-observability obstruction.
+
+For the CHOSEN \(2\otimes2\) Hilbert factorization of the normalized \(|T_N\rangle\rangle\), the pure bipartite **concurrence** is the standard algebraic quantity
+\[
+\boxed{
+\mathcal C_N=\frac{2|\det T_N|}{\operatorname{tr}(T_NT_N^\dagger)}
+=\frac{2|\det\Theta|}{\operatorname{tr}(T_NT_N^\dagger)}
+\quad(\det N=1).}\tag{G}
+\]
+The second equality follows from \(T_N=N^{-1/2}\Theta N^{-1/2}\), whereas the quaternion-conjugate identity \(T_N^\sharp T_N=(\det T_N)I_2\) explains the determinant's occurrence from within the original \(\mathbb C\otimes\mathbb H\) algebra. For the reduced observer density,
+\[
+\boxed{
+\operatorname{tr}(\rho_N^2)=1-\frac{\mathcal C_N^2}{2},
+\qquad 0\le\mathcal C_N\le1.}\tag{H}
+\]
+Proof: \(\operatorname{tr}\rho_N=1\), \(\det\rho_N=|\det T_N|^2/[\operatorname{tr}(T_NT_N^\dagger)]^2\), and for a \(2\times2\) trace-one matrix \(\operatorname{tr}\rho_N^2=1-2\det\rho_N\). The bound follows from arithmetic-geometric mean on the squared singular values of \(T_N\). Pure reduced state has \(\mathcal C_N=0\) and rank-one \(T_N\). Maximally mixed reduced state has \(\mathcal C_N=1\), with \(T_N\) proportional to a unitary. The candidate \(\mathcal C_N\) is invariant under the declared simultaneous Lorentz/observer change \(T_N\mapsto U T_NU^\dagger\). It is NOT a proved physically measured UBT entanglement monotone, because its right-index subsystem is not dynamically selected.
+
+**Operational right-gauge theorem.** Suppose (as an ADDITIONAL, unproved hypothesis) that the full right \(U(2)\) freedom of the one-clock protocol is a genuine physical gauge redundancy on the vectorized purification. Then every allowable Hermitian **joint observable** \(\mathcal O\) must be invariant under all \((I_2\otimes V)\), \(V\in U(2)\) (up to the harmless transpose choice for the right index). By the commutant of the fundamental irreducible \(U(2)\) action,
+\[
+\boxed{
+[\mathcal O,I_2\otimes V]=0\quad\forall V\in U(2)
+\;\Longrightarrow\;
+\mathcal O=A\otimes I_2.}\tag{I}
+\]
+Proof with no representation-theory black box: write \(\mathcal O\) as four \(2\times2\) blocks on the right index. Commutation with \(I_2\otimes\sigma_3\) forces each block to be diagonal; with \(I_2\otimes\sigma_1\) forces its diagonal entries to be equal. Thus every block is a multiple of \(I_2\).
+
+Consequently \(\langle\mathcal O\rangle=\operatorname{tr}(\rho_N A)\) depends ONLY on the one-clock density. No **physical gauge-invariant** observable could then distinguish the earlier \(\Theta_+=I_2\) and \(\Theta_-=i\sigma_3\), despite their mathematical \(\sigma_1\otimes\sigma_1\) correlation difference. In fact
+\[
+(I_2\otimes i\sigma_3)^\dagger
+(\sigma_1\otimes\sigma_1)
+(I_2\otimes i\sigma_3)
+=-(\sigma_1\otimes\sigma_1),\tag{J}
+\]
+so this comparator is specifically NOT invariant under the proposed right gauge. This is a precise **either/or**: if the whole right group is genuine gauge, hidden phase differences are unobservable in the one-clock theory; if an independently calibrated right-phase reference exposes them, the right action must NOT be treated as that unrestricted physical gauge (or the reference must transform as part of a fully gauge-invariant relational measurement). The prior canonical \(W_L\) right-action obstruction independently warns against such promotion.
+
+The sharp norm connects algebraic \(\Theta\) and a mathematical entanglement proxy, but does NOT select Born outcomes, a physical second subsystem or a new Hamiltonian.
+
 <!-- UNIT: next -->
 ## Microscopic dynamics needed for real quantum composition
 
