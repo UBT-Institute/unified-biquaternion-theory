@@ -73,6 +73,29 @@ This is an OFF-SHELL kinematic counterexample in a specifically declared split-j
 The full dynamical theory might select a timelike branch, a field-jet/holonomy clock, or observer-dependent clocks, but no such global selection follows from the known low-degree invariant potential or the canonical kinematic axioms. In particular any globally smooth time with a unit gradient is a further *branch hypothesis*, not evidence that a closed compact spacetime is dynamically forbidden by UBT.
 
 
+<!-- UNIT: metric-real-slice -->
+## Reálná metrika sama nevynutí reálný Lorentzův jet
+
+The full complex central product is algebraically meaningful beyond the physical Lorentz-real slice, but demanding merely that its scalar coefficient be a real Lorentzian metric does NOT force the jet itself into that slice. In the coefficient convention
+\[
+E_\mu=i\,e_\mu{}^0 I+\sum_{k=1}^3e_\mu{}^k\mathbf e_k,\qquad
+g_{\mu\nu}=\eta_{ab}e_\mu{}^ae_\nu{}^b,
+\]
+take the **complex** constant coefficient matrix \(e=L\), where
+\[
+L=\begin{pmatrix}
+c&is&0&0\\
+is&c&0&0\\
+0&0&1&0\\
+0&0&0&1
+\end{pmatrix},\quad c=s=1/\sqrt2,\quad \eta=\operatorname{diag}(-1,1,1,1).
+\]
+Direct matrix multiplication gives
+\[
+\boxed{L^{\mathsf T}\eta L=\eta,\qquad L\notin O(1,3;\mathbb R).}\tag{E}
+\]
+Thus the resulting central metric is **exactly real Minkowski**, although the complex jet coefficients are not real and hence \(E_\mu\notin W_L\). An affine full-complex field with zero connection \(\Theta(x)=\Theta_0+\sqrt{\mathcal N_0}\sum_\mu E_\mu x^\mu\) realizes these constant jets locally; this is only a kinematic algebraic witness. It is NOT a physical solution of the unfinished full UBT equations, and the locked Axiom C still defines the admitted classical sector by \(E_\mu\in W_L\). The example rules out the tempting shortcut "real central metric automatically selects Lorentz-real jets". A dynamical reality/branch-selection law or a suitably justified quotient remains necessary.
+
 <!-- UNIT: decision -->
 ## Co musíme odvodit dále
 
