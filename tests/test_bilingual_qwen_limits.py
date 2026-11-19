@@ -172,7 +172,8 @@ def test_uncertain_retry_part_keeps_original_document_unapproved(monkeypatch):
     assert review["checks"]["claims"] is False
 
 
-def test_review_shards_partition_all_source_paragraphs_without_overlap():
+@pytest.mark.parametrize("shard_count", [4, 12])
+def test_review_shards_partition_all_source_paragraphs_without_overlap(shard_count):
     documents = [
         V.document(
             f"source-{index}.en.md",
@@ -181,8 +182,8 @@ def test_review_shards_partition_all_source_paragraphs_without_overlap():
         )
         for index, count in enumerate((37, 15, 3, 29, 10))
     ]
-    all_units, groups = QWEN.shard_review_units(documents, 4)
-    repeated, repeat_groups = QWEN.shard_review_units(documents, 4)
+    all_units, groups = QWEN.shard_review_units(documents, shard_count)
+    repeated, repeat_groups = QWEN.shard_review_units(documents, shard_count)
     assert [item["id"] for item in all_units] == [item["id"] for item in repeated]
     assert [[item["id"] for item in group] for group in groups] == [
         [item["id"] for item in group] for group in repeat_groups
