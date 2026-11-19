@@ -186,7 +186,7 @@ def shard_review_units(documents: list[dict], shard_count: int) -> tuple[list[di
         )
     for idx, item in enumerate(units):
         groups[assignments[idx]].append(item)
-    if sorted(id(item) for group in groups for item in group) != sorted(id(item) for item in units):
+    if sorted(item["id"] for group in groups for item in group) != sorted(item["id"] for item in units):
         raise v.ReviewError("incomplete review-unit partition")
     return units, groups
 
