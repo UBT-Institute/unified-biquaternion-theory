@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Inverse Einstein–Dirac matching and composite-tetrad pullback gate
 
 **Status:** conditional variational theorem and necessary IR matching conditions; **not** an action-selection theorem or a proof of full UBT ghost freedom.

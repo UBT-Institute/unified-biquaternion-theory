@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Einstein–Dirac matter completion of the adopted split-jet gravity comparator
 
 **Status: CONDITIONAL IR comparator; NOT a derivation of fermions from Theta or a complete UBT microscopic action.**
