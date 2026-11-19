@@ -84,6 +84,19 @@ assert s.simplify(rho(Torigin)-s.diag(1,lam**2)/(1+lam**2))==s.zeros(2)
 assert rho(Torigin).subs(lam,1)==Id/2
 assert rho(Torigin).subs(lam,0)==s.diag(1,0)
 assert s.simplify(s.det(Torigin)-lam)==0
+
+# Nonlinear p-Born alternatives have the SAME eigenprojector / Berry Chern
+# on the nondegenerate observer parameter sphere; topology does not pick p.
+beta=s.symbols("beta",positive=True,real=True)
+n=s.symbols("n",real=True)
+P0=s.diag(1,0)
+Gbeta=s.diag(s.exp(beta),s.exp(-beta))
+rho_beta=Gbeta/s.trace(Gbeta)
+rho_beta2=Gbeta*Gbeta/s.trace(Gbeta*Gbeta)
+assert s.simplify(rho_beta-(Id+s.tanh(beta)*(2*P0-Id))/2)==s.zeros(2)
+assert s.simplify(rho_beta2-(Id+s.tanh(2*beta)*(2*P0-Id))/2)==s.zeros(2)
+assert s.simplify(rho_beta[0,0]-rho_beta2[0,0])!=0
+
 print("PASS: positivity, normalized trace, observer covariance and support gate")
 print("PASS: pure-rank complement and nonlinear-power uniqueness counterexamples")
 print("PASS: sharp-vs-dagger distinction and rank-one Theta value with regular metric")
