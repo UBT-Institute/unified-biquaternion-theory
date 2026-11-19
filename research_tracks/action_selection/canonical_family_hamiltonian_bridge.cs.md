@@ -241,34 +241,20 @@ L_{\rm kin,red}^{(2)}
 
 Variace vynutí nulové kovariantní tečné rychlosti, a proto tečný kinetický blok zmizí. **Indefinitní normálový kinetický blok však přežije i tuto konkrétní redukci pomocné kalibrační konexe.** Jde o silnější závěr než pouhé zmrazení kalibračního pole, stále však nejde o úplnou Diracovu analýzu vazeb kompozitní gravitace. Přesná identita eliminace je symbolicky ověřena v tools/verify_theta_kinetic_signature.py.
 
-## Proposition 8 — a healthy Lorentz-real radial reduction has a rank-one emergent tetrad
+## Tvrzení 8 — zdravá Lorentzovsky reálná radiální redukce má emergentní tetrádu hodnosti jedna
 
-The Lorentz-real slice suggests a possible escape from the transverse ghosts
-of Proposition 7, but it exposes a **different, exact obstruction** in the
-same minimal auxiliary-connection family.
+Lorentzovsky reálný řez naznačuje možné odstranění příčných ghostů z tvrzení 7, současně však odhaluje **jinou přesnou překážku** v téže minimální rodině s pomocnou konexí.
 
-Assume the Lorentz-real field is \(X=iY\), with \(Y\) **positive-definite
-Hermitian** on a local timelike patch. By the positive Hermitian
-factorization \(Y=\rho SS^\dagger\), where
-\(\rho=\sqrt{\det Y}>0\) and \(S\in SL(2,\mathbb C)\),
-a local Lorentz gauge puts \(X=i\rho I\).
-Assume this reality slice is dynamically consistent; that is **not**
-established here. Fix the scalar phase, retain only an independent
-auxiliary \(SL(2,\mathbb C)\) connection, and prescribe a nondegenerate
-Lorentz metric independently of the composite UBT tetrad.
+Předpokládejme, že Lorentzovsky reálné pole má tvar \(X=iY\), kde je \(Y\) na lokální časupodobné oblasti **pozitivně definitní hermitovská** matice. Z pozitivní hermitovské faktorizace \(Y=\rho SS^\dagger\), kde \(\rho=\sqrt{\det Y}>0\) a \(S\in SL(2,\mathbb C)\), plyne, že lokální Lorentzova kalibrace převede pole do tvaru \(X=i\rho I\). Předpokládáme, že tento řez reality je dynamicky konzistentní; to zde **nebylo dokázáno**. Zafixujme skalární fázi, ponechme jen nezávislou pomocnou konexi \(SL(2,\mathbb C)\) a předepišme nedegenerovanou Lorentzovu metriku nezávisle na kompozitní tetrádě UBT.
 
-In this gauge the potential is **exactly**, not merely quadratically,
+V této kalibraci má potenciál **přesně**, nikoli pouze do kvadratického řádu, podobu
 
 \[
 U(\rho)=U_0+(4\lambda_1+\lambda_2)(\rho^2-r^2)^2
 -(4\lambda_1+\lambda_2)r^4.
 \]
 
-Let the connection act by
-\(D_\mu X=\partial_\mu X+A_\mu X+X A_\mu^\dagger\).
-Its anti-Hermitian rotational part drops out at \(X=i\rho I\);
-write the Hermitian traceless boost part as
-\(A_\mu+A_\mu^\dagger=b_\mu^j\sigma_j\). Then
+Nechť konexe působí jako \(D_\mu X=\partial_\mu X+A_\mu X+X A_\mu^\dagger\). Její antihermitovská rotační část se pro \(X=i\rho I\) neuplatní; hermitovskou bezestopou boostovou část zapišme jako \(A_\mu+A_\mu^\dagger=b_\mu^j\sigma_j\). Pak
 
 \[
 D_\mu X=i\left[(\partial_\mu\rho)I+\rho b_\mu^j\sigma_j\right],
@@ -277,15 +263,9 @@ H(D_\mu X)=2\left[(\partial_\mu\rho)^2
 -\rho^2\sum_j(b_\mu^j)^2\right].
 \]
 
-The **exact algebraic** connection equations from the minimal kinetic
-term on a prescribed metric force \(b_\mu^j=0\) for \(\rho>0\).
-The reduced scalar kinetic term is positive for \(c>0\);
-the radial potential has
-\(U''(r)=8(4\lambda_1+\lambda_2)r^2>0\).
-Thus this restricted auxiliary-gauge model **does have a healthy
-radial scalar**.
+**Přesné algebraické** rovnice konexe plynoucí z minimálního kinetického členu na předepsané metrice vynucují \(b_\mu^j=0\) pro \(\rho>0\). Redukovaný skalární kinetický člen je pro \(c>0\) kladný a radiální potenciál má \(U''(r)=8(4\lambda_1+\lambda_2)r^2>0\). Tento omezený model s pomocnou kalibrační konexí tedy **skutečně má zdravý radiální skalár**.
 
-However the same on-shell equation gives
+Tatáž rovnice na řešení ovšem současně dává
 
 \[
 \boxed{D_\mu X=i(\partial_\mu\rho)I,\qquad
@@ -293,52 +273,29 @@ However the same on-shell equation gives
 \det g_{\mu\nu}^{\mathrm{composite}}=0.}
 \]
 
-Indeed all four covariant-derivative columns are proportional to the
-single internal direction \(iI\); their central anticommutator metric
-is proportional to \(\partial_\mu\rho\,\partial_\nu\rho\), an outer
-product of rank at most one. Consequently the healthy scalar reduction
-**cannot simultaneously reproduce a nondegenerate emergent UBT
-spacetime** within this prescribed-metric, purely auxiliary
-connection branch.
+Všechny čtyři sloupce kovariantních derivací jsou totiž úměrné jedinému vnitřnímu směru \(iI\); jejich metrika z centrálního antikomutátoru je úměrná vnějšímu součinu \(\partial_\mu\rho\,\partial_\nu\rho\), jehož hodnost je nejvýše jedna. Zdravá skalární redukce tedy **nemůže zároveň reprodukovat nedegenerovaný emergentní prostoročas UBT** v této větvi s předepsanou metrikou a čistě pomocnou konexí.
 
-This is an **exact conditional no-go**, not a contradiction in the full
-theory: varying the *composite* metric rather than prescribing it
-modifies the connection equations, and a curvature-dependent,
-torsionful or other dynamically selected branch could evade it.
-The proof also assumes the positive Hermitian timelike patch and
-a dynamically admissible Lorentz-real restriction. It does not prove
-that either exists as a physical vacuum of UBT.
+Jde o **přesné podmíněné no-go tvrzení**, nikoli o rozpor v úplné teorii: variování *kompozitní* metriky místo jejího předepsání mění rovnice konexe a křivostně závislá, torzní nebo jinak dynamicky vybraná větev by mohla tuto překážku obejít. Důkaz také předpokládá pozitivní hermitovskou časupodobnou oblast a dynamicky přípustné Lorentzovsky reálné omezení. Nedokazuje, že některý z těchto předpokladů odpovídá fyzikálnímu vakuu UBT.
 
-Independent symbolic verification:
-tools/verify_theta_timelike_auxiliary_rank.py;
-regression tests: tests/test_theta_timelike_auxiliary_rank.py.
+Nezávislé symbolické ověření: tools/verify_theta_timelike_auxiliary_rank.py; regresní testy: tests/test_theta_timelike_auxiliary_rank.py.
 
-## Proposition 9 — exact composite-metric volume collapse and timelike auxiliary-branch no-go
+## Tvrzení 9 — přesný kolaps kompozitního metrického členu na objem a překážka časupodobné pomocné větve
 
-Proposition 8 prescribed the metric. Here we instead **vary the
-central composite metric consistently**, still within a sharply defined
-minimal subfamily. Assume:
+Tvrzení 8 pracovalo s předepsanou metrikou. Nyní naproti tomu **konzistentně variujeme centrální kompozitní metriku**, stále však v přesně vymezené minimální podrodině. Předpokládejme:
 
-1. The Lorentz-real timelike gauge \(X=i\rho I\), \(\rho>0\), on a connected
-   oriented patch; the local \(SL(2,\mathbb C)\) connection is independent
-   and enters **only** through \(D_\mu X\).
-2. The tetrad and metric are defined by the original UBT central
-   anticommutator,
-   \(E_\mu=N_0^{-1/2}D_\mu X\) and
+1. Lorentzovsky reálnou časupodobnou kalibraci \(X=i\rho I\), \(\rho>0\), na souvislé orientované oblasti; lokální konexe \(SL(2,\mathbb C)\) je nezávislá a vstupuje **pouze** prostřednictvím \(D_\mu X\).
+2. Tetráda a metrika jsou definovány původním centrálním antikomutátorem UBT:
+   \(E_\mu=N_0^{-1/2}D_\mu X\) a
    \(\frac12(E_\mu^\sharp E_\nu+E_\nu^\sharp E_\mu)
-     =g_{\mu\nu}I\), with \(N_0>0\).
-3. The complete branch action is **only** the existing Lorentz-pairing
-   kinetic/potential family with real \(c\ne0\), no independent curvature,
-   connection-derivative, boundary-dependent or other dynamical terms:
-   \[
-   S_{\rm min}=\int d^4x\sqrt{-g}
-   \left[-\frac c2g^{\mu\nu}B(D_\mu X,D_\nu X)-U(\rho)\right],
-   \]
-   where \(B\) polarizes \(H\) and the nonconstant classified quartic
-   \(U(\rho)\) is as in Proposition 8.
+      =g_{\mu\nu}I\), kde \(N_0>0\).
+3. Úplná akce této větve je **pouze** existující kineticko-potenciálová rodina s Lorentzovým párováním a reálným \(c\ne0\), bez nezávislé křivosti, derivací konexe, členů závislých na hranici či jiných dynamických členů:
+    \[
+    S_{\rm min}=\int d^4x\sqrt{-g}
+    \left[-\frac c2g^{\mu\nu}B(D_\mu X,D_\nu X)-U(\rho)\right],
+    \]
+    kde \(B\) polarizuje \(H\) a nekonstantní klasifikovaný kvartický potenciál \(U(\rho)\) je uveden v tvrzení 8.
 
-**Exact kinematic identity.** For any nondegenerate tetrad in this
-Lorentz-real representation,
+**Přesná kinematická identita.** Pro každou nedegenerovanou tetrádu v této Lorentzovsky reálné reprezentaci platí
 
 \[
 \boxed{
@@ -347,16 +304,9 @@ g^{\mu\nu}B(D_\mu X,D_\nu X)=-8N_0.
 }
 \]
 
-**Proof:** write \(D_\mu X=i(a_\mu I+\mathbf v_\mu\cdot
-\boldsymbol\sigma)\). The central anticommutator gives
-\(g_{\mu\nu}=N_0^{-1}(-a_\mu a_\nu+
-\mathbf v_\mu\cdot\mathbf v_\nu)\), whereas the polarized
-quadratic invariant is
-\(B(D_\mu X,D_\nu X)=2(a_\mu a_\nu-
-\mathbf v_\mu\cdot\mathbf v_\nu)\).
-The contraction is the trace of the four-dimensional identity.
+**Důkaz:** Pišme \(D_\mu X=i(a_\mu I+\mathbf v_\mu\cdot \boldsymbol\sigma)\). Centrální antikomutátor dává \(g_{\mu\nu}=N_0^{-1}(-a_\mu a_\nu+\mathbf v_\mu\cdot\mathbf v_\nu)\), zatímco polarizovaný kvadratický invariant je \(B(D_\mu X,D_\nu X)=2(a_\mu a_\nu-\mathbf v_\mu\cdot\mathbf v_\nu)\). Kontrakce odpovídá stopě čtyřrozměrné jednotkové matice.
 
-Thus the kinetic term **collapses exactly to a volume term**,
+Kinetický člen se tedy **přesně redukuje na objemový člen**
 
 \[
 \boxed{
@@ -364,7 +314,7 @@ S_{\rm min}=\int d^4x\,\sqrt{-g}\,[4cN_0-U(\rho)].
 }
 \]
 
-With \(A_\mu+A_\mu^\dagger=b_\mu^j\sigma_j\) in the timelike gauge,
+Při \(A_\mu+A_\mu^\dagger=b_\mu^j\sigma_j\) in the timelike gauge,
 the tetrad columns are
 \[
 E_\mu{}^a=N_0^{-1/2}
@@ -376,46 +326,31 @@ and on a patch of fixed orientation,
 \left|\det[\partial\rho,b^1,b^2,b^3]\right|.
 \]
 
-**No-go theorem.** There is **no smooth stationary configuration with
-nondegenerate composite tetrad on such a connected patch** if
-\(U(\rho)\) is the nonconstant quartic with
-\(\lambda_1\ge0,\lambda_2>0\).
+**No-go tvrzení.** V takové souvislé oblasti **neexistuje hladká stacionární konfigurace s nedegenerovanou kompozitní tetrádou**, je-li \(U(\rho)\) nekonstantním kvartickým potenciálem s \(\lambda_1\ge0,\lambda_2>0\).
 
-**Proof:** the twelve independent algebraic connection variations give
+**Důkaz:** dvanáct nezávislých algebraických variací konexe dává
 \[
 (4cN_0-U(\rho))\,
 \frac{\partial\sqrt{-g}}{\partial b_\mu^j}=0.
 \]
-At an invertible tetrad the cofactor matrix is invertible, so for
-each boost column at least one cofactor is nonzero. Consequently
-\(U(\rho)=4cN_0\) pointwise. The quartic \(U(\rho)\) is a
-**nonconstant polynomial**; for fixed \(c,N_0\) its level set
-\(U(\rho)=4cN_0\) is finite. A continuous \(\rho\) on a connected
-patch taking values in this finite set must be constant. Therefore
-\(\partial_\mu\rho=0\), the first tetrad column vanishes and
-\(\operatorname{rank}E\le3\), contradicting nondegeneracy. QED.
+Při invertibilní tetrádě je matice kofaktorů invertibilní, takže pro
+každý boostový sloupec je alespoň jeden kofaktor nenulový. Proto
+\(U(\rho)=4cN_0\) bodově. Kvartický \(U(\rho)\) je
+**nekonstantní polynom**; pro pevná \(c,N_0\) je jeho hladinová množina
+\(U(\rho)=4cN_0\) konečná. Spojité \(\rho\) na souvislé
+oblasti s hodnotami v této konečné množině musí být konstantní. Proto
+\(\partial_\mu\rho=0\), první sloupec tetrády mizí a
+\(\operatorname{rank}E\le3\), což odporuje nedegenerovanosti. QED.
 
-**Interpretation:** including the metric's chain-rule variation
-does **not** rescue this particular minimal auxiliary branch:
-it changes the connection equation from \(b=0\) to a volume-cofactor
-condition, which forces tetrad degeneracy for a nonconstant potential.
-This is a genuine exact action-level exclusion of the **stated
-subfamily**, not of the complete UBT programme. A curvature term,
-dynamical torsion, differentiated/composite connection, different
-measure, higher-derivative action, or a physically distinct
-non-timelike branch is outside the theorem. A consistent final
-single-Theta action must derive and test whichever of these
-mechanisms it uses, not silently append a sector action.
+**Výklad:** započtení variace metriky podle řetězového pravidla **nezachraňuje** tuto konkrétní minimální pomocnou větev: mění rovnici konexe z \(b=0\) na podmínku pro objemový kofaktor, která při nekonstantním potenciálu vynutí degeneraci tetrády. Jde o skutečné přesné vyloučení **uvedené podrodiny na úrovni akce**, nikoli celého programu UBT. Křivostní člen, dynamická torze, derivovaná/kompozitní konexe, jiná míra, akce s vyššími derivacemi či fyzikálně odlišná nečasupodobná větev leží mimo toto tvrzení. Konzistentní konečná akce jediného pole Θ musí příslušný použitý mechanismus odvodit a ověřit, nikoli mlčky přidat oddělenou akci sektoru.
 
-Exact independent matrix and determinant checker:
-tools/verify_theta_composite_volume_no_go.py;
-regression tests: tests/test_theta_composite_volume_no_go.py.
+Přesný nezávislý maticový a determinantový ověřovač: tools/verify_theta_composite_volume_no_go.py; regresní testy: tests/test_theta_composite_volume_no_go.py.
 
-## Remaining theorem-critical work
+## Zbývající kroky zásadní pro důkaz
 
-1. Finalize the single Theta action's pairing, measure, potential, composite metric and connection variations.
-2. Compute the full Dirac constraints and remove any ghost directions without breaking Lorentz covariance.
-3. Derive the selected vacuum, scalar channel and effective Einstein coefficient from that same action.
-4. Only then promote the conditional dodecahedral CMB calculation to a parameter-controlled physical prediction.
+1. Dokončit párování, míru, potenciál, kompozitní metriku a variace konexí jediné akce Θ.
+2. Vypočítat úplné Diracovy vazby a odstranit všechny směry ghostů bez porušení Lorentzovy kovariance.
+3. Odvodit vybrané vakuum, skalární kanál a efektivní Einsteinův koeficient z téže akce.
+4. Teprve potom povýšit podmíněný dodekahedrální výpočet CMB na fyzikální předpověď s kontrolovanými parametry.
 
-**Claim boundary:** this note proves a conditional Hamiltonian and reduction identity. It does not prove fundamental UBT dynamics, GR recovery without effective-action assumptions, alpha, or a Planck fit.
+**Hranice tvrzení:** tato poznámka dokazuje podmíněný Hamiltonián a redukční identitu. Nedokazuje fundamentální dynamiku UBT, obnovu GR bez předpokladů efektivní akce, alfa ani Planckův fit.
