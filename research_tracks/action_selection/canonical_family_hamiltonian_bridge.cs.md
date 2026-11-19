@@ -96,10 +96,9 @@ K=2\operatorname{diag}(1,-1,-1,-1,1,-1,-1,-1),
 
 **Výsledek:** minimální *nevázaná kvadratická kinetická rodina na pevném pozadí* s touto přesnou souvislou symetrií má záporný směr Hamiltoniánu pro libovolnou volbu nenulového kinetického znaménka \(c\). Nahrazení pozitivní Hilbertovou–Schmidtovou normou **NENÍ** invariantní vůči deklarované úplné nekompaktní spinové kongruenci. Tím se vylučuje přímočará kladnoenergetická realizace s osmi složkami, nikoli teorie se skutečnými dodatečnými vazbami první třídy nebo s jinak deklarovanou reprezentací.
 
-## Proposition 5 — symmetry-normal modes at the established nonzero minimum
+## Tvrzení 5 — normální módy vůči symetrii u již nalezeného nenulového minima
 
-Use **the same** invariant quartic potential already classified and minimized
-in biquaternionic_potential_vacuum.en.md:
+Použijeme **tentýž** invariantní kvartický potenciál, který již byl klasifikován a minimalizován v biquaternionic_potential_vacuum.en.md:
 
 \[
 U(X)=V_0+\mu H(X)+\lambda_1 H(X)^2+\lambda_2|\det X|^2,
@@ -108,14 +107,9 @@ U(X)=V_0+\mu H(X)+\lambda_1 H(X)^2+\lambda_2|\det X|^2,
 \mu=-(4\lambda_1+\lambda_2)r^2,\ r>0.
 \]
 
-It has a pointwise global minimizer \(X_0=irI\).
-The phase direction \(\delta X=-rI\) and the three boost directions
-\(\delta X=ir\sigma_j\) span its four-dimensional orbit under the declared
-connected symmetry. The three rotation generators stabilize \(X_0\).
-The **K-orthogonal normal** is spanned by
-\(\delta X=i\,\delta v_0 I+\sum_j\delta u_j\sigma_j\).
+Má bodové globální minimum v \(X_0=irI\). Fázový směr \(\delta X=-rI\) a tři boostové směry \(\delta X=ir\sigma_j\) tvoří čtyřrozměrnou orbitu deklarované souvislé symetrie. Tři generátory rotací stabilizují \(X_0\). **Normálový podprostor K-ortogonální k orbitě** je generován směry \(\delta X=i\,\delta v_0 I+\sum_j\delta u_j\sigma_j\).
 
-On this normal, direct differentiation of the original quartic gives
+Na tomto normálovém podprostoru přímá derivace původního kvartického potenciálu dává
 
 \[
 \begin{aligned}
@@ -129,16 +123,9 @@ K_{\perp}^{-1}M_{\perp}
 \end{aligned}
 \]
 
-The orbit directions lie in \(\ker\operatorname{Hess}U\);
-the normal is orthogonal to the orbit in the invariant pairing, and has
-signature **(1,3)**. This is stronger than the eight-component
-signature calculation: *simply quotienting the four phase/boost tangent
-directions cannot make the remaining normal kinetic metric positive*,
-provided the normal remains a propagating subspace of the frozen-background
-realization.
+Tečné směry orbity leží v \(\ker\operatorname{Hess}U\); normála je vůči orbitě ortogonální v invariantním párování a má signaturu **(1,3)**. To je silnější než výpočet signatury pro osm složek: *pouhé vydělení čtyř tečných fázových/boostových směrů nezajistí kladnost zbývající normálové kinetické metriky*, pokud normála zůstane propagujícím podprostorem realizace na zmrazeném pozadí.
 
-On a local frozen Minkowski background with vanishing connection,
-homogeneous normal perturbations have the quadratic Lagrangian
+Na lokálním zmrazeném Minkowského pozadí s nulovou konexí mají homogenní normálové perturbace kvadratický lagrangián
 
 \[
 L^{(2)}_\perp
@@ -148,7 +135,7 @@ L^{(2)}_\perp
  +\lambda_2\sum_j(\delta u_j)^2\right].
 \]
 
-The associated equations are
+Příslušné rovnice mají tvar
 
 \[
 c\,\ddot{\delta v}_0+4r^2(4\lambda_1+\lambda_2)\delta v_0=0,
@@ -156,40 +143,15 @@ c\,\ddot{\delta v}_0+4r^2(4\lambda_1+\lambda_2)\delta v_0=0,
 c\,\ddot{\delta u}_j-4r^2\lambda_2\delta u_j=0.
 \]
 
-For \(c>0\) the three normal-vector modes grow exponentially;
-for \(c<0\) the scalar normal mode grows exponentially. Hence this
-**specific unconstrained fixed-background vacuum linearization** cannot
-have only stable propagating normal modes with the invariant pairing,
-regardless of kinetic sign.
+Pro \(c>0\) rostou tři normálové vektorové módy exponenciálně; pro \(c<0\) roste exponenciálně skalární normálový mód. Tato **konkrétní nevázaná linearizace vakua na pevném pozadí** tedy nemůže mít při invariantním párování pouze stabilní propagující normálové módy, ať je znaménko kinetického členu jakékoli.
 
-**Crucial scope:** the constant vacuum with zero connection has
-\(D_\mu X_0=0\) and therefore a *degenerate composite tetrad*.
-It is **not** an admissible nondegenerate vacuum of completed UBT gravity.
-Moreover, the orbit is a symmetry orbit; identifying it as a removable
-*local gauge orbit* requires the full gauge transformations, dynamical
-connections and Dirac constraint algebra. This theorem does **not** prove
-that the complete composite, potentially constrained UBT has a ghost.
-It gives a sharp obstruction any claimed completion must evade and
-a counterexample to inferring stability from the pointwise positive
-potential Hessian alone.
+**Zásadní omezení platnosti:** konstantní vakuum s nulovou konexí splňuje \(D_\mu X_0=0\), a proto má *degenerovanou kompozitní tetrádu*. **Není** přípustným nedegenerovaným vakuem dokončené gravitace UBT. Orbita je navíc orbitou symetrie; aby ji bylo možné odstranit jako *lokální kalibrační orbitu*, je třeba úplné kalibrační transformace, dynamické konexe a Diracovu algebru vazeb. Toto tvrzení **nedokazuje**, že úplná kompozitní, potenciálně vázaná UBT má ghosty. Poskytuje přesnou překážku, kterou musí jakékoli proklamované dokončení překonat, a protipříklad k vyvozování stability pouze z bodově kladného Hessianu potenciálu.
 
-**Exact computational certificate:**
-tools/verify_theta_kinetic_signature.py checks the Pauli-matrix
-expansion, 8-real Hessian, 4+4 orbit/normal decomposition, full potential
-gradient/Hessian and generalized normal eigenvalues symbolically.
-tests/test_theta_kinetic_signature.py is a regression check. The
-checker was executed independently with SymPy 1.14 and its focused
-pytest passed (1 test). Full repository CI and the Dirac algebra have
-**not** been checked by that local execution.
+**Přesný výpočetní certifikát:** tools/verify_theta_kinetic_signature.py symbolicky ověřuje Pauliho rozklad matice, Hessian v 8 reálných složkách, rozklad orbita/normála 4+4, úplný gradient a Hessian potenciálu a zobecněná vlastní čísla normálových módů. tests/test_theta_kinetic_signature.py poskytuje regresní kontrolu. Ověřovací skript byl nezávisle spuštěn se SymPy 1.14 a zaměřený pytest prošel (1 test). Toto lokální spuštění **neověřilo** úplnou CI repozitáře ani Diracovu algebru.
 
-## Proposition 6 — the bare kinetic/potential family contains no propagating Yang--Mills connection (tree-level)
+## Tvrzení 6 — samotná kineticko-potenciálová rodina neobsahuje propagující Yangovy–Millsovy konexe (na stromové úrovni)
 
-Treat a connection \(C_\mu^a\) as an independent field entering only the
-covariant derivative \(D_\mu X=\partial_\mu X+C_\mu^aT_aX\),
-in the linear representation defined above, with **no** curvature
-\(F_{\mu\nu}F^{\mu\nu}\) or other connection-derivative term in the
-family action. On a prescribed metric the infinitesimal connection variation
-is exact:
+Uvažujme konexi \(C_\mu^a\) jako nezávislé pole, které vstupuje pouze do kovariantní derivace \(D_\mu X=\partial_\mu X+C_\mu^aT_aX\) v uvedené lineární reprezentaci, přičemž rodina akcí **neobsahuje** křivostní člen \(F_{\mu\nu}F^{\mu\nu}\) ani jiný člen s derivací konexe. Na předepsané metrice je infinitezimální variace podle konexe přesně
 
 \[
 \delta_{C} S
@@ -197,8 +159,7 @@ is exact:
 B(T_aX,D_\nu X)\,\delta C_\mu^a,
 \]
 
-where \(B(U,V)\) is the polarization of the invariant quadratic form
-\(H\). Therefore
+kde \(B(U,V)\) je polarizace invariantní kvadratické formy \(H\). Tedy
 
 \[
 \frac{\delta S}{\delta C_\mu^a}
@@ -208,58 +169,26 @@ P^\mu_{C_a}=\frac{\partial\mathcal L}
 {\partial(\partial_t C_\mu^a)}=0.
 \]
 
-These are **algebraic connection equations** and vanishing primary
-connection momenta. No Yang--Mills hyperbolic wave equation for
-\(C_\mu^a\) follows from this bare classical action. The same absence
-of \(\partial C\) persists for a metric built *algebraically*
-from \(D_\mu X\), provided no curvature/differentiated metric terms
-are added. Such a composite metric does change the algebraic current
-by the chain rule; the displayed fixed-metric current is **not**
-its full equation of motion.
+Jde o **algebraické rovnice konexe** a nulové primární hybnosti konexe. Z této holé klasické akce neplyne žádná hyperbolická Yangova–Millsova vlnová rovnice pro \(C_\mu^a\). Stejná nepřítomnost \(\partial C\) přetrvává pro metriku sestavenou *algebraicky* z \(D_\mu X\), pokud nepřidáme křivostní ani členy s derivacemi metriky. Taková kompozitní metrika ovšem mění algebraický proud podle řetězového pravidla; uvedený proud na pevné metrice **není** její úplnou pohybovou rovnicí.
 
-This is a restricted **tree-level structural no-go** for this
-minimal family, not for quantum induced gauge kinetics, an explicitly
-curvature-dependent single action, or a connection that is a derivative
-composite of another dynamical field. Deriving a finite, positive
-Yang--Mills coefficient by a constrained one-loop effective action
-would constitute an additional physical result and cannot be presumed.
+Je to omezené **strukturální no-go tvrzení na stromové úrovni** pro tuto minimální rodinu, nikoli pro kvantově indukované kalibrační kinetické členy, explicitně křivostně závislou jedinou akci nebo konexi, která je derivačním kompozitem jiného dynamického pole. Odvození konečného kladného Yangova–Millsova koeficientu z vázané jednosmyčkové efektivní akce by představovalo další fyzikální výsledek a nelze je předpokládat.
 
-In particular, allowing independent \(C_0^a\) variations can impose
-constraints on \(X\) that were absent in the prescribed-connection
-Legendre transform of Proposition 1. The full Dirac analysis must
-include these algebraic constraints and their Poisson closure *before*
-interpreting any fixed-connection negative normal modes as
-physical instabilities of UBT.
+Zejména připustíme-li nezávislé variace \(C_0^a\), mohou se na \(X\) objevit vazby, které chyběly v Legendreově transformaci s předepsanou konexí z tvrzení 1. Úplná Diracova analýza musí zahrnout tyto algebraické vazby a jejich Poissonovo uzavření *dříve*, než se záporné normálové módy s pevnou konexí vyloží jako fyzikální nestability UBT.
 
-The independent full-eight-real-component symbolic verification and
-long-wavelength dispersion relation for Proposition 5 are recorded in
-[theta_kinetic_spectrum.en.md](theta_kinetic_spectrum.en.md).
-**Proposition 2 remains a conditional scalar truncation**, not a
-demonstration that the remaining modes of the full UBT action are stable.
+Nezávislé symbolické ověření všech osmi reálných složek a disperzní vztah v dlouhovlnné limitě pro tvrzení 5 jsou uvedeny v [theta_kinetic_spectrum.en.md](theta_kinetic_spectrum.en.md). **Tvrzení 2 zůstává podmíněným skalárním ořezem**, nikoli důkazem stability ostatních módů úplné akce UBT.
 
-## Proposition 7 — eliminating auxiliary phase/boost connections does not cure the normal instability
+## Tvrzení 7 — odstranění pomocných fázových a boostových konexí neodstraňuje normálovou nestabilitu
 
-This is a **stronger, still conditional** statement than merely quotienting
-the symmetry orbit. Consider the same fixed-background minimal family,
-but now allow an **independent auxiliary** local
-\(U(1)\times SL(2,\mathbb C)\) connection inside \(D_\mu X\), with
-**no connection-curvature kinetic term**. Linearize at \(X_0=irI\)
-with vanishing background connection. The phase generator sends
-\(X_0\mapsto-rI\), the three boost generators send
-\(X_0\mapsto ir\sigma_j\), and the three rotation generators annihilate
-\(X_0\). The last three connection components do not enter the
-quadratic fluctuation action.
+Jde o **silnější, stále však podmíněné** tvrzení než pouhé vydělení orbity symetrie. Uvažujme tutéž minimální rodinu na pevném pozadí, avšak nyní povolme **nezávislou pomocnou** lokální konexi \(U(1)\times SL(2,\mathbb C)\) uvnitř \(D_\mu X\), a to **bez kinetického členu křivosti konexe**. Linearizujme v \(X_0=irI\) při nulové konexi pozadí. Generátor fáze zobrazuje \(X_0\mapsto-rI\), tři generátory boostů \(X_0\mapsto ir\sigma_j\) a tři generátory rotací anulují \(X_0\). Poslední tři složky konexe nevstupují do kvadratické akce fluktuací.
 
-For each spacetime index \(\mu\), the tangent covariant derivatives are
+Pro každý prostoročasový index \(\mu\) jsou tečné kovariantní derivace
 
 \[
 D_\mu u_0=\partial_\mu u_0-rA_\mu^\phi,\qquad
 D_\mu v_j=\partial_\mu v_j+rA_\mu^{b_j}.
 \]
 
-The normal derivatives are \(\partial_\mu v_0\) and
-\(\partial_\mu u_j\) at quadratic order. The time-derivative part of
-the quadratic kinetic Lagrangian is therefore exactly
+Normálové derivace jsou ve kvadratickém řádu \(\partial_\mu v_0\) a \(\partial_\mu u_j\). Část kvadratického kinetického lagrangiánu obsahující časové derivace má tedy přesně tvar
 
 \[
 \mathcal L_{\mathrm{kin,time}}^{(2)}
@@ -268,14 +197,14 @@ the quadratic kinetic Lagrangian is therefore exactly
 +\dot v_0^2-\sum_j\dot u_j^2\right].
 \]
 
-The algebraic connection equations have the **unique** solution
+Algebraické rovnice konexe mají **jediné** řešení
 
 \[
 A_\mu^\phi=\frac{\partial_\mu u_0}{r},\qquad
 A_\mu^{b_j}=-\frac{\partial_\mu v_j}{r}.
 \]
 
-Substitution cancels all tangent covariant derivatives, leaving
+Dosazením se vyruší všechny tečné kovariantní derivace a zůstane
 
 \[
 \boxed{
@@ -287,29 +216,15 @@ Substitution cancels all tangent covariant derivatives, leaving
 }
 \]
 
-Thus the **actually eliminated** auxiliary phase/boost gauge sector
-still leaves a \((1,3)\) normal kinetic signature and the opposite-sign
-generalized squared masses of Proposition 5. For either nonzero
-real \(c\), a long-wavelength normal mode grows exponentially.
-This rules out repairing this **particular quadratic auxiliary-gauge
-realization** by merely treating the phase/boost tangent directions
-as gauge.
+Po **skutečné eliminaci** pomocného fázového/boostového kalibračního sektoru tedy normálová kinetická signatura stále zůstává \((1,3)\) a zobecněné kvadráty hmotností mají opačná znaménka jako v tvrzení 5. Pro libovolné nenulové reálné \(c\) roste jeden dlouhovlnný normálový mód exponenciálně. Tím se vylučuje náprava **této konkrétní kvadratické realizace s pomocnou kalibrační konexí** pouhým prohlášením tečných fázových/boostových směrů za kalibrační.
 
-The conclusion assumes a prescribed flat metric, a pointwise-minimum
-background, zero background connection, independent nonpropagating
-connections entering only through \(D_\mu X\), and no other constraints.
-The background has a **degenerate composite tetrad**, and the full
-single-Theta composite metric, torsion, relative connections, higher
-derivatives and their Dirac algebra are not included. Therefore this
-is **not** a no-go for all possible UBT completions.
+Závěr předpokládá předepsanou plochou metriku, pozadí v bodovém minimu, nulovou konexi pozadí, nezávislé nepropagující konexe vstupující pouze přes \(D_\mu X\) a nepřítomnost dalších vazeb. Pozadí má **degenerovanou kompozitní tetrádu** a úplná kompozitní metrika z jediného Θ, torze, relativní konexe, vyšší derivace ani jejich Diracova algebra nejsou zahrnuty. Nejde proto o **no-go tvrzení pro všechna možná dokončení UBT**.
 
-Exact symbolic verifier:
-tools/verify_theta_auxiliary_connection_reduction.py;
-regression tests: tests/test_theta_auxiliary_connection_reduction.py.
+Přesný symbolický ověřovač: tools/verify_theta_auxiliary_connection_reduction.py; regresní testy: tests/test_theta_auxiliary_connection_reduction.py.
 
-### Corollary — eliminating auxiliary temporal gauge connections
+### Důsledek — odstranění pomocných časových kalibračních konexí
 
-Assume the local phase and boost connection components have no independent time derivatives and are varied algebraically. Linearizing their action about the same fixed constant vacuum, write orbit-tangent fluctuation coordinates as t and normal coordinates as n. The temporal gauge components a and b enter the kinetic energy exactly as follows:
+Předpokládejme, že lokální složky fázové a boostové konexe nemají vlastní časové derivace a variují se algebraicky. Při linearizaci jejich působení kolem téhož pevného konstantního vakua označme fluktuační souřadnice tečné k orbitě jako t a normálové souřadnice jako n. Časové kalibrační složky a a b vstupují do kinetické energie přesně takto:
 
 \[
 L_{\rm kin}^{(2)}
@@ -324,7 +239,7 @@ L_{\rm kin,red}^{(2)}
 =c\left[(\dot n_0)^2-\sum_{j=1}^3(\dot n_j)^2\right].
 \]
 
-Variation sets the covariant tangent velocities to zero, so the tangent kinetic block disappears. **The indefinite normal kinetic block survives even after this particular auxiliary gauge reduction.** This is stronger than freezing the gauge field, but still is not the full constrained composite-gravity Dirac analysis. The exact elimination identity is checked symbolically in tools/verify_theta_kinetic_signature.py.
+Variace vynutí nulové kovariantní tečné rychlosti, a proto tečný kinetický blok zmizí. **Indefinitní normálový kinetický blok však přežije i tuto konkrétní redukci pomocné kalibrační konexe.** Jde o silnější závěr než pouhé zmrazení kalibračního pole, stále však nejde o úplnou Diracovu analýzu vazeb kompozitní gravitace. Přesná identita eliminace je symbolicky ověřena v tools/verify_theta_kinetic_signature.py.
 
 ## Proposition 8 — a healthy Lorentz-real radial reduction has a rank-one emergent tetrad
 
@@ -504,4 +419,3 @@ regression tests: tests/test_theta_composite_volume_no_go.py.
 4. Only then promote the conditional dodecahedral CMB calculation to a parameter-controlled physical prediction.
 
 **Claim boundary:** this note proves a conditional Hamiltonian and reduction identity. It does not prove fundamental UBT dynamics, GR recovery without effective-action assumptions, alpha, or a Planck fit.
-
