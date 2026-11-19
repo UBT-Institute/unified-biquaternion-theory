@@ -106,6 +106,24 @@ a&0&0&1
 \]
 For \(a\ne0\) the same single-observer \(\rho_I\) history does not determine even the canonical local metric components of the admissible real first jet at that point. This comes from the extra \(dU\) term in \(d(\Theta U)\), not from a new fundamental tetrad. Both geometries could be related by a coordinate/frame change in a larger construction; **inequivalent gravity or different on-shell solutions are not claimed**. Also, the second field need not preserve the Lorentz-real jet condition throughout a surrounding open patch; the strict physical comparison is pointwise at the origin. A legitimate full observer-and-geometric protocol must dynamically control the allowed phase transport and may require several calibrated clocks or derivative observables.
 
+<!-- UNIT: loop-holonomy -->
+## Smyčky nekomutujících fází: konstruktivní kandidát invariantní vůči změně rámce
+
+A useful constructive phase observable candidate, distinct from a geometric reality projection, arises from **noncommuting** normalized quaternion rotations. Let
+\[
+U_\alpha=e^{i\alpha\sigma_1},\quad
+V_\beta=e^{i\beta\sigma_2},\quad
+W=U_\alpha V_\beta U_\alpha^{-1}V_\beta^{-1}\in SU(2).
+\]
+Direct Pauli-matrix algebra gives the exact closed-loop character
+\[
+\boxed{\chi(\alpha,\beta)=\tfrac12\operatorname{tr}W
+=1-2\sin^2\alpha\,\sin^2\beta.}\tag{F}
+\]
+In particular \(\chi(\pi/4,\pi/4)=1/2\ne1\): these two phase rotations do not commute. Under a **simultaneous** observer-frame change \(U_\alpha\mapsto G U_\alpha G^{-1}\), \(V_\beta\mapsto G V_\beta G^{-1}\), the loop transforms \(W\mapsto G W G^{-1}\), and its trace is invariant. More generally, if edge transports of a closed loop transform \(U_{ij}\mapsto G_iU_{ij}G_j^{-1}\), their ordered product conjugates by the group element at the base vertex, leaving its trace invariant. This is standard Wilson-loop/holonomy algebra.
+
+This is a **positive conditional observable-design principle**: a calibrated network of observers sensitive to relative phase transport could use \(\chi\) rather than a raw angle or an imposed Hermitian reality projection. But a selected microscopic transport and loop are missing. If the relevant group is only the already-counted Lorentz spin frame, \(\chi\) would describe geometric spin holonomy rather than a new internal force or an objective collapse signal. It is NOT yet a physical measurement outcome, detector prescription, or UBT prediction.
+
 <!-- UNIT: decision -->
 ## Důsledky a další dynamický test
 
