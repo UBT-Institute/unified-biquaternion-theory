@@ -121,10 +121,14 @@ def load_documents(root: Path, base: str | None) -> list[dict]:
     # This ledger is migration debt, NOT semantic approval. A missing edition
     # can be excluded only for the exact frozen Git blob and only when no
     # substantive source prose changed relative to the requested PR base.
-    frozen = parity.load_frozen_legacy(root)
-    materially_changed = set(parity.changed_paths(root, base)) if base else set()
+    pairs = sorted(parity.all_pairs(root))
+    # Standalone paired fixtures have no migration ledger; the ledger is
+    # mandatory whenever a missing edition needs a historical exception.
+    has_missing = any(not en.is_file() or not cs.is_file() for en, cs in pairs)
+    frozen = parity.load_frozen_legacy(root) if has_missing else {}
+    materially_changed = set(parity.changed_paths(root, base)) if base and has_missing else set()
     deferred_legacy = 0
-    for en, cs in sorted(parity.all_pairs(root)):
+    for en, cs in pairs:
         if changed is not None and en not in changed and cs not in changed:
             continue
         if (not en.is_file() or not cs.is_file()) and parity.frozen_legacy_missing_pair(
