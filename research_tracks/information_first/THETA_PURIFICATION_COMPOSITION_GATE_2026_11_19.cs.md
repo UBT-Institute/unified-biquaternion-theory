@@ -107,7 +107,7 @@ Levé a pravé násobení lze místo toho nechat působit na **vektorizované \(
 
 Bodová amplituda jediného \(\mathbb C^4\) navíc nemůže reprezentovat libovolný čistý stav TŘÍ nezávisle adresovatelných qubitů (komplexní dimenze \(8\)); mnohočásticová fyzika potřebuje nelokální či multimódové kvantové stavy, vhodnou Fockovu/operátorovou konstrukci nebo jinou odůvodněnou emergentní kompoziční strukturu z JEDINÉHO prostorově rozprostřeného pole \(\Theta\). To **NEVYŽADUJE** další fundamentální klasická pole, **VYŽADUJE** však zvolenou mikroskopickou symplektickou formu, kvantování, lokalitu a kauzální komutativitu.
 
-Konečně samotné deterministické klasické zobrazení \(\Theta\mapsto\rho_N\) nemůže vybrat skutečně náhodný jediný výsledek detektoru. Dynamický měřicí instrument (nebo odůvodněné vysvětlení skrytými proměnnými či větvením) a jeho počet pravděpodobností jsou samostatnými chybějícími částmi.
+Konečně samotné deterministické klasické zobrazení \(\Theta\mapsto\rho_N\) nemůže vybrat skutečně náhodný jediný výsledek detektoru. Dynamický měřicí instrument (nebo odůvodněné vysvětlení skrytými proměnnými či větvením) a odpovídající pravděpodobnostní formalismus jsou samostatnými chybějícími částmi.
 
 <!-- UNIT: norm-gauge -->
 ## Bikvaternionová sharp-norma, concurrence a věta o nepozorovatelnosti pravé kalibrace
@@ -152,7 +152,7 @@ Sharp-norma spojuje algebraickou \(\Theta\) s matematickým zástupným ukazatel
 <!-- UNIT: next -->
 ## Mikroskopická dynamika potřebná pro skutečnou kvantovou kompozici
 
-**Konkrétní další odvození.** Určit přípustnou mikroskopickou akci úplného \(\Theta\), identifikovat její redukovaný fyzikální fázový prostor a symplektickou dvouformu a odvodit fundamentální kladnou pozorovatelskou reprezentaci. Potom otestovat, zda lze vytvořit dvě **prostorupodobně oddělené rozmazané algebry pozorovatelných veličin** s fyzikálně odůvodněnou komutací a faktorizací, nikoli pouhým libovolným označením dvou maticových indexů za částice. Teprve poté odvodit filtrační efekt detektoru, četnosti, projekci/aktualizaci a Bornovy váhy bez jejich předpokládání. Analyzovat tytéž kanonické Lorentzovsky reálné vazby \(D_\mu\Theta\), případnou torzi, kladnost ghostů/energie a stabilitu sektoru \(\psi\).
+**Konkrétní další odvození.** Určit přípustnou mikroskopickou akci úplného \(\Theta\), identifikovat její redukovaný fyzikální fázový prostor a symplektickou dvouformu a odvodit fundamentální kladnou pozorovatelskou reprezentaci. Potom otestovat, zda lze vytvořit dvě **prostorupodobně oddělené rozmazané algebry pozorovatelných veličin** s fyzikálně odůvodněnou komutací a faktorizací, nikoli pouhým libovolným označením dvou maticových indexů za částice. Teprve poté odvodit filtrační efekt detektoru, četnosti, projekci/aktualizaci a Bornovy váhy bez jejich předpokládání. Analyzovat tytéž kanonické Lorentzovsky reálné vazby \(D_\mu\Theta\), případnou torzi, nepřítomnost ghostů a kladnost energie a stabilitu sektoru \(\psi\).
 
 Tento text **NENÍ** proklamovaným novým důkazem standardní purifikace ani Bellových korelací. Jde o vymezený výsledek zpětného odvozování a konkrétní test **chybějící fyziky** v UBT.
 
