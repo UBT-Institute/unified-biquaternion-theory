@@ -67,3 +67,20 @@ print("PASS: real Minkowski metric with complex jets; simple anti-Herm projectio
 print("PASS: invertible complex jet path connects real coframes of opposite orientation")
 print("PASS: identical candidate one-clock rho across a patch, distinct real metric jets at one point")
 print("No on-shell or objective-collapse claim.")
+
+
+# Positive comparison invariant for two noncommuting relative quaternionic phases.
+# This is not an electromagnetic or physical-U(1) prediction.
+sx=sigmas[1]
+sy=sigmas[2]
+alpha,beta=s.symbols("alpha beta",real=True)
+Ua=s.cos(alpha)*one+I*s.sin(alpha)*sx
+Vb=s.cos(beta)*one+I*s.sin(beta)*sy
+W=Ua*Vb*Ua.H*Vb.H
+chi=s.simplify(s.trigsimp(s.trace(W)/2))
+assert s.trigsimp(chi-(1-2*s.sin(alpha)**2*s.sin(beta)**2))==0
+assert s.simplify(chi.subs({alpha:s.pi/4,beta:s.pi/4})-s.Rational(1,2))==0
+S=s.Matrix([[0,1],[-1,0]])
+assert S*S.H==one and s.det(S)==1
+assert s.simplify(s.trace(S*W*S.H)-s.trace(W))==0
+print("PASS: noncommuting quaternion phase-loop trace invariant (gauge-base conjugation)")
