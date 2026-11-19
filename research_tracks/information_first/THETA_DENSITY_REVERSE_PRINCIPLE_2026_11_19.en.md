@@ -69,6 +69,49 @@ The trace and Gram form are therefore consequences **within these explicit propo
 
 **Why no-signal support is needed.** Merely preserving pure rank-one states does NOT eliminate the alternative \(Q(T)=\operatorname{tr}(TT^\dagger)I-TT^\dagger\), which produces the *orthogonal* pure state for any rank-one \(T\) in dimension two. It violates the no-signal support condition.
 
+<!-- UNIT: additivity -->
+## Stronger theorem: channel additivity forces quadratic weights
+
+This removes the most arbitrary-looking assumption of the preceding proof: rather than postulating a quadratic measurement weight, derive that dependence from an unresolved-channel consistency law. The result is a mathematical uniqueness theorem under stated operational assumptions, not a derivation of actual UBT measurement physics.
+
+Write \(T=[v_1\ v_2]\) in a fixed calibrated observer frame. Instead of assuming quadraticity, suppose a **single** unobserved channel \(v\in\mathbb C^2\) has an unnormalized matrix response \(q(v)\ge0\), with \(q(0)=0\), satisfying:
+\[
+q(Uv)=Uq(v)U^\dagger\quad(U\in U(2)),\qquad
+\operatorname{ran}q(v)\subseteq\operatorname{span}\{v\}.
+\]
+Unitary covariance and support imply, for \(v\ne0\),
+\[
+\boxed{q(v)=h(s)\frac{vv^\dagger}{s},\quad s=v^\dagger v,\quad h(s)\ge0.}\tag{G}
+\]
+No power law or quadratic scaling is assumed. Now add two separate **operational assumptions**:
+\[
+\boxed{
+Q([v_1\ v_2])=q(v_1)+q(v_2)
+\quad\text{(additive unresolved channels)},}\tag{H}
+\]
+\[
+\boxed{
+Q(TV)=Q(T)\quad(V\in U(2))
+\quad\text{(unobserved channel-basis invariance).}}\tag{I}
+\]
+For \(T=[v\ 0]\), a right-unitary rotation can split its first column into \((\cos\gamma)v\) and \((\sin\gamma)v\). Equation (I), evaluated through (H) and (G), forces
+\[
+h(s)=h(s\cos^2\gamma)+h(s\sin^2\gamma).
+\]
+For arbitrary \(x,y\ge0\) with \(s=x+y>0\), choose \(\cos^2\gamma=x/s\), \(\sin^2\gamma=y/s\). Then
+\[
+\boxed{h(x+y)=h(x)+h(y),\qquad h\ge0.}\tag{J}
+\]
+A nonnegative additive function on \(\mathbb R_{\ge0}\) is automatically monotone: \(y\ge x\Rightarrow h(y)-h(x)=h(y-x)\ge0\). Rational approximation then yields \(h(s)=cs\), \(c\ge0\), WITHOUT a separate continuity or degree assumption. Nonzero response gives \(c>0\). Hence
+\[
+\boxed{q(v)=c\,vv^\dagger,\quad Q(T)=c\,TT^\dagger.}\tag{K}
+\]
+This is a STRONGER **conditional** derivation than assuming a (1,1)-quadratic response at the outset. The only imposed response structure is additive unresolved channels, unitary basis blindness, output support and positivity; quadratic intensity follows.
+
+**Explicit alternative-law failure:** \(q_p(v)=(v^\dagger v)^{p-1}vv^\dagger\) gives \(h(s)=s^p\). Under equal splitting \(v\mapsto(v/\sqrt2,v/\sqrt2)\), the sum in (H) changes by \(2^{1-p}\); for \(p=2\) it is halved. The globally right-unitary-invariant nonlinear map \(Q_p(T)=(TT^\dagger)^p\) is still possible, but it FAILS the separate decomposition rule (H) for generic \(T\). The assumptions are independent.
+
+**Physical status:** This theorem does not show that the right index of a biquaternion matrix is a physically unresolved detector channel, or that its response should add incoherently, or that the detector effect algebra emerges from the UBT action. The right-unitary basis change is a symmetry of this *one proposed observer protocol*, not automatically of the microscopic \(\Theta\) action or of joint multi-clock comparisons. Precisely these operational hypotheses must be tested, not secretly called established UBT axioms. Exact finite regression: tools/verify_theta_density_channel_additivity_2026_11_19.py; the functional-equation proof above is analytic.
+
 <!-- UNIT: gaps -->
 ## Alternative powers, adjoints, and covariance gates
 
