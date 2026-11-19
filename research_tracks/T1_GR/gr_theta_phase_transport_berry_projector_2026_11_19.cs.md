@@ -88,6 +88,42 @@ for **every** Bloch direction \(\mathbf n\). At the maximally mixed point there 
 
 This is ordinary spectral geometry, not evidence that physical wavefunction collapse has occurred. If one tries to identify the preferred eigenline with the actual measured result, the probability rule and dynamical admissibility must still be obtained. Choosing only the larger eigenvalue by hand is NOT Born's rule.
 
+<!-- UNIT: affine -->
+## Kanonický Minkowského první jet a rozdíl mezi posunem a pozorovatelnou veličinou
+
+There is a stronger **strict classical-Lorentz-first-jet-compatible lift** of the preceding eigenbundle parameter family. Let \((t,x,y,z)\) be ordinary LOCAL classical coordinates (not an FLRW ansatz or assumed global clock), set the existing canonical normalization \(\mathcal N_0=1\) for units, work in the allowed flat affine \(D_\mu=\partial_\mu\) chart, and define the SAME fundamental full biquaternion
+\[
+\boxed{
+\Theta(t,x,y,z;\theta,\varphi)
+=I_2+P(\theta,\varphi)+i(tI_2+x\sigma_1+y\sigma_2+z\sigma_3).
+}\tag{H}
+\]
+The parameters \((\theta,\varphi)\) label distinct FIELD CONFIGURATIONS. They are NOT extra physical spacetime dimensions, not the \(\psi\) complex-time coordinate, and not a second field. With each label held fixed under \(\partial_\mu\), the canonical first jet and sharp metric are
+\[
+\boxed{E_\mu=\partial_\mu\Theta=i\sigma_\mu\in i\,\mathrm{Herm}_2,\quad
+g_{\mu\nu}=\operatorname{diag}(-1,1,1,1),\quad\det g=-1,}\tag{I}
+\]
+for **every** point and EVERY parameter label. This follows exactly from the locked central-sharp anticommutator, NOT from a new trace/reality projector. All 4D second derivatives vanish, so it is a valid AFFINE flat kinematic witness; it is not asserted to solve a finalized microscopic Euler equation.
+
+At the coordinate origin, \( \Theta_0(\theta,\varphi)=I_2+P(\theta,\varphi)\) is invertible with determinant \(2\), and the SAME conditional observer readout with local \(N=I_2\) gives
+\[
+\rho_I(0;\theta,\varphi)=\frac{I_2+3P}{5},
+\quad c_1(P)=1.
+\]
+Thus the original single \(\Theta\) has simultaneously (i) a strict nondegenerate real-Lorentz canonical 4D first jet, (ii) the SAME Minkowski metric for all labels and (iii) a nontrivial observer eigenline Chern family over the auxiliary CONFIGURATION two-sphere. Uniform invertibility on a sufficiently small common spacetime neighborhood of the origin follows by continuity and compactness of parameter \(S^2\).
+
+**New symmetry/observable fork.** Any derivative-only gravity comparator depending solely on \(E,\omega\) assigns identical values to this family: changing \(P(\theta,\varphi)\) is an x-constant additive shift of \(\Theta\). But the candidate observer readout changes: at the north and south parameter poles,
+\[
+\boxed{
+\rho_N^{\rm north}=\operatorname{diag}(4/5,1/5),\qquad
+\rho_N^{\rm south}=\operatorname{diag}(1/5,4/5),\quad
+g^{\rm north}=g^{\rm south}=\eta.
+}\tag{J}
+\]
+The final UBT action must determine whether such constant field-value shifts are true GAUGE redundancies (in which case \(\rho_N\) by itself is NOT a physical gauge-invariant observable) or global symmetries/physically distinct branches (requiring dynamical couplings, admissible measurements and stability). Derivative-only geometric blindness does not decide the distinction. The whole family being kinematically realizable does not establish a superposition of these configurations or objective quantum collapse.
+
+Focused exact checker: tools/verify_gr_theta_affine_berry_family_2026_11_19.py.
+
 <!-- UNIT: cov -->
 ## Kovariance a stále otevřený test fyzikálního Lorentzova jetu
 
