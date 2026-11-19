@@ -38,7 +38,7 @@ def build_fixture(tmp_path, monkeypatch):
     item = A.v.document("proof.en.md", en, cs)
     item["paths"] = {"en": "proof.en.md", "cs": "proof.cs.md"}
     monkeypatch.setattr(A.v, "load_documents", lambda root, base: [item])
-    monkeypatch.setattr(A.subprocess, "check_output", lambda *a, **kw: "fixture-commit\\n")
+    monkeypatch.setattr(A.subprocess, "check_output", lambda *a, **kw: "fixture-commit\n")
     for name in ("BILINGUAL_CONTENT_POLICY.en.md",
                  "BILINGUAL_CONTENT_POLICY.cs.md", "AGENTS.md"):
         (tmp_path / name).write_text("fixture", encoding="utf-8")
