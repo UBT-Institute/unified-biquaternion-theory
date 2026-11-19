@@ -14,7 +14,7 @@ def test_healthy_split_speeds():
     z = sp.eye(2)
     g = sp.diag(1, sp.Rational(1, 4))
     x = sp.symbols("x", real=True)
-    assert generalized_speed_squares(z, g) == (x - 1) * (x - sp.Rational(1, 4))
+    assert sp.simplify(generalized_speed_squares(z, g) - (x - 1) * (x - sp.Rational(1, 4))) == 0
     assert all(v > 0 for v in z.eigenvals())
 
 
@@ -47,7 +47,7 @@ def test_original_full_theta_comparator_equal_speed_with_ghosts():
     z = sp.diag(2, -2, -2, -2, 2, -2, -2, -2)
     g = z
     x = sp.symbols("x", real=True)
-    assert sp.factor(generalized_speed_squares(z, g)) == 256 * (1 - x) ** 8
+    assert sp.simplify(generalized_speed_squares(z, g) - 256 * (1 - x) ** 8) == 0
     assert sum(z[i, i] < 0 for i in range(8)) == 6
     assert z.det() == 256
 
