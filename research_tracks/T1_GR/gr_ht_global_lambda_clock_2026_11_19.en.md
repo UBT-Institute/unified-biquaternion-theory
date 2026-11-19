@@ -89,7 +89,7 @@ Here \(T=t\) is a coordinate used to write the globally smooth \(C_3\); it is no
 <!-- UNIT: decision -->
 ## What a genuine UBT prediction would require
 
-To fix Lambda_eff without inputting it, one needs a derivation from the single Theta dynamics of at least: a microscopic action including the effective gravity sector, a well-defined topology/3-form origin or boundary state, and a selection rule for the Lambda-conjugate global degree of freedom. Flux quantization alone is not such a rule. Current classical equations admit any local Einstein–Lambda branch (subject to the comparator's admissible tetrad/connection realization). The most honest output is a sharp selection gap, not an emergent measurement of dark energy.
+To fix Lambda_eff without inputting it, one needs a derivation from the single Theta dynamics of at least: a microscopic action including the effective gravity sector, a well-defined topology/three-form origin or boundary state, and a selection rule for the Lambda-conjugate global degree of freedom. Flux quantization alone is not such a rule. Current classical equations admit any local Einstein–Lambda branch (subject to the comparator's admissible tetrad/connection realization). The most honest output is a sharp selection gap, not an emergent measurement of dark energy.
 
 <!-- UNIT: check -->
 ## Verification and relation to existing literature
