@@ -9,7 +9,7 @@ def test_transverse_and_longitudinal_eigenvalues():
     a, b, m2, q2 = sp.symbols("a b m2 q2")
     trans = m2 - a * q2
     long = m2 - b * q2
-    assert sp.factor(trans**3 * long) == (m2 - a * q2)**3 * (m2 - b * q2)
+    assert sp.simplify(trans**3 * long - (m2 - a * q2)**3 * (m2 - b * q2)) == 0
 
 
 def test_homogeneous_velocity_hessian():

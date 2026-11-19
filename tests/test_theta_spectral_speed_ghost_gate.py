@@ -48,7 +48,7 @@ def test_original_full_theta_comparator_equal_speed_with_ghosts():
     g = z
     x = sp.symbols("x", real=True)
     assert sp.simplify(generalized_speed_squares(z, g) - 256 * (1 - x) ** 8) == 0
-    assert sum(z[i, i] < 0 for i in range(8)) == 6
+    assert sum(1 for i in range(8) if z[i, i].is_negative) == 6
     assert z.det() == 256
 
 
