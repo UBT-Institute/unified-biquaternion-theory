@@ -41,6 +41,11 @@ assert s.simplify(F-s.sin(th)/2)==0
 assert s.integrate(s.integrate(F,(ph,0,2*s.pi)),(th,0,s.pi))==2*s.pi
 assert s.simplify(s.diff(Theta,th)-s.diff(P,th))==s.zeros(2)
 
+psi=s.symbols("psi",real=True)
+Theta_complex_time=s.simplify(Theta-psi*s.eye(2))
+assert zeros(s.diff(Theta_complex_time,psi)-I*s.diff(Theta_complex_time,t))
+assert all(zeros(s.diff(Theta_complex_time,q)-E[j]) for j,q in enumerate(coords))
+print("PASS: holomorphic extension in tau=t+i psi keeps the same canonical tetrad")
 print("PASS: full original Theta produces Lorentz-real canonical tetrad for every S2 label")
 print("PASS: entire label family has the same nondegenerate Minkowski geometry")
 print("PASS: field-value observer spectral line at x=0 has Chern number +1")
