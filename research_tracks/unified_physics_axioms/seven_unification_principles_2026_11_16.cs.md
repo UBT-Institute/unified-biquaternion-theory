@@ -33,7 +33,7 @@ Hypotéza: Einsteinova dynamika je rovnovážným zákonem mikroskopických kore
 
 <!-- UNIT: p3 -->
 ## P3. Stabilní univerzálně vázaný nehmotný spin 2
-Hypotéza: v okolí skutečného on-shell pozadí Theta mají linearizované perturbace po odstranění vazeb kladnoenergetický nehmotný helicity-2 mód; lokalita, Lorentzova symetrie, kalibrační vazby a univerzální vazba vynutí Einsteinovskou nízkoenergetickou vlastní interakci. Test UBT: vypočítat úplný kompozitní Hessian po kalibrační fixaci, Diracovy vazby, póly, znaménka reziduí, dvě fyzikální polarizace a univerzální vazbu. Známé argumenty spinu 2 tyto předpoklady z Theta samy neodvozují.
+Hypotéza: v okolí skutečného on-shell pozadí Theta mají linearizované perturbace po odstranění vazeb kladnoenergetický nehmotný helicity-2 mód; lokalita, Lorentzova symetrie, kalibrační vazby a univerzální vazba vynutí Einsteinovskou nízkoenergetickou vlastní interakci. Test UBT: vypočítat úplný kompozitní Hessian po kalibrační fixaci, Diracovy vazby, póly, znaménka reziduí, 2 fyzikální polarizace a univerzální vazbu. Známé argumenty spinu 2 tyto předpoklady z Theta samy neodvozují.
 
 <!-- UNIT: p4 -->
 ## P4. Fundamentální torze / geometrický součin

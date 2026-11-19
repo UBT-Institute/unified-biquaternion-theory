@@ -14,7 +14,7 @@ UBT-AI-PROVENANCE-END
 
 <!-- UNIT: status -->
 ## Rozsah a status tvrzení
-[PŘESNÝ GR KOMPARÁTOR / INFORMAČNÍ HYPOTÉZA OTEVŘENÁ] Pracujeme s jedinou Lorentzovskou metrikou a společným Riemannovým tenzorem. Závislost měřených slapových složek na pozorovateli je již součástí GR. Samostatně lze zkoumat pozorovatelsky podmíněný informační *odhad* geometrie, ale uvedené vzorce jej neimplikují. Nejde o skalární invariant druhé mocniny křivosti R^2. Neměníme uzamčené kanonické Theta, kovariantní tetrádu ani metriku UBT.
+[PŘESNÝ GR KOMPARÁTOR / INFORMAČNÍ HYPOTÉZA OTEVŘENÁ / OPEN] Pracujeme s jedinou Lorentzovskou metrikou a společným Riemannovým tenzorem. Závislost měřených slapových složek na pozorovateli je již součástí GR. Samostatně lze zkoumat pozorovatelsky podmíněný informační *odhad* geometrie, ale uvedené vzorce jej neimplikují. Nejde o skalární invariant druhé mocniny křivosti R^2. Neměníme uzamčené kanonické Theta, kovariantní tetrádu ani metriku UBT.
 
 <!-- UNIT: general -->
 ## Libovolný pozorovatel a boost

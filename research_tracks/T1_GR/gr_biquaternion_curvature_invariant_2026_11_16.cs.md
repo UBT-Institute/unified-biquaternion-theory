@@ -13,7 +13,7 @@ UBT-AI-PROVENANCE-END
 # Biquaternionový bivektorový křivostní skalár: přesný GR komparátor a audit torze
 
 <!-- UNIT: scope -->
-## Rozsah [PŘESNÁ ALGEBRA / DYNAMICKÝ VÝKLAD OTEVŘEN]
+## Rozsah [PŘESNÁ ALGEBRA / DYNAMICKÝ VÝKLAD OTEVŘEN / OPEN]
 Uzamčená tetráda z jediného fundamentálního pole a centrální metrika zůstávají beze změn. Konstrukce používá kanonické Lorentzovsky reálné tetrády E_mu a kvaternionové sharp; nezavádí další fundamentální pole, nepoužívá obyčejnou stopu k definici metriky, nepředpokládá on-shell prostoročas UBT ani netvrdí nový dynamický princip. Volíme orientaci kvaternionů e1 e2=e3, signaturu (-,+,+,+) a epsilon_0123=+1. Odlišné konvence Riemannova tenzoru vyžadují konzistentní kontrolu celkových znamének.
 
 <!-- UNIT: identity -->

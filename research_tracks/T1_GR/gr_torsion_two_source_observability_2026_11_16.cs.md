@@ -13,7 +13,7 @@ UBT-AI-PROVENANCE-END
 # Je směšovací koeficient torze měřitelný? Přesný dvouzdrojový test
 
 <!-- UNIT: status -->
-## Rozsah [PŘESNÝ MODEL / APLIKACE NA UBT OTEVŘENÁ]
+## Rozsah [PŘESNÝ MODEL / APLIKACE NA UBT OTEVŘENÁ / OPEN]
 Tento konečněrozměrný test reaguje na možnost, že zdánlivé gravitační koeficienty jsou redundantní. V a A představují nezávislé **modelové** torzní kanály s předepsanými zdroji. Nejde o odvozený přesný rozklad 24 složek torze UBT. Zejména b není automaticky Holstův ani imaginární biquaternionový koeficient. Nepřidáváme fundamentální pole.
 
 <!-- UNIT: formula -->
@@ -39,4 +39,4 @@ Pokud jsou oba zdroje J_V,J_A nezávisle fyzikálně dostupné a jejich normaliz
 
 <!-- UNIT: physical -->
 ## Aplikace na UBT a priorita
-Vypočítat skutečný Lorentzovsky kovariantní Hessian 24 složek fyzikální kontorze z kanonické akce, úplný zdroj z párové derivace Theta i kompozitního řetězového pravidla, jeho nulový prostor a přípustný on-shell podprostor zdrojů. Teprve po určení skutečných pozorovatelných zdrojů rozhodne hodnost zobrazení vazeb na pozorovatelné veličiny o redundanci. Plné CI, Lean, nezávislé dvojjazyčné ověření a skutečný kompozitní Hessian čekají; pouze draft.
+Vypočítat skutečný Lorentzovsky kovariantní Hessian 24x24 fyzikální kontorze z kanonické akce, úplný zdroj z párové derivace Theta i kompozitního řetězového pravidla, jeho nulový prostor a přípustný on-shell podprostor zdrojů. Teprve po určení skutečných pozorovatelných zdrojů rozhodne hodnost zobrazení vazeb na pozorovatelné veličiny o redundanci. Plné CI, Lean, nezávislé dvojjazyčné ověření a skutečný kompozitní Hessian čekají; pouze draft.
