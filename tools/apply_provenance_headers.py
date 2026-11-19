@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import re
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -263,51 +264,61 @@ def inventory_counts(root: Path, config: dict) -> dict[str, int]:
 
 
 def check_one(path: Path, rel: str, tier: str) -> tuple[bool, str]:
-    """Validate editorial metadata without replacing a source-specific notice.
-
-    The free-form notice may state a narrower research scope than the generic
-    tier notice. The signed tier, owner, review status, schema, and policy
-    pointer are always checked exactly, including cardinality.
-    """
-    text = path.read_text(encoding="utf-8")
+    """Validate exactly one real source marker, not examples in code fences."""
+    source = path.read_text(encoding="utf-8")
     error = f"{rel}: marker missing, stale, duplicated, or assigned to the wrong tier"
-    if tier in {"excluded", "D_historical"}:
-        if BEGIN in text or END in text:
-            return False, f"{rel}: excluded/historical file carries a provenance marker"
-        return True, ""
-    if text.count(BEGIN) != 1 or text.count(END) != 1:
-        return False, error
-    lines = text.splitlines()
-    start = next((i for i, line in enumerate(lines) if BEGIN in line), -1)
-    finish = next((i for i, line in enumerate(lines) if END in line), -1)
-    if start < 0 or finish < start or start > 50 or finish - start > 15:
-        return False, error
     suffix = path.suffix.lower()
+
     if suffix == ".md":
-        # Accept both the original compact HTML marker and the canonical
-        # multiline marker. The metadata must remain inside ONE comment.
-        prefix = "\n".join(lines[:start + 1])
-        rest = "\n".join(lines[finish:])
-        if "<!--" not in prefix or "-->" not in rest:
+        # Only HTML source comments count. The AI_PROVENANCE.md policy
+        # intentionally prints BEGIN/END tokens within a fenced code example.
+        marker_comments = [
+            match.group(0) for match in re.finditer(r"<!--.*?-->", source, re.DOTALL)
+            if BEGIN in match.group(0) or END in match.group(0)
+        ]
+        if tier in {"excluded", "D_historical"}:
+            if marker_comments:
+                return False, f"{rel}: excluded/historical file carries a provenance marker"
+            return True, ""
+        if len(marker_comments) != 1:
             return False, error
-        left = prefix.rfind("<!--")
-        right = rest.find("-->")
-        if "-->" in prefix[left:] or "<!--" in rest[:right]:
+        block = marker_comments[0]
+        if block.count(BEGIN) != 1 or block.count(END) != 1:
             return False, error
+        lines = [line.strip() for line in block.splitlines()]
+        if BEGIN not in lines or END not in lines:
+            # Compact source comments have BEGIN/END on the comment delimiter
+            # line; check them separately without accepting duplicate blocks.
+            lines = [
+                line.replace("<!--", "").replace("-->", "").strip()
+                for line in block.splitlines()
+            ]
     elif suffix == ".tex":
-        if any(not line.lstrip().startswith("%") for line in lines[start:finish + 1]):
+        lines = [
+            line.strip().removeprefix("%").strip()
+            for line in source.splitlines()
+            if line.lstrip().startswith("%")
+        ]
+        if tier in {"excluded", "D_historical"}:
+            if BEGIN in lines or END in lines:
+                return False, f"{rel}: excluded/historical file carries a provenance marker"
+            return True, ""
+        if lines.count(BEGIN) != 1 or lines.count(END) != 1:
             return False, error
     else:
         return False, error
-    block = "\n".join(lines[start:finish + 1])
-    required = marker_fields(rel, tier)[:-2]  # all fields except notice/end
-    for field in required:
-        # Require the whole metadata line, not a matching substring.
-        if sum(line.strip().strip("% ").replace("<!--", "").replace("-->", "").strip()
-               == field for line in lines[start:finish + 1]) != 1:
-            return False, error
-    notices = [line.strip().lstrip("% ").strip() for line in lines[start:finish + 1]
-               if line.strip().lstrip("% ").strip().startswith("notice:")]
+
+    try:
+        start, end = lines.index(BEGIN), lines.index(END)
+    except ValueError:
+        return False, error
+    if end <= start or end - start > 15:
+        return False, error
+    metadata = lines[start:end + 1]
+    required = marker_fields(rel, tier)[:-2]  # all except specific notice/end
+    if any(metadata.count(field) != 1 for field in required):
+        return False, error
+    notices = [line for line in metadata if line.startswith("notice:")]
     if len(notices) != 1 or not notices[0].partition(":")[2].strip():
         return False, error
     return True, ""
