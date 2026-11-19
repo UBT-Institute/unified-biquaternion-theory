@@ -8,17 +8,6 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Conditional reduction lemma and mechanical verification; not full UBT Dirac closure.
 UBT-AI-PROVENANCE-END -->
-<!--
-UBT-AI-PROVENANCE-BEGIN
-schema: ubt-ai-provenance/v1
-tier: C_working
-ai_assistance: disclosed
-human_review: risk-based
-editorial_responsibility: Ing. David Jaroš
-policy: ../../AI_PROVENANCE.md
-notice: Working material; exhaustive human review is not claimed.
-UBT-AI-PROVENANCE-END
--->
 
 # P0: exact shift-gauge kernel and Dirac count for the split-jet lift
 
