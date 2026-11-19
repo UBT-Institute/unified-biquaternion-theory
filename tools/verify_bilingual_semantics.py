@@ -118,8 +118,23 @@ def load_documents(root: Path, base: str | None) -> list[dict]:
         # generated-header updates and moves of an existing pair need fresh evidence.
         changed = {root / name for name in output.split("\0") if name}
     documents = []
+    # This ledger is migration debt, NOT semantic approval. A missing edition
+    # can be excluded only for the exact frozen Git blob and only when no
+    # substantive source prose changed relative to the requested PR base.
+    frozen = parity.load_frozen_legacy(root)
+    materially_changed = set(parity.changed_paths(root, base)) if base else set()
+    deferred_legacy = 0
     for en, cs in sorted(parity.all_pairs(root)):
         if changed is not None and en not in changed and cs not in changed:
+            continue
+        if (not en.is_file() or not cs.is_file()) and parity.frozen_legacy_missing_pair(
+            en, cs, root, frozen
+        ):
+            if en in materially_changed or cs in materially_changed:
+                raise ReviewError(
+                    f"substantively changed frozen legacy note requires its translation: {en}"
+                )
+            deferred_legacy += 1
             continue
         errors = parity.check_pair(en, cs)
         if errors:
@@ -129,6 +144,12 @@ def load_documents(root: Path, base: str | None) -> list[dict]:
         if not item["en"] or not item["cs"]:
             raise ReviewError(f"empty edition: {item['id']}")
         documents.append(item)
+    if deferred_legacy:
+        print(
+            f"Deferred {deferred_legacy} exact-blob frozen legacy missing translation(s); "
+            "these sources have NOT passed semantic review.",
+            file=sys.stderr,
+        )
     return documents
 
 
