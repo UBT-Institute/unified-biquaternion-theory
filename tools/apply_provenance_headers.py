@@ -263,14 +263,53 @@ def inventory_counts(root: Path, config: dict) -> dict[str, int]:
 
 
 def check_one(path: Path, rel: str, tier: str) -> tuple[bool, str]:
+    """Validate editorial metadata without replacing a source-specific notice.
+
+    The free-form notice may state a narrower research scope than the generic
+    tier notice. The signed tier, owner, review status, schema, and policy
+    pointer are always checked exactly, including cardinality.
+    """
     text = path.read_text(encoding="utf-8")
+    error = f"{rel}: marker missing, stale, duplicated, or assigned to the wrong tier"
     if tier in {"excluded", "D_historical"}:
         if BEGIN in text or END in text:
             return False, f"{rel}: excluded/historical file carries a provenance marker"
         return True, ""
-    expected = apply_marker(text, rel, tier, path.suffix.lower())
-    if expected != text:
-        return False, f"{rel}: marker missing, stale, duplicated, or assigned to the wrong tier"
+    if text.count(BEGIN) != 1 or text.count(END) != 1:
+        return False, error
+    lines = text.splitlines()
+    start = next((i for i, line in enumerate(lines) if BEGIN in line), -1)
+    finish = next((i for i, line in enumerate(lines) if END in line), -1)
+    if start < 0 or finish < start or start > 50 or finish - start > 15:
+        return False, error
+    suffix = path.suffix.lower()
+    if suffix == ".md":
+        # Accept both the original compact HTML marker and the canonical
+        # multiline marker. The metadata must remain inside ONE comment.
+        prefix = "\n".join(lines[:start + 1])
+        rest = "\n".join(lines[finish:])
+        if "<!--" not in prefix or "-->" not in rest:
+            return False, error
+        left = prefix.rfind("<!--")
+        right = rest.find("-->")
+        if "-->" in prefix[left:] or "<!--" in rest[:right]:
+            return False, error
+    elif suffix == ".tex":
+        if any(not line.lstrip().startswith("%") for line in lines[start:finish + 1]):
+            return False, error
+    else:
+        return False, error
+    block = "\n".join(lines[start:finish + 1])
+    required = marker_fields(rel, tier)[:-2]  # all fields except notice/end
+    for field in required:
+        # Require the whole metadata line, not a matching substring.
+        if sum(line.strip().strip("% ").replace("<!--", "").replace("-->", "").strip()
+               == field for line in lines[start:finish + 1]) != 1:
+            return False, error
+    notices = [line.strip().lstrip("% ").strip() for line in lines[start:finish + 1]
+               if line.strip().lstrip("% ").strip().startswith("notice:")]
+    if len(notices) != 1 or not notices[0].partition(":")[2].strip():
+        return False, error
     return True, ""
 
 
@@ -280,19 +319,16 @@ def run(root: Path, map_path: Path, apply: bool, report: bool) -> int:
     changed = 0
     errors: list[str] = []
     for path, rel, tier in iter_sources(root, config):
-        if tier in {"excluded", "D_historical"}:
-            ok, message = check_one(path, rel, tier)
-            if not ok:
-                errors.append(message)
+        ok, message = check_one(path, rel, tier)
+        if ok:
             continue
-        text = path.read_text(encoding="utf-8")
-        desired = apply_marker(text, rel, tier, path.suffix.lower())
-        if desired != text:
-            if apply:
-                path.write_text(desired, encoding="utf-8")
-                changed += 1
-            else:
-                errors.append(f"{rel}: marker missing, stale, duplicated, or assigned to the wrong tier")
+        if apply and tier not in {"excluded", "D_historical"}:
+            text = path.read_text(encoding="utf-8")
+            desired = apply_marker(text, rel, tier, path.suffix.lower())
+            path.write_text(desired, encoding="utf-8")
+            changed += 1
+        else:
+            errors.append(message)
 
     if report or apply:
         print(
