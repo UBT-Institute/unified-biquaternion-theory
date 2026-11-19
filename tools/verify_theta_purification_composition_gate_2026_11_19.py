@@ -93,6 +93,45 @@ assert ans==[{a:d,b:0,c:0}]
 # while M2 itself is only 4 complex-dimensional. This does not rule out
 # the vec(T) TWO-FACTOR mathematical encoding in C4.
 assert 4*4==16 and 2*2==4
+# The canonical biquaternion sharp determinant controls the mathematical
+# two-index Schmidt concurrence for this CHOSEN Hilbert factorization.
+detT=sp.simplify(sp.det(T))
+C2=sp.simplify(4*detT*sp.conjugate(detT)/norm2**2)
+purity=sp.simplify(sp.trace(rho*rho))
+assert sp.simplify(purity+2*detT*sp.conjugate(detT)/norm2**2-1)==0
+assert sp.simplify(C2-2*(1-purity))==0
+assert sp.simplify(sharp(T)*T-detT*one)==sp.zeros(2)
+assert sp.simplify(C2-sp.Rational(5,128))==0
+assert sp.simplify(purity-sp.Rational(251,256))==0
+assert sp.simplify(4*sp.det(T*T.H)/norm2**2-C2)==0
+assert sp.simplify(4*sp.det(Tprime*Tprime.H)/sp.trace(Tprime*Tprime.H)**2-C2)==0
+
+# Full right-U2 gauge invariance would make every allowed joint observable
+# commute with I tensor V. Its full commutant is M2 tensor I (Schur's lemma).
+zz=sp.symbols('z0:16')
+O=sp.Matrix(4,4,zz)
+I_x=sp.kronecker_product(one,sx)
+I_z=sp.kronecker_product(one,sz)
+equations=list(O*I_x-I_x*O)+list(O*I_z-I_z*O)
+sol=sp.linsolve(equations,zz)
+assert len(sol)==1
+fixed=list(sol)[0]
+K=sp.Matrix([[zz[0],zz[2]],[zz[8],zz[10]]])
+# Solve with specific free variables to show every solution = K tensor I.
+assert sp.simplify(O.subs(dict(zip(zz,fixed)))-sp.kronecker_product(
+    sp.Matrix([[fixed[0],fixed[2]],[fixed[8],fixed[10]]]),one
+))==sp.zeros(4)
+
+Vright=sp.kronecker_product(one,I*sz)
+assert sp.simplify(Vright.H*XX*Vright+XX)==sp.zeros(4)
+# The Bell comparison is NOT right-gauge invariant.
+assert sp.simplify((v_plus.H*XX*v_plus)[0]-
+    (v_minus.H*XX*v_minus)[0])==2
+
+print("PASS normalized sharp determinant determines conditional concurrence and reduced purity")
+print("PASS the full right-U2 commutant contains only left-index effects")
+print("PASS hidden-phase Bell correlator is forbidden as an observable if right U2 is gauged")
+
 print("PASS vectorized full biquaternion yields partial-trace observer rho")
 print("PASS conditional positive-effect probability is quadratic filter fraction")
 print("PASS same rho and canonical Minkowski metric, different two-index coherences")
