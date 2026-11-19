@@ -10,55 +10,55 @@ policy: ../../AI_PROVENANCE.md
 notice: Conditional operational algebra; NOT a full-Theta dynamical derivation of Born probabilities or a new canonical metric.
 UBT-AI-PROVENANCE-END
 -->
-# Aditivita informace jednoho Theta: ortogonální kanály, interference a Lorentzova kalibrační překážka
+# Aditivita informace jediného Θ: ortogonální označení, interference a překážka Lorentzovy kalibrace
 
 <!-- UNIT: scope -->
 ## Význam aditivity informace
 
-Uživatel navrhl chápat aditivitu informace jako přirozený princip UBT. Jde o užitečný směr, je však nutné důsledně rozlišovat nezávislé či ortogonální záznamy od koherentních alternativ. Poznámka doplňuje NOVÝ explicitní test slučitelnosti s kalibrační strukturou úplného Theta a využívá již sloučený podmíněný důkaz jednoznačnosti hustoty. Nemění kanonické úplné pole, metriku sharp ani komplexní čas.
+Uživatel navrhl chápat aditivitu informace jako přirozený princip UBT. Je to užitečný směr, avšak je třeba přesně odlišit nezávislé či ortogonální záznamy od koherentních alternativ. Tento text přináší NOVÝ explicitní test kalibrační slučitelnosti úplného Θ a znovu používá již mergnutou podmíněnou větu o jednoznačnosti matice hustoty. Nemění uzamčené úplné bikvaternionové pole, sharp-metriku ani komplexní čas.
 
 <!-- UNIT: statement -->
-## Podmíněný princip aditivity informačních kanálů
+## Podmíněný princip aditivních kanálů
 
-The **user-motivated information principle** must be made more precise than "all information adds." For Shannon information,
+**Informační princip motivovaný uživatelem** musí být přesnější než tvrzení „veškerá informace se sčítá“. Pro Shannonovu informaci platí
 \[
 H(A,B)=H(A)+H(B)-I(A;B),
 \]
-so even classical information is simply additive only for independent subsystems \(I(A;B)=0\). Coherent amplitudes satisfy
+takže i klasická informace je jednoduše aditivní pouze pro nezávislé podsystémy \(I(A;B)=0\). Koherentní amplitudy splňují
 \[
 \boxed{|a+b|^2=|a|^2+|b|^2+2\operatorname{Re}(a^*b).}\tag{A}
 \]
-The cross term must survive when alternatives are coherently recombined. Therefore the prior theorem applies to **orthogonally tagged, unobserved** channels, not indiscriminately to all quantum alternatives.
+Křížový člen musí při koherentním opětovném spojení alternativ zůstat zachován. Předchozí věta proto platí pro **ortogonálně označené nepozorované** kanály, nikoli bez rozlišení pro všechny kvantové alternativy.
 
-In the previously declared candidate observer frame \(N\), let the **one original full biquaternion** be represented as \(T_N=N^{-1/2}\Theta N^{-1/2}=[v_1\ v_2]\). Adopt the conditional operational readout principle:
+V již definovaném kandidátním pozorovatelském rámci \(N\) reprezentujme **jediný původní úplný bikvaternion** jako \(T_N=N^{-1/2}\Theta N^{-1/2}=[v_1\ v_2]\). Přijměme podmíněný operační princip odečtu:
 \[
 \boxed{Q([v_1\ v_2])=q(v_1)+q(v_2),\qquad
 Q(TV)=Q(T)\;(V\in U(2)),}\tag{B}
 \]
-where \(V\) changes only the **unresolved right-channel label** in this observer protocol, \(q\) is positive, unitarily equivariant on the observed output, and \(\operatorname{ran}q(v)\subseteq\operatorname{span}\{v\}\) (no signal in an output channel unsupported by its amplitude). The prior exact channel-splitting proof gives \(q(v)=c\,vv^\dagger\) with \(c>0\): writing \(q(v)=h(s)vv^\dagger/s\), \(s=v^\dagger v\), mixing \([v\ 0]\) by an arbitrary right unitary enforces \(h(x+y)=h(x)+h(y)\), and nonnegative additivity forces \(h(s)=cs\). Therefore
+kde \(V\) mění pouze **štítek nerozlišeného pravého kanálu** tohoto pozorovatelského protokolu, \(q\) je kladná a unitárně ekvivariantní na pozorovaném výstupu a \(\operatorname{ran}q(v)\subseteq\operatorname{span}\{v\}\) (nulový signál ve výstupním kanálu, který amplituda nepodporuje). Předchozí přesný důkaz rozdělení kanálů dává \(q(v)=c\,vv^\dagger\) s \(c>0\): zapíšeme-li \(q(v)=h(s)vv^\dagger/s\), \(s=v^\dagger v\), pak libovolné pravé unitární míchání \([v\ 0]\) vynucuje \(h(x+y)=h(x)+h(y)\) a nezáporná aditivita vynucuje \(h(s)=cs\). Proto
 \[
 Q(T_N)=c\,T_NT_N^\dagger,\qquad
 \rho_N=\frac{T_NT_N^\dagger}{\operatorname{tr}(T_NT_N^\dagger)}.\tag{C}
 \]
-This is a mathematically sufficient CONDI­TIONAL theorem. It does not prove that the right index of \(\Theta\) is a physically unobserved subsystem, that a detector implements this decomposition, or that measurements obey the postulated effect rules. Crucially the right \(U(2)\) invariance is NOT automatically a physical gauge symmetry of \(\Theta\).
+Jde o matematicky postačující PODMÍNĚNOU větu. Nedokazuje, že pravý index \(\Theta\) je fyzikálně nepozorovaný podsystém, že detektor takový rozklad realizuje ani že měření dodržují postulovaná pravidla efektů. Zásadní je, že pravá invariance \(U(2)\) **NENÍ** automaticky fyzikální kalibrační symetrií \(\Theta\).
 
 <!-- UNIT: interference -->
-## Interference po koherentním spojení dvou kanálů
+## Vymazání fáze dvou kanálů zachovává interferenci
 
-An exact two-channel example shows why orthogonal coarse-graining and coherent phase recombination must be distinguished. Choose in a fixed observer frame
+Přesný příklad se dvěma kanály ukazuje, proč je nutné rozlišovat ortogonální hrubozrnnění a koherentní fázové skládání. V pevném pozorovatelském rámci zvolme
 \[
 v_1=\begin{pmatrix}1\\0\end{pmatrix},\quad
 v_2=\begin{pmatrix}1\\1\end{pmatrix},\quad
 T_\phi=[v_1\ e^{i\phi}v_2].
 \]
-The unobserved right-channel Gram response is independent of \(\phi\):
+Gramova odezva nerozlišeného pravého kanálu nezávisí na \(\phi\):
 \[
 \boxed{
 Q_{\rm unres}=T_\phi T_\phi^\dagger=
 \begin{pmatrix}2&1\\1&1\end{pmatrix}.
 }\tag{D}
 \]
-But if a hypothetical, coherently calibrated detector **erases the tag before evaluating its output amplitude**, the output vector is proportional to \(w_\phi=v_1+e^{i\phi}v_2\). Then
+Jestliže však hypotetický koherentně kalibrovaný detektor **vymaže štítek ještě před vyhodnocením výstupní amplitudy**, je výstupní vektor úměrný \(w_\phi=v_1+e^{i\phi}v_2\). Potom
 \[
 \boxed{
 w_0w_0^\dagger=\begin{pmatrix}4&2\\2&1\end{pmatrix},
@@ -66,42 +66,42 @@ w_0w_0^\dagger=\begin{pmatrix}4&2\\2&1\end{pmatrix},
 w_\pi w_\pi^\dagger=\begin{pmatrix}0&0\\0&1\end{pmatrix}.
 }\tag{E}
 \]
-The phase is invisible in (D) but observable in the coherent comparison (E). This is textbook two-path interference/which-way algebra in the specific full-biquaternion matrix representation; **the existence of an admissible UBT tag-eraser detector is not derived**. Equation (E) is not an instruction to add quantum alternatives incoherently or to identify a random measurement outcome with \(\phi\)-rotation.
+Fáze je neviditelná v (D), avšak pozorovatelná v koherentním porovnání (E). Jde o standardní algebru interference dvou cest a informace o průchodu konkrétně v maticové reprezentaci úplného bikvaternionu; **existence přípustného detektoru UBT vymazávajícího štítek nebyla odvozena**. Rovnice (E) není pokynem k nekoherentnímu sčítání kvantových alternativ ani ke ztotožnění náhodného výsledku měření s rotací \(\phi\).
 
 <!-- UNIT: geometry -->
-## Symetrie pravých kanálů pozorovatele není automaticky geometrická kalibrační symetrie
+## Symetrie pravých kanálů pozorovatele není automaticky geometrickou kalibrací
 
-The decisive UBT-specific gate is whether the operational \(T\mapsto TV\) invariance can be imposed on the fundamental field without violating the **locked** canonical real Lorentz tetrad. Take a strict affine kinematic reference
+Rozhodujícím testem specifickým pro UBT je otázka, zda lze operační invarianci \(T\mapsto TV\) uvalit na fundamentální pole bez porušení **uzamčené** kanonické reálné Lorentzovy tetrády. Vezměme přesnou afinní kinematickou referenci
 \[
 E_\mu=(iI_2,i\sigma_1,i\sigma_2,i\sigma_3),\qquad
 g_{\mu\nu}=\eta_{\mu\nu},\qquad V=i\sigma_3\in SU(2).
 \]
-As a right change of the full matrix, \(V\) is unitary and determinant-one, so the **observer Gram** is unchanged:
+Jako pravá změna úplné matice je \(V\) unitární a má determinant jedna, takže se **pozorovatelská Gramova matice** nemění:
 \[
 (TV)(TV)^\dagger=TT^\dagger.
 \]
-For a constant homogeneous right first-jet transform \(E_\mu'=E_\mu V\), the sharp central metric is ALSO unchanged:
+Při konstantní homogenní pravé transformaci prvního jetu \(E_\mu'=E_\mu V\) se **TAKÉ** nemění centrální sharp-metrika:
 \[
 g[E']=g[E].
 \]
-Nevertheless
+Přesto
 \[
 \boxed{E'_0=iI_2(i\sigma_3)=-\sigma_3,\quad
 E'_0{}^\dagger=E'_0\ne-E'_0.}\tag{F}
 \]
-Thus the right-\(SU(2)\) observer-channel relabeling can EXIT \(W_L=i\mathrm{Herm}_2\), despite leaving the metric and Gram response unchanged. It is **not** a demonstrated exact physical gauge redundancy of the canonical UBT geometry. In the canonical Lorentz sector the allowed frame transformations instead have the linked form \(E_\mu\mapsto L E_\mu L^\dagger\) (up to the discrete sign discussed in prior research); they need not act as an arbitrary independent right mixing.
+Přeznačení pravého pozorovatelského kanálu pomocí \(SU(2)\) tedy může OPUSTIT \(W_L=i\mathrm{Herm}_2\), přestože metrika i Gramova odezva zůstávají stejné. Nejde o prokázanou přesnou fyzikální kalibrační redundanci kanonické geometrie UBT. Přípustné transformace rámce v kanonickém Lorentzově sektoru mají namísto toho svázaný tvar \(E_\mu\mapsto L E_\mu L^\dagger\) (až na diskrétní znaménko probírané v předchozím výzkumu) a nemusí působit jako libovolné nezávislé pravé míchání.
 
-This is an exact **off-shell algebraic obstruction** against silently promoting the partial trace/right-channel ambiguity to a microscopic UBT symmetry. It does NOT forbid a real physical detector from being insensitive to the right channel, nor does it forbid a different dynamical or coupled transformation that preserves the real tetrad. It isolates precisely the missing physical premise.
+Jde o přesnou **off-shell algebraickou překážku** proti mlčky provedenému povýšení neurčitosti parciální stopy či pravého kanálu na mikroskopickou symetrii UBT. **NEVYLUČUJE** skutečný fyzikální detektor necitlivý k pravému kanálu ani jinou dynamickou či svázanou transformaci, která reálnou tetrádu zachovává. Přesně určuje chybějící fyzikální předpoklad.
 
 <!-- UNIT: decision -->
-## Neodvozená mikroskopická fyzika a další přesný test
+## Dosud neodvozená mikroskopická fyzika a další přesný test
 
-Reverse engineering target, not a new locked axiom:
+Cíl zpětného odvozování, nikoli nový uzamčený axiom:
 
-1. From the one-Theta microscopic action and the admissible Lorentz-real jet, identify a causal observer measurement algebra and an intrinsic positive form (explaining \(\dagger\) relative to the complex-bilinear \(\sharp\)).
-2. Show that the observer can operationally ignore an **orthogonal channel tag**, while relative biquaternion phases remain available to coherent multi-reference comparisons, with dynamically selected physical transport and nondegenerate metric.
-3. Derive physical detector support and unnormalized additivity by a local conservation/composition law. Do not conflate it with Shannon entropy additivity for correlated systems or the statement that quantum amplitudes have no interference.
-4. Derive the positive effect algebra/probability functional and the measurement instrument from the actual dynamics; the unique trace density representation is conditional on these premises, not a microscopic derivation of Born's law.
-5. Test observer Lorentz covariance and gravitational Hamiltonian constraints, as well as imaginary-time \(\psi\) stability, before promoting the channel model to the canonical theory.
+1. Z mikroskopické akce jediného Θ a přípustného Lorentzovsky reálného prvního jetu určit kauzální algebru pozorovatelských měření a vnitřní kladnou formu (vysvětlující \(\dagger\) oproti komplexní bilineární \(\sharp\)).
+2. Ukázat, že pozorovatel může operačně ignorovat **štítek ortogonálního kanálu**, zatímco relativní bikvaternionové fáze zůstávají dostupné pro koherentní porovnání více referencí, s dynamicky vybraným fyzikálním transportem a nedegenerovanou metrikou.
+3. Odvodit fyzikální nosič detektoru a nenormalizovanou aditivitu z lokálního zákona zachování či kompozice. Nezaměňovat je s aditivitou Shannonovy entropie pro korelované systémy ani s tvrzením, že kvantové amplitudy neinterferují.
+4. Odvodit algebru kladných efektů, pravděpodobnostní funkcionál a měřicí instrument ze skutečné dynamiky; jedinečná stopová reprezentace hustoty je podmíněná těmito předpoklady, nikoli mikroskopickým důkazem Bornova zákona.
+5. Před povýšením modelu kanálů na kanonickou teorii otestovat pozorovatelskou Lorentzovu kovarianci, gravitační hamiltonovské vazby a stabilitu imaginárního času \(\psi\).
 
-The prior general algebraic uniqueness proof is \`research_tracks/information_first/THETA_DENSITY_REVERSE_PRINCIPLE_2026_11_19.en.md\` (already merged). This note adds the nontrivial physical distinction between **observer coarse-graining** and **fundamental gauge**, together with an exact coherent phase witness. Locked definitions: \`canonical/AXIOMS.md\`. Additional precedents: \`research_tracks/information_first/THETA_OBSERVER_RELATIVE_INFORMATION_CHANNEL_2026_11.en.md\`; \`research_tracks/T1_GR/gr_full_biquaternion_multirotation_2026_11_19.en.md\`. Test: \`tools/verify_theta_operational_channel_reality_gate_2026_11_19.py\` (exact SymPy, locally PASS). Full dynamics and objective collapse remain OPEN.
+Předchozí obecný algebraický důkaz jednoznačnosti je \`research_tracks/information_first/THETA_DENSITY_REVERSE_PRINCIPLE_2026_11_19.en.md\` (již mergnutý). Tento text přidává podstatné fyzikální rozlišení mezi **pozorovatelským hrubozrnněním** a **fundamentální kalibrací** spolu s přesným svědkem koherentní fáze. Uzamčené definice: \`canonical/AXIOMS.md\`. Další precedentní práce: \`research_tracks/information_first/THETA_OBSERVER_RELATIVE_INFORMATION_CHANNEL_2026_11.en.md\`; \`research_tracks/T1_GR/gr_full_biquaternion_multirotation_2026_11_19.en.md\`. Test: \`tools/verify_theta_operational_channel_reality_gate_2026_11_19.py\` (přesný SymPy, lokálně PASS). Úplná dynamika a objektivní kolaps zůstávají OPEN.
