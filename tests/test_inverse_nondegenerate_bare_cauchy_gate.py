@@ -39,4 +39,4 @@ def test_zero_action_does_not_control_nonzero_tetrad_motion():
     assert S_density==0
     assert sp.diff(S_density,t)==0
     assert sp.diff(S_density,mu,2)==0
-    assert sp.diff(a,t,2).subs(t,0)==2*(1+mu**2)
+    assert sp.simplify(sp.diff(a,t,2).subs(t,0)-2*(1+mu**2))==0

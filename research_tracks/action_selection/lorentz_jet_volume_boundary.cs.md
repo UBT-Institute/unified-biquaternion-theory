@@ -8,17 +8,6 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Podmíněná algebraická věta; úplná dynamika UBT je otevřená.
 UBT-AI-PROVENANCE-END -->
-<!--
-UBT-AI-PROVENANCE-BEGIN
-schema: ubt-ai-provenance/v1
-tier: C_working
-ai_assistance: disclosed
-human_review: risk-based
-editorial_responsibility: Ing. David Jaroš
-policy: ../../AI_PROVENANCE.md
-notice: Working material; exhaustive human review is not claimed.
-UBT-AI-PROVENANCE-END
--->
 
 
 # Objemová redukce kinetického členu a hraniční věta pro gradientní tetrád
@@ -112,6 +101,6 @@ Lokální Eulerovy–Lagrangeovy rovnice **takto omezené** akce tedy identicky 
 4. Úspěšná kandidátní jediná akce UBT musí určit, **který člen** vytváří gravitační rovnice (křivost, holonomie, torze, derivace spojení či nový konzistentní omezený invariant), doložit nedegenerované řešení, spočítat fyzikální omezení a energii, poté odvodit \(\zeta[\Theta]\) a jeho spektrum před použitím jádra \(S^3/2I\).
 5. Samostatně vložený člen \(\int\sqrt{-g}\,R[g(\Theta,A,B)]\) **není** odvozen ze stávající kinetické rodiny a mění variační řád; jde pouze o kandidátní ansatz, pokud UBT neurčí jeho původ a koeficient. Při \(g=y^*\eta\) na čistě gradientní větvi je skalární křivost přesně nulová.
 
-**Nezávislé ověření:** \`tools/verify_lorentz_jet_boundary.py\` a \`tests/test_lorentz_jet_boundary.py\` kontrolují přesné identity determinantu metriky a hraničního proudu na nelineárních i afinních souřadnicích. Numerické či symbolické testy jednotlivých konfigurací nejsou důkazem obecné věty; analytický důkaz je uveden výše.
+**Nezávislé ověření:** \`tools/verify_lorentz_jet_boundary.py\` a \`tests/test_lorentz_jet_boundary.py\` zahrnují přesné polynomiální kontroly determinantu metriky a hraničního proudu i konečněrozměrné maticové kontroly pro nelineární i afinní souřadnicová zobrazení. Kontroly v SymPy poskytují výpočetní certifikáty pro jednotlivé příklady; obecné identity jsou dokázány analyticky výše.
 
 **Návaznost:** \`canonical/fields/theta_field.tex\`, \`research_tracks/action_selection/theta_potential_invariants.en.md\`, \`research_tracks/action_selection/canonical_family_hamiltonian_bridge.en.md\` v **mergnutém PR #679** a \`research_tracks/dodecahedral_action_cmb/DERIVATION.md\`.

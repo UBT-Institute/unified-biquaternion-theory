@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import subprocess
 import sys
@@ -213,6 +214,42 @@ def language_router(path: Path) -> bool:
     return all(target.is_file() for target in targets) and not check_pair(*targets)
 
 
+def frozen_legacy_missing_pair(en: Path, cs: Path, root: Path, entries: dict) -> bool:
+    """Allow ONLY exact unchanged historical sources, never new or edited work.
+
+    This is a migration-debt inventory, not a structural or semantic approval.
+    The separate --changed-base check below still rejects substantive edits.
+    """
+    existing = en if en.is_file() else cs
+    if not existing.is_file():
+        return False
+    relative = existing.relative_to(root).as_posix()
+    if entries.get(relative) != (cs if en.is_file() else en).relative_to(root).as_posix():
+        return False
+    current = subprocess.run(
+        ["git", "hash-object", "--", relative],
+        cwd=root, text=True, capture_output=True, check=False,
+    )
+    return current.returncode == 0 and current.stdout.strip() == _FROZEN_BLOBS.get(relative)
+
+
+_FROZEN_BLOBS: dict[str, str] = {}
+
+
+def load_frozen_legacy(root: Path) -> dict[str, str]:
+    """Fail closed if historical-debt inventory is missing or malformed."""
+    global _FROZEN_BLOBS
+    inventory = root / "reports/bilingual_legacy_gap_freeze_2026_11_19.json"
+    data = json.loads(inventory.read_text(encoding="utf-8"))
+    if data.get("schema") != "ubt-frozen-legacy-unpaired/v1":
+        raise ValueError("Unsupported legacy bilingual debt inventory")
+    entries = data["entries"]
+    if len(entries) != data["count"] or len(set(e["existing"] for e in entries)) != len(entries):
+        raise ValueError("Legacy bilingual debt inventory inconsistent or duplicated")
+    _FROZEN_BLOBS = {e["existing"]: e["git_blob_sha"] for e in entries}
+    return {e["existing"]: e["expected"] for e in entries}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path("."))
@@ -220,14 +257,32 @@ def main() -> int:
     args = parser.parse_args()
     root = args.root.resolve()
     errors: list[str] = []
+    try:
+        # --root limits the scan, but migration debt and Git hashes are
+        # repository-relative. Textbook-only CI must use the same inventory.
+        repo_root = Path(subprocess.check_output(
+            ["git", "rev-parse", "--show-toplevel"], cwd=root, text=True
+        ).strip()).resolve()
+        if not root.is_relative_to(repo_root):
+            raise ValueError("Bilingual root must be inside its Git repository")
+        frozen = load_frozen_legacy(repo_root)
+    except (OSError, ValueError, KeyError, TypeError, subprocess.CalledProcessError) as exc:
+        print(f"Bilingual migration-debt inventory invalid: {exc}", file=sys.stderr)
+        return 1
 
     pairs = all_pairs(root)
+    historical_debt = 0
     for en, cs in sorted(pairs):
+        if (not en.is_file() or not cs.is_file()) and frozen_legacy_missing_pair(en, cs, repo_root, frozen):
+            historical_debt += 1
+            continue
         errors.extend(check_pair(en, cs))
 
     if args.changed_base:
-        for path in changed_paths(root, args.changed_base):
-            relative = path.relative_to(root)
+        for path in changed_paths(repo_root, args.changed_base):
+            if not path.is_relative_to(root):
+                continue
+            relative = path.relative_to(repo_root)
             if (
                 path.suffix not in TEXT_SUFFIXES
                 or excluded(relative)
@@ -251,7 +306,11 @@ def main() -> int:
         for error in sorted(set(errors)):
             print(f"- {error}", file=sys.stderr)
         return 1
-    print(f"Bilingual document gate passed ({len(pairs)} pair(s) checked).")
+    print(
+        f"Bilingual document gate passed ({len(pairs) - historical_debt} complete pair(s) checked; "
+        f"{historical_debt} exact-content-frozen pre-existing missing translations "
+        "(NOT bilingual approval; substantive changes still fail)."
+    )
     return 0
 
 

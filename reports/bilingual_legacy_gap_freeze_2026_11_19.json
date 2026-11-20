@@ -1,0 +1,235 @@
+{
+  "schema": "ubt-frozen-legacy-unpaired/v1",
+  "as_of": "2026-11-19",
+  "status": "UNTRANSLATED_TECHNICAL_DEBT_NOT_TRANSLATION_APPROVAL",
+  "policy": "BILINGUAL_CONTENT_POLICY.en.md: Scope and migration",
+  "rule": "Only exact Git blobs of pre-existing unpaired sources may remain as migration debt. Any substantive change or any new missing pair is forbidden.",
+  "count": 45,
+  "entries": [
+    {
+      "existing": "research_tracks/information_first/THETA_DIRAC_CHARGE_CURRENT_PROJECTED_U1_SOLDERING_GATE_2026_11_15.en.md",
+      "expected": "research_tracks/information_first/THETA_DIRAC_CHARGE_CURRENT_PROJECTED_U1_SOLDERING_GATE_2026_11_15.cs.md",
+      "git_blob_sha": "f586a41e4895e2e463e7435959c96233d59ebae3"
+    },
+    {
+      "existing": "research_tracks/information_first/THETA_DIRAC_VECTOR_U1_RIGHT_COLUMN_SHARP_SLICE_GATE_2026_11_15.en.md",
+      "expected": "research_tracks/information_first/THETA_DIRAC_VECTOR_U1_RIGHT_COLUMN_SHARP_SLICE_GATE_2026_11_15.cs.md",
+      "git_blob_sha": "22b05614c48beff0af46883bad1cb83d1a83276f"
+    },
+    {
+      "existing": "research_tracks/information_first/THETA_OBSERVER_CAR2_SPIN_FOCK_SELECTION_GATE_2026_11_15.en.md",
+      "expected": "research_tracks/information_first/THETA_OBSERVER_CAR2_SPIN_FOCK_SELECTION_GATE_2026_11_15.cs.md",
+      "git_blob_sha": "747f47de24ef05b5e3a956f220c9abd44f261515"
+    },
+    {
+      "existing": "research_tracks/information_first/THETA_OBSERVER_PHASE_LINKS_MULTI_CLOCK_CURVATURE_GATE_2026_11_13.en.md",
+      "expected": "research_tracks/information_first/THETA_OBSERVER_PHASE_LINKS_MULTI_CLOCK_CURVATURE_GATE_2026_11_13.cs.md",
+      "git_blob_sha": "66d9de62aa8b8e64be547f3f1b13153640aad46d"
+    },
+    {
+      "existing": "research_tracks/information_first/THETA_OBSERVER_QED_BERRY_VACUUM_LINEARIZATION_GATE_2026_11_14.en.md",
+      "expected": "research_tracks/information_first/THETA_OBSERVER_QED_BERRY_VACUUM_LINEARIZATION_GATE_2026_11_14.cs.md",
+      "git_blob_sha": "f7a77598ba2ea2eba5468d918148319d072f80d2"
+    },
+    {
+      "existing": "research_tracks/information_first/THETA_OBSERVER_SO2_HOLONOMY_IDENTIFIABILITY_GATE_2026_11_14.en.md",
+      "expected": "research_tracks/information_first/THETA_OBSERVER_SO2_HOLONOMY_IDENTIFIABILITY_GATE_2026_11_14.cs.md",
+      "git_blob_sha": "e0f58528eb3de47499f0d533c3c7d7dab8d1ca0d"
+    },
+    {
+      "existing": "research_tracks/information_first/THETA_QUANTUM_SO2_SPIN_VS_ELECTRIC_U1_WILSON_INFORMATION_GATE_2026_11_14.en.md",
+      "expected": "research_tracks/information_first/THETA_QUANTUM_SO2_SPIN_VS_ELECTRIC_U1_WILSON_INFORMATION_GATE_2026_11_14.cs.md",
+      "git_blob_sha": "3a57c6cab905e7db6d7dbf2c59bcc78f2606589f"
+    },
+    {
+      "existing": "research_tracks/information_first/THETA_SPIN_LIFT_PROJECTIVE_OBSERVER_Z2_GATE_2026_11_15.en.md",
+      "expected": "research_tracks/information_first/THETA_SPIN_LIFT_PROJECTIVE_OBSERVER_Z2_GATE_2026_11_15.cs.md",
+      "git_blob_sha": "a3452e9242c3eb5880ea689133a0ec0ef46dc525"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/BIQUATERNION_MINIMAL_IDEALS_MULTIPLICITY_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/BIQUATERNION_MINIMAL_IDEALS_MULTIPLICITY_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "15a44f7b236dc32afb6ef805a574934fe64df8de"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/BIQUATERNION_MULTIPHASE_GROUP_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/BIQUATERNION_MULTIPHASE_GROUP_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "8275755fb9e7bcc49e643a4ab369bccc60faafd5"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/BIQUATERNION_TWO_SIDED_PHASE_LORENTZ_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/BIQUATERNION_TWO_SIDED_PHASE_LORENTZ_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "8b3972837c8b0d7ab5ee4ce1f3a64ed45a4a98c3"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/CANONICAL_RIGHT_U2_SURVIVAL_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/CANONICAL_RIGHT_U2_SURVIVAL_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "204145ba518dc9a177d1db63b8134bc86c893052"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/CLIFFORD_PARITY_BIQUATERNION_SPECTRAL_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/CLIFFORD_PARITY_BIQUATERNION_SPECTRAL_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "449d529694e122f8c37a4be7a41ce54e0c80c817"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/CURRENT_WORK_PROGRAM_THETA_FIELDS_GEOMETRY_INFORMATION_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/CURRENT_WORK_PROGRAM_THETA_FIELDS_GEOMETRY_INFORMATION_2026_11_12.cs.md",
+      "git_blob_sha": "0d6ef1b3afe93e224e5724dcfe925c35bbcc5956"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/DIRAC_LORENTZ_CENTRALIZER_QED_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/DIRAC_LORENTZ_CENTRALIZER_QED_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "708d55c3328dc57cb2223eefa43ae3026bd564b8"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/DIRAC_MATTER_SPLITJET_QUOTIENT_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/DIRAC_MATTER_SPLITJET_QUOTIENT_2026_11_12.cs.md",
+      "git_blob_sha": "c2881876cd6e5b373c793337f3ecd4872ec38286"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/DIRECT_THETA_EM_LORENTZ_BOOST_REPRESENTATION_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/DIRECT_THETA_EM_LORENTZ_BOOST_REPRESENTATION_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "fb1d169e24a8ab0e3ecebc8fcbe5e62ed4face7a"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/EM_LORENTZ_DECOMPOSITION_CORRECTION_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/EM_LORENTZ_DECOMPOSITION_CORRECTION_2026_11_12.cs.md",
+      "git_blob_sha": "22abd2701ab6af14e56bac0115ec39da538f4d35"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/EM_SIGMA_VS_LORENTZ_CURVATURE_PROJECTION_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/EM_SIGMA_VS_LORENTZ_CURVATURE_PROJECTION_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "d77790f046d54f8c9fa39f0a5bbf5ecf7665ff29"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/FULL_THETA_COMPLEX8_COMPOSITE_CONSTANT_B_AND_SIGNATURE_GATE_2026_11_13.en.md",
+      "expected": "research_tracks/unified_physics_axioms/FULL_THETA_COMPLEX8_COMPOSITE_CONSTANT_B_AND_SIGNATURE_GATE_2026_11_13.cs.md",
+      "git_blob_sha": "98998836654a37c00b63c4480fcd463afdecc1e6"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/GENERALIZED_EM_COMPLEX4_VS_EIGHT_DIMENSIONAL_VECTOR_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/GENERALIZED_EM_COMPLEX4_VS_EIGHT_DIMENSIONAL_VECTOR_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "efccdd1d7f6328eac667891d74b6f2a611313954"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/IMAGINARY_THETA_SPECTATOR_DICHOTOMY_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/IMAGINARY_THETA_SPECTATOR_DICHOTOMY_2026_11_12.cs.md",
+      "git_blob_sha": "3ed52f54ac0dddd1a98acec0aea4e1dc07caf022"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/INVERSE_EINSTEIN_DIRAC_MATTER_COMPLETION_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/INVERSE_EINSTEIN_DIRAC_MATTER_COMPLETION_2026_11_12.cs.md",
+      "git_blob_sha": "90fb9d4812c8bc3fc2322cea90327a3912544eb1"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/INVERSE_EINSTEIN_DIRAC_PULLBACK_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/INVERSE_EINSTEIN_DIRAC_PULLBACK_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "abd374aa544802ff62ae8cd02e0d3cd97f4f479a"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/INVERSE_FIRST_PRINCIPLES_DEPENDENT_DIMENSIONS_GATE_2026_11_16.en.md",
+      "expected": "research_tracks/unified_physics_axioms/INVERSE_FIRST_PRINCIPLES_DEPENDENT_DIMENSIONS_GATE_2026_11_16.cs.md",
+      "git_blob_sha": "004b828291520ead42a4a12798fea7b3ef18217c"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/MAXWELL_BRIDGE_PURE_GRADIENT_AUDIT_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/MAXWELL_BRIDGE_PURE_GRADIENT_AUDIT_2026_11_12.cs.md",
+      "git_blob_sha": "ce8e8246ede4bf44d42a9cf14820789657370f84"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/MAXWELL_RS_BIQUATERNION_FIRST_ORDER_BRIDGE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/MAXWELL_RS_BIQUATERNION_FIRST_ORDER_BRIDGE_2026_11_12.cs.md",
+      "git_blob_sha": "5760cb751704be539af49b81607b724d21dcf100"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/ORIGINAL_SPLITJET_JACOBIAN_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/ORIGINAL_SPLITJET_JACOBIAN_2026_11_12.cs.md",
+      "git_blob_sha": "ea6f19df90bead79d739c155dc9a735e93b68a72"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/QED_CANONICAL_METRIC_PHASE_CRITERION_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/QED_CANONICAL_METRIC_PHASE_CRITERION_2026_11_12.cs.md",
+      "git_blob_sha": "010a3d008424696f70e24aaf09649163e1e7386e"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/QED_LORENTZ_PHASE_OBSTRUCTION_EXAMPLE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/QED_LORENTZ_PHASE_OBSTRUCTION_EXAMPLE_2026_11_12.cs.md",
+      "git_blob_sha": "79596b94649b655f1858f6066fef86b5de8f2770"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/QED_MATCHING_QUANTUM_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/QED_MATCHING_QUANTUM_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "5de6517ea12ef164e40b8cc6eadf938c8f6e129c"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/QED_PHASE_SHARP_METRIC_FORK_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/QED_PHASE_SHARP_METRIC_FORK_2026_11_12.cs.md",
+      "git_blob_sha": "bd205f42fe4e0b4ce5146cea2daad5511e6284e3"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/QED_TWO_SIDED_CENTRAL_CONNECTION_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/QED_TWO_SIDED_CENTRAL_CONNECTION_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "c3010e3646a094855cac943bdd18113cf0470055"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/QUANTUM_SPLITJET_MEASURE_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/QUANTUM_SPLITJET_MEASURE_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "03e97f6eefd2f9d705da3cd6d5e7225920e50cef"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/REVISED_THETA_QUANTUM_OBSERVER_QED_GR_TO_MAXWELL_SM_PROGRAM_2026_11_13.en.md",
+      "expected": "research_tracks/unified_physics_axioms/REVISED_THETA_QUANTUM_OBSERVER_QED_GR_TO_MAXWELL_SM_PROGRAM_2026_11_13.cs.md",
+      "git_blob_sha": "f86890aab064ff9b47c3344f8b0234d25bc80e85"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/RIGHT_ONLY_HERMITIAN_SLICE_STABILIZER_NO_GO_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/RIGHT_ONLY_HERMITIAN_SLICE_STABILIZER_NO_GO_2026_11_12.cs.md",
+      "git_blob_sha": "0707114140112ac5858d9fe5cf0d80e21927d31b"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/ROTATING_THETA_GRADIENT_INDUCED_CONNECTION_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/ROTATING_THETA_GRADIENT_INDUCED_CONNECTION_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "546829d4e019ec43e318bcecc125d6b5fa062470"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/THETA_COVARIANT_LAPLACIAN_GRADIENT_CURVATURE_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/THETA_COVARIANT_LAPLACIAN_GRADIENT_CURVATURE_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "8d490ca5219363df739cf7c7891a324e757a8f18"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/THETA_EM_COVARIANT_PHASE_SIMPLE_BIVECTOR_GATE_2026_11_13.en.md",
+      "expected": "research_tracks/unified_physics_axioms/THETA_EM_COVARIANT_PHASE_SIMPLE_BIVECTOR_GATE_2026_11_13.cs.md",
+      "git_blob_sha": "ec9ad4b3bb4165efec23d21ec8c1c7eec7fffe1d"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/THETA_EM_GRAV_HIGGS_GEOMETRIC_OPTICS_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/THETA_EM_GRAV_HIGGS_GEOMETRIC_OPTICS_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "5bdb4a9ad5e896fce186e8bff38b8138296d24c1"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/THETA_MAXWELL_FORWARD_LIFT_AND_CONVERSE_OBSTRUCTION_2026_11_13.en.md",
+      "expected": "research_tracks/unified_physics_axioms/THETA_MAXWELL_FORWARD_LIFT_AND_CONVERSE_OBSTRUCTION_2026_11_13.cs.md",
+      "git_blob_sha": "e083f878da77e428ecc3ead8c8785c15fc649d7a"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/THETA_PROJECTIVE_LORENTZ_CONE_Z2_PRINCIPLES_GATE_2026_11_16.en.md",
+      "expected": "research_tracks/unified_physics_axioms/THETA_PROJECTIVE_LORENTZ_CONE_Z2_PRINCIPLES_GATE_2026_11_16.cs.md",
+      "git_blob_sha": "a16fb4c8470f19d0f12609900da4e2f658727302"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/THETA_SPECTRAL_SPEED_GHOST_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/THETA_SPECTRAL_SPEED_GHOST_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "3162f8054346e674840ef59001b5c31877fb1358"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/THREE_PHASE_RELATIVE_RANK_GATE_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/THREE_PHASE_RELATIVE_RANK_GATE_2026_11_12.cs.md",
+      "git_blob_sha": "c88784e35cbdd60dd79ef7c55bedd8953763aeb8"
+    },
+    {
+      "existing": "research_tracks/unified_physics_axioms/TWO_SIDED_HERMITIAN_LORENTZ_STABILIZER_2026_11_12.en.md",
+      "expected": "research_tracks/unified_physics_axioms/TWO_SIDED_HERMITIAN_LORENTZ_STABILIZER_2026_11_12.cs.md",
+      "git_blob_sha": "c6fc97a5998069d6d45d805da7542a8b7064f11c"
+    }
+  ]
+}

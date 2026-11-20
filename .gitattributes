@@ -62,3 +62,12 @@ research_tracks/hecke_spectrum/plots/deltaV_norm.png export-ignore
 # from generated GitHub source ZIPs (which must remain below the 12 MiB gate).
 DATA/modular_forms/index.html export-ignore
 DATA/modular_forms/index.html.1 export-ignore
+
+# Source ZIP excludes generated historical program copies and plots, but Git retains
+# every original file. Active experiments, research notes, and all .md/.tex stay
+# in the source archive, preserving the provenance source inventory.
+ARCHIVE/**/*.py export-ignore
+ARCHIVE/**/*.png export-ignore
+ARCHIVE/**/*.gif export-ignore
+docs/reports/alpha_equations.json export-ignore
+experiments/layer2_stability/sweep_results.json export-ignore

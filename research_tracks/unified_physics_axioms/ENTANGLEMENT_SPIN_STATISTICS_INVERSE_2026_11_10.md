@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Entanglement and statistics as separate inverse principles of UBT
 
 **Status:** research / standard algebraic comparison and a hard no-go, 2026-11-10. Fundamental UBT dynamics and emergence of both statistics OPEN.

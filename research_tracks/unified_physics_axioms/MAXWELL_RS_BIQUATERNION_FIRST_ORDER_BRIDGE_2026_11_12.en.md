@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Exact Maxwell–Riemann–Silberstein–biquaternion first-order bridge
 
 **Status:** algebraic equivalence to classical Maxwell equations (with or without electric sources), NOT a derivation of Maxwell dynamics from canonical UBT Theta. Units c=epsilon0=mu0=1. Central complex imaginary i commutes with quaternion units bold i,j,k.

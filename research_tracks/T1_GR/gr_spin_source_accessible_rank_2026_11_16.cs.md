@@ -12,7 +12,7 @@ UBT-AI-PROVENANCE-END -->
 
 <!-- UNIT: scope -->
 ## Rozsah a existující důkazy
-[PŘESNÝ OMEZENÝ MODEL / ÚPLNÁ UBT OTEVŘENA] Srovnáváme již existující výsledky v research_tracks/action_selection/vector_kinetic_spin_current_cartan_gate.cs.md, vector_pair_spin_current_shear_benchmark.cs.md, fixed_theta_torsion_response_rank.cs.md, physics_closure_spin_source_2026_10.cs.md a tools/verify_canonical_spin_current.py. Nevydáváme starší práci za nový objev.
+[PŘESNÝ OMEZENÝ MODEL / ÚPLNÁ UBT OTEVŘENA / OPEN] Srovnáváme již existující výsledky v research_tracks/action_selection/vector_kinetic_spin_current_cartan_gate.cs.md, vector_pair_spin_current_shear_benchmark.cs.md, fixed_theta_torsion_response_rank.cs.md, physics_closure_spin_source_2026_10.cs.md a tools/verify_canonical_spin_current.py. Nevydáváme starší práci za nový objev.
 
 <!-- UNIT: rank -->
 ## Různé hodnosti a přesný výpočet
@@ -29,7 +29,7 @@ Pro Lorentzovský vektorový kinetický komparátor při pevné tetrádě závis
 
 <!-- UNIT: observables -->
 ## Identifikovatelnost na omezeném prostoru zdrojů
-Je-li kontorze pomocná se symetrickým invertibilním H a dostupný proud má tvar J=CX, určuje měřitelnou kontaktní kvadratickou odezvu Q=C^T H^(-1) C, nikoli celou matici H velikosti 24 krát 24. Q má nejvýše deset nezávislých symetrických složek, zatímco H má 300; jsou to formální dimenze matic, ne počty konstant UBT. Změny H neviditelné v Q nemusejí být kalibrační: další torzní pozorovatelné veličiny, zdroje, interakce nebo vazby je mohou odlišit. Skutečnou množinu on-shell zdrojů musíme odvodit.
+Je-li kontorze pomocná se symetrickým invertibilním H a dostupný proud má tvar J=CX, určuje měřitelnou kontaktní kvadratickou odezvu Q=C^T H^(-1) C, nikoli celou matici H velikosti 24x24. Q má nejvýše deset nezávislých symetrických složek, zatímco H má 300; jsou to formální dimenze matic, ne počty konstant UBT. Změny H neviditelné v Q nemusejí být kalibrační: další torzní pozorovatelné veličiny, zdroje, interakce nebo vazby je mohou odlišit. Skutečnou množinu on-shell zdrojů musíme odvodit.
 
 <!-- UNIT: existing -->
 ## Již prokázaná objemová redundance koeficientů
@@ -37,4 +37,4 @@ Existující efektivní komparátor s Holstovým členem, kvadrátem torze a spi
 
 <!-- UNIT: next -->
 ## Skutečně zbývající výzkumný úkol
-Vypočítat finální párový biquaternionový spinový zdroj včetně řetězové variace metriky a konexe, určit přípustné fyzikální on-shell zdroje a ze skutečného Hessianu kontorze 24 krát 24 vypočítat Q i jeho Jacobiho matici podle vazeb. Teprve pak spočítat počet měřitelných konstant UBT. Úplný Hamiltonův sektor se spinem 2, CI, Lean a nezávislá dvojjazyčná významová kontrola čekají. Nemeržovat ani nepovyšovat do kanonické vrstvy.
+Vypočítat finální párový biquaternionový spinový zdroj včetně řetězové variace metriky a konexe, určit přípustné fyzikální on-shell zdroje a ze skutečného Hessianu kontorze 24x24 vypočítat Q i jeho Jacobiho matici podle vazeb. Teprve pak spočítat počet měřitelných konstant UBT. Úplný Hamiltonův sektor se spinem 2, CI, Lean a nezávislá dvojjazyčná významová kontrola čekají. Nemeržovat ani nepovyšovat do kanonické vrstvy.

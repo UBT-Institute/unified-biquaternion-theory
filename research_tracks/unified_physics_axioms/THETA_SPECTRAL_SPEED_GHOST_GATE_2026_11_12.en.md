@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Spectral propagation speeds versus ghost stability in full complex Theta (2026-11-12)
 
 **Status:** exact conditional finite-dimensional principal-symbol theorem and counterexamples; **not** a derivation of the physical UBT action or a full Dirac quotient. This is an extension of `THETA_WAVE_GHOST_SEPARATION_2026_11_11.en.md`, `THETA_GRAVITY_MIXED_HESSIAN_2026_11_11.en.md`, and `SPLITJET_PULLBACK_DIRAC_STABILITY_2026_11_11.en.md`.

@@ -11,9 +11,11 @@ def test_all_eight_mode_dispersion_exact():
     l1,l2,r,c,k2=sp.symbols("l1 l2 r c k2",nonzero=True,real=True)
     K,M=matrices(l1,l2,r,c)
     spec=[sp.factor(k2+M[i,i]/K[i,i]) for i in range(8)]
-    assert spec==[k2,k2-4*l2*r*r/c,k2-4*l2*r*r/c,
-                  k2-4*l2*r*r/c,k2+4*(4*l1+l2)*r*r/c,
-                  k2,k2,k2]
+    expected_spec=[k2,k2-4*l2*r*r/c,k2-4*l2*r*r/c,
+                   k2-4*l2*r*r/c,k2+4*(4*l1+l2)*r*r/c,
+                   k2,k2,k2]
+    assert all(sp.simplify(actual - wanted) == 0
+               for actual,wanted in zip(spec,expected_spec))
     z=sp.symbols("z")
     determinant=sp.factor((K*(k2-z)+M).det())
     expected=sp.factor(K.det()*sp.prod([x-z for x in spec]))
@@ -50,4 +52,4 @@ def test_low_k_exp_growth_and_massless_orbit():
 def test_massless_principal_cone_independent_of_masses():
     z,k=sp.symbols("z k")
     KK,_=matrices(0,1,1,1)
-    assert sp.factor((KK*(k-z)).det())==256*(k-z)**8
+    assert sp.simplify((KK*(k-z)).det()-256*(k-z)**8)==0

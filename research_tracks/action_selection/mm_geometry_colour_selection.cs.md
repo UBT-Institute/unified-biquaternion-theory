@@ -8,17 +8,6 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Conditional geometric compatibility obstruction; not a full microscopic action.
 UBT-AI-PROVENANCE-END -->
-<!--
-UBT-AI-PROVENANCE-BEGIN
-schema: ubt-ai-provenance/v1
-tier: C_working
-ai_assistance: disclosed
-human_review: risk-based
-editorial_responsibility: Ing. David Jaroš
-policy: ../../AI_PROVENANCE.md
-notice: Working material; exhaustive human review is not claimed.
-UBT-AI-PROVENANCE-END
--->
 
 # Cesta A: geometrické invarianty a pohyblivý nosič SU(3) automaticky nesdílejí kalibrační kvocient split-jet
 

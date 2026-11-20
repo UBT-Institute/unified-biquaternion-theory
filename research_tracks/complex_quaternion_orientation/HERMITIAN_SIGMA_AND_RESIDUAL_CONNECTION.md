@@ -3,9 +3,9 @@ UBT-AI-PROVENANCE-BEGIN
 schema: ubt-ai-provenance/v1
 tier: C_working
 ai_assistance: disclosed
-human_review: pending
+human_review: risk-based
 editorial_responsibility: Ing. David Jaroš
-policy: AI_PROVENANCE.md
+policy: ../../AI_PROVENANCE.md
 notice: Exploratory research note; not a canonical theorem or verified physical derivation.
 UBT-AI-PROVENANCE-END
 -->

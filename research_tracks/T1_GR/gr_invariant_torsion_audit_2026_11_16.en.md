@@ -53,7 +53,7 @@ For the minimal Hilbert–Palatini action with invertible e and no matter spin s
 <!-- UNIT: decisions -->
 ## Open gates and next tests
 1. Check the exact canonical derivative/connection dependencies before any promotion.
-2. Compute the 24-by-24 algebraic torsion coefficient matrix for the chosen irreducible basis; identify singular loci and explicit spin sources.
+2. Compute the 24x24 algebraic torsion coefficient matrix for the chosen irreducible basis; identify singular loci and explicit spin sources.
 3. Perform the full coupled constraint/Hessian analysis on the canonical Theta branch; verify that the flat background is on shell (the repository already records a torsion-sourced flat-branch obstruction).
 4. Do not promote information selection, the new 4x4 tensor, or theta/QM modes as canonical GR facts.
 5. Pending: Lean formalization, independent algebra check, bilingual semantic verification, CI.

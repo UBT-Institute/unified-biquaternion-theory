@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Imaginary-Theta spectator dichotomy in the Einstein–Dirac infrared comparator
 
 **Status:** exact conditional functional statement; does not assert the full microscopic UBT action is independent of imaginary Theta.

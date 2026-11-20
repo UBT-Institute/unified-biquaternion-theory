@@ -37,7 +37,7 @@ Pro nedegenerované E=dY je metrika lokálním přenesením Minkowského metriky
 <!-- UNIT: composite -->
 ## Zbývající kompozitní mezera
 
-Protože E implicitně závisí na rekonstruované omega(E,K), derivace rodičovské akce podle tetrády NENÍ redukovanou derivací Theta/K. A=I-J_E je diferenciální operátor; jeho inverze vyžaduje analýzu kalibrace, okrajů a definičního oboru. Ze vzorce pro objem neplyne hodnost fyzikálních zdrojů ani spin-2 kinetický člen. Úplná torzní kompozitní variace zůstává OTEVŘENÁ.
+Protože E implicitně závisí na rekonstruované omega(E,K), derivace rodičovské akce podle tetrády NENÍ redukovanou derivací Theta/K. A=I-J_E je diferenciální operátor; jeho inverze vyžaduje analýzu kalibrace, okrajů a definičního oboru. Ze vzorce pro objem neplyne hodnost fyzikálních zdrojů ani spin-2 kinetický člen. Úplná torzní kompozitní variace zůstává OTEVŘENÁ (OPEN).
 
 <!-- UNIT: next -->
 ## Přesná zbývající otázka výběru akce

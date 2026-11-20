@@ -10,6 +10,7 @@ on:
       - 'tools/check_bilingual_pairs.py'
       - 'tools/verify_bilingual_semantics.py'
       - 'tools/verify_bilingual_semantics_qwen.py'
+      - 'tools/attest_bilingual_semantic_shards.py'
       - 'tests/test_bilingual*.py'
       - '.github/workflows/bilingual_docs.yml'
   push:
@@ -21,6 +22,7 @@ on:
       - 'tools/check_bilingual_pairs.py'
       - 'tools/verify_bilingual_semantics.py'
       - 'tools/verify_bilingual_semantics_qwen.py'
+      - 'tools/attest_bilingual_semantic_shards.py'
       - 'tests/test_bilingual*.py'
       - '.github/workflows/bilingual_docs.yml'
 
@@ -43,11 +45,19 @@ jobs:
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: python3 tools/check_bilingual_pairs.py --root . --changed-base "$BASE_SHA"
+      - name: Run bilingual fail-closed regression tests
+        run: |
+          python3 -m pip install --user pytest
+          python3 -m pytest -q tests/test_bilingual_gate.py tests/test_bilingual_semantics.py tests/test_bilingual_legacy_freeze_paths.py tests/test_bilingual_qwen_limits.py tests/test_bilingual_semantic_attestation.py
 
   semantics:
     needs: parity
     runs-on: ubuntu-latest
     timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     permissions:
       contents: read
     steps:
@@ -73,12 +83,14 @@ jobs:
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
           EVENT_NAME: ${{ github.event_name }}
+          SHARD_INDEX: ${{ matrix.shard }}
+          SHARD_COUNT: 12
         shell: bash
         run: |
           if [[ "$EVENT_NAME" == workflow_dispatch || "$BASE_SHA" =~ ^0+$ ]]; then
-            python3 tools/verify_bilingual_semantics_qwen.py --all-pairs
+            python3 tools/verify_bilingual_semantics_qwen.py --all-pairs --shard-index "$SHARD_INDEX" --shard-count "$SHARD_COUNT"
           elif [[ -n "$BASE_SHA" ]]; then
-            python3 tools/verify_bilingual_semantics_qwen.py "$BASE_SHA"
+            python3 tools/verify_bilingual_semantics_qwen.py "$BASE_SHA" --shard-index "$SHARD_INDEX" --shard-count "$SHARD_COUNT"
           else
             echo 'No comparison base supplied; semantic approval withheld.' >&2
             exit 1
@@ -94,7 +106,48 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: bilingual-semantic-review-${{ github.run_id }}-${{ github.run_attempt }}
+          name: bilingual-semantic-review-${{ github.run_id }}-${{ github.run_attempt }}-shard-${{ matrix.shard }}
           path: build/bilingual/qwen-semantic-review.*
+          if-no-files-found: warn
+          retention-days: 30
+
+  attestation:
+    needs: semantics
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - name: Retrieve every source-bound Qwen shard report
+        uses: actions/download-artifact@v4
+        with:
+          pattern: bilingual-semantic-review-${{ github.run_id }}-${{ github.run_attempt }}-shard-*
+          path: build/bilingual/shards
+          merge-multiple: false
+      - name: Independently attest full source/paragraph coverage
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          EVENT_NAME: ${{ github.event_name }}
+        shell: bash
+        run: |
+          if [[ "$EVENT_NAME" == workflow_dispatch || "$BASE_SHA" =~ ^0+$ ]]; then
+            python3 tools/attest_bilingual_semantic_shards.py --artifacts build/bilingual/shards --shard-count 12
+          elif [[ -n "$BASE_SHA" ]]; then
+            python3 tools/attest_bilingual_semantic_shards.py --artifacts build/bilingual/shards --base "$BASE_SHA" --shard-count 12
+          else
+            echo 'No comparison base supplied; semantic attestation withheld.' >&2
+            exit 1
+          fi
+      - name: Retain consolidated semantic attestation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bilingual-semantic-attestation-${{ github.run_id }}-${{ github.run_attempt }}
+          path: build/bilingual/semantic-attestation.json
           if-no-files-found: warn
           retention-days: 30

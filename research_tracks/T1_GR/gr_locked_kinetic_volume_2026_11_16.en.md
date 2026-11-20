@@ -32,12 +32,12 @@ EL_K(red S)=S_K+J_K^*(A^*)^-1 S_E, only where inverses exist.
 <!-- UNIT: piola -->
 ## Gradient-sector obstruction
 
-For nondegenerate E=dY, the induced metric is a local pullback of Minkowski space, hence flat. By cofactor divergence (Piola), the 4D Jacobian determinant is a null Lagrangian and the volume action has no bulk Euler equations under compact-supported Y variations. It does not produce Einstein curvature dynamics. This is restricted to the pure-gradient kinetic sector; independent potential and curvature terms change the conclusion.
+For nondegenerate E=dY, the induced metric is a local pullback of Minkowski space, hence flat. By cofactor divergence (Piola), the four-dimensional Jacobian determinant is a null Lagrangian and the volume action has no bulk Euler equations under compact-supported Y variations. It does not produce Einstein curvature dynamics. This is restricted to the pure-gradient kinetic sector; independent potential and curvature terms change the conclusion.
 
 <!-- UNIT: composite -->
 ## Remaining composite gap
 
-Because E depends implicitly on the reconstructed omega(E,K), the parent tetrad Euler derivative is NOT the reduced Theta/K derivative. A=I-J_E is a differential operator whose invertibility needs gauge, boundary and functional domain analysis. Neither the physical source rank nor a spin-two kinetic term follows from the displayed volume formula. The full torsionful composite calculation is still OPEN.
+Because E depends implicitly on the reconstructed omega(E,K), the parent tetrad Euler derivative is NOT the reduced Theta/K derivative. A=I-J_E is a differential operator whose invertibility needs gauge, boundary and functional domain analysis. Neither the physical source rank nor a spin-2 kinetic term follows from the displayed volume formula. The full torsionful composite calculation is still OPEN.
 
 <!-- UNIT: next -->
 ## Exact remaining action-selection question
@@ -47,4 +47,4 @@ The already canonical audit canonical/gr_closure/gap_10tdyn_10d_canonical_action
 <!-- UNIT: verification -->
 ## Verification boundaries
 
-Test source tools/verify_gr_locked_kinetic_volume_2026_11_16.py checks the volume factor, 16 cofactor first-variation slots and a nontrivial 4D gradient Piola identity with exact SymPy arithmetic. Full repository CI, Lean, bilingual semantic verification and the true on-shell composite dynamics are not established; retain as draft.
+Test source tools/verify_gr_locked_kinetic_volume_2026_11_16.py checks the volume factor, 16 cofactor first-variation slots and a nontrivial four-dimensional gradient Piola identity with exact SymPy arithmetic. Full repository CI, Lean, bilingual semantic verification and the true on-shell composite dynamics are not established; retain as draft.

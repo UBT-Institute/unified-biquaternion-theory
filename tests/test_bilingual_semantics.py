@@ -128,7 +128,7 @@ def test_difference_or_uncertainty_blocks_even_after_good_calibration(verdict: s
         decisions = expected if batch == examples else {item["id"]: verdict for item in batch}
         return json.dumps(response(batch, decisions))
 
-    with pytest.raises(GATE.ReviewError, match="differences or uncertainty"):
+    with pytest.raises(GATE.SemanticMismatchError, match="differences or uncertainty"):
         GATE.run_review([sample()], reviewer, report)
     assert report["calibration"]["status"] == "passed"
     assert report["reviews"][0]["verdict"] == verdict

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Experimental local Qwen backend for the existing fail-closed bilingual verifier."""
+import argparse
 import json
 import os
 import subprocess
@@ -46,6 +47,13 @@ REVIEW_SCHEMA = {
 
 class InferenceTimeout(v.ReviewError):
     """Ollama did not return a complete response within the request timeout."""
+
+
+def retain_invalid_model_diagnostic(report: dict, response: str | None,
+                                    error: v.ReviewError) -> None:
+    """Never confuse a source-bound semantic veto with malformed model JSON."""
+    if response is not None and not isinstance(error, v.SemanticMismatchError):
+        report["invalid_model_response"] = response[:16000]
 
 
 class OllamaReviewer:
@@ -123,7 +131,8 @@ class OllamaReviewer:
                 ids["items"]["enum"] = [item[lang][0]["id"]]
         payload=json.dumps({"model":self.model,"prompt":v.make_prompt(batch),
                             "stream":False,"format":schema,
-                            "options":{"temperature":0,"num_ctx":16384,"num_predict":LOCAL_MAX_PREDICT}}).encode()
+                            "options":{"temperature":0,"seed":0,"num_ctx":16384,
+                                       "num_predict":LOCAL_MAX_PREDICT}}).encode()
         if len(v.make_prompt(batch)) > LOCAL_MAX_CHARS:
             raise v.ReviewError("local model context budget exceeded; no content truncated")
         if max(len(item["en"]),len(item["cs"])) > LOCAL_MAX_PARAGRAPHS:
@@ -147,12 +156,63 @@ class OllamaReviewer:
         self.last_response = result["response"]
         return self.last_response
 
+def shard_review_units(documents: list[dict], shard_count: int) -> tuple[list[dict], list[list[dict]]]:
+    """Deterministic, lossless partition of *every* paragraph of every pair.
+
+    Sharding improves CPU review throughput; it never grants an exemption.
+    Every shard repeats calibration and verifies exact original source hashes.
+    The matrix job succeeds only when every shard succeeds.
+    """
+    if not 1 <= shard_count <= 16:
+        raise v.ReviewError("shard count must be in [1,16]")
+    units = []
+    for item in documents:
+        parts = v.split_oversized_pair(
+            item, max_chars=LOCAL_MAX_CHARS, max_paragraphs=LOCAL_MAX_PARAGRAPHS,
+        )
+        for language in ("en", "cs"):
+            actual = [paragraph for part in parts for paragraph in part[language]]
+            if actual != item[language]:
+                raise v.ReviewError("sharding lost source paragraphs: " + item["id"])
+        units.extend(parts)
+    ids = [item["id"] for item in units]
+    if len(ids) != len(set(ids)):
+        raise v.ReviewError("sharding produced duplicate review-unit IDs")
+    groups = [[] for _ in range(shard_count)]
+    loads = [0] * shard_count
+    ordering = sorted(range(len(units)), key=lambda i: (
+        -(len(v.make_prompt([units[i]])) +
+          750 * max(len(units[i]["en"]), len(units[i]["cs"]))),
+        units[i]["id"],
+    ))
+    assignments = {}
+    for idx in ordering:
+        shard = min(range(shard_count), key=lambda k: (loads[k], k))
+        assignments[idx] = shard
+        loads[shard] += len(v.make_prompt([units[idx]])) + 750 * max(
+            len(units[idx]["en"]), len(units[idx]["cs"])
+        )
+    for idx, item in enumerate(units):
+        groups[assignments[idx]].append(item)
+    if sorted(item["id"] for group in groups for item in group) != sorted(item["id"] for item in units):
+        raise v.ReviewError("incomplete review-unit partition")
+    return units, groups
+
+
 def main():
-    root=Path(".").resolve()
-    all_pairs='--all-pairs' in sys.argv[1:]
-    base=next((arg for arg in sys.argv[1:] if not arg.startswith('--')),None)
-    if all_pairs and base:
-        raise SystemExit('Choose either --all-pairs or a changed-base SHA')
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("base", nargs="?", help="Changed-base commit SHA")
+    parser.add_argument("--all-pairs", action="store_true")
+    parser.add_argument("--shard-index", type=int, default=0)
+    parser.add_argument("--shard-count", type=int, default=1)
+    args = parser.parse_args()
+    if args.all_pairs and args.base:
+        parser.error("Choose either --all-pairs or a changed-base SHA")
+    if not 1 <= args.shard_count <= 16 or not 0 <= args.shard_index < args.shard_count:
+        parser.error("Invalid shard index/count")
+    root = Path(".").resolve()
+    all_pairs = args.all_pairs
+    base = args.base
     report={"schema":v.SCHEMA,"status":"blocked","verification":"local-machine-review",
             "model":os.environ.get("OLLAMA_MODEL", "qwen2.5:7b"),"cli_version":"none",
             "created_at":datetime.now(timezone.utc).isoformat(),"base":base,
@@ -168,16 +228,38 @@ def main():
         report["commit"]=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip()
         for name in ("BILINGUAL_CONTENT_POLICY.en.md","BILINGUAL_CONTENT_POLICY.cs.md","AGENTS.md"):
             report["policy_sha256"][name]=v.sha256((root/name).read_bytes())
-        docs=v.load_documents(root,None if all_pairs else base)
-        report["sources"]=[{k:value for k,value in item.items() if k not in ("en","cs")} for item in docs]
+        original_docs = v.load_documents(root, None if all_pairs else base)
+        all_units, shards = shard_review_units(original_docs, args.shard_count)
+        docs = shards[args.shard_index]
+        manifest = [{
+            "id": item["id"], "en_sha256": item["en_sha256"],
+            "cs_sha256": item["cs_sha256"],
+        } for item in all_units]
+        report["sharding"] = {
+            "index": args.shard_index,
+            "count": args.shard_count,
+            "original_pair_count": len(original_docs),
+            "total_review_units": len(all_units),
+            "selected_review_units": len(docs),
+            "manifest_sha256": v.sha256(
+                json.dumps(manifest, sort_keys=True, ensure_ascii=False).encode("utf-8")
+            ),
+        }
+        report["sources"] = [
+            {k: value for k, value in item.items() if k not in ("en", "cs")}
+            for item in docs
+        ]
+        print(f"Qwen shard {args.shard_index+1}/{args.shard_count}: "
+              f"{len(docs)}/{len(all_units)} source-bound review units", flush=True)
         reviewer=OllamaReviewer()
         try:
             v.run_review(docs,reviewer,report,workers=1,
                          max_batch_chars=LOCAL_MAX_CHARS,max_paragraphs=LOCAL_MAX_PARAGRAPHS)
-        except v.ReviewError:
-            # Keep raw model evidence for debugging, never convert invalid output to approval.
-            if reviewer.last_response is not None:
-                report['invalid_model_response']=reviewer.last_response[:16000]
+        except v.ReviewError as error:
+            # A valid fail/uncertain semantic judgment must remain blocking, but
+            # must not be mislabeled as a malformed model response in diagnostics.
+            # Malformed, incomplete or unavailable output also stays fail-closed.
+            retain_invalid_model_diagnostic(report, reviewer.last_response, error)
             raise
         finally:
             report["model_requests"] = reviewer.calls
