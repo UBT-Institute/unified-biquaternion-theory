@@ -34,6 +34,18 @@ def model_fixture(item):
     }]}
 
 
+def test_negative_semantic_verdict_is_not_mislabeled_as_invalid_model_json():
+    report = {}
+    QWEN.retain_invalid_model_diagnostic(
+        report, '{"valid":"json"}', V.SemanticMismatchError("differences"),
+    )
+    assert "invalid_model_response" not in report
+    QWEN.retain_invalid_model_diagnostic(
+        report, "{malformed", V.ReviewError("invalid JSON"),
+    )
+    assert report["invalid_model_response"] == "{malformed"
+
+
 def test_local_chunking_keeps_raw_hashes_and_all_paragraphs_exactly_once():
     item = sample(37)
     parts = V.split_oversized_pair(item, max_chars=QWEN.LOCAL_MAX_CHARS,
