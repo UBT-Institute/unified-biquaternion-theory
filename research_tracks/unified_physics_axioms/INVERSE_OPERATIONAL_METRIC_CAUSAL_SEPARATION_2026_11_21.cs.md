@@ -12,7 +12,7 @@ UBT-AI-PROVENANCE-END
 -->
 # Reverzní odvození: pozitivní hustota pozorovatele není lorentzovská metrika prostoročasu
 
-**21. listopadu 2026 — C_working / přesný omezený maticový příklad / dynamika OTEVŘENA.**
+**21. listopadu 2026 — C_working / přesný omezený maticový příklad / dynamika OTEVŘENA (OPEN).**
 Navazujeme na \`INVERSE_FIRST_PRINCIPLES_DEPENDENT_DIMENSIONS_GATE_2026_11_16.en.md\`,
 \`THETA_DENSITY_REVERSE_PRINCIPLE_2026_11_19.en.md\` a
 \`THETA_PROJECTIVE_LORENTZ_CONE_Z2_PRINCIPLES_GATE_2026_11_16.en.md\`.
