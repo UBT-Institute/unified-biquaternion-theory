@@ -79,6 +79,8 @@ def test_schema_bounds_identifiers_not_the_model_verdict(monkeypatch):
     reviewer = QWEN.OllamaReviewer()
     V.validate_response(reviewer([item]), [item])
     payload = requests[0]
+    assert payload["options"]["temperature"] == 0
+    assert payload["options"]["seed"] == 0
     assert payload["options"]["num_predict"] == 4096
     review = payload["format"]["properties"]["reviews"]
     assert review["minItems"] == review["maxItems"] == 1

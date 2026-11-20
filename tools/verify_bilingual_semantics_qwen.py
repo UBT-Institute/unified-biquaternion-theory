@@ -131,7 +131,8 @@ class OllamaReviewer:
                 ids["items"]["enum"] = [item[lang][0]["id"]]
         payload=json.dumps({"model":self.model,"prompt":v.make_prompt(batch),
                             "stream":False,"format":schema,
-                            "options":{"temperature":0,"num_ctx":16384,"num_predict":LOCAL_MAX_PREDICT}}).encode()
+                            "options":{"temperature":0,"seed":0,"num_ctx":16384,
+                                       "num_predict":LOCAL_MAX_PREDICT}}).encode()
         if len(v.make_prompt(batch)) > LOCAL_MAX_CHARS:
             raise v.ReviewError("local model context budget exceeded; no content truncated")
         if max(len(item["en"]),len(item["cs"])) > LOCAL_MAX_PARAGRAPHS:
