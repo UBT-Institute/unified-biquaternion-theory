@@ -34,7 +34,7 @@ At K=0, the torsion/connection variation depends on J and **not** on M. Hence, a
 
 <!-- UNIT: canonical -->
 ## Relation to the canonical affine branch
-The repository establishes a nonzero spin current for almost all points of a specified flat affine pure-pair representative under *fixed-background effective Palatini variation*. Under exactly those assumptions, tuning quadratic torsion-square coefficients cannot restore a torsion-free flat stationary solution. This does not rule out curved or nonzero-torsion backgrounds, a composite theory with Theta as the only fundamental field, or a different physical vacuum after backreaction. Recompute the chain-rule current before applying this lemma to the full theory.
+The repository establishes a nonzero spin current for almost all points of a specified flat affine pure-pair representative under *fixed-background effective Palatini variation*. Under exactly those assumptions, tuning quadratic torsion-square coefficients cannot restore a torsion-free flat stationary solution. This does not rule out curved or nonzero-torsion backgrounds, a pure composite-Theta theory, or a different physical vacuum after backreaction. Recompute the chain-rule current before applying this lemma to the full theory.
 
 <!-- UNIT: decision -->
 ## A/B decision

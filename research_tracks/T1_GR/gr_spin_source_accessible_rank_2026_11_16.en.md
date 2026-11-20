@@ -33,7 +33,7 @@ If contortion is auxiliary with invertible symmetric H and accessible current J=
 
 <!-- UNIT: existing -->
 ## An already-established bulk coefficient redundancy
-The existing sourced Holst-plus-torsion-square effective comparator in research_tracks/action_selection/physics_closure_spin_source_2026_10.en.md derives that beta=b+zeta is the only bulk combination for fixed boundary data, since changing b and zeta with opposite shifts adds an exact Nieh-Yan density. This is a genuine restricted bulk action equivalence, stronger than source insensitivity. It does not imply a local gauge transformation or quantum/boundary equivalence of full UBT.
+The existing sourced Holst-plus-torsion-square effective comparator in research_tracks/action_selection/physics_closure_spin_source_2026_10.en.md establishes that beta=b+zeta is the only bulk combination in this bounded fixed-background calculation, since changing b and zeta with opposite shifts adds an exact Nieh-Yan density. This is a genuine restricted bulk action equivalence, stronger than source insensitivity. It does not imply a local gauge transformation or quantum/boundary equivalence of full UBT.
 
 <!-- UNIT: next -->
 ## Actual remaining research gate
