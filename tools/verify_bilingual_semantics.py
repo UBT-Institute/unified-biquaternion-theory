@@ -38,6 +38,15 @@ are normative. Identify added/missing claims or explanations, changed assumption
 domains, regularity, negations, quantifiers, conditions, uncertainty, proof levels,
 causal relations, examples, warnings, and limitations. A conditional or kinematic
 result must not become unconditional or dynamical. Idiom and word order may differ.
+For any alleged omission, first inspect ALL supplied English and Czech text,
+including items of numbered lists that may share one paragraph without blank
+lines. Compare translated meaning, not matching English vocabulary: a Czech
+technical equivalent is not an omission. Check numbered items one by one;
+never assert item N is absent when item N appears on both sides. If a
+substantive claim is actually missing or different, give specific evidence
+from both editions and identify the affected IDs. Do not infer an omission
+from a long paragraph or from a different word order. When equivalence
+cannot be established, return uncertain rather than guessing either way.
 Each edition must use its stated language, except proper names, technical symbols,
 code, titles/citations, verbatim quotations, and identified translation notes.
 Generated provenance is omitted; all other supplied content must be reviewed.
@@ -76,6 +85,13 @@ class ReviewError(ValueError):
     def __init__(self, message: str, diagnostic: str | None = None):
         super().__init__(message)
         self.diagnostic = diagnostic
+
+
+class SemanticMismatchError(ReviewError):
+    """Complete, valid model evidence includes a fail or uncertain verdict.
+
+    This is a substantive review veto, not malformed model output.
+    """
 
 
 class ParagraphCoverageError(ReviewError):
@@ -408,7 +424,7 @@ def run_review(documents: list[dict], reviewer, report: dict, workers: int = 2,
             report["reviews"].extend(reviews)
             print(f"Semantic review: {len(report['reviews'])}/{len(documents)} pairs", flush=True)
     if any(item["verdict"] != "pass" for item in report["reviews"]):
-        raise ReviewError("translation differences or uncertainty found; see paragraph evidence in report")
+        raise SemanticMismatchError("translation differences or uncertainty found; see paragraph evidence in report")
 
 
 def verify_sources(root: Path, documents: list[dict]) -> None:
