@@ -247,10 +247,12 @@ def main():
         try:
             v.run_review(docs,reviewer,report,workers=1,
                          max_batch_chars=LOCAL_MAX_CHARS,max_paragraphs=LOCAL_MAX_PARAGRAPHS)
-        except v.ReviewError:
-            # Keep raw model evidence for debugging, never convert invalid output to approval.
-            if reviewer.last_response is not None:
-                report['invalid_model_response']=reviewer.last_response[:16000]
+        except v.ReviewError as error:
+            # A valid fail/uncertain semantic judgment must remain blocking, but
+            # must not be mislabeled as a malformed model response in diagnostics.
+            # Malformed, incomplete or unavailable output also stays fail-closed.
+            if not isinstance(error, v.SemanticMismatchError) and reviewer.last_response is not None:
+                report['invalid_model_response'] = reviewer.last_response[:16000]
             raise
         finally:
             report["model_requests"] = reviewer.calls
