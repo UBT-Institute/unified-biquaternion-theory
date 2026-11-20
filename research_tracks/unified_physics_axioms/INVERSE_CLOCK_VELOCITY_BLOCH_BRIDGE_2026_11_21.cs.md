@@ -65,7 +65,7 @@ Proto platí
 \boxed{h_{ij}=\gamma^2(F_{\mathrm{SLD}})_{ij},\qquad
 \gamma^2=(1-r^2)^{-1}.}\tag{4}
 \]
-*Radiální* vzdálenosti se liší: rapidita \(\operatorname{artanh}(r)\) versus QFI vzdálenost \(\arcsin(r)\). Tyto dvě metriky nejsou totožné. Přesná konformní identita je **již publikovaná matematika, nikoli objev UBT**: Bharath G. Srivats, *Fisher Information as the Squared Lorentz Factor: Conformal Equivalence of the Bures and Beltrami–Klein Metrics on the Qubit Bloch Ball*, Quantum Rep. 2026, 8(3), 68, DOI https://doi.org/10.3390/quantum8030068 . Publikace dokazuje \(ds_{\rm BK}^2=4\gamma^2ds_{\rm Bures}^2=\gamma^2ds_{\rm QFI}^2\) a zkoumá operační interpretaci měření. Konkrétním úkolem UBT je napojit tuto identitu na **pevnou tetrádu sharp** a nepomíchat ji s případným kvantovým čtením stavu \(\Theta\).
+*Radiální* vzdálenosti se liší: rapidita \(\mathrm{arctanh}(r)\) versus QFI vzdálenost \(\arcsin(r)\). Tyto dvě metriky nejsou totožné. Přesná konformní identita je **již publikovaná matematika, nikoli objev UBT**: Bharath G. Srivats, *Fisher Information as the Squared Lorentz Factor: Conformal Equivalence of the Bures and Beltrami–Klein Metrics on the Qubit Bloch Ball*, Quantum Rep. 2026, 8(3), 68, DOI https://doi.org/10.3390/quantum8030068 . Publikace dokazuje \(ds_{\rm BK}^2=4\gamma^2ds_{\rm Bures}^2=\gamma^2ds_{\rm QFI}^2\) a zkoumá operační interpretaci měření. Konkrétním úkolem UBT je napojit tuto identitu na **pevnou tetrádu sharp** a nepomíchat ji s případným kvantovým čtením stavu \(\Theta\).
 
 ## 4. Důležitý protipříklad: geometrická matice není obecná hustota Θ
 
@@ -80,13 +80,13 @@ Ta **není** automaticky rovna \(\pi_u(v)\). U stejného platného plochého *ki
 \boxed{\rho_N[\Theta](0)=I/2,\qquad
 \pi_u(v)=(I+\tfrac35\sigma_1)/2\ne I/2.}\tag{5}
 \]
-Jednoduché ztotožnění univerzálního čtení Θ s **každým tečným vektorem** je tedy nepravdivé. Operační most by musel obsahovat konkrétní pozorovatelnou a podmínění podle fyzikálního tečného vektoru/protokolu, aniž by přepisoval \(\rho_N[\Theta]\), zaváděl libovolné nové pole či zaměňoval změnu soustavy za přípravu stavu.
+Jednoduché ztotožnění univerzálního čtení \(\Theta\) s **každým tečným vektorem** je tedy nepravdivé. Operační most by musel obsahovat konkrétní pozorovatelnou a podmínění podle fyzikálního tečného vektoru/protokolu, umožňující \(\pi_u(v)\), aniž by přepisoval \(\rho_N[\Theta]\), zaváděl libovolné nové pole či zaměňoval změnu soustavy za přípravu stavu.
 
 ## 5. Následující rozhodovací testy
 
-1. **Operační propojení:** mohou fyzikální detektory a protokoly odvozené z existujícího Θ a jeho tetrády realizovat \(\pi_u(v)\) pro fyzikálně daný tečný vektor? Jak se transformují efekty a sestupuje tato konstrukce na kalibrační kvocient?
-2. **Transport mezi body:** odvodit křivost porovnávání hodin z vybrané dynamiky Θ a konexe; odlišit Thomasovu–Wignerovu kinematickou holonomii od skutečné Riemannovy křivosti prostoročasu. Pouhý kauzální kužel nevybírá \(\omega[\Theta]\).
-3. **Mikroskopická dynamika:** odvodit kalibračně redukovanou akci a kompozitní Hessian Θ se zdravými bezhmotnými spin-2 módy. Rovnice (1)–(4) používají tetrádu, ale neurčují Einsteinův člen ani \(G\).
+1. **Operační propojení:** mohou fyzikální detektory a protokoly odvozené z existujícího \(\Theta\) a jeho tetrády realizovat \(\pi_u(v)\) pro fyzikálně daný tečný vektor? Jak se transformují efekty a sestupuje tato konstrukce na kalibrační kvocient?
+2. **Transport mezi body:** odvodit křivost porovnávání hodin z vybrané dynamiky \(\Theta\) a konexe; odlišit Thomasovu–Wignerovu kinematickou holonomii od skutečné Riemannovy křivosti prostoročasu. Pouhý kauzální kužel nevybírá \(\omega[\Theta]\).
+3. **Mikroskopická dynamika:** odvodit kalibračně redukovanou akci a kompozitní Hessian \(\Theta\) se zdravými bezhmotnými spin-2 módy. Rovnice (1)–(4) používají tetrádu, ale neurčují Einsteinův člen ani \(G\).
 4. **Nezávislá kontrola:** nekomutující boosty, variace hodin, on-shell pozadí a fyzikálně kalibrovatelné observably; identita QFI/BK není nová předpověď UBT.
 
 **Ověření:** exaktní SymPy kontrola \`tools/verify_inverse_clock_velocity_bloch_gate_2026_11_21.py\`. Lean, dvojjazyčná sémantická kontrola a plné CI zatím neproběhly. Ponechat jako C_working v draftu PR #908; nemergovat jako nepodmíněné odvození.
