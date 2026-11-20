@@ -83,7 +83,7 @@ The symmetric-logarithmic-derivative/arithmetic-mean choice \(f_{\rm SLD}(u)=(1+
 
 Priority tests:
 1. Find an observer-/gauge-equivariant physical **soldering/transport** relation linking the positive cone, \(\Theta\) jets and causal tangent vectors, not just a matrix-space isomorphism.
-2. Check two-sided Lorentz covariance and clock variation in that proposed relation, including whether it descends through the physical quotient.
+2. Check two-sided Lorentz covariance and clock \(N\) variation in that proposed relation, including whether it descends through the physical quotient.
 3. Derive a candidate action/physical composite Hessian from the selected relation; count constraints and **two positive-norm massless TT modes** without importing Hilbert-Palatini.
 4. Test any proposed information metric selector against both the Petz-family counterexample and the exact stationary-density witness above; state the extra axiom if needed.
 
