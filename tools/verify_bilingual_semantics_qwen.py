@@ -49,6 +49,13 @@ class InferenceTimeout(v.ReviewError):
     """Ollama did not return a complete response within the request timeout."""
 
 
+def retain_invalid_model_diagnostic(report: dict, response: str | None,
+                                    error: v.ReviewError) -> None:
+    """Never confuse a source-bound semantic veto with malformed model JSON."""
+    if response is not None and not isinstance(error, v.SemanticMismatchError):
+        report["invalid_model_response"] = response[:16000]
+
+
 class OllamaReviewer:
     last_response = None
     def __init__(self, model=None, timeout=600):
@@ -251,8 +258,7 @@ def main():
             # A valid fail/uncertain semantic judgment must remain blocking, but
             # must not be mislabeled as a malformed model response in diagnostics.
             # Malformed, incomplete or unavailable output also stays fail-closed.
-            if not isinstance(error, v.SemanticMismatchError) and reviewer.last_response is not None:
-                report['invalid_model_response'] = reviewer.last_response[:16000]
+            retain_invalid_model_diagnostic(report, reviewer.last_response, error)
             raise
         finally:
             report["model_requests"] = reviewer.calls
