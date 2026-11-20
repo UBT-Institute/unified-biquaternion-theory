@@ -13,7 +13,7 @@ UBT-AI-PROVENANCE-END
 # Reverzní odvození: tetráda Θ, hodiny pozorovatele a Blochova reprezentace relativní rychlosti
 
 **21. listopadu 2026. C_working. Přesná podmíněná kinematika, mikroskopická dynamika OTEVŘENA.**
-Navazuje na přesné ztotožnění kauzálního kužele ze 16. listopadu, na relativní čtení kvantového stavu z 5. listopadu a no-go v PR #908. Musíme rozlišovat **tři objekty**: (1) kanonickou lorentzovskou tetrádu s involucí sharp, (2) pozitivní *geometrickou matici tečného vektoru* a (3) samostatně navrženou pozorovatelskou hustotu \(\rho_N[\Theta]\). Geometrickou matici nesmíme bez důkazu vydávat za fyzikální stav detektoru.
+Navazuje na přesné ztotožnění kauzálního kužele ze 16. listopadu, na relativní čtení kvantového stavu z 5. listopadu a 21. listopadu no-go v PR #908. Musíme rozlišovat **tři objekty**: (1) kanonickou lorentzovskou tetrádu s involucí sharp, (2) pozitivní *geometrickou matici tečného vektoru* a (3) samostatně navrženou pozorovatelskou hustotu \(\rho_N[\Theta]\). Geometrickou matici nesmíme bez důkazu vydávat za fyzikální stav detektoru.
 
 ## 1. Kanonická geometrie a tečný vektor vzhledem k hodinám
 
@@ -44,14 +44,14 @@ Polarizace determinantu v kanonické metrice dává
 \mathrm{tr}(N^{-1}X(v))=-2g(u,v),\qquad
 \det\pi_u(v)=\frac{-g(v,v)}{4[-g(u,v)]^2}.
 \]
-Pro dvojici jednotkových budoucích časupodobných vektorů položme \(\gamma=-g(u,v)\ge1\) a \(\beta=\sqrt{1-\gamma^{-2}}\), kde \(c=1\). Pro hermitovskou matici se stopou jedna \(\pi=\frac12(I+\mathbf r\cdot\boldsymbol\sigma)\) platí \(\det\pi=(1-|\mathbf r|^2)/4\). Z toho:
+Pro dvojici jednotkových budoucích časupodobných vektorů položme \(\gamma=-g(u,v)\ge1\) a \(\beta=\sqrt{1-\gamma^{-2}}\), kde \(c=1\). Pro hermitovskou matici \(2\times2\) se stopou jedna \(\pi=\frac12(I+\mathbf r\cdot\boldsymbol\sigma)\) platí \(\det\pi=(1-|\mathbf r|^2)/4\). Z toho:
 \[
 \boxed{|\mathbf r_u(v)|=\beta,\qquad
 \mathrm{spec}\pi_u(v)=\{(1+\beta)/2,(1-\beta)/2\}.}\tag{3}
 \]
 Když \(u=v\), dostáváme \(\pi=I/2\). Pro budoucí nulový vektor \(v\) je \(\det\pi=0\), takže \(\pi\) je projektor hodnosti jedna (*matematicky* čistý stav). V inerciálních hodinách \(N=I\), pro \(v=\gamma(1,\boldsymbol\beta)\), máme \(\pi=(I+\boldsymbol\beta\cdot\boldsymbol\sigma)/2\).
 
-**Rozsah:** Blochova *souřadnice* odpovídá rychlosti SR poté, co už máme dané \(u,v\) a kanonickou Lorentzovu tetrádu. Neodvodili jsme rychlost světla z experimentů s detektory, dynamiku času, tvrzení „čistota laboratorního qubitu = rychlost částice“ ani samotnou metriku z operační hustoty \(\Theta\).
+**Rozsah:** Blochova *souřadnice* odpovídá 3-rychlosti SR poté, co už máme dané \(u,v\) a kanonickou Lorentzovu tetrádu. Neodvodili jsme rychlost světla z experimentů s detektory, dynamiku času, tvrzení „čistota laboratorního qubitu = rychlost částice“ ani samotnou metriku z operační hustoty \(\Theta\).
 
 ## 3. Hyperbolická geometrie rychlosti a kvantová Fisherova metrika
 
