@@ -58,7 +58,7 @@ The \(SO(3)\) tensor-product identity \(1\otimes1=0\oplus1\oplus2\) permits the 
 In a free Gaussian Fock comparator, normal-ordered quadratic \(Q\) has zero vacuum-to-1-particle matrix element and a nonzero vacuum-to-2-particle matrix element. Hence the free bilinear couples to a 2-particle continuum, not automatically to an isolated massless graviton pole. An interacting bound/collective candidate requires a **dynamically derived** isolated positive-residue helicity-\(2\) pole in a *gauge-invariant connected TT correlator*, appropriate Ward identities and universal gravitational stress coupling. A pole is not proved here.
 
 
-**A sharper free-dynamics pole test.** In a 4D Euclidean Gaussian comparator where the (3) real vector components are independent free massless *scalar species* (not a Lorentz-vector gauge-field model), Wick contraction of normal-ordered (Q) yields
+**A sharper free-dynamics pole test.** In a 4D Euclidean Gaussian comparator where the \(3\) real vector components are independent free massless *scalar species* (not a Lorentz-vector gauge-field model), Wick contraction of normal-ordered \(Q\) yields
 
 \[
 \langle Q_{ij}(x)Q_{kl}(0)\rangle_c
@@ -71,7 +71,7 @@ D(x)=\frac1{4\pi^2 x^2}.
 \qquad \lim_{p^2\to0^+}p^2[\Pi(p^2)-\Pi(\mu^2)]=0.}\tag{4}
 \]
 
-Here (Pi) denotes the standard once-subtracted Fourier bubble of (D(x)^2) (up to local contact terms). Its nonlocal dependence is logarithmic, not a simple (1/p^2) pole with positive graviton residue. The Fourier identity follows from a Feynman-parameter integral; the accompanying SymPy test checks the exact TT Wick tensor, the subtraction and the zero pole-residue limit. This is a **free-theory no-go**, not an interacting UBT result. Interactions, constraint dynamics or a non-Gaussian collective phase are mandatory if this branch is to produce a massless helicity-(2) excitation.
+Here \(\Pi\) denotes the standard once-subtracted Fourier bubble of \(D(x)^2\) (up to local contact terms). Its nonlocal dependence is logarithmic, not a simple \(1/p^2\) pole with positive graviton residue. The Fourier identity follows from a Feynman-parameter integral; the accompanying SymPy test checks the exact TT Wick tensor, the subtraction and the zero pole-residue limit. This is a **free-theory no-go**, not an interacting UBT result. Interactions, constraint dynamics or a non-Gaussian collective phase are mandatory if this branch is to produce a massless helicity-\(2\) excitation.
 
 A **Weinberg–Witten gate** must also be checked: under its particular assumptions of a Lorentz-covariant conserved stress-energy operator generating translations and suitable massless-particle states, an interacting composite massless helicity \(>1\) carrying nonzero energy-momentum is obstructed. GR evades those assumptions through its gravitational gauge structure. This theorem is not a blanket no-go for all diffeomorphism-invariant or nonlocal emergent-spacetime theories; any proposed evasion must be explicit rather than invoked rhetorically. Primary source: Weinberg and Witten, *Limits on massless particles*, Physics Letters B 96 (1980) 59–62, https://doi.org/10.1016/0370-2693(80)90212-9 ; review: https://arxiv.org/abs/0904.0453 .
 
