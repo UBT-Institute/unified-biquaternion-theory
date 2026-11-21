@@ -64,6 +64,26 @@ Každá nulová trajektorie v této ploché \(4+1\) geometrii po projekci do poz
 
 Pro časovou variantu (\(\varepsilon=-1\)) dávají při pevných \(k,m,R\) libovolně velká \(|n|\) hodnotu \(\omega_n^2<0\), tedy exponenciálně rostoucí nebo klesající módy. Při \(k=0,m=R=1,n=2\) dostáváme \(\omega_n^2=-3\). Nestabilita je **konkrétním selháním plochého skalárního modelu**; není důkazem, že selhat musí každá představitelná teorie s více časy. Další časové dimenze navíc čelí známým problémům tachyonů a ghostů (viz [Physical Review D 63, 065014](https://doi.org/10.1103/PhysRevD.63.065014)). Nulový mód \(n=0\) pro obě znaménka reprodukuje běžnou disperzi; jeho samotné měření mezi modely nerozliší.
 
+<!-- BILINGUAL-UNIT: hypertravel.warped -->
+## Pozitivní srovnávací příklad: kauzální zkratka v předpokládané zakřivené geometrii
+
+Výsledek o nepřítomnosti zkratky v plochém součinovém prostoru **nevylučuje** zkratku v zakřiveném vyšším prostoru. Uvažujme **samostatně předpokládanou** lokální metriku v jednotkách \(c=1\) s přístupnou další **prostorovou** souřadnicí \(\psi\):
+\[
+\boxed{ds^2=-dt^2+a(\psi)^2dx^2+d\psi^2,\qquad
+a(\psi)=\exp[-(\ln2)\psi^2].}
+\]
+Při \(\psi=0\) je \(a(0)=1\). Signál omezený na tento řez potřebuje čas \(T_{\rm brane}=L=10\) pro spojení bodů \(x=0\) a \(x=10\). **Po částech budoucnostně orientovaná nulová** cesta však může vystoupat z \(\psi=0\) do \(\psi=h=1\), pohybovat se ve směru \(x\) při \(\psi=h\) a vrátit se. Svislé úseky potřebují každý jednu jednotku souřadnicového času a díky \(a(h)=1/2\) trvá prostřední úsek \(L/2=5\). Proto
+\[
+\boxed{T_{\rm route}=2h+a(h)L=2+5=7<10=T_{\rm brane}.}
+\]
+Jde o konkrétní **kauzální geometrickou zkratku v předpokládané metrice**: žádný úsek lokálně nepřekračuje rychlost světla. Lomená nulová cesta má rohy a nemusí být geodetikou volně letícího tělesa; lze ji přiblížit hladkými kauzálními cestami s nepatrně delším časem stále menším než deset. Metrika je skutečně **zakřivená**, přičemž skalární křivost zobrazeného součinového sektoru se třemi souřadnicemi je
+\[
+\mathcal R=-2a''/a=4\ln2-8(\ln2)^2\psi^2.
+\]
+V plochém vyšším prostoru s \(a\equiv1\) trvá stejná oklika \(2h+L>L\), takže faktor zakřivení je nezbytný.
+
+**Fyzikální omezení:** jde o vnějším předpokladem zadanou geometrii, **nikoli o metriku odvozenou z uzamčené čtyřrozměrné sharp metriky UBT** nebo jejích pohybových rovnic. Zatím nemáme zdrojový tenzor energie ani ověření energetických podmínek, stabilitu a vazbu fyzikálních signálů, možnost vstupovat do dalšího směru a vracet se, slučitelnost se známými gravitačními testy ani globální chronologii. Nedokazuje postavitelné hyperprostorové vozidlo ani cestování do minulosti. Poskytuje však užitečný **pozitivní cíl pro rozlišení modelů**: dokáže skutečná UBT s jediným polem \(\Theta\) vytvořit stabilní zakřivenou geometrii s měřitelným dřívějším příchodem vůči signálu omezenému na náš řez, aniž by porušila lokální kauzalitu?
+
 <!-- BILINGUAL-UNIT: hypertravel.selection -->
 ## Co musíme v UBT skutečně odvodit
 
@@ -76,4 +96,4 @@ Tvrzení o cestování hyperprostorem navíc vyžaduje fyzikální, na vztažné
 <!-- BILINGUAL-UNIT: hypertravel.verification -->
 ## Ověření
 
-Dne 2026-11-22 prošlo lokálně jedenáct deterministických přesných testů v SymPy 1.14.0: Lorentzova algebra, kovariance a nekomutativita konečných boostů, příklad budoucího kužele, nepřítomnost posunu počátku, spinorové chování při \(2\pi/4\pi\), plochá KK disperze a rychlost, tachyonický mód pro druhý čas, společný nulový mód a kauzální mez plochého prostorového \(\psi\). Zdroj: \`research_tracks/action_selection/tests/test_double_rotation_extra_time_gate.py\`. Přesná algebra pouze **zkušebních modelů**; žádná numerická předpověď UBT, žádný běh Lean, žádný úplný průchod CI repozitáře ani nezávislá sémantická kontrola dvojjazyčnosti. **LEAN-PENDING.**
+Dne 2026-11-22 prošlo lokálně čtrnáct deterministických přesných testů v SymPy 1.14.0: Lorentzova algebra, kovariance a nekomutativita konečných boostů, příklad budoucího kužele, nepřítomnost posunu počátku, spinorové chování při \(2\pi/4\pi\), plochá KK disperze a rychlost, tachyonický mód pro druhý čas, společný nulový mód a kauzální mez plochého prostorového \(\psi\), plochou okliku vyšším prostorem, lomenou nulovou zkratku v zakřiveném prostoru a nenulovou skalární křivost. Zdroj: \`research_tracks/action_selection/tests/test_double_rotation_extra_time_gate.py\`. Přesná algebra pouze **zkušebních modelů**; žádná numerická předpověď UBT, žádný běh Lean, žádný úplný průchod CI repozitáře ani nezávislá sémantická kontrola dvojjazyčnosti. **LEAN-PENDING.**
