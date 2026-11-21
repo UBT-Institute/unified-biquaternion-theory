@@ -88,6 +88,24 @@ is invariant under both the Lorentz group and \(SL(2,\mathbb R)\). With \(\iota_
 \]
 The family \(H_f=f(\Delta)\) has the same dual-pair symmetry and distinct flows \(\dot X=f'(\Delta)X_{\Delta}\), so **even the full dual pair does not uniquely select dynamics**. No spatial derivatives or physical UBT constraints appear here.
 
+<!-- BILINGUAL-UNIT: rh-howe.invariant-ring -->
+## Exact Gram-sector invariant-ring theorem: no independent zero-jet selector
+
+The full copy-space \(SL(2,\mathbb R)\) acts on the Lorentz Gram entries \(Q,R,S\). Its three infinitesimal generators induce the first-order operators
+\[
+e=2S\partial_Q+R\partial_S,\qquad
+f=2S\partial_R+Q\partial_S,\qquad
+h=2Q\partial_Q-2R\partial_R.
+\]
+For a polynomial \(P(Q,R,S)\), the equation \(hP=0\) forces equal powers of \(Q\) and \(R\) in every monomial, so \(P=P(T,S)\) with \(T=QR\). Then \(eP=R(2S\partial_T+\partial_S)P=0\) implies \(P=F(T-S^2)\). Conversely \(e\Delta=f\Delta=h\Delta=0\). Therefore the entire polynomial invariant ring **within the Gram sector** is
+\[
+\boxed{\mathbb R[Q,R,S]^{SL(2,\mathbb R)}
+=\mathbb R[\Delta],\qquad \Delta=QR-S^2.}
+\]
+This is an elementary algebraic classification, not merely a finite-degree pattern. An independent exact SymPy linear-kernel check finds one generator at each even Gram degree \(0,2,4,6\) and none at odd degrees \(1,3,5\), consistent with \(\Delta^m\).
+
+For a regular ordered pair of Lorentz vectors with nondegenerate span, the standard orthogonal-group Gram classification implies that generic *Lorentz-invariant* algebraic zero-jet candidates factor through \((Q,R,S)\). Under the **additional, unproved physical requirement** of the entire copy-space \(SL_2\), their invariant Hamiltonians reduce to \(F(\Delta)\). By the exact Lorentz-orbit theorem below, these generate only tangent motions to Lorentz orbits, hence no reduced physical evolution if those directions are gauge. This is a **conditional zero-derivative selector no-go**. It does not prohibit derivative-dependent Hamiltonians, singular/nonpolynomial sectors, explicit constraint reductions, or using the Howe pair as a representation-theoretic tool rather than a physical symmetry.
+
 <!-- BILINGUAL-UNIT: rh-howe.lorentz-orbit -->
 ## Exact Lorentz-moment-map obstruction to physical dynamics
 
