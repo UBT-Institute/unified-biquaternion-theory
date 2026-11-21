@@ -403,3 +403,35 @@ claims:
     - the old step 1 proves a massless photon for a nonzero charge-one background
     - a neutral composite automatically supplies a healthy propagating wave
     - fiber Fourier indices identify adjacent universes
+
+  observer_memory_landauer:
+    id: GAP-INFO-LANDAUER-BRIDGE
+    status: OPEN_GAP
+    scope: Noncanonical effective observer-memory research; no canonical gap status changes.
+    thermal_balance: STANDARD_RESULT_REUSED
+    reduced_mode_memory: CONDITIONAL_COMPARATOR
+    scalar_sign_bit_potential_barrier: REJECTED_BY_FULL_COMPLEX_PHASE_PATH
+    microscopic_memory_mode_selection: OPEN_GAP
+    thermal_rate_derivation: OPEN_GAP
+    record_erasure_examples: FINITE_MODEL_DIAGNOSTICS
+    unique_action_selection: NOT_ESTABLISHED
+    global_reality_uniqueness: NOT_ASSUMED
+    lean_status: LEAN-PENDING
+    evidence:
+    - research_tracks/fundamental_dynamics/LANDAUER_OBSERVER_MEMORY.en.md
+    - research_tracks/fundamental_dynamics/LANDAUER_OBSERVER_MEMORY.cs.md
+    - tests/test_landauer_observer_memory.py
+    - reports/landauer_observer_memory_2026_11_09.json
+    - research_tracks/information_first/THETA_MEMORY_DYNAMICAL_BRIDGE_2026_11.en.md
+    - research_tracks/information_first/THETA_MEMORY_DYNAMICAL_BRIDGE_2026_11.cs.md
+    - tests/test_theta_memory_reduction.py
+    - reports/theta_memory_reduction_2026_11_09.json
+    assumptions:
+    - Finite effective quantum memory and reservoir; initially Gibbs reservoir at positive finite temperature; unitary joint evolution.
+    - The simple heat lower bound requires initial memory-reservoir independence; correlations enter the exact balance explicitly.
+    - Classical extension sets concern declared jointly comparable records, not hidden values for incompatible quantum observables.
+    forbidden_wording:
+    - erasure proves multiple physical realities
+    - the Landauer bound derives the unique UBT action
+    - every observation costs k_B T ln 2
+    - a local reset destroys global information

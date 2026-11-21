@@ -1,0 +1,69 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-09",
+  "claim_or_decision_id": "GAP-INFO-LANDAUER-BRIDGE",
+  "summary": "Add finite observer memory, thermal erasure accounting and post-erasure record compatibility to the information-principle research track.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_proposal",
+      "actor": "human",
+      "description": "Requested inclusion of Landauer erasure in the repository information principle.",
+      "evidence_ids": [
+        "current-discussion"
+      ]
+    },
+    {
+      "kind": "human_critique",
+      "actor": "human",
+      "description": "Required keeping a shared reality unproved rather than assuming it from individual observer limitations.",
+      "evidence_ids": [
+        "current-discussion"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Specified thermal and correlation assumptions, finite record counterexamples and a protocol admissibility constraint; prepared paired notes and verification code.",
+      "evidence_ids": [
+        "current-discussion",
+        "repository-source"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "current-discussion",
+      "class": "discussion_context",
+      "locator": "Current author-agent research discussion; no public transcript identifier",
+      "original_checked": true,
+      "supports": "Immediate research direction and corrections only.",
+      "limitations": "Original visible in session; no archived public transcript or independent origin attestation; no quotation published."
+    },
+    {
+      "id": "repository-source",
+      "class": "repository_artifact",
+      "locator": "research_tracks/fundamental_dynamics/LANDAUER_OBSERVER_MEMORY.en.md",
+      "original_checked": true,
+      "supports": "Current mathematical formulation and its declared limitations.",
+      "limitations": "Artifact does not establish exclusive idea origin or scientific novelty."
+    }
+  ],
+  "rejected_alternatives": [
+    "Assuming a unique global state at the start of the compatibility diagnostic.",
+    "Charging a universal bit-reset cost despite initial correlations.",
+    "Treating an entropy inequality as a uniquely derived UBT action."
+  ],
+  "verification": {
+    "status": "verified_with_scope",
+    "artifacts": [
+      "tests/test_landauer_observer_memory.py",
+      "reports/landauer_observer_memory_2026_11_09.json"
+    ],
+    "limitations": "Finite effective-model checks, not a UBT bridge proof; Lean and independent translation review pending."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "Landauer thermodynamics is prior literature, not claimed as a new UBT discovery. No raw chat, sensitive details or human signature included."
+}

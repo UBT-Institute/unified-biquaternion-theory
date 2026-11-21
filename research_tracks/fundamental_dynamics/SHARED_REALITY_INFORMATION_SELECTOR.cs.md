@@ -50,3 +50,8 @@ C. Kladná klasická Fisherova metrika != kladný Lorentzův nosič nebo zdola o
 D. Pro UBT: určit konkrétní kanály pozorovatelů a pravděpodobnosti vytvořené z Theta; vypočítat netriviální variační rovnice a úplnou odezvu kompozitní konexe/torze; ověřit Helmholtzovy/Noetherovy podmínky, uzavřenost Hamiltonových vazeb a propagátor gravitonu; poté se pokusit o vznik částic. Do důkazu zůstává informační přístup/přístup sdílené reality testovatelnou výzkumnou hypotézou.
 
 Na tomto základě NEMĚNIT kanonické uzamčené axiomy.
+
+<!-- BILINGUAL-UNIT: landauer-extension -->
+## Konečná paměť a termodynamická přípustnost
+
+[Landauerovo rozšíření](LANDAUER_OBSERVER_MEMORY.cs.md) doplňuje přípustné protokoly pozorovatelů o výslovnou bilanci paměti, rezervoáru a korelací. Slučitelnost záznamů a jednoznačnost globálního stavu jsou samostatné testy; ani jedno nepředpokládáme ze samotné entropie. Jde o výzkumné omezení, nikoli o jednoznačný výběr akce či uzavření kanonické mezery.

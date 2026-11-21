@@ -1,0 +1,43 @@
+{
+  "schema": "ubt-bilingual-semantics/v1",
+  "status": "blocked",
+  "verification": "machine-verified-translation",
+  "model": "claude-sonnet-5.5",
+  "cli_version": "1.0.103",
+  "created_at": "2026-11-09T01:06:29.064953+00:00",
+  "base": "733b6ea8221109add3eeb182daeff5ff9e393f32",
+  "sources": [
+    {
+      "id": "research_tracks/fundamental_dynamics/LANDAUER_OBSERVER_MEMORY.en.md",
+      "en_sha256": "279e6b254bf24b6f91fd4cd126acf35f090a167a052825033e90291012c3b7a3",
+      "cs_sha256": "6927a90a433e651761fbad777740570754b290b4173729479c32744fe07cb4f5",
+      "paths": {
+        "en": "research_tracks/fundamental_dynamics/LANDAUER_OBSERVER_MEMORY.en.md",
+        "cs": "research_tracks/fundamental_dynamics/LANDAUER_OBSERVER_MEMORY.cs.md"
+      }
+    },
+    {
+      "id": "research_tracks/fundamental_dynamics/SHARED_REALITY_INFORMATION_SELECTOR.en.md",
+      "en_sha256": "a0a6e73ab75c64e8b02dd73586d19d44875dca22f529a5e9ec7251fc4d7cad1c",
+      "cs_sha256": "c4aa9156afb002a5371407a13f03d37a98f7add7c4ed91cfd3573d3dd15c69cf",
+      "paths": {
+        "en": "research_tracks/fundamental_dynamics/SHARED_REALITY_INFORMATION_SELECTOR.en.md",
+        "cs": "research_tracks/fundamental_dynamics/SHARED_REALITY_INFORMATION_SELECTOR.cs.md"
+      }
+    }
+  ],
+  "reviews": [],
+  "calibration": {
+    "status": "not_run"
+  },
+  "verifier_sha256": "c9c84c90c3a3ab25b195322dbd10b7fc05685c2f92666ea19f11dcce029acc30",
+  "prompt_sha256": "7f16b9548d334d47b1ec8680802f289e49829d8237787265a7eaa3d1a26ae930",
+  "structure_verifier_sha256": "2aa2141a7a60a83ecfa06c8d892d43102bc1c72121bb07023d08de607027e22c",
+  "policy_sha256": {
+    "BILINGUAL_CONTENT_POLICY.en.md": "3f0444813e1df258c84ba119c58467bf87bfdb245214c65b4e91cde870949870",
+    "BILINGUAL_CONTENT_POLICY.cs.md": "523bdd20bd09491c80c6a037b3c235e7333affc5843140a85b0de6361c444d17",
+    "AGENTS.md": "0a19ef13bb21103d694b0684d1aed114103503473c51a5d493f41680e27efbcf"
+  },
+  "commit": "8df5941c120e9d8b315d67746fae7af751f9b8f1",
+  "error": "Copilot CLI 1.0.103 is required"
+}

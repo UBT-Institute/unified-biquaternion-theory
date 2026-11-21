@@ -50,3 +50,8 @@ C. Positive classical Fisher metric != positive Lorentz carrier or bounded Hamil
 D. For UBT: specify concrete observer channels and probabilities built from Theta; calculate nontrivial variational equations and full composite connection/torsion response; check Helmholtz/Noether, Hamiltonian constraint closure and graviton propagator; then attempt particle emergence. Until proved, the information/shared-reality approach remains a testable research hypothesis.
 
 Do NOT modify the canonical locked axioms on this basis.
+
+<!-- BILINGUAL-UNIT: landauer-extension -->
+## Finite memory and thermodynamic admissibility
+
+The [Landauer extension](LANDAUER_OBSERVER_MEMORY.en.md) adds explicit memory, reservoir and correlation accounting to allowed observer protocols. Record compatibility and global-state uniqueness are separate tests; neither is assumed from entropy alone. This is a research constraint, not a unique action selector or a canonical closure.
