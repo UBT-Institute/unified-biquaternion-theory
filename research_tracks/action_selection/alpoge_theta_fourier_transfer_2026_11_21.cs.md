@@ -84,6 +84,21 @@ Navrhovaný přenos Alpögeho **aritmetického** mechanismu theta liftů musí n
 
 Dřívější no-go pro symplektické zakřivení skalárního ekvivariantního ansatzu nadále platí v jeho vymezeném rozsahu: DFT na prostoru módů nevytvoří šest nezávislých bivektorových koeficientů zakřivení vyžadovaných Palatiniho formulací. Nezavádíme žádný nový stupeň volnosti, akci, fyzikální symetrii, predikci hmotnosti ani tvrzení o odstranění ghostů.
 
+<!-- BILINGUAL-UNIT: alpoge-theta-transfer.weil -->
+## Bližší matematická cesta: Lorentzova kovariance uvnitř symplektické grupy
+
+Existující Lorentzova kongruenční transformace (X\mapsto SXS^\dagger), (S\in SL(2,\mathbb C)), zachovává (B) a komutuje s (J); poskytuje tedy reálnou symplektickou reprezentaci (SL(2,\mathbb C)\to Sp(8,\mathbb R)) na stejných osmi reálných složkách pole. To je bližší [standardní Weilově/oscilátorové reprezentaci](https://www.math.iitb.ac.in/~dprasad/weil-repn.pdf), která stojí za theta korespondencí, než samotná konečná DFT. **Stále** však nejde o ztotožnění s Alpögeho theta jádrem na unitárních grupách.
+
+Existuje přesná překážka kladnosti *na konečném nosiči složek*. Pro
+\[
+S=\operatorname{diag}(2,1/2),\quad
+X_*=\operatorname{diag}(1,0),\quad
+S X_* S^\dagger=4X_*,
+\]
+by každá kladně definitní Lorentzovsky invariantní kvadratická forma (P) musela splňovat (P(X_*,X_*)=P(4X_*,4X_*)=16P(X_*,X_*)), což je spor. **Na původním konečněrozměrném nosiči hodnot pole tedy neexistuje kladně definitní skalární součin invariantní vůči této celé kongruenční akci**. To nevylučuje fyzikální kladný Hilbertův prostor stavů.
+
+Pro reálný osmireálný symplektický prostor má standardní metaplektické dvojné pokrytí (Mp(8,\mathbb R)) unitární oscilátorovou reprezentaci na (L^2(\mathbb R^4)); viz [standardní matematická konstrukce](https://www.math.iitb.ac.in/~dprasad/weil-repn.pdf). *Matematická cesta přes teorii reprezentací* je tedy dostupná bez přidání druhého fundamentálního pole UBT: **kvantovat symplektický prostor hodnot a testovat indukovanou Lorentzovu akci**. Oscilátorový Hilbertův prostor však není totéž jako Lorentzovsky invariantní kladná norma na (X), ani nejde o odvozenou kvantizaci UBT, fyzikální spektrum, akci, polarizaci či theta lift. Tyto mosty zůstávají **OPEN**.
+
 <!-- BILINGUAL-UNIT: alpoge-theta-transfer.verification -->
 ## Ověření a status
 
@@ -91,4 +106,4 @@ Nezávislé analytické kroky: unitarita DFT, komplexní linearita, signatura (B
 ```sh
 python -m unittest research_tracks.action_selection.tests.test_alpoge_theta_fourier_transfer -v
 ```
-Šest testů prošlo lokálně se SymPy 1.14.0 dne 2026-11-21: signatura, DFT čtvrtého řádu, kovariance (B/Omega), nesymplektický gaussovský filtr, zachování záporného směru a protipříklad s metrikou. Testy ověřují pouze zakódované konečněrozměrné identity; žádný skutečný automorfní lift, PDE UBT, Einsteinovy rovnice, spektrum s vazbami ani Alpögeho věta nebyly nezávisle znovu dokázány. **LEAN-PENDING**: pro tuto novou poznámku nebyl zkompilován soubor Leanu. Netvrdíme povýšení kanonického/statusového tvrzení ani schválení sémantické shody překladů.
+Sedm testů prošlo lokálně se SymPy 1.14.0 dne 2026-11-21: signatura, DFT čtvrtého řádu, kovariance (B/Omega), nesymplektický gaussovský filtr, zachování záporného směru a protipříklad s metrikou. Testy ověřují pouze zakódované konečněrozměrné identity; žádný skutečný automorfní lift, PDE UBT, Einsteinovy rovnice, spektrum s vazbami ani Alpögeho věta nebyly nezávisle znovu dokázány. **LEAN-PENDING**: pro tuto novou poznámku nebyl zkompilován soubor Leanu. Netvrdíme povýšení kanonického/statusového tvrzení ani schválení sémantické shody překladů.
