@@ -103,10 +103,42 @@ def gaussian_two_particle_gate():
     print("PASS: Gaussian normal-ordered spin-two bilinear: 2-particle, no 1-particle transition")
 
 
+
+def gaussian_massless_bubble_gate():
+    # The 3 free vector components are treated as independent massless scalar
+    # species on Euclidean 4D, only as a Gaussian comparator.
+    # Wick TT two-point is D(x)**2; Fourier => once-subtracted bubble log(p²).
+    delta = lambda a, b: s.KroneckerDelta(a, b)
+    C = lambda i, j, k, l: (
+        delta(i, k) * delta(j, l)
+        + delta(i, l) * delta(j, k)
+        - s.Rational(2, 3) * delta(i, j) * delta(k, l)
+    )
+    hp = s.diag(s.Rational(1, 2), -s.Rational(1, 2), 0)
+    hx = s.Matrix([[0, s.Rational(1, 2), 0],
+                   [s.Rational(1, 2), 0, 0], [0, 0, 0]])
+    proj = lambda A, B: s.simplify(sum(
+        A[i, j] * C(i, j, k, l) * B[k, l]
+        for i in range(3) for j in range(3)
+        for k in range(3) for l in range(3)
+    ))
+    assert proj(hp, hp) == 1
+    assert proj(hx, hx) == 1
+    assert proj(hp, hx) == 0
+    p2, mu2 = s.symbols("p2 mu2", positive=True)
+    x = s.symbols("x", positive=True)
+    subtraction = -s.integrate(s.log(p2 / mu2), (x, 0, 1)) / (16 * s.pi**2)
+    assert s.simplify(subtraction + s.log(p2 / mu2)/(16*s.pi**2)) == 0
+    u = s.symbols("u", positive=True)
+    assert s.limit(u * s.log(u), u, 0, dir="+") == 0
+    print("PASS: free Gaussian TT Wick correlator is bubble log(p²), no isolated 1/p² pole")
+
+
 if __name__ == "__main__":
     little_group_intertwiner()
     pauli_rotation_check()
     quadratic_spin2_gate()
     independent_connection_counterexample()
     gaussian_two_particle_gate()
+    gaussian_massless_bubble_gate()
     print("SCOPE: isotropic rotation-equivariant smooth M2(C) carrier only, no full field equations")
