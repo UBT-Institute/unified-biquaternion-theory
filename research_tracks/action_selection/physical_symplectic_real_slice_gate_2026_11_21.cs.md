@@ -90,7 +90,7 @@ který je pro přípustné variace nenulový, přestože omezená bodová \(\Ome
 <!-- BILINGUAL-UNIT: physical-symplectic.decision -->
 ## Rozhodnutí a další experiment
 
-**Přesný závěr s omezeným dosahem:** osmireálnou bodovou formu nesmíme prohlásit za fyzikální symplektický proud UBT pouze na základě její algebraické invariance. Také nesmíme nahradit uzamčenou podmínku reality jetu nepovoleným omezením \(\Theta\in W_L\). Výpočet v plochém sektoru prokazuje, že tento zjednodušený přístup nevidí žádné lokální variace s kompaktní podporou.
+**Přesný závěr s omezeným dosahem:** osmireálnou bodovou formu nesmíme prohlásit za fyzikální symplektický proud UBT pouze na základě její algebraické invariance. Také nesmíme nahradit uzamčenou podmínku reality jetu nepovoleným omezením \(\Theta\in W_L\). Výpočet v plochém sektoru ukazuje, že tento zjednodušený přístup nevidí žádné lokální variace s kompaktní podporou.
 
 Dalším skutečně hodnotným výpočtem je **úplná druhá variace na nedegenerovaném, neplochém kompozitním tetrádovém pozadí** jedné výslovně zvolené kandidátní akce UBT, včetně všech variací \(D_\mu\Theta\), kompozitní konexe, metriky a objemového elementu. Z ní je třeba získat **kovariantní presymplektický proud**, klasifikovat lokální Lorentzovy a difeomorfní vazby a otestovat hlavní symbol po redukci na dvě transverzálně-traceless polarizace gravitace s nezápornou energií. Jestliže kandidátní akce pouze přebírá Einsteinův-Hilbertův člen, výsledek pro GR zůstává výslovně **podmíněný**; shoda s GR neurčuje mikroskopickou akci.
 
