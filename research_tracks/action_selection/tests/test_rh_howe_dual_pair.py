@@ -133,6 +133,20 @@ class LocalHowePairTests(unittest.TestCase):
             ((boost * q).T * self.eta * (boost * y))[0],
         )
 
+    def test_variable_foliation_majorant_not_constant(self):
+        # Flat spacetime, trivial inertial connection, but a variable unit
+        # timelike normal n(alpha(x)). Derivative of the Gaussian kernel
+        # is nonzero unless the normal is transported appropriately.
+        alpha = sp.symbols("alpha", real=True)
+        n = sp.Matrix([sp.cosh(alpha), sp.sinh(alpha), 0, 0])
+        r = 2*(self.eta*n)*(self.eta*n).T-self.eta
+        lattice_vector = sp.Matrix([1, 1, 0, 0])
+        quadratic_derivative = sp.simplify(
+            (lattice_vector.T*r.diff(alpha)*lattice_vector)[0]
+        )
+        self.assertEqual(quadratic_derivative.subs(alpha, 0), -4)
+        self.assertNotEqual(quadratic_derivative, 0)
+
     def test_full_dual_pair_invariant_gram_determinant(self):
         u, v = sp.Matrix(sp.symbols("u0:4")), sp.Matrix(sp.symbols("v0:4"))
         q = (u.T * self.eta * u)[0]
