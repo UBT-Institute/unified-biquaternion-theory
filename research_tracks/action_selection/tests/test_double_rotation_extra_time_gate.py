@@ -99,5 +99,35 @@ class HypertravelNullControls(unittest.TestCase):
         self.assertLess(sum(x*x for x in spatial), time_squared)
 
 
+    def test_flat_bulk_detour_cannot_beat_brane_light(self):
+        height, separation = sp.Integer(1), sp.Integer(10)
+        travel_time = 2*height + separation
+        self.assertGreater(travel_time, separation)
+
+    def test_explicit_warped_bulk_null_shortcut(self):
+        # Toy geometry ds^2=-dt^2+a(y)^2 dx^2+dy^2,
+        # a(y)=exp(-log(2)*y^2), brane at y=0.
+        height, separation = sp.Integer(1), sp.Integer(10)
+        y = sp.symbols('y', real=True)
+        a = sp.exp(-sp.log(2)*y**2)
+        self.assertEqual(a.subs(y,0), 1)
+        self.assertEqual(a.subs(y,1), sp.Rational(1,2))
+        vertical_dt = height
+        horizontal_dt = a.subs(y,1)*separation
+        self.assertEqual(-vertical_dt**2 + height**2, 0)
+        self.assertEqual(-horizontal_dt**2 + a.subs(y,1)**2*separation**2, 0)
+        self.assertEqual(2*vertical_dt+horizontal_dt, 7)
+        self.assertLess(2*vertical_dt+horizontal_dt, separation)
+
+    def test_warped_bulk_shortcut_requires_nonflat_geometry(self):
+        y = sp.symbols('y',real=True)
+        a = sp.exp(-sp.log(2)*y**2)
+        # Scalar curvature of the 2d metric a(y)^2 dx^2+dy^2.
+        curvature = sp.simplify(-2*sp.diff(a,y,2)/a)
+        self.assertEqual(sp.simplify(curvature -
+                         (4*sp.log(2)-8*sp.log(2)**2*y**2)), 0)
+        self.assertEqual(sp.simplify(curvature.subs(y,0)-4*sp.log(2)), 0)
+
+
 if __name__ == '__main__':
     unittest.main()
