@@ -90,7 +90,7 @@ which is nonzero for admissible variations, even though the restricted value-spa
 <!-- BILINGUAL-UNIT: physical-symplectic.decision -->
 ## Decision and next experiment
 
-**Exact, narrowly scoped decision:** do **not** promote the eight-real value-space form to the physical UBT symplectic current merely because it is algebraically invariant, nor impose \(\Theta\in W_L\) in place of the locked jet reality condition. The flat-sector calculation proves that this simplistic route misses all compactly supported local variations.
+**Exact, narrowly scoped decision:** do **not** promote the eight-real value-space form to the physical UBT symplectic current merely because it is algebraically invariant, nor impose \(\Theta\in W_L\) in place of the locked jet reality condition. The flat-sector calculation shows that this simplistic route misses all compactly supported local variations.
 
 The genuinely high-value next calculation is the **complete second variation on a nondegenerate, nonflat, composite tetrad background** of one explicitly selected candidate UBT action, with the variations of \(D_\mu\Theta\), the composite connection, metric and volume *all included*. Extract the **covariant presymplectic current**, classify local Lorentz/diffeomorphism constraints, and test the gauge-reduced principal symbol for the two transverse-traceless gravitational polarizations and positive energy. If the candidate action only imports Einstein-Hilbert, keep the GR result explicitly **conditional**; no microscopic action selection is established by matching GR.
 
