@@ -84,6 +84,21 @@ A proposed transfer of Alpöge's **arithmetic** theta-lift mechanism must first 
 
 The existing rank-one equivariant symplectic curvature no-go remains applicable to its specified scalar ansatz: a mode-space DFT does not create the rank-six bivector curvature coefficient required by Palatini. No new degree of freedom, action, physical symmetry, mass prediction or ghost-free claim is introduced.
 
+<!-- BILINGUAL-UNIT: alpoge-theta-transfer.weil -->
+## Closer mathematical door: Lorentz covariance inside the symplectic group
+
+The existing Lorentz congruence (X\mapsto SXS^\dagger), (S\in SL(2,\mathbb C)), preserves (B) and commutes with (J); hence it gives a real symplectic representation (SL(2,\mathbb C)\to Sp(8,\mathbb R)) on the same eight real field components. This is closer to the [standard Weil/oscillator representation](https://www.math.iitb.ac.in/~dprasad/weil-repn.pdf) underlying theta correspondence than the finite DFT alone, but **not** yet an identification with Alpöge's unitary-group theta kernel.
+
+There is an exact positivity obstruction *on the finite component carrier*. For
+\[
+S=\operatorname{diag}(2,1/2),\quad
+X_*=\operatorname{diag}(1,0),\quad
+S X_* S^\dagger=4X_*,
+\]
+any positive-definite Lorentz-invariant quadratic form (P) would require (P(X_*,X_*)=P(4X_*,4X_*)=16P(X_*,X_*)), a contradiction. Therefore **no positive-definite inner product invariant under this full congruence action exists on the original finite-dimensional field-value carrier**. This does not rule out a physical positive Hilbert space of states.
+
+For a real eight-dimensional symplectic vector space the standard metaplectic double cover (Mp(8,\mathbb R)) has a unitary oscillator representation on (L^2(\mathbb R^4)); see the [standard mathematical construction](https://www.math.iitb.ac.in/~dprasad/weil-repn.pdf). Consequently the *mathematical representation-theory door* is available without adding a second fundamental UBT field: **quantize the symplectic value space and test the induced Lorentz action**. Yet the oscillator Hilbert space is not the same as a Lorentz-invariant positive norm on (X), nor is it a derived UBT quantization, physical spectrum, action, polarization, or theta lift. Those bridges stay **OPEN**.
+
 <!-- BILINGUAL-UNIT: alpoge-theta-transfer.verification -->
 ## Verification and status
 
@@ -91,4 +106,4 @@ Independent analytic steps: DFT unitarity, complex-linearity, the inertia of (B)
 ```sh
 python -m unittest research_tracks.action_selection.tests.test_alpoge_theta_fourier_transfer -v
 ```
-Six tests passed locally with SymPy 1.14.0 on 2026-11-21: signature, order-four DFT, (B/Omega) covariance, non-symplectic Gaussian, surviving negative direction, and metric counterexample. This tests the encoded finite-dimensional identities only; no actual automorphic lift, UBT PDE, Einstein equations, constrained spectrum or Alpöge theorem is independently re-proved. **LEAN-PENDING**: no Lean file was compiled for this new note. No canon/status promotion and no semantic translation approval is claimed.
+Seven tests passed locally with SymPy 1.14.0 on 2026-11-21: signature, order-four DFT, (B/Omega) covariance, non-symplectic Gaussian, surviving negative direction, and metric counterexample. This tests the encoded finite-dimensional identities only; no actual automorphic lift, UBT PDE, Einstein equations, constrained spectrum or Alpöge theorem is independently re-proved. **LEAN-PENDING**: no Lean file was compiled for this new note. No canon/status promotion and no semantic translation approval is claimed.
