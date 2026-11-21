@@ -84,6 +84,16 @@ For a flat bulk \(a\equiv1\), the same detour takes \(2h+L>L\), so the warp fact
 
 **Physical limitations:** this metric is an externally adopted geometric example, **not obtained from the locked four-dimensional UBT sharp metric** or its equations of motion. Nothing yet determines a required bulk stress tensor or energy conditions, the stability and coupling of physical signals, the ability to enter/leave the extra direction, the compatibility with existing gravity tests, or global chronology. It proves neither a buildable hyperspace vehicle nor time travel to the past. It supplies a useful **positive target for model discrimination**: should an actual one-\(\Theta\) UBT theory produce a stable warp geometry with measurable earlier arrival relative to a brane-confined reference, while preserving local causality?
 
+<!-- BILINGUAL-UNIT: hypertravel.nec -->
+## Energy-condition audit of the warped shortcut
+
+The exhibited warp factor passes the **causal geometry** test but fails an important **ordinary Einstein-gravity sourcing** test. In the assumed metric, the future-directed vector \(\ell=\partial_t+\partial_\psi\) is null, and at \(\psi=1\):
+\[
+\boxed{R_{\mu\nu}\ell^\mu\ell^\nu=-\frac{a''(1)}{a(1)}
+=2\ln2-4(\ln2)^2\approx-0.5355<0.}
+\]
+This violates the **null convergence condition**. If the assumed warped metric is required to satisfy unmodified Einstein equations with a positive gravitational coupling, their null contraction implies \(T_{\mu\nu}\ell^\mu\ell^\nu<0\), violating the **null energy condition** for that source (a cosmological constant drops out of the null contraction). The statement is **specific to this metric and equation assumption**, not a universal no-go for all shortcut geometries or for a future UBT dynamical law. UBT has not derived the source, the warp, or its stability. This is a negative physical admissibility gate against premature propulsion claims.
+
 <!-- BILINGUAL-UNIT: hypertravel.selection -->
 ## The actual missing UBT derivations
 
@@ -96,4 +106,4 @@ A hypertravel claim additionally needs a physical, frame-independent travel-time
 <!-- BILINGUAL-UNIT: hypertravel.verification -->
 ## Verification
 
-Fourteen deterministic exact SymPy 1.14.0 tests passed locally on 2026-11-22, covering the Lorentz algebra, finite noncollinear boost covariance and noncommutativity, future cone sample, lack of origin translation, spinor \(2\pi/4\pi\) behavior, flat KK dispersion and velocity, a timelike tachyonic mode, common zero mode, and flat spacelike-\(\psi\) causal bound. Source: \`research_tracks/action_selection/tests/test_double_rotation_extra_time_gate.py\`. Exact algebra on **toy models** only; no numerical UBT prediction, no formal Lean run, no full repository CI pass, no independent bilingual semantic review. **LEAN-PENDING.**
+Fifteen deterministic exact SymPy 1.14.0 tests passed locally on 2026-11-22, covering the Lorentz algebra, finite noncollinear boost covariance and noncommutativity, future cone sample, lack of origin translation, spinor \(2\pi/4\pi\) behavior, flat KK dispersion and velocity, a timelike tachyonic mode, common zero mode, and flat spacelike-\(\psi\) causal bound. Source: \`research_tracks/action_selection/tests/test_double_rotation_extra_time_gate.py\`. Exact algebra on **toy models** only; no numerical UBT prediction, no formal Lean run, no full repository CI pass, no independent bilingual semantic review. **LEAN-PENDING.**
