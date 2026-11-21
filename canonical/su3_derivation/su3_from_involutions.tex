@@ -1,6 +1,6 @@
 % =====================================================================
 % Appendix G: Internal Color Symmetry as a Modular Subgroup of \Theta
-% Status: carrier selection proved; unitary/Yang--Mills dynamics postulated (GAP-SU3-DYN open)
+% Status: carrier selection proved, unitary carrier conditional, dynamical gauge field open
 % VERSION: v17 Stable Release (updated 2026-02-28: reframed as roadmap)
 % =====================================================================
 
@@ -48,9 +48,9 @@ Left/right action decoupling & \textbf{Conditional} & Theorem~G.D (\S G.16) \\
 This appendix presents a candidate mechanism for QCD color symmetry on a complex rank-three carrier selected by the involution structure of the $\Theta$ field.  It does not identify $\mathrm{SU}(3)$ with the complex-algebra automorphism group of $\mathbb{C}\otimes\mathbb{H}$. The construction preserves UBT core principles:
 (i) biquaternionic base for spacetime/kinematics, 
 (ii) complex time $\tau=t+i\psi$, 
-(iii) metric from $\mathrm{Re}(\Theta^\dagger \Theta)$, 
+(iii) the canonical covariant tetrad and its central metric identity,
 (iv) gauge/phase data encoded in the holomorphic structure of $\Theta$.
-Color interactions \emph{may} arise from \emph{multi-dimensional phase degrees of freedom} of $\Theta$; Yang–Mills variables appear as phase connections on a rank-3 internal bundle. GR limit and QED/weak structure remain unchanged.
+The unitary frame defines a flat color connection. A dynamical connection and its compatibility with the canonical metric and matter sectors remain open.
 \textbf{Conditional representation-theory statements are proved in \S G.16 after the unitary-carrier postulate.  Deriving that postulate and the Yang--Mills kinetic term from the canonical UBT action remains open.  Confinement also remains open; see \S G.17.}
 
 \subsection*{G.1 Postulate: Unitary Carrier Dynamics}
@@ -71,7 +71,7 @@ The \emph{color subgroup} is identified with the traceless part:
 \begin{equation}
 \label{eq:G1_su3_subgroup}
 \mathrm{SU}(3)_{\text{color}}\;\subset\;\mathrm{U}(3), 
-\qquad \mathcal{U}=\exp\big(i\,\Phi\big),\quad \Phi\in \mathfrak{u}(3), \quad \mathrm{tr}\,\Phi=0 \;\Rightarrow\; \Phi\in \mathfrak{su}(3).
+\qquad \mathcal{U}=\exp\big(i\,\Phi\big),\quad \Phi^\dagger=\Phi,\quad \mathrm{tr}\,\Phi=0 \;\Rightarrow\; i\Phi\in\mathfrak{su}(3).
 \end{equation}
 Thus, color rotations are unitary transformations of the selected carrier.  They are module/carrier symmetries and are not, in general, complex-algebra automorphisms of $\mathbb{C}\otimes\mathbb{H}$.
 
@@ -97,8 +97,9 @@ Thus the involutions select $V_c\cong\mathbb{C}^3$ [proved], while the unitary
 dynamics on $V_c$ is introduced [open].
 
 \paragraph{Remark (Compatibility).}
-The factorization \eqref{eq:G1_theta_factorization} leaves 
-$g_{\mu\nu}=\mathrm{Re}\big(\Theta^\dagger \Theta\big)$ unchanged under $\mathcal{U}$ because $\mathcal{U}$ is unitary on the internal fiber. Hence GR-limit and metric sector are preserved.
+Unitarity preserves the Hermitian norm on the introduced carrier.
+Compatibility with the canonical metric requires checking its covariant
+tetrad readout for the full field representation.
 
 \subsection*{G.2 Modular (Theta-Function) Realization}
 A concrete realization uses a multi-variable theta function:
@@ -110,64 +111,64 @@ where $\Omega\in \mathrm{Mat}_{3\times 3}(\mathbb{C})$ is a symmetric period mat
 $\mathrm{Im}\,\Omega>0$, and $z\in \mathbb{C}^3$ is the internal phase coordinate. 
 Modular transformations $(\Omega,z)\mapsto (\tilde\Omega,\tilde z)$ act on the theta-function data.  Separately, after imposing the unitary-carrier postulate, the traceless part of the local frame is identified with $\mathrm{SU}(3)$ through \eqref{eq:G1_su3_subgroup}.  The implication from the involution-selected carrier to this unitary dynamics is not yet derived from the canonical action.
 
-\paragraph{Interpretation.} 
-The eight color degrees of freedom correspond to the traceless part of phase deformations in the 3D internal phase torus characterized by $(\Omega,z)$. The “$9\to 8$” reduction is the removal of the overall $\mathrm{U}(1)$ trace.
+\paragraph{Interpretation.}
+The eight real directions belong to the traceless Hermitian generators
+on the unitary carrier. The proposed dictionary from the symmetric period
+matrix to all eight directions fails the rank test in \S G.14.
 
-\subsection*{G.3 Color Connection as Phase Maurer–Cartan Form}
-Define the internal color connection by the (right-invariant) Maurer–Cartan form on the phase frame:
+\subsection*{G.3 Flat Color Connection from a Unitary Frame}
+For a smooth unitary frame $\mathcal U$ define the Maurer--Cartan form and
+its traceless part by
 \begin{equation}
 \label{eq:G3_MC}
-\mathcal{A}_\mu\;\equiv\; \mathcal{U}^\dagger \partial_\mu \mathcal{U}\;\in\;\mathfrak{u}(3), 
-\qquad 
-A_\mu\;\equiv\;\mathcal{A}_\mu\;-\;\tfrac{1}{3}\mathrm{tr}(\mathcal{A}_\mu)\,\mathbf{1}_3\;\in\;\mathfrak{su}(3),
+\mathcal A=\mathcal U^{-1}\mathrm d\mathcal U,\qquad
+A=\mathcal A-\tfrac13\mathrm{tr}(\mathcal A)\mathbf1_3.
 \end{equation}
-and similarly for the complex-time direction $\partial_\tau$. 
-Conditional on the unitary-carrier postulate, this is the intrinsic connection of the chosen carrier frame.  The selection and dynamics of that frame are not yet derived from the canonical UBT action.
-
-The corresponding field strength is the curvature of the phase connection:
+The identity $\mathrm d(\mathcal U^{-1})=-\mathcal U^{-1}(\mathrm d\mathcal U)
+\mathcal U^{-1}$ gives $\mathrm d\mathcal A+\mathcal A\wedge\mathcal A=0$.
+Taking the trace gives $\mathrm d\,\mathrm{tr}(\mathcal A)=0$ because the
+components of $\mathcal A\wedge\mathcal A$ are commutators. The central
+trace term drops out of the commutators, hence
 \begin{equation}
 \label{eq:G3_curvature}
-F_{\mu\nu}\;=\;\partial_\mu A_\nu-\partial_\nu A_\mu+[A_\mu,A_\nu]\;\in\;\mathfrak{su}(3),
+F=\mathrm dA+A\wedge A=0.
 \end{equation}
-with the standard Bianchi identity $D_{[\mu}F_{\nu\rho]}=0$.
-
-\paragraph{Walk-back to Yang–Mills.}
-The phase curvature \eqref{eq:G3_curvature} is identical in form to the Yang--Mills field strength once $A_\mu$ is identified with the traceless part of $\mathcal{U}^\dagger \partial_\mu \mathcal{U}$.  This establishes the standard gauge geometry conditional on the introduced unitary carrier; it does not yet derive that carrier dynamics from the canonical UBT action.
+This frame construction cannot produce generic local Yang--Mills curvature.
 
 \subsection*{G.4 Covariant Derivative on \texorpdfstring{$\Theta$}{Theta} with Color Phase}
-Let $\Theta$ transform under the internal phase $\mathcal{U}$ on the right:
-$\Theta \mapsto \Theta\,\mathcal{U}$. 
-Then the color-covariant derivative on $\Theta$ is
+Use the right action $\Theta\mapsto\Theta R$ and the connection convention
+$A_\mu'=R^{-1}A_\mu R+R^{-1}\partial_\mu R$. The covariant derivative is
 \begin{equation}
 \label{eq:G4_covD}
-D_\mu \Theta \;\equiv\; \partial_\mu \Theta \;+\; \Theta\, A_\mu,
-\qquad A_\mu \in \mathfrak{su}(3),
+D_\mu\Theta=\partial_\mu\Theta-\Theta A_\mu.
 \end{equation}
-which ensures $D_\mu \Theta \mapsto (D_\mu \Theta)\,\mathcal{U}$ under $\mathcal{U}$.
-(Left actions carry the usual biquaternionic/spinorial covariances already present in the core UBT; right action hosts color.)
+The product rule gives $D_\mu'\Theta'=(D_\mu\Theta)R$.
 
-\paragraph{Postulated kinetic and interaction terms.}
-A minimal gauge-invariant Lagrangian density for the introduced unitary carrier is postulated as
+\paragraph{Yang--Mills comparison.}
+On an independently supplied carrier connection the standard kinetic and
+matter terms provide a comparison. For real components
+$F_{\mu\nu}=-i F_{\mu\nu}^a T^a$ with $\mathrm{tr}(T^aT^b)=\tfrac12\delta^{ab}$,
+the usual normalization with coupling $g_s$ gives
 \begin{equation}
 \label{eq:G4_lagrangian}
-\mathcal{L}_{\mathrm{color}}\;=\; -\frac{1}{4}\,\mathrm{tr}(F_{\mu\nu}F^{\mu\nu})
-\;+\; \mathrm{Re}\,\Big\langle D_\mu\Theta,\, D^\mu\Theta\Big\rangle_{\! \mathbb{B}\otimes \mathbb{C}}
+\mathcal L_{\mathrm{color}}=
+-\frac{1}{4g_s^2}F_{\mu\nu}^aF^{a\mu\nu}
++\mathrm{Re}\langle D_\mu\Theta,D^\mu\Theta\rangle.
 \end{equation}
-with the trace over color indices and the biquaternionic–complex hermitian pairing as in the core appendices. 
-Gauge coupling $g_s$ is absorbed into the normalization of $A_\mu$ (or equivalently, into the phase metric on the internal fiber).  Deriving this Yang--Mills kinetic term, its normalization, and its matter embedding from the canonical UBT action is part of \texttt{GAP-SU3-DYN}.
+Its curvature term vanishes on the frame ansatz \eqref{eq:G3_MC}.
+The origin, normalization and matter embedding of a dynamical connection
+are part of \texttt{GAP-SU3-DYN}.
 
 \subsection*{G.5 Algebraic Checks (SU(3) Structure)}
-Let $\{T^a\}_{a=1}^8$ be generators of $\mathfrak{su}(3)$ with 
-$[T^a,T^b]= i f^{abc} T^c$ and $\mathrm{tr}(T^a T^b)=\frac{1}{2}\delta^{ab}$.
-Conditional on the unitary-carrier postulate and the minimal Lagrangian \eqref{eq:G4_lagrangian}, writing $A_\mu = A_\mu^a T^a$ reproduces
+For traceless Hermitian Gell-Mann generators $T^a$ with
+$[T^a,T^b]=i f^{abc}T^c$, use $A_\mu=-i A_\mu^aT^a$ with real $A_\mu^a$.
+The curvature of a general carrier connection has components
 \begin{equation}
-F_{\mu\nu}^a \;=\;\partial_\mu A_\nu^a-\partial_\nu A_\mu^a + f^{abc} A_\mu^b A_\nu^c,
-\qquad 
-\mathcal{L}_{\mathrm{YM}} = -\frac{1}{4} F_{\mu\nu}^a F^{a\mu\nu}.
+F_{\mu\nu}^a=\partial_\mu A_\nu^a-\partial_\nu A_\mu^a
+  + f^{abc} A_\mu^b A_\nu^c .
 \end{equation}
-Since $A_\mu$ is the traceless part of $\mathcal{U}^\dagger \partial_\mu \mathcal{U}$, 
-the $9\to 8$ reduction emerges from projecting out the $\mathrm{U}(1)$ trace, consistent with 
-$\mathrm{SU}(3)=\{U\in \mathrm{U}(3)\,|\,\det U=1\}$.
+The component formula is compatible with $F_{\mu\nu}^a=0$ on
+\eqref{eq:G3_MC}.
 
 \subsection*{G.5a Explicit Gell-Mann Matrices and Structure Constants}
 \label{sec:G5a_gellmann}
@@ -279,239 +280,98 @@ F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu + [A_\mu, A_\nu] = 0 + 0 + 
 \end{equation}
 since $A_\mu = A_1 \delta_{\mu 1}$ has only one non-zero component, and $[A_1, A_1] = 0$.
 
-\textbf{Note:} The vanishing is due to the constancy of the configuration (no field gradients), not merely self-commutation.
-
-\paragraph{Why non-Abelian terms don't enter U(1)-only $\alpha$ derivation.} In the fine-structure constant derivation (Appendix $\alpha$), we consider only electromagnetic $\mathrm{U}(1)$ interactions, which are Abelian. Key observations:
-\begin{enumerate}
-\item \textbf{Color is traceless:} $A_\mu^a T^a$ with $\mathrm{tr}(T^a) = 0$ means color gauge bosons (gluons) are color-neutral under $\mathrm{U}(1)_{\text{em}}$
-\item \textbf{One-loop vacuum polarization:} Electron loops (color singlets) contribute to $\alpha$ running; quark loops contribute but are suppressed by confinement at low energies ($\mu < \Lambda_{\mathrm{QCD}}$)
-\item \textbf{Non-Abelian self-interactions:} Terms like $[A_\mu, A_\nu]$ involve gluon-gluon vertices, which do not directly couple to photons. Three-gluon and four-gluon vertices contribute to $\alpha_s$ running but not to $\alpha$ at one-loop
-\item \textbf{Factorization:} The internal color phase $\mathcal{U}(x)$ acts independently on the color sector, while electromagnetic phase acts on the overall $\mathrm{U}(1)$ factor. At one-loop in QED, only charged lepton loops contribute to $\Pi(q^2)$; gluon contributions enter at higher orders or through quark loops
-\end{enumerate}
-
-\paragraph{Explicit non-contribution.} Consider the vacuum polarization tensor:
-\begin{equation}
-\Pi^{\mu\nu}(q) = \int \frac{d^4k}{(2\pi)^4} \mathrm{Tr}\left[\gamma^\mu S(k+q) \gamma^\nu S(k)\right],
-\label{eq:Pi-trace}
-\end{equation}
-where $S(k)$ is the fermion propagator and the trace is over spin and color indices. For color-singlet leptons (electrons), $\mathrm{Tr}_{\text{color}} = 1$. For quarks, $\mathrm{Tr}_{\text{color}} = 3$ (sum over three colors), but this is a multiplicative factor—no non-Abelian structure enters the photon self-energy at this order.
-
-\textbf{Conclusion:} The non-Abelian $\mathrm{SU}(3)$ structure contributes to gluon dynamics ($\alpha_s$ running, confinement) but does not directly affect the U(1) electromagnetic coupling $\alpha$ at one-loop. Quark contributions to $\alpha$ running are Abelian (color trace just multiplies by $N_c = 3$) and are suppressed below the confinement scale. This justifies treating $\alpha$ derivation independently of non-Abelian color interactions.
+The example illustrates \eqref{eq:G3_curvature}, which holds even for
+nonconstant frames. In the standard QCD and QED comparison, electrically
+charged quarks can contribute to the one-loop photon polarization with a
+color multiplicity of three. Gluons have zero electric charge there. These
+comparisons presume the Standard Model charge assignments.
 
 \subsection*{G.6 Embedding in Core UBT and GR Limit}
-\paragraph{Metric sector.} 
-Because $\mathcal{U}$ is unitary on the internal fiber, 
-$g_{\mu\nu}=\mathrm{Re}(\Theta^\dagger \Theta)$ is invariant under color rotations. 
-Thus the Einstein limit and gravitational sector of UBT remain unchanged.
-
-\paragraph{Electromagnetic and weak sectors.} 
-The complex-$\mathrm{U}(1)$ phase and quaternionic commutators (yielding $\mathrm{SU}(2)$) remain as in the core theory. 
-The color sector is orthogonal to these phases (traceless part of $\mathrm{U}(3)$).
+The carrier comparison preserves its Hermitian norm. A derivation of the
+physical metric and its dynamics uses the canonical covariant tetrad and
+must check compatibility with the color construction.
 
 \subsection*{G.7 Running, Anomalies, and Consistency (Sketch)}
-\paragraph{Beta function (qualitative).}
-Identifying $A_\mu$ as a phase connection allows standard perturbative renormalization with the same one-loop $\beta$-function sign as QCD (asymptotic freedom) provided the internal phase metric is positive and the color matter content (effective $\Theta$-components charged under right action) matches the SM representations. A full computation requires fixing the phase-fiber metric and matter embedding (left vs. right action), left here as future work.
-
-\paragraph{Anomalies.}
-Since color acts vectorially on the right and unitary, pure $\mathrm{SU}(3)$ anomalies cancel as in SM. Mixed anomalies with the left biquaternionic sector are absent if left–right actions are in orthogonal bundles (as constructed here). A thorough anomaly analysis will be provided in a dedicated appendix.
+Standard QCD running and anomaly cancellation are comparisons conditional
+on a dynamical connection and the Standard Model matter spectrum.
+Commutation of left and right actions is an algebraic result in \S G.16.
+Anomalies depend on the chiral spectrum and charge assignments.
 
 \subsection*{G.8 Relation to Multi-Theta (Modular) Data}
-The theta realization \eqref{eq:G2_multi_theta} ties color to modular deformations $(\Omega,z)$: infinitesimal traceless deformations of $(\Omega,z)$ generate $\Phi\in\mathfrak{su}(3)$ and hence $A_\mu$. This identifies gluon dynamics with curvature of the internal modular torus over spacetime, i.e. a geometric (not ad hoc) origin for the color connection.
+The modular parameters $(\Omega,z)$ of \eqref{eq:G2_multi_theta} supply a
+candidate parametrization. The proposed period-matrix correspondence is
+obstructed by \S G.14. Any parametrization of the smooth unitary frame alone
+still gives the flat connection \eqref{eq:G3_MC}.
 
 \subsection*{G.9 Phenomenology and Tests (Program)}
-\begin{enumerate}
-\item \textbf{No change in GR tests.} Solar-system, binary pulsars, GW waveforms unaffected by color phases.
-\item \textbf{Low-energy QCD.} At hadronic scales, confinement emerges from non-abelian curvature of $A_\mu$; lattice-inspired effective actions can be mapped to internal phase curvature energy.
-\item \textbf{Running couplings.} The internal phase metric provides a calculable geometric origin of $g_s(\mu)$ (future work).
-\end{enumerate}
+The physical spectrum, strong-coupling normalization and confinement
+require a color dynamics beyond this frame construction.
 
 \subsection*{G.10 Speculative Notes (Non-Core, Clearly Marked)}
 \emph{Speculative.} If the internal modular space couples weakly to complex-time phase $\psi$, topological defects (domain walls in $(\Omega,z)$) could imprint tiny, energy-dependent modulations in color sector at ultra-high energies. No experimental attempt is known; this is \textbf{not} part of the core claims.
 
 \subsection*{G.11 Summary}
-The involution structure supplies a natural complex rank-three carrier.  After a unitary structure is introduced on that carrier, the traceless unitary group is $\mathrm{SU}(3)$ and the associated Maurer--Cartan connection has the standard Yang--Mills form.  The carrier selection is proved; the unitary/Yang--Mills dynamics and its derivation from the canonical UBT action remain open.
+The involutions select a complex rank-three carrier. Its canonical
+Hermitian form and complex volume admit an algebraic $\mathrm{SU}(3)$
+stabilizer, as shown separately in
+\texttt{su3\_stabilizer\_exterior\_fock.tex}. The frame form
+\eqref{eq:G3_MC} is flat. The microscopic origin of Yang--Mills dynamics
+and matter couplings remains open.
 
-\subsection*{G.12 One-Loop Running of \texorpdfstring{$g_s(\mu)$}{g\_s(mu)} in Emergent Formulation}
+\subsection*{G.12 One-Loop Running in the QCD Comparison}
 \label{sec:G12_running}
-
-\paragraph{Phase fiber metric and coupling definition.}
-Within the postulated unitary-carrier model, the strong coupling $g_s$ is parametrized by the normalization of the internal phase connection. Let $h_{ab}$ denote the metric on the internal modular fiber (parametrized by $(\Omega,z)$), with indices $a,b=1,\ldots,8$ running over the traceless $\mathfrak{su}(3)$ directions. The Yang–Mills kinetic term in \eqref{eq:G4_lagrangian} can be rewritten as
-\begin{equation}
-\mathcal{L}_{\mathrm{YM}} = -\frac{1}{4g_s^2}\,\mathrm{tr}(F_{\mu\nu}F^{\mu\nu})
-= -\frac{1}{4}\, h^{ab} F_{\mu\nu}^a F^{b\mu\nu},
-\end{equation}
-identifying $g_s^{-2} = \mathrm{tr}(h^{ab}T^a T^b)/2$ for the standard normalization $\mathrm{tr}(T^a T^b)=\frac{1}{2}\delta^{ab}$. Thus, $g_s^2(\mu)$ is directly tied to the effective volume element of the internal phase torus at scale $\mu$.
-
-\paragraph{Beta function from geometric flow.}
-In standard QCD with $n_f$ quark flavors, the one-loop $\beta$-function is
+With the standard independent gauge connection and $n_f$ fundamental Dirac
+quark flavors, the QCD comparison has one-loop beta function
 \begin{equation}
 \label{eq:G12_beta}
-\mu\frac{\mathrm{d}g_s}{\mathrm{d}\mu} = \beta_0 g_s^3 + \mathcal{O}(g_s^5),
-\qquad 
-\beta_0 = -\frac{1}{(4\pi)^2}\Big(11 - \frac{2n_f}{3}\Big).
+\mu\frac{\mathrm d g_s}{\mathrm d\mu}=\beta_0 g_s^3+\mathcal O(g_s^5),
+\qquad \beta_0=-\frac{1}{(4\pi)^2}\Big(11-\frac{2n_f}{3}\Big).
 \end{equation}
-For $n_f=6$ (SM quarks), $\beta_0 = -7/(4\pi)^2 < 0$, yielding asymptotic freedom.
-
-In the present conditional carrier model, this beta function is represented by a renormalization-group flow of the internal fiber metric $h_{ab}(\mu)$; deriving that flow from canonical UBT remains open. Quantum fluctuations of $\Theta$ induce a scale-dependent deformation of $(\Omega,z)$, modifying the effective phase volume. The one-loop contribution from gluon self-interactions (proportional to the $\mathfrak{su}(3)$ Casimir $C_2(\mathrm{adj})=3$) and quark loops (proportional to $C_2(\mathbf{3})=4/3$ per flavor) combine to give \eqref{eq:G12_beta}.
-
-\paragraph{Explicit geometric realization (sketch).}
-Let the modular period matrix $\Omega(x,\mu)$ depend on the RG scale $\mu$ via
+Within one-loop accuracy and for fixed $n_f$ the solution is
 \begin{equation}
-\mu\frac{\partial \Omega_{ij}}{\partial \mu} = \gamma_{ij}[\Omega,g_s(\mu)],
+\alpha_s(\mu)=\frac{\alpha_s(\mu_0)}
+{1-8\pi\beta_0\alpha_s(\mu_0)\ln(\mu/\mu_0)},
+\qquad \alpha_s=\frac{g_s^2}{4\pi}.
 \end{equation}
-where $\gamma_{ij}$ is the anomalous dimension matrix for the internal phase modes. The traceless constraint $\mathrm{tr}\,\Omega=0$ (mod integer shifts) ensures $\mathrm{SU}(3)$ rather than $\mathrm{U}(3)$. The induced flow of $g_s^2 \propto (\det\,\mathrm{Im}\,\Omega)^{-1/3}$ then matches \eqref{eq:G12_beta} at one-loop order, provided the matter content (effective right-action charges of $\Theta$ components) corresponds to $n_f=6$ fundamental representations. A complete two-loop analysis (analogous to appendix K.5 for $\Lambda_{\mathrm{QCD}}$) is left for future work.
+The normalization of $g_s$ and an induced flow on the modular parameters
+are open in UBT.
 
-\paragraph{Running coupling solution.}
-Integrating \eqref{eq:G12_beta} from a reference scale $\mu_0$ to $\mu$ gives
-\begin{equation}
-\alpha_s(\mu) = \frac{g_s^2(\mu)}{4\pi} = \frac{\alpha_s(\mu_0)}{1 + \alpha_s(\mu_0)\beta_0(4\pi)\ln(\mu/\mu_0)},
-\end{equation}
-reproducing the standard QCD running. For $\mu_0=M_Z$ with $\alpha_s(M_Z)\approx 0.118$, this yields $\alpha_s(1\,\mathrm{GeV})\approx 0.5$ and $\Lambda_{\overline{\mathrm{MS}}}\approx 200$–$300$ MeV in the $\overline{\mathrm{MS}}$ scheme, consistent with lattice QCD and experimental data.
-
-\subsection*{G.13 Detailed Anomaly Analysis: Left-Right Factorization}
+\subsection*{G.13 Anomaly Checks for the Standard Model Spectrum}
 \label{sec:G13_anomalies}
+With the Standard Model quark multiplets, the pure color anomaly cancels
+between each left-handed $\mathbf 3$ and the corresponding left-handed
+conjugate $\bar{\mathbf 3}$. Their cubic traces have opposite signs.
 
-\paragraph{Separation of left and right actions on \texorpdfstring{$\Theta$}{Theta}.}
-The biquaternionic structure of $\Theta$ naturally factorizes its symmetry actions:
-\begin{itemize}
-\item \textbf{Left action:} Spacetime/spinorial symmetries (Lorentz group, biquaternionic rotations) and electroweak gauge transformations act on the left: $\Theta \mapsto L\,\Theta$, where $L$ encodes $\mathrm{SU}(2)_L \times \mathrm{U}(1)_Y$ and spacetime covariances.
-\item \textbf{Right action:} Internal color phase rotations act on the right via the unitary frame $\mathcal{U}$: $\Theta \mapsto \Theta\,\mathcal{U}$, with $\mathcal{U}\in\mathrm{SU}(3)_{\mathrm{color}}$ as in \eqref{eq:G1_su3_subgroup}.
-\end{itemize}
-This orthogonality is encoded in the tensor product structure $\Theta \in \mathbb{B}\otimes \mathbb{C}^{N_L} \otimes \mathbb{C}^3$, where $\mathbb{C}^{N_L}$ carries the left electroweak multiplet (e.g., $N_L=2$ for doublets, $N_L=1$ for singlets) and $\mathbb{C}^3$ is the color triplet for quarks (or singlet for leptons).
-
-\paragraph{Pure \texorpdfstring{$\mathrm{SU}(3)$}{SU(3)} anomalies.}
-The pure color anomaly for three $\mathrm{SU}(3)$ currents vanishes identically because $\mathrm{SU}(3)$ is vectorial (fermions in complex representations plus their conjugates). Explicitly, the triangle diagram with three gluon vertices gives
+For the mixed $\mathrm{SU}(3)^2\times\mathrm{U}(1)_Y$ anomaly, the quadratic
+index is the same for $\mathbf 3$ and $\bar{\mathbf 3}$. Per generation,
+the sum of hypercharges over the left-handed colored Weyl multiplets is
 \begin{equation}
-\mathcal{A}_{\mathrm{color}}^3 \propto \sum_f \mathrm{tr}(\{T^a,T^b\}T^c) = 0
+2Y(Q_L)+Y(u_R^c)+Y(d_R^c)
+=2\left(\tfrac16\right)-\tfrac23+\tfrac13=0.
 \end{equation}
-by tracelessness and antisymmetry of the structure constants. This remains true in UBT because the right-action color charges are vector-like: each quark flavor $q$ in $\mathbf{3}$ has a corresponding antiquark $\bar{q}$ in $\bar{\mathbf{3}}$.
+A single color generator has zero trace, giving a vanishing mixed
+gauge--gravitational trace for color. These checks apply with the stated
+chiral spectrum and charges. Their realization by $\Theta$ requires the
+matter embedding.
 
-\paragraph{Mixed anomalies with electroweak sector.}
-The potential mixed anomaly $\mathrm{SU}(3)^2 \times \mathrm{U}(1)_Y$ or $\mathrm{SU}(3)^2 \times \mathrm{SU}(2)_L$ must also vanish for consistency. In the Standard Model, this cancellation is automatic because:
-\begin{enumerate}
-\item Color acts the same on left-handed and right-handed quarks (vector coupling).
-\item The sum over quark doublets and singlets with their hypercharges cancels the $\mathrm{U}(1)_Y$ contribution.
-\end{enumerate}
-In UBT, the left-right factorization ensures that color (right action) and electroweak (left action) reside in orthogonal bundles. The covariant derivative factorizes as
-\begin{equation}
-D_\mu \Theta = (\partial_\mu + \Omega_\mu^L)\,\Theta + \Theta\,A_\mu^R,
-\end{equation}
-where $\Omega_\mu^L$ contains $\mathrm{SU}(2)_L \times \mathrm{U}(1)_Y$ connections and $A_\mu^R \in \mathfrak{su}(3)$ is the color connection. The mixed anomaly diagram then factors into separate left and right loops, and the trace over color is independent of the electroweak charges:
-\begin{equation}
-\mathcal{A}_{\mathrm{mixed}} \propto \mathrm{tr}_{\mathrm{color}}(T^a T^b) \cdot \mathrm{tr}_{\mathrm{EW}}(Y) = C_2(\mathbf{3})\,\delta^{ab} \cdot \sum_f Y_f.
-\end{equation}
-The SM quark content ensures $\sum_f Y_f = 0$ (each generation contributes zero), so $\mathcal{A}_{\mathrm{mixed}}=0$.
-
-\paragraph{Representation content and consistency.}
-For UBT to reproduce SM phenomenology, $\Theta$ must contain components transforming as:
-\begin{itemize}
-\item Quarks: $(\mathbf{2},\mathbf{3})_{+1/6}$ (left doublet) and $(\mathbf{1},\mathbf{3})_{+2/3},\,(\mathbf{1},\mathbf{3})_{-1/3}$ (right singlets) under $\mathrm{SU}(2)_L \times \mathrm{SU}(3)_{\mathrm{color}} \times \mathrm{U}(1)_Y$.
-\item Leptons: $(\mathbf{2},\mathbf{1})_{-1/2}$ and $(\mathbf{1},\mathbf{1})_{-1}$ (colorless).
-\end{itemize}
-The biquaternionic tensor structure $\mathbb{B}\otimes \mathbb{C}^{N_L}\otimes \mathbb{C}^{N_R}$ with appropriate Clifford algebra embeddings naturally accommodates these representations. The key point is that \emph{all anomaly cancellations of the SM are inherited} because the effective low-energy spectrum matches the SM fermion content.
-
-\paragraph{Gravitational anomalies.}
-The gravitational anomaly (relevant for chiral theories) involves the trace anomaly in curved spacetime. In UBT, the real metric $g_{\mu\nu}=\mathrm{Re}(\Theta^\dagger\Theta)$ is invariant under color rotations \eqref{eq:G1_su3_subgroup}, so color does not contribute to the gravitational anomaly. The chiral electroweak sector's gravitational anomaly cancels via the standard SM mechanism (equal numbers of left-handed and right-handed Weyl fermions modulo Higgs couplings).
-
-\paragraph{Summary of anomaly checks.}
-\begin{equation}
-\begin{aligned}
-\mathcal{A}[\mathrm{SU}(3)^3] &= 0 \quad \text{(vectorial color)}, \\
-\mathcal{A}[\mathrm{SU}(3)^2 \times \mathrm{U}(1)_Y] &= 0 \quad \text{(left-right orthogonality + SM charge assignment)}, \\
-\mathcal{A}[\mathrm{SU}(3)^2 \times \text{gravity}] &= 0 \quad \text{(color decoupled from metric)}.
-\end{aligned}
-\end{equation}
-All standard SM anomaly cancellations are preserved in the UBT framework.
-
-\subsection*{G.14 Explicit Mapping: \texorpdfstring{$(\Omega,z)$}{(Omega,z)}-Deformations to Gell-Mann Generators}
+\subsection*{G.14 Rank Obstruction for the Period-Matrix Dictionary}
 \label{sec:G14_mapping}
-
-We now provide an explicit dictionary between infinitesimal deformations of the modular data $(\Omega,z)$ and the eight traceless $\mathfrak{su}(3)$ generators $T^a$ (Gell-Mann matrices). This establishes a concrete realization of the abstract phase connection \eqref{eq:G3_MC}.
-
-\paragraph{Setup.}
-Let $\Omega \in \mathrm{Mat}_{3\times 3}(\mathbb{C})$ be a symmetric matrix with $\mathrm{Im}\,\Omega > 0$ (positive definite imaginary part), parametrizing the modular structure of the internal phase torus $\mathbb{T}^3$. Let $z=(z_1,z_2,z_3)^{\top}\in \mathbb{C}^3$ be the phase coordinates. The multi-variable theta function \eqref{eq:G2_multi_theta} is invariant under modular transformations and shifts $z \mapsto z + \Omega\,m + n$ for $m,n\in\mathbb{Z}^3$. Infinitesimal traceless deformations $(\delta\Omega,\delta z)$ generate phase variations that, when projected to the traceless subspace, yield $\mathfrak{su}(3)$.
-
-\paragraph{Lemma G.1 (Traceless deformation basis).}
-Consider infinitesimal variations $\Omega \mapsto \Omega + \epsilon\,\delta\Omega$, $z \mapsto z + \epsilon\,\delta z$ with $\epsilon \ll 1$. Imposing the traceless constraint $\mathrm{tr}(\delta\Omega)=0$ (to preserve $\det\,\mathcal{U}=1$), the space of such deformations is 8-dimensional (real degrees of freedom: $3\times 3$ symmetric traceless matrix has 8 real parameters; $z$ contributes phases but couples to $\Omega$). Explicitly, we parametrize
+The proposed linear variations $\delta\Omega=iS$ with $S$ real, symmetric
+and traceless have only five real directions:
 \begin{equation}
-\delta\Omega = i\sum_{a=1}^8 \theta^a\,\Lambda^a, 
-\qquad 
-\Lambda^a \in \mathrm{Mat}_{3\times 3}(\mathbb{R}), \quad \mathrm{tr}\,\Lambda^a=0,
+\dim_{\mathbb R}\operatorname{Sym}_0(3,\mathbb R)=\tfrac{3(3+1)}2-1=5.
 \end{equation}
-where $\Lambda^a$ are symmetric traceless $3\times 3$ matrices (8 independent). These correspond to the 8 directions in $\mathfrak{su}(3)$.
+The traceless Hermitian matrices form an eight-dimensional real space.
+They decompose as $H=S+iK$, where $S$ is real symmetric and traceless and
+$K$ is real antisymmetric. The Gell-Mann directions $T^2,T^5,T^7$ are
+antisymmetric under transposition. Taking $iT^a$ in those directions leaves
+the space of symmetric period matrices. Even allowing an antisymmetric
+addition would give $n^\top K n=0$ in \eqref{eq:G2_multi_theta} for every $n$.
 
-\paragraph{Proposition G.2 (Explicit $T^a$ correspondence).}
-The standard Gell-Mann matrices $T^a$ ($a=1,\ldots,8$) acting on $\mathbb{C}^3$ can be mapped to the modular deformation generators $\Lambda^a$ via the isomorphism $\mathfrak{su}(3) \cong \mathbb{R}^8$ (as Lie algebras). Concretely:
-\begin{enumerate}
-\item \textbf{Diagonal generators} ($T^3,T^8$):
-\begin{equation}
-T^3 = \frac{1}{2}\begin{pmatrix}1&0&0\\0&-1&0\\0&0&0\end{pmatrix}, 
-\quad 
-T^8 = \frac{1}{2\sqrt{3}}\begin{pmatrix}1&0&0\\0&1&0\\0&0&-2\end{pmatrix}
-\end{equation}
-correspond to $\Lambda^3,\Lambda^8$ as diagonal deformations of $\Omega$:
-\begin{equation}
-\Lambda^3 = \mathrm{diag}(\tfrac{1}{2},-\tfrac{1}{2},0), 
-\quad 
-\Lambda^8 = \mathrm{diag}(\tfrac{1}{2\sqrt{3}},\tfrac{1}{2\sqrt{3}},-\tfrac{1}{\sqrt{3}}).
-\end{equation}
-These shift the relative phases $\mathrm{Im}(\Omega_{11})$ vs. $\mathrm{Im}(\Omega_{22})$ vs. $\mathrm{Im}(\Omega_{33})$, corresponding to color rotations in the Cartan subalgebra.
-
-\item \textbf{Off-diagonal generators} ($T^{1,2},\ldots,T^{6,7}$):
-For $T^{1,2}$ (acting on the $1$–$2$ subspace), $T^{4,5}$ ($1$–$3$), $T^{6,7}$ ($2$–$3$), we have
-\begin{equation}
-T^{1,2} = \frac{1}{2}\begin{pmatrix}0&1\\\pm i&0\end{pmatrix} \oplus 0, 
-\quad \text{etc.}
-\end{equation}
-These correspond to off-diagonal deformations of $\Omega$:
-\begin{equation}
-\Lambda^{1} = \begin{pmatrix}0&1&0\\1&0&0\\0&0&0\end{pmatrix}, 
-\quad 
-\Lambda^{2} = \begin{pmatrix}0&-i&0\\i&0&0\\0&0&0\end{pmatrix}, 
-\quad \text{etc.}
-\end{equation}
-Infinitesimal shifts $\delta\Omega_{ij} = i\epsilon\,\Lambda^a_{ij}$ induce phase twists between color indices, generating non-abelian rotations.
-\end{enumerate}
-
-\paragraph{Corollary G.3 (Connection components).}
-The color connection $A_\mu = A_\mu^a T^a$ at a point $x$ is obtained by pulling back the modular deformation:
-\begin{equation}
-A_\mu^a(x) = \frac{1}{2}\,\mathrm{tr}(T^a\,\mathcal{U}^\dagger \partial_\mu \mathcal{U}),
-\end{equation}
-where $\mathcal{U}(x) = \exp(i\Phi)$ with $\Phi = \sum_a \phi^a(x)\,T^a$. The phases $\phi^a(x)$ are determined by the local values of $(\Omega(x),z(x))$. Explicitly:
-\begin{equation}
-\phi^a(x) \approx \theta^a(x) + \mathcal{O}(\theta^2),
-\end{equation}
-where $\theta^a(x)$ parametrize the traceless part of $\Omega(x)$ as in Lemma G.1. Thus, spacetime variations $\partial_\mu \theta^a$ directly yield the gluon potentials $A_\mu^a$.
-
-\paragraph{Representation table.}
-For reference, we summarize the 8 generators and their modular realizations:
-
-\begin{center}
-\begin{tabular}{c|l|l}
-\hline
-$a$ & Gell-Mann $T^a$ & Modular $\Lambda^a$ (traceless symmetric $3\times 3$) \\
-\hline
-1 & $\frac{1}{2}(|1\rangle\langle 2| + |2\rangle\langle 1|)$ & $\Lambda^1_{12}=\Lambda^1_{21}=\frac{1}{2}$, rest 0 \\
-2 & $\frac{1}{2}(-i|1\rangle\langle 2| + i|2\rangle\langle 1|)$ & $\Lambda^2_{12}=-i/2$, $\Lambda^2_{21}=+i/2$, rest 0 \\
-3 & $\frac{1}{2}(|1\rangle\langle 1| - |2\rangle\langle 2|)$ & $\Lambda^3 = \mathrm{diag}(1/2,-1/2,0)$ \\
-4 & $\frac{1}{2}(|1\rangle\langle 3| + |3\rangle\langle 1|)$ & $\Lambda^4_{13}=\Lambda^4_{31}=\frac{1}{2}$ \\
-5 & $\frac{1}{2}(-i|1\rangle\langle 3| + i|3\rangle\langle 1|)$ & $\Lambda^5_{13}=-i/2$, $\Lambda^5_{31}=+i/2$ \\
-6 & $\frac{1}{2}(|2\rangle\langle 3| + |3\rangle\langle 2|)$ & $\Lambda^6_{23}=\Lambda^6_{32}=\frac{1}{2}$ \\
-7 & $\frac{1}{2}(-i|2\rangle\langle 3| + i|3\rangle\langle 2|)$ & $\Lambda^7_{23}=-i/2$, $\Lambda^7_{32}=+i/2$ \\
-8 & $\frac{1}{2\sqrt{3}}(|1\rangle\langle 1| + |2\rangle\langle 2| - 2|3\rangle\langle 3|)$ & $\Lambda^8 = \mathrm{diag}(1/(2\sqrt{3}),1/(2\sqrt{3}),-1/\sqrt{3})$ \\
-\hline
-\end{tabular}
-\end{center}
-
-This table provides the explicit dictionary for translating geometric phase deformations on the internal modular torus into standard QCD gauge field components.
-
-\paragraph{Remark (Higher-order terms).}
-The above mapping is linearized (valid for small $\theta^a$). For finite transformations, $\mathcal{U} = \exp(i\sum_a \theta^a T^a)$ involves the BCH formula and generates the full $\mathrm{SU}(3)$ group manifold. The modular realization respects the Lie bracket $[T^a,T^b]=if^{abc}T^c$, ensuring consistency with the structure constants of $\mathfrak{su}(3)$.
-
-% =====================================================================
-% G.15 – G.18: Formal completeness (added to resolve status-box items)
-% =====================================================================
+The proposed dictionary $\delta\Omega=i\sum_a\theta^aT^a$ therefore fails
+to realize eight independent deformations of the theta function. A
+different map involving $z$ requires a separate derivation. Any smooth
+unitary frame built by such a map still satisfies \eqref{eq:G3_curvature}.
 
 \subsection*{G.15 Rank-3 Internal Fiber: Motivation from Quaternionic Structure}
 \label{sec:G15_rank3}
@@ -546,7 +406,7 @@ The algebraic motivation (three imaginary units of $\mathbb{H}$) and the phenome
 requirement (three quark colors) are thus mutually reinforcing.
 
 % =====================================================================
-\subsection*{G.16 Formal Completeness: Proofs of Group Structure, Representations, and Decoupling}
+\subsection*{G.16 Conditional Group, Representation and Covariance Results}
 \label{sec:G16_formal_proofs}
 
 \subsubsection*{Theorem G.A (conditional): $\mathfrak{su}(3)$ Lie Algebra on the Traceless Unitary Fiber}
@@ -569,7 +429,7 @@ $\dim_\mathbb{R}\mathfrak{h}=8=\dim_\mathbb{R}\mathfrak{su}(3)$.
 Let $\Phi_1,\Phi_2\in\mathfrak{h}$ and set $C := -i[\Phi_1,\Phi_2]$.
 \begin{itemize}
   \item \emph{Hermiticity:}
-    $C^\dagger = (i)^*[\Phi_2^\dagger,\Phi_1^\dagger] = -i[\Phi_2,\Phi_1] = -i(-[\Phi_1,\Phi_2]) = C$.
+    $C^\dagger=i[\Phi_2,\Phi_1]=-i[\Phi_1,\Phi_2]=C$.
   \item \emph{Tracelessness:}
     $\mathrm{tr}(C) = -i\,\mathrm{tr}([\Phi_1,\Phi_2]) = -i(\mathrm{tr}(\Phi_1\Phi_2)-\mathrm{tr}(\Phi_2\Phi_1))=0$
     by cyclicity of trace.
@@ -579,7 +439,7 @@ Therefore $C\in\mathfrak{h}$.
 \medskip
 \textbf{(3) Jacobi identity.}
 $[\Phi_1,[\Phi_2,\Phi_3]_{\mathfrak{su}(3)}]_{\mathfrak{su}(3)} + \mathrm{cyclic}
-= (-i)^2[[\Phi_1,\Phi_2],\Phi_3]_{\mathrm{matrix}}+\mathrm{cyclic}=0$,
+= (-i)^2[\Phi_1,[\Phi_2,\Phi_3]_{\mathrm{matrix}}]_{\mathrm{matrix}}+\mathrm{cyclic}=0$,
 since the matrix commutator satisfies the Jacobi identity.
 
 \medskip
@@ -587,8 +447,9 @@ since the matrix commutator satisfies the Jacobi identity.
 The eight Gell-Mann matrices $\lambda_a$ \eqref{eq:gellmann-matrices} are traceless Hermitian
 and form a basis of $\mathfrak{h}$.  Setting $T^a=\lambda_a/2$, one verifies by direct computation
 (see~\S G.5a) that $[T^a,T^b]=if^{abc}T^c$ with the structure constants $f^{abc}$
-of~\eqref{eq:structure-constants}.  This is exactly the defining relation of $\mathfrak{su}(3)$,
-so the map $T^a \mapsto$ standard $\mathfrak{su}(3)$ basis is a Lie algebra isomorphism.
+of~\eqref{eq:structure-constants}. The map $\Phi\mapsto-i\Phi$ is a real
+linear bijection onto the traceless anti-Hermitian matrices and preserves
+the bracket $-i[\Phi_1,\Phi_2]_{\mathrm{matrix}}$.
 \end{proof}
 
 \begin{tcolorbox}[colback=blue!3!white,colframe=blue!40!black]
@@ -601,10 +462,10 @@ In UBT notation, $\mathcal{U}=e^{i\Phi}\in\mathrm{SU}(3)$ for any $\Phi\in\mathf
 \subsubsection*{Proposition G.B (conditional): Fundamental Representation $\mathbf{3}$ on the Carrier}
 
 \begin{tcolorbox}[colback=blue!3!white,colframe=blue!40!black,title=Proposition G.B (conditional on the carrier identification)]
-The right action of $\mathrm{SU}(3)$ on the color fiber
+The defining column action $v\mapsto\mathcal U v$ of $\mathrm{SU}(3)$ on the carrier
 $\mathbb{C}^3 = \mathrm{span}_\mathbb{C}\{|r\rangle,|g\rangle,|b\rangle\}$
-via $v\mapsto \mathcal{U}^\top v$ (equivalently, $\Theta_i\mapsto \mathcal{U}_{ij}\Theta_j$ for the
-components of $\Theta$) is the irreducible fundamental representation $\mathbf{3}$.
+is the irreducible fundamental representation $\mathbf{3}$. The identification
+of the physical quark sector with this action is a separate assumption.
 The Cartan eigenvalues $(T^3,T^8)$ on the three color basis states are:
 \[
 |r\rangle:\;\bigl(+\tfrac{1}{2},+\tfrac{1}{2\sqrt{3}}\bigr),\quad
@@ -615,7 +476,7 @@ These are the weights of the fundamental representation $\mathbf{3}$ of $\mathfr
 \end{tcolorbox}
 
 \begin{proof}
-The right-action map $\rho:\mathrm{SU}(3)\to\mathrm{GL}(\mathbb{C}^3)$,
+The defining map $\rho:\mathrm{SU}(3)\to\mathrm{GL}(\mathbb{C}^3)$,
 $\rho(\mathcal{U}) = \mathcal{U}$ (standard matrix multiplication on $\mathbb{C}^3$)
 is a group homomorphism since $\rho(\mathcal{U}\mathcal{V})=\mathcal{U}\mathcal{V}=\rho(\mathcal{U})\rho(\mathcal{V})$.
 
@@ -623,8 +484,11 @@ is a group homomorphism since $\rho(\mathcal{U}\mathcal{V})=\mathcal{U}\mathcal{
 $\mathrm{SU}(3)$ acts transitively on the unit sphere $S^5\subset\mathbb{C}^3$ (for any two unit
 vectors $u,v\in\mathbb{C}^3$ there exists $U\in\mathrm{SU}(3)$ with $Uv=u$, by Gram–Schmidt
 construction within $\mathrm{SU}(3)$).  Transitivity implies irreducibility~\cite{bröcker2003representations}.
-By the classification of $\mathrm{SU}(3)$ representations (Dynkin labels $(1,0)$), the unique
-3-dimensional complex irreducible representation is the fundamental $\mathbf{3}$.
+This is the defining representation with Dynkin labels $(1,0)$.
+Its conjugate $\bar{\mathbf 3}$ has labels $(0,1)$ and is inequivalent.
+Right multiplication on a row $w\mapsto w\mathcal U$ is a right action.
+Viewed as a left action on transposed rows by using the inverse, it
+gives $w^\top\mapsto\mathcal U^{-T}w^\top$.
 
 \emph{Weight computation.}
 $T^3=\frac{1}{2}\mathrm{diag}(1,-1,0)$ acts as $T^3|r\rangle=+\frac{1}{2}|r\rangle$,
@@ -639,115 +503,63 @@ of the Dynkin diagram $(1,0)$ fundamental representation of $\mathfrak{su}(3)$.
 \end{proof}
 
 % ---
-\subsubsection*{Theorem G.C (conditional): Connection Transforms in the Adjoint Representation $\mathbf{8}$}
-
+\subsubsection*{Theorem G.C (conditional) Adjoint Covariance on a Unitary Carrier}
 \begin{tcolorbox}[colback=blue!3!white,colframe=blue!40!black,title=Theorem G.C (conditional on local SU(3) carrier symmetry)]
-Under the local color gauge transformation $\Theta(x)\mapsto\Theta(x)V(x)$ with
-$V:\mathcal{M}\to\mathrm{SU}(3)$, the color connection $A_\mu$ defined in~\eqref{eq:G3_MC}
-transforms as
+Under the right frame change $\Theta\mapsto\Theta R$ with $R$ a smooth
+$\mathrm{SU}(3)$ transformation, the connection obeys
 \begin{equation}
-A_\mu \;\longmapsto\; V^{-1}A_\mu V + V^{-1}\partial_\mu V.
+A_\mu'=R^{-1}A_\mu R+R^{-1}\partial_\mu R.
 \label{eq:GC_gauge_transf}
 \end{equation}
-The homogeneous part $A_\mu\mapsto V^{-1}A_\mu V$ is the adjoint representation
-$\mathrm{Ad}(V^{-1})$, placing $A_\mu^a$ in the $\mathbf{8}$ of $\mathrm{SU}(3)$.
+The curvature and the difference of two connections transform by
+conjugation, in the adjoint $\mathbf8$.
 \end{tcolorbox}
 
 \begin{proof}
-Under $\Theta\mapsto\Theta V$, the internal frame changes as $\mathcal{U}\mapsto\mathcal{U}V$.
-Substituting into \eqref{eq:G3_MC}:
-\begin{align}
-A_\mu \;\to\; (\mathcal{U}V)^\dagger\,\partial_\mu(\mathcal{U}V)
-&= V^\dagger\mathcal{U}^\dagger\bigl((\partial_\mu\mathcal{U})V + \mathcal{U}\,\partial_\mu V\bigr)\nonumber\\
-&= V^\dagger(\mathcal{U}^\dagger\partial_\mu\mathcal{U})V + V^\dagger\partial_\mu V\nonumber\\
-&= V^{-1}A_\mu V + V^{-1}\partial_\mu V,
-\end{align}
-where we used $V^\dagger V=\mathbf{1}$ (unitarity of $V$).
-
-\emph{Component form.}
-Writing $A_\mu = A_\mu^a T^a$ and $V = e^{i\alpha^c T^c}$, expand to first order in $\alpha^c$:
-$V^{-1}A_\mu V \approx A_\mu + i\alpha^c[A_\mu, T^c] = A_\mu - \alpha^c f^{cab} A_\mu^b T^a$, so
-\[
-\delta A_\mu^a = -f^{abc}\alpha^b A_\mu^c - \partial_\mu\alpha^a.
-\]
-The matrix $-f^{abc}$ is, by antisymmetry, the structure constant of $\mathfrak{su}(3)$ in the
-adjoint representation: $(T^c_{\mathrm{adj}})^{ab}=if^{abc}$, confirming $A_\mu^a$ transforms in $\mathbf{8}$.
+For \eqref{eq:G3_MC}, take the traceless part of
+$(\mathcal UR)^{-1}\mathrm d(\mathcal UR)$ using $\det R=1$.
+For a general connection the same rule follows from the right derivative
+\eqref{eq:G4_covD}. The inhomogeneous terms cancel in a difference.
+For the curvature, the identity
+$\mathrm d+A'=R^{-1}(\mathrm d+A)R$ on carrier columns gives
+$F'=R^{-1}FR$ by squaring. The particular frame connection has $F=0$.
 \end{proof}
 
-\begin{tcolorbox}[colback=blue!3!white,colframe=blue!40!black]
-\textbf{Corollary.}
-The field strength $F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu+[A_\mu,A_\nu]$
-transforms as $F_{\mu\nu}\mapsto V^{-1}F_{\mu\nu}V$ (pure adjoint, no inhomogeneous term),
-and the Yang--Mills Lagrangian
-$\mathcal{L}_{\mathrm{YM}}=-\frac{1}{4}\mathrm{tr}(F_{\mu\nu}F^{\mu\nu})$
-is gauge invariant.
-\end{tcolorbox}
-
-% ---
-\subsubsection*{Theorem G.D (conditional): Left--Right Decoupling of the Introduced Carrier Actions}
-
+\subsubsection*{Theorem G.D (conditional) Commuting Left and Right Actions}
 \begin{tcolorbox}[colback=blue!3!white,colframe=blue!40!black,title=Theorem G.D (conditional on the stated left/right actions)]
-Let $L(x)\in G_L:=\mathrm{SU}(2)_L\times\mathrm{U}(1)_Y$ act on the left:
-$\Theta\mapsto L\Theta$, and let $R(x)\in G_R:=\mathrm{SU}(3)_c$ act on the right:
-$\Theta\mapsto\Theta R$.  Then:
-\begin{enumerate}
-  \item Left and right actions commute: $(L\Theta)R = L(\Theta R)$.
-  \item The total gauge group acting on $\Theta$ contains $G_L\times G_R$ as a direct-product
-        subgroup.
-  \item The full covariant derivative
-        $D_\mu\Theta = \partial_\mu\Theta + \Omega_\mu^L\Theta + \Theta A_\mu^R$
-        transforms covariantly under both $G_L$ and $G_R$ independently.
-\end{enumerate}
+Let $L$ act on the left and $R$ on the right of the stated carrier.
+Their actions commute and the derivative
+\[
+D_\mu\Theta=\partial_\mu\Theta+\Omega_\mu^L\Theta-\Theta A_\mu^R
+\]
+is covariant under $\Theta'=L\Theta R$.
 \end{tcolorbox}
 
 \begin{proof}
-\textbf{(1) Commutativity.}  For any matrices $L,\Theta,R$:
-$(L\Theta)R = L(\Theta R)$ by associativity of matrix multiplication.
-Therefore left and right actions commute, i.e., $[L_{\mathrm{left}}, R_{\mathrm{right}}]=0$.
+Associativity gives $(L\Theta)R=L(\Theta R)$. The map
+$(L,R)\mapsto(\Theta\mapsto L\Theta R^{-1})$ represents the direct product.
+Its faithful image depends on the kernel, which can include shared
+central phases. The global gauge group requires the actual matter actions.
 
-\medskip
-\textbf{(2) Direct product subgroup.}
-Since $G_L$ acts on the left factor of $\Theta$ (carrying $\mathbb{B}\otimes\mathbb{C}^{N_L}$)
-and $G_R$ acts on the right factor ($\mathbb{C}^3$), the actions are on different tensor-product
-components.  The kernel of each action on the other factor is trivial (identity), so
-$G_L\cap G_R=\{e\}$ and the combined group generated by $G_L$ and $G_R$ is the direct product
-$G_L\times G_R$.
-
-\medskip
-\textbf{(3) Covariant derivative.}
-Under $L'=L(1+i\epsilon^i\tau_i+i\theta Y)$ (infinitesimal left transformation, with
-$\Omega_\mu^{L'} = L\Omega_\mu^L L^\dagger - (\partial_\mu L)L^\dagger$):
-\[
-D_\mu\Theta \to \partial_\mu(L\Theta) + \Omega_\mu^{L'} L\Theta + L\Theta A_\mu^R
-= L\bigl[\partial_\mu\Theta+\Omega_\mu^L\Theta+\Theta A_\mu^R\bigr] = L\,D_\mu\Theta.
-\]
-Under $R'=R(1+i\alpha^a T^a)$ (right transformation, with $A_\mu^{R'} = R^{-1}A_\mu^R R + R^{-1}\partial_\mu R$):
-\[
-D_\mu\Theta \to \partial_\mu(\Theta R) + \Omega_\mu^L(\Theta R) + (\Theta R)(R^{-1}A_\mu^R R + R^{-1}\partial_\mu R)
-= \bigl[\partial_\mu\Theta + \Omega_\mu^L\Theta + \Theta A_\mu^R\bigr]R = (D_\mu\Theta)\,R.
-\]
-In both cases the covariant derivative transforms covariantly (no mixing of the two sectors).
+Take $\Omega_\mu^{L'}=L\Omega_\mu^L L^{-1}-(\partial_\mu L)L^{-1}$
+and use \eqref{eq:GC_gauge_transf} for $A_\mu^{R'}$. The two product-rule
+terms in $\partial_\mu(L\Theta R)$ cancel against the derivatives of $L$
+and $R$ in the respective connection transformations. This gives
+$D_\mu'\Theta'=L(D_\mu\Theta)R$.
 \end{proof}
 
 % =====================================================================
-\subsection*{G.17 Confinement: Status}
+\subsection*{G.17 Confinement Status}
 \label{sec:G17_confinement}
+Color confinement remains open in UBT. The flat phase connection cannot
+provide the nonzero curvature required by the proposed mechanism.
+The continuum Yang--Mills existence and mass gap problem is a related
+question. The carrier algebra and its adjoint action do not resolve it.
 
-Color confinement — the empirical fact that color-charged particles (quarks and gluons) are
-never observed in isolation — is \textbf{not derived} in this appendix.  This is an expected
-gap: confinement is also not derived from the Standard Model Lagrangian in closed form.
-It is one of the seven Clay Millennium Prize Problems (``Yang--Mills Existence and Mass Gap'',
-\$1\,000\,000 prize, unsolved as of 2026).
-
-Within the UBT emergent framework, the qualitative mechanism is the non-abelian curvature of
-the internal phase bundle: when the color connection $A_\mu$ becomes strongly coupled, the
-phase fiber develops a curvature gap that forbids isolated color charges (analogous to the
-area law for Wilson loops in lattice QCD).  A quantitative derivation of the mass gap from
-the phase-fiber Lagrangian~\eqref{eq:G4_lagrangian} is left for future work.
-
-\textbf{Summary.}  Theorems~G.A--G.D prove standard group- and representation-theory consequences \emph{conditional on} a local unitary $\mathbb{C}^3$ carrier action.  The involutions select the carrier, but \texttt{GAP-SU3-DYN} remains open: derive the unitary/Yang--Mills structure, kinetic term, normalization, and matter embedding from the canonical UBT action.  Confinement is a further open dynamical problem.
+\textbf{Summary.} G.A--G.D establish algebraic and covariant properties
+of the introduced carrier. \texttt{GAP-SU3-DYN} still requires a dynamical
+connection, its normalization and the matter embedding from the UBT action.
 
 % =====================================================================
 % End of Appendix G
 % =====================================================================
-

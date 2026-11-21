@@ -260,17 +260,18 @@ All proofs in `canonical/interactions/`, `canonical/su3_derivation/`,
 
 | # | Claim | Level | Source |
 |---|-------|-------|--------|
-| S1 | 𝔰𝔲(3) realised in ℂ⊗ℍ via ℤ₂×ℤ₂×ℤ₂ involutions | [L0] | `su3_from_involutions.tex` |
-| S2 | Quarks in fundamental **3** representation | [L0] | `sm_gauge.tex §G.B` |
-| S3 | Gluons in adjoint **8** representation (all 28 commutator pairs) | [L0] | `sm_gauge.tex §G.C` |
-| S4 | EW/strong sector algebraic decoupling | [L0] | `sm_gauge.tex §G.D` |
-| S5 | Independent triqubit derivation confirms SU(3) | [L0] | `su3_qubit_encoding.tex` |
-| S6 | Structural colour confinement: free quarks algebraically inadmissible | [L0] | `su3_from_involutions.tex Thm G.B` |
-| S7 | Involution and triqubit routes are equivalent | [L0] | `su3_gauge_qubit_equivalence.tex` |
+| S1 | Involutions select $V_c\cong\mathbb{C}^3$ and its canonical Hermitian form and volume have algebraic stabilizer SU(3) | [L0] carrier selection, [L1] stabilizer, [OPEN] local dynamics (GAP-SU3-DYN) | `su3_from_involutions.tex`, `su3_stabilizer_exterior_fock.tex` |
+| S2 | Defining **3** representation on the supplied unitary carrier | [L1 conditional] on the carrier action, [OPEN] physical quark embedding (GAP-SU3-INTERNAL-TRIPLET-ORIGIN) | `su3_from_involutions.tex Prop. G.B` |
+| S3 | Curvature and connection differences transform in the adjoint **8** | [L1 conditional] on local SU(3) carrier symmetry, [OPEN] dynamical gauge field (GAP-SU3-DYN-MICRO) | `su3_from_involutions.tex Thm G.C` |
+| S4 | Left and right carrier actions commute and the two-sided derivative is covariant | [L1 conditional] on the stated actions and connection laws | `su3_from_involutions.tex Thm G.D` |
+| S5 | Triqubit encoding reproduces the 𝔰𝔲(3) generator algebra | [L0] representation-level | `su3_qubit_encoding.tex` |
+| S6 | Colour confinement from the UBT dynamics | [OPEN] — former structural claim withdrawn | `su3_from_involutions.tex §G.17` |
+| S7 | Involution and triqubit routes are equivalent at generator level | [L0] representation-level | `su3_gauge_qubit_equivalence.tex` |
 | S8 | One-hot color detects every single `X_i`/`Y_i` error as leakage | [L1] | `gap_su3_triqubit_qec.tex`, `verify_triqubit_qec_status.py` |
 | S9 | One-hot color cannot correct an unknown single `X_i` and does not detect general `Z_i` | [L1 no-go] | Knill--Laflamme witness in `gap_su3_triqubit_qec.tex` |
 
-*Note*: Dynamical confinement (Wilson loop area law) is the Clay Millennium Problem; it is not claimed.
+The unitary-frame connection in G.3 is flat. The related continuum Yang–Mills
+existence and mass gap problem and confinement remain separate from the carrier algebra.
 
 ### Electroweak Sector
 
@@ -293,7 +294,7 @@ All proofs in `canonical/interactions/`, `canonical/su3_derivation/`,
 | C2-iii | Geometric coupling $S^1_\psi\leftrightarrow\mathbb{Z}_3$ colour cycle | [OPEN/MC] (blocks C2-ii); Steps 1+2 attempted v58 | `research_tracks/EW/hypercharge_from_ubt.tex §3 Rem rem:c2iii_attempts` (v58) |
 | C2-iv | Fiber Decoupling in $S[\Theta]$: $S^1_\psi$ and colour fiber $\mathbb{C}^3$ algebraically decoupled | [FORMAL NO-GO within current $S[\Theta]$] (v59, deadendbox) — root cause of C2-iii; does not block papers | `research_tracks/EW/hypercharge_from_ubt.tex §3 Rem rem:c2iii_attempts` (v59) |
 | EW-1b | $\sin^2\theta_W(M_Z)\approx0.231$ (Corollary) | [L1 cond. on OP-S4 + SU(3) colour structure + scale closure] | `research_tracks/EW/weinberg_angle_ew1_rg.tex §7 Prop prop:sin2_thetaW_corollary` (v56) |
-| E6 | U(1)_EM from ψ-cycle phase after SSB | [L0] | `qed.tex` |
+| E6 | U(1)_EM from ψ-cycle phase after SSB | [OPEN] — GAP-U1-NEUTRALITY: former neutrality proof REFUTED 2026-10-31 | `canonical/qed_phi_const/step1_u1_protection.en.tex` |
 | E7 | Q = T₃ + Y/2 (Gell-Mann–Nishijima relation) | [L1] | Standard EW algebra |
 | E8 | Photon field $A_\mu = \sin\theta_W W^3_\mu + \cos\theta_W B_\mu$ | [L1] | Standard EW |
 
@@ -309,7 +310,7 @@ All proofs in `canonical/interactions/`, `canonical/su3_derivation/`,
 
 | # | Claim | Level | Source |
 |---|-------|-------|--------|
-| Q1 | Photon is massless in UBT QED sector | [L1] | `canonical/interactions/qed.tex` |
+| Q1 | Masslessness of the physical UBT photon | [OPEN] — GAP-U1-NEUTRALITY. In the positive scalar comparison, $m_\gamma^2=2e^2\lVert Qv\rVert^2$ | `canonical/qed_phi_const/step1_u1_protection.en.tex` |
 | Q2 | Electron g-factor = 2 at tree level | [L1] | `canonical/interactions/qed.tex` |
 | Q3 | QED running coupling α(μ) reproduced | [L1] | `canonical/interactions/qed.tex` |
 
