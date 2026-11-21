@@ -2,7 +2,7 @@
   "schema": "ubt-research-event/v1",
   "recorded_on": "2026-11-21",
   "claim_or_decision_id": "RH-THETA-UBT-TRANSFER-GATES-2026-11-21",
-  "summary": "A finite 4-mode Fourier analogy to Alpoge's automorphic theta lifts preserves the existing UBT indefinite mode-space B and Omega, but neither repairs the negative signature nor preserves the canonical spacetime metric at fixed psi. True arithmetic theta-lift transfer stays open.",
+  "summary": "A finite-mode Fourier transfer preserves existing UBT indefinite symplectic geometry but is not a metric symmetry; the Lorentz congruence embeds in Sp(8,R), opening a mathematical Weil/oscillator representation route while excluding positive invariant norms on the original finite component carrier. Actual arithmetic theta lifts and UBT dynamics stay open.",
   "development_mode": "iterative_human_ai",
   "stage_events": [
     {
@@ -29,6 +29,16 @@
       "description": "Implement six deterministic exact SymPy checks including a flat-metric counterexample to physical Fourier gauge invariance.",
       "evidence_ids": [
         "test-script"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Recognized Lorentz congruence SL(2,C) -> Sp(8,R), an exact boost obstruction to positive component norms, and a conditional mathematical route via the metaplectic oscillator representation on L2(R4).",
+      "evidence_ids": [
+        "note-en",
+        "test-script",
+        "weil-background"
       ]
     }
   ],
@@ -72,6 +82,14 @@
       "original_checked": true,
       "supports": "Six exact finite-dimensional consistency and negative-control tests.",
       "limitations": "Does not verify true automorphic lifts or full UBT dynamics."
+    },
+    {
+      "id": "weil-background",
+      "class": "published_mathematics",
+      "locator": "https://www.math.iitb.ac.in/~dprasad/weil-repn.pdf",
+      "original_checked": true,
+      "supports": "Standard oscillator/Weil representation over symplectic spaces.",
+      "limitations": "Provides no UBT-specific physical quantization or identification with Alpoge's kernel."
     }
   ],
   "rejected_alternatives": [
@@ -85,7 +103,7 @@
     "artifacts": [
       "research_tracks/action_selection/tests/test_alpoge_theta_fourier_transfer.py"
     ],
-    "limitations": "Six local SymPy 1.14.0 tests passed on 2026-11-21; no Lean compilation, independent translation semantics, CI, actual lift or UBT physical closure verified."
+    "limitations": "Seven local exact SymPy 1.14.0 tests passed on 2026-11-21; no Lean compilation, independent translation-semantic approval, CI pass, actual automorphic theta lift or UBT physical closure verified."
   },
   "attribution_status": "provisional",
   "human_attestation": "not_attested",
