@@ -76,6 +76,15 @@ class LocalHowePairTests(unittest.TestCase):
             (a + d) * self.omega,
         )
 
+    def test_sl2_symplectic_commutant_dimension_six(self):
+        # Full SL(2,R) commutant has the form I2 ⊗ A, with A a 4x4
+        # matrix. Symplecticity reduces to A.T eta + eta A = 0.
+        z = sp.symbols("a0:16")
+        a = sp.Matrix(4, 4, z)
+        equations = list(a.T*self.eta + self.eta*a)
+        linear, _ = sp.linear_eq_to_matrix(equations, z)
+        self.assertEqual(linear.rank(), 10)  # 16 - 10 = 6 = dim so(1,3).
+
     def test_bilinear_invariant_only_under_orthogonal_sl2(self):
         phase = lift2(sp.Matrix([[0, -1], [1, 0]]))
         squeeze = lift2(sp.diag(2, sp.Rational(1, 2)))
@@ -110,7 +119,7 @@ class LocalHowePairTests(unittest.TestCase):
         # Starting at E0=i I, the u -> u+v shear changes E0 to (1+i) I.
         e0 = (1 + sp.I) * sp.eye(2)
         self.assertNotEqual(e0.conjugate().T, -e0)
-        self.assertEqual(sharp(e0) * e0, 2 * sp.I * sp.eye(2))
+        self.assertEqual(sp.simplify(sharp(e0) * e0), 2 * sp.I * sp.eye(2))
 
     def test_lorentz_invariant_fourier_kernel_phase(self):
         boost = sp.eye(4)
