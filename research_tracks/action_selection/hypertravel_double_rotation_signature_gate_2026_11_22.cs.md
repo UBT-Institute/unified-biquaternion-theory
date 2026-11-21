@@ -84,6 +84,16 @@ V plochém vyšším prostoru s \(a\equiv1\) trvá stejná oklika \(2h+L>L\), ta
 
 **Fyzikální omezení:** jde o vnějším předpokladem zadanou geometrii, **nikoli o metriku odvozenou z uzamčené čtyřrozměrné sharp metriky UBT** nebo jejích pohybových rovnic. Zatím nemáme zdrojový tenzor energie ani ověření energetických podmínek, stabilitu a vazbu fyzikálních signálů, možnost vstupovat do dalšího směru a vracet se, slučitelnost se známými gravitačními testy ani globální chronologii. Nedokazuje postavitelné hyperprostorové vozidlo ani cestování do minulosti. Poskytuje však užitečný **pozitivní cíl pro rozlišení modelů**: dokáže skutečná UBT s jediným polem \(\Theta\) vytvořit stabilní zakřivenou geometrii s měřitelným dřívějším příchodem vůči signálu omezenému na náš řez, aniž by porušila lokální kauzalitu?
 
+<!-- BILINGUAL-UNIT: hypertravel.nec -->
+## Kontrola energetických podmínek zakřivené zkratky
+
+Uvedený faktor zakřivení splňuje test **kauzální geometrie**, ale neprochází důležitým testem **zdroje v běžné Einsteinově gravitaci**. V předpokládané metrice je budoucnostně orientovaný vektor \(\ell=\partial_t+\partial_\psi\) nulový a v bodě \(\psi=1\) platí:
+\[
+\boxed{R_{\mu\nu}\ell^\mu\ell^\nu=-\frac{a''(1)}{a(1)}
+=2\ln2-4(\ln2)^2\approx-0.5355<0.}
+\]
+Tím je porušena **podmínka nulové konvergence**. Pokud by předpokládaná zakřivená metrika musela vyhovovat nezměněným Einsteinovým rovnicím s kladnou gravitační vazbou, jejich kontrakce v nulovém směru vyžaduje \(T_{\mu\nu}\ell^\mu\ell^\nu<0\), tedy porušení **nulové energetické podmínky** pro zdroj (kosmologická konstanta z nulové kontrakce vypadne). Tvrzení platí **pro uvedenou metriku a předpokládané rovnice**, nikoli jako všeobecný zákaz všech geometrických zkratek nebo budoucí dynamiky UBT. UBT dosud neodvodila zdroj, zakřivení ani jeho stabilitu. Jde o negativní test fyzikální přípustnosti proti předčasným tvrzením o pohonu.
+
 <!-- BILINGUAL-UNIT: hypertravel.selection -->
 ## Co musíme v UBT skutečně odvodit
 
@@ -96,4 +106,4 @@ Tvrzení o cestování hyperprostorem navíc vyžaduje fyzikální, na vztažné
 <!-- BILINGUAL-UNIT: hypertravel.verification -->
 ## Ověření
 
-Čtrnáct deterministických přesných testů v SymPy 1.14.0 prošlo lokálně dne 2026-11-22: Lorentzova algebra, kovariance a nekomutativita konečných boostů, příklad budoucího kužele, nepřítomnost posunu počátku, spinorové chování při \(2\pi/4\pi\), plochá KK disperze a rychlost, tachyonický mód pro druhý čas, společný nulový mód a kauzální mez plochého prostorového \(\psi\), plochou okliku vyšším prostorem, lomenou nulovou zkratku v zakřiveném prostoru a nenulovou skalární křivost. Zdroj: \`research_tracks/action_selection/tests/test_double_rotation_extra_time_gate.py\`. Přesná algebra pouze **zkušebních modelů**; žádná numerická předpověď UBT, žádný běh Lean, žádný úplný průchod CI repozitáře ani nezávislá sémantická kontrola dvojjazyčnosti. **LEAN-PENDING.**
+Patnáct deterministických přesných testů v SymPy 1.14.0 prošlo lokálně dne 2026-11-22: Lorentzova algebra, kovariance a nekomutativita konečných boostů, příklad budoucího kužele, nepřítomnost posunu počátku, spinorové chování při \(2\pi/4\pi\), plochá KK disperze a rychlost, tachyonický mód pro druhý čas, společný nulový mód a kauzální mez plochého prostorového \(\psi\), plochou okliku vyšším prostorem, lomenou nulovou zkratku v zakřiveném prostoru a nenulovou skalární křivost včetně kontroly nulové konvergence a energetické podmínky. Zdroj: \`research_tracks/action_selection/tests/test_double_rotation_extra_time_gate.py\`. Přesná algebra pouze **zkušebních modelů**; žádná numerická předpověď UBT, žádný běh Lean, žádný úplný průchod CI repozitáře ani nezávislá sémantická kontrola dvojjazyčnosti. **LEAN-PENDING.**
