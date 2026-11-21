@@ -1,0 +1,93 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-21",
+  "claim_or_decision_id": "RH-THETA-LIFT-DYNAMICS-SELECTOR-GATE-2026-11-21",
+  "summary": "Audited the actual reported RH theta-lift arithmetic mechanism against the UBT dynamical selector problem; found no direct transfer. Exact Hamiltonian family exhibits nonuniqueness under the same UBT invariant B, J and Omega. A specific arithmetic theta-lift intertwiner compatible with two-sided connection and physical constraints would be required.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_proposal",
+      "actor": "human",
+      "description": "Investigate whether the reported RH proof can resolve or meaningfully help UBT dynamics, rather than conducting an unrelated general dynamical derivation.",
+      "evidence_ids": [
+        "conversation-scope"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Separated the proof's number-theoretic theta-lift divisibility/slope and positive-character-weight mechanism from Lorentzian energy positivity; formulated a concrete connection/constraint intertwining test and a nonunique Hamiltonian family.",
+      "evidence_ids": [
+        "alpoge-remark",
+        "architecture",
+        "ubt-existing"
+      ]
+    },
+    {
+      "kind": "ai_verification",
+      "actor": "ai",
+      "description": "Checked five finite-dimensional symbolic facts for the family using SymPy 1.14.0: Omega, Hamilton equation, conserved B, differing flows and indefinite B signature.",
+      "evidence_ids": [
+        "test-script"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "conversation-scope",
+      "class": "discussion_context",
+      "locator": "Current chat Nov 21, 2026; transcript not published",
+      "original_checked": true,
+      "supports": "The author's explicit problem selection and correction of project scope",
+      "limitations": "No private transcripts or identifying contents published"
+    },
+    {
+      "id": "alpoge-remark",
+      "class": "public_primary_source",
+      "locator": "https://alpo.ge/remark.pdf",
+      "original_checked": true,
+      "supports": "Iterated arithmetic theta lifts mimic a Stepanov multiplicity step",
+      "limitations": "No UBT dynamics claim"
+    },
+    {
+      "id": "architecture",
+      "class": "public_technical_analysis",
+      "locator": "https://github.com/nasqret/riemann-rev",
+      "original_checked": true,
+      "supports": "Documented estimate, positive Fourier character weights and arithmetical bridge architecture",
+      "limitations": "Secondary analysis; not a physical theorem"
+    },
+    {
+      "id": "ubt-existing",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/hamiltonian_first_foundations.en.md",
+      "original_checked": true,
+      "supports": "Prior exact dynamical nonuniqueness principle",
+      "limitations": "Finite-dimensional and candidate phase-space framing"
+    },
+    {
+      "id": "test-script",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/tests/test_rh_theta_lift_selector.py",
+      "original_checked": true,
+      "supports": "Finite-dimensional analytic nonuniqueness checks",
+      "limitations": "Not a genuine automorphic theta lift, physical action, or Einstein dynamics"
+    }
+  ],
+  "rejected_alternatives": [
+    "Treat arithmetic positive Fourier weights as positivity of UBT Hamiltonian",
+    "Treat number-theoretic iteration count sqrt(x) as a physical scale",
+    "Treat generic metaplectic covariance as unique time generator"
+  ],
+  "verification": {
+    "status": "locally_checked",
+    "artifacts": [
+      "research_tracks/action_selection/tests/test_rh_theta_lift_selector.py"
+    ],
+    "limitations": "Five equivalent local exact SymPy 1.14.0 checks passed; no Lean proof, independent bilingual-semantic approval, CI success, automorphic kernel or physical UBT dynamics."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "No changes to canonical theory, existing metric, action, author attestation, or status ledgers."
+}
