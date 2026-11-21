@@ -88,7 +88,21 @@ je invariantní vůči Lorentzově grupě i \(SL(2,\mathbb R)\). Při \(\iota_{\
 \]
 Rodina \(H_f=f(\Delta)\) má tutéž symetrii duálního páru a různé toky \(\dot X=f'(\Delta)X_{\Delta}\); **ani celý duální pár tedy jednoznačně neurčuje dynamiku**. Nevystupují zde prostorové derivace ani fyzikální vazby UBT.
 
+<!-- BILINGUAL-UNIT: rh-howe.lorentz-orbit -->
+## Přesná překážka fyzikální dynamiky: Lorentzův momentový invariant
+
+Zdánlivě netriviální výše uvedený tok má rozhodující další interpretaci. Definujme **kompozitní** prvek Lorentzovy Lieovy algebry
+\[
+A=u(v^T\eta)-v(u^T\eta),\qquad A^T\eta+\eta A=0.
+\]
+Přímým dosazením získáme
+\[
+\boxed{\dot u=Au,\qquad\dot v=Av,\qquad \dot A=0,\qquad
+\Delta=-\frac12\operatorname{tr}(A^2).}
+\]
+Celý konečněrozměrný tok pro \(H=\Delta\) je tedy Lorentzovou orbitou \((u(t),v(t))=(e^{tA}u(0),e^{tA}v(0))\). Totéž platí pro \(H=f(\Delta)\), kde \(A\) nahradíme \(f'(\Delta)A\), protože \(\Delta\) je konstantní. Změna \((u,v)\) je tudíž **tečná k orbitě Lorentzových transformací**. Pokud úplné Diracovy vazby UBT činí tyto Lorentzovy směry kalibračními, indukovaný fyzikální tok na podílovém prostoru je **nulový**. Jde o vymezenou překážku získání skutečné fyzikální dynamiky pouze z funkce Gramova/Casimirova invariantu. Akce UBT ani všechny prvořadé generátory vazeb dosud **odvozeny nebyly**, takže interpretace jako kalibračního toku je podmíněná. Přesná identita orbity je sama o sobě algebraická.
+
 <!-- BILINGUAL-UNIT: rh-howe.verify -->
 ## Ověření a další přísná podmínka
 
-Reprodukovatelný zdroj: \`research_tracks/action_selection/tests/test_rh_howe_dual_pair.py\` (15 přesných SymPy testů zahrnujících symplektickou invarianci, Lorentzovy komutanty, ztrátu \(B\), kontroly sharp metriky a reálné Lorentzovy větve, kovarianci kladného majorantu, divergenci holé sumy, Gramův determinant a nejednoznačnost Hamiltoniánu). Samostatný analytický důkaz ověřuje kladnost \(R_n\) v klidové soustavě a divergenci na prostorovém mřížovém paprsku. **LEAN-PENDING**, bez ověřené fyzikální akce či skutečného automorfního aritmetického liftu. **Další podmínka:** odvodit \(n\) a transformační zákon liftu z kanonické tetrády/konexe a otestovat, zda jakýkoli navržený netriviální projektor komutuje s fyzikálními vazbami. Neslučovat jako ověřenou fyziku; status je pouze matematický.
+Reprodukovatelný zdroj: \`research_tracks/action_selection/tests/test_rh_howe_dual_pair.py\` (16 přesných SymPy testů zahrnujících symplektickou invarianci, Lorentzovy komutanty, ztrátu \(B\), kontroly sharp metriky a reálné Lorentzovy větve, kovarianci kladného majorantu, divergenci holé sumy, Gramův determinant a nejednoznačnost Hamiltoniánu). Samostatný analytický důkaz ověřuje kladnost \(R_n\) v klidové soustavě a divergenci na prostorovém mřížovém paprsku. **LEAN-PENDING**, bez ověřené fyzikální akce či skutečného automorfního aritmetického liftu. **Další podmínka:** odvodit \(n\) a transformační zákon liftu z kanonické tetrády/konexe a otestovat, zda jakýkoli navržený netriviální projektor komutuje s fyzikálními vazbami. Neslučovat jako ověřenou fyziku; status je pouze matematický.
