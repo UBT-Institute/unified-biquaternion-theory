@@ -88,6 +88,24 @@ je invariantní vůči Lorentzově grupě i \(SL(2,\mathbb R)\). Při \(\iota_{\
 \]
 Rodina \(H_f=f(\Delta)\) má tutéž symetrii duálního páru a různé toky \(\dot X=f'(\Delta)X_{\Delta}\); **ani celý duální pár tedy jednoznačně neurčuje dynamiku**. Nevystupují zde prostorové derivace ani fyzikální vazby UBT.
 
+<!-- BILINGUAL-UNIT: rh-howe.invariant-ring -->
+## Přesná věta o invariantním okruhu Gramových proměnných: žádný nezávislý lokální výběrový princip bez derivací
+
+Celá grupa kopií \(SL(2,\mathbb R)\) působí na Lorentzovy Gramovy složky \(Q,R,S\). Její tři infinitesimální generátory vedou k diferenciálním operátorům
+\[
+e=2S\partial_Q+R\partial_S,\qquad
+f=2S\partial_R+Q\partial_S,\qquad
+h=2Q\partial_Q-2R\partial_R.
+\]
+Pro polynom \(P(Q,R,S)\) vynucuje rovnost \(hP=0\) stejnou mocninu \(Q\) a \(R\) v každém monomu, tedy \(P=P(T,S)\) s \(T=QR\). Poté \(eP=R(2S\partial_T+\partial_S)P=0\) znamená \(P=F(T-S^2)\). Obráceně \(e\Delta=f\Delta=h\Delta=0\). Celý polynomiální invariantní okruh **v Gramově sektoru** proto je
+\[
+\boxed{\mathbb R[Q,R,S]^{SL(2,\mathbb R)}
+=\mathbb R[\Delta],\qquad \Delta=QR-S^2.}
+\]
+Jde o elementární algebraickou klasifikaci, nikoli jen vzor konečně mnoha stupňů. Nezávislá přesná kontrola lineárních jader v SymPy nachází jeden generátor v každém sudém Gramově stupni \(0,2,4,6\) a žádný v lichých stupních \(1,3,5\), což odpovídá mocninám \(\Delta^m\).
+
+Pro regulární uspořádanou dvojici Lorentzových vektorů s nedegenerovaným rozpětím standardní Gramova klasifikace ortogonální grupy říká, že obecné *Lorentzovsky invariantní* algebraické lokální kandidáty bez derivací závisejí jen na \((Q,R,S)\). Při **dodatečném, fyzikálně nedokázaném požadavku** celé kopijní grupy \(SL_2\) se jejich invariantní Hamiltoniány redukují na \(F(\Delta)\). Podle níže uvedené přesné věty o Lorentzově orbitě vyvolávají pouze pohyby tečné k Lorentzovým orbitám, tedy žádnou redukovanou fyzikální evoluci, jsou-li tyto směry kalibrační. Jde o **podmíněnou překážku výběru dynamiky bez derivací**. Nevylučuje Hamiltoniány s derivacemi, singulární/nepolynomiální větve, explicitní redukci vazeb ani využití Howeova páru jako nástroje reprezentací místo fyzikální symetrie.
+
 <!-- BILINGUAL-UNIT: rh-howe.lorentz-orbit -->
 ## Přesná překážka fyzikální dynamiky: Lorentzův momentový invariant
 
