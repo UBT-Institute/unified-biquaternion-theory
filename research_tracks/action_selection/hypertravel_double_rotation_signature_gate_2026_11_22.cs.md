@@ -39,7 +39,7 @@ Každé konečné složení **lineárních** vlastních ortochronních Lorentzov
 <!-- BILINGUAL-UNIT: hypertravel.spin -->
 ## Úplná spinorová rotace nepřemisťuje prostoročasové souřadnice
 
-Pro dvousložkový spinor se rotace o \(2\pi\) projeví zápornou jednotkovou maticí, zatímco rotace o \(4\pi\) působí jednotkově:
+Pro dvousložkový spinor spinu \(1/2\) se rotace o \(2\pi\) projeví zápornou jednotkovou maticí, zatímco rotace o \(4\pi\) působí jednotkově:
 \[
 U_z(\theta)=e^{-i\theta\sigma_z/2},\qquad
 \boxed{U_z(2\pi)=-I,\qquad U_z(4\pi)=I.}
