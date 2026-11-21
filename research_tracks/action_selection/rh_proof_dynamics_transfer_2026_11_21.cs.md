@@ -44,11 +44,11 @@ Identifikovat **konkrétní jádro aritmetického theta liftu** \(\mathcal L\) a
 \[
 \mathcal L D_\mu=D'_\mu\mathcal L,\qquad
 \mathcal L(\ker\mathcal C)\subseteq\ker\mathcal C',\qquad
-H_{\rm phys}\ge0\quad\text{on the constrained quotient}.
+H_{\rm phys}\big|_{\ker\mathcal C/\mathcal G}\ge0.
 \]
 Tyto rovnice jsou **požadavky k testování, nikoli výsledky**. Unitární oscilátorová reprezentace, aritmeticky kladná Fourierova váha a kladná fyzikální energie jsou tři různé vlastnosti. Pokud nelze takový skutečný proplétající operátor formulovat bez ad hoc ontologie UBT, je nutné tuto cestu uzavřít jako nepodloženou.
 
 <!-- BILINGUAL-UNIT: rh-transfer.status -->
 ## Ověření a status
 
-Přesné analytické výpočty a kontrola v SymPy 1.14.0 potvrzují uvedenou konečněrozměrnou Hamiltonovu rovnici a zákon zachování. Reprodukovatelný zdroj: research_tracks/action_selection/tests/test_rh_theta_lift_selector.py. Nejde o implementaci skutečného důkazu RH, jeho theta liftů, fyzikální dynamiku UBT na řešeních rovnic ani odstranění ghostů. **LEAN-PENDING; nezávislá sémantická kontrola překladů čeká. Dynamika OPEN.**
+Pět přesných lokálních kontrol v SymPy 1.14.0 potvrzuje uvedenou konečněrozměrnou Hamiltonovu rovnici a zákon zachování. Reprodukovatelný zdroj: research_tracks/action_selection/tests/test_rh_theta_lift_selector.py. Nejde o implementaci skutečného důkazu RH, jeho theta liftů, fyzikální dynamiku UBT na řešeních rovnic ani odstranění ghostů. **LEAN-PENDING; nezávislá sémantická kontrola překladů čeká. Dynamika OPEN.**
