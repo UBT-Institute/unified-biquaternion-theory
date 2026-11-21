@@ -112,7 +112,7 @@ class LocalHowePairTests(unittest.TestCase):
         self.assertNotEqual(e0.conjugate().T, -e0)
         self.assertEqual(sharp(e0) * e0, 2 * sp.I * sp.eye(2))
 
-    def test_lorentz_invariant_oscillator_fourier_phase(self):
+    def test_lorentz_invariant_fourier_kernel_phase(self):
         boost = sp.eye(4)
         boost[0, 0] = boost[1, 1] = sp.Rational(5, 4)
         boost[0, 1] = boost[1, 0] = sp.Rational(3, 4)
@@ -136,6 +136,33 @@ class LocalHowePairTests(unittest.TestCase):
         r1 = (v1.T * self.eta * v1)[0]
         s1 = (u1.T * self.eta * v1)[0]
         self.assertEqual(sp.expand(q1*r1-s1**2-delta), 0)
+
+    def test_indefinite_gaussian_diverges_on_spacelike_integer_ray(self):
+        # Bare exp(-pi*y*Q(u)) grows when Q(u)<0.
+        for k in range(1, 6):
+            spacelike = sp.Matrix([0, k, 0, 0])
+            self.assertEqual((spacelike.T*self.eta*spacelike)[0], -k*k)
+        # The term magnitude is exp(+pi*y*k^2), not decaying.
+
+    def test_tetrad_normal_majorant_positive(self):
+        n = sp.Matrix([1, 0, 0, 0])
+        r = 2*(self.eta*n)*(self.eta*n).T-self.eta
+        self.assertEqual((n.T*self.eta*n)[0], 1)
+        self.assertEqual(r, sp.eye(4))
+        for k in range(1, 6):
+            spacelike = sp.Matrix([0, k, 0, 0])
+            self.assertEqual((spacelike.T*r*spacelike)[0], k*k)
+
+    def test_positive_majorant_covariant_under_boost(self):
+        boost = sp.eye(4)
+        boost[0, 0] = boost[1, 1] = sp.Rational(5, 4)
+        boost[0, 1] = boost[1, 0] = sp.Rational(3, 4)
+        n = sp.Matrix([1, 0, 0, 0])
+        normal = boost*n
+        r0 = 2*(self.eta*n)*(self.eta*n).T-self.eta
+        rn = 2*(self.eta*normal)*(self.eta*normal).T-self.eta
+        self.assertEqual(boost.T*rn*boost, r0)
+        self.assertEqual((normal.T*self.eta*normal)[0], 1)
 
     def test_even_full_dual_pair_does_not_select_hamiltonian(self):
         u, v = sp.Matrix(sp.symbols("u0:4")), sp.Matrix(sp.symbols("v0:4"))
