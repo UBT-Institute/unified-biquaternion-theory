@@ -13,7 +13,7 @@ UBT-AI-PROVENANCE-END
 # Inverse-dynamics decision gate: little-group obstruction to a linear graviton from a single biquaternion value
 
 **21 November 2026. C_working / L0 exact conditional algebra; full Θ dynamics OPEN.**
-This is an explicit answer to the remaining principal-symbol loophole in \`BARE_THETA_TT_PRINCIPAL_SYMBOL.en.md\` and \`BOOST_CONNECTION_TT_IMAGE.en.md\`. It is compatible with the locked Axiom A for a single value \(\Theta\in\mathbb C\otimes\mathbb H\simeq M_2(\mathbb C)\). It is **not** an unconditional no-go for nonperturbative bound states, anisotropic backgrounds, a physically different tensor-valued carrier, or emergent gravitational gauge symmetry.
+This is an explicit answer to the remaining principal-symbol loophole in `BARE_THETA_TT_PRINCIPAL_SYMBOL.en.md` and `BOOST_CONNECTION_TT_IMAGE.en.md`. It is compatible with the locked Axiom A for a single value \(\Theta\in\mathbb C\otimes\mathbb H\simeq M_2(\mathbb C)\). It is **not** an unconditional no-go for nonperturbative bound states, anisotropic backgrounds, a physically different tensor-valued carrier, or emergent gravitational gauge symmetry.
 
 ## Assumptions and exact little-group theorem
 
@@ -39,7 +39,7 @@ This is a conditional **full-connection** linear TT-image obstruction, stronger 
 
 ## Why an independently varied boost connection is not a counterexample
 
-The earlier exact local comparator \`BOOST_CONNECTION_TT_IMAGE.en.md\` assigns freely chosen \(\delta\omega_i{}^j{}_0\) to reproduce any prescribed TT matrix \(H_{ij}\) at a point:
+The earlier exact local comparator `BOOST_CONNECTION_TT_IMAGE.en.md` assigns freely chosen \(\delta\omega_i{}^j{}_0\) to reproduce any prescribed TT matrix \(H_{ij}\) at a point:
 \[
 \delta e_i{}^j=\frac{v^0}{\sqrt{\mathcal N_0}}\delta\omega_i{}^j{}_0,\qquad
 \delta\omega_i{}^j{}_0=\frac{\sqrt{\mathcal N_0}}{2v^0}H_{ij}.
@@ -67,6 +67,6 @@ A **Weinberg–Witten gate** must also be checked: under its particular assumpti
 
 **D3. Dynamics fork:** either (A) derive a revised physical carrier/constraint representation admitting helicity-\(2\) at linear order without inserting an independent Einstein metric; or (B) keep the single \(M_2(\mathbb C)\) carrier and derive a non-Gaussian quantum **collective** spin-\(2\) correlator with an isolated massless pole, positivity, diffeomorphism-like Ward identities and an explicit Weinberg–Witten assumption audit. Merely modifying the classical scalar potential or a connection selector within assumptions (i)-(iv) cannot fix (2).
 
-**D4. Action/Hamiltonian endpoint:** on the surviving branch, compute the actual compositional \(\Theta\) action, full Dirac/gauge-reduced Hessian, \(2\) positive-energy helicities, consistent matter coupling and \(G\). The conditional ADM Einstein bracket ratio already derived in \`full_spatial_dynamics_2026_10.en.md\` applies only after an unrestricted metric phase-space representation has itself been derived.
+**D4. Action/Hamiltonian endpoint:** on the surviving branch, compute the actual compositional \(\Theta\) action, full Dirac/gauge-reduced Hessian, \(2\) positive-energy helicities, consistent matter coupling and \(G\). The conditional ADM Einstein bracket ratio already derived in `full_spatial_dynamics_2026_10.en.md` applies only after an unrestricted metric phase-space representation has itself been derived.
 
-**Verification status:** exact local SymPy verifier \`tools/verify_inverse_spin2_little_group_gate_2026_11_21.py\` checks (1)-(3), the SU(2) representation, the independent-connection comparison, and a finite free-Fock number-sector diagnostic. These tests do **not** verify an interacting pole, a full field-theory spectral measure, the UBT action or ghosts. Lean/CI, bilingual semantic review and independent adversarial scrutiny: PENDING. Keep \`C_working\`, do not merge into canonical claims.
+**Verification status:** exact local SymPy verifier `tools/verify_inverse_spin2_little_group_gate_2026_11_21.py` checks (1)-(3), the SU(2) representation, the independent-connection comparison, and a finite free-Fock number-sector diagnostic. These tests do **not** verify an interacting pole, a full field-theory spectral measure, the UBT action or ghosts. Lean/CI, bilingual semantic review and independent adversarial scrutiny: PENDING. Keep `C_working`, do not merge into canonical claims.
