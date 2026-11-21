@@ -1,0 +1,94 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-21",
+  "claim_or_decision_id": "RH-THETA-UBT-TRANSFER-GATES-2026-11-21",
+  "summary": "A finite 4-mode Fourier analogy to Alpoge's automorphic theta lifts preserves the existing UBT indefinite mode-space B and Omega, but neither repairs the negative signature nor preserves the canonical spacetime metric at fixed psi. True arithmetic theta-lift transfer stays open.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_proposal",
+      "actor": "human",
+      "description": "Explore whether new techniques in the publicly announced RH proof open previously blocked UBT mathematical routes, while deprioritizing a duplicate RH proof.",
+      "evidence_ids": [
+        "current-discussion"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Separate automorphic theta lifts from ordinary Fourier and heat-kernel transformations; construct finite-mode symplectic and metric falsification tests without changing UBT architecture.",
+      "evidence_ids": [
+        "note-en",
+        "alpoge-source",
+        "existing-ubt-symplectic"
+      ]
+    },
+    {
+      "kind": "ai_verification",
+      "actor": "ai",
+      "description": "Implement six deterministic exact SymPy checks including a flat-metric counterexample to physical Fourier gauge invariance.",
+      "evidence_ids": [
+        "test-script"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "current-discussion",
+      "class": "discussion_context",
+      "locator": "2026-11-21 current conversation; raw transcript not published",
+      "original_checked": true,
+      "supports": "The author requested an investigation and directed work on UBT transfer possibilities.",
+      "limitations": "No private transcript, message permalink or independent claim of originating the math is published."
+    },
+    {
+      "id": "alpoge-source",
+      "class": "public_primary_source",
+      "locator": "https://alpo.ge/remark.pdf",
+      "original_checked": true,
+      "supports": "Announcement and motivation of iterated theta lifts in RH argument.",
+      "limitations": "Does not derive any UBT transfer."
+    },
+    {
+      "id": "existing-ubt-symplectic",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/invariant_symplectic_theta.en.md",
+      "original_checked": true,
+      "supports": "Pre-existing invariant indefinite B and symplectic Omega construction.",
+      "limitations": "Not a selected physical Hamiltonian."
+    },
+    {
+      "id": "note-en",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/alpoge_theta_fourier_transfer_2026_11_21.en.md",
+      "original_checked": true,
+      "supports": "Explicit assumptions, analytic test and transfer gates.",
+      "limitations": "Working draft pending Lean and independent semantic review."
+    },
+    {
+      "id": "test-script",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/tests/test_alpoge_theta_fourier_transfer.py",
+      "original_checked": true,
+      "supports": "Six exact finite-dimensional consistency and negative-control tests.",
+      "limitations": "Does not verify true automorphic lifts or full UBT dynamics."
+    }
+  ],
+  "rejected_alternatives": [
+    "Calling a 4-mode DFT an automorphic theta lift",
+    "Assuming symplectic form invariance implies invariant canonical metric",
+    "Claiming Gaussian heat smoothing automatically unitary",
+    "Claiming indefinite mode-space B has become a positive Hamiltonian"
+  ],
+  "verification": {
+    "status": "locally_checked",
+    "artifacts": [
+      "research_tracks/action_selection/tests/test_alpoge_theta_fourier_transfer.py"
+    ],
+    "limitations": "Six local SymPy 1.14.0 tests passed on 2026-11-21; no Lean compilation, independent translation semantics, CI, actual lift or UBT physical closure verified."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "Research analogy and architecture-falsification gate only; canonical single-Theta and GR framework unchanged."
+}
