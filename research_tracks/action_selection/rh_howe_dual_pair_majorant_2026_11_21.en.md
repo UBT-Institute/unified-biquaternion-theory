@@ -88,7 +88,21 @@ is invariant under both the Lorentz group and \(SL(2,\mathbb R)\). With \(\iota_
 \]
 The family \(H_f=f(\Delta)\) has the same dual-pair symmetry and distinct flows \(\dot X=f'(\Delta)X_{\Delta}\), so **even the full dual pair does not uniquely select dynamics**. No spatial derivatives or physical UBT constraints appear here.
 
+<!-- BILINGUAL-UNIT: rh-howe.lorentz-orbit -->
+## Exact Lorentz-moment-map obstruction to physical dynamics
+
+The apparently nontrivial flow above has a decisive further interpretation. Define the **composite** Lorentz Lie-algebra element
+\[
+A=u(v^T\eta)-v(u^T\eta),\qquad A^T\eta+\eta A=0.
+\]
+Direct substitution gives
+\[
+\boxed{\dot u=Au,\qquad\dot v=Av,\qquad \dot A=0,\qquad
+\Delta=-\frac12\operatorname{tr}(A^2).}
+\]
+Thus the entire finite-dimensional flow of \(H=\Delta\) is the Lorentz orbit \((u(t),v(t))=(e^{tA}u(0),e^{tA}v(0))\). The same holds for \(H=f(\Delta)\), with \(A\) replaced by \(f'(\Delta)A\), since \(\Delta\) is constant. The change of \((u,v)\) is therefore **tangent to the Lorentz transformation orbit**. If full UBT Dirac constraints make these Lorentz directions gauge, the induced physical flow on the gauge quotient is **zero**. This is a scoped no-go for selecting genuine physical dynamics from a function of the Gram/Casimir invariant alone. The UBT action and full first-class constraint generators have **not** been derived, so the gauge interpretation is conditional. The exact orbit identity itself is algebraic.
+
 <!-- BILINGUAL-UNIT: rh-howe.verify -->
 ## Verification and next strict gate
 
-Reproducible source: \`research_tracks/action_selection/tests/test_rh_howe_dual_pair.py\` (15 exact SymPy tests spanning symplectic invariance, Lorentz commutants, loss of \(B\), sharp-metric and Lorentz-real-slice checks, positive-majorant covariance, divergent bare sum, Gram determinant, and Hamiltonian nonuniqueness). A separate hand derivation checks the \(R_n\) rest-frame positivity and divergence along a spacelike lattice ray. **LEAN-PENDING**, no verified physical action or real automorphic arithmetic lift. **Next gate:** derive \(n\) and the lift's transform law from canonical tetrad/connection data, then test whether any proposed nontrivial projector commutes with the physical constraints. Do not merge as validated physics; mathematical status only.
+Reproducible source: \`research_tracks/action_selection/tests/test_rh_howe_dual_pair.py\` (16 exact SymPy tests spanning symplectic invariance, Lorentz commutants, loss of \(B\), sharp-metric and Lorentz-real-slice checks, positive-majorant covariance, divergent bare sum, Gram determinant, and Hamiltonian nonuniqueness). A separate hand derivation checks the \(R_n\) rest-frame positivity and divergence along a spacelike lattice ray. **LEAN-PENDING**, no verified physical action or real automorphic arithmetic lift. **Next gate:** derive \(n\) and the lift's transform law from canonical tetrad/connection data, then test whether any proposed nontrivial projector commutes with the physical constraints. Do not merge as validated physics; mathematical status only.
