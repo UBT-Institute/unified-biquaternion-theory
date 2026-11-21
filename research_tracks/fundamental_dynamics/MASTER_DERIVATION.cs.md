@@ -90,3 +90,10 @@ Další přijatý výzkumný přírůstek musí spočítat **explicitní jakobi�
 | Konečná S_UBT[Theta] | canonical/ACTION.en.md | NOT FINALIZED |
 
 Nezaměňovat sloučení na GitHubu či úspěch testů s fyzikálním důkazem.
+
+
+## 7. Podmíněný reprezentační test helicity 2 (2026-11-21)
+
+Nová přesná výzkumná poznámka \`INVERSE_SPIN2_LITTLE_GROUP_DYNAMICS_GATE_2026_11_21.cs.md\` zpřesňuje starší nulový TT výsledek pro holý gradient. Na rotačně invariantním pozadí s hladkou rotačně ekvivariantní **kompozitní** mapou a standardní kongruenční reprezentací jediné matice má vstup \(\delta\Theta\in M_2(\mathbb C)\) váhy malé grupy \(0,\pm1\), zatímco prostorový TT má váhy \(\pm2\). Lineární mapa \(L\) splňující \(J_{\rm TT}L=LJ_{\rm in}\) tedy musí být nulová. Přesný audit matice \(16\times16\) má hodnost \(16\). Uzavírá se **pouze** podmíněná otázka lineárního přenosu v této reprezentaci; nikoli výběr fundamentální akce.
+
+**Rozcestí dynamiky:** nejprve prověřit úplný Jacobiho/theta/tenzorový rozvoj a jeho fyzikální rotační reprezentaci; nepředpokládat, že každý mód je samostatným polem spinu 2. Zůstane-li kompletní uzamčený reálný \(8\)-složkový nosič, zkoumat skutečně interagující **kolektivní** korelátor spinu 2; volný normálně uspořádaný bilineár nemá překryv s elementárním 1-částicovým stavem. Weinbergovy–Wittenovy předpoklady i úplný fyzikální Hamiltonian zůstávají OPEN. Starší ADM větev s volnými metrickými variacemi se bez vyřešení tohoto testu nesmí označit za mikroskopický graviton \(\Theta\).
