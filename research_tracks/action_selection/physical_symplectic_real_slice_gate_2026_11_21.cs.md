@@ -50,7 +50,6 @@ V inerciální oblasti s **triviální konexí** platí \(D_\mu=\partial_\mu\). 
 \[
 \partial_\mu U=0,\qquad
 \partial_\mu V=\sqrt{\mathcal N_0}\,E_\mu/i
-\quad\text{(v odpovídající hermitovské bázi).}
 \]
 Proto je \(U\) na každé souvislé oblasti konstantní. Linearizované přípustné variace splňují \(\partial_\mu\delta U=0\). Mají-li na nekompaktní inerciální prostorové nadploše kompaktní prostorovou podporu, musí být \(\delta U=0\). Potom
 \[
