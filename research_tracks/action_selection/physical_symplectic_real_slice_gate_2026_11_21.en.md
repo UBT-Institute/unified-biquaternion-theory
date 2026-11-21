@@ -50,7 +50,6 @@ In a **trivial-connection** inertial patch, \(D_\mu=\partial_\mu\). The canonica
 \[
 \partial_\mu U=0,\qquad
 \partial_\mu V=\sqrt{\mathcal N_0}\,E_\mu/i
-\quad\text{(in the corresponding Hermitian basis).}
 \]
 Thus \(U\) is constant on every connected patch. Linearized allowed variations obey \(\partial_\mu\delta U=0\). For variations with compact spatial support on a noncompact inertial slice this implies \(\delta U=0\). Consequently
 \[
