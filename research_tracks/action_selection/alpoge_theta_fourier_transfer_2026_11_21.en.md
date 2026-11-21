@@ -11,99 +11,84 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-# Alpöge RH proof: finite Fourier/theta transfer gates for one UBT field
+# Alpöge RH proof: bounded theta/Fourier transfer into UBT
 
-**Recorded 2026-11-21 · C_working · research only · LEAN-PENDING.**
-This note tests a *finite Fourier analogue*, **not** Alpöge's arithmetic theta lift, and does not alter the canonical single-field tetrad, metric, or action. No UBT physics gap is closed.
+**2026-11-21 · C_working · research only · LEAN-PENDING.** This note tests a finite Fourier analogy, **not** the arithmetic automorphic theta lift in Alpöge's argument. The locked one-field UBT tetrad, metric and action are unchanged. No physical gap is closed.
 
 <!-- BILINGUAL-UNIT: alpoge-theta-transfer.sources -->
-## Sources and separation of mechanisms
+## Sources and mechanism boundary
 
-Alpöge's [original remark](https://alpo.ge/remark.pdf) proposes iterated theta lifts for an arithmetic multiplicity mechanism in a Stepanov-type GRH proof. The independent [proof architecture guide](https://nasqret.github.io/riemann-rev/guide/proof-guide.pdf) identifies CM fields, unitary groups, theta kernels, Hecke characters, cohomological and slope bounds. [Sutherland's audit](https://math.mit.edu/~drew/grh/) checks the Lean statements, including RH and Dirichlet GRH, but does not supply a transfer theorem for UBT.
-
-An ordinary discrete Fourier transform, Jacobi theta summation, Gaussian heat smoothing, and the automorphic theta *lift* are different operations. The experiment below covers only the first and a nonunitary Gaussian control. Any connection to the actual iterated lift remains **OPEN**.
+[Alpöge's announcement](https://alpo.ge/remark.pdf) describes iterated theta lifts replacing an arithmetic multiplicity device in a Stepanov-type proof of RH and Dirichlet GRH. The independent [architecture guide](https://nasqret.github.io/riemann-rev/guide/proof-guide.pdf) discusses CM fields, unitary groups, theta kernels, Hecke characters, slopes and cohomology. [Sutherland's audit](https://math.mit.edu/~drew/grh/) verifies the formal statements and proof objects, not any UBT transfer. Ordinary DFT, Jacobi theta identities, Gaussian heat kernels and automorphic theta lifts are distinct mechanisms.
 
 <!-- BILINGUAL-UNIT: alpoge-theta-transfer.setup -->
-## Exact toy space and invariants
+## Exact finite-mode setup
 
-Use the *existing* faithful matrix representation of one biquaternion:
-[
-Xinmathbb Bcongoperatorname{Mat}_2(mathbb C),qquad
-B(X,Y)=operatorname{Re}operatorname{Tr}[operatorname{adj}(X)Y^dagger],
-qquad JX=iX,qquad Omega(X,Y)=B(X,JY).
-]
-Here (operatorname{adj}) is the (2	imes2) adjugate, not the Hermitian adjoint. The real quadratic form (B) has inertia ((2+,6-)). (Omega) is alternating and nondegenerate; neither statement makes (B) a positive physical energy.
+Use the existing single biquaternion's faithful matrix form:
+\[
+X\in\mathbb B\cong\operatorname{Mat}_2(\mathbb C),\quad
+B(X,Y)=\operatorname{Re}\operatorname{Tr}[\operatorname{adj}(X)Y^\dagger],\quad
+JX=iX,\quad \Omega(X,Y)=B(X,JY).
+\]
+Here \(\operatorname{adj}\) is the \(2\times2\) adjugate, NOT the Hermitian adjoint. The real form \(B\) has inertia \((2+,6-)\); \(\Omega\) is nondegenerate and antisymmetric, not a positive physical energy.
 
-Take four *mode coefficients* (X_ninmathbb B), (n=0,1,2,3), without introducing a new fundamental field. Set
-[
-mathcal B(X,Y)=sum_{n=0}^3 B(X_n,Y_n),quad
-mathcalOmega(X,Y)=sum_{n=0}^3 Omega(X_n,Y_n),
-quad
-(F_4X)_k=rac12sum_{n=0}^3e^{-2pi i kn/4}X_n.
-]
-This is a fixed-coefficient, finite-dimensional test; it does not assume that arbitrary mode mixing is a gauge transformation or that it preserves strict holomorphy in (	au=t+ipsi).
+Take four coefficients \(X_n\in\mathbb B\), \(n=0,1,2,3\), of the same field, without introducing another fundamental field:
+\[
+\mathcal B(X,Y)=\sum_{n=0}^3B(X_n,Y_n),\quad
+\mathcal\Omega(X,Y)=\sum_{n=0}^3\Omega(X_n,Y_n),\quad
+(F_4X)_k=\frac12\sum_{n=0}^3e^{-2\pi i kn/4}X_n.
+\]
+This fixed finite-mode toy does not presume that arbitrary mode mixing is a physical gauge transformation or preserves strict \(\tau=t+i\psi\) holomorphy.
 
 <!-- BILINGUAL-UNIT: alpoge-theta-transfer.positive -->
-## Algebraic result: exact preservation of the mode-space forms
+## Exact algebraic covariance — not physical positivity
 
-**ALGEBRA-EXACT, conditional on this toy space.** Because (F_4^dagger F_4=I_4) and (F_4) acts complex-linearly on the mode index, it preserves both forms:
-[
-oxed{mathcal B(F_4X,F_4Y)=mathcal B(X,Y)},qquad
-oxed{mathcalOmega(F_4X,F_4Y)=mathcalOmega(X,Y)},qquad
-F_4^4=I.
-]
-The same proof applies to normalized (N)-mode DFTs with identical internal (B) on every mode. For four modes, the total real inertia is ((8+,24-)), unchanged by the transform. Thus exact symplectic covariance **does not cure an indefinite kinetic/Hamiltonian form**. It is not an on-shell positivity statement.
+**ALGEBRA-EXACT under the stated toy assumptions.** Since \(F_4^\dagger F_4=I_4\) and Fourier mixing is complex-linear, it preserves both mode-space forms:
+\[
+\boxed{\mathcal B(F_4X,F_4Y)=\mathcal B(X,Y)},\quad
+\boxed{\mathcal\Omega(F_4X,F_4Y)=\mathcal\Omega(X,Y)},\quad F_4^4=I.
+\]
+The same argument works for normalized \(N\)-mode DFTs with identical internal \(B\). Four modes have real inertia \((8+,24-)\). A unitary Fourier change of representation does **not** remove negative directions or prove bounded Hamiltonian energy.
 
-<!-- BILINGUAL-UNIT: alpoge-theta-transfer.negative -->
-## Two decisive negative controls
+<!-- BILINGUAL-UNIT: alpoge-theta-transfer.controls -->
+## Two negative controls
 
-1. The positive Gaussian mode filter (G=operatorname{diag}(2^{-n^2})), acting on all four biquaternion coefficients, is **not** symplectic:
-[
-oxed{mathcalOmega(GX,GY)
-eqmathcalOmega(X,Y)}
-]
-in general. A heat-kernel weight cannot be silently treated as a unitary/Weil symmetry.
+1. Gaussian mode damping \(G=\operatorname{diag}(2^{-n^2})\) is not symplectic in general:
+\[
+\boxed{\mathcal\Omega(GX,GY)\neq\mathcal\Omega(X,Y)}.
+\]
+A heat-kernel weight is not automatically a unitary Weil symmetry.
 
-2. The DFT is **not** a symmetry of the canonical UBT metric at fixed (psi), even though it preserves (mathcalOmega). In the simple trivial-connection, (mathcal N_0=1) flat witness, put all of the spacetime-dependent (Theta_{m SR}(x)) in mode (n=0):
-[
-Theta(x,psi)=Theta_{m SR}(x),quad
-Theta'(x,0)=sum_{k=0}^3(F_4X)_k=2Theta_{m SR}(x),
-quad E'_mu(x,0)=2E_mu(x,0),
-]
-[
-oxed{g'_{mu
-u}(x,0)=4g_{mu
-u}(x,0)}
-]
-using the *unchanged* canonical (E_mu=mathcal N_0^{-1/2}D_muTheta) and central sharp anticommutator. This refutes the assertion that finite-mode Fourier covariance by itself implies a physical gauge symmetry. The flat witness is kinematical, not a solution of a selected UBT action.
-
-<!-- BILINGUAL-UNIT: alpoge-theta-transfer.gates -->
-## Actual transfer gates — all OPEN
-
-A proposed transfer of Alpöge's **arithmetic** theta-lift mechanism must first supply (i) a stated representation space and the actual lift kernel/intertwiner, with domains and convergence; (ii) covariance of the existing two-sided (D_muTheta=partial_muTheta+A_muTheta-Theta B_mu), including any mode mixing of (A_mu,B_mu); (iii) preservation or a derived transformation law of the *central sharp metric*, not merely of (mathcalOmega); (iv) a selected, constrained Hamiltonian and positivity test; and (v) a concrete UBT-specific consequence that fails a trivial Fourier/heat-kernel null model. An arithmetic divisibility/slope argument is not yet a physical propagator or gravitational dynamics.
-
-The existing rank-one equivariant symplectic curvature no-go remains applicable to its specified scalar ansatz: a mode-space DFT does not create the rank-six bivector curvature coefficient required by Palatini. No new degree of freedom, action, physical symmetry, mass prediction or ghost-free claim is introduced.
+2. Even though DFT preserves \(\mathcal\Omega\), it does not generally preserve the canonical sharp metric at fixed \(\psi\). With trivial connection and \(\mathcal N_0=1\), put all of the flat affine field in the zero mode:
+\[
+\Theta(x,\psi)=\Theta_{\rm SR}(x),\quad
+\Theta'(x,0)=\sum_{k=0}^3(F_4X)_k=2\Theta_{\rm SR}(x),\quad
+E'_\mu(x,0)=2E_\mu(x,0),
+\]
+\[
+\boxed{g'_{\mu\nu}(x,0)=4g_{\mu\nu}(x,0)}.
+\]
+This uses the unchanged \(E_\mu=\mathcal N_0^{-1/2}D_\mu\Theta\) and central sharp anticommutator. It is a kinematic flat counterexample, not a solution of a selected action.
 
 <!-- BILINGUAL-UNIT: alpoge-theta-transfer.weil -->
-## Closer mathematical door: Lorentz covariance inside the symplectic group
+## Closer mathematical route: Lorentz group inside Sp(8,R)
 
-The existing Lorentz congruence (X\mapsto SXS^\dagger), (S\in SL(2,\mathbb C)), preserves (B) and commutes with (J); hence it gives a real symplectic representation (SL(2,\mathbb C)\to Sp(8,\mathbb R)) on the same eight real field components. This is closer to the [standard Weil/oscillator representation](https://www.math.iitb.ac.in/~dprasad/weil-repn.pdf) underlying theta correspondence than the finite DFT alone, but **not** yet an identification with Alpöge's unitary-group theta kernel.
+The existing congruence \(X\mapsto SXS^\dagger\), \(S\in SL(2,\mathbb C)\), preserves \(B\) and commutes with \(J\). It therefore defines a real symplectic representation \(SL(2,\mathbb C)\to Sp(8,\mathbb R)\) on the same eight real components. This is closer to the [standard Weil/oscillator construction](https://www.math.iitb.ac.in/~dprasad/weil-repn.pdf) underlying theta correspondence, **not** an identification with Alpöge's arithmetic theta lift.
 
-There is an exact positivity obstruction *on the finite component carrier*. For
+There is an exact obstruction to a positive Lorentz-invariant norm **on the finite component space**. Take
 \[
-S=\operatorname{diag}(2,1/2),\quad
-X_*=\operatorname{diag}(1,0),\quad
-S X_* S^\dagger=4X_*,
+S=\operatorname{diag}(2,1/2),\quad X_*=\operatorname{diag}(1,0),\quad
+SX_*S^\dagger=4X_*.
 \]
-any positive-definite Lorentz-invariant quadratic form (P) would require (P(X_*,X_*)=P(4X_*,4X_*)=16P(X_*,X_*)), a contradiction. Therefore **no positive-definite inner product invariant under this full congruence action exists on the original finite-dimensional field-value carrier**. This does not rule out a physical positive Hilbert space of states.
+Any positive-definite invariant quadratic form \(P\) would obey \(P(X_*,X_*)=P(4X_*,4X_*)=16P(X_*,X_*)\), contradicting \(P(X_*,X_*)>0\).
 
-For a real eight-dimensional symplectic vector space the standard metaplectic double cover (Mp(8,\mathbb R)) has a unitary oscillator representation on (L^2(\mathbb R^4)); see the [standard mathematical construction](https://www.math.iitb.ac.in/~dprasad/weil-repn.pdf). Consequently the *mathematical representation-theory door* is available without adding a second fundamental UBT field: **quantize the symplectic value space and test the induced Lorentz action**. Yet the oscillator Hilbert space is not the same as a Lorentz-invariant positive norm on (X), nor is it a derived UBT quantization, physical spectrum, action, polarization, or theta lift. Those bridges stay **OPEN**.
+The standard real symplectic space of dimension eight does admit a metaplectic cover \(Mp(8,\mathbb R)\) with an **infinite-dimensional unitary oscillator representation** on \(L^2(\mathbb R^4)\). Thus a mathematical route exists: explore quantization of the existing symplectic value space and the induced Lorentz action, **without adding another UBT field**. The state-space Hilbert norm is not a positive invariant norm on the finite field component \(X\). No physical polarization, dynamics, propagator, spectrum or UBT theta lift is derived.
+
+<!-- BILINGUAL-UNIT: alpoge-theta-transfer.gates -->
+## Conditions for any genuine RH-to-UBT transfer — OPEN
+
+An actual arithmetic theta-lift transfer would require: (i) an explicit representation, kernel, intertwining map, domain and convergence; (ii) compatibility with the locked two-sided \(D_\mu\Theta=\partial_\mu\Theta+A_\mu\Theta-\Theta B_\mu\); (iii) a derived law for the central sharp metric; (iv) physical constraints, Hamiltonian and positivity; (v) a falsifiable UBT consequence absent from a trivial Fourier/heat-kernel null model. The prior scalar equivariant-curvature rank-one no-go remains valid in its tested ansatz; DFT cannot itself supply Palatini's six-dimensional bivector coefficient.
 
 <!-- BILINGUAL-UNIT: alpoge-theta-transfer.verification -->
-## Verification and status
+## Verification and limitations
 
-Independent analytic steps: DFT unitarity, complex-linearity, the inertia of (B), and direct evaluation of the sharp metric in a flat witness. The deterministic SymPy exact-arithmetic test is `research_tracks/action_selection/tests/test_alpoge_theta_fourier_transfer.py`; command:
-```sh
-python -m unittest research_tracks.action_selection.tests.test_alpoge_theta_fourier_transfer -v
-```
-Seven tests passed locally with SymPy 1.14.0 on 2026-11-21: signature, order-four DFT, (B/Omega) covariance, non-symplectic Gaussian, surviving negative direction, and metric counterexample. This tests the encoded finite-dimensional identities only; no actual automorphic lift, UBT PDE, Einstein equations, constrained spectrum or Alpöge theorem is independently re-proved. **LEAN-PENDING**: no Lean file was compiled for this new note. No canon/status promotion and no semantic translation approval is claimed.
+The analytic derivations use DFT unitarity, exact boost congruence and the sharp metric. Seven deterministic tests passed locally with SymPy 1.14.0 on 2026-11-21: indefinite signature, order-four DFT, preservation of \(B/\Omega\), Gaussian non-symplecticity, persistence of a negative direction, Lorentz-boost positivity obstruction and a sharp-metric counterexample. Source: research_tracks/action_selection/tests/test_alpoge_theta_fourier_transfer.py. These tests verify only the encoded finite-dimensional examples, not Alpöge's arithmetic argument, the full Weil correspondence, UBT field equations, Einstein dynamics or a constrained physical spectrum. **LEAN-PENDING:** no Lean proof for this note was compiled. No canonical status upgrade or independent bilingual-semantic approval is claimed.
