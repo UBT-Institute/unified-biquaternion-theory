@@ -44,11 +44,11 @@ Identify a **specific arithmetic theta-lift kernel** \(\mathcal L\) and its sour
 \[
 \mathcal L D_\mu=D'_\mu\mathcal L,\qquad
 \mathcal L(\ker\mathcal C)\subseteq\ker\mathcal C',\qquad
-H_{\rm phys}\ge0\quad\text{on the constrained quotient}.
+H_{\rm phys}\big|_{\ker\mathcal C/\mathcal G}\ge0.
 \]
 These equations are **tests to pose, not results**. A unitary oscillator representation, an arithmetic positive Fourier weight and a positive physical energy are three different properties. If such a genuine intertwiner cannot be formulated without adding ad hoc UBT ontology, close this transfer direction as unsupported.
 
 <!-- BILINGUAL-UNIT: rh-transfer.status -->
 ## Verification and status
 
-Exact analytic and SymPy 1.14.0 checks confirm the displayed finite-dimensional Hamilton equation and conservation identity. Reproducible test source: research_tracks/action_selection/tests/test_rh_theta_lift_selector.py. This is not an implementation of the real RH proof, its theta lifts, an on-shell physical UBT dynamics or a ghost cure. **LEAN-PENDING; independent bilingual semantic review pending. Dynamics OPEN.**
+Five exact local SymPy 1.14.0 checks confirm the displayed finite-dimensional Hamilton equation and conservation identity. Reproducible test source: research_tracks/action_selection/tests/test_rh_theta_lift_selector.py. This is not an implementation of the real RH proof, its theta lifts, an on-shell physical UBT dynamics or a ghost cure. **LEAN-PENDING; independent bilingual semantic review pending. Dynamics OPEN.**
