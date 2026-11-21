@@ -13,7 +13,7 @@ UBT-AI-PROVENANCE-END
 # Reverzní výběr dynamiky: překážka grupy helicity pro lineární graviton z jediné bikvaternionové hodnoty
 
 **21. listopadu 2026. C_working / L0 přesná podmíněná algebra; dynamika celé Θ OTEVŘENA (OPEN).**
-Jde o konkrétní odpověď na dosavadní mezeru v analýze hlavního symbolu v \`BARE_THETA_TT_PRINCIPAL_SYMBOL.en.md\` a \`BOOST_CONNECTION_TT_IMAGE.en.md\`. Respektujeme uzamčený axiom A pro jedinou hodnotu \(\Theta\in\mathbb C\otimes\mathbb H\simeq M_2(\mathbb C)\). **Nejde** o nepodmíněný no-go pro neperturbativní vázané stavy, anizotropní pozadí, fyzikálně jiný tenzorový nosič či emergentní gravitační kalibrační symetrii.
+Jde o konkrétní odpověď na dosavadní mezeru v analýze hlavního symbolu v `BARE_THETA_TT_PRINCIPAL_SYMBOL.en.md` a `BOOST_CONNECTION_TT_IMAGE.en.md`. Respektujeme uzamčený axiom A pro jedinou hodnotu \(\Theta\in\mathbb C\otimes\mathbb H\simeq M_2(\mathbb C)\). **Nejde** o nepodmíněný no-go pro neperturbativní vázané stavy, anizotropní pozadí, fyzikálně jiný tenzorový nosič či emergentní gravitační kalibrační symetrii.
 
 ## Předpoklady a přesná věta o malé grupě
 
@@ -39,7 +39,7 @@ Jde o podmíněnou překážku **celé kompozitní konexe** v lineárním zobraz
 
 ## Proč není nezávislá boostová konexe protipříkladem
 
-Starší přesný lokální komparátor \`BOOST_CONNECTION_TT_IMAGE.en.md\` volí nezávisle \(\delta\omega_i{}^j{}_0\) tak, aby zreprodukoval zadanou TT matici \(H_{ij}\) v bodě:
+Starší přesný lokální komparátor `BOOST_CONNECTION_TT_IMAGE.en.md` volí nezávisle \(\delta\omega_i{}^j{}_0\) tak, aby zreprodukoval zadanou TT matici \(H_{ij}\) v bodě:
 \[
 \delta e_i{}^j=\frac{v^0}{\sqrt{\mathcal N_0}}\delta\omega_i{}^j{}_0,\qquad
 \delta\omega_i{}^j{}_0=\frac{\sqrt{\mathcal N_0}}{2v^0}H_{ij}.
@@ -67,6 +67,6 @@ Musíme také zkontrolovat **Weinbergův–Wittenův test**: pokud platí jeho k
 
 **D3. Rozhodovací větev:** buď (A) odvodit revidovaný fyzikální nosič a vazby připouštějící helicitu \(2\) už na lineární úrovni bez dosazení nezávislé Einsteinovy metriky; nebo (B) zachovat jediný nosič \(M_2(\mathbb C)\) a odvodit negaussovský kvantový **kolektivní** korelátor spinu \(2\) s izolovaným bezhmotným pólem, pozitivitou, identitami podobnými difeomorfním Wardovým identitám a auditem předpokladů Weinberga–Wittena. Pouhá změna klasického skalárního potenciálu nebo výběr konexe v rámci (i)-(iv) neodstraní (2).
 
-**D4. Akce/Hamiltonian:** v přeživší větvi vypočítat skutečnou kompozitní akci \(\Theta\), úplný Diracův/kalibračně redukovaný Hessian, \(2\) pozitivně energetické helicity, konzistentní vazbu hmoty a \(G\). Podmíněný Einsteinův poměr ADM závorek v \`full_spatial_dynamics_2026_10.en.md\` platí až poté, co odvodíme odpovídající neomezený metrický fázový prostor.
+**D4. Akce/Hamiltonian:** v přeživší větvi vypočítat skutečnou kompozitní akci \(\Theta\), úplný Diracův/kalibračně redukovaný Hessian, \(2\) pozitivně energetické helicity, konzistentní vazbu hmoty a \(G\). Podmíněný Einsteinův poměr ADM závorek v `full_spatial_dynamics_2026_10.en.md` platí až poté, co odvodíme odpovídající neomezený metrický fázový prostor.
 
-**Ověření:** exaktní lokální SymPy kontrola \`tools/verify_inverse_spin2_little_group_gate_2026_11_21.py\` prověřuje (1)-(3), reprezentaci SU(2), komparátor nezávislé konexe a konečněrozměrný diagnostický výpočet Fockových sektorů. Testy **nedokazují** interagující pól, spektrální míru celé teorie pole, akci UBT ani nepřítomnost ghostů. Lean/CI, sémantická dvojjazyčná kontrola a nezávislé adversariální ověření: ČEKÁ (PENDING). Zachovat \`C_working\`; nemergovat jako kanonické tvrzení.
+**Ověření:** exaktní lokální SymPy kontrola `tools/verify_inverse_spin2_little_group_gate_2026_11_21.py` prověřuje (1)-(3), reprezentaci SU(2), komparátor nezávislé konexe a konečněrozměrný diagnostický výpočet Fockových sektorů. Testy **nedokazují** interagující pól, spektrální míru celé teorie pole, akci UBT ani nepřítomnost ghostů. Lean/CI, sémantická dvojjazyčná kontrola a nezávislé adversariální ověření: ČEKÁ (PENDING). Zachovat `C_working`; nemergovat jako kanonické tvrzení.
