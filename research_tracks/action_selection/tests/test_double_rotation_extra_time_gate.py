@@ -129,5 +129,19 @@ class HypertravelNullControls(unittest.TestCase):
         self.assertEqual(sp.simplify(curvature.subs(y,0)-4*sp.log(2)), 0)
 
 
+    def test_warped_shortcut_violates_null_convergence_at_turning_point(self):
+        # For ds²=-dt²+a(y)²dx²+dy², null l=dt+dy gives
+        # Ric(l,l)=-a''(y)/a(y). Einstein gravity with positive G then
+        # requires NEC violation when this is negative.
+        y = sp.symbols('y', real=True)
+        a = sp.exp(-sp.log(2)*y*y)
+        null_ricci = sp.simplify(-sp.diff(a, y, 2)/a)
+        at_bulk = sp.simplify(null_ricci.subs(y, 1))
+        self.assertEqual(sp.simplify(at_bulk-
+                         (2*sp.log(2)-4*sp.log(2)**2)), 0)
+        self.assertTrue(bool(at_bulk < 0))
+        self.assertGreater(float(-at_bulk), 0.5)
+
+
 if __name__ == '__main__':
     unittest.main()
