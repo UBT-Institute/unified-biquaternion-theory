@@ -27,3 +27,7 @@ def test_independent_connection_comparator():
 
 def test_free_gaussian_fock_number_gate():
     runpy.run_path(str(SOURCE))["gaussian_two_particle_gate"]()
+
+
+def test_free_massless_gaussian_bubble_no_pole():
+    runpy.run_path(str(SOURCE))["gaussian_massless_bubble_gate"]()
