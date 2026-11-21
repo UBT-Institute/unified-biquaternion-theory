@@ -65,6 +65,15 @@ Nové symboly \(z,L,n\) jsou pomocná data tohoto **matematického testu**, **ni
 
 Kandidátní časupodobný směr lze číst z **existující** nedegenerované tetrády a jednotkové normály **zvolené** prostorupodobné Cauchyho nadplochy. Nepřidáváme tím fundamentální pole, ale majorant závisí na foliaci. Axiómy UBT nevybírají foliaci ani nezaručují nezávislost fyzikálních pozorovatelných na její volbě. Kladnost \(R_n\) zaručuje konvergenci jádra, **nikoli** kladný Hamiltonián, správné Diracovy vazby nebo nepřítomnost ghostů. Zdrojový a cílový reprezentační prostor liftu, integrační cyklus, proplétající vztah s dvoustranným \(D_\mu\Theta\), invariance centrální sharp metriky a generátor časového vývoje se musí odvodit nezávisle.
 
+<!-- BILINGUAL-UNIT: rh-howe.derivative -->
+## Další překážka: majorant obecně není kovariantně konstantní
+
+I v plochém Minkowského prostoru při pevné inerciální konexi mění proměnná časupodobná normála \(n(\alpha(x))=(\cosh\alpha,\sinh\alpha,0,0)\) majorant \(R_n\). Pro \(k=(1,1,0,0)\) platí
+\[
+\left.\frac{\partial}{\partial\alpha}(k^TR_{n(\alpha)}k)\right|_{\alpha=0}=-4\neq0.
+\]
+Obyčejná prostoročasová derivace tedy při \(\partial_\mu\alpha\ne0\) nekomutuje s gaussovským theta jádrem závislým na foliaci. Jde o přesný **protipříklad pro uvedenou derivaci a foliaci**; správně odvozená konexe na prostoru polarizací by mohla dodat kompenzační členy. Žádná taková fyzikální konexe dosud odvozena není, takže tvrzení \(\mathcal L D_\mu=D'_\mu\mathcal L\) zůstává OPEN.
+
 <!-- BILINGUAL-UNIT: rh-howe.invariant -->
 ## Přesný invariant duálního páru a přetrvávající nejednoznačnost Hamiltoniánu
 
@@ -82,4 +91,4 @@ Rodina \(H_f=f(\Delta)\) má tutéž symetrii duálního páru a různé toky \(
 <!-- BILINGUAL-UNIT: rh-howe.verify -->
 ## Ověření a další přísná podmínka
 
-Reprodukovatelný zdroj: \`research_tracks/action_selection/tests/test_rh_howe_dual_pair.py\` (13 přesných SymPy testů zahrnujících symplektickou invarianci, Lorentzovy komutanty, ztrátu \(B\), kontroly sharp metriky a reálné Lorentzovy větve, kovarianci kladného majorantu, divergenci holé sumy, Gramův determinant a nejednoznačnost Hamiltoniánu). Samostatný analytický důkaz ověřuje kladnost \(R_n\) v klidové soustavě a divergenci na prostorovém mřížovém paprsku. **LEAN-PENDING**, bez ověřené fyzikální akce či skutečného automorfního aritmetického liftu. **Další podmínka:** odvodit \(n\) a transformační zákon liftu z kanonické tetrády/konexe a otestovat, zda jakýkoli navržený netriviální projektor komutuje s fyzikálními vazbami. Neslučovat jako ověřenou fyziku; status je pouze matematický.
+Reprodukovatelný zdroj: \`research_tracks/action_selection/tests/test_rh_howe_dual_pair.py\` (15 přesných SymPy testů zahrnujících symplektickou invarianci, Lorentzovy komutanty, ztrátu \(B\), kontroly sharp metriky a reálné Lorentzovy větve, kovarianci kladného majorantu, divergenci holé sumy, Gramův determinant a nejednoznačnost Hamiltoniánu). Samostatný analytický důkaz ověřuje kladnost \(R_n\) v klidové soustavě a divergenci na prostorovém mřížovém paprsku. **LEAN-PENDING**, bez ověřené fyzikální akce či skutečného automorfního aritmetického liftu. **Další podmínka:** odvodit \(n\) a transformační zákon liftu z kanonické tetrády/konexe a otestovat, zda jakýkoli navržený netriviální projektor komutuje s fyzikálními vazbami. Neslučovat jako ověřenou fyziku; status je pouze matematický.
