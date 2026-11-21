@@ -58,7 +58,7 @@ Tenzorová identita \(SO(3)\), \(1\otimes1=0\oplus1\oplus2\), připouští symet
 V komparátoru volného gaussovského Fockova prostoru má normálně uspořádané kvadratické \(Q\) nulový maticový element z vakua do 1-částicového stavu a nenulový do 2-částicového stavu. Volný bilineár tedy váže 2-částicové kontinuum, ne automaticky izolovaný bezhmotný gravitonový pól. Interagující vázaná či kolektivní varianta potřebuje **dynamicky odvozený** izolovaný pól helicity \(2\) s kladným reziduem v *kalibračně invariantním souvislém TT korelátoru*, správné Wardovy identity a univerzální gravitační vazbu. Pól jsme nedokázali.
 
 
-**Ostřejší test pólu volné dynamiky.** Ve 4D eukleidovském gaussovském komparátoru, v němž jsou (3) reálné vektorové složky nezávislými bezhmotnými volnými *skalárními druhy* (nejde o model kalibračního Lorentzova vektoru), dává Wickovo párování normálně uspořádaného (Q)
+**Ostřejší test pólu volné dynamiky.** Ve 4D eukleidovském gaussovském komparátoru, v němž jsou \(3\) reálné vektorové složky nezávislými bezhmotnými volnými *skalárními druhy* (nejde o model kalibračního Lorentzova vektoru), dává Wickovo párování normálně uspořádaného \(Q\)
 
 \[
 \langle Q_{ij}(x)Q_{kl}(0)\rangle_c
@@ -71,7 +71,7 @@ D(x)=\frac1{4\pi^2 x^2}.
 \qquad \lim_{p^2\to0^+}p^2[\Pi(p^2)-\Pi(\mu^2)]=0.}\tag{4}
 \]
 
-Zde je (Pi) standardní jednou odečtená Fourierova bublina (D(x)^2) (až na lokální kontaktní členy). Její nelokální závislost je logaritmická, nikoli jednoduchý pól (1/p^2) s kladným gravitonovým reziduem. Fourierova identita plyne z Feynmanova parametrického integrálu; přiložený SymPy test kontroluje přesný TT Wickův tenzor, odečtení a nulovou limitu rezidua pólu. Jde o **no-go volné teorie**, nikoli výsledek pro interagující UBT. Interakce, vazbová dynamika nebo negaussovská kolektivní fáze jsou nutné, má-li tato větev vytvořit bezhmotnou excitaci helicity (2).
+Zde je \(\Pi\) standardní jednou odečtená Fourierova bublina \(D(x)^2\) (až na lokální kontaktní členy). Její nelokální závislost je logaritmická, nikoli jednoduchý pól \(1/p^2\) s kladným gravitonovým reziduem. Fourierova identita plyne z Feynmanova parametrického integrálu; přiložený SymPy test kontroluje přesný TT Wickův tenzor, odečtení a nulovou limitu rezidua pólu. Jde o **no-go volné teorie**, nikoli výsledek pro interagující UBT. Interakce, vazbová dynamika nebo negaussovská kolektivní fáze jsou nutné, má-li tato větev vytvořit bezhmotnou excitaci helicity \(2\).
 
 Musíme také zkontrolovat **Weinbergův–Wittenův test**: pokud platí jeho konkrétní předpoklady Lorentzovsky kovariantního zachovaného operátoru energie-hybnosti generujícího translace a vhodných bezhmotných stavů, je překážka pro interagující složené bezhmotné částice helicity \(>1\), které nesou nenulovou energii-hybnost. GR se předpokladům vyhýbá díky gravitační kalibrační struktuře. Nejde o univerzální zákaz každé difeomorfně invariantní či nelokální emergentní geometrie; výjimku musíme přesně ukázat. Původní zdroj: Weinberg a Witten, *Limits on massless particles*, Physics Letters B 96 (1980) 59–62, https://doi.org/10.1016/0370-2693(80)90212-9 ; přehled: https://arxiv.org/abs/0904.0453 .
 
