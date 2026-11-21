@@ -11,99 +11,84 @@ notice: Working material; exhaustive human review is not claimed.
 UBT-AI-PROVENANCE-END
 -->
 
-# Alpögeho důkaz RH: testy přenosu konečné Fourierovy/theta struktury do jediného pole UBT
+# Alpögeho důkaz RH: vymezený přenos theta/Fourierovy struktury do UBT
 
-**Zaznamenáno 2026-11-21 · C_working · pouze výzkum · LEAN-PENDING.**
-Tato poznámka testuje *konečnou Fourierovu analogii*, **nikoli** Alpögeho aritmetický theta lift, a nemění kanonickou tetrádu, metriku ani akci jediného pole. Žádná fyzikální mezera UBT se neuzavírá.
+**2026-11-21 · C_working · pouze výzkum · LEAN-PENDING.** Tato poznámka testuje konečnou Fourierovu analogii, **nikoli** aritmetický automorfní theta lift z Alpögeho důkazu. Uzamčená tetráda, metrika a akce UBT s jediným polem se nemění. Žádná fyzikální mezera není uzavřena.
 
 <!-- BILINGUAL-UNIT: alpoge-theta-transfer.sources -->
-## Zdroje a oddělení mechanismů
+## Zdroje a vymezení mechanismu
 
-Alpögeho [původní poznámka](https://alpo.ge/remark.pdf) navrhuje iterované theta lifty jako aritmetický mechanismus násobnosti v důkazu GRH Stepanovova typu. Nezávislý [průvodce strukturou důkazu](https://nasqret.github.io/riemann-rev/guide/proof-guide.pdf) uvádí CM tělesa, unitární grupy, theta jádra, Heckeho charaktery, kohomologické a sklonové odhady. [Sutherlandův audit](https://math.mit.edu/~drew/grh/) kontroluje tvrzení Leanu včetně RH a GRH pro Dirichletovy L-funkce, ale neposkytuje větu o přenosu do UBT.
-
-Běžná diskrétní Fourierova transformace, Jacobiho theta sumace, gaussovské tepelné vyhlazování a automorfní theta *lift* jsou různé operace. Níže uvedený experiment pokrývá pouze první operaci a neunitární gaussovskou kontrolu. Jakékoli propojení se skutečným iterovaným liftem zůstává **OPEN**.
+[Alpögeho oznámení](https://alpo.ge/remark.pdf) popisuje iterované theta lifty nahrazující aritmetický mechanismus násobnosti v důkazu RH a GRH pro Dirichletovy L-funkce Stepanovova typu. Nezávislý [průvodce strukturou důkazu](https://nasqret.github.io/riemann-rev/guide/proof-guide.pdf) rozebírá CM tělesa, unitární grupy, theta jádra, Heckeho charaktery, sklonové odhady a kohomologii. [Sutherlandův audit](https://math.mit.edu/~drew/grh/) ověřuje formální tvrzení a důkazové objekty, nikoli přenos do UBT. Běžná DFT, Jacobiho theta identity, gaussovská tepelná jádra a automorfní theta lifty jsou odlišné mechanismy.
 
 <!-- BILINGUAL-UNIT: alpoge-theta-transfer.setup -->
-## Přesný zkušební prostor a invarianty
+## Přesný konečněmódový model
 
-Použijeme *existující* věrnou maticovou reprezentaci jediného bikvaternionu:
-[
-Xinmathbb Bcongoperatorname{Mat}_2(mathbb C),qquad
-B(X,Y)=operatorname{Re}operatorname{Tr}[operatorname{adj}(X)Y^dagger],
-qquad JX=iX,qquad Omega(X,Y)=B(X,JY).
-]
-Zde (operatorname{adj}) znamená adjungovanou matici (2	imes2) ve smyslu adjugátu, nikoli hermitovsky sdruženou matici. Reálná kvadratická forma (B) má signaturu ((2+,6-)). Forma (Omega) je alternující a nedegenerovaná; ani jedno tvrzení nečiní z (B) kladnou fyzikální energii.
+Použijeme existující věrnou maticovou podobu jediného bikvaternionu:
+\[
+X\in\mathbb B\cong\operatorname{Mat}_2(\mathbb C),\quad
+B(X,Y)=\operatorname{Re}\operatorname{Tr}[\operatorname{adj}(X)Y^\dagger],\quad
+JX=iX,\quad \Omega(X,Y)=B(X,JY).
+\]
+Zde \(\operatorname{adj}\) označuje adjugát matice \(2\times2\), **nikoli** hermitovské sdružení. Reálná forma \(B\) má signaturu \((2+,6-)\); \(\Omega\) je nedegenerovaná a antisymetrická, nikoli kladná fyzikální energie.
 
-Vezmeme čtyři *koeficienty módů* (X_ninmathbb B), (n=0,1,2,3), bez zavedení nového fundamentálního pole. Definujeme
-[
-mathcal B(X,Y)=sum_{n=0}^3 B(X_n,Y_n),quad
-mathcalOmega(X,Y)=sum_{n=0}^3 Omega(X_n,Y_n),
-quad
-(F_4X)_k=rac12sum_{n=0}^3e^{-2pi i kn/4}X_n.
-]
-Jde o konečněrozměrný test s pevnými koeficienty; nepředpokládáme, že libovolné míchání módů je kalibrační transformací nebo že zachovává striktní holomorfii v (	au=t+ipsi).
+Vezmeme čtyři koeficienty módů \(X_n\in\mathbb B\), \(n=0,1,2,3\), téhož pole bez zavádění dalšího fundamentálního pole:
+\[
+\mathcal B(X,Y)=\sum_{n=0}^3B(X_n,Y_n),\quad
+\mathcal\Omega(X,Y)=\sum_{n=0}^3\Omega(X_n,Y_n),\quad
+(F_4X)_k=\frac12\sum_{n=0}^3e^{-2\pi i kn/4}X_n.
+\]
+Tento pevný konečněmódový model nepředpokládá, že libovolné míchání módů je fyzikální kalibrační transformací nebo zachovává striktní holomorfii v \(\tau=t+i\psi\).
 
 <!-- BILINGUAL-UNIT: alpoge-theta-transfer.positive -->
-## Algebraický výsledek: přesné zachování forem v prostoru módů
+## Přesná algebraická kovariance — nikoli fyzikální kladnost
 
-**ALGEBRA-EXACT, podmíněně v tomto zkušebním prostoru.** Jelikož (F_4^dagger F_4=I_4) a (F_4) působí komplexně lineárně na indexu módu, zachovává obě formy:
-[
-oxed{mathcal B(F_4X,F_4Y)=mathcal B(X,Y)},qquad
-oxed{mathcalOmega(F_4X,F_4Y)=mathcalOmega(X,Y)},qquad
-F_4^4=I.
-]
-Tentýž důkaz platí pro normalizované (N)-módové DFT s identickou vnitřní formou (B) na každém módu. Pro čtyři módy je celková reálná signatura ((8+,24-)), kterou transformace nemění. Přesná symplektická kovariance tedy **neřeší indefinitnost kinetické/Hamiltonovy formy**. Nejde o tvrzení o kladnosti na řešeních pohybových rovnic.
+**ALGEBRA-EXACT za uvedených předpokladů modelu.** Protože \(F_4^\dagger F_4=I_4\) a Fourierovo míchání je komplexně lineární, zachovává obě formy na prostoru módů:
+\[
+\boxed{\mathcal B(F_4X,F_4Y)=\mathcal B(X,Y)},\quad
+\boxed{\mathcal\Omega(F_4X,F_4Y)=\mathcal\Omega(X,Y)},\quad F_4^4=I.
+\]
+Stejný argument platí pro normalizované \(N\)-módové DFT s identickou vnitřní formou \(B\). Čtyři módy mají reálnou signaturu \((8+,24-)\). Unitární Fourierova změna reprezentace **neodstraňuje** záporné směry ani nedokazuje omezenost Hamiltonovy energie zdola.
 
-<!-- BILINGUAL-UNIT: alpoge-theta-transfer.negative -->
-## Dvě rozhodující negativní kontroly
+<!-- BILINGUAL-UNIT: alpoge-theta-transfer.controls -->
+## Dvě negativní kontroly
 
-1. Kladný gaussovský filtr módů (G=operatorname{diag}(2^{-n^2})), působící na všechny čtyři bikvaternionové koeficienty, **není** symplektický:
-[
-oxed{mathcalOmega(GX,GY)
-eqmathcalOmega(X,Y)}
-]
-obecně. Váhu tepelného jádra nelze bez dalšího považovat za unitární/Weilovu symetrii.
+1. Gaussovské tlumení módů \(G=\operatorname{diag}(2^{-n^2})\) obecně není symplektické:
+\[
+\boxed{\mathcal\Omega(GX,GY)\neq\mathcal\Omega(X,Y)}.
+\]
+Váha tepelného jádra není automaticky unitární Weilovou symetrií.
 
-2. DFT **není** symetrií kanonické metriky UBT při pevném (psi), přestože zachovává (mathcalOmega). V jednoduchém plochém příkladu s triviální konexí a (mathcal N_0=1) vložíme celé prostoročasově závislé (Theta_{m SR}(x)) do módu (n=0):
-[
-Theta(x,psi)=Theta_{m SR}(x),quad
-Theta'(x,0)=sum_{k=0}^3(F_4X)_k=2Theta_{m SR}(x),
-quad E'_mu(x,0)=2E_mu(x,0),
-]
-[
-oxed{g'_{mu
-u}(x,0)=4g_{mu
-u}(x,0)}
-]
-při použití *nezměněné* kanonické definice (E_mu=mathcal N_0^{-1/2}D_muTheta) a centrálního sharp antikomutátoru. Jde o protipříklad k tvrzení, že Fourierova kovariance konečných módů sama implikuje fyzikální kalibrační symetrii. Plochý příklad je kinematický, nikoli řešení zvolené akce UBT.
-
-<!-- BILINGUAL-UNIT: alpoge-theta-transfer.gates -->
-## Podmínky skutečného přenosu — všechny OPEN
-
-Navrhovaný přenos Alpögeho **aritmetického** mechanismu theta liftů musí nejdříve poskytnout (i) určený prostor reprezentace a skutečné jádro liftu/proplétající operátor včetně oborů a konvergence; (ii) kovarianci existující dvoustranné derivace (D_muTheta=partial_muTheta+A_muTheta-Theta B_mu), včetně případného míchání módů v (A_mu,B_mu); (iii) zachování nebo odvozený transformační zákon *centrální sharp metriky*, nikoli pouze (mathcalOmega); (iv) vybraný Hamiltonián s vazbami a test kladnosti; a (v) konkrétní důsledek specifický pro UBT, který neprojde triviálním nulovým modelem Fourierovy transformace/tepelného jádra. Aritmetický argument s dělitelností a sklonovými odhady dosud není fyzikální propagátor ani dynamika gravitace.
-
-Dřívější no-go pro symplektické zakřivení skalárního ekvivariantního ansatzu nadále platí v jeho vymezeném rozsahu: DFT na prostoru módů nevytvoří šest nezávislých bivektorových koeficientů zakřivení vyžadovaných Palatiniho formulací. Nezavádíme žádný nový stupeň volnosti, akci, fyzikální symetrii, predikci hmotnosti ani tvrzení o odstranění ghostů.
+2. DFT sice zachovává \(\mathcal\Omega\), ale při pevném \(\psi\) obecně nezachovává kanonickou sharp metriku. S triviální konexí a \(\mathcal N_0=1\) vložíme celé ploché afinní pole do nulového módu:
+\[
+\Theta(x,\psi)=\Theta_{\rm SR}(x),\quad
+\Theta'(x,0)=\sum_{k=0}^3(F_4X)_k=2\Theta_{\rm SR}(x),\quad
+E'_\mu(x,0)=2E_\mu(x,0),
+\]
+\[
+\boxed{g'_{\mu\nu}(x,0)=4g_{\mu\nu}(x,0)}.
+\]
+Použili jsme nezměněné \(E_\mu=\mathcal N_0^{-1/2}D_\mu\Theta\) a centrální sharp antikomutátor. Jde o kinematický plochý protipříklad, nikoli řešení vybrané akce.
 
 <!-- BILINGUAL-UNIT: alpoge-theta-transfer.weil -->
-## Bližší matematická cesta: Lorentzova kovariance uvnitř symplektické grupy
+## Bližší matematická cesta: Lorentzova grupa uvnitř Sp(8,R)
 
-Existující Lorentzova kongruenční transformace (X\mapsto SXS^\dagger), (S\in SL(2,\mathbb C)), zachovává (B) a komutuje s (J); poskytuje tedy reálnou symplektickou reprezentaci (SL(2,\mathbb C)\to Sp(8,\mathbb R)) na stejných osmi reálných složkách pole. To je bližší [standardní Weilově/oscilátorové reprezentaci](https://www.math.iitb.ac.in/~dprasad/weil-repn.pdf), která stojí za theta korespondencí, než samotná konečná DFT. **Stále** však nejde o ztotožnění s Alpögeho theta jádrem na unitárních grupách.
+Existující kongruence \(X\mapsto SXS^\dagger\), \(S\in SL(2,\mathbb C)\), zachovává \(B\) a komutuje s \(J\). Na stejných osmi reálných složkách tedy definuje reálnou symplektickou reprezentaci \(SL(2,\mathbb C)\to Sp(8,\mathbb R)\). To je bližší [standardní Weilově/oscilátorové konstrukci](https://www.math.iitb.ac.in/~dprasad/weil-repn.pdf), která stojí za theta korespondencí, **nikoli** ztotožnění s Alpögeho aritmetickým theta liftem.
 
-Existuje přesná překážka kladnosti *na konečném nosiči složek*. Pro
+Existuje přesná překážka kladné Lorentzovsky invariantní normy **na konečném prostoru složek**. Vezměme
 \[
-S=\operatorname{diag}(2,1/2),\quad
-X_*=\operatorname{diag}(1,0),\quad
-S X_* S^\dagger=4X_*,
+S=\operatorname{diag}(2,1/2),\quad X_*=\operatorname{diag}(1,0),\quad
+SX_*S^\dagger=4X_*.
 \]
-by každá kladně definitní Lorentzovsky invariantní kvadratická forma (P) musela splňovat (P(X_*,X_*)=P(4X_*,4X_*)=16P(X_*,X_*)), což je spor. **Na původním konečněrozměrném nosiči hodnot pole tedy neexistuje kladně definitní skalární součin invariantní vůči této celé kongruenční akci**. To nevylučuje fyzikální kladný Hilbertův prostor stavů.
+Každá kladně definitní invariantní kvadratická forma \(P\) by splňovala \(P(X_*,X_*)=P(4X_*,4X_*)=16P(X_*,X_*)\), což je ve sporu s \(P(X_*,X_*)>0\).
 
-Pro reálný osmireálný symplektický prostor má standardní metaplektické dvojné pokrytí (Mp(8,\mathbb R)) unitární oscilátorovou reprezentaci na (L^2(\mathbb R^4)); viz [standardní matematická konstrukce](https://www.math.iitb.ac.in/~dprasad/weil-repn.pdf). *Matematická cesta přes teorii reprezentací* je tedy dostupná bez přidání druhého fundamentálního pole UBT: **kvantovat symplektický prostor hodnot a testovat indukovanou Lorentzovu akci**. Oscilátorový Hilbertův prostor však není totéž jako Lorentzovsky invariantní kladná norma na (X), ani nejde o odvozenou kvantizaci UBT, fyzikální spektrum, akci, polarizaci či theta lift. Tyto mosty zůstávají **OPEN**.
+Standardní reálný symplektický prostor dimenze osm však připouští metaplektické pokrytí \(Mp(8,\mathbb R)\) s **nekonečněrozměrnou unitární oscilátorovou reprezentací** na \(L^2(\mathbb R^4)\). Matematická cesta tedy existuje: zkoumat kvantizaci existujícího symplektického prostoru hodnot a indukovanou Lorentzovu akci **bez přidávání dalšího pole UBT**. Hilbertova norma prostoru stavů není kladnou invariantní normou na konečné složce pole \(X\). Neodvodili jsme fyzikální polarizaci, dynamiku, propagátor, spektrum ani theta lift UBT.
+
+<!-- BILINGUAL-UNIT: alpoge-theta-transfer.gates -->
+## Podmínky skutečného přenosu RH do UBT — OPEN
+
+Skutečný přenos aritmetického theta liftu by vyžadoval: (i) explicitní reprezentaci, jádro, proplétající zobrazení, obor a konvergenci; (ii) kompatibilitu s uzamčenou dvoustrannou derivací \(D_\mu\Theta=\partial_\mu\Theta+A_\mu\Theta-\Theta B_\mu\); (iii) odvozený transformační zákon centrální sharp metriky; (iv) fyzikální vazby, Hamiltonián a kladnost; (v) falzifikovatelný důsledek UBT, který chybí v triviálním Fourierově/tepelném nulovém modelu. Předchozí no-go pro skalární ekvivariantní zakřivení hodnosti jedna nadále platí pro testovaný ansatz; samotná DFT nemůže dodat šestirozměrný bivektorový koeficient Palatiniho formulace.
 
 <!-- BILINGUAL-UNIT: alpoge-theta-transfer.verification -->
-## Ověření a status
+## Ověření a omezení
 
-Nezávislé analytické kroky: unitarita DFT, komplexní linearita, signatura (B) a přímý výpočet sharp metriky v plochém příkladu. Deterministický test přesné aritmetiky v SymPy je `research_tracks/action_selection/tests/test_alpoge_theta_fourier_transfer.py`; příkaz:
-```sh
-python -m unittest research_tracks.action_selection.tests.test_alpoge_theta_fourier_transfer -v
-```
-Sedm testů prošlo lokálně se SymPy 1.14.0 dne 2026-11-21: signatura, DFT čtvrtého řádu, kovariance (B/Omega), nesymplektický gaussovský filtr, zachování záporného směru a protipříklad s metrikou. Testy ověřují pouze zakódované konečněrozměrné identity; žádný skutečný automorfní lift, PDE UBT, Einsteinovy rovnice, spektrum s vazbami ani Alpögeho věta nebyly nezávisle znovu dokázány. **LEAN-PENDING**: pro tuto novou poznámku nebyl zkompilován soubor Leanu. Netvrdíme povýšení kanonického/statusového tvrzení ani schválení sémantické shody překladů.
+Analytické výpočty používají unitaritu DFT, přesnou Lorentzovu kongruenci a sharp metriku. Sedm deterministických testů prošlo lokálně v SymPy 1.14.0 dne 2026-11-21: indefinitní signatura, DFT čtvrtého řádu, zachování \(B/\Omega\), nesymplektičnost gaussovského filtru, přetrvání záporného směru, překážka kladnosti při Lorentzově boostu a protipříklad pro sharp metriku. Zdroj: research_tracks/action_selection/tests/test_alpoge_theta_fourier_transfer.py. Testy ověřují pouze zakódované konečněrozměrné příklady, nikoli Alpögeho aritmetický argument, úplnou Weilovu korespondenci, rovnice pole UBT, Einsteinovu dynamiku ani spektrum fyzikálních stavů po uplatnění vazeb. **LEAN-PENDING:** žádný důkaz v Leanu pro tuto poznámku nebyl zkompilován. Netvrdíme povýšení kanonického statusu ani nezávislé schválení sémantické shody překladů.
