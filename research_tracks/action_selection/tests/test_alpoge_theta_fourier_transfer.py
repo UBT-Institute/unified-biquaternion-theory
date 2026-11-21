@@ -55,6 +55,22 @@ class FourierThetaTransferTests(unittest.TestCase):
         self.assertNotEqual(self.g.T*self.omega*self.g, self.omega)
         self.assertNotEqual(self.g.T*self.k*self.g, self.k)
 
+    def test_lorentz_boost_preserves_forms_but_blocks_positive_norm(self):
+        # X -> S X S^dagger, S=diag(2,1/2), det(S)=1.
+        # Complex coefficients (a,b,c,d) -> (4a,b,c,d/4).
+        boost = diag(4, 1, 1, Rational(1, 4))
+        r = diag(boost, boost)
+        k8 = diag(self.h, self.h)
+        j8 = Matrix.vstack(Matrix.hstack(zeros(4), -eye(4)),
+                           Matrix.hstack(eye(4), zeros(4)))
+        self.assertEqual(r.T*k8*r, k8)
+        self.assertEqual(r.T*k8*j8*r, k8*j8)
+        x = zeros(8, 1)
+        x[0] = 1  # X=diag(1,0).
+        self.assertEqual(r*x, 4*x)
+        # A positive invariant norm P would require
+        # P(x,x)=P(4x,4x)=16 P(x,x), contradiction.
+
     def test_negative_direction_survives(self):
         # Real b=1 in mode zero has B=-1.
         x = zeros(32, 1)
