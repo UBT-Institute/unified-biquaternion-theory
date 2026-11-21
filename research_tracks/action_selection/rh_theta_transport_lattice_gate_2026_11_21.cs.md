@@ -53,7 +53,7 @@ U čistě Lorentzovy reprezentace působí konexe stejně na obě Lorentzovy čt
 <!-- BILINGUAL-UNIT: rh-transport.lattice -->
 ## Překážka diskrétní mříže v zakřiveném prostoročase
 
-Pro *pevnou* mříž \(L\subset\mathbb R^{1,3}\) plné hodnosti obecný Lorentzův boost tuto mříž nezachovává. Explicitní příklad:
+Pro *pevnou* mříž \(L\subset\mathbb R^{1,3}\) plné hodnosti obecný Lorentzův boost mříž \(L\) nezachovává. Explicitní příklad:
 \[
 \Lambda=\begin{pmatrix}5/4&3/4&0&0\\3/4&5/4&0&0\\0&0&1&0\\0&0&0&1\end{pmatrix},\qquad
 \Lambda(1,0,0,0)^T=(5/4,3/4,0,0)^T\notin\mathbb Z^4.
