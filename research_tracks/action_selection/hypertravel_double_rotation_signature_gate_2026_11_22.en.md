@@ -64,6 +64,26 @@ Also any null trajectory in this flat \(4+1\) geometry obeys \(|d\mathbf x/dt|\l
 
 For the timelike choice (\(\varepsilon=-1\)), fixed \(k,m,R\) and arbitrarily large \(|n|\) produce \(\omega_n^2<0\), hence exponentially growing/decaying modes. At \(k=0,m=R=1,n=2\), \(\omega_n^2=-3\). The instability is a **specific flat scalar-model failure**; it is not a theorem that every conceivable multifold-time theory must fail. Extra timelike dimensions also face known tachyon/ghost problems (see [Physical Review D 63, 065014](https://doi.org/10.1103/PhysRevD.63.065014)). The zero mode \(n=0\) reproduces ordinary dispersion for either sign; measuring only it cannot distinguish these comparators.
 
+<!-- BILINGUAL-UNIT: hypertravel.warped -->
+## A positive comparator: a causal bulk shortcut in an assumed warped metric
+
+The flat-product no-shortcut result **does not** exclude a curved bulk shortcut. Consider the **separately assumed** local metric, in units \(c=1\), with an accessible extra **spatial** coordinate \(\psi\):
+\[
+\boxed{ds^2=-dt^2+a(\psi)^2dx^2+d\psi^2,\qquad
+a(\psi)=\exp[-(\ln2)\psi^2].}
+\]
+At \(\psi=0\), \(a(0)=1\). A signal confined to this brane needs time \(T_{\rm brane}=L=10\) to connect \(x=0\) to \(x=10\). A **piecewise future-directed null** route can instead go from \(\psi=0\) to \(\psi=h=1\), travel in the \(x\)-direction at \(\psi=h\), then return. The vertical segments need one coordinate-time unit each, and \(a(h)=1/2\) makes the middle segment take \(L/2=5\). Therefore
+\[
+\boxed{T_{\rm route}=2h+a(h)L=2+5=7<10=T_{\rm brane}.}
+\]
+This is a concrete **causal geometric shortcut in the assumed metric**: no segment locally exceeds light speed. The broken null route has corners and need not be a freely moving geodesic; one can approximate it by smooth causal routes with slightly larger travel time still less than ten. The metric is genuinely **curved**, with scalar curvature on the shown three-coordinate product sector
+\[
+\mathcal R=-2a''/a=4\ln2-8(\ln2)^2\psi^2.
+\]
+For a flat bulk \(a\equiv1\), the same detour takes \(2h+L>L\), so the warp factor is essential.
+
+**Physical limitations:** this metric is an externally adopted geometric example, **not obtained from the locked four-dimensional UBT sharp metric** or its equations of motion. Nothing yet determines a required bulk stress tensor or energy conditions, the stability and coupling of physical signals, the ability to enter/leave the extra direction, the compatibility with existing gravity tests, or global chronology. It proves neither a buildable hyperspace vehicle nor time travel to the past. It supplies a useful **positive target for model discrimination**: should an actual one-\(\Theta\) UBT theory produce a stable warp geometry with measurable earlier arrival relative to a brane-confined reference, while preserving local causality?
+
 <!-- BILINGUAL-UNIT: hypertravel.selection -->
 ## The actual missing UBT derivations
 
@@ -76,4 +96,4 @@ A hypertravel claim additionally needs a physical, frame-independent travel-time
 <!-- BILINGUAL-UNIT: hypertravel.verification -->
 ## Verification
 
-Eleven deterministic exact SymPy 1.14.0 tests passed locally on 2026-11-22, covering the Lorentz algebra, finite noncollinear boost covariance and noncommutativity, future cone sample, lack of origin translation, spinor \(2\pi/4\pi\) behavior, flat KK dispersion and velocity, a timelike tachyonic mode, common zero mode, and flat spacelike-\(\psi\) causal bound. Source: \`research_tracks/action_selection/tests/test_double_rotation_extra_time_gate.py\`. Exact algebra on **toy models** only; no numerical UBT prediction, no formal Lean run, no full repository CI pass, no independent bilingual semantic review. **LEAN-PENDING.**
+Fourteen deterministic exact SymPy 1.14.0 tests passed locally on 2026-11-22, covering the Lorentz algebra, finite noncollinear boost covariance and noncommutativity, future cone sample, lack of origin translation, spinor \(2\pi/4\pi\) behavior, flat KK dispersion and velocity, a timelike tachyonic mode, common zero mode, and flat spacelike-\(\psi\) causal bound. Source: \`research_tracks/action_selection/tests/test_double_rotation_extra_time_gate.py\`. Exact algebra on **toy models** only; no numerical UBT prediction, no formal Lean run, no full repository CI pass, no independent bilingual semantic review. **LEAN-PENDING.**
