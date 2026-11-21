@@ -71,7 +71,7 @@ Before using any toy \(\psi\)-signature as physical, independently derive from t
 
 A hypertravel claim additionally needs a physical, frame-independent travel-time observable, a globally defined causal geometry, an admissible worldline connecting endpoints, and explicit energy/constraint checks. No such mechanism has been derived or observed in this work.
 
-**Decision:** keep 4\(\pi\) spinor rotation and flat extra-time signature as **null comparators**. Prioritize a genuine UBT \(\Theta\)-only principal symbol and constrained spectrum before constructing a device or claiming time travel. The [physical-symplectic-current draft](https://github.com/UBT-Institute/unified-biquaternion-theory/pull/912) is a prerequisite, not evidence of successful physics. The RH theta-lift track is optional until a physical operator is available.
+**Decision:** keep \(4\pi\) spinor rotation and flat extra-time signature as **null comparators**. Prioritize a genuine UBT \(\Theta\)-only principal symbol and constrained spectrum before constructing a device or claiming time travel. The [physical-symplectic-current draft](https://github.com/UBT-Institute/unified-biquaternion-theory/pull/912) is a prerequisite, not evidence of successful physics. The RH theta-lift track is optional until a physical operator is available.
 
 <!-- BILINGUAL-UNIT: hypertravel.verification -->
 ## Verification
