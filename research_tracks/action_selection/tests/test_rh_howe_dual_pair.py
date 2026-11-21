@@ -187,6 +187,23 @@ class LocalHowePairTests(unittest.TestCase):
         self.assertEqual(boost.T*rn*boost, r0)
         self.assertEqual((normal.T*self.eta*normal)[0], 1)
 
+    def test_gram_hamiltonian_is_pure_lorentz_orbit(self):
+        u = sp.Matrix(sp.symbols("u0:4"))
+        v = sp.Matrix(sp.symbols("v0:4"))
+        q = (u.T*self.eta*u)[0]
+        r = (v.T*self.eta*v)[0]
+        s = (u.T*self.eta*v)[0]
+        delta = sp.expand(q*r-s**2)
+        lorentz = u*(v.T*self.eta)-v*(u.T*self.eta)
+        du, dv = s*u-q*v, r*u-s*v
+        self.assertEqual((lorentz.T*self.eta+self.eta*lorentz).applyfunc(sp.expand), sp.zeros(4))
+        self.assertEqual((lorentz*u-du).applyfunc(sp.expand), sp.zeros(4))
+        self.assertEqual((lorentz*v-dv).applyfunc(sp.expand), sp.zeros(4))
+        self.assertEqual(sp.expand(sp.trace(lorentz*lorentz)+2*delta), 0)
+        lorentz_dot = (du*(v.T*self.eta)+u*(dv.T*self.eta)
+                       -dv*(u.T*self.eta)-v*(du.T*self.eta))
+        self.assertEqual(lorentz_dot.applyfunc(sp.expand), sp.zeros(4))
+
     def test_even_full_dual_pair_does_not_select_hamiltonian(self):
         u, v = sp.Matrix(sp.symbols("u0:4")), sp.Matrix(sp.symbols("v0:4"))
         z = u.col_join(v)
