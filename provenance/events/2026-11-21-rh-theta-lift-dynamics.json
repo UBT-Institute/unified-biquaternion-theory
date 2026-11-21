@@ -2,7 +2,7 @@
   "schema": "ubt-research-event/v1",
   "recorded_on": "2026-11-21",
   "claim_or_decision_id": "RH-THETA-LIFT-DYNAMICS-SELECTOR-GATE-2026-11-21",
-  "summary": "RH theta-lift transfer audit: existing single-biquaternion carrier admits standard local O(1,3) x SL(2,R) Howe dual pair and a convergent Lorentz-covariant positive-majorant theta-kernel candidate conditional on a chosen timelike normal/lattice; naive indefinite Gaussian diverges; full SL2 fails the physical sharp-metric/reality gate; the variable-normal Gaussian fails ordinary spacetime-derivative intertwining. True arithmetic theta lift and selected UBT dynamics remain open.",
+  "summary": "RH-to-UBT transfer audit: the single biquaternion admits a known local O(1,3) x SL(2,R) dual Howe pair and positive-normal majorant theta kernel. A bare indefinite Gaussian diverges, full SL2 changes the physical sharp metric and Lorentz slice, variable foliation fails an unmodified derivative intertwiner. Most decisively, Gram/Casimir Hamiltonians H=f(Delta) generate exact Lorentz-orbit motion and reduce to trivial physical evolution if those directions are gauged. Actual arithmetic theta lift and UBT physical Hamiltonian remain open.",
   "development_mode": "iterative_human_ai",
   "stage_events": [
     {
@@ -39,6 +39,15 @@
         "howe-note",
         "howe-test",
         "howe-background"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Proved that the natural Gram determinant Hamiltonian is the Casimir of the composite Lorentz moment map, with constant A=u(v^T eta)-v(u^T eta) and flow u'=A u, v'=A v; therefore all f(Delta) trajectories are tangent to Lorentz orbits. This is only a physical no-go if the full gauge constraints identify those orbits.",
+      "evidence_ids": [
+        "howe-note",
+        "howe-test"
       ]
     }
   ],
@@ -114,7 +123,8 @@
     "Treat generic metaplectic covariance as unique time generator",
     "Treating the Lorentz-indefinite Gaussian theta series as convergent without a positive majorant",
     "Treating the positive foliation-dependent theta majorant as a unique positive physical Hamiltonian",
-    "Assuming varying-normal theta kernel commutes with the unmodified spacetime derivative"
+    "Assuming varying-normal theta kernel commutes with the unmodified spacetime derivative",
+    "Treating positive Gram-Casimir Hamiltonian as genuinely propagating UBT dynamics despite its exact Lorentz-orbit flow"
   ],
   "verification": {
     "status": "locally_checked",
@@ -122,7 +132,7 @@
       "research_tracks/action_selection/tests/test_rh_theta_lift_selector.py",
       "research_tracks/action_selection/tests/test_rh_howe_dual_pair.py"
     ],
-    "limitations": "Direct local SymPy spot checks verified the key dual-pair identities, Gram Hamiltonian, positive majorant, divergence ray, changing-normal derivative and commutant ranks. Fifteen regression methods committed; full suite, Lean, independent bilingual semantics and CI not yet confirmed. No actual automorphic lift or physical UBT dynamics derived."
+    "limitations": "Symbolic exact checks verified Howe-pair Lie commutants (ranks 60 and 10), Omega covariance, indefinite kernel divergence, positive-normal majorant/boost covariance, Gram Hamilton equations, and Lorentz moment-map Casimir/orbit identity including dA/dt=0. Sixteen SymPy regression methods are committed; complete regression execution, Lean, independent bilingual semantics and CI are pending. No actual arithmetic theta lift or physical UBT Hamiltonian derived."
   },
   "attribution_status": "provisional",
   "human_attestation": "not_attested",
