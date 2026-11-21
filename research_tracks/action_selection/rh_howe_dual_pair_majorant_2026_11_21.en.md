@@ -65,6 +65,15 @@ The new symbols \(z,L,n\) are auxiliary data of this **mathematical test**, NOT 
 
 A candidate timelike direction could be read from the **existing** nondegenerate tetrad and the unit normal of a **chosen** spacelike Cauchy hypersurface. This avoids adding a fundamental field, but makes the majorant foliation dependent. Neither the foliation nor its independence of physical observables is selected by the UBT axioms. Positive \(R_n\) ensures kernel convergence, **not** a positive Hamiltonian, correct Dirac constraints or ghost freedom. The lift source/target representation, integration cycle, intertwining with the two-sided \(D_\mu\Theta\), invariance of the central sharp metric, and time-evolution generator still require independent derivations.
 
+<!-- BILINGUAL-UNIT: rh-howe.derivative -->
+## Further obstruction: the majorant is generally not covariantly constant
+
+Even in flat Minkowski space with a fixed inertial connection, a varying timelike normal \(n(\alpha(x))=(\cosh\alpha,\sinh\alpha,0,0)\) changes \(R_n\). For \(k=(1,1,0,0)\),
+\[
+\left.\frac{\partial}{\partial\alpha}(k^TR_{n(\alpha)}k)\right|_{\alpha=0}=-4\neq0.
+\]
+Thus ordinary spacetime differentiation does not commute with the foliation-dependent Gaussian theta kernel if \(\partial_\mu\alpha\ne0\). This is an exact **counterexample for the declared derivative and foliation**; a properly derived connection on the family of polarizations might supply compensating terms. No such physical connection is derived, so a claim \(\mathcal L D_\mu=D'_\mu\mathcal L\) remains OPEN.
+
 <!-- BILINGUAL-UNIT: rh-howe.invariant -->
 ## Exact dual-pair invariant and remaining Hamiltonian ambiguity
 
@@ -82,4 +91,4 @@ The family \(H_f=f(\Delta)\) has the same dual-pair symmetry and distinct flows 
 <!-- BILINGUAL-UNIT: rh-howe.verify -->
 ## Verification and next strict gate
 
-Reproducible source: \`research_tracks/action_selection/tests/test_rh_howe_dual_pair.py\` (13 exact SymPy tests spanning symplectic invariance, Lorentz commutants, loss of \(B\), sharp-metric and Lorentz-real-slice checks, positive-majorant covariance, divergent bare sum, Gram determinant, and Hamiltonian nonuniqueness). A separate hand derivation checks the \(R_n\) rest-frame positivity and divergence along a spacelike lattice ray. **LEAN-PENDING**, no verified physical action or real automorphic arithmetic lift. **Next gate:** derive \(n\) and the lift's transform law from canonical tetrad/connection data, then test whether any proposed nontrivial projector commutes with the physical constraints. Do not merge as validated physics; mathematical status only.
+Reproducible source: \`research_tracks/action_selection/tests/test_rh_howe_dual_pair.py\` (15 exact SymPy tests spanning symplectic invariance, Lorentz commutants, loss of \(B\), sharp-metric and Lorentz-real-slice checks, positive-majorant covariance, divergent bare sum, Gram determinant, and Hamiltonian nonuniqueness). A separate hand derivation checks the \(R_n\) rest-frame positivity and divergence along a spacelike lattice ray. **LEAN-PENDING**, no verified physical action or real automorphic arithmetic lift. **Next gate:** derive \(n\) and the lift's transform law from canonical tetrad/connection data, then test whether any proposed nontrivial projector commutes with the physical constraints. Do not merge as validated physics; mathematical status only.
