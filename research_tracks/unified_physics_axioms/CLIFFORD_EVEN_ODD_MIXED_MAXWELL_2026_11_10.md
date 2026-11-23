@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Inverse Clifford dynamics: hidden propagation from even–odd mixing
 
 > **Clarification, 2026-11-10:** “grade-Z2 sign flip” in this comparison means the **field-only** transformation \(V\mapsto -V\) with \(B\) and the background geometric derivative held fixed, NOT the grade automorphism applied consistently to all Clifford geometric objects. Under the full Clifford grade automorphism, \(D\mapsto-D\), \(V\mapsto-V\), and hence \(F=D\wedge V\mapsto F\), so \(B\cdot F\) is algebraically grade-even. This corrects the potentially misleading earlier shorthand; see [the grading versus fermion-parity audit](CLIFFORD_GRADING_VS_FERMION_PARITY_2026_11_10.md).

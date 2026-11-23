@@ -21,14 +21,14 @@ def test_null_cone_tensor_proportional_to_metric():
     assert sol != sp.EmptySet
     expression=next(iter(sol))
     inferred=dict(zip(unique, expression))
-    f=sp.symbols("f")
-    # Put f in place of free S00 and verify all 10 components.
-    first=s[0,0]
+    # The solver may select any free parameter. Test the invariant relation
+    # with S00 itself instead of expecting S00 to be the free coordinate.
+    first=inferred[s[0,0]]
     for i in range(4):
         for j in range(i,4):
-            expected= (f if i==j==0 else
-                       -f if i==j else sp.Integer(0))
-            assert sp.simplify(inferred[s[i,j]].subs(first,f)-expected)==0
+            expected= (first if i==j==0 else
+                       -first if i==j else sp.Integer(0))
+            assert sp.simplify(inferred[s[i,j]]-expected)==0
 
 
 def test_area_entropy_density_recovers_gravitational_coefficient():

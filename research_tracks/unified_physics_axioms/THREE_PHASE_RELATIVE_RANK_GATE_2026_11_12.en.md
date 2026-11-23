@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Three-phase reduction: exact U(1)^3 / U(1)_diag gate
 
 **Status:** exact linear-algebra result for three commuting phase sectors, not a derivation of QED or an assertion about the canonical Theta action.

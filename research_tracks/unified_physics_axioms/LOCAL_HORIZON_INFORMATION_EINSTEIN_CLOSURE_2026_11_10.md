@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Inverse gravity closure: local horizon information balance to Einstein equations
 
 **2026-11-10; status CONDITIONAL STANDARD RESULT + UBT selection gates OPEN.** This note is a *comparator* based on Jacobson's 1995 local-horizon thermodynamic derivation, not a proof of gravity, its microscopic origin, or unique UBT dynamics.

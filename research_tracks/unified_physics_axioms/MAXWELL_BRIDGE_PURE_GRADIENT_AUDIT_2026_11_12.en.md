@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Maxwell bridge audit: pure-gradient obstruction and corrective routes
 
 **Audit of existing sources:** canonical/bridges/Maxwell_complete_derivation.tex, Maxwell_limit_bridge.tex, canonical/interactions/qed.tex, research_tracks/qed_alpha_derivation/qed_sector_from_Theta.tex, inspected on master 2026-11-12. This note does not modify historical canonical documents.

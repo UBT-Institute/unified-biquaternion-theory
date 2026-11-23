@@ -13,7 +13,7 @@ def test_lorentz_only_metric_normal_cokernel():
     for mu in range(4):
         for a in range(4):
             for b in range(a + 1, 4):
-                dw = sp.zeros(4)
+                dw = sp.zeros(4, 1)
                 dw[a] = eta[a, a] * (1 if b == 0 else 0)
                 dw[b] = -eta[b, b] * (1 if a == 0 else 0)
                 de = sp.zeros(4)

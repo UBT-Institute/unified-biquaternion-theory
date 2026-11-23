@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Two-sided quaternion phases: exact metric covariance and the SO(4) versus Lorentz gate
 
 **Status:** exact algebraic result for unit real quaternions, conditional on preservation of the canonical physical Lorentz slice.

@@ -9,17 +9,6 @@ editorial_responsibility: Ing. David Jaroš
 policy: ../../AI_PROVENANCE.md
 notice: Exact timelike-orbit kinematics; no complete UBT field equations established.
 UBT-AI-PROVENANCE-END -->
-<!--
-UBT-AI-PROVENANCE-BEGIN
-schema: ubt-ai-provenance/v1
-tier: C_working
-ai_assistance: disclosed
-human_review: risk-based
-editorial_responsibility: Ing. David Jaroš
-policy: ../../AI_PROVENANCE.md
-notice: Working material; exhaustive human review is not claimed.
-UBT-AI-PROVENANCE-END
--->
 
 # Věta o jednotkových hodinách v celé časupodobné orbitě: neradiální Theta nevrací nezávislou lapse
 
@@ -66,14 +55,14 @@ Pro regulární tetrádu dává kontrakce s její inverzí přesnou kalibračně
 \boxed{g^{\mu\nu}\partial_\mu r\,\partial_\nu r=-q^2=-\mathcal N_0.}
 \]
 
-Jde o vztah platný v **celé časupodobné orbitě**, nikoli pouze důsledek radiální kalibrace. Invariantní hodiny jsou odmocninou determinantu X, zatímco samotné rho není kalibračně invariantní. Lze také explicitně přejít do radiální kalibrace:
+Nejde pouze o důsledek volby radiální kalibrace. Invariantní hodiny jsou odmocninou determinantu X, zatímco samotné rho není kalibračně invariantní. Identita platí bodově pro libovolné hladké kladně hermitovské časupodobné X a kompatibilní bezestopé spinové spojení. Lze také explicitně provést lokální Lorentzovu transformaci do radiální kalibrace:
 
 \[
 S=\sqrt r\,X^{-1/2}\in SL(2,\mathbb C),\qquad
 SXS^\dagger=rI.
 \]
 
-Jelikož X je kladně definitní, existuje lokálně hladká pozitivní inverzní odmocnina a determinant S je jednotkový. Pouhé přidání nenulových s_i k Theta při zachování stejné Lorentzovy symetrie proto starý gradientový problém neodstraňuje.
+Jelikož X je kladně definitní, existuje lokálně hladká pozitivní inverzní odmocnina a determinant S je jednotkový. Původní radiální důkaz proto nelze obejít pouhým ponecháním nenulových s_i při zachování přesně téže reprezentace pole a lokální Lorentzovy kovariance.
 
 ## Důsledek pro srovnávací Einsteinovu–Hilbertovu akci závislou pouze na metrice
 

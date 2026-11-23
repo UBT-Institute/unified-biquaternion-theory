@@ -38,6 +38,15 @@ are normative. Identify added/missing claims or explanations, changed assumption
 domains, regularity, negations, quantifiers, conditions, uncertainty, proof levels,
 causal relations, examples, warnings, and limitations. A conditional or kinematic
 result must not become unconditional or dynamical. Idiom and word order may differ.
+For any alleged omission, first inspect ALL supplied English and Czech text,
+including items of numbered lists that may share one paragraph without blank
+lines. Compare translated meaning, not matching English vocabulary: a Czech
+technical equivalent is not an omission. Check numbered items one by one;
+never assert item N is absent when item N appears on both sides. If a
+substantive claim is actually missing or different, give specific evidence
+from both editions and identify the affected IDs. Do not infer an omission
+from a long paragraph or from a different word order. When equivalence
+cannot be established, return uncertain rather than guessing either way.
 Each edition must use its stated language, except proper names, technical symbols,
 code, titles/citations, verbatim quotations, and identified translation notes.
 Generated provenance is omitted; all other supplied content must be reviewed.
@@ -76,6 +85,13 @@ class ReviewError(ValueError):
     def __init__(self, message: str, diagnostic: str | None = None):
         super().__init__(message)
         self.diagnostic = diagnostic
+
+
+class SemanticMismatchError(ReviewError):
+    """Complete, valid model evidence includes a fail or uncertain verdict.
+
+    This is a substantive review veto, not malformed model output.
+    """
 
 
 class ParagraphCoverageError(ReviewError):
@@ -118,8 +134,27 @@ def load_documents(root: Path, base: str | None) -> list[dict]:
         # generated-header updates and moves of an existing pair need fresh evidence.
         changed = {root / name for name in output.split("\0") if name}
     documents = []
-    for en, cs in sorted(parity.all_pairs(root)):
+    # This ledger is migration debt, NOT semantic approval. A missing edition
+    # can be excluded only for the exact frozen Git blob and only when no
+    # substantive source prose changed relative to the requested PR base.
+    pairs = sorted(parity.all_pairs(root))
+    # Standalone paired fixtures have no migration ledger; the ledger is
+    # mandatory whenever a missing edition needs a historical exception.
+    has_missing = any(not en.is_file() or not cs.is_file() for en, cs in pairs)
+    frozen = parity.load_frozen_legacy(root) if has_missing else {}
+    materially_changed = set(parity.changed_paths(root, base)) if base and has_missing else set()
+    deferred_legacy = 0
+    for en, cs in pairs:
         if changed is not None and en not in changed and cs not in changed:
+            continue
+        if (not en.is_file() or not cs.is_file()) and parity.frozen_legacy_missing_pair(
+            en, cs, root, frozen
+        ):
+            if en in materially_changed or cs in materially_changed:
+                raise ReviewError(
+                    f"substantively changed frozen legacy note requires its translation: {en}"
+                )
+            deferred_legacy += 1
             continue
         errors = parity.check_pair(en, cs)
         if errors:
@@ -129,6 +164,12 @@ def load_documents(root: Path, base: str | None) -> list[dict]:
         if not item["en"] or not item["cs"]:
             raise ReviewError(f"empty edition: {item['id']}")
         documents.append(item)
+    if deferred_legacy:
+        print(
+            f"Deferred {deferred_legacy} exact-blob frozen legacy missing translation(s); "
+            "these sources have NOT passed semantic review.",
+            file=sys.stderr,
+        )
     return documents
 
 
@@ -383,7 +424,7 @@ def run_review(documents: list[dict], reviewer, report: dict, workers: int = 2,
             report["reviews"].extend(reviews)
             print(f"Semantic review: {len(report['reviews'])}/{len(documents)} pairs", flush=True)
     if any(item["verdict"] != "pass" for item in report["reviews"]):
-        raise ReviewError("translation differences or uncertainty found; see paragraph evidence in report")
+        raise SemanticMismatchError("translation differences or uncertainty found; see paragraph evidence in report")
 
 
 def verify_sources(root: Path, documents: list[dict]) -> None:

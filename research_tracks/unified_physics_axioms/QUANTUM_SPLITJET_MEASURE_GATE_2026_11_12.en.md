@@ -1,3 +1,15 @@
+<!--
+UBT-AI-PROVENANCE-BEGIN
+schema: ubt-ai-provenance/v1
+tier: C_working
+ai_assistance: disclosed
+human_review: risk-based
+editorial_responsibility: Ing. David Jaroš
+policy: ../../AI_PROVENANCE.md
+notice: Working material; exhaustive human review is not claimed.
+UBT-AI-PROVENANCE-END
+-->
+
 # Quantum split-jet measure: finite regulator theorem and open continuum gates
 
 **Status:** exact finite-dimensional gauge-fixed identity under explicitly stated assumptions. NOT a proof of the complete quantum UBT.

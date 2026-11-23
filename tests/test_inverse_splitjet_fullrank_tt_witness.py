@@ -89,7 +89,7 @@ def test_TT_positive_wave_hamiltonian_and_dispersion():
     vd=sp.symbols("vd",real=True)
     L=M2/4*(vd*vd-k2*u*u)
     momentum=sp.diff(L,vd)
-    H=sp.expand((momentum*vd-L).subs(vd,2*sp.Symbol("mom")/M2))
     mom=sp.Symbol("mom",real=True)
+    H=sp.expand((momentum*vd-L).subs(vd,2*mom/M2))
     assert sp.simplify(H-(mom*mom/M2+M2*k2*u*u/4))==0
     assert sp.simplify(sp.diff(L,u)/(-M2/2)-k2*u)==0
