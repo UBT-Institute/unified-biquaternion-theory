@@ -1,0 +1,61 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-09",
+  "claim_or_decision_id": "GAP-INFO-LANDAUER-BRIDGE",
+  "summary": "Audit the proposed physical memory bridge and derive conditional mode stability, retention and reset criteria.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_proposal",
+      "actor": "human",
+      "description": "Requested derivation of the memory and interaction bridge from UBT after the Landauer ledger.",
+      "evidence_ids": [
+        "current-discussion"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Audited existing readout and quotient limitations; identified a phase bypass of the naive real sign bit; developed and checked a conditional physical-mode energy comparator.",
+      "evidence_ids": [
+        "repository-artifacts",
+        "current-discussion"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "current-discussion",
+      "class": "discussion_context",
+      "locator": "Current author-agent continuation; no public transcript ID",
+      "original_checked": true,
+      "supports": "Immediate research direction, not historical priority or approval of results.",
+      "limitations": "No archived public primary transcript; no raw chat published."
+    },
+    {
+      "id": "repository-artifacts",
+      "class": "repository_artifact",
+      "locator": "research_tracks/information_first/THETA_MEMORY_DYNAMICAL_BRIDGE_2026_11.en.md",
+      "original_checked": true,
+      "supports": "Declared derivations, sources, counterexamples and remaining gaps.",
+      "limitations": "Artifact is not independent evidence of first conceptual origin."
+    }
+  ],
+  "rejected_alternatives": [
+    "Treating the raw normalized local readout as an already derived physical memory.",
+    "Treating a real-axis double-well plot as a barrier in full complex Theta.",
+    "Inferring bath rates or unique action from Landauer saturation."
+  ],
+  "verification": {
+    "status": "verified_with_scope",
+    "artifacts": [
+      "tests/test_theta_memory_reduction.py",
+      "reports/theta_memory_reduction_2026_11_09.json"
+    ],
+    "limitations": "Conditional finite-model checks, not a physical UBT mode selection; Lean and semantic review pending."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "Continues the earlier Landauer event; standard memory thermodynamics is not claimed as new."
+}

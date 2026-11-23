@@ -1,0 +1,52 @@
+{
+  "schema": "ubt-bilingual-semantics/v1",
+  "status": "blocked",
+  "verification": "local-machine-review",
+  "model": "qwen2.5:7b",
+  "cli_version": "none",
+  "created_at": "2026-11-09T12:23:18.033343+00:00",
+  "base": "c327afe",
+  "sources": [
+    {
+      "id": "research_tracks/fundamental_dynamics/LANDAUER_OBSERVER_MEMORY.en.md",
+      "en_sha256": "1c2341838cc4d772291705d81963b044f7491567da9971ad4260b9fbda4c6aec",
+      "cs_sha256": "64fbaf560244dd846da4e6d26e89d0483a87768e9a0bdd838ec94e26e146dd54",
+      "paths": {
+        "en": "research_tracks/fundamental_dynamics/LANDAUER_OBSERVER_MEMORY.en.md",
+        "cs": "research_tracks/fundamental_dynamics/LANDAUER_OBSERVER_MEMORY.cs.md"
+      }
+    },
+    {
+      "id": "research_tracks/information_first/THETA_MEMORY_DYNAMICAL_BRIDGE_2026_11.en.md",
+      "en_sha256": "82ba82a6adb1dc471400494abdfe30fd1b56ac00bdebe82a65d5343871295853",
+      "cs_sha256": "479017e2fa8fdebaced620e0d1f7a27c9d4731f89c90e9b78aeadd279c048a29",
+      "paths": {
+        "en": "research_tracks/information_first/THETA_MEMORY_DYNAMICAL_BRIDGE_2026_11.en.md",
+        "cs": "research_tracks/information_first/THETA_MEMORY_DYNAMICAL_BRIDGE_2026_11.cs.md"
+      }
+    }
+  ],
+  "reviews": [],
+  "calibration": {
+    "status": "not_run"
+  },
+  "verifier_sha256": "c9c84c90c3a3ab25b195322dbd10b7fc05685c2f92666ea19f11dcce029acc30",
+  "backend_sha256": "324a197d9e378f0c5bdaccde4454e64811ac985e272d9b00b41931213b44d121",
+  "request_limits": {
+    "characters": 24000,
+    "paragraphs": 6,
+    "predicted_tokens": 4096,
+    "calls": 64
+  },
+  "prompt_sha256": "7f16b9548d334d47b1ec8680802f289e49829d8237787265a7eaa3d1a26ae930",
+  "structure_verifier_sha256": "2aa2141a7a60a83ecfa06c8d892d43102bc1c72121bb07023d08de607027e22c",
+  "policy_sha256": {
+    "BILINGUAL_CONTENT_POLICY.en.md": "3f0444813e1df258c84ba119c58467bf87bfdb245214c65b4e91cde870949870",
+    "BILINGUAL_CONTENT_POLICY.cs.md": "523bdd20bd09491c80c6a037b3c235e7333affc5843140a85b0de6361c444d17",
+    "AGENTS.md": "0a19ef13bb21103d694b0684d1aed114103503473c51a5d493f41680e27efbcf"
+  },
+  "commit": "ed64ebaa3f370e9a7b9b2f01e54b2baa6eb8796b",
+  "model_requests": 1,
+  "retry_partitions": [],
+  "error": "local Ollama unavailable: URLError"
+}
