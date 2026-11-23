@@ -15,6 +15,8 @@ UBT-AI-PROVENANCE-END
 
 **2026-11-07 · C_working · conditional local result.** The parallel reference still loses a transverse Einstein tidal amplitude when the first-order deformation is allowed to have a complex tetrad. Explicit flat backgrounds with a complex tetrad and a real sharp metric recover both amplitudes kinematically. A separate principal-symbol result uses a supplied metric action. The comparison continues the [quadratic torsion polarization obstruction](residual_so2_quadratic_cone.en.md).
 
+The 2026-11-16 extension gives the local degree count for this supplied action and detects nonreal scalar frequencies at its flat vacuum reference.
+
 <!-- BILINGUAL-UNIT: two-carrier-sharp-reality.domain -->
 ## Exact metric reality and transport
 
@@ -128,11 +130,92 @@ Supply a diffeomorphism-invariant metric action $S_0[g]$ without direct carrier 
 p_\mu\delta\Pi^{\mu\nu}
 =(A p(a)+B p(b))a^\nu+(-A p(b)+B p(a))b^\nu=0 .
 \]
-The determinant $p(a)^2+p(b)^2$ is nonzero for $p(t)\ne0$. Therefore $\delta\Pi=0$ at such covectors. Conversely the vanishing metric Euler symbol satisfies all leading pullback variations. For the supplied Einstein–Hilbert action on the flat family, this reproduces the Einstein **metric** symbol on the nonzero null covectors, including both tidal polarizations. The metric-invisible directions and $p(t)=0$ require a separate constraint analysis. The metric-only action is insensitive to the four common-stabilizer additions exactly because they leave $D_\omega\Theta$ fixed.
+The determinant $p(a)^2+p(b)^2$ is nonzero for $p(t)\ne0$. Therefore $\delta\Pi=0$ at such covectors. Conversely the vanishing metric Euler symbol satisfies all leading pullback variations. For the supplied Einstein–Hilbert action on the flat family, this reproduces the Einstein **metric** symbol on the nonzero null covectors, including both tidal polarizations. The metric-only action is insensitive to the four common-stabilizer additions exactly because they leave $D_\omega\Theta$ fixed.
+
+
+<!-- BILINGUAL-UNIT: two-carrier-sharp-reality.quotient -->
+## Local metric and scalar variables
+
+On the regular branch of the rank calculation, hold the first jet of $\Theta$ fixed and impose exact metric reality. The map from the fourteen remaining real connection components to the eight metric coordinates has constant rank eight. At fixed $\chi,\mathrm d\chi$ the complex equation
+\[
+C(g,\chi)=g^{-1}(\mathrm d\chi,\mathrm d\chi)-4\kappa^2\chi=0
+\]
+has rank two in the real metric variables, since $D_g C[h]=-4\kappa^2 h(t,t)$ and $a,b$ are independent. The implicit function theorem gives a local chart with eight metric coordinates and six free connection coordinates. It also gives a local inverse for each nearby metric satisfying $C=0$. The theorem applies with the carrier jet as a parameter. The map $(V,W)\mapsto\chi$ has rank two because the gradients of $\operatorname{Re}\chi$ and $\operatorname{Im}\chi$ are independent for independent $V,W$. Thus the other six real coordinates of $\Theta$ can be varied at fixed $\chi$ in the chart. The two remaining metric components are determined by $C=0$ and depend only on the eight metric coordinates and $\chi,\mathrm d\chi$.
+
+The action $S_0[g]$ is independent of the six connection coordinates along each fiber and the six carrier coordinates left at fixed $\chi$. Variations of these coordinates can have arbitrary compact support with $g,\chi$ fixed. In a chart with these coordinates the momenta conjugate to them vanish as first-class constraints with no secondary constraints. Four of the six fixed-carrier connection directions are the arbitrary one-form shifts in the common $SO(2)$ stabilizer. The other two change the tetrad while preserving its metric and $\chi$.
+
+<!-- BILINGUAL-UNIT: two-carrier-sharp-reality.multiplier -->
+## Equivalent constrained action and presymplectic current
+
+For the Hamiltonian analysis take $S_0$ to be the supplied Einstein–Hilbert action with its usual boundary convention and compactly supported interior variations. The local chart gives the same stationary equations modulo its arbitrary coordinates as the multiplier formulation
+\[
+S_{\mathrm{ext}}[g,\chi,\lambda]
+=S_0[g]+\int \sqrt{-g}\,\operatorname{Re}\bigl(\lambda C(g,\chi)\bigr)\,\mathrm d^4x,\qquad
+\lambda\in\mathbb C .
+\]
+Both constraints are enforced by varying $\lambda$. The original connection variations force $\Pi$ into the real span of the two normals of $C$ and therefore determine a unique smooth $\lambda$. For variations with $\delta C=0$, the chain rule gives
+\[
+\Pi^{\mu\nu}=4\kappa^2\operatorname{Re}(\lambda t^\mu t^\nu),\qquad
+\Pi^{\mu\nu}h_{\mu\nu}
+=\operatorname{Re}\!\left(\lambda\left[2\partial^\mu\chi\,\partial_\mu\delta\chi-4\kappa^2\delta\chi\right]\right).
+\]
+Variations of $\chi$ are arbitrary with the two solved metric components adjusted. Integration by parts yields $\nabla_\mu(\lambda t^\mu)+\kappa\lambda=0$. This equation also follows from the contracted Bianchi identity. Indeed, $t^\flat=\mathrm d\chi/(2\kappa)$ and $g(t,t)=\chi$ imply $\nabla_t t=\kappa t$. Taking the real part of the divergence of $\lambda t^\mu t^\nu$ then gives the complex transport equation because $a,b$ are independent. Conversely, solutions of the multiplier equations give stationary configurations in the original chart by the local inverse.
+
+The integration by parts adds the boundary potential
+\[
+\vartheta^\mu_\chi
+=2\sqrt{-g}\,\operatorname{Re}(\lambda\,\partial^\mu\chi\,\delta\chi).
+\]
+It agrees with the scalar contribution of $S_{\mathrm{ext}}$. The gravitational potential also agrees since the metric is the same. The identities hold along every solution and tangent in the chart, so the local covariant presymplectic currents agree on shell up to the usual boundary ambiguity.
+
+<!-- BILINGUAL-UNIT: two-carrier-sharp-reality.dirac -->
+## Dirac reduction including zero multiplier
+
+Use a spacelike slice with spatial metric $\gamma_{ij}$, determinant $\gamma$, lapse $N>0$ and shift $N^i$. Use a patch where $a$ is timelike, as in the flat family for small nonzero $\varepsilon$. The complex normal derivative of $\chi$ is nonzero. Introduce a temporary complex normal derivative variable $\zeta$ and a complex momentum density $P$. Put $s_\chi=\gamma^{ij}\partial_i\chi\,\partial_j\chi-4\kappa^2\chi$. The scalar part of the first-order Lagrangian density is
+\[
+\operatorname{Re}\bigl[P(\dot\chi-N^i\partial_i\chi-N\zeta)\bigr]
++N\sqrt{\gamma}\,\operatorname{Re}\bigl[\lambda(s_\chi-\zeta^2)\bigr].
+\]
+Eliminating $P$ recovers $S_{\mathrm{ext}}$. The primary momenta for $\zeta,\lambda$ vanish. Their four real secondary constraints are the two complex relations
+\[
+s_\chi-\zeta^2=0,\qquad P+2\sqrt{\gamma}\lambda\zeta=0,\qquad
+\det_{\mathbb R}\frac{\partial(s_\chi-\zeta^2,\ P+2\sqrt{\gamma}\lambda\zeta)}
+{\partial(\zeta,\lambda)}=16\gamma|\zeta|^4 .
+\]
+The determinant follows by taking the squared modulus of the complex triangular determinant. Thus these constraints and the four primary momenta are second class even at $P=\lambda=0$. Eliminate them using the local square-root choice $Z^2=s_\chi$ with $Z\ne0$. The reduced scalar symplectic potential and the additions to the Hamiltonian and momentum constraints are
+\[
+\operatorname{Re}(P\,\delta\chi),\qquad
+\mathcal H_\chi=\operatorname{Re}(P Z),\qquad
+\mathcal D_i^\chi=\operatorname{Re}(P\,\partial_i\chi).
+\]
+The scalar normal-normal bracket is
+\[
+\{H_\chi[N],H_\chi[M]\}=
+\int (N\partial_i M-M\partial_i N)\gamma^{ij}\mathcal D_j^\chi\,\mathrm d^3x .
+\]
+Indeed $Z\,\partial Z/\partial(\partial_i\chi)=\gamma^{ij}\partial_j\chi$, and all terms with no derivatives of the smearing functions cancel. The antisymmetrized cross bracket with the gravitational normal constraint vanishes because $\mathcal H_\chi$ has no spatial metric derivatives or metric momentum and the momentum derivative of the gravitational constraint is algebraic. The total momentum constraint generates spatial diffeomorphisms on the scalar and metric variables. The four total ADM constraints are first class together with the four lapse and shift momenta. After eliminating the chart coordinates and the algebraic constraints there are twelve configuration variables including lapse and shift. The local Dirac count is $(24-2\cdot 8)/2=4$. Two canonical pairs come from $\chi$, in addition to the two of the metric tensor sector.
+
+The subspace $P=0$ is invariant under the Hamiltonian equations when the evolution exists, because the Hamiltonian dependence on $\chi$ is linear in $P$. There the metric satisfies the vacuum Einstein equation and the restriction of the scalar presymplectic potential vanishes. In the full action variations of $P$ are present even at $P=0$, and the scalar symplectic form has its two canonical pairs.
+
+<!-- BILINGUAL-UNIT: two-carrier-sharp-reality.hyperbolicity -->
+## Nonreal scalar frequencies on the flat branch
+
+Linearize about a flat solution with $\lambda=0$ in the regular family. Set $\delta g=\delta\lambda=0$. The remaining equation is
+\[
+(t^\mu\partial_\mu-\kappa)\delta\chi=0 .
+\]
+These perturbations lift to the original chart. At the flat reference a diffeomorphism preserving $\delta g=0$ is generated by a Killing vector, and the arbitrary chart coordinates preserve $\chi$. The high-frequency scalar amplitudes therefore survive the gauge quotient. For a real spatial covector $k_i$ the determinant of the real two-component principal symbol is
+\[
+(a^0\nu-a^i k_i)^2+(b^0\nu-b^i k_i)^2,\qquad
+\operatorname{disc}_{\nu}=-4\bigl[(a^0 b^i-b^0 a^i)k_i\bigr]^2 .
+\]
+Here $\nu$ is the frequency relative to $x^0$. Since $a$ is timelike and independent of $b$, the discriminant is negative for an open set of $k_i$ in any spacelike slicing. At the affine origin for $\varepsilon=1/3$ and a wave along $x^1$, one of the two frequencies is exactly $\nu=(1/2+i)k_1$. The conjugate pair exhibits frozen principal growth with rate proportional to $|k_1|$. Hence the full linearized comparison fails strong hyperbolicity even at zero scalar momentum. The earlier Einstein result concerns the metric amplitudes at real null covectors. The hyperbolicity condition follows from the reality of characteristic speeds. [Reula, Hyperbolic Methods for Einstein's Equations](https://doi.org/10.12942/lrr-1998-3).
 
 <!-- BILINGUAL-UNIT: two-carrier-sharp-reality.verification -->
 ## Verification and scope
 
 [Exact SymPy 1.14.0 tests](../../tests/test_two_carrier_sharp_reality.py) check the affine metric, complex eikonal identity, parallel scalar and curvature transport, rank change, both transverse amplitudes with vanishing Ricci symbol and explicit connection solutions, and the singular limit. The [Lean 4.33.1 module](../../formal/lean/UBT/Hamiltonian/TwoCarrierSharpReality.lean) checks the finite kernel elimination, the commutator steps of the transport argument and real two-by-two symbol algebra. The analytic proof supplies the geometric linearizations, rank dimensions and local chart.
 
-The comparison changes the tetrad reality condition relative to the classical Lorentz-slice requirement while using the original sharp identity and one real Lorentz connection. Its rank and symbol conclusions are local. A microscopic action, its composite connection selector, compatibility with full complex-time evolution, stability and the physical Dirac count remain open for this comparison.
+The Hamiltonian extension adds exact SymPy tests of the auxiliary Jacobian, square-root Hamiltonian and bracket coefficient, the discriminant, a rational flat-branch witness and affine transport. Independent exact integer arithmetic checks the auxiliary determinant and discriminant on finite examples, including zero multiplier, and the rational frequency. **LEAN-PENDING at preparation.** The added Lean lemmas specify the finite determinant, bracket coefficient and discriminant, with compilation recorded by repository CI. The rank argument, variational equivalence and Dirac count are analytic.
+
+The comparison changes the tetrad reality condition relative to the classical Lorentz-slice requirement while using the original sharp identity and one real Lorentz connection. Its rank and symbol conclusions are local. A microscopic action, its composite connection selector and compatibility with full complex-time evolution remain open. The degree count and hyperbolicity result apply to the supplied metric action on its regular branch.

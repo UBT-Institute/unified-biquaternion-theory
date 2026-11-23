@@ -97,11 +97,36 @@ theorem sharpRealityNormalSymbolVanish {R : Type} [CommRing R] (a b A B : R)
         rw [first, second]
         grind
 
+/-- The real determinant of the two complex triangular auxiliary blocks. -/
+theorem sharpRealityAuxiliaryDeterminant {R : Type} [CommRing R] (x y rho : R) :
+    ((-2 * x) * (-2 * x) - (2 * y) * (-2 * y)) *
+        ((2 * rho * x) * (2 * rho * x) - (-2 * rho * y) * (2 * rho * y)) =
+      16 * rho^2 * (x^2 + y^2)^2 := by
+  grind
+
+/-- The derivative of the square-root relation in the normal constraint. -/
+theorem sharpRealityNormalBracketCoefficient {R : Type} [CommRing R]
+    (z dz grad : R) (twoRegular : ∀ q : R, 2 * q = 0 → q = 0)
+    (rootDerivative : 2 * z * dz = 2 * grad) :
+    z * dz = grad := by
+  have zero : 2 * (z * dz - grad) = 0 := by grind
+  have cancel := twoRegular _ zero
+  grind
+
+/-- Discriminant of the realified complex transport symbol. -/
+theorem sharpRealityFrequencyDiscriminant {R : Type} [CommRing R] (a b q r : R) :
+    (-2 * (a * q + b * r))^2 - 4 * (a^2 + b^2) * (q^2 + r^2) =
+      -4 * (a * r - b * q)^2 := by
+  grind
+
 #print axioms sharpRealityKernelRelations
 #print axioms sharpRealityKernelOnCarriers
 #print axioms parallelSharpRealityTransport
 #print axioms parallelSharpRealityTidalTransport
 #print axioms sharpRealityGaugeNumerators
 #print axioms sharpRealityNormalSymbolVanish
+#print axioms sharpRealityAuxiliaryDeterminant
+#print axioms sharpRealityNormalBracketCoefficient
+#print axioms sharpRealityFrequencyDiscriminant
 
 end UBT.Hamiltonian

@@ -1,0 +1,77 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-16",
+  "claim_or_decision_id": "TWO-CARRIER-COMPLEX-EIKONAL-HAMILTONIAN",
+  "summary": "Exact local constrained action, Dirac reduction and nonreal scalar principal frequencies for the regular complex two-carrier metric-only comparison.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "mathematical_derivation",
+      "actor": "ai",
+      "description": "Used the fixed-carrier rank result to construct a local metric and scalar chart, match the presymplectic currents, eliminate the auxiliary constraints, and compute the principal frequencies.",
+      "evidence_ids": [
+        "prior",
+        "derivation"
+      ]
+    },
+    {
+      "kind": "verification",
+      "actor": "ai",
+      "description": "Checked finite auxiliary determinants, frequency discriminants and the rational affine witness with exact integer arithmetic. Added reproducible symbolic tests and finite Lean statements for repository CI.",
+      "evidence_ids": [
+        "regressions",
+        "lean"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "prior",
+      "class": "repository_artifact",
+      "locator": "https://github.com/UBT-Institute/unified-biquaternion-theory/commit/733b6ea8221109add3eeb182daeff5ff9e393f32",
+      "original_checked": true,
+      "supports": "The complex eikonal identity, regular fixed-carrier rank and the two metric polarization amplitudes.",
+      "limitations": "The principal metric calculation concerns real null covectors."
+    },
+    {
+      "id": "derivation",
+      "class": "repository_artifact",
+      "locator": "research_tracks/fundamental_dynamics/two_carrier_sharp_reality.en.md",
+      "original_checked": true,
+      "supports": "Local action and presymplectic equivalence, Dirac counts and an exact nonreal principal frequency on the flat family.",
+      "limitations": "The comparison uses a supplied Einstein-Hilbert metric action and independent compatible defining connection choices before any microscopic selector."
+    },
+    {
+      "id": "regressions",
+      "class": "repository_artifact",
+      "locator": "tests/test_two_carrier_sharp_reality.py",
+      "original_checked": true,
+      "supports": "Symbolic regression definitions for the auxiliary step, reduced normal bracket coefficient, affine transport and frequency discriminant.",
+      "limitations": "Finite algebra and explicit witnesses."
+    },
+    {
+      "id": "lean",
+      "class": "repository_artifact",
+      "locator": "formal/lean/UBT/Hamiltonian/TwoCarrierSharpReality.lean",
+      "original_checked": false,
+      "supports": "Finite auxiliary determinant, square-root derivative coefficient and transport discriminant statements.",
+      "limitations": "Compilation status is recorded by repository CI."
+    }
+  ],
+  "rejected_alternatives": [
+    "Counting the four stabilizer shifts as propagating connection degrees of freedom in the metric-only action.",
+    "Inferring hyperbolicity of the full action from the two Einstein metric polarizations."
+  ],
+  "verification": {
+    "status": "partial",
+    "artifacts": [
+      "tests/test_two_carrier_sharp_reality.py",
+      "formal/lean/UBT/Hamiltonian/TwoCarrierSharpReality.lean"
+    ],
+    "limitations": "Exact integer checks ran on selected cases. SymPy regressions and Lean compilation use repository CI. The continuum comparison and degree count are analytic."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "Continues the declared regular branch of PR #845. The two scalar canonical pairs are coordinates of the original field and their momenta."
+}

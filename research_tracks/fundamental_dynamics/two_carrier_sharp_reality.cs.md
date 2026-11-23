@@ -15,6 +15,8 @@ UBT-AI-PROVENANCE-END
 
 **2026-11-07 · C_working · podmíněný lokální výsledek.** Paralelní referenční větev stále ztrácí jednu příčnou Einsteinovu slapovou amplitudu, i když perturbace prvního řádu smí mít komplexní tetrádu. Explicitní plochá pozadí s komplexní tetrádou a reálnou metrikou z kvaternionové konjugace kinematicky obnovují obě amplitudy. Samostatný výsledek pro hlavní symbol používá zadanou metrickou akci. Srovnání navazuje na [polarizační překážku v kvadratické torzi](residual_so2_quadratic_cone.cs.md).
 
+Rozšíření z 2026-11-16 dává lokální počet stupňů volnosti pro tuto zadanou akci a nachází nereálné skalární frekvence na jejím plochém vakuovém pozadí.
+
 <!-- BILINGUAL-UNIT: two-carrier-sharp-reality.domain -->
 ## Přesná realita metriky a transport
 
@@ -128,11 +130,92 @@ Zadáme difeomorfně invariantní metrickou akci $S_0[g]$ bez přímé závislos
 p_\mu\delta\Pi^{\mu\nu}
 =(A p(a)+B p(b))a^\nu+(-A p(b)+B p(a))b^\nu=0 .
 \]
-Determinant $p(a)^2+p(b)^2$ je pro $p(t)\ne0$ nenulový. Pro takové kovektory tedy v hlavním symbolu platí $\delta\Pi=0$. Obráceně při nulovém metrickém Eulerově symbolu mizí všechny hlavní variace složené akce. Pro zadanou Einsteinovu–Hilbertovu akci na ploché rodině to obnovuje Einsteinův **metrický** symbol na nenulových nulových kovektorech včetně obou slapových polarizací. Směry neviditelné pro metriku a $p(t)=0$ vyžadují samostatnou analýzu vazeb. Metrická akce je necitlivá ke čtyřem přídavkům ze společného stabilizátoru, protože přesně zachovávají $D_\omega\Theta$.
+Determinant $p(a)^2+p(b)^2$ je pro $p(t)\ne0$ nenulový. Pro takové kovektory tedy v hlavním symbolu platí $\delta\Pi=0$. Obráceně při nulovém metrickém Eulerově symbolu mizí všechny hlavní variace složené akce. Pro zadanou Einsteinovu–Hilbertovu akci na ploché rodině to obnovuje Einsteinův **metrický** symbol na nenulových nulových kovektorech včetně obou slapových polarizací. Metrická akce je necitlivá ke čtyřem přídavkům ze společného stabilizátoru, protože přesně zachovávají $D_\omega\Theta$.
+
+
+<!-- BILINGUAL-UNIT: two-carrier-sharp-reality.quotient -->
+## Lokální metrické a skalární proměnné
+
+V regulární větvi výpočtu hodnosti držíme první jet $\Theta$ pevný a uložíme přesnou realitu metriky. Zobrazení ze čtrnácti zbývajících reálných složek konexe do osmi metrických souřadnic má konstantní hodnost osm. Při pevných $\chi,\mathrm d\chi$ má komplexní rovnice
+\[
+C(g,\chi)=g^{-1}(\mathrm d\chi,\mathrm d\chi)-4\kappa^2\chi=0
+\]
+v reálných metrických proměnných hodnost dva, protože $D_g C[h]=-4\kappa^2 h(t,t)$ a $a,b$ jsou nezávislé. Věta o implicitní funkci dává lokální mapu s osmi metrickými souřadnicemi a šesti volnými souřadnicemi konexe. Dává také lokální inverzi pro každou blízkou metriku splňující $C=0$. Věta platí s prvním jetem nosičů jako parametrem. Zobrazení $(V,W)\mapsto\chi$ má hodnost dva, protože gradienty $\operatorname{Re}\chi$ a $\operatorname{Im}\chi$ jsou při nezávislých $V,W$ nezávislé. V dané mapě tedy lze při pevném $\chi$ měnit ostatních šest reálných souřadnic $\Theta$. Dvě zbývající metrické složky určuje $C=0$ a závisejí pouze na osmi metrických souřadnicích a na $\chi,\mathrm d\chi$.
+
+Akce $S_0[g]$ je nezávislá na šesti souřadnicích konexe podél každého vlákna a na šesti souřadnicích nosičů zbývajících při pevném $\chi$. Variace těchto souřadnic mohou mít libovolný kompaktní nosič při pevných $g,\chi$. V mapě s těmito souřadnicemi jsou nulové sdružené momenty vazbami první třídy bez sekundárních vazeb. Čtyři ze šesti směrů konexe při pevných nosičích jsou posuny o libovolnou jednoformu ve společném stabilizátoru $SO(2)$. Zbývající dva mění tetrádu při zachování její metriky a $\chi$.
+
+<!-- BILINGUAL-UNIT: two-carrier-sharp-reality.multiplier -->
+## Ekvivalentní akce s vazbami a presymplektický proud
+
+Pro Hamiltonovu analýzu zvolíme za $S_0$ zadanou Einsteinovu–Hilbertovu akci s její obvyklou okrajovou konvencí a variacemi s kompaktním nosičem uvnitř oblasti. Až na libovolné souřadnice dává lokální mapa stejné stacionární rovnice jako formulace s multiplikátorem
+\[
+S_{\mathrm{ext}}[g,\chi,\lambda]
+=S_0[g]+\int \sqrt{-g}\,\operatorname{Re}\bigl(\lambda C(g,\chi)\bigr)\,\mathrm d^4x,\qquad
+\lambda\in\mathbb C .
+\]
+Obě vazby vynucuje variace $\lambda$. Původní variace konexe nutí $\Pi$ do reálného lineárního obalu dvou normál rovnice $C$ a určují tím jediné hladké $\lambda$. Pro variace s $\delta C=0$ dává řetězové pravidlo
+\[
+\Pi^{\mu\nu}=4\kappa^2\operatorname{Re}(\lambda t^\mu t^\nu),\qquad
+\Pi^{\mu\nu}h_{\mu\nu}
+=\operatorname{Re}\!\left(\lambda\left[2\partial^\mu\chi\,\partial_\mu\delta\chi-4\kappa^2\delta\chi\right]\right).
+\]
+Variace $\chi$ jsou libovolné při odpovídající změně dvou vyřešených metrických složek. Integrace per partes dává $\nabla_\mu(\lambda t^\mu)+\kappa\lambda=0$. Tato rovnice plyne také z kontrahované Bianchiho identity. Vztahy $t^\flat=\mathrm d\chi/(2\kappa)$ a $g(t,t)=\chi$ totiž implikují $\nabla_t t=\kappa t$. Reálná část divergence $\lambda t^\mu t^\nu$ pak dává komplexní transportní rovnici díky nezávislosti $a,b$. Naopak řešení rovnic s multiplikátorem dávají stacionární konfigurace v původní mapě pomocí lokální inverze.
+
+Integrací per partes přibude okrajový potenciál
+\[
+\vartheta^\mu_\chi
+=2\sqrt{-g}\,\operatorname{Re}(\lambda\,\partial^\mu\chi\,\delta\chi).
+\]
+Shoduje se se skalárním příspěvkem $S_{\mathrm{ext}}$. Gravitační potenciál se také shoduje, protože metrika je stejná. Identity platí podél každého řešení i pro tečné variace v mapě, takže se lokální kovariantní presymplektické proudy shodují na řešeních až na obvyklou okrajovou nejednoznačnost.
+
+<!-- BILINGUAL-UNIT: two-carrier-sharp-reality.dirac -->
+## Diracova redukce včetně nulového multiplikátoru
+
+Použijeme prostorupodobnou nadplochou s prostorovou metrikou $\gamma_{ij}$, determinantem $\gamma$, funkcí běhu $N>0$ a posunem $N^i$. Pracujeme v oblasti, kde je $a$ časupodobný, jako v ploché rodině pro malé nenulové $\varepsilon$. Komplexní normálová derivace $\chi$ je nenulová. Zavedeme dočasnou komplexní proměnnou normálové derivace $\zeta$ a komplexní hustotu momentu $P$. Položíme $s_\chi=\gamma^{ij}\partial_i\chi\,\partial_j\chi-4\kappa^2\chi$. Skalární část lagrangeovské hustoty prvního řádu je
+\[
+\operatorname{Re}\bigl[P(\dot\chi-N^i\partial_i\chi-N\zeta)\bigr]
++N\sqrt{\gamma}\,\operatorname{Re}\bigl[\lambda(s_\chi-\zeta^2)\bigr].
+\]
+Eliminací $P$ dostaneme zpět $S_{\mathrm{ext}}$. Primární momenty pro $\zeta,\lambda$ jsou nulové. Jejich čtyři reálné sekundární vazby jsou dva komplexní vztahy
+\[
+s_\chi-\zeta^2=0,\qquad P+2\sqrt{\gamma}\lambda\zeta=0,\qquad
+\det_{\mathbb R}\frac{\partial(s_\chi-\zeta^2,\ P+2\sqrt{\gamma}\lambda\zeta)}
+{\partial(\zeta,\lambda)}=16\gamma|\zeta|^4 .
+\]
+Determinant je druhá mocnina modulu komplexního trojúhelníkového determinantu. Tyto vazby a čtyři primární momenty jsou tedy druhé třídy i pro $P=\lambda=0$. Eliminujeme je volbou lokální odmocniny $Z^2=s_\chi$ s $Z\ne0$. Redukovaný skalární symplektický potenciál a příspěvky k hamiltonovské a momentové vazbě jsou
+\[
+\operatorname{Re}(P\,\delta\chi),\qquad
+\mathcal H_\chi=\operatorname{Re}(P Z),\qquad
+\mathcal D_i^\chi=\operatorname{Re}(P\,\partial_i\chi).
+\]
+Poissonova závorka dvou skalárních normálových generátorů je
+\[
+\{H_\chi[N],H_\chi[M]\}=
+\int (N\partial_i M-M\partial_i N)\gamma^{ij}\mathcal D_j^\chi\,\mathrm d^3x .
+\]
+Platí totiž $Z\,\partial Z/\partial(\partial_i\chi)=\gamma^{ij}\partial_j\chi$ a všechny členy bez derivací testovacích funkcí se vyruší. Antisymetrizovaná smíšená závorka s gravitační normálovou vazbou zmizí, protože $\mathcal H_\chi$ neobsahuje prostorové derivace metriky ani její moment a derivace gravitační vazby podle momentu je algebraická. Celková momentová vazba generuje prostorové difeomorfismy skalárních a metrických proměnných. Čtyři celkové ADM vazby jsou první třídy spolu se čtyřmi momenty funkce běhu a posunu. Po eliminaci souřadnic mapy a algebraických vazeb zbývá dvanáct konfiguračních proměnných včetně funkce běhu a posunu. Lokální Diracův počet je $(24-2\cdot 8)/2=4$. Dva kanonické páry pocházejí z $\chi$ a dva z tenzorového sektoru metriky.
+
+Podprostor $P=0$ je při existujícím vývoji invariantní vůči Hamiltonovým rovnicím, protože závislost hamiltoniánu na $\chi$ je lineární v $P$. Metrika tam splňuje vakuovou Einsteinovu rovnici a restrikce skalárního presymplektického potenciálu mizí. V celé akci jsou variace $P$ přípustné i při $P=0$ a skalární symplektická forma má své dva kanonické páry.
+
+<!-- BILINGUAL-UNIT: two-carrier-sharp-reality.hyperbolicity -->
+## Nereálné skalární frekvence na ploché větvi
+
+Linearizujeme kolem plochého řešení s $\lambda=0$ z regulární rodiny. Položíme $\delta g=\delta\lambda=0$. Zbývá rovnice
+\[
+(t^\mu\partial_\mu-\kappa)\delta\chi=0 .
+\]
+Tyto perturbace lze realizovat v původní mapě. Difeomorfismus zachovávající $\delta g=0$ na plochém pozadí generuje Killingův vektor a libovolné souřadnice mapy zachovávají $\chi$. Skalární vysokofrekvenční amplitudy tedy zůstávají v kalibračním kvocientu. Pro reálný prostorový kovektor $k_i$ má reálný dvousložkový hlavní symbol determinant
+\[
+(a^0\nu-a^i k_i)^2+(b^0\nu-b^i k_i)^2,\qquad
+\operatorname{disc}_{\nu}=-4\bigl[(a^0 b^i-b^0 a^i)k_i\bigr]^2 .
+\]
+Zde je $\nu$ frekvence ve vztahu k $x^0$. Protože $a$ je časupodobný a nezávislý na $b$, je diskriminant záporný pro otevřenou množinu $k_i$ při každé prostorupodobné foliaci. V afinním počátku pro $\varepsilon=1/3$ a vlnu podél $x^1$ je jedna z obou frekvencí přesně $\nu=(1/2+i)k_1$. Komplexně sdružená dvojice dává růst v hlavním symbolu se zmrazenými koeficienty rychlostí úměrnou $|k_1|$. Celé linearizované srovnání proto selhává v silné hyperbolicitě i při nulovém skalárním momentu. Předchozí Einsteinův výsledek se týká metrických amplitud pro reálné kovektory nulové normy. Podmínka hyperbolicity plyne z reality charakteristických rychlostí. [Reula, Hyperbolic Methods for Einstein's Equations](https://doi.org/10.12942/lrr-1998-3).
 
 <!-- BILINGUAL-UNIT: two-carrier-sharp-reality.verification -->
 ## Ověření a rozsah
 
 [Přesné testy v SymPy 1.14.0](../../tests/test_two_carrier_sharp_reality.py) ověřují afinní metriku, komplexní eikonální identitu, paralelní transport skaláru a křivosti, změnu hodnosti, obě příčné amplitudy s nulovým Ricciho symbolem a explicitními řešeními pro konexi i singulární limitu. [Modul v Leanu 4.33.1](../../formal/lean/UBT/Hamiltonian/TwoCarrierSharpReality.lean) ověřuje konečnou eliminaci jádra, komutátorové kroky v transportním argumentu a reálnou algebru symbolu rozměru dva krát dva. Analytický důkaz dává geometrické linearizace, rozměry obrazů a lokální mapu.
 
-Srovnání mění podmínku reality tetrády vzhledem k požadavku klasického Lorentzova řezu a používá původní identitu s kvaternionovou konjugací a jednu reálnou Lorentzovu konexi. Závěry o hodnosti a symbolu jsou lokální. Mikroskopická akce, z ní plynoucí určení kompozitní konexe, kompatibilita s plným vývojem v komplexním čase, stabilita a fyzikální Diracův počet stupňů volnosti zůstávají pro toto srovnání otevřené.
+Hamiltonovo rozšíření přidává přesné testy v SymPy pro jakobián pomocných proměnných, odmocninový hamiltonián a koeficient závorky, diskriminant, racionální příklad z ploché větve a afinní transport. Nezávislá přesná celočíselná aritmetika ověřuje determinant pomocných proměnných a diskriminant na konečných příkladech včetně nulového multiplikátoru a také racionální frekvenci. **LEAN-PENDING při přípravě.** Přidaná lemmata v Leanu formulují konečný determinant, koeficient závorky a diskriminant. Jejich kompilaci zaznamenává kontrola repozitáře. Hodnostní argument, variační ekvivalence a Diracův počet jsou analytické.
+
+Srovnání mění podmínku reality tetrády vzhledem k požadavku klasického Lorentzova řezu a používá původní identitu s kvaternionovou konjugací a jednu reálnou Lorentzovu konexi. Závěry o hodnosti a symbolu jsou lokální. Mikroskopická akce, z ní plynoucí určení kompozitní konexe a kompatibilita s plným vývojem v komplexním čase zůstávají otevřené. Počet stupňů volnosti a výsledek o hyperbolicitě platí pro zadanou metrickou akci na její regulární větvi.
