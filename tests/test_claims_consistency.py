@@ -7,6 +7,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import yaml
+
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CLAIMS_FILE = REPO_ROOT / "CLAIMS.yaml"
@@ -120,3 +122,38 @@ def test_gauge_and_qm_honest_status_headers_present() -> None:
     assert "(e^{i\\theta}\\mathbf{I})^2=-e^{2i\\theta}" in su3
     assert "RETRACTED (2026-07-17)" in born
     assert "L e^{-2Dk^2T}" in born
+
+
+def test_gauge_summary_levels_follow_the_claims_ledger() -> None:
+    ledger = yaml.safe_load(CLAIMS_FILE.read_text(encoding="utf-8"))["claims"]
+    summary = (REPO_ROOT / "WHAT_IS_PROVED.md").read_text(encoding="utf-8")
+
+    def levels(heading: str) -> dict[str, str]:
+        section = summary.split(f"### {heading}\n", 1)[1].split("\n### ", 1)[0]
+        return {
+            parts[0]: parts[2]
+            for line in section.splitlines()
+            if line.startswith("| ")
+            for parts in [line.removeprefix("| ").split(" | ", 3)]
+            if len(parts) == 4
+        }
+
+    expected = {
+        "OPEN_GAP": "[OPEN]",
+        "DERIVED_WITH_ASSUMPTIONS": "[L1 conditional]",
+        "PROVED": "[L1]",
+    }
+    su3 = levels("SU(3) Colour")
+    gauge = ledger["gauge_group"]
+    for row in ("S2", "S3", "S4"):
+        assert su3[row].startswith(expected[gauge["status"]]), row
+    for row, gap in (("S1", "GAP-SU3-DYN"), ("S2", "GAP-SU3-INTERNAL-TRIPLET-ORIGIN"),
+                     ("S3", "GAP-SU3-DYN-MICRO")):
+        if any(entry.startswith(f"{gap}: OPEN") for entry in gauge["assumptions"]):
+            assert "[OPEN]" in su3[row] and gap in su3[row], row
+
+    qed = ledger["qed_phi_const_neutrality"]
+    for heading, row in (("Electroweak Sector", "E6"), ("QED Sector", "Q1")):
+        level = levels(heading)[row]
+        assert level.startswith(expected[qed["status"]]), row
+        assert qed["id"] in level, row
