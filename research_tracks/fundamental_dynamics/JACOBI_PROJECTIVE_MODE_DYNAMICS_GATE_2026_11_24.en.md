@@ -12,7 +12,7 @@ UBT-AI-PROVENANCE-END
 -->
 # Jacobi mode lift: exact projective rank and dynamical selection gate
 
-**24 November 2026. C_working; algebraic L0 conditional; no finalized action.** The reference construction is canonical/extensions/theta_fft_diagonalization.tex and the reduced Jacobi model canonical/bridges/theta_complex_time_bridge.md. The bridge contains an **explicit override**: its dimensionless Jacobi modulus \(t+i\phi\) is **not identified** with physical UBT \(\tau=t+i\psi\) without a separate map. The field of locked Axiom A is a single biquaternion value, not an arbitrary independent multiplet of spin-2 matrices. This note applies to reduced complex scalar mode amplitudes and to SO(3)-scalar-labelled copies of the fundamental \(M_2(\mathbb C)\) representation, not to a independently justified tensor carrier.
+**24 November 2026. C_working; algebraic L0 conditional; no finalized action.** The reference construction is canonical/extensions/theta_fft_diagonalization.tex and the reduced Jacobi model canonical/bridges/theta_complex_time_bridge.md. The bridge contains an **explicit override**: its dimensionless Jacobi modulus \(t+i\phi\) is **not identified** with physical UBT \(\tau=t+i\psi\) without a separate map. The field of locked Axiom A is a single biquaternion value, not an arbitrary independent multiplet of spin-2 matrices. This note applies to reduced complex scalar mode amplitudes and to copies of the fundamental \(M_2(\mathbb C)\) representation whose mode labels are spatial scalars under \(SO(3)\), not to a independently justified tensor carrier.
 
 ## 1. Rank-one tensor does not introduce independent matrix modes
 
@@ -76,7 +76,7 @@ The genuine RH-inspired local Howe/Weil symplectic construction of PR #910/#911 
 
 Under locked Axiom B, \(\psi\) is the **spatial scalar** imaginary-time coordinate. In a Fourier/Jacobi expansion
 \[
-\Theta(x,t,\psi)=\sum_{n\in\mathbb Z}\Theta_n(x,t)e^{in\psi},
+\Theta(x,t,\psi)=\sum_{n\in\mathbb Z}\Theta_n(x,t)e^{in\psi}
 \]
 the integer \(n\) is a character of the *internal* translation group \(U(1)_\psi\), not automatically the spatial little-group helicity. Spatial rotations act on \(\Theta_n\) through its actual biquaternion representation; scalar-labelled copies retain the original weights.
 
@@ -101,6 +101,6 @@ Thus a graviton's **individual helicity lines** have \(c_1(\mathcal L_{+2})=-4\)
 
 ## 6. Decisive next gate and status
 
-Identify which of the three very different objects the proposed **full tensor/Jacobi Theta** means: (a) an eight-real-value biquaternion field with infinitely many scalar-labelled Fourier coefficients; (b) a quadratic mode-density interaction/readout; or (c) an actual independently transforming rank-2 physical carrier. Cases (a) and (b) do not bypass the preceding conditional linear helicity-2 no-go. Case (c) must first be derived consistently from Axiom A instead of importing an independent metric/tensor field. Then derive an *on-shell* physical covariant presymplectic current and Dirac constraints from one single-valued Theta-only action, before testing a Hamiltonian or emergent collective graviton.
+Identify which of the three very different objects the proposed **full tensor/Jacobi Theta** means: (a) a biquaternion field with 8 real value components with infinitely many scalar-labelled Fourier coefficients; (b) a quadratic mode-density interaction/readout; or (c) an actual independently transforming rank-2 physical carrier. Cases (a) and (b) do not bypass the preceding conditional linear helicity-2 no-go. Case (c) must first be derived consistently from Axiom A instead of importing an independent metric/tensor field. Then derive an *on-shell* physical covariant presymplectic current and Dirac constraints from one single-valued Theta-only action, before testing a Hamiltonian or emergent collective graviton.
 
 **Exact verification:** tools/verify_jacobi_projective_mode_dynamics_gate_2026_11_24.py and research_tracks/fundamental_dynamics/tests/test_jacobi_projective_mode_dynamics_gate_2026_11_24.py; local SymPy 1.14.0 exact checks at \(N=2,3,4\), the \(N=3\) FFT counterexample, projective heat non-symplecticity and two distinct positive generators. The all-\(N\) rank theorem is analytic; finite tests alone do not prove it. **UBT action OPEN; physical helicity-2 OPEN; Lean and semantic review pending. Do not merge as a physics claim.**
