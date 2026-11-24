@@ -76,6 +76,25 @@ Jde o lineární vDVZ diskontinuitu stopového sektoru. Není to univerzální z
 
 Pro pevný **nenulový** směr prostorové hybnosti (7) definuje prostorový TT projektor hodnosti dva a (8) jeho rozklad do normalizovaných polarizací. Kandidátní pól musí tedy mít dvě fyzikální šířící se helicity a znaménko \(Z>0\) v (9) je **nutnou** podmínkou kladné normy v eukleidovském polarizačním komparátoru. Nedokazuje to reflexní pozitivitu Hilbertova prostoru, Lorentzovskou unitaritu ani nepřítomnost dalších ghostů. Čtyřrozměrný off-shell příčně bezestopý projektor hodnosti pět z předchozí Wardovy analýzy NESMÍ být zaměňován za dva on-shell gravitonové stavy.
 
+## Metrické řetězové pravidlo jediné Θ: podmíněná dostatečnost, nikoli automatický princip ekvivalence
+
+Existuje přímá *UBT-specifická* pozitivní podmíněná cesta. Předpokládejme, že efektivní druhy \(\chi_a\) už byly skutečně odvozeny z fyzikálně redukované teorie \(\Theta\), a **předpokládejme**, že jejich efektivní akce závisejí na \(\Theta\) *výhradně přes stejnou uzamčenou metriku axiomu C* \(g[\Theta]\). Při definici \(T_a^{\mu\nu}=2\delta S_a/(\sqrt{|g|}\delta g_{\mu\nu})\) dává úplné metrické řetězové pravidlo při pevných efektivních stavech hmoty:
+\[
+\boxed{\left.\delta_\Theta S_a[\chi_a,g(\Theta)]\right|_{\delta\chi_a=0}
+=\frac12\int d^4x\sqrt{|g|}\,T_a^{\mu\nu}
+\left(D_\Theta g[\delta\Theta]\right)_{\mu\nu}.}\tag{11}
+\]
+\[
+S_a^{\rm toy}(q)=\frac12 T_a\,g(q)+\lambda_a I(q)\,O_a,\qquad
+g(q)=1+q+q^2,\quad I(q)=q^2,\tag{12}
+\]
+\[
+\boxed{\frac{d S_a^{\rm toy}}{dq}
+=\frac12 T_a(1+2q)+2\lambda_a q O_a.}\tag{13}
+\]
+
+Rovnice (11) dává **stejný metrický koeficient zdroje** pro každý druh; po odvození jediného kanonicky normalizovaného gravitonového pole a konzistentního fyzikálního stavového prostoru může reprodukovat univerzální vazbu \(h_{\mu\nu}\sum_aT_a^{\mu\nu}\). Závislost hmoty výhradně na metrice je ale zatím **nedokázaný předpoklad**, zejména protože samotné \(\chi_a\) jsou složeniny téhož \(\Theta\). Jejich indukované variace přidávají členy úměrné \(D_\Theta\chi_a\); případné další operátory závislé přímo na \(\Theta\) mohou přidávat další příspěvky. Přesný negativní model (12)-(13) obsahuje druhově závislé dodatečné vazby \(2\lambda_a q O_a\), přestože je metrika \(g(q)\) společná. Model **není** akce UBT. Tím se zpřesňuje mikroskopická otázka výběru: dokáže jediná akce \(\Theta\) a její Wardovy identity donutit *všechny fyzikální nízkoenergetické druhy* interagovat přes jedinou kanonickou metriku a vyloučit nezávislé nemetrické dlouhodosahové vrcholy? Zatím nemáme výsledek, který by to dokázal.
+
 ## Weinbergův–Wittenův teorém a strukturální rozhodnutí
 
 Pokud by emergentní sektor jediné Θ byl **běžnou Lorentzovsky invariantní lokální kvantovou teorií pole s vhodným zachovaným Lorentzovsky kovariantním kalibračně invariantním tenzorem energie-hybnosti**, netriviální bezhmotný složený spin dva nesoucí energii by odporoval Weinbergovu–Wittenovu teorému. Aby UBT nesplňovala jeho předpoklady, musí explicitně odvodit původ skutečných gravitačních vazeb a odpovídající strukturu energie-hybnosti/kalibrace (nebo určit a přesně prověřit jiný nesplněný předpoklad). Axiomatická kompozitní metrika je možným strukturálním rozdílem, **ale sama nedokazuje** výjimku. Ani aritmetický automorfní theta lift z RH neodvozuje fyzikální Wardovu identitu nebo univerzální měkký graviton.
