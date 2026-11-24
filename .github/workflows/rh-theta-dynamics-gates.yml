@@ -32,6 +32,7 @@ jobs:
           python -m pytest -q \
             research_tracks/action_selection/tests/test_rh_theta_harmonic_tt_transfer_2026_11_24.py \
             research_tracks/action_selection/tests/test_rh_theta_gap_critical_pole_2026_11_24.py \
-            research_tracks/action_selection/tests/test_rh_theta_ward_double_gate_2026_11_24.py
+            research_tracks/action_selection/tests/test_rh_theta_ward_double_gate_2026_11_24.py \
+            research_tracks/action_selection/tests/test_rh_theta_soft_universality_tt_residue_2026_11_24.py
       - name: Independent exact double-gate verifier
         run: python -B tools/verify_rh_theta_ward_double_gate_2026_11_24.py
