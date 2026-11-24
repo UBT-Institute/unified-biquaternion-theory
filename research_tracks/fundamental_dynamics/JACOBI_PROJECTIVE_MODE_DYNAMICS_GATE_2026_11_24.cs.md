@@ -14,7 +14,7 @@ UBT-AI-PROVENANCE-END
 
 **24. listopadu 2026. C_working; algebraická podmíněná úroveň L0; akce nedokončena.** Vycházíme z konstrukce canonical/extensions/theta_fft_diagonalization.tex a redukovaného Jacobiho modelu canonical/bridges/theta_complex_time_bridge.md. Přemosťující dokument obsahuje **výslovné upřesnění**: jeho bezrozměrný Jacobiho modul \(t+i\phi\) **není identifikován** s fyzikálním časem UBT \(\tau=t+i\psi\) bez samostatného odvození. Pole uzamčeného axiomu A je jediná bikvaternionová hodnota, nikoli libovolný multiplet nezávislých matic spinu 2. Poznámka se týká redukovaných komplexních skalárních amplitud a kopií základní reprezentace \(M_2(\mathbb C)\), jejichž modální indexy jsou skaláry vůči \(SO(3)\); nikoli předem zdůvodněného nezávislého tenzorového nosiče.
 
-## 1. Tenzor hodnosti 1 neobsahuje nezávislé maticové módy
+## 1. Vnější součin módů neobsahuje nezávislé maticové módy
 
 Nechť \(a\in\mathbb C^N\setminus\{0\}\) a \(\rho=aa^\dagger\). Přesný diferenciál je
 \[
@@ -29,9 +29,9 @@ Pro normalizovaný projektor \(P=aa^\dagger/(a^\dagger a)\) jsou neviditelné kl
 \boxed{\ker DP_a=\mathbb C a,\qquad
 \operatorname{rank}_{\mathbb R}DP_a=2N-2.}\tag{2}
 \]
-Projektor \(P\) tedy žije na \(\mathbb{CP}^{N-1}\) reálné dimenze \(2N-2\). Nenormalizovaný kužel matic hodnosti 1 má dimenzi \(2N-1\), a proto sám **nemůže** nést nedegenerovanou 2-formu (lichá dimenze); po normalizaci má projektivní prostor přirozenou symplektickou Fubiniho–Studyho formu. V bodě \(a=0\) je první diferenciál \(\rho\) nulový; (1) proto platí jen mimo nulu. Obecný smíšený stav potřebuje další směšování/data, nikoli pouze přejmenování téhož vektoru.
+Projektor \(P\) tedy žije na \(\mathbb{CP}^{N-1}\) reálné dimenze \(2N-2\). Nenormalizovaný kužel těchto matic má dimenzi \(2N-1\), a proto sám **nemůže** nést nedegenerovanou symplektickou formu (lichá dimenze); po normalizaci má projektivní prostor přirozenou symplektickou Fubiniho–Studyho formu. V bodě \(a=0\) je první diferenciál \(\rho\) nulový; (1) proto platí jen mimo nulu. Obecný smíšený stav potřebuje další směšování/data, nikoli pouze přejmenování téhož vektoru.
 
-Ve zkoumaném 2D redukovaném skalárním modelu dává diagonální Gaussovo váhování \(D_\phi=\operatorname{diag}(e^{-2\pi\phi n^2})\) matici \(\rho_\phi=(D_\phi a)(D_\phi a)^\dagger\). Nenulové váhy zachovávají hodnost 1 při konečném reálném \(\phi\); žádná nová nezávislá fyzikální stavová proměnná nevzniká.
+Ve zkoumaném 2D redukovaném skalárním modelu dává diagonální Gaussovo váhování \(D_\phi=\operatorname{diag}(e^{-2\pi\phi n^2})\) matici \(\rho_\phi=(D_\phi a)(D_\phi a)^\dagger\). Nenulové váhy zachovávají hodnost matice při konečném reálném \(\phi\); žádná nová nezávislá fyzikální stavová proměnná nevzniká.
 
 ## 2. Dvouosá FFT nemusí být změnou kvantové stavové báze
 
@@ -43,7 +43,7 @@ Výchozí poznámka používá dvourozměrnou FFT se stejným znaménkem v obou 
 \operatorname{tr}(F\rho F^T)=0,\quad
 F\rho F^T\ne(F\rho F^T)^\dagger,}\tag{3}
 \]
-zatímco \(\operatorname{tr}(F\rho F^\dagger)=1\) a \(F\rho F^\dagger\) zůstává pozitivním projektorem hodnosti 1. Původní FFT není chybná jako **transformace signálu**; chybou by bylo bez další konstrukce označit její obecný výstup za fyzikální hustotní stav. Dvouosá FFT sama nevytváří neomezený nosič spinu 2.
+zatímco \(\operatorname{tr}(F\rho F^\dagger)=1\) a \(F\rho F^\dagger\) zůstává pozitivním projektorem stejné hodnosti. Původní FFT není chybná jako **transformace signálu**; chybou by bylo bez další konstrukce označit její obecný výstup za fyzikální hustotní stav. Dvouosá FFT sama nevytváří neomezený nosič spinu 2.
 
 ## 3. Symplektická stavová geometrie existuje, ale generátor nevybírá
 
@@ -55,7 +55,7 @@ Fázový vývoj s hermitovským diagonálním generátorem \(K\), \(a(t)=e^{-itK
 \[
 \left.\frac{\Phi_q^*\Omega_{\mathrm{FS}}}{\Omega_{\mathrm{FS}}}\right|_{z=0}=q^2.
 \]
-Pokud \(q\ne1\), **tlumení tepelného typu není Hamiltonovským/symplektickým vývojem** na tomto pevném projektivním stavovém prostoru. Jde o přesnou lokální překážku zachování formy, nikoli o zákaz imaginárního času nebo rozšířených disipativních systémů.
+Pokud není \(q=1\), **tlumení tepelného typu není Hamiltonovským/symplektickým vývojem** na tomto pevném projektivním stavovém prostoru. Jde o přesnou lokální překážku zachování formy, nikoli o zákaz imaginárního času nebo rozšířených disipativních systémů.
 
 Dokonce i s kladnými spektry a toutéž projektivní symplektickou geometrií dávají dva generátory
 \[
