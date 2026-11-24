@@ -76,6 +76,25 @@ This is the linear vDVZ trace-sector discontinuity. It is not a no-go for all no
 
 At a fixed **nonzero** spatial momentum direction, (7) defines the rank-two spatial TT projector and (8) its normalized polarization decomposition. Thus a candidate pole must have two physical propagating helicities, and the sign \(Z>0\) in (9) is a **necessary** positive-norm condition in this Euclidean polarization comparator. It does not establish Hilbert-space reflection positivity, Lorentzian unitarity or absence of other ghosts. The off-shell four-dimensional transverse traceless projector of rank five, studied in the preceding Ward note, must NOT be substituted for the two on-shell graviton states.
 
+## The single-Theta metric chain-rule route: conditional sufficiency, not automatic equivalence
+
+There is a direct *UBT-specific* positive conditional route. Assume an effective set of species \(\chi_a\) has been genuinely constructed from the physical reduced \(\Theta\) theory, and **assume** its effective matter functionals depend on \(\Theta\) *only through the same locked Axiom-C metric* \(g[\Theta]\). Defining \(T_a^{\mu\nu}=2\delta S_a/(\sqrt{|g|}\delta g_{\mu\nu})\), the full metric chain rule at fixed effective matter states gives:
+\[
+\boxed{\left.\delta_\Theta S_a[\chi_a,g(\Theta)]\right|_{\delta\chi_a=0}
+=\frac12\int d^4x\sqrt{|g|}\,T_a^{\mu\nu}
+\left(D_\Theta g[\delta\Theta]\right)_{\mu\nu}.}\tag{11}
+\]
+\[
+S_a^{\rm toy}(q)=\frac12 T_a\,g(q)+\lambda_a I(q)\,O_a,\qquad
+g(q)=1+q+q^2,\quad I(q)=q^2,\tag{12}
+\]
+\[
+\boxed{\frac{d S_a^{\rm toy}}{dq}
+=\frac12 T_a(1+2q)+2\lambda_a q O_a.}\tag{13}
+\]
+
+Equation (11) gives a **common metric source coefficient** for every species; after deriving one canonically normalized graviton field and the consistent physical state space, it can reproduce the universal \(h_{\mu\nu}\sum_aT_a^{\mu\nu}\) coupling. However metric-only matter dependence is currently an **unproved assumption**, especially because the would-be \(\chi_a\) are themselves composites of the very same \(\Theta\). Their induced variations add terms proportional to \(D_\Theta\chi_a\); possible symmetry-allowed direct \(\Theta\)-operators likewise add terms. The exact negative-control toy (12)-(13) exhibits species-dependent additional couplings \(2\lambda_a q O_a\), even with a common metric \(g(q)\). The toy is **not** a UBT Lagrangian. This identifies the actual microscopic selection question: can the single \(\Theta\) action and its Ward identities force *all physical low-energy species* to couple through the one canonical metric, excluding independent nonmetric long-range vertices? No result yet does so.
+
 ## Weinberg–Witten and the structural decision
 
 If the emergent one-Theta sector is an **ordinary Lorentz-invariant local quantum field theory with a suitable conserved Lorentz-covariant gauge-invariant stress tensor**, a nontrivial energy-carrying massless composite spin-two state conflicts with the Weinberg–Witten theorem. To avoid its assumptions, UBT must explicitly demonstrate the origin of genuinely gravitational constraints and the relevant stress-energy/gauge structure (or identify and verify a different precise failed hypothesis). The axiomatic composite metric is a possible structural difference but does **not itself prove** a loophole. The arithmetic RH automorphic theta lift also does not establish a physical Ward identity or universal soft graviton.
