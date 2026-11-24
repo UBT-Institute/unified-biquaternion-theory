@@ -19,3 +19,9 @@ def test_massive_bubble_critical_massless_pole_and_detuning():
 
 def test_massless_free_composite_has_no_isolated_graviton_pole():
     runpy.run_path(str(SCRIPT))["massless_free_bubble_negative_control"]()
+
+
+def test_rotations_allow_untuned_spin_two_collective_mass():
+    runpy.run_path(str(SCRIPT))[
+        "rotational_symmetry_does_not_protect_criticality_gate"
+    ]()
