@@ -79,6 +79,10 @@ Q_{ij}=a_ia_j-\frac{\delta_{ij}}3a^2,\qquad
 
 Lokální kvadratická norma \(\delta Q_{ij}Q_{ij}\) **již identifikované kolektivní proměnné spinu dva** je tedy dovolena prostorovou \(SO(3)\) i její malou grupou. Původní \(Q_{ij}[a]\) je kvadratický ve složkách, takže se tento člen stává kvartickým v \(a\); to nemění závěr o symetrii. Samotná reprezentace helicity \(2\) ani aritmetická pozitivita v RH nevynucuje \(\delta=0\). Aby UBT odstranila hmotový odladěný člen *bez ladění*, musela by z téže fundamentální akce odvodit silnější Wardovu identitu kalibračního typu (například linearizovanou difeomorfní identitu v GR) nebo jiný přesný mechanismus ochrany. Pouhé prohlášení emergentní kalibrační symetrie není důkaz.
 
+## Zásadní upřesnění po výpočtu lokální Wardovy identity a TT dostupnosti
+
+Související dokument RH_THETA_LOCAL_WARD_TT_ACCESS_GATE_2026_11_24.cs.md prověřuje chybějící ochranný mechanismus. Off-shell linearizovaná difeomorfní Wardova identita zakazuje lokální, analytický a na hybnosti nezávislý hmotový člen symetrického tenzorového **metrického potenciálu**; ve třídě paritně sudých lokálních kvadratických akcí samotného h do dvou derivací vybírá bezhmotný Fierzův–Pauliho kinetický operátor až na normalizaci. **Ale** nelokální projektor spinu dva umožňuje transverzální, a přesto hmotné inverzní jádro; standardní izotropní kvadratický kompozit z bikvaternionových vektorových složek má nulový lineární TT obraz. Samotná transverzalita ani formálně difeomorfně invariantní indukovaná metrika tedy gravitona nedokazují. Skalární odladění z (5) nelze ztotožnit s kalibračně chráněnou tenzorovou hmotností, dokud nejsou odvozeny fyzikální kolektivní pole, lokální jádro a kalibrační kvocient.
+
 ## Poctivé rozhodovací kritérium UBT
 
 Theta-lift/Weilova cesta dostane fyzikální význam teprve tehdy, jestliže **jediná akce Θ** odvodí (a) fyzikální Lorentzovsky kovariantní TT bilineární nebo kolektivní zdroj a (b) jeho kritické inverzní jádro *z dokázané symetrie či Wardovy/Noetherovy identity*, nikoli vyladěním parametru. Skutečný výpočet musí dát
