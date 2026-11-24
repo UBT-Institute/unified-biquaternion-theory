@@ -72,7 +72,34 @@ Pokud je každý Fourierův/Jacobiho koeficient jen kopií \(\Theta_n\in M_2(\ma
 
 Skutečná lokální symplektická konstrukce Howe/Weil inspirovaná RH z PR #910/#911 používá jinou **reálnou osmirozměrnou indefinitní párovací formu** \(B,\Omega\), zatímco \(\Omega_{\mathrm{FS}}\) je symplektická forma pozitivního projektivního stavového prostoru **zvolených redukovaných amplitud**. Nelze je ztotožnit. Chybí explicitní kvocient/proplétač slučitelný s uzamčenou oboustrannou konexí, fyzikální tetrádou, torzí a vazbami. Unitárnost konečné Fourierovy transformace, aritmetická pozitivita ani konvergence tepelného jádra samy nevyřeší výběr fyzikální akce.
 
-## 5. Rozhodující další test a stav
+## 5. Další přesný test: interní vinutí psi není helicita gravitonu
+
+Podle uzamčeného axiomu B je \(\psi\) **prostorově skalární** souřadnice imaginárního času. Ve Fourierově/Jacobiho rozvoji
+\[
+\Theta(x,t,\psi)=\sum_{n\in\mathbb Z}\Theta_n(x,t)e^{in\psi}
+\]
+je celé \(n\) charakterem *interní* grupy posunů \(U(1)_\psi\), nikoli automaticky helicita prostorové malé grupy. Prostorové rotace působí na \(\Theta_n\) podle jeho skutečné bikvaternionové reprezentace; kopie se skalárními indexy si ponechávají původní váhy.
+
+Lákavé ztotožnění \(\psi\mapsto\psi+\chi(R)\), které by interní fázové posuny ztotožnilo s běžnými prostorovými rotacemi \(R\in SO(3)\), vyžaduje spojitý grupový homomorfismus \(\chi:SO(3)\to U(1)\). **Netriviální homomorfismus neexistuje**: Lieova algebra \(\mathfrak{so}(3)\) je generována vlastními komutátory, zatímco \(\mathfrak{u}(1)\) je abelovská. Pro diferenciál homomorfismu \(d\chi\) platí
+\[
+d\chi([J_x,J_y])=[d\chi(J_x),d\chi(J_y)]=0
+\quad\Rightarrow\quad
+\boxed{d\chi=0,\qquad\chi(R)=1.}\tag{4}
+\]
+Vylučuje to **globální fázové svázání nezávislé na směru**, nikoli konexi závislou na \(k\) nebo netriviální asociovaný svazek.
+
+Druhým, topologickým testem je sféra směrů hybnosti \(S^2\). Komplexní polarizační přímkový svazek bezhmotné helicity \(h\) má první Chernovo číslo \(c_1=-2h\); severní/jižní přechodová funkce má vinutí
+\[
+t_h(\varphi)=e^{-2ih\varphi},\qquad
+c_1=\frac{1}{2\pi i}\int_0^{2\pi}t_h^{-1}\partial_\varphi t_h\,d\varphi=-2h.
+\]
+Jednotlivé **helicitní přímky** gravitonu mají \(c_1(\mathcal L_{+2})=-4\) a \(c_1(\mathcal L_{-2})=+4\). Pevný skalární mód \(e^{in\psi}\) s globální bází nezávislou na směru hybnosti má naproti tomu \(c_1=0\), a to **pro každé celé \(n\)**. Neexistuje všude nenulové hladké ztotožnění tohoto triviálního svazku s kteroukoli gravitonovou helicitní přímkou. Jde o známou topologii bezhmotných reprezentací (Palmerduca a Qin, *Graviton topology*, JHEP 11 (2024) 150, https://doi.org/10.1007/JHEP11(2024)150 ; *Helicity is a topological invariant of massless particles*, Phys. Rev. Research 7 (2025) L022001, https://doi.org/10.1103/PhysRevResearch.7.L022001 ), nikoli o nový objev UBT.
+
+**Rozsah je omezený.** Přímý součet opačných komplexních helicitních přímek může být topologicky triviální, i když žádná jednotlivá přímka není; argument vylučuje naivní ztotožnění **jednotlivých skalárních módů vinutí** s helicitními přímkami, nikoli všechny možné nosiče párových polarizací. Netriviální projektor závislý na \(\hat k\), skutečný rotační index, Berryho konexe v prostoru hybností či interagující kolektivní pól by mohly svazek změnit. Nic takového zatím není odvozeno z uzamčené akce \(\Theta\). Ani charakter \(SO(2)\to U(1)\) pro pevně zvolenou osu nedokazuje plnou prostorovou kovarianci \(SO(3)\): zvolení osy mění problém.
+
+**Regresní test:** SymPy kontrola \`psi_winding_vs_graviton_helicity_topology_gate\` ověřuje přesné komutátory \(\mathfrak{so}(3)\), neexistenci netriviálního homomorfismu \(\mathfrak{so}(3)\to\mathfrak{u}(1)\), vinutí helicitních přechodů \(0,\pm2,\pm4\) a nezávislost interní báze na směru hybnosti. Testy ověřují pouze uvedenou algebru a integrály vinutí, nikoli polní rovnice, fyzikální dynamický svazek nebo Hamiltonián UBT.
+
+## 6. Rozhodující další test a stav
 
 Rozlišit, který ze tří odlišných objektů znamená navrhovaná **úplná tenzorová/Jacobiho Θ**: (a) jediné bikvaternionové pole s 8 reálnými hodnotovými složkami a nekonečně mnoha skalárně indexovanými Fourierovými koeficienty; (b) kvadratická interakční matice módů neboli pozorovací záznam; (c) skutečný nezávisle transformující fyzikální tenzorový nosič hodnosti 2. Případy (a) a (b) neobcházejí předchozí podmíněný lineární no-go helicity 2. Případ (c) nejprve musíme odvodit konzistentně z axiomu A, nikoli přidat nezávislou metriku/tenzor. Teprve poté má smysl od jediné jednoznačné akce Θ odvodit fyzikální on-shell kovariantní presymplektický proud a Diracovy vazby a zkoušet Hamiltonián nebo emergentní kolektivní graviton.
 
