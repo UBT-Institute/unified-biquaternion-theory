@@ -87,7 +87,7 @@ i\partial_t\Psi=H\Psi,\qquad
 \]
 The spectral theorem gives \(0\le e^{-s\lambda}\le1\) for every \(\lambda\ge0\), without imposing imaginary-periodic winding. At \(\psi=0\), strong boundary values exist for arbitrary \(v\); derivatives at the boundary require the usual operator-domain assumptions.
 
-This is the **standard Wick/heat-semigroup comparator** and demonstrates a concrete escape from the no-go. It might make the RH project's positive heat kernels and Mellin spectral tools mathematically reusable as *techniques*, but no prime spectrum, UBT \(H\), physical \(\Theta\)-to-state map, torsion or spin-two dynamics is selected. A different nonnegative self-adjoint \(H\) obeys exactly the same compatibility requirements, so the inverse-dynamics selection problem remains.
+This is the **standard Wick/heat-semigroup comparator** and demonstrates a concrete escape from the no-go. It might make the RH project's positive heat kernels and Mellin spectral tools mathematically reusable as *techniques*, but no prime spectrum, UBT \(H\), physical \(\Theta\)-to-state map, torsion or spin 2 dynamics is selected. A different nonnegative self-adjoint \(H\) obeys exactly the same compatibility requirements, so the inverse-dynamics selection problem remains.
 
 ## Physical decision and escape routes
 
