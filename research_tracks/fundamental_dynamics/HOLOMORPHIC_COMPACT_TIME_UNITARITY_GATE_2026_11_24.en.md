@@ -71,6 +71,24 @@ i\partial_t\Psi=E\Psi
 \]
 except the trivial joint case \(n=0,E=0\). Thus the no-go is caused by imposing **strong complex analyticity and periodic internal time on the same unitary quantum state**; neither compact internal coordinates nor unitarity alone is inconsistent.
 
+## A constructive compatible branch: a one-sided imaginary-time heat semigroup
+
+There **is** a mathematically consistent simultaneous holomorphic/real-time-unitary branch if imaginary time is **not** compact. Let \(H=H^\dagger\ge0\), \(\psi\le0\), \(s=-\psi\ge0\), and define for \(v\in\mathscr H\)
+\[
+\boxed{\Psi(t,\psi)=e^{-i(t+i\psi)H}v
+=e^{-itH}e^{\psi H}v
+=e^{-itH}e^{-sH}v,\qquad \psi\le0.}\tag{5}
+\]
+For \(\psi<0\) this is a bounded holomorphic semigroup orbit. At every fixed \(\psi\), real-time evolution is unitary, while the imaginary direction is contractive:
+\[
+i\partial_t\Psi=H\Psi,\qquad
+\partial_\psi\Psi=H\Psi,\qquad
+\boxed{\|\Psi(t,\psi)\|\le\|v\|\quad(\psi\le0).}\tag{6}
+\]
+The spectral theorem gives \(0\le e^{-s\lambda}\le1\) for every \(\lambda\ge0\), without imposing imaginary-periodic winding. At \(\psi=0\), strong boundary values exist for arbitrary \(v\); derivatives at the boundary require the usual operator-domain assumptions.
+
+This is the **standard Wick/heat-semigroup comparator** and demonstrates a concrete escape from the no-go. It might make the RH project's positive heat kernels and Mellin spectral tools mathematically reusable as *techniques*, but no prime spectrum, UBT \(H\), physical \(\Theta\)-to-state map, torsion or spin-two dynamics is selected. A different nonnegative self-adjoint \(H\) obeys exactly the same compatibility requirements, so the inverse-dynamics selection problem remains.
+
 ## Physical decision and escape routes
 
 The fundamental UBT \(\Theta\) is a *classical field object* until its physical Hilbert space and unitary quantum evolution have been derived; \(\Psi=\Theta\) is an **additional conditional identification**, not a canonical assertion. Hence the theorem cannot currently reject UBT as such. It rejects a particular often-implicit shortcut.
