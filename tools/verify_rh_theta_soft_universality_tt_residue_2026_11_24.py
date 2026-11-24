@@ -77,8 +77,33 @@ def physical_transverse_residue_gate():
     print('PASS: physical spatial TT projection rank 2, positive residue needs Z>0')
 
 
+
+def theta_metric_only_universality_vs_direct_vertex_gate():
+    q, TA, TB, OA, OB, la, lb = s.symbols(
+        'q TA TB OA OB la lb', real=True
+    )
+    metric = 1 + q + q*q
+    invariant = q*q
+    SA = s.Rational(1,2)*TA*metric + la*invariant*OA
+    SB = s.Rational(1,2)*TB*metric + lb*invariant*OB
+    # Chain rule has the SAME prefactor for both species if dependence
+    # is metric-only; otherwise direct Theta terms remain.
+    for S, T, lmb, O in ((SA,TA,la,OA),(SB,TB,lb,OB)):
+        metric_part = s.Rational(1,2)*T*s.diff(metric,q)
+        assert s.simplify(s.diff(S,q)-metric_part-2*lmb*q*O)==0
+        assert s.simplify(s.diff(S,q).subs(lmb,0)-metric_part)==0
+    # Same fundamental q does not force species-dependent direct vertices
+    # to disappear; at the nonzero background q=1 their coefficients differ.
+    assert s.simplify((s.diff(SA,q)-s.Rational(1,2)*TA*s.diff(metric,q))
+                      .subs(q,1)) == 2*la*OA
+    assert s.simplify((s.diff(SB,q)-s.Rational(1,2)*TB*s.diff(metric,q))
+                      .subs(q,1)) == 2*lb*OB
+    print('PASS: one Theta metric-only chain rule universal; direct vertices not forbidden')
+
+
 if __name__=='__main__':
     soft_graviton_universality_gate()
     trace_exchange_discontinuity_gate()
     physical_transverse_residue_gate()
+    theta_metric_only_universality_vs_direct_vertex_gate()
     print('SCOPE: soft theorem / exchange / physical TT comparators; not UBT dynamics')
