@@ -1,0 +1,198 @@
+{
+  "schema": "ubt-research-event/v1",
+  "recorded_on": "2026-11-21",
+  "claim_or_decision_id": "RH-THETA-LIFT-DYNAMICS-SELECTOR-GATE-2026-11-21",
+  "summary": "RH-to-UBT theta transfer: exact single-biquaternion local O(1,3) x SL(2,R) Howe pair, positive Lorentz majorant, explicit composite normal-parallel transport with torsion change, no globally covariantly constant full-rank tangent-space lattice under generic nonflat Lorentz holonomy, and continuum Gaussian loss of geometric signal. Gram-sector polynomial SL2 invariant ring is R[Delta], whose Hamiltonians generate only Lorentz-orbit motion; physical dynamic selection remains open.",
+  "development_mode": "iterative_human_ai",
+  "stage_events": [
+    {
+      "kind": "human_proposal",
+      "actor": "human",
+      "description": "Investigate whether the reported RH proof can resolve or meaningfully help UBT dynamics, rather than conducting an unrelated general dynamical derivation.",
+      "evidence_ids": [
+        "conversation-scope"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Separated the proof's number-theoretic theta-lift divisibility/slope and positive-character-weight mechanism from Lorentzian energy positivity; formulated a concrete connection/constraint intertwining test and a nonunique Hamiltonian family.",
+      "evidence_ids": [
+        "alpoge-remark",
+        "architecture",
+        "ubt-existing"
+      ]
+    },
+    {
+      "kind": "ai_verification",
+      "actor": "ai",
+      "description": "Checked five finite-dimensional symbolic facts for the family using SymPy 1.14.0: Omega, Hamilton equation, conserved B, differing flows and indefinite B signature.",
+      "evidence_ids": [
+        "test-script"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Identified standard real reductive dual pair from the U+iV split, constructed positive timelike-normal majorant for indefinite theta series, and found sharp-metric, reality and varying-foliation derivative obstructions.",
+      "evidence_ids": [
+        "howe-note",
+        "howe-test",
+        "howe-background"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Proved that the natural Gram determinant Hamiltonian is the Casimir of the composite Lorentz moment map, with constant A=u(v^T eta)-v(u^T eta) and flow u'=A u, v'=A v; therefore all f(Delta) trajectories are tangent to Lorentz orbits. This is only a physical no-go if the full gauge constraints identify those orbits.",
+      "evidence_ids": [
+        "howe-note",
+        "howe-test"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Built the Lorentz-valued foliation transport correction C=(Dn)n_flat-n(Dn)_flat, verified adjusted normal/majorant parallelism; identified induced torsion and residual SO3 ambiguity; proved smooth curved holonomy cannot preserve a path-independent parallel integer lattice; continuum Gaussian reduces to universal y^-2.",
+      "evidence_ids": [
+        "theta-transport-note",
+        "theta-transport-tests",
+        "indefinite-theta-reference"
+      ]
+    },
+    {
+      "kind": "ai_refinement",
+      "actor": "ai",
+      "description": "Classified the entire Gram-sector SL2-invariant polynomial ring as R[Delta] using elementary Lie-generator PDEs; exact low-degree kernel checks agree for degrees 0 through 6, strengthening the zero-jet Hamiltonian selector no-go.",
+      "evidence_ids": [
+        "howe-note",
+        "gram-invariant-tests"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "conversation-scope",
+      "class": "discussion_context",
+      "locator": "Current chat Nov 21, 2026; transcript not published",
+      "original_checked": true,
+      "supports": "The author's explicit problem selection and correction of project scope",
+      "limitations": "No private transcripts or identifying contents published"
+    },
+    {
+      "id": "alpoge-remark",
+      "class": "public_primary_source",
+      "locator": "https://alpo.ge/remark.pdf",
+      "original_checked": true,
+      "supports": "Iterated arithmetic theta lifts mimic a Stepanov multiplicity step",
+      "limitations": "No UBT dynamics claim"
+    },
+    {
+      "id": "architecture",
+      "class": "public_technical_analysis",
+      "locator": "https://github.com/nasqret/riemann-rev",
+      "original_checked": true,
+      "supports": "Documented estimate, positive Fourier character weights and arithmetical bridge architecture",
+      "limitations": "Secondary analysis; not a physical theorem"
+    },
+    {
+      "id": "ubt-existing",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/hamiltonian_first_foundations.en.md",
+      "original_checked": true,
+      "supports": "Prior exact dynamical nonuniqueness principle",
+      "limitations": "Finite-dimensional and candidate phase-space framing"
+    },
+    {
+      "id": "test-script",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/tests/test_rh_theta_lift_selector.py",
+      "original_checked": true,
+      "supports": "Finite-dimensional analytic nonuniqueness checks",
+      "limitations": "Not a genuine automorphic theta lift, physical action, or Einstein dynamics"
+    },
+    {
+      "id": "howe-note",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/rh_howe_dual_pair_majorant_2026_11_21.en.md",
+      "original_checked": true,
+      "supports": "Biquaternion local Howe-pair and positive-majorant derivations",
+      "limitations": "Not an arithmetic automorphic lift or physical UBT dynamics."
+    },
+    {
+      "id": "howe-test",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/tests/test_rh_howe_dual_pair.py",
+      "original_checked": true,
+      "supports": "Fifteen exact symbolic tests of algebraic invariants, covariance and negative controls",
+      "limitations": "Symbolic implementation covers stated finite examples only; repository CI and Lean status pending."
+    },
+    {
+      "id": "howe-background",
+      "class": "published_mathematics",
+      "locator": "https://msp.org/pjm/1999/187-2/pjm-v187-n2-p09-p.pdf",
+      "original_checked": true,
+      "supports": "Published standard Howe dual pair O(p,q) x SL(2,R)",
+      "limitations": "No UBT-specific lift."
+    },
+    {
+      "id": "theta-transport-note",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/rh_theta_transport_lattice_gate_2026_11_21.en.md",
+      "original_checked": true,
+      "supports": "Composite transport and parallel lattice no-go",
+      "limitations": "Not an on-shell physical UBT connection or actual arithmetic theta lift."
+    },
+    {
+      "id": "theta-transport-tests",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/tests/test_rh_theta_transport_lattice.py",
+      "original_checked": true,
+      "supports": "11 finite exact symbolic tests of Lorentz normal compensation and negative controls",
+      "limitations": "Connected test file committed; a matching local 11-test suite passed, full repo CI and Lean pending."
+    },
+    {
+      "id": "gram-invariant-tests",
+      "class": "repository_artifact",
+      "locator": "research_tracks/action_selection/tests/test_rh_howe_gram_invariant_ring.py",
+      "original_checked": true,
+      "supports": "Polynomial Gram ring invariants and exhaustive degrees 0 through 6",
+      "limitations": "Algebraic constraint, not physical Hamiltonian."
+    },
+    {
+      "id": "indefinite-theta-reference",
+      "class": "published_mathematics",
+      "locator": "https://pure.mpg.de/rest/items/item_3536886_2/component/file_3547338/content",
+      "original_checked": true,
+      "supports": "Positive majorants used with indefinite theta series",
+      "limitations": "Different from the automorphic unitary-group theta lift in the reported RH proof."
+    }
+  ],
+  "rejected_alternatives": [
+    "Treat arithmetic positive Fourier weights as positivity of UBT Hamiltonian",
+    "Treat number-theoretic iteration count sqrt(x) as a physical scale",
+    "Treat generic metaplectic covariance as unique time generator",
+    "Treating the Lorentz-indefinite Gaussian theta series as convergent without a positive majorant",
+    "Treating the positive foliation-dependent theta majorant as a unique positive physical Hamiltonian",
+    "Assuming varying-normal theta kernel commutes with the unmodified spacetime derivative",
+    "Treating positive Gram-Casimir Hamiltonian as genuinely propagating UBT dynamics despite its exact Lorentz-orbit flow",
+    "Using a globally parallel full-rank integral tangent-space lattice for a generic curved Lorentz connection",
+    "Replacing the discrete theta series by the full R4 Gaussian and claiming to obtain local geometry (integral equals y^-2)",
+    "Claiming the foliation compensator is already the canonical physical spin connection",
+    "Expecting an independent derivative-free SL2-invariant Gram Hamiltonian beyond functions of Delta"
+  ],
+  "verification": {
+    "status": "locally_checked",
+    "artifacts": [
+      "research_tracks/action_selection/tests/test_rh_theta_lift_selector.py",
+      "research_tracks/action_selection/tests/test_rh_howe_dual_pair.py",
+      "research_tracks/action_selection/tests/test_rh_theta_transport_lattice.py",
+      "research_tracks/action_selection/tests/test_rh_howe_gram_invariant_ring.py"
+    ],
+    "limitations": "Local 11-test SymPy 1.14.0 transport benchmark passed; exact symbolic checks of polynomial Gram invariants through degree six performed independently. Further regression files committed but full exact repo suite has not been observed passing; CI, Lean and independent bilingual semantic approval pending. Mathematically proven identities are scoped to the declared local model. Full theta lift, physical UBT Hamiltonian, ghost-free constraints, and 4D GR dynamics remain OPEN."
+  },
+  "attribution_status": "provisional",
+  "human_attestation": "not_attested",
+  "private_sources_publicly_disclosed": false,
+  "notes": "No changes to canonical theory, existing metric, action, author attestation, or status ledgers."
+}
