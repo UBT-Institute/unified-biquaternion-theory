@@ -71,6 +71,24 @@ i\partial_t\Psi=E\Psi
 \]
 mimo triviální společný případ \(n=0,E=0\). Překážku tedy vytváří **silná komplexní analytičnost a periodický vnitřní čas na stejném unitárním kvantovém stavu**; samotná kompaktní vnitřní souřadnice ani unitarita sporné nejsou.
 
+## Konstruktivní slučitelná větev: jednosměrná tepelná semigrupa imaginárního času
+
+Existuje matematicky konzistentní současně holomorfní a v reálném čase unitární větev, pokud imaginární čas **není** kompaktní. Nechť \(H=H^\dagger\ge0\), \(\psi\le0\), \(s=-\psi\ge0\) a pro \(v\in\mathscr H\) definujme
+\[
+\boxed{\Psi(t,\psi)=e^{-i(t+i\psi)H}v
+=e^{-itH}e^{\psi H}v
+=e^{-itH}e^{-sH}v,\qquad \psi\le0.}\tag{5}
+\]
+Pro \(\psi<0\) jde o omezenou holomorfní semigrupovou orbitu. Při každém pevném \(\psi\) je evoluce v reálném čase unitární, zatímco imaginární směr je kontraktivní:
+\[
+i\partial_t\Psi=H\Psi,\qquad
+\partial_\psi\Psi=H\Psi,\qquad
+\boxed{\|\Psi(t,\psi)\|\le\|v\|\quad(\psi\le0).}\tag{6}
+\]
+Podle spektrální věty platí \(0\le e^{-s\lambda}\le1\) pro všechna \(\lambda\ge0\), aniž by bylo nutné periodické imaginární vinutí. Na hranici \(\psi=0\) existují silné limitní hodnoty pro libovolné \(v\); derivace na hranici vyžadují obvyklé předpoklady o definičním oboru operátoru.
+
+To je **standardní komparátor Wickova pokračování/tepelné semigrupy** a ukazuje konkrétní únikovou větev z no-go. Může umožnit matematicky využít kladná tepelná jádra a Mellinovy spektrální metody z projektu RH jako *techniky*, ale nevybírá žádné prvočíselné spektrum, Hamiltonián UBT \(H\), fyzikální mapu \(\Theta\) na kvantový stav, torzi ani dynamiku spinu 2. Jiný nezáporný samosdružený \(H\) splňuje stejné podmínky kompatibility, takže problém výběru dynamiky trvá.
+
 ## Fyzikální rozhodnutí a možné únikové cesty
 
 Fundamentální UBT \(\Theta\) je *klasický polní objekt*, dokud není odvozen jeho fyzikální Hilbertův prostor a unitární kvantový vývoj; \(\Psi=\Theta\) je **dodatečné podmíněné ztotožnění**, nikoli kanonické tvrzení. Věta proto zatím UBT jako takovou nevyvrací. Vyvrací konkrétní často skrytou zkratku.
