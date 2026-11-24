@@ -19,3 +19,9 @@ def test_graviton_massless_vs_massive_trace_exchange():
 
 def test_rank_two_tt_polarizations_and_positive_residue_sign():
     runpy.run_path(str(SCRIPT))["physical_transverse_residue_gate"]()
+
+
+def test_metric_only_source_is_universal_but_direct_theta_vertices_need_not_be():
+    runpy.run_path(str(SCRIPT))[
+        "theta_metric_only_universality_vs_direct_vertex_gate"
+    ]()
