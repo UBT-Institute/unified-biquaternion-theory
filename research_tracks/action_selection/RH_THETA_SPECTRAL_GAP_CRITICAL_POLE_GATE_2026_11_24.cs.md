@@ -64,13 +64,28 @@ Vezměme dva volné **masivní skalární komparátorové propagátory ve čtyř
 
 Jde o přesný **kritický fázový diagram předpokládané skalární odezvy**, nikoli o důkaz, že daný ansatz pochází z pozitivní, lokální a unitární kvantové teorie pole. Skalární bublina sama nedává Lorentzovsky kovariantní fyzikální tenzorový čitatel spinu dva, gravitační kalibrační vazby ani úplné TT reziduum. Na rozdíl od pouhé změny báze může kritická interakce změnit analytické spektrum, ale **RH nikde neurčuje \(\delta=0\)**. Volný bezhmotný kompozitní komparátor v PR #909 má naproti tomu logaritmický práh již v nule a bez izolovaného holého pólu \(1/p^2\).
 
+## Test 3: samotná prostorová rotační symetrie NECHRÁNÍ bezhmotnost
+
+Pro dva příčné polynomy spinu dva a úplný prostorový symetrický bezestopý \(Q_{ij}\) přesně platí:
+\[
+Q_+=\frac{a_x^2-a_y^2}{2},\qquad Q_\times=a_xa_y,\qquad
+L_z=a_x\partial_{a_y}-a_y\partial_{a_x},\qquad
+\boxed{L_z(Q_+^2+Q_\times^2)=0.}\tag{7}
+\]
+\[
+Q_{ij}=a_ia_j-\frac{\delta_{ij}}3a^2,\qquad
+\boxed{Q_{ij}Q_{ij}=\frac23(a^2)^2.}\tag{8}
+\]
+
+Lokální kvadratická norma \(\delta Q_{ij}Q_{ij}\) **již identifikované kolektivní proměnné spinu dva** je tedy dovolena prostorovou \(SO(3)\) i její malou grupou. Původní \(Q_{ij}[a]\) je kvadratický ve složkách, takže se tento člen stává kvartickým v \(a\); to nemění závěr o symetrii. Samotná reprezentace helicity \(2\) ani aritmetická pozitivita v RH nevynucuje \(\delta=0\). Aby UBT odstranila hmotový odladěný člen *bez ladění*, musela by z téže fundamentální akce odvodit silnější Wardovu identitu kalibračního typu (například linearizovanou difeomorfní identitu v GR) nebo jiný přesný mechanismus ochrany. Pouhé prohlášení emergentní kalibrační symetrie není důkaz.
+
 ## Poctivé rozhodovací kritérium UBT
 
 Theta-lift/Weilova cesta dostane fyzikální význam teprve tehdy, jestliže **jediná akce Θ** odvodí (a) fyzikální Lorentzovsky kovariantní TT bilineární nebo kolektivní zdroj a (b) jeho kritické inverzní jádro *z dokázané symetrie či Wardovy/Noetherovy identity*, nikoli vyladěním parametru. Skutečný výpočet musí dát
 \[
 \boxed{\Gamma_{\rm TT}(0)=0,
 \qquad \Gamma'_{\rm TT}(0)>0,\qquad
-\operatorname{Res}_{p^2=0}\langle O^{\rm TT} O^{\rm TT}\rangle>0.}\tag{7}
+\operatorname{Res}_{p^2=0}\langle O^{\rm TT} O^{\rm TT}\rangle>0.}\tag{9}
 \]
 Další podmínky: univerzální vazba na tenzor energie-hybnosti; dvě fyzikální helicity; úplný Diracův/BRST kvocient a pozitivita energie; kontrola předpokladů Weinbergova–Wittenova teorému; emergentní Wardovy identity podobné difeomorfismům. Aritmetický automorfní theta lift ani konečná oscilátorová reprezentace tyto podmínky zatím nedodávají.
 
