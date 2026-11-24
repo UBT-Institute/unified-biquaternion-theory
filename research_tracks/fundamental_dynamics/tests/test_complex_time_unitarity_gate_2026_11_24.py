@@ -23,3 +23,7 @@ def test_analytic_jacobi_not_periodic_and_schrodinger_sign():
 
 def test_unitary_periodic_nonholomorphic_escape():
     runpy.run_path(str(SCRIPT))["nonholomorphic_escape_witness"]()
+
+
+def test_noncompact_half_plane_heat_semigroup_positive_branch():
+    runpy.run_path(str(SCRIPT))["positive_one_sided_imaginary_time_semigroup_gate"]()
