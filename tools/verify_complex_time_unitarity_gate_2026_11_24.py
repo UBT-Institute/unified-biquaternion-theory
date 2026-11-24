@@ -61,9 +61,32 @@ def nonholomorphic_escape_witness():
     print("PASS: unitary periodic states exist without joint holomorphy")
 
 
+
+def positive_one_sided_imaginary_time_semigroup_gate():
+    # H>=0 permits a holomorphic continuation on psi<0 while the
+    # t-evolution is unitary. One-sided psi is NOT compact winding.
+    t, psi = s.symbols("t psi", real=True)
+    eigenvalues = (0, 1, 4)
+    v = s.Matrix([
+        s.exp(-s.I * h * t + h * psi) for h in eigenvalues
+    ])
+    for h, amp in zip(eigenvalues, v):
+        assert s.simplify(s.diff(amp, psi) - s.I*s.diff(amp, t)) == 0
+        assert s.simplify(s.I*s.diff(amp, t) - h*amp) == 0
+    # psi=-log 2 yields a bounded heat contraction, exact rational norm.
+    heat = v.subs(psi, -s.log(2))
+    norm_sq = s.simplify(sum(
+        heat[j]*s.conjugate(heat[j]) for j in range(3)
+    ))
+    assert norm_sq == 1 + s.Rational(1, 4) + s.Rational(1, 256)
+    assert norm_sq < 3
+    print("PASS: H>=0, psi<=0 yields contractive heat and unitary real-time branch")
+
+
 if __name__ == "__main__":
     analytic_periodic_fourier_forces_real_exponential_time()
     selfadjoint_generator_periodicity_obstruction()
     holomorphic_jacobi_factor_not_compact_psi()
     nonholomorphic_escape_witness()
+    positive_one_sided_imaginary_time_semigroup_gate()
     print("SCOPE: conditional state-space no-go, NOT canonical single-Theta dynamics")
