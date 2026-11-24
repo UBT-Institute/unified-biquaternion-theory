@@ -54,7 +54,7 @@ Současný klasický kompozit UBT je symetrický bezestopý bilineár (7) prosto
 
 Dokonce ani plně difeomorfně kovariantní *indukovaná metrika* nemusí nést graviton: vezměme čtyři skalární souřadnicová pole \(y^a\) s plochou gradientovou metrikou (8). Kolem invertibilního afinního pozadí je každá lineární porucha čistou souřadnicovou změnou s nulovou prostorovou TT projekcí; přesná indukovaná metrika je lokálně plochá. Formální difeomorfní invariance rodičovské akce nebo Wardova identita sama o sobě nevytváří fyzikální spin dva dostupný z fundamentálního nosiče.
 
-Podle on-shell řetězového pravidla z PR #909 platí \(H_\Theta=(Dh)^*H_h(Dh)\). Fyzikální TT excitace proto vyžadují **nenulový TT obraz** skutečné linearizované kompozitní mapy, jinak musíme prokázat zvláštní kvantový kolektivní mechanismus. Za přesných předpokladů izotropního SO(2)-ekvivariantního jediného bikvaternionu z PR #909 tento klasický TT obraz mizí. Aritmetická RH theta korespondence zatím nedodala nové \(Dh\), fyzikální kvocient ani nelineární kolektivní Wardovu symetrii.
+Podle on-shell řetězového pravidla z PR #909 platí \(H_\Theta=(Dh)^*H_h(Dh)\). Fyzikální TT excitace proto vyžadují **nenulový TT obraz** skutečné linearizované kompozitní mapy, jinak musíme prokázat zvláštní kvantový kolektivní mechanismus. Za přesných předpokladů PR #909 o jediném bikvaternionu a izotropní SO(2)-ekvivarianci tento klasický TT obraz mizí. Aritmetická RH theta korespondence zatím nedodala nové \(Dh\), fyzikální kvocient ani nelineární kolektivní Wardovu symetrii.
 
 ## Konkrétní kritéria přijetí, nikoli prohlášení úspěchu
 
