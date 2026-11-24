@@ -68,7 +68,7 @@ Jde o přesný **kritický fázový diagram předpokládané skalární odezvy**
 
 Theta-lift/Weilova cesta dostane fyzikální význam teprve tehdy, jestliže **jediná akce Θ** odvodí (a) fyzikální Lorentzovsky kovariantní TT bilineární nebo kolektivní zdroj a (b) jeho kritické inverzní jádro *z dokázané symetrie či Wardovy/Noetherovy identity*, nikoli vyladěním parametru. Skutečný výpočet musí dát
 \[
-\boxed{\Gamma_{\rm TT}(0)=0\ \text{jako odvozenou identitu},
+\boxed{\Gamma_{\rm TT}(0)=0,
 \qquad \Gamma'_{\rm TT}(0)>0,\qquad
 \operatorname{Res}_{p^2=0}\langle O^{\rm TT} O^{\rm TT}\rangle>0.}\tag{7}
 \]
