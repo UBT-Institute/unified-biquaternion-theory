@@ -64,13 +64,28 @@ Take two free **massive scalar comparator propagators in four Euclidean dimensio
 
 This is an exact **criticality phase diagram for a postulated scalar response**, not proof that the ansatz arises from a positive, local, unitary quantum field theory. In particular, a scalar two-propagator bubble has not supplied Lorentz-covariant physical spin-two numerator, gravitational gauge constraints, or full TT pole residue. Unlike an elementary basis transform, a critical interaction can alter the analytic spectrum, but **nothing in RH sets \(\delta=0\)**. The massless-free composite comparator in PR #909 instead has a logarithmic threshold starting at zero and no isolated bare \(1/p^2\) pole.
 
+## Gate 3: spatial rotational symmetry does NOT protect masslessness
+
+For the two transverse spin-two polynomials and the full spatial symmetric-traceless \(Q_{ij}\), the following are exact:
+\[
+Q_+=\frac{a_x^2-a_y^2}{2},\qquad Q_\times=a_xa_y,\qquad
+L_z=a_x\partial_{a_y}-a_y\partial_{a_x},\qquad
+\boxed{L_z(Q_+^2+Q_\times^2)=0.}\tag{7}
+\]
+\[
+Q_{ij}=a_ia_j-\frac{\delta_{ij}}3a^2,\qquad
+\boxed{Q_{ij}Q_{ij}=\frac23(a^2)^2.}\tag{8}
+\]
+
+Thus a local quadratic norm \(\delta Q_{ij}Q_{ij}\) of an **already identified collective spin-two variable** is allowed by spatial \(SO(3)\) and its little group. The original \(Q_{ij}[a]\) is quadratic in constituents, so this term becomes quartic in \(a\); that does not change the symmetry conclusion. Neither a mere helicity-\(2\) representation nor the arithmetic positivity in RH forces \(\delta=0\). To remove a mass-like detuning *without fine-tuning*, UBT would have to derive a stronger gauge-type Ward identity (such as the linearized diffeomorphism identity in GR), or another rigorous dynamical protection mechanism, from the same fundamental action. An asserted emergent gauge symmetry is not a proof of it.
+
 ## Honest UBT decision criterion
 
 The theta-lift/Weil approach becomes physically substantive only if a **single-Theta** action selects both (a) a physical Lorentz-covariant TT bilinear or collective source, and (b) its critical inverse kernel *because of a proved symmetry or Ward/Noether identity*, not unexplained tuning. The actual calculation must yield
 \[
 \boxed{\Gamma_{\rm TT}(0)=0,
 \qquad \Gamma'_{\rm TT}(0)>0,\qquad
-\operatorname{Res}_{p^2=0}\langle O^{\rm TT} O^{\rm TT}\rangle>0.}\tag{7}
+\operatorname{Res}_{p^2=0}\langle O^{\rm TT} O^{\rm TT}\rangle>0.}\tag{9}
 \]
 Additional gates: universal stress coupling; physical two-helicity spectrum; full Dirac/BRST quotient and energy positivity; Weinberg–Witten assumption analysis; emergent diffeomorphism-like Ward identities. Neither the automorphic arithmetic theta lift nor a finite oscillator representation currently supplies those.
 
