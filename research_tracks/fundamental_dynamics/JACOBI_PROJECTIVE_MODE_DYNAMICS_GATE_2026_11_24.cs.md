@@ -64,7 +64,7 @@ K_2=\operatorname{diag}(0,1,16)
 \]
 odlišné pozorovatelné projektory z \(a_0=(1,1,1)^T/\sqrt3\) v čase \(t=\pi/8\), ačkoli oba poskytují unitární vývoj zachovávající normu. \(\Omega_{\mathrm{FS}}\), pozitivita, fázová symetrie ani modální reprezentace proto **nevybírají** fyzikální disperzní zákon \(K\).
 
-Vybrané Jacobiho jádro \(\exp(i\pi n^2 t-\pi n^2\phi)\) skutečně splňuje Cauchyho–Riemannovu podmínku \(\partial_\phi a_n=i\partial_t a_n\). Stejná relace ale platí při nahrazení \(\pi n^2\) libovolným reálným \(\omega_n\); volba Jacobiho tepelné rovnice fixuje kvadratickou disperzi **jako předpoklad tohoto redukovaného modelu**, nikoli jako důsledek uzamčených rovnic UBT. Má-li se čas \(t\) někdy ztotožnit s fyzikálním, musíme navíc sjednotit znaménko zdejší fáze s obvyklou konvencí \(e^{-itH}\) a kladným Hamiltoniánem.
+Vybrané Jacobiho jádro \(\exp(i\pi n^2 t-\pi n^2\phi)\) skutečně splňuje Cauchyho–Riemannovu podmínku \(\partial_\phi a_n=i\partial_t a_n\). Stejná relace ale platí při nahrazení \(\pi n^2\) libovolným reálným \(\omega_n\); volba Jacobiho tepelné rovnice fixuje kvadratickou disperzi **jako předpoklad tohoto redukovaného modelu**, nikoli jako důsledek uzamčených rovnic UBT. Znaménko zdejší fáze je nutné porovnat s obvyklou konvencí \(e^{-itH}\) a kladným Hamiltoniánem, má-li se čas \(t\) někdy ztotožnit s fyzikálním.
 
 ## 4. Důsledek pro helicitu a přenos z RH
 
