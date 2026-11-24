@@ -87,6 +87,51 @@ def distinct_positive_generators_gate():
     assert all(h1[j, j] >= 0 and h2[j, j] >= 0 for j in range(3))
 
 
+
+def psi_winding_vs_graviton_helicity_topology_gate():
+    """SO3 has no U1 characters; massless helicity +/-2 lines have c1= -/+4.
+
+    Tests only global rotation-independent locking of a scalar internal phase
+    to spatial rotation, and standard helicity line transition functions.
+    It does not exclude k-dependent geometric/gauge constructions or
+    interacting composite spin-two poles.
+    """
+    Jx = s.Matrix([[0, 0, 0], [0, 0, -1], [0, 1, 0]])
+    Jy = s.Matrix([[0, 0, 1], [0, 0, 0], [-1, 0, 0]])
+    Jz = s.Matrix([[0, -1, 0], [1, 0, 0], [0, 0, 0]])
+    bracket = lambda a, b: a * b - b * a
+    assert bracket(Jx, Jy) == Jz
+    assert bracket(Jy, Jz) == Jx
+    assert bracket(Jz, Jx) == Jy
+    # A Lie algebra homomorphism so(3) -> u(1) must annihilate every
+    # commutator because u(1) is abelian.
+    c = s.symbols("c_x c_y c_z")
+    values = [bracket(Jx, Jy), bracket(Jy, Jz), bracket(Jz, Jx)]
+    equations = [
+        sum(c[i] * M[i, j] for i in range(3))
+        for M in values
+        for j in range(3)
+    ]
+    assert s.linsolve(equations, c) == s.FiniteSet((0, 0, 0))
+    # On momentum S^2, transition for a helicity-h line can be chosen
+    # exp(-2 i h phi), with first Chern number -2h.
+    phi = s.symbols("phi", real=True)
+    for helicity, chern in [(-2, 4), (-1, 2), (0, 0), (1, -2), (2, -4)]:
+        transition = s.exp(-2 * s.I * helicity * phi)
+        winding = s.simplify(
+            s.integrate(s.diff(transition, phi) / transition,
+                        (phi, 0, 2 * s.pi)) / (2 * s.pi * s.I)
+        )
+        assert winding == chern
+    # An internal psi-winding n with psi a spatial scalar has a global
+    # momentum-independent basis and transition function 1 for every n.
+    n = s.symbols("n", integer=True)
+    psi = s.symbols("psi", real=True)
+    basis = s.exp(s.I * n * psi)
+    assert s.diff(basis, phi) == 0
+    print("PASS SO3->U1 character trivial; helicity +/-2 c1= -/+4, scalar psi c1=0")
+
+
 if __name__ == "__main__":
     for n in (2, 3, 4):
         print("PASS local ranks", n, differential_rank_gate(n))
@@ -96,3 +141,4 @@ if __name__ == "__main__":
     print("PASS projective heat non-symplectic, phase symplectic")
     distinct_positive_generators_gate()
     print("PASS distinct positive generators imply different observable dynamics")
+    psi_winding_vs_graviton_helicity_topology_gate()
