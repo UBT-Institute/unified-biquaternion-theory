@@ -35,7 +35,7 @@ Výraz \(e^{LH}\Psi\) používáme pouze pro vektory z jeho spektrálního defin
 \ \Longrightarrow\ \Psi\in\ker H
 \ \Longrightarrow\ \partial_t\Psi=0.}\tag{3}
 \]
-Skutečně \(\lVert(e^{LH}-I)\Psi\rVert^2=\int_{\mathbb R}|e^{L\lambda}-1|^2\,d\mu_\Psi(\lambda)\). Integrand mizí pro reálné \(\lambda\) pouze při \(\lambda=0\). Věta vyžaduje **samosdruženost, holomorfnost a imaginární periodicitu současně**. Nejde o univerzální zákaz dynamiky UBT.
+Skutečně \(\lVert(e^{LH}-I)\Psi\rVert^2=\int_{\mathbb R}|e^{L\lambda}-1|^2\,d\mu_\Psi(\lambda)\). Integrand mizí pouze při \(\lambda=0\) pro reálná \(\lambda\). Věta vyžaduje **samosdruženost, holomorfnost a imaginární periodicitu současně**. Nejde o univerzální zákaz dynamiky UBT.
 
 ## Ekvivalentní přesný výpočet pro konečný počet módů
 
@@ -56,7 +56,7 @@ Jiný analytický Jacobiho faktor
 f_n(t,\psi)=e^{i\omega_n t-\omega_n\psi}
 =e^{i\omega_n\tau},\qquad \omega_n>0
 \]
-má **reálně-časovou oscilující fázi**, ale **není periodický** v \(\psi\): \(f_n(t,\psi+L)=e^{-L\omega_n}f_n(t,\psi)\). V běžné konvenci \(i\partial_t f_n=Hf_n\) má energie znaménko \(-\omega_n\), takže volba \(\omega_n=\pi n^2\) by při přímé fyzikální interpretaci vedla k Hamiltoniánu neomezenému zdola. Žádnou z větví nelze pouhým přeznačením vydávat za zdravý fyzikální Hamiltonián kompaktního \(\psi\), aniž bychom změnili předpoklady nebo určili fyzikální projekci.
+má **reálně-časovou oscilující fázi**, ale **není periodický** v \(\psi\): \(f_n(t,\psi+L)=e^{-L\omega_n}f_n(t,\psi)\). V běžné konvenci \(i\partial_t f_n=Hf_n\) má energie znaménko \(-\omega_n\), takže volba \(\omega_n=\pi n^2\) by při přímé fyzikální interpretaci vedla k Hamiltoniánu neomezenému zdola. Žádnou z větví nelze pouhým přeznačením vydávat za zdravý fyzikální Hamiltonián kompaktního imaginárního času, aniž bychom změnili předpoklady nebo určili fyzikální projekci.
 
 ## Přesný protipříklad po vypuštění holomorfnosti
 
