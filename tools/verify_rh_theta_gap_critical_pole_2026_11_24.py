@@ -65,8 +65,25 @@ def massless_free_bubble_negative_control():
     print("PASS free massless bubble has no isolated 1/p^2 residue")
 
 
+
+def rotational_symmetry_does_not_protect_criticality_gate():
+    x, y, z, detune = s.symbols("x y z detune", real=True)
+    plus = (x*x-y*y)/2
+    cross = x*y
+    Lz = lambda expr: x*s.diff(expr, y)-y*s.diff(expr, x)
+    assert s.simplify(Lz(plus*plus+cross*cross)) == 0
+    assert s.simplify(plus*plus+cross*cross-(x*x+y*y)**2/4) == 0
+    vector = s.Matrix([x,y,z])
+    norm2 = vector.dot(vector)
+    traceless = vector*vector.T-s.eye(3)*norm2/3
+    assert s.simplify(s.trace(traceless*traceless)
+                      -s.Rational(2,3)*norm2*norm2) == 0
+    assert s.simplify(Lz(detune*(plus*plus+cross*cross))) == 0
+    print("PASS rotational spin-two channel allows arbitrary scalar detuning")
+
 if __name__ == "__main__":
     intertwining_gap_gate()
     massive_bubble_criticality_gate()
     massless_free_bubble_negative_control()
+    rotational_symmetry_does_not_protect_criticality_gate()
     print("SCOPE: scalar RPA-response benchmark, NOT derived physical UBT graviton")
