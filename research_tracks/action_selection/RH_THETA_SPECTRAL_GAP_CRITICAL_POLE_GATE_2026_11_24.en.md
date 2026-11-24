@@ -79,6 +79,10 @@ Q_{ij}=a_ia_j-\frac{\delta_{ij}}3a^2,\qquad
 
 Thus a local quadratic norm \(\delta Q_{ij}Q_{ij}\) of an **already identified collective spin-two variable** is allowed by spatial \(SO(3)\) and its little group. The original \(Q_{ij}[a]\) is quadratic in constituents, so this term becomes quartic in \(a\); that does not change the symmetry conclusion. Neither a mere helicity-\(2\) representation nor the arithmetic positivity in RH forces \(\delta=0\). To remove a mass-like detuning *without fine-tuning*, UBT would have to derive a stronger gauge-type Ward identity (such as the linearized diffeomorphism identity in GR), or another rigorous dynamical protection mechanism, from the same fundamental action. An asserted emergent gauge symmetry is not a proof of it.
 
+## Critical qualification after the local Ward/TT-access calculation
+
+The companion document RH_THETA_LOCAL_WARD_TT_ACCESS_GATE_2026_11_24.en.md checks the missing protection mechanism. An off-shell linearized diffeomorphism Ward identity forbids a local, analytic, momentum-independent mass term in a symmetric tensor **metric potential**; within parity-even local quadratic h-only actions through two derivatives it selects the Fierz–Pauli massless kinetic operator up to normalization. **But** a nonlocal spin-two projector permits a transverse yet massive inverse kernel, and the standard isotropic quadratic biquaternion-vector composite has zero linear TT image. Hence neither transversality alone nor a formally diffeomorphism-invariant metric pullback proves a graviton. The scalar detuning of (5) cannot be identified with a gauge-protected tensor mass until the physical collective field, local kernel and gauge quotient are derived.
+
 ## Honest UBT decision criterion
 
 The theta-lift/Weil approach becomes physically substantive only if a **single-Theta** action selects both (a) a physical Lorentz-covariant TT bilinear or collective source, and (b) its critical inverse kernel *because of a proved symmetry or Ward/Noether identity*, not unexplained tuning. The actual calculation must yield
