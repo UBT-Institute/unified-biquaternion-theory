@@ -62,13 +62,13 @@ Take two free **massive scalar comparator propagators in four Euclidean dimensio
 - \(\delta=0\): a positive-residue simple \(1/p_E^2\) pole of this **chosen scalar response**, with residue exactly \(96\pi^2m^2\). The two-constituent Minkowski threshold is at \(s=4m^2\), so the pole is isolated from that free continuum within the analytic comparator.
 - \(\delta<0\): since \(D\) is strictly increasing and unbounded on \(q\ge0\) by (6), there is exactly one pole at **positive Euclidean** \(p_E^2\), tachyonic/unstable under ordinary analytic-continuation conventions.
 
-This is an exact **criticality phase diagram for a postulated scalar response**, not proof that the ansatz arises from a positive, local, unitary quantum field theory. In particular, a scalar two-propagator bubble has not supplied Lorentz-covariant physical spin-2 numerator, gravitational gauge constraints, or full TT pole residue. Unlike an elementary basis transform, a critical interaction can alter the analytic spectrum, but **nothing in RH sets \(\delta=0\)**. The massless-free composite comparator in PR #909 instead has a logarithmic threshold starting at zero and no isolated bare \(1/p^2\) pole.
+This is an exact **criticality phase diagram for a postulated scalar response**, not proof that the ansatz arises from a positive, local, unitary quantum field theory. In particular, a scalar two-propagator bubble has not supplied Lorentz-covariant physical spin-two numerator, gravitational gauge constraints, or full TT pole residue. Unlike an elementary basis transform, a critical interaction can alter the analytic spectrum, but **nothing in RH sets \(\delta=0\)**. The massless-free composite comparator in PR #909 instead has a logarithmic threshold starting at zero and no isolated bare \(1/p^2\) pole.
 
 ## Honest UBT decision criterion
 
 The theta-lift/Weil approach becomes physically substantive only if a **single-Theta** action selects both (a) a physical Lorentz-covariant TT bilinear or collective source, and (b) its critical inverse kernel *because of a proved symmetry or Ward/Noether identity*, not unexplained tuning. The actual calculation must yield
 \[
-\boxed{\Gamma_{\rm TT}(0)=0\ \text{as a derived identity},
+\boxed{\Gamma_{\rm TT}(0)=0,
 \qquad \Gamma'_{\rm TT}(0)>0,\qquad
 \operatorname{Res}_{p^2=0}\langle O^{\rm TT} O^{\rm TT}\rangle>0.}\tag{7}
 \]
