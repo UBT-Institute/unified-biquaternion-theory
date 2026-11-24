@@ -90,3 +90,18 @@ Další přijatý výzkumný přírůstek musí spočítat **explicitní jakobi�
 | Konečná S_UBT[Theta] | canonical/ACTION.en.md | NOT FINALIZED |
 
 Nezaměňovat sloučení na GitHubu či úspěch testů s fyzikálním důkazem.
+
+
+## 7. Podmíněný reprezentační test helicity 2 (2026-11-21)
+
+Nová přesná výzkumná poznámka `INVERSE_SPIN2_LITTLE_GROUP_DYNAMICS_GATE_2026_11_21.cs.md` zpřesňuje starší nulový TT výsledek pro holý gradient. Na rotačně invariantním pozadí s hladkou rotačně ekvivariantní **kompozitní** mapou a standardní kongruenční reprezentací jediné matice má vstup \(\delta\Theta\in M_2(\mathbb C)\) váhy malé grupy \(0,\pm1\), zatímco prostorový TT má váhy \(\pm2\). Lineární mapa \(L\) splňující \(J_{\rm TT}L=LJ_{\rm in}\) tedy musí být nulová. Přesný audit matice \(16\times16\) má hodnost \(16\). Uzavírá se **pouze** podmíněná otázka lineárního přenosu v této reprezentaci; nikoli výběr fundamentální akce.
+
+**Rozcestí dynamiky:** nejprve prověřit úplný Jacobiho/theta/tenzorový rozvoj a jeho fyzikální rotační reprezentaci; nepředpokládat, že každý mód je samostatným polem spinu 2. Zůstane-li kompletní uzamčený reálný \(8\)-složkový nosič, zkoumat skutečně interagující **kolektivní** korelátor spinu 2; volný normálně uspořádaný bilineár nemá překryv s elementárním 1-částicovým stavem. Weinbergovy–Wittenovy předpoklady i úplný fyzikální Hamiltonian zůstávají OPEN. Starší ADM větev s volnými metrickými variacemi se bez vyřešení tohoto testu nesmí označit za mikroskopický graviton \(\Theta\).
+
+## 8. Jacobiho vinutí psi nelze pouhým přejmenováním označit za prostorovou helicitu (2026-11-24)
+
+Přesné testy projektivní/FFT struktury a topologického výběru jsou shrnuty v `JACOBI_PROJECTIVE_MODE_DYNAMICS_GATE_2026_11_24.cs.md`. Přidává-li Jacobiho rozvoj pouze módy interní prostorově skalární souřadnice \(\psi\), nestávají se jejich indexy prostorovým spinem. Globální charakter svazující \(SO(3)\to U(1)\) je nutně triviální. **Jednotlivé** přímkové svazky bezhmotných helicit \(\pm2\) nad sférou hybností \(S^2\) mají Chernova čísla \(\mp4\), zatímco pevný interní skalární mód má \(0\). Párový nosič helicit ani explicitní konstrukce polarizací závislá na hybnosti tím nejsou vyloučeny; je nutné je odvodit. Test zpřesňuje výběr reprezentace, nikoli C2/C3 či fyzikální presymplektický Hamiltonián. **Dynamická akce zůstává OPEN.**
+
+## 9. Podmíněná unitarita reálného času proti kompaktnímu holomorfnímu imaginárnímu času (2026-11-24)
+
+Nový přesný no-go `HOLOMORPHIC_COMPACT_TIME_UNITARITY_GATE_2026_11_24.cs.md` představuje **test konzistence**, nikoli vybranou akci. Pokud je *stejný* Hilbertův stav holomorfní v \(\tau=t+i\psi\), periodický při \(\psi\to\psi+L\) a splňuje \(i\partial_t\Psi=H\Psi\) s pevným samosdruženým \(H\), Cauchyho–Riemannova podmínka dává \(\partial_\psi\Psi=H\Psi\) a periodicita vynucuje \(\Psi\in\ker H\): vývoj v reálném čase je stacionární. To **nedokazuje** nekonzistenci UBT, neboť kompaktní \(\psi\), silná holomorfnost fyzikálního Hilbertova stavu ani Schrödingerova rovnice pro klasické \(\Theta\) nejsou současně odvozeny. Není dovoleno tiše ztotožnit tlumený Jacobiho koeficient s kompaktním módem vinutí i běžným unitárním kvantovým módem s kladnou energií. Chybějící **test DYNAMICS zůstává OPEN:** určit, který objekt je fyzikální, zda je holomorfní, jaká je topologie imaginárního času, a odvodit skutečný generátor a vazby. **Pozitivní podmíněný komparátor** naproti tomu zavádí nekompaktní jednosměrné \(\psi=-s\le0\) a nezáporný samosdružený \(H\), takže \(\Psi=e^{-itH}e^{-sH}v\): unitarita reálného času se snáší s kontraktivním tepelným vývojem imaginárního času. Využívá stejný typ spektrální semigrupové matematiky jako projekt RH, ale nevybírá jednoznačně \(H\) ani neřeší gravitaci.
