@@ -25,3 +25,7 @@ def test_jacobi_heat_vs_physical_phase_fs_gate():
 
 def test_same_projective_kinematics_two_positive_generators():
     runpy.run_path(str(SCRIPT))["distinct_positive_generators_gate"]()
+
+
+def test_internal_psi_winding_not_graviton_helicity():
+    runpy.run_path(str(SCRIPT))["psi_winding_vs_graviton_helicity_topology_gate"]()
