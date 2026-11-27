@@ -1,0 +1,60 @@
+name: Prepare provenance repair patch
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/provenance_repair_patch.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pyyaml pytest
+      - name: Normalize existing approved B/C markers only
+        run: |
+          python - <<'PY'
+          import sys
+          from pathlib import Path
+          sys.path.insert(0, "tools")
+          import apply_provenance_headers as p
+          config = p.load_map()
+          count = 0
+          for path, rel, tier in p.iter_sources(p.ROOT, config):
+              if tier not in {"B_machine_verified", "C_working"}:
+                  continue
+              if rel == "reports/latex_build/summary.md":
+                  continue
+              before = path.read_text(encoding="utf-8")
+              after = p.apply_marker(before, rel, tier, path.suffix.lower())
+              if before != after:
+                  # Refuse unexpected substantive text changes.
+                  assert p.remove_existing_marker(before, path.suffix.lower()) == p.remove_existing_marker(after, path.suffix.lower()), rel
+                  path.write_text(after, encoding="utf-8")
+                  count += 1
+          print("Normalized", count, "existing B/C sources")
+          PY
+      - name: Refresh inventory and checksums
+        run: |
+          python tools/apply_provenance_headers.py --report > PROVENANCE_INVENTORY_2026-08-01.txt || true
+          python tools/regenerate_sha256sums.py
+          git diff --binary > "${RUNNER_TEMP}/provenance-repair.patch"
+          git diff --stat
+      - name: Upload reviewable patch
+        uses: actions/upload-artifact@v4
+        with:
+          name: provenance-repair-patch
+          path: ${{ runner.temp }}/provenance-repair.patch
+          if-no-files-found: error
+      - name: Verify remaining provenance and checksum gates
+        run: |
+          python tools/apply_provenance_headers.py --check
+          python tools/verify_provenance_review.py
+          python tools/verify_sha256sums.py --quiet
