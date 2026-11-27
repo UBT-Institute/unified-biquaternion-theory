@@ -221,12 +221,13 @@ jobs:
           [ "$FAILED" -eq 0 ] || exit 1
           echo "Binary size check passed."
 
-      - name: Check git archive size does not exceed 12 MiB
+      - name: Build and verify three distribution profiles
         run: |
-          ZIP_SIZE=$(git archive --format=zip HEAD | wc -c)
-          echo "git archive ZIP size: ${ZIP_SIZE} bytes ($(( ZIP_SIZE / 1048576 )) MiB)"
-          if [ "$ZIP_SIZE" -gt 12582912 ]; then
-            echo "::error::git archive HEAD exceeds 12 MiB (${ZIP_SIZE} bytes). Clean up large or generated files before merging."
-            exit 1
-          fi
-          echo "Archive size check passed."
+          python3 tools/build_distribution_profiles.py --out "${RUNNER_TEMP}/ubt-distributions"
+
+      - name: Upload distribution profiles
+        uses: actions/upload-artifact@v4
+        with:
+          name: ubt-distributions
+          path: ${{ runner.temp }}/ubt-distributions/UBT-*.zip
+          if-no-files-found: error
